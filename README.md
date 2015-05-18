@@ -27,6 +27,11 @@ python trustees_report_scraper.py
 ```
  
  This will:
- * Create a data foler 
+ * Create a data folder 
  * Scrape all the links from this [table of contents](http://www.ssa.gov/OACT/TR/2014/X1_trLOT.html)
- * 
+ * Find unique links (many tables are on the same page, links are just anchors) and scrape all html tables plus footnotes
+ * For each page, create a folder at `data/trustees_report/YEAR/pageN`, which contains:
+ 	* a text file with the page URL
+ 	* folders for each table, that contain:
+ 		* the html table
+ 		* accompanying footnotes
