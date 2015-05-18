@@ -23,7 +23,7 @@ Instructions are written for Mac users, and should be similar for Linux users.
  ```
 5. Remove old data directory (CAUTION: this will permanently delete the contents of the data folder, so do not run this command if you have manually modified the contents of the folder)
 ```
-rm -rf data
+rm -rf data/trustees_report/*
 ```
 4. Run
 ```bash
