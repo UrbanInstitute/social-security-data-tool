@@ -16,6 +16,7 @@ function init(){
 function drawTable(input){
 	d3.select("#testTable")
 		.append("table")
+		.attr("class", "pure-table")
 		.attr("id", function(){
 			return getId(input)
 		})
