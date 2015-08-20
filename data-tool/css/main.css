@@ -1,0 +1,34 @@
+th.selected{
+	background-color: #fcb918;
+}
+
+
+#valueScrubber{
+	display: inline-block;
+    margin-bottom: 10px;
+}
+#valueScrubber div{
+	font: 14px Lato;
+	float: left;
+}
+#valueScrubber #leftValue{
+	margin: 11px 10px 0px 0px;
+}
+#valueScrubber #rightValue{
+	margin: 11px 0px 0px 10px;
+}
+#sliderTrack{
+	fill: #c6c6c6;
+	stroke: none;
+}
+#sliderHighlight{
+	fill: #1696d2;
+	stroke: none;
+}
+.thumb{
+	fill: #ffffff;
+	stroke: #1696d2;
+	stroke-width: 4px;
+	cursor: pointer;
+}
+
