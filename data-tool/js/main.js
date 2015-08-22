@@ -16,7 +16,7 @@ function init(){
 function drawTable(input){
 	d3.select("#testTable")
 		.append("table")
-		.attr("class", "pure-table")
+		.attr("class", "pure-table tablesorter")
 		.attr("id", function(){
 			return getId(input)
 		})
@@ -27,7 +27,8 @@ function drawTable(input){
 		.on("click", function(){
 			var th = d3.select(this)
 			var selected = th.classed("selected")
-			var series = th.attr("class").replace(" ","").replace("selected","")
+			var re = /col\d/g
+			var series = th.attr("class").match(re)
 			var chart = $('#lineChart').highcharts();
 			//th -> tr -> thead -> table
 			var table = th.node().parentNode.parentNode.parentNode
@@ -47,7 +48,23 @@ function drawTable(input){
 				}
 			});
 		});
+	formatTable("testTable")
 	d3.select("th.col1").classed("selected",true)
+}
+
+function formatTable(tableID){
+	$(function(){
+	  $("#" + tableID + " table").tablesorter({
+	  		selectorSort: 'div'
+	  });
+	});
+	d3.selectAll("#" + tableID + " thead .series")
+		.style("width", function(){
+			var re = /col\d/g
+			var col = d3.select(this).attr("class").match(re)
+			console.log(d3.select("#" + tableID + " tbody ." + col).node().getBoundingClientRect().width)
+			return d3.select("#" + tableID + " tbody ." + col).node().getBoundingClientRect().width - 40;
+		})
 }
 function generateTimeSeries(year, column){
 	var series = [];
@@ -304,7 +321,7 @@ function drawScrubber(){
 		.append("circle")
 		.attr("class","thumb left")
 	    .attr("r", radius)
-	    .attr("cx", function(d) {console.log(d); return d.x; })
+	    .attr("cx", function(d) { return d.x; })
 	    .attr("cy", function(d) { return d.y; })
 	    .call(drag);
 
@@ -314,7 +331,7 @@ function drawScrubber(){
 		.append("circle")
 		.attr("class","thumb right")
 	    .attr("r", radius)
-	    .attr("cx", function(d) {console.log(d); return d.x; })
+	    .attr("cx", function(d) { return d.x; })
 	    .attr("cy", function(d) { return d.y; })
 	    .call(drag);
 
@@ -363,7 +380,7 @@ function setTheme(){
 	    colors: ["#0096d2", "#00578b", "#fcb918", "#f47d20", "#6d6d6d", "#c6c6c6", "#ec008c",
 	      "#55BF3B", "#DF5353", "#7798BF", "#aaeeee"],
 	    chart: {
-	        backgroundColor: null,
+	        backgroundColor: "#ffffff",
 	        style: {
 	            fontFamily: "Lato, sans-serif"
 	        },

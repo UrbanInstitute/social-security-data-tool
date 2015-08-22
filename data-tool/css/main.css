@@ -1,11 +1,49 @@
 body{
 	font-family: Lato;
 }
-th.selected{
-	background-color: #fcb918;
+*:focus{
+    outline: 0;
 }
 
-
+/****************************************/
+/************ PANEL LAYOUT **************/
+/****************************************/
+#chartContainer{
+    background-color: #fff;
+    height: 470px;
+    width: 100%;
+    top: 0;
+    position: fixed;
+    z-index: 2;
+}
+#lineChart, #barChart{
+    width: 100%;
+    top: 0px;
+    position: fixed;
+    z-index: 2;    
+}
+#barChart{
+    left: 2000px;
+}
+#valueScrubber{
+    top: 400px;
+    z-index: 3;
+    position: fixed;
+}
+#tableContainer{
+    margin-top: 460;    
+}
+thead{
+    z-index: 2;
+    position: fixed;
+}
+tbody{
+    top: 583px; /*This will prob be in js? Or it's height of graphs + height of thead*/
+    position: absolute;
+}
+/****************************************/
+/************ SCRUBBER STYLEs ***********/
+/****************************************/
 #valueScrubber{
 	display: inline-block;
     margin-bottom: 10px;
@@ -35,6 +73,12 @@ th.selected{
 	cursor: pointer;
 }
 
+/****************************************/
+/************ TABLE STYLEs **************/
+/****************************************/
+th.selected{
+    background-color: #fcb918;
+}
 .pure-table {
     /* Remove spacing between table cells (from Normalize.css) */
     border-collapse: collapse;
@@ -57,14 +101,7 @@ th.selected{
     font-size: inherit;
     margin: 0;
     overflow: visible; /*to make ths where the title is really long work*/
-    padding: 0.5em 1em; /* cell padding */
-}
-
-/* Consider removing this next declaration block, as it causes problems when
-there's a rowspan on the first cell. Case added to the tests. issue#432 */
-.pure-table td:first-child,
-.pure-table th:first-child {
-    border-left-width: 0;
+    padding: 8px 10px; /* cell padding */
 }
 
 .pure-table thead {
@@ -74,11 +111,6 @@ there's a rowspan on the first cell. Case added to the tests. issue#432 */
     vertical-align: bottom;
 }
 
-/*
-striping:
-   even - #fff (white)
-   odd  - #f2f2f2 (light gray)
-*/
 .pure-table td {
     background-color: transparent;
 }

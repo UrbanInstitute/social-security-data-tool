@@ -1,0 +1,3 @@
+[submodule "sleepy.mongoose"]
+	path = sleepy.mongoose
+	url = git@github.com:UrbanInstitute/sleepy.mongoose.git
