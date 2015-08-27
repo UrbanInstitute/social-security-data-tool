@@ -51,20 +51,48 @@ function drawTable(input){
 	formatTable("testTable")
 	d3.select("th.col1").classed("selected",true)
 }
-
+function resizeHeader(header, bodyCells){
+	var oldWidth = parseFloat(d3.select(header).style("width").replace("px",""));
+	var headerRemainder = parseFloat(header.getBoundingClientRect().width) - oldWidth;
+	var bodyWidth = 0;
+	for(var i = 0; i < bodyCells.length; i++){
+		bodyWidth += parseFloat(bodyCells[i].getBoundingClientRect().width);
+	}
+	console.log(bodyWidth - headerRemainder)
+	var w =  bodyWidth - headerRemainder;
+	d3.select(header).style("width", w)
+	d3.select(header).select("div").style("width", w)
+	return false
+}
 function formatTable(tableID){
 	$(function(){
 	  $("#" + tableID + " table").tablesorter({
 	  		selectorSort: 'div'
 	  });
 	});
-	d3.selectAll("#" + tableID + " thead .series")
-		.style("width", function(){
-			var re = /col\d/g
-			var col = d3.select(this).attr("class").match(re)
-			console.log(d3.select("#" + tableID + " tbody ." + col).node().getBoundingClientRect().width)
-			return d3.select("#" + tableID + " tbody ." + col).node().getBoundingClientRect().width - 40;
-		})
+
+	var rows = d3.selectAll("#" + tableID + " thead tr")[0]
+	var bodyRow = d3.select("#" + tableID + " tbody tr").selectAll("td")
+	var holder = Array.apply(null, Array(rows.length)).map(function(){return bodyRow[0].slice()});
+	console.log(holder)
+	for(var i = 0; i < rows.length; i++){
+		var headers = d3.select(rows[i]).selectAll("th")
+		headers[0].forEach(function(h){
+			var colspan = (d3.select(h).attr("colspan") == null) ? 1 : parseInt(d3.select(h).attr("colspan"));
+			var rowspan = (d3.select(h).attr("rowspan") == null) ? 1 : parseInt(d3.select(h).attr("rowspan"));
+			resizeHeader(h, holder[i].splice(0,colspan))
+			if(rowspan != 1){
+				for(j = i+1; j + i < rowspan; j++ ){
+					// console.log("j", j)
+					holder[j].splice(0,colspan)
+				}
+			}
+			// console.log(h.getBoundingClientRect())
+			// console.log($(h).index())
+		})			
+	}
+	console.log(holder)
+
 }
 function generateTimeSeries(year, column){
 	var series = [];
