@@ -27,7 +27,7 @@ function drawTable(input){
 		.on("click", function(){
 			var th = d3.select(this)
 			var selected = th.classed("selected")
-			var re = /col\d/g
+			var re = /col\d*/g
 			var series = th.attr("class").match(re)
 			var chart = $('#lineChart').highcharts();
 			//th -> tr -> thead -> table
@@ -39,8 +39,9 @@ function drawTable(input){
 					chart.addSeries({
 						id: getId(data) + "_" + series,
 		            	name: series,
-		            	data: generateTimeSeries(data.data.years, data["data"][series])
+		            	data: generateTimeSeries(data.data.years.series, data["data"][series]["series"])
 					});
+					checkUnitCompatibility(data["data"][series]["type"], input, chart)
 					th.classed("selected", true)
 				} else{
 					removeSeries(chart, getId(data) + "_" + series)
@@ -58,23 +59,23 @@ function resizeHeader(header, bodyCells){
 	for(var i = 0; i < bodyCells.length; i++){
 		bodyWidth += parseFloat(bodyCells[i].getBoundingClientRect().width);
 	}
-	console.log(bodyWidth - headerRemainder)
-	var w =  bodyWidth - headerRemainder;
+ 	var w =  bodyWidth - headerRemainder;
 	d3.select(header).style("width", w)
 	d3.select(header).select("div").style("width", w)
 	return false
 }
 function formatTable(tableID){
+//Make table sortable using mottie's jquery tablesorter
 	$(function(){
 	  $("#" + tableID + " table").tablesorter({
 	  		selectorSort: 'div'
 	  });
 	});
 
+//Determine which columns fall under which headers, and resize width to width of child columns
 	var rows = d3.selectAll("#" + tableID + " thead tr")[0]
 	var bodyRow = d3.select("#" + tableID + " tbody tr").selectAll("td")
 	var holder = Array.apply(null, Array(rows.length)).map(function(){return bodyRow[0].slice()});
-	console.log(holder)
 	for(var i = 0; i < rows.length; i++){
 		var headers = d3.select(rows[i]).selectAll("th")
 		headers[0].forEach(function(h){
@@ -83,15 +84,39 @@ function formatTable(tableID){
 			resizeHeader(h, holder[i].splice(0,colspan))
 			if(rowspan != 1){
 				for(j = i+1; j + i < rowspan; j++ ){
-					// console.log("j", j)
 					holder[j].splice(0,colspan)
 				}
 			}
-			// console.log(h.getBoundingClientRect())
-			// console.log($(h).index())
 		})			
 	}
-	console.log(holder)
+
+//Determine height of thead, and set initial position of tbody to be just under thead
+	var headHeight = d3.select("#" + tableID + " thead").node().getBoundingClientRect().height
+	var tablePos = parseInt(d3.select("#tableContainer").style("margin-top").replace("px",""))
+	console.log(headHeight, tablePos)
+	d3.select("#" + tableID + " tbody").style("top", (headHeight + tablePos) + "px")
+}
+function checkUnitCompatibility(unit, input, chart){
+	d3.selectAll("th.selected")
+		.classed("selected", function(th){
+			var re = /col\d*/g
+			var series = d3.select(this).attr("class").match(re)
+			// console.log(, unit)
+			if(input["data"][series]["type"] == unit){
+				return true
+			} else{
+				removeSeries(chart, getId(input) + "_" + series)
+				d3.select("#interactionInstructions .warning")
+					.transition()
+					.duration(100)
+					.style("color","#ff0000")
+					.transition()
+					.delay(1000)
+					.duration(500)
+					.style("color","#000000	")
+				return false
+			}
+		})
 
 }
 function generateTimeSeries(year, column){
@@ -146,7 +171,7 @@ function drawLineChart(input){
                     text: ''
                 },
                 labels: {
-                    format: '${value:,.0f}'
+                    format: '${value:.0f}'
                 }
             },
             tooltip: {
@@ -173,7 +198,7 @@ function drawLineChart(input){
         series: [{
         	id: input.title.id.replace(".","") + "_" + "col1",
             name: "col1",
-            data: generateTimeSeries(input.data.years, input.data.col1)
+            data: generateTimeSeries(input.data.years.series, input.data.col1.series)
         }
         ]
     });

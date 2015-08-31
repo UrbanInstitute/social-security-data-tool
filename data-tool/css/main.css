@@ -30,6 +30,10 @@ body{
     z-index: 3;
     position: fixed;
 }
+#interactionInstructions{
+    position: fixed;
+    top: 436px;
+}
 #tableContainer{
     margin-top: 460;    
 }
@@ -38,7 +42,6 @@ thead{
     position: fixed;
 }
 tbody{
-    top: 583px; /*This will prob be in js? Or it's height of graphs + height of thead*/
     position: absolute;
 }
 /****************************************/
