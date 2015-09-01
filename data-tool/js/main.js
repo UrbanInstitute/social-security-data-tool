@@ -25,6 +25,7 @@ function drawTable(input){
 	})
 	d3.selectAll("#testTable th")
 		.on("click", function(){
+			// console.log(e)
 			var th = d3.select(this)
 			var selected = th.classed("selected")
 			var re = /col\d*/g
@@ -60,15 +61,28 @@ function resizeHeader(header, bodyCells){
 		bodyWidth += parseFloat(bodyCells[i].getBoundingClientRect().width);
 	}
  	var w =  bodyWidth - headerRemainder;
-	d3.select(header).style("width", w)
-	d3.select(header).select("div").style("width", w)
+//If header is longer than body cell, resize bodycell's width.
+ 	if(oldWidth > w && bodyCells.length == 1){
+ 		d3.select(bodyCells[0]).style("width", oldWidth)
+ 		d3.select(header).style("width", oldWidth)
+
+ 	}
+ //otherwise, resize header to width of bodycell(s)
+ 	else{
+		d3.select(header).style("width", w)
+	}
 	return false
 }
 function formatTable(tableID){
-//Make table sortable using mottie's jquery tablesorter
+//draw sortArrows
+	d3.selectAll("#" + tableID + " thead th")
+		.append("i")
+		.attr("class","sortArrow")
+
+//Make table sortable using mottie's jquery tablesorter, bind click events to sort arrows
 	$(function(){
 	  $("#" + tableID + " table").tablesorter({
-	  		selectorSort: 'div'
+	  		selectorSort: "i"
 	  });
 	});
 
@@ -95,6 +109,13 @@ function formatTable(tableID){
 	var tablePos = parseInt(d3.select("#tableContainer").style("margin-top").replace("px",""))
 	console.log(headHeight, tablePos)
 	d3.select("#" + tableID + " tbody").style("top", (headHeight + tablePos) + "px")
+
+//unbind charting to sort arrows (clicking arrow does not add/remove series)
+	d3.selectAll(".sortArrow").on("click", function(){
+			d3.event.stopPropagation()
+	})
+
+
 }
 function checkUnitCompatibility(unit, input, chart){
 	d3.selectAll("th.selected")

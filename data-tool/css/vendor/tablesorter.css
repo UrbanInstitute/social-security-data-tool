@@ -26,24 +26,35 @@ Default Theme
 .tablesorter-default tfoot td {
 	border: 0;
 }*/
-.tablesorter-default .header,
-.tablesorter-default .tablesorter-header {
-	background-image: url(data:image/gif;base64,R0lGODlhFQAJAIAAACMtMP///yH5BAEAAAEALAAAAAAVAAkAAAIXjI+AywnaYnhUMoqt3gZXPmVg94yJVQAAOw==);
-	background-position: center right;
-	background-repeat: no-repeat;
-	cursor: pointer;
-	white-space: normal;
-	padding: 4px 20px 4px 4px;
+.tablesorter-default .header i,
+.tablesorter-default .tablesorter-header i{
+    background-image: url(data:image/gif;base64,R0lGODlhFQAJAIAAACMtMP///yH5BAEAAAEALAAAAAAVAAkAAAIXjI+AywnaYnhUMoqt3gZXPmVg94yJVQAAOw==);
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    white-space: normal;
+    /* padding: 4px 20px 4px 4px; */
+    width: 10px;
+    height: 10px;
+    float: right;
+    clear: both;
+    padding: 5px 0px -8px 0px;
+    /* margin-bottom: 0px; */
+    /* bottom: 45%; */
+    /* position: absolute; */
+    position: absolute;
+    margin-left: 4px;
+    margin-top: 5px;
 }
-.tablesorter-default thead .headerSortUp,
-.tablesorter-default thead .tablesorter-headerSortUp,
-.tablesorter-default thead .tablesorter-headerAsc {
+.tablesorter-default thead .headerSortUp i,
+.tablesorter-default thead .tablesorter-headerSortUp i,
+.tablesorter-default thead .tablesorter-headerAsc i{
 	background-image: url(data:image/gif;base64,R0lGODlhFQAEAIAAACMtMP///yH5BAEAAAEALAAAAAAVAAQAAAINjI8Bya2wnINUMopZAQA7);
 	/*border-bottom: #000 2px solid;*/
 }
-.tablesorter-default thead .headerSortDown,
-.tablesorter-default thead .tablesorter-headerSortDown,
-.tablesorter-default thead .tablesorter-headerDesc {
+.tablesorter-default thead .headerSortDown i,
+.tablesorter-default thead .tablesorter-headerSortDown i,
+.tablesorter-default thead .tablesorter-headerDesc i{
 	background-image: url(data:image/gif;base64,R0lGODlhFQAEAIAAACMtMP///yH5BAEAAAEALAAAAAAVAAQAAAINjB+gC+jP2ptn0WskLQA7);
 	/*border-bottom: #000 2px solid;*/
 }
