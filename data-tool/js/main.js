@@ -1,3 +1,5 @@
+var yearBarCache;
+
 function init(){
 	$.get( getDocURL("2A3"), function(resp) {
 	  var data = resp.results[0];
@@ -5,13 +7,14 @@ function init(){
 	  switch(category){
 	  	case "timeSeries":
 	  		drawLineChart(data);
-  			drawBarChart(data);
+  			drawSingleYearBarChart(data);
 	  		drawTable(data);
 	  		break;
 	  }
 	});
 	setTheme();
 	drawScrubber();
+	yearBarCache = {};
 }
 function drawTable(input){
 	d3.select("#testTable")
@@ -25,27 +28,45 @@ function drawTable(input){
 	})
 	d3.selectAll("#testTable th")
 		.on("click", function(){
-			// console.log(e)
 			var th = d3.select(this)
 			var selected = th.classed("selected")
 			var re = /col\d*/g
 			var series = th.attr("class").match(re)
-			var chart = $('#lineChart').highcharts();
+			var lineChart = $('#lineChart').highcharts();
+			var singleYearBarChart = $('#singleYearBarChart').highcharts();
 			//th -> tr -> thead -> table
 			var table = th.node().parentNode.parentNode.parentNode
 			var tableID = d3.select(table).attr("id")
 			$.get( getDocURL(tableID) , function(resp) {
 		  		var data = resp.results[0];
+		  		var seriesID = getId(data) + "_" + series
 		  		if( !selected ){
-					chart.addSeries({
-						id: getId(data) + "_" + series,
+					var categories = singleYearBarChart.xAxis[0].categories
+					categories.push(seriesID)
+					// console.log(categories)
+					singleYearBarChart.xAxis[0].setCategories(categories)
+
+					console.log(singleYearBarChart.series)
+
+					lineChart.addSeries({
+						id: seriesID,
 		            	name: series,
 		            	data: generateTimeSeries(data.data.years.series, data["data"][series]["series"])
 					});
-					checkUnitCompatibility(data["data"][series]["type"], input, chart)
+					singleYearBarChart.addSeries({
+						id: seriesID,
+                    	name: seriesID,
+                    	data: [generateBarFromYear(data.data.years.series, data["data"][series]["series"], $("#rightValue").text())]
+                    	}
+					)
+
+					console.log(singleYearBarChart.series)
+					yearBarCache[seriesID] = [data.data.years.series, data["data"][series]["series"]]
+					checkUnitCompatibility(data["data"][series]["type"], input, [lineChart, singleYearBarChart])
 					th.classed("selected", true)
 				} else{
-					removeSeries(chart, getId(data) + "_" + series)
+					removeSeries(lineChart, getId(data) + "_" + series)
+					removeSeries(singleYearBarChart, getId(data) + "_" + series)
 					th.classed("selected", false)
 				}
 			});
@@ -107,7 +128,6 @@ function formatTable(tableID){
 //Determine height of thead, and set initial position of tbody to be just under thead
 	var headHeight = d3.select("#" + tableID + " thead").node().getBoundingClientRect().height
 	var tablePos = parseInt(d3.select("#tableContainer").style("margin-top").replace("px",""))
-	console.log(headHeight, tablePos)
 	d3.select("#" + tableID + " tbody").style("top", (headHeight + tablePos) + "px")
 
 //unbind charting to sort arrows (clicking arrow does not add/remove series)
@@ -117,16 +137,15 @@ function formatTable(tableID){
 
 
 }
-function checkUnitCompatibility(unit, input, chart){
+function checkUnitCompatibility(unit, input, charts){
 	d3.selectAll("th.selected")
 		.classed("selected", function(th){
 			var re = /col\d*/g
 			var series = d3.select(this).attr("class").match(re)
-			// console.log(, unit)
 			if(input["data"][series]["type"] == unit){
 				return true
 			} else{
-				removeSeries(chart, getId(input) + "_" + series)
+				for(var i = 0; i<charts.length; i++){ removeSeries(charts[i], getId(input) + "_" + series) }
 				d3.select("#interactionInstructions .warning")
 					.transition()
 					.duration(100)
@@ -233,8 +252,8 @@ function generateBarFromYear(years, column, year){
 	}
 	return false;
 }
-function drawBarChart(input){
-        $('#barChart').highcharts({
+function drawSingleYearBarChart(input){
+        $('#singleYearBarChart').highcharts({
             chart: {
                 marginTop: 10,
                 marginBottom: 40,
@@ -268,7 +287,7 @@ function drawBarChart(input){
                 gridLineWidth: '0',
                 lineWidth: 2,
                 tickInterval: 0,
-                categories: ['col1', 'col2'],
+                categories: ["2A3_col1", "foo"],
                 plotLines: [{
                     value: 0,
                     width: 0
@@ -310,15 +329,20 @@ function drawBarChart(input){
                 y: 40
             },
             series: [{
-                    name: '',
-                    data: [generateBarFromYear(input.data.years, input.data.col1, "1993"), generateBarFromYear(input.data.years, input.data.col2, "1993")]
+            			id: input.title.id.replace(".","") + "_" + "col1",
+                    	name: input.title.id.replace(".","") + "_" + "col1",
+                    	data: [generateBarFromYear(input.data.years.series, input.data.col1.series, "2014")]
                     }
-                                          ]
+                  ]
 
         }); //end chart 6
+		yearBarCache[input.title.id.replace(".","") + "_" + "col1"] = [input.data.years.series, input.data.col1.series]
 }
 function removeSeries(chart, id){
 	// var chart = $('#lineChart').highcharts();
+	if(chart.renderTo.id == "singleYearBarChart"){
+		delete yearBarCache[id]
+	}
 	for(var i = 0; i<chart.series.length; i++){
 		var ser = chart.series[i];
 		if(ser.options.id == id){
@@ -332,12 +356,63 @@ function getId(doc){
 function getDocURL(id){
 	return "http://localhost:27080/test/tables/_find?criteria=" + encodeURIComponent('{"title.id":"' + id + '"}')
 }
+function singleYear(){
+	d3.select("#lineChart")
+		.transition()
+		.style("left",-2000)
+	d3.select("#singleYearBarChart")
+		.transition()
+		.style("left",0)
+	d3.select("#valueScrubber .left.thumb")
+		.style("display","none")
+	d3.select("#leftValue")
+		.style("opacity",0)
+	d3.select("#valueScrubber .right.thumb")
+		.classed("singleYear", true)
+	d3.select("#sliderHighlight")
+		.transition()
+		.attr("x",0)
+		.attr("width", function(){
+			return d3.select(".right.thumb").attr("cx")
+		})
+}
+function multiYear(){
+	d3.select("#lineChart")
+		.transition()
+		.style("left",0)
+	d3.select("#singleYearBarChart")
+		.transition()
+		.style("left",2000)
+	d3.select("#valueScrubber .left.thumb")
+		.style("display","block")
+	d3.select("#leftValue")
+		.style("opacity",1)
+	d3.select("#valueScrubber .right.thumb")
+		.classed("singleYear", false)
+	d3.select("#sliderHighlight")
+		.transition()
+		.attr("x", function(){
+			return d3.select(".left.thumb").attr("cx")
+		})
+		.attr("width", function(){
+			return parseInt(d3.select(".right.thumb").attr("cx")) - parseInt(d3.select(".left.thumb").attr("cx"))
+		})
+}
 function changeYears(start, end){
-	var chart = $('#lineChart').highcharts();
-    chart.xAxis[0].setExtremes(
+	var lineChart = $('#lineChart').highcharts();
+    lineChart.xAxis[0].setExtremes(
             Date.UTC(parseInt(start), 0, 1),
             Date.UTC(parseInt(end), 0, 1)
     );
+    var singleYearBarChart = $('#singleYearBarChart').highcharts();
+    for(var i=0; i<singleYearBarChart.series.length; i++){
+    	var barData = yearBarCache[singleYearBarChart.series[i].name]
+    	// console.log(barData)
+    	// delete yearBarCache[singleYearBarChart.series[i].name]
+    	singleYearBarChart.series[i].setData([generateBarFromYear(barData[0], barData[1], end)])
+
+    }
+
 
 }
 function drawScrubber(){
@@ -347,6 +422,29 @@ function drawScrubber(){
 		lowerBound = 1937,
 		upperBound = 2014,
 		margin = {top: 0, right: 4, bottom: 0, left: 4};
+	
+	d3.select("#singleYearCheck")
+		.append("svg")
+		.attr("width", 2*radius)
+		.attr("height", 2*radius)
+		.append("g")
+		.append("circle")
+		.attr("class", "unchecked")
+		.attr("cx",radius)
+		.attr("cy",radius)
+		.attr("r",radius)
+		.on("mousedown", function(){
+			d3.select(this).classed("pressed", true)
+		})
+		.on("mouseup", function(){
+			if(d3.select(this).classed("checked")){
+				d3.select(this).attr("class", "unchecked");
+				multiYear();
+			}else{
+				d3.select(this).attr("class", "checked");
+				singleYear();
+			}
+		})
 
 	var scale = d3.scale.linear()
 		.domain([radius+margin.left, width-radius-margin.right])
@@ -412,9 +510,10 @@ function drawScrubber(){
 	function dragmove(d) {
 	  var dragged = d3.select(this)
 	  var isLeft = dragged.classed("left")
+	  var isSingleYear = dragged.classed("singleYear")
 	  var other = (isLeft) ? d3.select("circle.right") : d3.select("circle.left")
 	  if(!isLeft){
-	  	var pos = Math.min(width-radius-margin.right, Math.max(other.data()[0].x, d3.event.x));
+	  	var pos = (isSingleYear) ? Math.min(width-radius-margin.right, Math.max(radius+2, d3.event.x)) : Math.min(width-radius-margin.right, Math.max(other.data()[0].x, d3.event.x));
 		var value = Math.round(scale(pos));
 		rightValue.text(value);
 		changeYears(leftValue.text(), value);

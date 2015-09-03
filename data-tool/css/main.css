@@ -16,17 +16,24 @@ body{
     position: fixed;
     z-index: 2;
 }
-#lineChart, #barChart{
+#lineChart, #singleYearBarChart{
     width: 100%;
-    top: 0px;
+    top: 0;
+    left: 0;
     position: fixed;
     z-index: 2;    
 }
-#barChart{
+#singleYearBarChart{
     left: 2000px;
 }
 #valueScrubber{
     top: 400px;
+    z-index: 3;
+    position: fixed;
+}
+#singleYearCheck{
+    top: 400px;
+    left: 357px;
     z-index: 3;
     position: fixed;
 }
@@ -74,6 +81,23 @@ tbody{
 	stroke: #1696d2;
 	stroke-width: 4px;
 	cursor: pointer;
+}
+
+
+/****************************************/
+/************ SWITCH STYLEs *************/
+/****************************************/
+#singleYearCheck circle.checked{
+    fill: #1696d2;
+}
+#singleYearCheck circle.unchecked{
+    fill: #ccc;
+}
+#singleYearCheck circle.checked.pressed{
+    fill: #0076bc;
+}
+#singleYearCheck circle.unchecked.pressed{
+    fill: #bbb;
 }
 
 /****************************************/
