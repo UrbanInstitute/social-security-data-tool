@@ -41,26 +41,33 @@ function drawTable(input){
 		  		var data = resp.results[0];
 		  		var seriesID = getId(data) + "_" + series
 		  		if( !selected ){
+					singleYearBarChart.series[0].addPoint(generateBarFromYear(data.data.years.series, data["data"][series]["series"], $("#rightValue").text()))
+
+					$.each(singleYearBarChart.series[0].data, function(k,v){
+						v.update({
+							x: k
+						});
+					});
+
 					var categories = singleYearBarChart.xAxis[0].categories
 					categories.push(seriesID)
-					// console.log(categories)
 					singleYearBarChart.xAxis[0].setCategories(categories)
 
-					console.log(singleYearBarChart.series)
+					singleYearBarChart.redraw();
+
 
 					lineChart.addSeries({
 						id: seriesID,
 		            	name: series,
 		            	data: generateTimeSeries(data.data.years.series, data["data"][series]["series"])
 					});
-					singleYearBarChart.addSeries({
-						id: seriesID,
-                    	name: seriesID,
-                    	data: [generateBarFromYear(data.data.years.series, data["data"][series]["series"], $("#rightValue").text())]
-                    	}
-					)
+					// singleYearBarChart.addSeries({
+					// 	id: seriesID,
+     //                	name: seriesID,
+     //                	data: [generateBarFromYear(data.data.years.series, data["data"][series]["series"], $("#rightValue").text())]
+     //                	}
+					// )
 
-					console.log(singleYearBarChart.series)
 					yearBarCache[seriesID] = [data.data.years.series, data["data"][series]["series"]]
 					checkUnitCompatibility(data["data"][series]["type"], input, [lineChart, singleYearBarChart])
 					th.classed("selected", true)
@@ -287,7 +294,7 @@ function drawSingleYearBarChart(input){
                 gridLineWidth: '0',
                 lineWidth: 2,
                 tickInterval: 0,
-                categories: ["2A3_col1", "foo"],
+                categories: ["2A3_col1"],
                 plotLines: [{
                     value: 0,
                     width: 0
@@ -341,12 +348,38 @@ function drawSingleYearBarChart(input){
 function removeSeries(chart, id){
 	// var chart = $('#lineChart').highcharts();
 	if(chart.renderTo.id == "singleYearBarChart"){
-		delete yearBarCache[id]
+		// console.log(chart.series[0].data)
+		var index = chart.xAxis[0].categories.indexOf(id)
+		chart.series[0].removePoint(index)
+
+		$.each(chart.series[0].data, function(k,v){
+			v.update({
+				x: k
+			});
+		});
+
+		var categories = chart.xAxis[0].categories
+		categories.splice(index, 1)
+		// chart.xAxis[0].setCategories(categories)
+		// console.log(chart.xAxis[0].categories)
+		// console.log(categories)
+		chart.xAxis[0].setCategories(categories)
+		chart.redraw();
+		// for(var j=0; j<categories.length; j++){
+			
+		// 	chart.series[0].data[j].category = categories[j]
+		// }
+
+
+
+
 	}
-	for(var i = 0; i<chart.series.length; i++){
-		var ser = chart.series[i];
-		if(ser.options.id == id){
-			ser.remove();
+	else{
+		for(var i = 0; i<chart.series.length; i++){
+			var ser = chart.series[i];
+			if(ser.options.id == id){
+				ser.remove();
+			}
 		}
 	}
 }
