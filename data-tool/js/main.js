@@ -438,13 +438,25 @@ function changeYears(start, end){
             Date.UTC(parseInt(end), 0, 1)
     );
     var singleYearBarChart = $('#singleYearBarChart').highcharts();
-    for(var i=0; i<singleYearBarChart.series.length; i++){
-    	var barData = yearBarCache[singleYearBarChart.series[i].name]
+    // for(var i=0; i<singleYearBarChart.series.length; i++){
+    	// console.log(yearBarCache)
+    	// console.log(singleYearBarChart.series[0].data)
+    	// for(var i=0; i<singleYearBarChart.series[0].data.length; i++){
+    	// 	singleYearBarChart.series[0].data.update({y:3000})	
+    	// }
+		$.each(singleYearBarChart.series[0].data, function(k,v){
+			console.log(v.category)
+			var barData = yearBarCache[v.category]
+			v.update({
+				y: generateBarFromYear(barData[0], barData[1], end)
+			});
+		});
+    	// var barData = yearBarCache[singleYearBarChart.series[0].name]
     	// console.log(barData)
     	// delete yearBarCache[singleYearBarChart.series[i].name]
-    	singleYearBarChart.series[i].setData([generateBarFromYear(barData[0], barData[1], end)])
+    	// singleYearBarChart.series[i].setData([generateBarFromYear(barData[0], barData[1], end)])
 
-    }
+    // }
 
 
 }
