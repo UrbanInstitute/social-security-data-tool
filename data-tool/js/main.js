@@ -55,7 +55,6 @@ function drawTable(input){
 
 					singleYearBarChart.redraw();
 
-
 					lineChart.addSeries({
 						id: seriesID,
 		            	name: series,
@@ -251,10 +250,23 @@ function drawLineChart(input){
     });
 }
 function generateBarFromYear(years, column, year){
-	var series = generateTimeSeries(years, column);
-	for(var i = 0; i < series.length; i++){
-		if(series[i][0] == Date.UTC(parseInt(year), 0, 1)){
-			return series[i][1]
+	var series = [];
+	for(var i = 0; i< years.length; i++){
+		if(typeof(years[i]) == "number"){
+			series.push([Date.UTC(years[i], 0, 1), column[i]]);
+		}else{
+			var range = years[i].split("–");
+			var start = parseInt(range[0]);
+			var end = parseInt(range[1]);
+			for(var c=start; c<=end; c++){
+				series.push([Date.UTC(c, 0, 1), column[i]]);	
+			}
+		}
+	}
+	console.log(series)
+	for(var j = 0; j < series.length; j++){
+		if(series[j][0] == Date.UTC(parseInt(year), 0, 1)){
+			return series[j][1]
 		}
 	}
 	return false;
@@ -276,8 +288,12 @@ function drawSingleYearBarChart(input){
                     dataLabels: {
                         enabled: true,
                         align: 'center',
-                        formatter: function () {
-                            return '' + '$' + this.y + ' million';
+                        formatter: function (){
+                        	if(this.y == false || this.y==null){
+                        		return null
+                        	}else{
+                            	return '' + '$' + this.y + ' million';
+                            }
                         }
                     }
                 }
@@ -445,11 +461,11 @@ function changeYears(start, end){
     	// 	singleYearBarChart.series[0].data.update({y:3000})	
     	// }
 		$.each(singleYearBarChart.series[0].data, function(k,v){
-			console.log(v.category)
 			var barData = yearBarCache[v.category]
 			v.update({
-				y: generateBarFromYear(barData[0], barData[1], end)
+				y: generateBarFromYear(barData[0], barData[1], end),
 			});
+
 		});
     	// var barData = yearBarCache[singleYearBarChart.series[0].name]
     	// console.log(barData)

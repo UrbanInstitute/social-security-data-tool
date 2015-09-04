@@ -30,7 +30,7 @@
 			"type":"dollar"
 			},
 		"col2":{
-			"series":[null,null,null,null,null,null,null,null,null,null,6600,6600,7800,7800,7800,7800,9000,10800,13200,14100,15300,16500,17700,22900,25900,29700,32400,35700,37800,39600,42000,43800,45000,48000,51300,125000,130200,135000,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],
+			"series":[false,false,false,false,false,false,false,false,false,false,6600,6600,7800,7800,7800,7800,9000,10800,13200,14100,15300,16500,17700,22900,25900,29700,32400,35700,37800,39600,42000,43800,45000,48000,51300,125000,130200,135000,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false],
 			"type":"dollar"
 			},
 		"col3":{
@@ -38,7 +38,7 @@
 			"type":"percent"
 			},
 		"col4":{
-			"series":[null,null,null,null,null,null,null,null,null,null,6600,6600,7800,7800,7800,7800,9000,10800,13200,14100,15300,16500,17700,22900,25900,29700,32400,35700,37800,39600,42000,43800,45000,48000,51300,125000,130200,135000,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],
+			"series":[false,false,false,false,false,false,false,false,false,false,6600,6600,7800,7800,7800,7800,9000,10800,13200,14100,15300,16500,17700,22900,25900,29700,32400,35700,37800,39600,42000,43800,45000,48000,51300,125000,130200,135000,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false],
 			"type":"percent"
 			},
 		"col5":{
@@ -46,7 +46,7 @@
 			"type":"percent"
 			},
 		"col6":{
-			"series":[null,null,null,null,null,null,null,null,null,null,6600,6600,7800,7800,7800,7800,9000,10800,13200,14100,15300,16500,17700,22900,25900,29700,32400,35700,37800,39600,42000,43800,45000,48000,51300,125000,130200,135000,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],
+			"series":[false,false,false,false,false,false,false,false,false,false,6600,6600,7800,7800,7800,7800,9000,10800,13200,14100,15300,16500,17700,22900,25900,29700,32400,35700,37800,39600,42000,43800,45000,48000,51300,125000,130200,135000,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false],
 			"type":"percent"
 			},
 		"col7":{
@@ -54,7 +54,7 @@
 			"type":"percent"
 			},
 		"col8":{
-			"series":[null,null,null,null,null,null,null,null,null,null,6600,6600,7800,7800,7800,7800,9000,10800,13200,14100,15300,16500,17700,22900,25900,29700,32400,35700,37800,39600,42000,43800,45000,48000,51300,125000,130200,135000,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],
+			"series":[false,false,false,false,false,false,false,false,false,false,6600,6600,7800,7800,7800,7800,9000,10800,13200,14100,15300,16500,17700,22900,25900,29700,32400,35700,37800,39600,42000,43800,45000,48000,51300,125000,130200,135000,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false],
 			"type":"percent"
 			},
 		"col9":{
@@ -62,7 +62,7 @@
 			"type":"percent"
 			},
 		"col10":{
-			"series":[null,null,null,null,null,null,null,null,null,null,6600,6600,7800,7800,7800,7800,9000,10800,13200,14100,15300,16500,17700,22900,25900,29700,32400,35700,37800,39600,42000,43800,45000,48000,51300,125000,130200,135000,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],
+			"series":[false,false,false,false,false,false,false,false,false,false,6600,6600,7800,7800,7800,7800,9000,10800,13200,14100,15300,16500,17700,22900,25900,29700,32400,35700,37800,39600,42000,43800,45000,48000,51300,125000,130200,135000,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false],
 			"type":"percent"
 			}
 	}
