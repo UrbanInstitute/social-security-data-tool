@@ -426,6 +426,7 @@ function singleYear(){
 		})
 }
 function multiYear(){
+
 	d3.select("#lineChart")
 		.transition()
 		.style("left",0)
@@ -438,6 +439,15 @@ function multiYear(){
 		.style("opacity",1)
 	d3.select("#valueScrubber .right.thumb")
 		.classed("singleYear", false)
+
+	if(parseFloat(d3.select(".right.thumb").attr("cx")) < parseFloat(d3.select(".left.thumb").attr("cx"))){
+		d3.select(".right.thumb")
+			.attr("cx", function(d){
+				d.x=d3.select(".left.thumb").datum().x
+				return parseFloat(d3.select(".left.thumb").attr("cx"))
+			});
+		d3.select("#rightValue").text(d3.select("#leftValue").text())
+	}
 	d3.select("#sliderHighlight")
 		.transition()
 		.attr("x", function(){
@@ -446,20 +456,16 @@ function multiYear(){
 		.attr("width", function(){
 			return parseInt(d3.select(".right.thumb").attr("cx")) - parseInt(d3.select(".left.thumb").attr("cx"))
 		})
+
 }
 function changeYears(start, end){
+
 	var lineChart = $('#lineChart').highcharts();
     lineChart.xAxis[0].setExtremes(
             Date.UTC(parseInt(start), 0, 1),
             Date.UTC(parseInt(end), 0, 1)
     );
     var singleYearBarChart = $('#singleYearBarChart').highcharts();
-    // for(var i=0; i<singleYearBarChart.series.length; i++){
-    	// console.log(yearBarCache)
-    	// console.log(singleYearBarChart.series[0].data)
-    	// for(var i=0; i<singleYearBarChart.series[0].data.length; i++){
-    	// 	singleYearBarChart.series[0].data.update({y:3000})	
-    	// }
 		$.each(singleYearBarChart.series[0].data, function(k,v){
 			var barData = yearBarCache[v.category]
 			v.update({
@@ -467,13 +473,6 @@ function changeYears(start, end){
 			});
 
 		});
-    	// var barData = yearBarCache[singleYearBarChart.series[0].name]
-    	// console.log(barData)
-    	// delete yearBarCache[singleYearBarChart.series[i].name]
-    	// singleYearBarChart.series[i].setData([generateBarFromYear(barData[0], barData[1], end)])
-
-    // }
-
 
 }
 function drawScrubber(){
