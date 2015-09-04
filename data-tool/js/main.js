@@ -168,12 +168,13 @@ function checkUnitCompatibility(unit, input, charts){
 function generateTimeSeries(year, column){
 	var series = [];
 	for(var i = 0; i< year.length; i++){
+		var y = (column[i] == false) ? null : column[i];
 		if(typeof(year[i]) == "number"){
-			series.push([Date.UTC(year[i], 0, 1), column[i]]);
+			series.push([Date.UTC(year[i], 0, 1), y]);
 		}else{
 			var years = year[i].split("–");
-			series.push([Date.UTC(parseInt(years[0]), 0, 1), column[i]]);
-			series.push([Date.UTC(parseInt(years[1]), 0, 1), column[i]]);
+			series.push([Date.UTC(parseInt(years[0]), 0, 1), y]);
+			series.push([Date.UTC(parseInt(years[1]), 0, 1), y]);
 		}
 	}
 	return series;
@@ -263,7 +264,6 @@ function generateBarFromYear(years, column, year){
 			}
 		}
 	}
-	console.log(series)
 	for(var j = 0; j < series.length; j++){
 		if(series[j][0] == Date.UTC(parseInt(year), 0, 1)){
 			return series[j][1]
