@@ -27,43 +27,53 @@
 			},
 		"col1":{
 			"series":[3000,3000,3600,3600,4200,4200,4800,4800,4800,4800,6600,6600,7800,7800,7800,7800,9000,10800,13200,14100,15300,16500,17700,22900,25900,29700,32400,35700,37800,39600,42000,43800,45000,48000,51300,53400,55500,57600,60600,61200,62700,65400,68400,72600,76200,80400,84900,87000,87900,90000,94200,97500,102000,106800,106800,106800,110100,113700,117000],
-			"type":"dollar"
+			"type":"dollar",
+			"label": "Annual maximum taxable earnings (dollars) :: OASDI"
 			},
 		"col2":{
 			"series":[false,false,false,false,false,false,false,false,false,false,6600,6600,7800,7800,7800,7800,9000,10800,13200,14100,15300,16500,17700,22900,25900,29700,32400,35700,37800,39600,42000,43800,45000,48000,51300,125000,130200,135000,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false],
-			"type":"dollar"
+			"type":"dollar",
+			"label": "Annual maximum taxable earnings (dollars) :: HI"
 			},
 		"col3":{
 			"series":[3000,3000,3600,3600,4200,4200,4800,4800,4800,4800,6600,6600,7800,7800,7800,7800,9000,10800,13200,14100,15300,16500,17700,22900,25900,29700,32400,35700,37800,39600,42000,43800,45000,48000,51300,53400,55500,57600,60600,61200,62700,65400,68400,72600,76200,80400,84900,87000,87900,90000,94200,97500,102000,106800,106800,106800,110100,113700,117000],
-			"type":"percent"
+			"type":"percent",
+			"label": "Contribution rate (percent) :: Employer and employee, each :: OASDI"
 			},
 		"col4":{
 			"series":[false,false,false,false,false,false,false,false,false,false,6600,6600,7800,7800,7800,7800,9000,10800,13200,14100,15300,16500,17700,22900,25900,29700,32400,35700,37800,39600,42000,43800,45000,48000,51300,125000,130200,135000,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false],
-			"type":"percent"
+			"type":"percent",
+			"label": "Contribution rate (percent) :: Employer and employee, each :: OASI"
 			},
 		"col5":{
 			"series":[3000,3000,3600,3600,4200,4200,4800,4800,4800,4800,6600,6600,7800,7800,7800,7800,9000,10800,13200,14100,15300,16500,17700,22900,25900,29700,32400,35700,37800,39600,42000,43800,45000,48000,51300,53400,55500,57600,60600,61200,62700,65400,68400,72600,76200,80400,84900,87000,87900,90000,94200,97500,102000,106800,106800,106800,110100,113700,117000],
-			"type":"percent"
+			"type":"percent",
+			"label": "Contribution rate (percent) :: Employer and employee, each :: DI"
 			},
 		"col6":{
 			"series":[false,false,false,false,false,false,false,false,false,false,6600,6600,7800,7800,7800,7800,9000,10800,13200,14100,15300,16500,17700,22900,25900,29700,32400,35700,37800,39600,42000,43800,45000,48000,51300,125000,130200,135000,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false],
-			"type":"percent"
+			"type":"percent",
+			"label": "Contribution rate (percent) :: Employer and employee, each :: HI"
 			},
 		"col7":{
 			"series":[3000,3000,3600,3600,4200,4200,4800,4800,4800,4800,6600,6600,7800,7800,7800,7800,9000,10800,13200,14100,15300,16500,17700,22900,25900,29700,32400,35700,37800,39600,42000,43800,45000,48000,51300,53400,55500,57600,60600,61200,62700,65400,68400,72600,76200,80400,84900,87000,87900,90000,94200,97500,102000,106800,106800,106800,110100,113700,117000],
-			"type":"percent"
+			"type":"percent",
+			"label": "Contribution rate (percent) :: Self-employed person :: OASDI and HI"
 			},
 		"col8":{
 			"series":[false,false,false,false,false,false,false,false,false,false,6600,6600,7800,7800,7800,7800,9000,10800,13200,14100,15300,16500,17700,22900,25900,29700,32400,35700,37800,39600,42000,43800,45000,48000,51300,125000,130200,135000,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false],
-			"type":"percent"
+			"type":"percent",
+			"label": "Contribution rate (percent) :: Self-employed person :: OASI"
 			},
 		"col9":{
 			"series":[3000,3000,3600,3600,4200,4200,4800,4800,4800,4800,6600,6600,7800,7800,7800,7800,9000,10800,13200,14100,15300,16500,17700,22900,25900,29700,32400,35700,37800,39600,42000,43800,45000,48000,51300,53400,55500,57600,60600,61200,62700,65400,68400,72600,76200,80400,84900,87000,87900,90000,94200,97500,102000,106800,106800,106800,110100,113700,117000],
-			"type":"percent"
+			"type":"percent",
+			"label": "Contribution rate (percent) :: Self-employed person :: DI"
 			},
 		"col10":{
 			"series":[false,false,false,false,false,false,false,false,false,false,6600,6600,7800,7800,7800,7800,9000,10800,13200,14100,15300,16500,17700,22900,25900,29700,32400,35700,37800,39600,42000,43800,45000,48000,51300,125000,130200,135000,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false],
-			"type":"percent"
+			"type":"percent",
+			"label": "Contribution rate (percent) :: Self-employed person :: HI"
 			}
 	}
 }

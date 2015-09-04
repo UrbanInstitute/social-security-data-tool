@@ -39,7 +39,7 @@ function drawTable(input){
 			var tableID = d3.select(table).attr("id")
 			$.get( getDocURL(tableID) , function(resp) {
 		  		var data = resp.results[0];
-		  		var seriesID = getId(data) + "_" + series
+		  		var seriesID = data["data"][series]["label"]
 		  		if( !selected ){
 					singleYearBarChart.series[0].addPoint(generateBarFromYear(data.data.years.series, data["data"][series]["series"], $("#rightValue").text()))
 
@@ -57,7 +57,7 @@ function drawTable(input){
 
 					lineChart.addSeries({
 						id: seriesID,
-		            	name: series,
+		            	name: seriesID,
 		            	data: generateTimeSeries(data.data.years.series, data["data"][series]["series"])
 					});
 					// singleYearBarChart.addSeries({
@@ -71,8 +71,8 @@ function drawTable(input){
 					checkUnitCompatibility(data["data"][series]["type"], input, [lineChart, singleYearBarChart])
 					th.classed("selected", true)
 				} else{
-					removeSeries(lineChart, getId(data) + "_" + series)
-					removeSeries(singleYearBarChart, getId(data) + "_" + series)
+					removeSeries(lineChart, seriesID)
+					removeSeries(singleYearBarChart, seriesID)
 					th.classed("selected", false)
 				}
 			});
@@ -151,7 +151,7 @@ function checkUnitCompatibility(unit, input, charts){
 			if(input["data"][series]["type"] == unit){
 				return true
 			} else{
-				for(var i = 0; i<charts.length; i++){ removeSeries(charts[i], getId(input) + "_" + series) }
+				for(var i = 0; i<charts.length; i++){ removeSeries(charts[i], input["data"][series]["label"]) }
 				d3.select("#interactionInstructions .warning")
 					.transition()
 					.duration(100)
@@ -243,8 +243,8 @@ function drawLineChart(input){
             },
 
         series: [{
-        	id: input.title.id.replace(".","") + "_" + "col1",
-            name: "col1",
+        	id: "Annual maximum taxable earnings (dollars) :: OASDI",
+            name: "Annual maximum taxable earnings (dollars) :: OASDI",
             data: generateTimeSeries(input.data.years.series, input.data.col1.series)
         }
         ]
@@ -275,7 +275,7 @@ function drawSingleYearBarChart(input){
         $('#singleYearBarChart').highcharts({
             chart: {
                 marginTop: 10,
-                marginBottom: 40,
+                marginBottom: 80,
                 type: 'column'
 
             },
@@ -310,7 +310,7 @@ function drawSingleYearBarChart(input){
                 gridLineWidth: '0',
                 lineWidth: 2,
                 tickInterval: 0,
-                categories: ["2A3_col1"],
+                categories: ["Annual maximum taxable earnings (dollars) :: OASDI"],
                 plotLines: [{
                     value: 0,
                     width: 0
@@ -352,8 +352,8 @@ function drawSingleYearBarChart(input){
                 y: 40
             },
             series: [{
-            			id: input.title.id.replace(".","") + "_" + "col1",
-                    	name: input.title.id.replace(".","") + "_" + "col1",
+            			id: "Annual maximum taxable earnings (dollars) :: OASDI",
+                    	name: "Annual maximum taxable earnings (dollars) :: OASDI",
                     	data: [generateBarFromYear(input.data.years.series, input.data.col1.series, "2014")]
                     }
                   ]
