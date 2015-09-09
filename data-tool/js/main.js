@@ -359,7 +359,7 @@ function drawSingleYearBarChart(input){
                   ]
 
         }); //end chart 6
-		yearBarCache[input.title.id.replace(".","") + "_" + "col1"] = [input.data.years.series, input.data.col1.series]
+		yearBarCache["Annual maximum taxable earnings (dollars) :: OASDI"] = [input.data.years.series, input.data.col1.series]
 }
 function removeSeries(chart, id){
 	// var chart = $('#lineChart').highcharts();
