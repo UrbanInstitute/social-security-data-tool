@@ -76,7 +76,8 @@ def getTH(rows, rowNum, colNum):
 	th = "<th"
 	rowspan = 1
 	colspan = 1
-	for row in rows:
+	for r in range(rowNum, len(rows)):
+		row = rows[r]
 		if(row[colNum].ctype == 0):
 			rowspan += 1
 	for i in range(colNum+1, len(rows[rowNum])):
