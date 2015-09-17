@@ -2,6 +2,15 @@ from os.path import join, dirname, abspath
 import xlrd
 import re
 import pprint
+import json
+
+def parseTitle(sheet, sheetType):
+	title = {}
+	fullTitle = sheet.row(1)[0].value
+	title["id"] = fullTitle	.split(u'\u2014')[0].replace(".","").replace("Table ","")
+	title["name"] = fullTitle.split(u'\u2014')[1]
+	return title
+
 
 def parseHeader(output, headRows, lastRow, sheet, sheetType):
 	headerString = "<thead>"
@@ -21,11 +30,46 @@ def parseHeader(output, headRows, lastRow, sheet, sheetType):
 			if(rows[r-2][c].ctype != 0):
 				headerString += getTH(rows, r, c)
 				if((r == headRows-1 and c != 0) or (c == 0 and r ==2)):
-					getData(data, rows, r, c, lastRow, sheet, sheetType)
+					getData(data, rows, r, c, headRows, lastRow, sheet, sheetType)
 		headerString += "</tr>"
 	headerString += "</thead>"
+	bodyString = getTbody(sheet, sheetType, headRows, lastRow)
+	chartType = ""
+	if(sheetType == "simpleTime"):
+		chartType = "timeSeries"
+	return{ "headerString": headerString, "data": data, "bodyString": bodyString, "chartType": chartType}
 
-	return{ "headerString": headerString, "data": data}
+def getTbody(sheet, sheetType, headRows, lastRow):
+	tbody = "<tbody>"
+	for r in range(headRows, lastRow):
+		row = sheet.row(r)
+		for c in range(0, len(row)):
+			if sheetType == "simpleTime" and c==1:
+				continue
+			if(c==0):
+				tbody += "<tr class="
+				val = getYear(sheet.cell_value(rowx=r, colx=c))
+				if isinstance(val, basestring):
+					if(val.find("-") != -1):
+						y1 = int(val.split("-")[0])
+						y2 = int(val.split("-")[1])
+						for y in range(y1, y2+1):
+							tbody += "\"" + str(y) + "\""
+							space = " " if (y != y2) else ""
+							tbody += space
+					else:
+						tbody += str(val)
+				else:
+					tbody += str(val)
+				tbody += ">"
+			cell = sheet.cell_value(rowx=r, colx=c)
+			tbody += "<td class=\"col%i\">%s</td>"%(c, cell)
+			if(c==len(row)):
+				tbody += "</tr>"
+	tbody += "</tbody>"
+	return tbody
+		# if(sheetType == "simpleTime"):
+			# years = getYear()
 
 def getTH(rows, rowNum, colNum):
 	rowNum -= 2
@@ -41,24 +85,53 @@ def getTH(rows, rowNum, colNum):
 		else:
 			break
 	if (rowspan != 1):
-		th += " rowspan=\\\"%i\\\" "%rowspan
+		th += " rowspan=\"%i\" "%rowspan
 	if (colspan != 1):
-		th += " colspan=\\\"%i\\\" "%colspan
+		th += " colspan=\"%i\" "%colspan
 	if(rowNum == len(rows)-1):
-		th += " class=\\\"series col%i\\\" "%colNum
+		th += " class=\"series col%i\" "%colNum
 	th += ">"
 	th += rows[rowNum][colNum].value
 	th += "</th>"
 	return th
 
-def getData(data, rows, rowNum, colNum, lastRow, sheet, sheetType):
+def getData(data, rows, rowNum, colNum, headRows, lastRow, sheet, sheetType):
 	if (colNum == 0):
-		data["years"] = {}
+		if sheetType == "simpleTime":
+			obj = data["years"] = {}
+			obj["series"] = getXSeries(rowNum, 0, headRows, lastRow, sheet, sheetType)
+			dType = obj["type"] = "year"
 	else:
 		obj = data["col%i"%colNum] = {}
 		obj["series"] = getSeries(rowNum, colNum, lastRow, sheet, sheetType)
 		label = obj["label"] = getLabel(rows, colNum)
 		dType = obj["type"] = getType(label)
+
+def getXSeries(rowNum, colNum, headRows, lastRow, sheet, sheetType):
+	series = []
+	if sheetType == "simpleTime":
+		for i in range(headRows, lastRow):
+			val = sheet.cell_value(rowx=i, colx=colNum)
+			val = getYear(val)
+			series.append(val)
+		return series
+
+def getYear(val):
+	if isinstance(val, basestring):
+##allow for year ranges (strings) and decimal points
+		non_decimal = re.compile(r'[^\d.-]+')
+		float_test = re.compile(r'[^\d.]+')
+		val = val.replace(u'\xe2', '').replace(u'\u2013','-')
+		val = non_decimal.sub('',val)
+##should just be ranges, no negative years
+		if(val.find("-") == -1):
+			val = val
+##Once footnotes have been replaced, cast straight up numbers to float (e.g. "e 2012")
+		if float_test.search(val) == None:
+			val = int(float(val))
+	else:
+		val = int(float(val))
+	return val
 
 def getSeries(rowNum, colNum, lastRow, sheet, sheetType):
 	series = []
@@ -71,12 +144,15 @@ def getSeries(rowNum, colNum, lastRow, sheet, sheetType):
 #strip footnotes markers and space from numeric values, then parse to float
 #Should hold for any sheetType where all data is expected to be numeric
 		elif(sheetType == "simpleTime" and isinstance(val, basestring)):
-			non_decimal = re.compile(r'[^\d.]+')
+##allow for negative numbers and decimal points
+			non_decimal = re.compile(r'[^\d.-]+')
 			decimal = re.compile(r'\d')
 #If cell ONLY contains footnote (no digits), don't try to cast it to float
 			if(decimal.search(val)):
 				val = non_decimal.sub('', val)
 				val = float(val)
+			else:
+				val = False
 		series.append(val)
 	return series
 
@@ -131,9 +207,16 @@ for i in range(headRows+1, xl_sheet.nrows):
 
 output["html"] = {}
 values = parseHeader(output, headRows, lastRow, xl_sheet, "simpleTime")
+titles = parseTitle(xl_sheet, "simpleTime")
 output["html"]["header"] = values["headerString"]
+output["html"]["body"] = values["bodyString"]
 output["data"] = values["data"]
-pprint.pprint(output)
+output["title"] = titles
+output["category"] = values["chartType"]
+# pprint.pprint(output)
+
+with open('../data/json/stat_supplement_table-%s.json'%titles["id"], 'w') as fp:
+    json.dump(output, fp, indent=4, sort_keys=True)
 
 
 	# print type(testVal)

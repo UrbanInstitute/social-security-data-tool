@@ -172,7 +172,7 @@ function generateTimeSeries(year, column){
 		if(typeof(year[i]) == "number"){
 			series.push([Date.UTC(year[i], 0, 1), y]);
 		}else{
-			var years = year[i].split("–");
+			var years = year[i].split("-");
 			series.push([Date.UTC(parseInt(years[0]), 0, 1), y]);
 			series.push([Date.UTC(parseInt(years[1]), 0, 1), y]);
 		}
@@ -184,13 +184,12 @@ function drawLineChart(input){
             chart: {
                 marginTop: 100,
                 marginBottom: 40
-
             },
             plotOptions: {
                 series: {
                     marker: {
                         enabled: true
-                    }
+                    },
                 }
             },
 
@@ -256,7 +255,7 @@ function generateBarFromYear(years, column, year){
 		if(typeof(years[i]) == "number"){
 			series.push([Date.UTC(years[i], 0, 1), column[i]]);
 		}else{
-			var range = years[i].split("–");
+			var range = years[i].split("-");
 			var start = parseInt(range[0]);
 			var end = parseInt(range[1]);
 			for(var c=start; c<=end; c++){
@@ -337,8 +336,12 @@ function drawSingleYearBarChart(input){
             },
             tooltip: {
                 formatter: function () {
-                    return '' +
-                        this.x + ': $' + this.y + ' million';
+                	if(this.y == false || this.y==null){
+                        return null
+                    }else{
+                    	return '' +
+                        	this.x + ': $' + this.y + ' million';
+                        }
                 }
             },
             legend: {
@@ -683,7 +686,7 @@ function setTheme(){
 	        },
 	        series: {
 	            marker: {
-	                enabled: false,
+	                enabled: true,
 	                radius: 3,
 	                lineWidth: 2,
 	                symbol: 'circle',
