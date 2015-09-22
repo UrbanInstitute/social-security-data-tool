@@ -1,8 +1,9 @@
 var yearBarCache;
 
-function init(){
-	$.get( getDocURL("2A3"), function(resp) {
+function init(doc){
+	$.get( getDocURL(doc), function(resp) {
 	  var data = resp.results[0];
+	  console.log(data)
 	  var category = data.category;
 	  switch(category){
 	  	case "timeSeries":
@@ -123,13 +124,14 @@ function formatTable(tableID){
 			var colspan = (d3.select(h).attr("colspan") == null) ? 1 : parseInt(d3.select(h).attr("colspan"));
 			var rowspan = (d3.select(h).attr("rowspan") == null) ? 1 : parseInt(d3.select(h).attr("rowspan"));
 			resizeHeader(h, holder[i].splice(0,colspan))
-			if(rowspan != 1){
+			if(rowspan != 1 && i != rows.length-1){
 				for(j = i+1; j + i < rowspan; j++ ){
 					holder[j].splice(0,colspan)
 				}
 			}
 		})			
 	}
+
 
 //Determine height of thead, and set initial position of tbody to be just under thead
 	var headHeight = d3.select("#" + tableID + " thead").node().getBoundingClientRect().height
@@ -704,4 +706,5 @@ function setTheme(){
 	Highcharts.setOptions(Highcharts.theme);
 }
 
-init();
+init("4A1");
+// init("2A3");

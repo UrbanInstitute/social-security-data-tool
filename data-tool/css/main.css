@@ -125,12 +125,16 @@ th.selected{
 .pure-table th {
     border-left: 1px solid #cbcbcb;/*  inner column border */
     border-width: 0 0 0 1px;
-    font-size: inherit;
+    font-size: 12px;
     margin: 0;
     overflow: visible; /*to make ths where the title is really long work*/
     padding: 8px 10px; /* cell padding */
 }
 
+.pure-table th {
+    border-bottom: 1px solid #cbcbcb;
+    text-align: center;
+}
 .pure-table thead {
     background-color: #e0e0e0;
     color: #000;
@@ -139,5 +143,6 @@ th.selected{
 }
 
 .pure-table td {
+    font-size: 14px;
     background-color: transparent;
 }
