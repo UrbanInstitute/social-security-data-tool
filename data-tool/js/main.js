@@ -1,7 +1,8 @@
 var yearBarCache;
 
 function init(){
-	$.get( getDocURL("2A3"), function(resp) {
+	// $.get( getDocURL("2A3"), function(resp) {
+	$.getJSON( getJSONPath("2A3"), function(resp){
 	  var data = resp.results[0];
 	  var category = data.category;
 	  switch(category){
@@ -37,7 +38,8 @@ function drawTable(input){
 			//th -> tr -> thead -> table
 			var table = th.node().parentNode.parentNode.parentNode
 			var tableID = d3.select(table).attr("id")
-			$.get( getDocURL(tableID) , function(resp) {
+			// $.get( getDocURL(tableID) , function(resp) {
+			$.getJSON( getJSONPath("2A3"), function(resp){
 		  		var data = resp.results[0];
 		  		var seriesID = data["data"][series]["label"]
 		  		if( !selected ){
@@ -407,6 +409,9 @@ function getId(doc){
 }
 function getDocURL(id){
 	return "http://localhost:27080/test/tables/_find?criteria=" + encodeURIComponent('{"title.id":"' + id + '"}')
+}
+function getJSONPath(id){
+	return "../data/json/stat_supplement_table-" + id + ".json"
 }
 function singleYear(){
 	d3.select("#lineChart")
