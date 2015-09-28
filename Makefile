@@ -1,7 +1,7 @@
 all:
 		@echo "Try make data"
 
-data:
-	JSONS := $(shell find $(makefile_dir)/data/$(json) -name "*.json")
-
-	@echo "foo $JSONS"
+JSONS := $(wildcard data/json/*.json)
+.PHONY: data
+data: $(JSONS)
+	@mongoimport --db test --collection tables --file $(JSONS)

@@ -18,6 +18,7 @@ function init(){
 	yearBarCache = {};
 }
 function drawTable(input){
+	d3.select("#testTable table").remove()
 	d3.select("#testTable")
 		.append("table")
 		.attr("class", "pure-table tablesorter")
@@ -97,8 +98,10 @@ function resizeHeader(header, bodyCells){
 
  	}
  //otherwise, resize header to width of bodycell(s)
- 	else{
+	else{
 		d3.select(header).style("width", w)
+		d3.select(header).select("div").style("width", w)
+
 	}
 	return false
 }
@@ -125,13 +128,14 @@ function formatTable(tableID){
 			var colspan = (d3.select(h).attr("colspan") == null) ? 1 : parseInt(d3.select(h).attr("colspan"));
 			var rowspan = (d3.select(h).attr("rowspan") == null) ? 1 : parseInt(d3.select(h).attr("rowspan"));
 			resizeHeader(h, holder[i].splice(0,colspan))
-			if(rowspan != 1){
+			if(rowspan != 1 && i != rows.length-1){
 				for(j = i+1; j + i < rowspan; j++ ){
 					holder[j].splice(0,colspan)
 				}
 			}
 		})			
 	}
+
 
 //Determine height of thead, and set initial position of tbody to be just under thead
 	var headHeight = d3.select("#" + tableID + " thead").node().getBoundingClientRect().height
@@ -182,6 +186,7 @@ function generateTimeSeries(year, column){
 	return series;
 }
 function drawLineChart(input){
+	var initId = input["data"]["col1"]["label"]
     $('#lineChart').highcharts({
             chart: {
                 marginTop: 100,
@@ -244,8 +249,8 @@ function drawLineChart(input){
             },
 
         series: [{
-        	id: "Annual maximum taxable earnings (dollars) :: OASDI",
-            name: "Annual maximum taxable earnings (dollars) :: OASDI",
+        	id: initId,
+            name: initId,
             data: generateTimeSeries(input.data.years.series, input.data.col1.series)
         }
         ]
@@ -273,6 +278,8 @@ function generateBarFromYear(years, column, year){
 	return false;
 }
 function drawSingleYearBarChart(input){
+	var initId = input["data"]["col1"]["label"]
+	console.log(initId)
         $('#singleYearBarChart').highcharts({
             chart: {
                 marginTop: 10,
@@ -311,7 +318,7 @@ function drawSingleYearBarChart(input){
                 gridLineWidth: '0',
                 lineWidth: 2,
                 tickInterval: 0,
-                categories: ["Annual maximum taxable earnings (dollars) :: OASDI"],
+                categories: [initId],
                 plotLines: [{
                     value: 0,
                     width: 0
@@ -357,19 +364,17 @@ function drawSingleYearBarChart(input){
                 y: 40
             },
             series: [{
-            			id: "Annual maximum taxable earnings (dollars) :: OASDI",
-                    	name: "Annual maximum taxable earnings (dollars) :: OASDI",
+            			id: initId,
+                    	name: initId,
                     	data: [generateBarFromYear(input.data.years.series, input.data.col1.series, "2014")]
                     }
                   ]
 
-        }); //end chart 6
-		yearBarCache["Annual maximum taxable earnings (dollars) :: OASDI"] = [input.data.years.series, input.data.col1.series]
+        });
+		yearBarCache[initId] = [input.data.years.series, input.data.col1.series]
 }
 function removeSeries(chart, id){
-	// var chart = $('#lineChart').highcharts();
 	if(chart.renderTo.id == "singleYearBarChart"){
-		// console.log(chart.series[0].data)
 		var index = chart.xAxis[0].categories.indexOf(id)
 		chart.series[0].removePoint(index)
 
@@ -381,19 +386,8 @@ function removeSeries(chart, id){
 
 		var categories = chart.xAxis[0].categories
 		categories.splice(index, 1)
-		// chart.xAxis[0].setCategories(categories)
-		// console.log(chart.xAxis[0].categories)
-		// console.log(categories)
 		chart.xAxis[0].setCategories(categories)
 		chart.redraw();
-		// for(var j=0; j<categories.length; j++){
-			
-		// 	chart.series[0].data[j].category = categories[j]
-		// }
-
-
-
-
 	}
 	else{
 		for(var i = 0; i<chart.series.length; i++){
@@ -484,6 +478,8 @@ function changeYears(start, end){
 
 }
 function drawScrubber(){
+	d3.select("#singleYearCheck svg").remove();
+	d3.selectAll("#valueScrubber div").remove();
 	var width = 240,
 	    height = 45,
 	    radius = 7,
@@ -708,5 +704,11 @@ function setTheme(){
 	// Apply the theme
 	Highcharts.setOptions(Highcharts.theme);
 }
+var simpleTimeSheets = ['2.A3','2.A4','2.A8','2.A9','2.A13','2.A27','2.A28','2.C1','2.F3','3.C4','3.C6.1','3.E1','4.A1','4.A2','4.A3','4.A4','4.A5','4.A6','4.B1','4.B2','4.B4','4.B11','4.C1','5.A17','5.C2','5.D3','5.E2','5.F6','5.F8','5.F12','5.G2','6.C7','6.D6','6.D8','6.D9','7.A9','7.E6','8.A1','8.A2','8.B10','9.B1','9.D1']
+var notok = ['2A27','2A28','2C1','3C4','3E1','4B1','4B2',]
+// init("2A9");
+init("4C1");
 
-init();
+function test(index){
+	init(simpleTimeSheets[index].replace(/\./g,""))
+}
