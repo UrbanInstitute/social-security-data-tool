@@ -2,20 +2,59 @@ var yearBarCache;
 
 function init(){
 	// $.get( getDocURL("2A3"), function(resp) {
-	$.getJSON( getJSONPath("2A3"), function(resp){
-	  var data = resp.results[0];
-	  var category = data.category;
-	  switch(category){
-	  	case "timeSeries":
-	  		drawLineChart(data);
-  			drawSingleYearBarChart(data);
-	  		drawTable(data);
-	  		break;
-	  }
-	});
-	setTheme();
-	drawScrubber();
-	yearBarCache = {};
+	setLayout();
+	setTimeout(function(){
+		$.getJSON( getJSONPath("2A3"), function(resp){
+		  // var data = resp.results[0];
+		  var data = resp;
+		  var category = data.category;
+		  switch(category){
+		  	case "timeSeries":
+		  		drawLineChart(data);
+	  			drawSingleYearBarChart(data);
+		  		drawTable(data);
+		  		break;
+		  }
+		});
+		setTheme();
+		drawScrubber();
+		yearBarCache = {};
+	}, 1000);
+}
+
+function newTable(id){
+	$.getJSON( getJSONPath(id), function(resp){
+		  // var data = resp.results[0];
+		  var data = resp;
+		  var category = data.category;
+		  switch(category){
+		  	case "timeSeries":
+		  		drawLineChart(data);
+	  			drawSingleYearBarChart(data);
+		  		drawTable(data);
+		  		break;
+		  }
+		});
+		drawScrubber();
+		yearBarCache = {};
+}
+
+function setLayout(){
+	d3.selectAll(".initial_hide")
+		.transition()
+		.duration(5000)
+		.style("opacity",1)
+	var height = $(window).height();
+	var width = $(window).width();
+	d3.select("#controls")
+		.transition().duration(2000)
+		.style("width", 400)
+		.style("height", 360)
+		.style("background-color","#e0e0e0")
+	d3.select("#innerControls")
+		.transition()
+		.duration(2000)
+		.style("margin-top","20px")
 }
 function drawTable(input){
 	d3.select("#testTable table").remove()
@@ -40,8 +79,9 @@ function drawTable(input){
 			var table = th.node().parentNode.parentNode.parentNode
 			var tableID = d3.select(table).attr("id")
 			// $.get( getDocURL(tableID) , function(resp) {
-			$.getJSON( getJSONPath("2A3"), function(resp){
-		  		var data = resp.results[0];
+			$.getJSON( getJSONPath(tableID), function(resp){
+		  		// var data = resp.results[0];
+		  		var data = resp;
 		  		var seriesID = data["data"][series]["label"]
 		  		if( !selected ){
 					singleYearBarChart.series[0].addPoint(generateBarFromYear(data.data.years.series, data["data"][series]["series"], $("#rightValue").text()))
@@ -147,7 +187,12 @@ function formatTable(tableID){
 			d3.event.stopPropagation()
 	})
 
-
+//center table in window
+	var tWidth = $("thead").width()
+	var wWidth = $(window).width()
+	var margin = (wWidth - tWidth) / 2.0
+	d3.select("table")
+		.style("margin-left",margin+ "px")
 }
 function checkUnitCompatibility(unit, input, charts){
 	d3.selectAll("th.selected")
@@ -413,7 +458,7 @@ function singleYear(){
 		.style("left",-2000)
 	d3.select("#singleYearBarChart")
 		.transition()
-		.style("left",0)
+		.style("left","400px")
 	d3.select("#valueScrubber .left.thumb")
 		.style("display","none")
 	d3.select("#leftValue")
@@ -431,7 +476,7 @@ function multiYear(){
 
 	d3.select("#lineChart")
 		.transition()
-		.style("left",0)
+		.style("left","400px")
 	d3.select("#singleYearBarChart")
 		.transition()
 		.style("left",2000)
@@ -705,10 +750,10 @@ function setTheme(){
 	Highcharts.setOptions(Highcharts.theme);
 }
 var simpleTimeSheets = ['2.A3','2.A4','2.A8','2.A9','2.A13','2.A27','2.A28','2.C1','2.F3','3.C4','3.C6.1','3.E1','4.A1','4.A2','4.A3','4.A4','4.A5','4.A6','4.B1','4.B2','4.B4','4.B11','4.C1','5.A17','5.C2','5.D3','5.E2','5.F6','5.F8','5.F12','5.G2','6.C7','6.D6','6.D8','6.D9','7.A9','7.E6','8.A1','8.A2','8.B10','9.B1','9.D1']
-var notok = ['2A27','2A28','2C1','3C4','3E1','4B1','4B2',]
+var notok = ['2A27','2A28','2C1','3C4','3E1','4B1','4B2']
 // init("2A9");
-init("4C1");
-
+// init("4C1");
+init();
 function test(index){
 	init(simpleTimeSheets[index].replace(/\./g,""))
 }
