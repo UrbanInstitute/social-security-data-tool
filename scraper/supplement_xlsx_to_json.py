@@ -232,6 +232,7 @@ col1_exceptions = ['6.C7','5.F8','5E.2','5.D3','5.C2','5.A17']
 # simpleTimeSheets = ['2.A9']
 
 wordList = {}
+titleList = {}
 
 for sheet_id in simpleTimeSheets:
 	words = wordList[sheet_id] = []
@@ -264,26 +265,29 @@ for sheet_id in simpleTimeSheets:
 	output["data"] = values["data"]
 	output["title"] = titles
 	addWords(words, titles["name"])
+	titleList[titles["id"]] = titles["id"] + " :: " + titles["name"]
 	output["category"] = values["chartType"]
 
 
 	with open('../data/json/stat_supplement_table-%s.json'%titles["id"], 'w') as fp:
 		json.dump(output, fp, indent=4, sort_keys=True)
 
-newList = {}
+idList = {}
 for key in wordList:
 	wordList[key] = list(set(wordList[key]))
 	for word in wordList[key]:
 		word = word.upper()
-		if word not in newList:
-			newList[word] = [key]
+		if word not in idList:
+			idList[word] = [key]
 		else:
-			newList[word].append(key)
+			idList[word].append(key)
 
 
 with open('../data/words.json', 'w') as fp:
-	json.dump(newList, fp, indent=4, sort_keys=True)
+	json.dump(idList, fp, indent=4, sort_keys=True)
 
+with open('../data/titles.json', 'w') as fp:
+	json.dump(titleList, fp, indent=4, sort_keys=True)
 
 
 

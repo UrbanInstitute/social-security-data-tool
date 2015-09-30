@@ -13,16 +13,21 @@
 <div id = "chartContainer">
 	<div id = "controls">
 		<div id = "innerControls">
-			These are the controls
-			<input type="text" name="search" class = "initial_hide" id="searchBox" value="Search tables for keywords..." />
+			Search the data
+			<input type="text" name="search" id="searchBox"  value="Search tables for keywords..." onblur="if (this.value == '') {this.value = 'Search tables for keywords...';}" onfocus="if (this.value == 'Search tables for keywords...') {this.value = '';}" />
+		    <select id="tableMenu">
+    	    	<option>Select a table</option>
+  			</select>
+  			<div id = "refresh"></div>
 		</div>
 	</div>
 	<div id = "lineChart"></div>
 	<div id = "singleYearBarChart"></div>
 	<div id = "barChart"></div>
 	<div id = "valueScrubber" class = "initial_hide"></div>
-	<div id = "singleYearCheck" class="initial_hide">Single year</div>
+	<div id = "singleYearCheck" class="initial_hide">Single year (bar chart)</div>
 	<div id = "interactionInstructions" class="initial_hide">Click a column header to graph it, click the arrows to sort by each column. <span class = "warning">Only columns with the same units can be graphed against each other.</span></div>
+	<div id = "tableTitle" class="initial_hide"></div>
 
 </div>
 <div id = "tableContainer">

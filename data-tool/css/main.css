@@ -58,7 +58,19 @@ body{
 }
 #interactionInstructions{
     position: fixed;
-    top: 436px;
+    top: 326px;
+    z-index: 0;
+    font-size: 14px;
+    font-style: italic;
+    background-color: #fff;
+    height: 103px;
+    width: 100%;
+    padding-top: 71px;
+
+}
+#tableTitle{
+    position: fixed;
+    top: 416px;
 }
 #tableContainer{
     width: 80%;
@@ -88,6 +100,41 @@ tbody{
 }
 .initial_hide{
     opacity: 0;
+}
+/****************************************/
+/*********** FILTERS LAYOUT *************/
+/****************************************/
+#searchBox{
+    position: absolute;
+    top: 49px;
+    left: 52px;
+    width: 296px;
+    height: 28px;
+    vertical-align: middle;
+    text-indent: 6px;
+}
+
+#tableMenu{
+    left: 52px;
+    position: absolute;
+    top: 96px;
+    width: 296px;
+}
+#refresh{
+    z-index: 3;
+    display: block;
+    position: fixed;
+    top: 66px;
+    left: 351px;
+    background-repeat: no-repeat;
+    background-image: url(http://www.urban.org/sites/all/themes/urban/images/generated/icons-s8fe141aaaa.png);
+    background-position: 0 -1519px;
+    height: 35px;
+    width: 45px;
+    cursor: pointer;
+}
+#refresh:hover{
+        background-position: 0 -1751px;
 }
 /****************************************/
 /************ SCRUBBER STYLEs ***********/

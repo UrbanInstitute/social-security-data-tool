@@ -18,6 +18,7 @@ function init(){
 		});
 		setTheme();
 		drawScrubber();
+		filterSheets(tableIndex)
 		yearBarCache = {};
 	}, 1000);
 }
@@ -62,6 +63,10 @@ function setLayout(){
 }
 function drawTable(input){
 	d3.select("#testTable table").remove()
+	console.log(input)
+	d3.select("#tableTitle")
+		.text(input.title.id + ": " + input.title.name)
+
 	d3.select("#testTable")
 		.append("table")
 		.attr("class", "pure-table tablesorter")
@@ -328,7 +333,6 @@ function generateBarFromYear(years, column, year){
 }
 function drawSingleYearBarChart(input){
 	var initId = input["data"]["col1"]["label"]
-	console.log(initId)
         $('#singleYearBarChart').highcharts({
             chart: {
                 marginTop: 10,
@@ -456,6 +460,9 @@ function getDocURL(id){
 function getJSONPath(id){
 	if (id == "words"){
 		return "../data/words.json"
+	}
+	else if (id == "titles"){
+		return "../data/titles.json"
 	}else{
 		return "../data/json/stat_supplement_table-" + id + ".json"
 	}
@@ -763,7 +770,9 @@ function setTheme(){
 }
 var simpleTimeSheets = ['2.A3','2.A4','2.A8','2.A9','2.A13','2.A27','2.A28','2.C1','2.F3','3.C4','3.C6.1','3.E1','4.A1','4.A2','4.A3','4.A4','4.A5','4.A6','4.B1','4.B2','4.B4','4.B11','4.C1','5.A17','5.C2','5.D3','5.E2','5.F6','5.F8','5.F12','5.G2','6.C7','6.D6','6.D8','6.D9','7.A9','7.E6','8.A1','8.A2','8.B10','9.B1','9.D1']
 var notok = ['2A27','2A28','2C1','3C4','3E1','4B1','4B2']
-var sheets = ['2.A3','2.A4','2.A8','2.A9','2.A13','2.F3','3.C6.1','4.A1','4.A2','4.A3','4.A4','4.A5','4.A6','4.B4','4.B11','4.C1','5.A17','5.C2','5.D3','5.E2','5.F6','5.F8','5.F12','5.G2','6.C7','6.D6','6.D8','6.D9','7.A9','7.E6','8.A1','8.A2','8.B10','9.B1','9.D1']
+var tempAllSheets = ['2.A3','2.A4','2.A8','2.A9','2.A13','2.F3','3.C6.1','4.A1','4.A2','4.A3','4.A4','4.A5','4.A6','4.B4','4.B11','4.C1','5.A17','5.C2','5.D3','5.E2','5.F6','5.F8','5.F12','5.G2','6.C7','6.D6','6.D8','6.D9','7.A9','7.E6','8.A1','8.A2','8.B10','9.B1','9.D1']
+var allSheets = ['2.A3','2.A4','2.A9','2.A13','2.F3','3.C6.1','4.A1','4.A2','4.A3','4.A6','4.B11','5.A17','5.D3','5.F6','6.D8','7.A9','8.B10','9.D1']
+var sheets = allSheets;
 var tableIndex = 0;
 // init("2A9");
 // init("4C1");
@@ -785,7 +794,6 @@ function searchTables(val){
 }
 
 function filterSheets(current){
-	console.log(sheets, current)
 	if(sheets.indexOf(current) != -1){
 		tableIndex = sheets.indexOf(current);
 		// newTable(tableIndex)
@@ -793,6 +801,21 @@ function filterSheets(current){
 		tableIndex = 0;
 		newTable(0);
 	}
+
+	var select = document.getElementById("tableMenu"); 
+	d3.selectAll("#tableMenu option").remove()
+	$.getJSON(getJSONPath("titles"), function(titles){
+		for(var i = 0; i < sheets.length; i++){
+		    var opt = sheets[i];
+		    var el = document.createElement("option");
+		    el.textContent = titles[opt.replace(/\./g,"")];
+		    el.value = opt;
+		    select.appendChild(el);
+		}
+	$("#tableMenu").html($("#tableMenu option").sort(function (a, b) {
+	    return a.text == b.text ? 0 : a.text < b.text ? -1 : 1
+	}))
+	});
 
 }
 document.getElementById("searchBox").addEventListener("keydown", function(e) {
@@ -822,3 +845,17 @@ d3.select("#right_arrow")
 		newTable(tableIndex)
 	})
 
+$(function() {
+    $('#tableMenu').change(function() {
+        var val = $(this).val();
+        newTable(sheets.indexOf(val))
+    });
+});
+
+d3.select("#refresh")
+	.on("click", function(){
+		sheets = allSheets;
+		$("#searchBox").val("Search tables for keywords...")
+		filterSheets(0)
+		newTable(0)
+	})
