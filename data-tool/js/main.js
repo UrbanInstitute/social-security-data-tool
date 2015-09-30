@@ -4,7 +4,7 @@ function init(){
 	// $.get( getDocURL("2A3"), function(resp) {
 	setLayout();
 	setTimeout(function(){
-		$.getJSON( getJSONPath("2A3"), function(resp){
+		$.getJSON( getJSONPath(sheets[tableIndex].replace(".","")), function(resp){
 		  // var data = resp.results[0];
 		  var data = resp;
 		  var category = data.category;
@@ -22,7 +22,8 @@ function init(){
 	}, 1000);
 }
 
-function newTable(id){
+function newTable(index){
+	var id = sheets[index].replace(/\./g,"")
 	$.getJSON( getJSONPath(id), function(resp){
 		  // var data = resp.results[0];
 		  var data = resp;
@@ -42,19 +43,22 @@ function newTable(id){
 function setLayout(){
 	d3.selectAll(".initial_hide")
 		.transition()
-		.duration(5000)
+		.duration(0)
 		.style("opacity",1)
 	var height = $(window).height();
 	var width = $(window).width();
 	d3.select("#controls")
-		.transition().duration(2000)
+		.transition().duration(0)
 		.style("width", 400)
 		.style("height", 360)
 		.style("background-color","#e0e0e0")
 	d3.select("#innerControls")
 		.transition()
-		.duration(2000)
+		.duration(0)
 		.style("margin-top","20px")
+
+	// var nameValue = document.getElementById("searchBox").value;
+	// console.log(nameValue)
 }
 function drawTable(input){
 	d3.select("#testTable table").remove()
@@ -450,7 +454,11 @@ function getDocURL(id){
 	return "http://localhost:27080/test/tables/_find?criteria=" + encodeURIComponent('{"title.id":"' + id + '"}')
 }
 function getJSONPath(id){
-	return "../data/json/stat_supplement_table-" + id + ".json"
+	if (id == "words"){
+		return "../data/words.json"
+	}else{
+		return "../data/json/stat_supplement_table-" + id + ".json"
+	}
 }
 function singleYear(){
 	d3.select("#lineChart")
@@ -694,9 +702,13 @@ function setTheme(){
 	            fontSize: '13px'
 	        }
 	    },
-	    exporting: {
-	        enabled: false
-	    },
+        exporting: {
+            buttons: {
+                contextButton: {
+                    text: 'Download'
+                }
+            }
+        },
 	    credits: {
 	        enabled: false
 	    },
@@ -751,9 +763,62 @@ function setTheme(){
 }
 var simpleTimeSheets = ['2.A3','2.A4','2.A8','2.A9','2.A13','2.A27','2.A28','2.C1','2.F3','3.C4','3.C6.1','3.E1','4.A1','4.A2','4.A3','4.A4','4.A5','4.A6','4.B1','4.B2','4.B4','4.B11','4.C1','5.A17','5.C2','5.D3','5.E2','5.F6','5.F8','5.F12','5.G2','6.C7','6.D6','6.D8','6.D9','7.A9','7.E6','8.A1','8.A2','8.B10','9.B1','9.D1']
 var notok = ['2A27','2A28','2C1','3C4','3E1','4B1','4B2']
+var sheets = ['2.A3','2.A4','2.A8','2.A9','2.A13','2.F3','3.C6.1','4.A1','4.A2','4.A3','4.A4','4.A5','4.A6','4.B4','4.B11','4.C1','5.A17','5.C2','5.D3','5.E2','5.F6','5.F8','5.F12','5.G2','6.C7','6.D6','6.D8','6.D9','7.A9','7.E6','8.A1','8.A2','8.B10','9.B1','9.D1']
+var tableIndex = 0;
 // init("2A9");
 // init("4C1");
 init();
 function test(index){
 	init(simpleTimeSheets[index].replace(/\./g,""))
 }
+
+
+function searchTables(val){
+	word = val.value
+	word = word.toUpperCase()
+	current = sheets[tableIndex]
+	$.getJSON(getJSONPath("words"), function(words){
+		sheets = words[word]
+		filterSheets(current)
+	})
+
+}
+
+function filterSheets(current){
+	console.log(sheets, current)
+	if(sheets.indexOf(current) != -1){
+		tableIndex = sheets.indexOf(current);
+		// newTable(tableIndex)
+	}else{
+		tableIndex = 0;
+		newTable(0);
+	}
+
+}
+document.getElementById("searchBox").addEventListener("keydown", function(e) {
+    if (!e) { var e = window.event; }
+    // e.preventDefault(); // sometimes useful
+
+    // Enter is pressed
+    if (e.keyCode == 13) { searchTables(this); }
+}, false);
+// WORDS = getJSON
+d3.select("#left_arrow")
+	.on("click", function(){
+		if(tableIndex <= 0){
+			tableIndex = sheets.length -1;
+		}else{
+			tableIndex -= 1;
+		}
+		newTable(tableIndex)
+	})
+d3.select("#right_arrow")
+	.on("click", function(){
+		if(tableIndex >= sheets.length-1){
+			tableIndex = 0;
+		}else{
+			tableIndex += 1;
+		}
+		newTable(tableIndex)
+	})
+

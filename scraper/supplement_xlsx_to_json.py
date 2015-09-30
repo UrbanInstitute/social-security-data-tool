@@ -141,6 +141,7 @@ def getData(data, rows, rowNum, colNum, headRows, lastRow, sheet, sheetType):
 		obj = data["col%i"%colNum] = {}
 		obj["series"] = getSeries(rowNum, colNum, lastRow, sheet, sheetType)
 		label = obj["label"] = getLabel(rows, colNum)
+		addWords(words, label)
 		dType = obj["type"] = getType(label)
 
 def getXSeries(rowNum, colNum, headRows, lastRow, sheet, sheetType):
@@ -216,6 +217,12 @@ def getType(label):
 			break
 	return "********** unknown *******"
 
+def addWords(words, string):
+	string = re.sub(r'[^\w\s]+', ' ', string)
+	words.extend(string.split())
+	# print tmp
+	# words = list(set(words))
+
 book = xlrd.open_workbook("../data/statistical_supplement/supplement14.xlsx")
 
 sheets = book.sheet_names()
@@ -224,8 +231,10 @@ simpleTimeSheets = ['2.A3','2.A4','2.A8','2.A9','2.A13','2.A27','2.A28','2.C1','
 col1_exceptions = ['6.C7','5.F8','5E.2','5.D3','5.C2','5.A17']
 # simpleTimeSheets = ['2.A9']
 
+wordList = {}
 
 for sheet_id in simpleTimeSheets:
+	words = wordList[sheet_id] = []
 	xl_sheet = book.sheet_by_name(sheet_id)
 	output = {}
 	headRows = 0
@@ -254,7 +263,28 @@ for sheet_id in simpleTimeSheets:
 	output["html"]["body"] = values["bodyString"]
 	output["data"] = values["data"]
 	output["title"] = titles
+	addWords(words, titles["name"])
 	output["category"] = values["chartType"]
 
+
 	with open('../data/json/stat_supplement_table-%s.json'%titles["id"], 'w') as fp:
-	    json.dump(output, fp, indent=4, sort_keys=True)
+		json.dump(output, fp, indent=4, sort_keys=True)
+
+newList = {}
+for key in wordList:
+	wordList[key] = list(set(wordList[key]))
+	for word in wordList[key]:
+		word = word.upper()
+		if word not in newList:
+			newList[word] = [key]
+		else:
+			newList[word].append(key)
+
+
+with open('../data/words.json', 'w') as fp:
+	json.dump(newList, fp, indent=4, sort_keys=True)
+
+
+
+
+

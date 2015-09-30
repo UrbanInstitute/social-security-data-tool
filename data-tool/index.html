@@ -14,12 +14,13 @@
 	<div id = "controls">
 		<div id = "innerControls">
 			These are the controls
+			<input type="text" name="search" class = "initial_hide" id="searchBox" value="Search tables for keywords..." />
 		</div>
 	</div>
 	<div id = "lineChart"></div>
 	<div id = "singleYearBarChart"></div>
 	<div id = "barChart"></div>
-	<div id = "valueScrubber"></div>
+	<div id = "valueScrubber" class = "initial_hide"></div>
 	<div id = "singleYearCheck" class="initial_hide">Single year</div>
 	<div id = "interactionInstructions" class="initial_hide">Click a column header to graph it, click the arrows to sort by each column. <span class = "warning">Only columns with the same units can be graphed against each other.</span></div>
 
@@ -28,11 +29,14 @@
 	<div id = "testTable">
 	</div>
 </div>
+<img id = "left_arrow" src = "img/left_arrow.png">
+<img id = "right_arrow" src = "img/left_arrow.png">
 <script src="js/vendor/d3.min.js"></script>
 <script src="js/vendor/jquery.1.11.3.min.js"></script>
 <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.22.0/js/jquery.tablesorter.min.js"></script> -->
 <script type="text/javascript" src="js/vendor/jquery.tablesorter.min.js"></script>
 <script src="http://code.highcharts.com/highcharts.js"></script>
 <script src="http://code.highcharts.com/modules/exporting.js"></script>
+<script src="http://highslide-software.github.io/export-csv/export-csv.js"></script>
 <script src = "js/main.js"></script>
 </body>

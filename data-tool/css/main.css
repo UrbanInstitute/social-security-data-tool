@@ -61,6 +61,7 @@ body{
     top: 436px;
 }
 #tableContainer{
+    width: 80%;
     margin-top: 460;    
 }
 thead{
@@ -69,6 +70,21 @@ thead{
 }
 tbody{
     position: absolute;
+}
+
+#left_arrow, #right_arrow{
+    position: fixed;
+    bottom: 200;
+    z-index: 999;
+    height: 50px;
+    cursor: pointer;
+}
+#left_arrow{
+    transform: rotate(180deg);
+    left: 5px;
+}
+#right_arrow{
+    right: 5px;
 }
 .initial_hide{
     opacity: 0;
