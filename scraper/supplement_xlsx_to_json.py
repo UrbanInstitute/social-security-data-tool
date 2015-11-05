@@ -13,7 +13,7 @@ def parseTitle(sheet, sheetType):
 	return title
 
 
-def parseHeader(output, headRows, lastRow, sheet, sheetType):
+def parseHeader(output, headRows, lastRow, sheet, sheetType, startRow=False):
 	headerString = "<thead>"
 	rows = []
 	data = {}
@@ -47,16 +47,20 @@ def parseHeader(output, headRows, lastRow, sheet, sheetType):
 				headerString += getTH(rows, r, c)
 			if(fixRows[r-2][c].ctype != 0):
 				if((r == headRows-1 and c != 0) or (c == 0 and r ==2)):
-					getData(data, fixRows, r, c, headRows, lastRow, sheet, sheetType)
+					getData(data, fixRows, r, c, headRows, lastRow, sheet, sheetType, startRow)
 		headerString += "</tr>"
 	headerString += "</thead>"
-	bodyString = getTbody(sheet, sheetType, headRows, lastRow)
+	bodyString = getTbody(sheet, sheetType, headRows, lastRow, startRow)
 	chartType = ""
-	if(sheetType == "simpleTime"):
+	if(sheetType == "simpleTime" or sheetType == "timeMulti"):
 		chartType = "timeSeries"
 	return{ "headerString": headerString, "data": data, "bodyString": bodyString, "chartType": chartType}
 
-def getTbody(sheet, sheetType, headRows, lastRow):
+def getTbody(sheet, sheetType, headR, lastRow, startRow):
+	if(startRow):
+		headRows = startRow
+	else:
+		headRows = headR
 	tbody = "<tbody>"
 	for r in range(headRows, lastRow):
 		row = sheet.row(r)
@@ -131,22 +135,30 @@ def getTH(rows, rowNum, colNum):
 	th += "</th>"
 	return th
 
-def getData(data, rows, rowNum, colNum, headRows, lastRow, sheet, sheetType):
+def getData(data, rows, rowNum, colNum, headR, lastRow, sheet, sheetType, startRow):
+	if(startRow):
+		headRows = startRow
+	else:
+		headRows = headR
 	if (colNum == 0):
-		if sheetType == "simpleTime":
+		if sheetType == "simpleTime" or sheetType == "timeMulti":
 			obj = data["years"] = {}
-			obj["series"] = getXSeries(rowNum, 0, headRows, lastRow, sheet, sheetType)
+			obj["series"] = getXSeries(rowNum, 0, headRows, lastRow, sheet, sheetType, startRow)
 			dType = obj["type"] = "year"
 	else:
 		obj = data["col%i"%colNum] = {}
-		obj["series"] = getSeries(rowNum, colNum, lastRow, sheet, sheetType)
+		obj["series"] = getSeries(rowNum, colNum, lastRow, sheet, sheetType, startRow)
 		label = obj["label"] = getLabel(rows, colNum)
 		addWords(words, label)
 		dType = obj["type"] = getType(label)
 
-def getXSeries(rowNum, colNum, headRows, lastRow, sheet, sheetType):
+def getXSeries(rowNum, colNum, headR, lastRow, sheet, sheetType, startRow):
+	if(startRow):
+		headRows = startRow
+	else:
+		headRows = headR
 	series = []
-	if sheetType == "simpleTime":
+	if sheetType == "simpleTime" or sheetType == "timeMulti":
 		for i in range(headRows, lastRow):
 			val = sheet.cell_value(rowx=i, colx=colNum)
 			val = getYear(val)
@@ -170,7 +182,11 @@ def getYear(val):
 		val = int(float(val))
 	return val
 
-def getSeries(rowNum, colNum, lastRow, sheet, sheetType):
+def getSeries(rowN, colNum, lastRow, sheet, sheetType, startRow):
+	if(startRow):
+		rowNum = startRow
+	else:
+		rowNum = rowN
 	series = []
 	if sheetType == "simpleTime" and sheet.name not in col1_exceptions:
 		colNum += 1
@@ -231,8 +247,65 @@ simpleTimeSheets = ['2.A3','2.A4','2.A8','2.A9','2.A13','2.A27','2.A28','2.C1','
 col1_exceptions = ['6.C7','5.F8','5E.2','5.D3','5.C2','5.A17']
 # simpleTimeSheets = ['2.A9']
 
+policy = ['2.A20', '2.A21']
+monthsTime = ['2.A30']
+edgeTime = ['6.A2']
+simpleBar = ['2.F4','2.F5','2.F6','2.F8','2.F11','5.A1.8']
+medBar = ['5.D2','5.E1','5.F7','5.H3','5.H4','6.C1']
+medBarMulti = ['6.D5']
+nestedBar = ['2.F9','3.C6','5.A1','5.A1.1','5.A1.2','5.A1.4','5.A1.6','5.A1.7','5.A5','5.A7','6.F2','6.F3']
+nestedBarMulti = ['2.F7','3.C3','5.A1.3','5.A3','5.A6','5.A8','5.A10','5.A15','5.A16','5.H2','6.A3','6.A4','6.A5','6.D7']
+mapPlusTime = ['3.C5']
+timeMulti = ['5.A4','5.A14','5.F1','5.F4','5.H1','6.B5','6.B5.1','6.C2','6.D4']
+edgeTimeMulti = ['4.C2']
+weirdTime = ['5.B4','5.D1','6.A1','6.F1']
+weirdBar = ['5.B6','5.B7','6.B3']
+medMap = ['5.J1','5.J2','5.J4','5.J8','5.J10','5.J14','6.A6']
+timeBarEdge = ['5.M1']
+
+# #top priority
+# mustHaves = ['2.A3','2.A4','2.A20','2.A21','2.A30','2.F4','2.F5','2.F6','2.F7','2.F8','2.F9','2.F11','3.C3','3.C5','3.C6','4.A2','4.A3','4.A4','4.A6','4.C1','4.C2','5.A1','5.A1.2','5.A1.3','5.A1.4','5.A3','5.A4','5.A5','5.A6','5.A7','5.A8','5.A10','5.A17','5.D1','5.D2','5.D3','5.D4','5.E1','5.E2','5.F1','5.F4','5.F6','5.F7','5.F8','5.H1','5.H2','5.H3','5.H4','5.J1','5.J2','5.J4','5.J8','5.J10','5.J14','5.M1','6.A1','6.A2','6.A3','6.A4','6.A5','6.A6','6.C1','6.C2','6.C7','6.D4','6.D5','6.D7','6.D8','6.F1','6.F2','6.F3']
+# #high priority
+# shouldHaves = ['4.A1','4.A5','5.A1.1','5.A1.5','5.A1.6','5.A1.7','5.A1.8','5.A14','5.A15','5.A16','5.B4','5.B6','5.B7','6.B3','6.B5','6.B5.1']
+
+#top + high priority not in simpletimesheets
+needs = ['2.A20','2.A21','2.A30','2.F4','2.F5','2.F6','2.F7','2.F8','2.F9','2.F11','3.C3','3.C5','3.C6','4.C2','5.A1','5.A1.1','5.A1.2','5.A1.3','5.A1.4','5.A1.5','5.A1.6','5.A1.7','5.A1.8','5.A3','5.A4','5.A5','5.A6','5.A7','5.A8','5.A10','5.A14','5.A15','5.A16','5.B4','5.B6','5.B7','5.D1','5.D2','5.E1','5.F1','5.F4','5.F7','5.H1','5.H2','5.H3','5.H4','5.J1','5.J2','5.J4','5.J8','5.J10','5.J14','5.M1','6.A1','6.A2','6.A3','6.A4','6.A5','6.A6','6.B3','6.B5','6.B5.1','6.C1','6.C2','6.D4','6.D5','6.D7','6.F1','6.F2','6.F3']
+
+#in simple time sheets but broken
+fix = ['4.A4','4.A5','4.C1','5.D4','5.E2','6.C7']
+
+
+
+
 wordList = {}
 titleList = {}
+
+for sheet_id in timeMulti:
+	words = wordList[sheet_id] = []
+	xl_sheet = book.sheet_by_name(sheet_id)
+	output = {}
+	headRows = 0
+	lastRow = 0
+	subHead = []
+	for i in range(0, xl_sheet.nrows):
+		testVal = xl_sheet.cell_value(rowx=i, colx=0)
+		reg = re.compile(r'19|20', re.UNICODE)
+		if(isinstance(testVal,float)):
+			headRows = i-1
+			subHead = xl_sheet.row(i-1)
+			break
+		elif(re.match(reg, testVal.encode('utf8'))):
+			headRows = i-1
+			subHead = xl_sheet.row(i-1)
+			break
+	print subHead
+	for i in range(headRows+2, xl_sheet.nrows):
+		testType = xl_sheet.cell_type(rowx=i, colx=0)
+		if(testType == 0):
+			lastRow = i
+			break
+
+
 
 for sheet_id in simpleTimeSheets:
 	words = wordList[sheet_id] = []

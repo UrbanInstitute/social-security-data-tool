@@ -1,0 +1,16 @@
+- Determine which tables to scrape (4,5,6)
+- Scrape all the tables
+- Fix units for all columns
+- Fix y axis labels for all units
+- Fix sorting
+- Format years correctly
+- Embed code for charts
+- footnotes
+- if too wide, lock and scroll
+- mobile
+
+- Dec: Announcement blog post
+- Jan: Sharing data blog post
+- Jan: education about the data (caveats)
+- Jan: blog post about briefs
+- Feb: feature
