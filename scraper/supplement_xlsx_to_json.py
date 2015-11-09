@@ -5,10 +5,15 @@ import pprint
 import json
 import copy
 
-def parseTitle(sheet, sheetType):
+def parseTitle(sheet, sheetType, multiSubtitle=False):
 	title = {}
-	fullTitle = sheet.row(1)[0].value
-	title["id"] = fullTitle	.split(u'\u2014')[0].replace(".","").replace("Table ","")
+	if(multiSubtitle):
+		fullTitle = sheet.row(1)[0].value + " :: Subtable : " +  multiSubtitle["value"]
+		title["id"] = fullTitle	.split(u'\u2014')[0].replace(".","").replace("Table ","")+ "-M" + str(multiSubtitle["index"])
+
+	else:
+		fullTitle = sheet.row(1)[0].value
+		title["id"] = fullTitle	.split(u'\u2014')[0].replace(".","").replace("Table ","")
 	title["name"] = fullTitle.split(u'\u2014')[1]
 	return title
 
@@ -21,7 +26,7 @@ def parseHeader(output, headRows, lastRow, sheet, sheetType, startRow=False):
 		rows.append(sheet.row(i))
 #For these sheet types, the first two columns (e.g "Year") are mereged into 1 with the second column totally empty because shrug
 #So just popping 2nd column out for simplicity (instead of preserving strange colspans in html table or data table)
-	if(sheetType == "simpleTime" and (sheet.name not in col1_exceptions)):
+	if(sheetType in TIME_TYPES and (sheet.name not in col1_exceptions)):
 		for row in rows:
 			del(row[1])
 
@@ -52,7 +57,7 @@ def parseHeader(output, headRows, lastRow, sheet, sheetType, startRow=False):
 	headerString += "</thead>"
 	bodyString = getTbody(sheet, sheetType, headRows, lastRow, startRow)
 	chartType = ""
-	if(sheetType == "simpleTime" or sheetType == "timeMulti"):
+	if sheetType in TIME_TYPES:
 		chartType = "timeSeries"
 	return{ "headerString": headerString, "data": data, "bodyString": bodyString, "chartType": chartType}
 
@@ -65,12 +70,16 @@ def getTbody(sheet, sheetType, headR, lastRow, startRow):
 	for r in range(headRows, lastRow):
 		row = sheet.row(r)
 		for c in range(0, len(row)):
-			if sheetType == "simpleTime" and c==1 and sheet.name not in col1_exceptions:
+			if sheetType in TIME_TYPES and c==1 and sheet.name not in col1_exceptions:
 				continue
 			if(c==0):
 				tbody += "<tr class="
-				val = getYear(sheet.cell_value(rowx=r, colx=c))
-				if isinstance(val, basestring):
+				if(sheetType == "monthsTime"):
+					monthly = True
+				else:
+					monthly = False
+				val = getYear(sheet.cell_value(rowx=r, colx=c), monthly)
+				if isinstance(val, basestring) and not monthly:
 					if(val.find("-") != -1):
 						y1 = int(val.split("-")[0])
 						y2 = int(val.split("-")[1])
@@ -89,7 +98,7 @@ def getTbody(sheet, sheetType, headR, lastRow, startRow):
 				tbody += "</tr>"
 	tbody += "</tbody>"
 	return tbody
-		# if(sheetType == "simpleTime"):
+		# if(sheetType in TIME_TYPES):
 			# years = getYear()
 
 def getTH(rows, rowNum, colNum):
@@ -141,7 +150,7 @@ def getData(data, rows, rowNum, colNum, headR, lastRow, sheet, sheetType, startR
 	else:
 		headRows = headR
 	if (colNum == 0):
-		if sheetType == "simpleTime" or sheetType == "timeMulti":
+		if sheetType in TIME_TYPES:
 			obj = data["years"] = {}
 			obj["series"] = getXSeries(rowNum, 0, headRows, lastRow, sheet, sheetType, startRow)
 			dType = obj["type"] = "year"
@@ -158,20 +167,28 @@ def getXSeries(rowNum, colNum, headR, lastRow, sheet, sheetType, startRow):
 	else:
 		headRows = headR
 	series = []
-	if sheetType == "simpleTime" or sheetType == "timeMulti":
+	if(sheetType == "monthsTime"):
+		monthly = True
+	else:
+		monthly = False
+	if sheetType in TIME_TYPES:
 		for i in range(headRows, lastRow):
 			val = sheet.cell_value(rowx=i, colx=colNum)
-			val = getYear(val)
+			val = getYear(val, monthly)
 			series.append(val)
 		return series
 
-def getYear(val):
+def getYear(val, monthly=False):
+	# if monthly:
+		# return val.replace(u'\u2013','-')
 	if isinstance(val, basestring):
+
 ##allow for year ranges (strings) and decimal points
 		non_decimal = re.compile(r'[^\d.-]+')
 		float_test = re.compile(r'[^\d.]+')
 		val = val.replace(u'\xe2', '').replace(u'\u2013','-')
-		val = non_decimal.sub('',val)
+		if  not monthly:
+			val = non_decimal.sub('',val)
 ##should just be ranges, no negative years
 		if(val.find("-") == -1):
 			val = val
@@ -188,15 +205,17 @@ def getSeries(rowN, colNum, lastRow, sheet, sheetType, startRow):
 	else:
 		rowNum = rowN
 	series = []
-	if sheetType == "simpleTime" and sheet.name not in col1_exceptions:
+	if sheetType in TIME_TYPES and sheet.name not in col1_exceptions:
 		colNum += 1
 	for i in range(rowNum+1, lastRow):
 		val = sheet.cell_value(rowx=i, colx=colNum)
 		if(val == ". . ."):
 			val = False
+		elif (val == "Discontinued"):
+			val = False
 #strip footnotes markers and space from numeric values, then parse to float
 #Should hold for any sheetType where all data is expected to be numeric
-		elif(sheetType == "simpleTime" and isinstance(val, basestring)):
+		elif(sheetType in TIME_TYPES and isinstance(val, basestring)):
 ##allow for negative numbers and decimal points
 			non_decimal = re.compile(r'[^\d.-]+')
 			decimal = re.compile(r'\d')
@@ -244,24 +263,29 @@ book = xlrd.open_workbook("../data/statistical_supplement/supplement14.xlsx")
 sheets = book.sheet_names()
 
 simpleTimeSheets = ['2.A3','2.A4','2.A8','2.A9','2.A13','2.A27','2.A28','2.C1','2.F3','3.C4','3.C6.1','3.E1','4.A1','4.A2','4.A3','4.A4','4.A5','4.A6','4.B1','4.B2','4.B4','4.B11','4.C1','5.A17','5.C2','5.D3','5.E2','5.F6','5.F8','5.F12','5.G2','6.C7','6.D6','6.D8','6.D9','7.A9','7.E6','8.A1','8.A2','8.B10','9.B1','9.D1']
-col1_exceptions = ['6.C7','5.F8','5E.2','5.D3','5.C2','5.A17']
+timeMulti = ['5.A4','5.A14','5.F1','5.F4','5.H1','6.B5','6.B5.1','6.C2','6.D4']
+col1_exceptions = ['5.A4','5.F4','6.D4','6.C7','5.F8','5E.2','5.D3','5.C2','5.A17']
 # simpleTimeSheets = ['2.A9']
 
 policy = ['2.A20', '2.A21']
-monthsTime = ['2.A30']
-edgeTime = ['6.A2']
 simpleBar = ['2.F4','2.F5','2.F6','2.F8','2.F11','5.A1.8']
+weirdBar = ['5.B6','5.B7','6.B3']
 medBar = ['5.D2','5.E1','5.F7','5.H3','5.H4','6.C1']
 medBarMulti = ['6.D5']
 nestedBar = ['2.F9','3.C6','5.A1','5.A1.1','5.A1.2','5.A1.4','5.A1.6','5.A1.7','5.A5','5.A7','6.F2','6.F3']
 nestedBarMulti = ['2.F7','3.C3','5.A1.3','5.A3','5.A6','5.A8','5.A10','5.A15','5.A16','5.H2','6.A3','6.A4','6.A5','6.D7']
-mapPlusTime = ['3.C5']
-timeMulti = ['5.A4','5.A14','5.F1','5.F4','5.H1','6.B5','6.B5.1','6.C2','6.D4']
+
+monthsTime = ['2.A30']
+edgeTime = ['6.A2']
 edgeTimeMulti = ['4.C2']
 weirdTime = ['5.B4','5.D1','6.A1','6.F1']
-weirdBar = ['5.B6','5.B7','6.B3']
+
+
 medMap = ['5.J1','5.J2','5.J4','5.J8','5.J10','5.J14','6.A6']
+
 timeBarEdge = ['5.M1']
+mapPlusTime = ['3.C5']
+
 
 # #top priority
 # mustHaves = ['2.A3','2.A4','2.A20','2.A21','2.A30','2.F4','2.F5','2.F6','2.F7','2.F8','2.F9','2.F11','3.C3','3.C5','3.C6','4.A2','4.A3','4.A4','4.A6','4.C1','4.C2','5.A1','5.A1.2','5.A1.3','5.A1.4','5.A3','5.A4','5.A5','5.A6','5.A7','5.A8','5.A10','5.A17','5.D1','5.D2','5.D3','5.D4','5.E1','5.E2','5.F1','5.F4','5.F6','5.F7','5.F8','5.H1','5.H2','5.H3','5.H4','5.J1','5.J2','5.J4','5.J8','5.J10','5.J14','5.M1','6.A1','6.A2','6.A3','6.A4','6.A5','6.A6','6.C1','6.C2','6.C7','6.D4','6.D5','6.D7','6.D8','6.F1','6.F2','6.F3']
@@ -272,38 +296,90 @@ timeBarEdge = ['5.M1']
 needs = ['2.A20','2.A21','2.A30','2.F4','2.F5','2.F6','2.F7','2.F8','2.F9','2.F11','3.C3','3.C5','3.C6','4.C2','5.A1','5.A1.1','5.A1.2','5.A1.3','5.A1.4','5.A1.5','5.A1.6','5.A1.7','5.A1.8','5.A3','5.A4','5.A5','5.A6','5.A7','5.A8','5.A10','5.A14','5.A15','5.A16','5.B4','5.B6','5.B7','5.D1','5.D2','5.E1','5.F1','5.F4','5.F7','5.H1','5.H2','5.H3','5.H4','5.J1','5.J2','5.J4','5.J8','5.J10','5.J14','5.M1','6.A1','6.A2','6.A3','6.A4','6.A5','6.A6','6.B3','6.B5','6.B5.1','6.C1','6.C2','6.D4','6.D5','6.D7','6.F1','6.F2','6.F3']
 
 #in simple time sheets but broken
-fix = ['4.A4','4.A5','4.C1','5.D4','5.E2','6.C7']
+fix = ['4.A4','4.A5','4.C1','5.D4','5.E2','6.C7','5A4','5A14','5F1','5H1','6B5','6B51']
 
 
 
-
+TIME_TYPES = ["simpleTime", "multiTime", "monthsTime"]
 wordList = {}
 titleList = {}
 
 for sheet_id in timeMulti:
 	words = wordList[sheet_id] = []
+	multiSubtitles = []
 	xl_sheet = book.sheet_by_name(sheet_id)
 	output = {}
 	headRows = 0
 	lastRow = 0
 	subHead = []
+	startRow = 0
+	start = True
+	rowBreaks = []
 	for i in range(0, xl_sheet.nrows):
 		testVal = xl_sheet.cell_value(rowx=i, colx=0)
 		reg = re.compile(r'19|20', re.UNICODE)
 		if(isinstance(testVal,float)):
 			headRows = i-1
 			subHead = xl_sheet.row(i-1)
+			startRow = i
+			rowBreaks.append(startRow-1)
 			break
 		elif(re.match(reg, testVal.encode('utf8'))):
 			headRows = i-1
 			subHead = xl_sheet.row(i-1)
+			startRow = i
+			rowBreaks.append(startRow-1)
 			break
-	print subHead
-	for i in range(headRows+2, xl_sheet.nrows):
-		testType = xl_sheet.cell_type(rowx=i, colx=0)
-		if(testType == 0):
-			lastRow = i
+
+	end = True
+	loopcount = 0
+	empty = False
+	while True:
+		if(empty):
 			break
+		if start:
+			start = False
+			pass
+		else:
+			for j in range(startRow+1, xl_sheet.nrows):
+				testVal = xl_sheet.row(j)[0]
+				if(testVal.ctype == 0):
+					subHead = xl_sheet.row(j)
+					startRow = j
+					rowBreaks.append(startRow)
+					break
+
+		# print list(set(subHead))
+		empty = True
+		multiSubtitle = ""
+		for s in subHead:
+		# 	# print subHead
+		# 	# print s.ctype
+			if(s.ctype != 0):
+				empty  = False
+				multiSubtitle = s.value
+				multiSubtitles.append(multiSubtitle)
+		for i in range(0, len(rowBreaks)-1):
+			output["html"] = {}
+			values = parseHeader(output, headRows, rowBreaks[i+1], xl_sheet, "multiTime", rowBreaks[i]+1)
+			titles = parseTitle(xl_sheet, "multiTime", {"value" : multiSubtitles[i], "index":i})
+			output["html"]["header"] = values["headerString"]
+			output["html"]["body"] = values["bodyString"]
+			output["data"] = values["data"]
+			output["title"] = titles
+			addWords(words, titles["name"])
+			titleList[titles["id"]] = titles["id"] + " :: " + titles["name"]
+			output["category"] = values["chartType"]
+
+			with open('../data/json/stat_supplement_table-%s.json'%titles["id"], 'w') as fp:
+				json.dump(output, fp, indent=4, sort_keys=True)
+
+
+		# for i in range(headRows+2, xl_sheet.nrows):
+		# 	testType = xl_sheet.cell_type(rowx=i, colx=0)
+		# 	if(testType == 0):
+		# 		lastRow = i
+		# 		break
 
 
 
@@ -344,6 +420,46 @@ for sheet_id in simpleTimeSheets:
 
 	with open('../data/json/stat_supplement_table-%s.json'%titles["id"], 'w') as fp:
 		json.dump(output, fp, indent=4, sort_keys=True)
+
+for sheet_id in monthsTime:
+	words = wordList[sheet_id] = []
+	xl_sheet = book.sheet_by_name(sheet_id)
+	output = {}
+	headRows = 0
+	lastRow = 0
+	for i in range(0, xl_sheet.nrows):
+		row = xl_sheet.row(i)
+		testVal = xl_sheet.cell_value(rowx=i, colx=0)
+		reg = re.compile(r'19|20', re.UNICODE)
+		if(isinstance(testVal,float)):
+			headRows = i
+			break
+		elif(re.match(reg, testVal.encode('utf8'))):
+			headRows = i
+			break
+	for i in range(headRows+1, xl_sheet.nrows):
+		row = xl_sheet.row(i)
+		testType = xl_sheet.cell_type(rowx=i, colx=0)
+		if(testType == 0):
+			lastRow = i
+			break
+
+	output["html"] = {}
+	values = parseHeader(output, headRows, lastRow, xl_sheet, "monthsTime")
+	titles = parseTitle(xl_sheet, "monthsTime")
+	output["html"]["header"] = values["headerString"]
+	output["html"]["body"] = values["bodyString"]
+	output["data"] = values["data"]
+	output["title"] = titles
+	addWords(words, titles["name"])
+	titleList[titles["id"]] = titles["id"] + " :: " + titles["name"]
+	output["category"] = values["chartType"]
+
+
+	with open('../data/json/stat_supplement_table-%s.json'%titles["id"], 'w') as fp:
+		json.dump(output, fp, indent=4, sort_keys=True)
+
+
 
 idList = {}
 for key in wordList:

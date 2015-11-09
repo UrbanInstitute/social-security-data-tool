@@ -1,5 +1,7 @@
 var yearBarCache;
-
+var MONTHNAMES = ["January", "February", "March", "April", "May", "June",
+  "July", "August", "September", "October", "November", "December"
+    ]
 function init(){
 	// $.get( getDocURL("2A3"), function(resp) {
 	setLayout();
@@ -63,7 +65,6 @@ function setLayout(){
 }
 function drawTable(input){
 	d3.select("#testTable table").remove()
-	console.log(input)
 	d3.select("#tableTitle")
 		.text(input.title.id + ": " + input.title.name)
 
@@ -227,17 +228,58 @@ function checkUnitCompatibility(unit, input, charts){
 }
 function generateTimeSeries(year, column){
 	var series = [];
+	// console.log(year)
 	for(var i = 0; i< year.length; i++){
-		var y = (column[i] == false) ? null : column[i];
+		var y = (column[i] == false || isNaN(column[i])) ? null : column[i];
+		console.log(y)
 		if(typeof(year[i]) == "number"){
+//simple case, like "2014"
 			series.push([Date.UTC(year[i], 0, 1), y]);
-		}else{
-			var years = year[i].split("-");
-			series.push([Date.UTC(parseInt(years[0]), 0, 1), y]);
-			series.push([Date.UTC(parseInt(years[1]), 0, 1), y]);
+		}
+//cases like 1993-1997 or July 1968–1973
+		else if(year[i].indexOf("-") != -1){
+			var years = year[i].split("-")
+			// var years = year[i].replace(/[A-Za-z ]/g,"").split("-");
+			console.log(y)
+			series.push([getDate(years[0], years[1]), y]);
+			series.push([getDate(years[1], years[0]), y]);
+		}
+//cases like January 2005	
+		else{
+			series.push([getDate(year[i], false), y]);
 		}
 	}
 	return series;
+}
+
+function getDate(y1, y2){
+	// y2 = y2 || false;
+	var m = false;
+	for (var i = 0; i< MONTHNAMES.length; i++){
+		if(y1.indexOf(MONTHNAMES[i]) != -1){
+			// console.log(y1, i)
+			m = i;
+			break;
+		}
+	}
+	if(!y2){
+		var mYear = y1.replace(/[A-Za-z ]/g,"")
+		return Date.UTC(parseInt(mYear),m,1)
+	}
+	if(m){
+		var year = y1.replace(/[A-Za-z ]/g,"")
+		if(year == ""){
+//cases like January–June 1999	
+			var year2 = y2.replace(/[A-Za-z ]/g,"")
+			return Date.UTC(parseInt(year2),m,1)
+		}else{
+//cases like July 1968–1973
+			return Date.UTC(parseInt(year),m,1)
+		}
+	}else{
+//cases like 1968-June 1999
+		return Date.UTC(parseInt(y1), 0, 1)
+	}
 }
 function drawLineChart(input){
 	var initId = input["data"]["col1"]["label"]
@@ -770,7 +812,7 @@ function setTheme(){
 }
 var simpleTimeSheets = ['2.A3','2.A4','2.A8','2.A9','2.A13','2.A27','2.A28','2.C1','2.F3','3.C4','3.C6.1','3.E1','4.A1','4.A2','4.A3','4.A4','4.A5','4.A6','4.B1','4.B2','4.B4','4.B11','4.C1','5.A17','5.C2','5.D3','5.E2','5.F6','5.F8','5.F12','5.G2','6.C7','6.D6','6.D8','6.D9','7.A9','7.E6','8.A1','8.A2','8.B10','9.B1','9.D1']
 var notok = ['2A27','2A28','2C1','3C4','3E1','4B1','4B2']
-var tempAllSheets = ['2.A3','2.A4','2.A8','2.A9','2.A13','2.F3','3.C6.1','4.A1','4.A2','4.A3','4.A4','4.A5','4.A6','4.B4','4.B11','4.C1','5.A17','5.C2','5.D3','5.E2','5.F6','5.F8','5.F12','5.G2','6.C7','6.D6','6.D8','6.D9','7.A9','7.E6','8.A1','8.A2','8.B10','9.B1','9.D1']
+var tempAllSheets = ['2A30','5A14-M0','5A14-M1','5A4-M0','5A4-M1','5F1-M0','5F1-M1','5F4-M0','5F4-M1','5F4-M2','5H1-M0','5H1-M1','6B5-M0','6B5-M1','6B51-M0','6B51-M1','6C2-M0','6C2-M1','6D4-M0','6D4-M1','6D4-M2','6D4-M3','2.A3','2.A4','2.A8','2.A9','2.A13','2.F3','3.C6.1','4.A1','4.A2','4.A3','4.A4','4.A5','4.A6','4.B4','4.B11','4.C1','5.A17','5.C2','5.D3','5.E2','5.F6','5.F8','5.F12','5.G2','6.C7','6.D6','6.D8','6.D9','7.A9','7.E6','8.A1','8.A2','8.B10','9.B1','9.D1']
 var allSheets = ['2.A3','2.A4','2.A9','2.A13','2.F3','3.C6.1','4.A1','4.A2','4.A3','4.A6','4.B11','5.A17','5.D3','5.F6','6.D8','7.A9','8.B10','9.D1']
 var sheets = tempAllSheets;
 var tableIndex = 0;
