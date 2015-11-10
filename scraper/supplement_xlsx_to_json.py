@@ -36,7 +36,9 @@ def parseHeader(output, headRows, lastRow, sheet, sheetType, startRow=False):
 		if fixRows[last-1][c].ctype == 0:
 			counter = last-1
 			while True:
-				if fixRows[counter][c].ctype == 0:
+				if  abs(counter) > len(rows):
+					break
+				elif fixRows[counter][c].ctype == 0:
 					counter -= 1
 					continue
 				elif counter < 0:
@@ -74,25 +76,33 @@ def getTbody(sheet, sheetType, headR, lastRow, startRow):
 				continue
 			if(c==0):
 				tbody += "<tr class="
-				if(sheetType == "monthsTime"):
+				if(sheetType == "monthsTime" or sheetType ==  "weirdTime"):
 					monthly = True
 				else:
 					monthly = False
-				val = getYear(sheet.cell_value(rowx=r, colx=c), monthly)
-				if isinstance(val, basestring) and not monthly:
-					if(val.find("-") != -1):
-						y1 = int(val.split("-")[0])
-						y2 = int(val.split("-")[1])
-						for y in range(y1, y2+1):
-							tbody += "\"" + str(y) + "\""
-							space = " " if (y != y2) else ""
-							tbody += space
+				if (sheetType == "weirdTime" and r == headRows):
+					print "foo"
+					val = "Total"
+					tbody += str(val)
+				else:
+					val = getYear(sheet.cell_value(rowx=r, colx=c), monthly)
+					if isinstance(val, basestring) and not monthly:
+						if(val.find("-") != -1):
+							y1 = int(val.split("-")[0])
+							y2 = int(val.split("-")[1])
+							for y in range(y1, y2+1):
+								tbody += "\"" + str(y) + "\""
+								space = " " if (y != y2) else ""
+								tbody += space
+						else:
+							tbody += str(val)
 					else:
 						tbody += str(val)
-				else:
-					tbody += str(val)
 				tbody += ">"
-			cell = sheet.cell_value(rowx=r, colx=c)
+			if (sheetType == "weirdTime" and r == headRows and c==0):
+				cell = "Total"
+			else:
+				cell = sheet.cell_value(rowx=r, colx=c)
 			tbody += "<td class=\"col%i\">%s</td>"%(c, cell)
 			if(c==len(row)):
 				tbody += "</tr>"
@@ -167,7 +177,7 @@ def getXSeries(rowNum, colNum, headR, lastRow, sheet, sheetType, startRow):
 	else:
 		headRows = headR
 	series = []
-	if(sheetType == "monthsTime"):
+	if(sheetType == "monthsTime" or sheetType == "weirdTime"):
 		monthly = True
 	else:
 		monthly = False
@@ -179,10 +189,9 @@ def getXSeries(rowNum, colNum, headR, lastRow, sheet, sheetType, startRow):
 		return series
 
 def getYear(val, monthly=False):
-	# if monthly:
-		# return val.replace(u'\u2013','-')
 	if isinstance(val, basestring):
-
+		if val == "":
+			return False
 ##allow for year ranges (strings) and decimal points
 		non_decimal = re.compile(r'[^\d.-]+')
 		float_test = re.compile(r'[^\d.]+')
@@ -255,17 +264,32 @@ def getType(label):
 def addWords(words, string):
 	string = re.sub(r'[^\w\s]+', ' ', string)
 	words.extend(string.split())
-	# print tmp
-	# words = list(set(words))
 
 book = xlrd.open_workbook("../data/statistical_supplement/supplement14.xlsx")
 
 sheets = book.sheet_names()
 
+#Years in 1st column (or year ranges), blank 2nd column, data
 simpleTimeSheets = ['2.A3','2.A4','2.A8','2.A9','2.A13','2.A27','2.A28','2.C1','2.F3','3.C4','3.C6.1','3.E1','4.A1','4.A2','4.A3','4.A4','4.A5','4.A6','4.B1','4.B2','4.B4','4.B11','4.C1','5.A17','5.C2','5.D3','5.E2','5.F6','5.F8','5.F12','5.G2','6.C7','6.D6','6.D8','6.D9','7.A9','7.E6','8.A1','8.A2','8.B10','9.B1','9.D1']
-timeMulti = ['5.A4','5.A14','5.F1','5.F4','5.H1','6.B5','6.B5.1','6.C2','6.D4']
+
+#time series without blank 2nd column
 col1_exceptions = ['5.A4','5.F4','6.D4','6.C7','5.F8','5E.2','5.D3','5.C2','5.A17']
-# simpleTimeSheets = ['2.A9']
+
+#multiple nested time series tables, with merged cells in mostly blank rows serving as table divider/header
+timeMulti = ['5.A4','5.A14','5.F1','5.F4','5.H1','6.B5','6.B5.1','6.C2','6.D4']
+
+#time series with month names in 1st column
+monthsTime = ['2.A30', '6.A2']
+
+# 1st 2, 1st data row is "total" and last data row is "before 1975"
+# 2nd 2, 1st data row is "total" 
+weirdTime = ['5.B4','5.D1','6.A1','6.F1']
+
+
+
+
+#Some but not all divider headers are on 2 rows
+edgeTimeMulti = ['4.C2']
 
 policy = ['2.A20', '2.A21']
 simpleBar = ['2.F4','2.F5','2.F6','2.F8','2.F11','5.A1.8']
@@ -275,10 +299,8 @@ medBarMulti = ['6.D5']
 nestedBar = ['2.F9','3.C6','5.A1','5.A1.1','5.A1.2','5.A1.4','5.A1.6','5.A1.7','5.A5','5.A7','6.F2','6.F3']
 nestedBarMulti = ['2.F7','3.C3','5.A1.3','5.A3','5.A6','5.A8','5.A10','5.A15','5.A16','5.H2','6.A3','6.A4','6.A5','6.D7']
 
-monthsTime = ['2.A30']
-edgeTime = ['6.A2']
-edgeTimeMulti = ['4.C2']
-weirdTime = ['5.B4','5.D1','6.A1','6.F1']
+
+
 
 
 medMap = ['5.J1','5.J2','5.J4','5.J8','5.J10','5.J14','6.A6']
@@ -300,7 +322,7 @@ fix = ['4.A4','4.A5','4.C1','5.D4','5.E2','6.C7','5A4','5A14','5F1','5H1','6B5',
 
 
 
-TIME_TYPES = ["simpleTime", "multiTime", "monthsTime"]
+TIME_TYPES = ["simpleTime", "multiTime", "monthsTime","weirdTime"]
 wordList = {}
 titleList = {}
 
@@ -349,12 +371,9 @@ for sheet_id in timeMulti:
 					rowBreaks.append(startRow)
 					break
 
-		# print list(set(subHead))
 		empty = True
 		multiSubtitle = ""
 		for s in subHead:
-		# 	# print subHead
-		# 	# print s.ctype
 			if(s.ctype != 0):
 				empty  = False
 				multiSubtitle = s.value
@@ -381,6 +400,44 @@ for sheet_id in timeMulti:
 		# 		lastRow = i
 		# 		break
 
+
+for sheet_id in weirdTime:
+	words = wordList[sheet_id] = []
+	xl_sheet = book.sheet_by_name(sheet_id)
+	output = {}
+	headRows = 0
+	lastRow = 0
+	for i in range(0, xl_sheet.nrows):
+		row = xl_sheet.row(i)
+		firstType = xl_sheet.cell_type(rowx=i, colx=0) 
+		secondVal = xl_sheet.cell_value(rowx=i, colx=1)
+		# reg = re.compile(r'19|20', re.UNICODE)
+		if(str(secondVal).find("Total") != -1 and firstType == 0):
+			headRows = i
+			break
+		# elif(re.match(reg, testVal.encode('utf8'))):
+		# 	headRows = i
+		# 	break
+	for i in range(headRows+1, xl_sheet.nrows):
+		row = xl_sheet.row(i)
+		testType = xl_sheet.cell_type(rowx=i, colx=0)
+		if(testType == 0):
+			lastRow = i
+			break
+
+	output["html"] = {}
+	values = parseHeader(output, headRows, lastRow, xl_sheet, "weirdTime")
+	titles = parseTitle(xl_sheet, "weirdTime")
+	output["html"]["header"] = values["headerString"]
+	output["html"]["body"] = values["bodyString"]
+	output["data"] = values["data"]
+	output["title"] = titles
+	addWords(words, titles["name"])
+	titleList[titles["id"]] = titles["id"] + " :: " + titles["name"]
+	output["category"] = values["chartType"]
+
+	with open('../data/json/stat_supplement_table-%s.json'%titles["id"], 'w') as fp:
+		json.dump(output, fp, indent=4, sort_keys=True)
 
 
 for sheet_id in simpleTimeSheets:
