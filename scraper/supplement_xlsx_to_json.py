@@ -5,6 +5,8 @@ import pprint
 import json
 import copy
 
+STATES = {"Alabama": "AL", "Alaska": "AK", "American Samoa": "AS", "Arizona": "AZ", "Arkansas": "AR", "California": "CA", "Colorado": "CO", "Connecticut": "CT", "Delaware": "DE", "District Of Columbia": "DC","District of Columbia": "DC", "Federated States Of Micronesia": "FM", "Florida": "FL", "Georgia": "GA", "Guam": "GU", "Hawaii": "HI", "Idaho": "ID", "Illinois": "IL", "Indiana": "IN", "Iowa": "IA", "Kansas": "KS", "Kentucky": "KY", "Louisiana": "LA", "Maine": "ME", "Marshall Islands": "MH", "Maryland": "MD", "Massachusetts": "MA", "Michigan": "MI", "Minnesota": "MN", "Mississippi": "MS", "Missouri": "MO", "Montana": "MT", "Nebraska": "NE", "Nevada": "NV", "New Hampshire": "NH", "New Jersey": "NJ", "New Mexico": "NM", "New York": "NY", "North Carolina": "NC", "North Dakota": "ND", "Northern Mariana Islands": "MP", "Ohio": "OH", "Oklahoma": "OK", "Oregon": "OR", "Palau": "PW", "Pennsylvania": "PA", "Puerto Rico": "PR", "Rhode Island": "RI", "South Carolina": "SC", "South Dakota": "SD", "Tennessee": "TN", "Texas": "TX", "Utah": "UT", "Vermont": "VT", "Virgin Islands": "VI", "U.S. Virgin Islands": "VI", "Virginia": "VA", "Washington": "WA", "West Virginia": "WV", "Wisconsin": "WI", "Wyoming": "WY"}
+
 def parseTitle(sheet, sheetType, multiSubtitle=False):
 	title = {}
 	if(multiSubtitle):
@@ -61,6 +63,8 @@ def parseHeader(output, headRows, lastRow, sheet, sheetType, startRow=False):
 	chartType = ""
 	if sheetType in TIME_TYPES:
 		chartType = "timeSeries"
+	elif sheetType == "medMap":
+		chartType = "map"
 	return{ "headerString": headerString, "data": data, "bodyString": bodyString, "chartType": chartType}
 
 def getTbody(sheet, sheetType, headR, lastRow, startRow):
@@ -71,6 +75,7 @@ def getTbody(sheet, sheetType, headR, lastRow, startRow):
 	tbody = "<tbody>"
 	for r in range(headRows, lastRow):
 		row = sheet.row(r)
+
 		for c in range(0, len(row)):
 			if sheetType in TIME_TYPES and c==1 and sheet.name not in col1_exceptions:
 				continue
@@ -81,11 +86,13 @@ def getTbody(sheet, sheetType, headR, lastRow, startRow):
 				else:
 					monthly = False
 				if (sheetType == "weirdTime" and r == headRows):
-					print "foo"
 					val = "Total"
 					tbody += str(val)
 				else:
-					val = getYear(sheet.cell_value(rowx=r, colx=c), monthly)
+					if sheetType in TIME_TYPES:
+						val = getYear(sheet.cell_value(rowx=r, colx=c), monthly)
+					else:
+						val = sheet.cell_value(rowx=r, colx=c)
 					if isinstance(val, basestring) and not monthly:
 						if(val.find("-") != -1):
 							y1 = int(val.split("-")[0])
@@ -166,7 +173,10 @@ def getData(data, rows, rowNum, colNum, headR, lastRow, sheet, sheetType, startR
 			dType = obj["type"] = "year"
 	else:
 		obj = data["col%i"%colNum] = {}
-		obj["series"] = getSeries(rowNum, colNum, lastRow, sheet, sheetType, startRow)
+		if (sheetType == "medMap"):
+			obj["series"] = getMapSeries(rowNum, colNum, lastRow, sheet, sheetType, startRow)
+		else:
+			obj["series"] = getSeries(rowNum, colNum, lastRow, sheet, sheetType, startRow)
 		label = obj["label"] = getLabel(rows, colNum)
 		addWords(words, label)
 		dType = obj["type"] = getType(label)
@@ -235,6 +245,62 @@ def getSeries(rowN, colNum, lastRow, sheet, sheetType, startRow):
 			else:
 				val = False
 		series.append(val)
+	return series
+
+def getMapSeries(rowN, colNum, lastRow, sheet, sheetType, startRow):
+	if(startRow):
+		rowNum = startRow
+	else:
+		rowNum = rowN
+	series = []
+	for i in range(rowNum+1, lastRow):
+		val = sheet.cell_value(rowx=i, colx=colNum)
+		type0 = sheet.cell_type(rowx=i, colx=0)
+		type1 = sheet.cell_type(rowx=i, colx=1)
+		type2 = sheet.cell_type(rowx=i, colx=2)
+#row blank, blank, "All areas"
+		if(type0 == 0 and type1==0):
+			continue
+		elif(type0==0):
+#Indented row, eg blank, Puerto Rico
+			state = [sheet.cell_value(rowx=i, colx=1).replace("\n","").replace("  "," ")]
+		else:
+			state = [sheet.cell_value(rowx=i, colx=0).replace("\n","").replace("  "," ")]
+		if(state[0] == "Outlying areas" or state[0] == "Foreign countries"):
+			continue
+#"Other" Includes American Samoa, Guam, Northern Mariana Islands, U.S. Virgin Islands, and foreign countries.
+		elif(state[0].find("Other") >= 0):
+			state = ["American Samoa","Guam","Northern Mariana Islands","U.S. Virgin Islands"]
+		for s in state:
+			obj = {}
+			abbrev = STATES[s].lower()
+			if(abbrev == "gu"):
+				obj["hc-key"] = "gu-3605"
+				obj["value"] = val
+				series.append(obj)
+			elif(abbrev == "mp"):
+				for abbr in ["ti","sa","ro"]:
+					obj["hc-key"] = "mp-" + abbr
+					obj["value"] = val
+					series.append(obj)
+			elif(abbrev == "as"):
+				for abbr in ["6515","6514"]:
+					obj["hc-key"] = "as-" + abbr
+					obj["value"] = val
+					series.append(obj)
+			elif(abbrev == "vi"):
+				for abbr in ["3617","6398","6399"]:
+					obj["hc-key"] = "vi-" + abbr
+					obj["value"] = val
+					series.append(obj)
+			elif(abbrev == "pr"):
+				obj["hc-key"] = "pr-3614"
+				obj["value"] = val
+				series.append(obj)
+			else:
+				obj["hc-key"] = "us-" + abbrev
+				obj["value"] = val
+				series.append(obj)
 	return series
 
 def getLabel(rows, colNum):
@@ -325,6 +391,43 @@ fix = ['4.A4','4.A5','4.C1','5.D4','5.E2','6.C7','5A4','5A14','5F1','5H1','6B5',
 TIME_TYPES = ["simpleTime", "multiTime", "monthsTime","weirdTime"]
 wordList = {}
 titleList = {}
+
+for sheet_id in medMap:
+	words = wordList[sheet_id] = []
+	xl_sheet = book.sheet_by_name(sheet_id)
+	output = {}
+	headRows = 0
+	lastRow = 0
+	for i in range(0, xl_sheet.nrows):
+		row = xl_sheet.row(i)
+		testVal = xl_sheet.cell_value(rowx=i, colx=0)
+		if(testVal.find("Alabama") >= 0):
+			headRows = i-1
+			break
+	for i in range(headRows+1, xl_sheet.nrows):
+		row = xl_sheet.row(i)
+		testType1 = xl_sheet.cell_type(rowx=i, colx=0)
+		testType2 = xl_sheet.cell_type(rowx=i, colx=1)
+		testType3 = xl_sheet.cell_type(rowx=i, colx=2)
+
+		if(testType1 == 0 and testType2 == 0 and testType3 == 0):
+			lastRow = i
+			break
+
+	output["html"] = {}
+	values = parseHeader(output, headRows, lastRow, xl_sheet, "medMap")
+	titles = parseTitle(xl_sheet, "medMap")
+	output["html"]["header"] = values["headerString"]
+	output["html"]["body"] = values["bodyString"]
+	output["data"] = values["data"]
+	output["title"] = titles
+	addWords(words, titles["name"])
+	titleList[titles["id"]] = titles["id"] + " :: " + titles["name"]
+	output["category"] = values["chartType"]
+
+	with open('../data/json/stat_supplement_table-%s.json'%titles["id"], 'w') as fp:
+		json.dump(output, fp, indent=4, sort_keys=True)
+
 
 for sheet_id in timeMulti:
 	words = wordList[sheet_id] = []

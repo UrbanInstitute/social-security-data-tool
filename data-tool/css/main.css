@@ -30,7 +30,7 @@ body{
 #innerControls{
     margin-top: 20%;
 }
-#lineChart, #singleYearBarChart{
+#lineChart, #singleYearBarChart, #map{
     width: calc(100% - 400px);
     top: 0;
     left: 400px;
