@@ -1,3 +1,16 @@
+function getQueryVariable(variable) {
+    var query = window.location.search.substring(1);
+    var vars = query.split('&');
+    for (var i = 0; i < vars.length; i++) {
+        var pair = vars[i].split('=');
+        if (decodeURIComponent(pair[0]) == variable) {
+            return decodeURIComponent(pair[1]);
+        }
+    }
+}
+
+
+
 var yearBarCache;
 var MONTHNAMES = ["January", "February", "March", "April", "May", "June",
   "July", "August", "September", "October", "November", "December"
@@ -5,48 +18,71 @@ var MONTHNAMES = ["January", "February", "March", "April", "May", "June",
 var MONTHABBREVS = ["Jan", "Feb", "Mar", "Apr", "May", "June",
   "Jul", "Aug", "Sept", "Oct", "Nov", "Dec"
     ]
+
+var IE = false;
+var exportParams = {tableID:"",columns:[],chartType:""}
+
+
 function init(){
 	// $.get( getDocURL("2A3"), function(resp) {
 	setLayout();
+
 	setTimeout(function(){
 		$.getJSON( getJSONPath(sheets[tableIndex].replace(".","")), function(resp){
 		  // var data = resp.results[0];
+		  exportParams.tableID = sheets[tableIndex].replace(".","")
 		  var data = resp;
+		  console.log(data, tableIndex)
 		  var category = data.category;
 		  switch(category){
 		  	case "timeSeries":
+		  	  	exportParams.chartType = "lineChart"
+		  	  	exportParams.columns=["col1"]
 		  		drawLineChart(data);
 	  			drawSingleYearBarChart(data);
 		  		drawTable(data);
+		  		multiYear();
+		  		showScrubber();
 		  		break;
 		  	case "map":
+		  	  	exportParams.chartType = "map"
+		  	  	exportParams.columns=["col3"]
 		  		drawTable(data);
-		  		drawMap(data)
+		  		drawMap(data,"col3")
+		  		hideScrubber();
 		  		break;
 		  }
 		});
 		setTheme();
 		drawScrubber();
-		filterSheets(tableIndex)
+		filterSheets(0)
 		yearBarCache = {};
 	}, 1000);
 }
 
 function newTable(index){
 	var id = sheets[index].replace(/\./g,"")
+	exportParams.tableID = id;
 	$.getJSON( getJSONPath(id), function(resp){
 		  // var data = resp.results[0];
 		  var data = resp;
 		  var category = data.category;
 		  switch(category){
 		  	case "timeSeries":
+		  	  	exportParams.chartType = "lineChart"
+		  	  	exportParams.columns=["col1"]
 		  		drawLineChart(data);
 	  			drawSingleYearBarChart(data);
 		  		drawTable(data);
+		  		multiYear();
+		  		showScrubber();
 		  		break;
 		  	case "map":
+		  	  	exportParams.chartType = "map"
+		  	  	exportParams.columns=["col3"]
 		  		drawTable(data);
-		  		drawMap(data)
+		  		drawMap(data, "col3");
+		  		hideScrubber();
 		  		break;
 		  }
 		});
@@ -96,6 +132,7 @@ function drawTable(input){
 			var series = th.attr("class").match(re)
 			var lineChart = $('#lineChart').highcharts();
 			var singleYearBarChart = $('#singleYearBarChart').highcharts();
+			var map = $("#map").highcharts();
 			//th -> tr -> thead -> table
 			var table = th.node().parentNode.parentNode.parentNode
 			var tableID = d3.select(table).attr("id")
@@ -103,50 +140,79 @@ function drawTable(input){
 			$.getJSON( getJSONPath(tableID), function(resp){
 		  		// var data = resp.results[0];
 		  		var data = resp;
+		  		var category = data.category;
+		  		cat = category
 		  		var seriesID = data["data"][series]["label"]
-		  		if( !selected ){
-					singleYearBarChart.series[0].addPoint(generateBarFromYear(data.data.years.series, data["data"][series]["series"], $("#rightValue").text()))
+		  		if(category == "timeSeries"){
+			  		if( !selected ){
+						singleYearBarChart.series[0].addPoint(generateBarFromYear(data.data.years.series, data["data"][series]["series"], $("#rightValue").text()))
 
-					$.each(singleYearBarChart.series[0].data, function(k,v){
-						v.update({
-							x: k
+						$.each(singleYearBarChart.series[0].data, function(k,v){
+							v.update({
+								x: k
+							});
 						});
-					});
 
-					var categories = singleYearBarChart.xAxis[0].categories
-					categories.push(seriesID)
-					singleYearBarChart.xAxis[0].setCategories(categories)
+						var categories = singleYearBarChart.xAxis[0].categories
+						categories.push(seriesID)
+						singleYearBarChart.xAxis[0].setCategories(categories)
 
-					singleYearBarChart.redraw();
+						singleYearBarChart.redraw();
 
-					lineChart.addSeries({
-						id: seriesID,
-		            	name: seriesID,
-		            	data: generateTimeSeries(data.data.years.series, data["data"][series]["series"])
-					});
-					// singleYearBarChart.addSeries({
-					// 	id: seriesID,
-     //                	name: seriesID,
-     //                	data: [generateBarFromYear(data.data.years.series, data["data"][series]["series"], $("#rightValue").text())]
-     //                	}
-					// )
+						lineChart.addSeries({
+							id: seriesID,
+			            	name: seriesID,
+			            	data: generateTimeSeries(data.data.years.series, data["data"][series]["series"])
+						});
+						// singleYearBarChart.addSeries({
+						// 	id: seriesID,
+	     //                	name: seriesID,
+	     //                	data: [generateBarFromYear(data.data.years.series, data["data"][series]["series"], $("#rightValue").text())]
+	     //                	}
+						// )
 
-					yearBarCache[seriesID] = [data.data.years.series, data["data"][series]["series"]]
-					checkUnitCompatibility(data["data"][series]["type"], input, [lineChart, singleYearBarChart])
-					th.classed("selected", true)
-				} else{
-					removeSeries(lineChart, seriesID)
-					removeSeries(singleYearBarChart, seriesID)
-					th.classed("selected", false)
+						yearBarCache[seriesID] = [data.data.years.series, data["data"][series]["series"]]
+						checkUnitCompatibility(data["data"][series]["type"], input, [lineChart, singleYearBarChart])
+						th.classed("selected", true)
+			  			exportParams.columns.push(series)
+
+					} else{
+						var tmp = exportParams.columns.indexOf(series);
+						exportParams.columns.splice(tmp, 1)
+
+						removeSeries(lineChart, seriesID)
+						removeSeries(singleYearBarChart, seriesID)
+						th.classed("selected", false)
+					}
 				}
+				else if (category == "map"){
+			  		if( !selected ){
+			  			exportParams.columns = [series]
+						drawMap(data, series[0])
+
+						// checkUnitCompatibility(data["data"][series]["type"], input, [lineChart, singleYearBarChart])
+						d3.selectAll("th").classed("selected",false)
+						th.classed("selected", true)
+					}
+				}
+
 			});
 		});
 	formatTable("testTable")
-	d3.selectAll("th.col1").classed("selected",function(){
-		if(d3.select(this).attr("colspan") > 0){
-			return false;
-		}else{ return true;}
-	})
+	if(input.category == "timeSeries"){
+		d3.selectAll("th.col1").classed("selected",function(){
+			if(d3.select(this).attr("colspan") > 0){
+				return false;
+			}else{ return true;}
+		})
+	}
+	else if(input.category == "map"){
+		d3.selectAll("th.col3").classed("selected",function(){
+			if(d3.select(this).attr("colspan") > 0){
+				return false;
+			}else{ return true;}
+		})
+	}
 }
 function resizeHeader(header, bodyCells){
 // 	var oldWidth = parseFloat(d3.select(header).style("width").replace("px",""));
@@ -172,16 +238,16 @@ function resizeHeader(header, bodyCells){
 }
 function formatTable(tableID){
 //draw sortArrows
-	d3.selectAll("#" + tableID + " thead th")
-		.append("i")
-		.attr("class","sortArrow")
+// 	d3.selectAll("#" + tableID + " thead th")
+// 		.append("i")
+// 		.attr("class","sortArrow")
 
-//Make table sortable using mottie's jquery tablesorter, bind click events to sort arrows
-	$(function(){
-	  $("#" + tableID + " table").tablesorter({
-	  		selectorSort: "i"
-	  });
-	});
+// //Make table sortable using mottie's jquery tablesorter, bind click events to sort arrows
+// 	$(function(){
+// 	  $("#" + tableID + " table").tablesorter({
+// 	  		selectorSort: "i"
+// 	  });
+// 	});
 
 //Determine which columns fall under which headers, and resize width to width of child columns
 	var rows = d3.selectAll("#" + tableID + " thead tr")[0]
@@ -214,7 +280,6 @@ function formatTable(tableID){
 
 	d3.selectAll("th")
 		.style("width", function(){
-			console.log("foo")
 			var cs = d3.select(this).attr("colspan")
 			var w = (cs == null || cs == 1) ? 100 : 120*cs-20+2.22
 			return w;
@@ -262,7 +327,12 @@ function checkUnitCompatibility(unit, input, charts){
 			if(input["data"][series]["type"] == unit){
 				return true
 			} else{
-				for(var i = 0; i<charts.length; i++){ removeSeries(charts[i], input["data"][series]["label"]) }
+				for(var i = 0; i<charts.length; i++){
+				 	removeSeries(charts[i], input["data"][series]["label"]) 
+		 			var tmp = exportParams.columns.indexOf(series);
+					exportParams.columns.splice(tmp, 1)
+
+				}
 				d3.select("#interactionInstructions .warning")
 					.transition()
 					.duration(100)
@@ -289,7 +359,6 @@ function generateTimeSeries(year, column){
 			series.push([Date.UTC(year[i], 0, 1), y]);
 		}
 		else if(year[i].indexOf("Before 1975") != -1){
-			console.log(year[i], year[i].indexOf("Before 1975"))
 			series.push([Date.UTC(1935, 0, 1), y]);
 		}
 //cases like 1950 (Jan.–Aug.) or 1995 (Dec.)
@@ -357,17 +426,21 @@ function getDate(y1, y2, parenthetical){
 		}
 	}
 }
-function drawMap(input){
-	var initId = input["data"]["col3"]["label"]
+function drawMap(input, col){
+	var initId = input["data"][col]["label"]
 	$('#map').highcharts('Map', {
         title : {
-            text : 'Highmaps basic demo'
+            text : input.title.name
         },
+        subtitle:{
+        	text: initId,
+        	style:{
+        		"font-weight": "bolder",
+        		"font-size": "1.2em",
+        		"color": "#fcb918"
+        	}
 
-        subtitle : {
-            text : 'Source map: <a href="https://code.highcharts.com/mapdata/countries/us/custom/us-all-territories.js">United States of America with Territories</a>'
         },
-
         mapNavigation: {
         	enableMouseWheelZoom: false,
             enabled: true,
@@ -375,20 +448,25 @@ function drawMap(input){
                 verticalAlign: 'bottom'
             }
         },
-
+        chart:{
+        	marginTop: 50,
+        	marginBottom: 70
+        },
         colorAxis: {
             // min: 0,
             // max: 100000,
-            minColor: "#ffffff",
+            minColor: "#f0f0f0",
             maxColor: "#1696d2"
         },
 
         series : [{
-            data : input["data"]["col3"]["series"],
+            data : input["data"][col]["series"],
             mapData: Highcharts.maps['countries/us/custom/us-all-territories'],
             joinBy: 'hc-key',
             name: initId,
+            borderColor: "white",
             states: {
+
                 hover: {
                     color: '#fdbf11'
                 },
@@ -410,6 +488,15 @@ function drawMap(input){
             enableMouseTracking: false
         }]
     });
+	d3.select("#lineChart")
+		.transition()
+		.style("left",-2000)
+	d3.select("#singleYearBarChart")
+		.transition()
+		.style("left",2000)
+	d3.select("#map")
+		.transition()
+		.style("left","400px")
 }
 
 function drawLineChart(input){
@@ -605,6 +692,8 @@ function drawSingleYearBarChart(input){
 }
 function removeSeries(chart, id){
 	if(chart.renderTo.id == "singleYearBarChart"){
+		// console.log(id)
+
 		var index = chart.xAxis[0].categories.indexOf(id)
 		chart.series[0].removePoint(index)
 
@@ -645,6 +734,9 @@ function getJSONPath(id){
 	}
 }
 function singleYear(){
+
+	exportParams.chartType = "timeBar";
+
 	d3.select("#lineChart")
 		.transition()
 		.style("left",-2000)
@@ -666,10 +758,15 @@ function singleYear(){
 }
 function multiYear(){
 
+	exportParams.chartType = "lineChart";
+
 	d3.select("#lineChart")
 		.transition()
 		.style("left","400px")
 	d3.select("#singleYearBarChart")
+		.transition()
+		.style("left",2000)
+	d3.select("#map")
 		.transition()
 		.style("left",2000)
 	d3.select("#valueScrubber .left.thumb")
@@ -842,6 +939,19 @@ function drawScrubber(){
 	}
 
 }
+function hideScrubber(){
+	d3.select("#hideScrubber")
+		.style("display","block")
+	d3.select("#valueScrubber").classed("hidden",true)
+	d3.select("#singleYearCheck").classed("hidden",true)	
+
+}
+function showScrubber(){
+	d3.select("#hideScrubber")
+		.style("display","none")
+	d3.select("#valueScrubber").classed("hidden",false)
+	d3.select("#singleYearCheck").classed("hidden",false)	
+}
 
 function setTheme(){
 	Highcharts.createElement('link', {
@@ -849,6 +959,38 @@ function setTheme(){
 	    rel: 'stylesheet',
 	    type: 'text/css'
 	}, null, document.getElementsByTagName('head')[0]);
+
+	var embed = {
+            text: 'Get embeddable chart',
+                onclick: function () {
+                	d3.select("#dialog-message textarea")
+                		.html(function(){
+                			var url = "http://localhost:8081/data-tool/embed.html?"
+                			url += "tableID=" + exportParams.tableID + "&"
+                			url += "chartType=" + exportParams.chartType + "&"
+                			url += "columns="
+                			for(var i=0; i< exportParams.columns.length; i++){
+                				url += exportParams.columns[i]
+                				if(i != exportParams.columns.length-1){
+                					url += ","
+                				}
+                			}
+                			return "&lt;iframe frameborder=\"0\" height=\"400px\" marginheight=\"0\" scrolling=\"no\" src=\"" + url + "\" width=\"100%\"&gt;&lt;/iframe&gt"
+                		})
+                		// &lt;iframe frameborder="0" height="450px" marginheight="0" scrolling="no" src="http://webapp.urban.org/reducing-mass-incarceration/embed_child.html" width="100%"&gt;&lt;/iframe&gt;
+                	$( "#dialog-message" ).dialog({
+					      modal: true,
+					      minWidth: 400,
+      					  buttons: {
+        				  	Ok: function() {
+          				  		$( this ).dialog( "close" );
+        				  	}
+      					  }
+    				});
+            	}
+	}
+	var oldMenu = Highcharts.getOptions().exporting.buttons.contextButton.menuItems
+	oldMenu.unshift(embed)
 
 	Highcharts.theme = {
 	    colors: ["#0096d2", "#00578b", "#fcb918", "#f47d20", "#6d6d6d", "#c6c6c6", "#ec008c",
@@ -889,7 +1031,8 @@ function setTheme(){
         exporting: {
             buttons: {
                 contextButton: {
-                    text: 'Download'
+	            	text: "Share",
+                    menuItems: oldMenu
                 }
             }
         },
@@ -947,8 +1090,9 @@ function setTheme(){
 }
 var simpleTimeSheets = ['2.A3','2.A4','2.A8','2.A9','2.A13','2.A27','2.A28','2.C1','2.F3','3.C4','3.C6.1','3.E1','4.A1','4.A2','4.A3','4.A4','4.A5','4.A6','4.B1','4.B2','4.B4','4.B11','4.C1','5.A17','5.C2','5.D3','5.E2','5.F6','5.F8','5.F12','5.G2','6.C7','6.D6','6.D8','6.D9','7.A9','7.E6','8.A1','8.A2','8.B10','9.B1','9.D1']
 var notok = ['2A27','2A28','2C1','3C4','3E1','4B1','4B2']
-var tempAllSheets = ['5F1-M0','5.J1','5.J2','5.J4','5.J8','5.J10','5.J14','6.A6','5.B4','5.D1','6.A1','6.F1','6A2','2A30','5A14-M0','5A14-M1','5A4-M0','5A4-M1','5F1-M1','5F4-M0','5F4-M1','5F4-M2','5H1-M0','5H1-M1','6B5-M0','6B5-M1','6B51-M0','6B51-M1','6C2-M0','6C2-M1','6D4-M0','6D4-M1','6D4-M2','6D4-M3','2.A3','2.A4','2.A8','2.A9','2.A13','2.F3','3.C6.1','4.A1','4.A2','4.A3','4.A4','4.A5','4.A6','4.B4','4.B11','4.C1','5.A17','5.C2','5.D3','5.E2','5.F6','5.F8','5.F12','5.G2','6.C7','6.D6','6.D8','6.D9','7.A9','7.E6','8.A1','8.A2','8.B10','9.B1','9.D1']
-var allSheets = ['2.A3','2.A4','2.A9','2.A13','2.F3','3.C6.1','4.A1','4.A2','4.A3','4.A6','4.B11','5.A17','5.D3','5.F6','6.D8','7.A9','8.B10','9.D1']
+var tempAllSheets = ['5.J1','5F1-M0','5.J2','5.J4','5.J8','5.J10','5.J14','6.A6','5.B4','5.D1','6.A1','6.F1','6A2','2A30','5A14-M0','5A14-M1','5A4-M0','5A4-M1','5F1-M1','5F4-M0','5F4-M1','5F4-M2','5H1-M0','5H1-M1','6B5-M0','6B5-M1','6B51-M0','6B51-M1','6C2-M0','6C2-M1','6D4-M0','6D4-M1','6D4-M2','6D4-M3','2.A3','2.A4','2.A8','2.A9','2.A13','2.F3','3.C6.1','4.A1','4.A2','4.A3','4.A4','4.A5','4.A6','4.B4','4.B11','4.C1','5.A17','5.C2','5.D3','5.E2','5.F6','5.F8','5.F12','5.G2','6.C7','6.D6','6.D8','6.D9','7.A9','7.E6','8.A1','8.A2','8.B10','9.B1','9.D1']
+// var allSheets = ['2.A3','2.A4','2.A9','2.A13','2.F3','3.C6.1','4.A1','4.A2','4.A3','4.A6','4.B11','5.A17','5.D3','5.F6','6.D8','7.A9','8.B10','9.D1']
+var allSheets = tempAllSheets;
 var sheets = tempAllSheets;
 var tableIndex = 0;
 // init("2A9");
@@ -984,6 +1128,7 @@ function filterSheets(current){
 	$.getJSON(getJSONPath("titles"), function(titles){
 		for(var i = 0; i < sheets.length; i++){
 		    var opt = sheets[i];
+		    console.log(opt)
 		    var el = document.createElement("option");
 		    el.textContent = titles[opt.replace(/\./g,"")];
 		    el.value = opt;
@@ -1049,11 +1194,23 @@ $(document).ready(function() {
 //         } else {
 //             $('#subnav').css({'position':'static','top':'0px'});
 //         }
-       
+	   var end = d3.select("#testTable thead").node().getBoundingClientRect().width - $(window).width() + 44;       
        var scrollLeftVal = $(this).scrollLeft();
-       console.log(scrollLeftVal)
        d3.select("thead")
        	.style("left", -1*scrollLeftVal + 49)
+       if(Math.abs(scrollLeftVal-end) <= 120){
+       	d3.select(".rightFader")
+       		// .transition()
+       		// .style("opacity",0)
+       		.style("right", -120+Math.abs(scrollLeftVal-end))
+       }
+       else{
+       	  d3.select(".rightFader")
+       	  // .transition()
+       		// .style("opacity",1)
+       		.style("right",0)
+
+       }
        // if ( scrollLeftVal > 1 ) { alert('i scrolled to the left'); }
     });
  });

@@ -91,6 +91,23 @@ tbody{
     height: 50px;
     cursor: pointer;
 }
+.leftFader{
+    position: fixed;
+    top: 460px;
+    width: 80px;
+    left: 0;
+    z-index: 100;
+    pointer-events: none;
+}
+.rightFader{
+    position: fixed;
+    top: 460px;
+    width: 320px;
+    right: 0;
+    z-index: 100;
+    pointer-events: none;
+
+}
 #left_arrow{
     transform: rotate(180deg);
     left: 5px;
@@ -142,6 +159,7 @@ tbody{
 #valueScrubber{
 	display: inline-block;
     margin-bottom: 10px;
+    z-index: 200;
 }
 #valueScrubber div{
 	font: 14px Lato;
@@ -167,8 +185,33 @@ tbody{
 	stroke-width: 4px;
 	cursor: pointer;
 }
+#hideScrubber{
+    position: fixed;
+    top: 280px;
+    left: 0;
+    width: 400px;
+    /*background: red;*/
+    z-index: 301;
+    height: 80px;
+    opacity: 0;
+}
 
 
+#valueScrubber.hidden{
+    color: #bbb;
+}
+#valueScrubber.hidden .thumb{
+    stroke: #bbb;
+}
+#valueScrubber.hidden #sliderHighlight{
+    fill: #bbb;
+}
+#singleYearCheck.hidden{
+    color: #bbb;
+}
+#singleYearCheck.hidden circle{
+    fill: #bbb !important;
+}
 /****************************************/
 /************ SWITCH STYLEs *************/
 /****************************************/
@@ -233,4 +276,34 @@ th.selected{
 .pure-table td {
     font-size: 14px;
     background-color: transparent;
+}
+
+
+
+/****************************************/
+/************ EMBED MODAL ***************/
+/****************************************/
+.ui-widget{
+    font-family: Lato !important;
+}
+#dialog-message{
+    display: none;
+    width: 300px;
+}
+#dialog-message textarea{
+    width: 100%;
+    font-size: 12px;
+}
+.ui-dialog-titlebar{
+    border-radius: 0 !important;
+    border: none;
+    /* padding: 0; */
+    width: 100%;
+    margin-top: -5px;
+    margin-left: -4px;
+    background: #e2e2e2;
+    text-align: center;
+}
+.ui-widget.ui-button{
+    margin-right: 43px;
 }

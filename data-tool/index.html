@@ -2,6 +2,8 @@
 <head>
 	<meta charset="utf-8">
 	<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+	  <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+
 	<link rel = "stylesheet" href = "css/main.css">
 	<link rel = "stylesheet" href = "css/vendor/tablesorter.css">
 	<link rel="stylesheet" href="http://urbaninstitute.github.io/graphics-styleguide/css/color-column.css">
@@ -21,6 +23,8 @@
   			<div id = "refresh"></div>
 		</div>
 	</div>
+	<div id = "hideScrubber"></div>
+
 	<div id = "lineChart"></div>
 	<div id = "singleYearBarChart"></div>
 	<div id = "barChart"></div>
@@ -35,10 +39,28 @@
 	<div id = "testTable">
 	</div>
 </div>
+
+<svg class="rightFader" height="3000"><g><defs><linearGradient id="rightGradient" x1="0%" y1="0%" x2="100%" y2="0%" spreadMethod="pad"><stop offset="0%" stop-color="#fff" stop-opacity="0"></stop><stop offset="100%" stop-color="#fff" stop-opacity="1"></stop></linearGradient></defs><rect class="scrollFade gradient" x="0" y="0" width="320" height="100%" fill="url(#rightGradient)"></rect></g></svg>
+
+<svg class="leftFader" height="3000"><g><defs><linearGradient id="leftGradient" x1="0%" y1="0%" x2="100%" y2="0%" spreadMethod="pad"><stop offset="0%" stop-color="#fff" stop-opacity="1"></stop><stop offset="100%" stop-color="#fff" stop-opacity="0"></stop></linearGradient></defs><rect class="scrollFade gradient" x="0" y="0" width="80" height="100%" fill="url(#leftGradient)"></rect></g></svg>
+
 <img id = "left_arrow" src = "img/left_arrow.png">
 <img id = "right_arrow" src = "img/left_arrow.png">
+
+<div id="dialog-message" title="Embed This Chart">
+	<textarea rows="6" cols="10">
+	</textarea>
+  <p>
+    To embed the current chart, copy the code above and paste it onto your page.
+  </p>
+</div>
+
+
+
 <script src="js/vendor/d3.min.js"></script>
 <script src="js/vendor/jquery.1.11.3.min.js"></script>
+<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+
 <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.22.0/js/jquery.tablesorter.min.js"></script> -->
 
 <!-- <script src="https://code.highcharts.com/maps/modules/exporting.js"></script> -->
