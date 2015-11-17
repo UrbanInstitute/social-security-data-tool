@@ -149,26 +149,26 @@ function drawTable(input){
 	})
 }
 function resizeHeader(header, bodyCells){
-	var oldWidth = parseFloat(d3.select(header).style("width").replace("px",""));
-	var headerRemainder = parseFloat(header.getBoundingClientRect().width) - oldWidth;
-	var bodyWidth = 0;
-	for(var i = 0; i < bodyCells.length; i++){
-		bodyWidth += parseFloat(bodyCells[i].getBoundingClientRect().width);
-	}
- 	var w =  bodyWidth - headerRemainder;
-//If header is longer than body cell, resize bodycell's width.
- 	if(oldWidth > w && bodyCells.length == 1){
- 		d3.select(bodyCells[0]).style("width", oldWidth)
- 		d3.select(header).style("width", oldWidth)
+// 	var oldWidth = parseFloat(d3.select(header).style("width").replace("px",""));
+// 	var headerRemainder = parseFloat(header.getBoundingClientRect().width) - oldWidth;
+// 	var bodyWidth = 0;
+// 	for(var i = 0; i < bodyCells.length; i++){
+// 		bodyWidth += parseFloat(bodyCells[i].getBoundingClientRect().width);
+// 	}
+//  	var w =  bodyWidth - headerRemainder;
+// //If header is longer than body cell, resize bodycell's width.
+//  	if(oldWidth > w && bodyCells.length == 1){
+//  		d3.select(bodyCells[0]).style("width", oldWidth)
+//  		d3.select(header).style("width", oldWidth)
 
- 	}
- //otherwise, resize header to width of bodycell(s)
-	else{
-		d3.select(header).style("width", w)
-		d3.select(header).select("div").style("width", w)
+//  	}
+//  //otherwise, resize header to width of bodycell(s)
+// 	else{
+// 		d3.select(header).style("width", w)
+// 		d3.select(header).select("div").style("width", w)
 
-	}
-	return false
+// 	}
+	// return false
 }
 function formatTable(tableID){
 //draw sortArrows
@@ -212,12 +212,47 @@ function formatTable(tableID){
 			d3.event.stopPropagation()
 	})
 
+	d3.selectAll("th")
+		.style("width", function(){
+			console.log("foo")
+			var cs = d3.select(this).attr("colspan")
+			var w = (cs == null || cs == 1) ? 100 : 120*cs-20+2.22
+			return w;
+		})
+		.style("max-width", function(){
+			var cs = d3.select(this).attr("colspan")
+			var w = (cs == null || cs == 1) ? 100 : 120*cs-20+2.22
+			return w;
+		})
+		.style("min-width", function(){
+			var cs = d3.select(this).attr("colspan")
+			var w = (cs == null || cs == 1) ? 100 : 120*cs-20+2.22
+			return w;
+		})
+	d3.selectAll("td")
+		.style("width", function(){
+			var cs = d3.select(this).attr("colspan")
+			var w = (cs == null || cs == 1) ? 100 : 120*cs-20+2.22
+			return w
+		})
+		.style("max-width", function(){
+			var cs = d3.select(this).attr("colspan")
+			var w = (cs == null || cs == 1) ? 100 : 120*cs-20+2.22
+			return w;
+		})
+		.style("min-width", function(){
+			var cs = d3.select(this).attr("colspan")
+			var w = (cs == null || cs == 1) ? 100 : 120*cs-20+2.22
+			return w;
+		})
+
+
 //center table in window
 	var tWidth = $("thead").width()
 	var wWidth = $(window).width()
 	var margin = (wWidth - tWidth) / 2.0
 	d3.select("table")
-		.style("margin-left",margin+ "px")
+		.style("margin-left",40)
 }
 function checkUnitCompatibility(unit, input, charts){
 	d3.selectAll("th.selected")
@@ -912,7 +947,7 @@ function setTheme(){
 }
 var simpleTimeSheets = ['2.A3','2.A4','2.A8','2.A9','2.A13','2.A27','2.A28','2.C1','2.F3','3.C4','3.C6.1','3.E1','4.A1','4.A2','4.A3','4.A4','4.A5','4.A6','4.B1','4.B2','4.B4','4.B11','4.C1','5.A17','5.C2','5.D3','5.E2','5.F6','5.F8','5.F12','5.G2','6.C7','6.D6','6.D8','6.D9','7.A9','7.E6','8.A1','8.A2','8.B10','9.B1','9.D1']
 var notok = ['2A27','2A28','2C1','3C4','3E1','4B1','4B2']
-var tempAllSheets = ['5.J1','5.J2','5.J4','5.J8','5.J10','5.J14','6.A6','5.B4','5.D1','6.A1','6.F1','6A2','2A30','5A14-M0','5A14-M1','5A4-M0','5A4-M1','5F1-M0','5F1-M1','5F4-M0','5F4-M1','5F4-M2','5H1-M0','5H1-M1','6B5-M0','6B5-M1','6B51-M0','6B51-M1','6C2-M0','6C2-M1','6D4-M0','6D4-M1','6D4-M2','6D4-M3','2.A3','2.A4','2.A8','2.A9','2.A13','2.F3','3.C6.1','4.A1','4.A2','4.A3','4.A4','4.A5','4.A6','4.B4','4.B11','4.C1','5.A17','5.C2','5.D3','5.E2','5.F6','5.F8','5.F12','5.G2','6.C7','6.D6','6.D8','6.D9','7.A9','7.E6','8.A1','8.A2','8.B10','9.B1','9.D1']
+var tempAllSheets = ['5F1-M0','5.J1','5.J2','5.J4','5.J8','5.J10','5.J14','6.A6','5.B4','5.D1','6.A1','6.F1','6A2','2A30','5A14-M0','5A14-M1','5A4-M0','5A4-M1','5F1-M1','5F4-M0','5F4-M1','5F4-M2','5H1-M0','5H1-M1','6B5-M0','6B5-M1','6B51-M0','6B51-M1','6C2-M0','6C2-M1','6D4-M0','6D4-M1','6D4-M2','6D4-M3','2.A3','2.A4','2.A8','2.A9','2.A13','2.F3','3.C6.1','4.A1','4.A2','4.A3','4.A4','4.A5','4.A6','4.B4','4.B11','4.C1','5.A17','5.C2','5.D3','5.E2','5.F6','5.F8','5.F12','5.G2','6.C7','6.D6','6.D8','6.D9','7.A9','7.E6','8.A1','8.A2','8.B10','9.B1','9.D1']
 var allSheets = ['2.A3','2.A4','2.A9','2.A13','2.F3','3.C6.1','4.A1','4.A2','4.A3','4.A6','4.B11','5.A17','5.D3','5.F6','6.D8','7.A9','8.B10','9.D1']
 var sheets = tempAllSheets;
 var tableIndex = 0;
@@ -1001,3 +1036,25 @@ d3.select("#refresh")
 		filterSheets(0)
 		newTable(0)
 	})
+
+$(document).ready(function() {
+   $(window).scroll(function() {
+       
+//        var headerH = $('thead').outerHeight(true);
+//        console.log(headerH);
+// //this will calculate header's full height, with borders, margins, paddings
+//        var scrollTopVal = $(this).scrollTop();
+//         if ( scrollTopVal > headerH ) {
+//             $('#subnav').css({'position':'fixed','top' :'0px'});
+//         } else {
+//             $('#subnav').css({'position':'static','top':'0px'});
+//         }
+       
+       var scrollLeftVal = $(this).scrollLeft();
+       console.log(scrollLeftVal)
+       d3.select("thead")
+       	.style("left", -1*scrollLeftVal + 49)
+       // if ( scrollLeftVal > 1 ) { alert('i scrolled to the left'); }
+    });
+ });
+

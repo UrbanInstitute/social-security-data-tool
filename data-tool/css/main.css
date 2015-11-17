@@ -214,6 +214,9 @@ th.selected{
     margin: 0;
     overflow: visible; /*to make ths where the title is really long work*/
     padding: 8px 10px; /* cell padding */
+/*    width: 100px !important;
+    max-width: 100px;
+    min-width: 100px;*/
 }
 
 .pure-table th {
