@@ -72,11 +72,7 @@ def parseHeader(output, headRows, lastRow, sheet, sheetType, startRow=False):
 			if(rows[r-2][c].ctype != 0 and rows[r-2][c].ctype !=6):
 				headerString += getTH(sheet, rows, r, c)
 			if(fixRows[r-2][c].ctype != 0):
-				# if sheet.name == "5.J2":
-				# 	print r, c, "a"
 				if((r == headRows-1 and c != 0) or (c == 0 and r ==2)):
-					if sheet.name == "5.J2":
-						print headRows, r, c, "b"
 					getData(data, fixRows, r, c, headRows, lastRow, sheet, sheetType, startRow)
 		headerString += "</tr>"
 	headerString += "</thead>"
@@ -139,20 +135,9 @@ def getTbody(sheet, sheetType, headR, lastRow, startRow):
 			if runlist:
 				# print runlist2
 				for rl in runlist:
-					# print rl
 					offset = rl[0]
 					font_index = rl[1]
-					# for offset, font_index in rl:
-						# print offset, font_index
-					# 	# if sheet.name == 	"2.A3":
-					# 		# print sheet.name
-					# 		# print r, c
-					# 		# print offset, book.font_list[font_index].escapement
 					if book.font_list[font_index].escapement != 0 or font_index == 0:
-						# print sheet.name
-						# print cell
-						# print offset
-						# print ""
 						cell = cell.replace(u'\xa0', u' ')
 						cs = cell.split(' ')
 						if len(cs) == 2:
@@ -207,21 +192,26 @@ def getTH(sheet, rows, rowNum, colNum):
 
 
 	th += ">"
+
 	val = rows[rowNum][colNum].value
 	cell = sheet.cell(rowNum, colNum)
-	# print sheet.cell_xf_index(rowNum, colNum)
-	# print cell
-	# print cell.xf_index
-	# print book.xf_list
 
-	# runlist = sheet.rich_text_runlist_map.get((rowNum, colNum))
-	# if runlist:
-	# 	for offset, font_index in runlist:
-	# 		if book.font_list[font_index].escapement != 0:
-	# 			print "finally"
-	# 		pass
-	# if book.font_list[fmt.font_index].escapement != 0:
-	# 	print "asdlfk"
+	if(not isinstance(val, float)):
+		# val = val.replace()
+		val = val.replace(unichr(160)," ").strip()
+		vs = val.split(" ")
+		last = vs[len(vs)-1].replace(u"\u2014","")
+		if len(last) == 1:
+			print val
+			# print tmp
+			val = ""
+			for i in range(0, len(vs)):
+				if(i != len(vs) -1):
+					val += vs[i]
+					val += " "
+				else:
+					val += "<span class = \"top_footnote top_%s\">%s</span>"%(vs[i],vs[i])
+			print val
 	if(isinstance(val, float)):
 		val = str(val)
 	th += val
