@@ -32,7 +32,6 @@ function init(){
 		  // var data = resp.results[0];
 		  exportParams.tableID = sheets[tableIndex].replace(".","")
 		  var data = resp;
-		  console.log(data, tableIndex)
 		  var category = data.category;
 		  switch(category){
 		  	case "timeSeries":
@@ -67,6 +66,7 @@ function newTable(index){
 		  // var data = resp.results[0];
 		  var data = resp;
 		  var category = data.category;
+		  console.log(id, category)
 		  switch(category){
 		  	case "timeSeries":
 		  	  	exportParams.chartType = "lineChart"
@@ -213,6 +213,22 @@ function drawTable(input){
 			}else{ return true;}
 		})
 	}
+	// console.log(input)
+	d3.selectAll(".footnotes").remove()
+	d3.select("#testTable")
+		.append("div")
+		.attr("class", "footnotes")
+	for(var i = 0; i<input.footnotes.length; i++){
+		var note = input.footnotes[i]
+		d3.select(".footnotes")
+			.append("div")
+			.attr("class",note.type + " footer")
+			.html(function(){
+				if(note.type == "footnote"){
+					return "<span id = symbol_" + note.symbol + ">" + note.symbol + "</span>" + note.content
+				}else{ return note.content}
+			})
+	}
 }
 function resizeHeader(header, bodyCells){
 // 	var oldWidth = parseFloat(d3.select(header).style("width").replace("px",""));
@@ -250,28 +266,25 @@ function formatTable(tableID){
 // 	});
 
 //Determine which columns fall under which headers, and resize width to width of child columns
-	var rows = d3.selectAll("#" + tableID + " thead tr")[0]
-	var bodyRow = d3.select("#" + tableID + " tbody tr").selectAll("td")
-	var holder = Array.apply(null, Array(rows.length)).map(function(){return bodyRow[0].slice()});
-	for(var i = 0; i < rows.length; i++){
-		var headers = d3.select(rows[i]).selectAll("th")
-		headers[0].forEach(function(h){
-			var colspan = (d3.select(h).attr("colspan") == null) ? 1 : parseInt(d3.select(h).attr("colspan"));
-			var rowspan = (d3.select(h).attr("rowspan") == null) ? 1 : parseInt(d3.select(h).attr("rowspan"));
-			resizeHeader(h, holder[i].splice(0,colspan))
-			if(rowspan != 1 && i != rows.length-1){
-				for(j = i+1; j + i < rowspan; j++ ){
-					holder[j].splice(0,colspan)
-				}
-			}
-		})			
-	}
+	// var rows = d3.selectAll("thead tr")[0]
+	// var bodyRow = d3.select("tbody tr").selectAll("td")
+	// var holder = Array.apply(null, Array(rows.length)).map(function(){return bodyRow[0].slice()});
+	// for(var i = 0; i < rows.length; i++){
+	// 	var headers = d3.select(rows[i]).selectAll("th")
+	// 	headers[0].forEach(function(h){
+	// 		var colspan = (d3.select(h).attr("colspan") == null) ? 1 : parseInt(d3.select(h).attr("colspan"));
+	// 		var rowspan = (d3.select(h).attr("rowspan") == null) ? 1 : parseInt(d3.select(h).attr("rowspan"));
+	// 		resizeHeader(h, holder[i].splice(0,colspan))
+	// 		if(rowspan != 1 && i != rows.length-1){
+	// 			for(j = i+1; j + i < rowspan; j++ ){
+	// 				holder[j].splice(0,colspan)
+	// 			}
+	// 		}
+	// 	})			
+	// }
 
 
 //Determine height of thead, and set initial position of tbody to be just under thead
-	var headHeight = d3.select("#" + tableID + " thead").node().getBoundingClientRect().height
-	var tablePos = parseInt(d3.select("#tableContainer").style("margin-top").replace("px",""))
-	d3.select("#" + tableID + " tbody").style("top", (headHeight + tablePos) + "px")
 
 //unbind charting to sort arrows (clicking arrow does not add/remove series)
 	d3.selectAll(".sortArrow").on("click", function(){
@@ -318,6 +331,13 @@ function formatTable(tableID){
 	var margin = (wWidth - tWidth) / 2.0
 	d3.select("table")
 		.style("margin-left",40)
+	var headHeight = d3.select("thead").node().getBoundingClientRect().height
+	var bodyHeight = d3.select("tbody").node().getBoundingClientRect().height
+	var tablePos = parseInt(d3.select("#tableContainer").style("margin-top").replace("px",""))
+	d3.select("tbody").style("top", (headHeight + tablePos) + "px")
+
+	d3.select("table").style("height", (headHeight + bodyHeight) + "px")
+
 }
 function checkUnitCompatibility(unit, input, charts){
 	d3.selectAll("th.selected")
@@ -427,6 +447,7 @@ function getDate(y1, y2, parenthetical){
 	}
 }
 function drawMap(input, col){
+	// console.log(col)
 	var initId = input["data"][col]["label"]
 	$('#map').highcharts('Map', {
         title : {
@@ -1128,7 +1149,6 @@ function filterSheets(current){
 	$.getJSON(getJSONPath("titles"), function(titles){
 		for(var i = 0; i < sheets.length; i++){
 		    var opt = sheets[i];
-		    console.log(opt)
 		    var el = document.createElement("option");
 		    el.textContent = titles[opt.replace(/\./g,"")];
 		    el.value = opt;

@@ -307,3 +307,29 @@ th.selected{
 .ui-widget.ui-button{
     margin-right: 43px;
 }
+
+/****************************************/
+/************ FOOTNOTES *****************/
+/****************************************/
+.top_footnote{
+    font-style: 18px;
+    color: #ec008b;
+    position: relative;
+    top: -5px;
+}
+.footer{
+    margin-top: 4px;
+    margin-left: 40px;
+    font-size: 13px;
+    font-style: italic;
+}
+.footnote span{
+    font-weight: bolder;
+    font-size: 17px;
+    margin-right: 7px;
+    color: #ec008b;
+}
+.footnotes{
+    margin-top: 16px;
+    margin-bottom: 40px;
+}

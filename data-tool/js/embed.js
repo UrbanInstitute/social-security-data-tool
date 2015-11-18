@@ -28,8 +28,8 @@ function init(){
 	// if(getQueryVariable("tableID") != null){
 	tableID = getQueryVariable("tableID")
 	columns = getQueryVariable("columns").split(",")
-	// }
 	chartType = getQueryVariable("chartType")
+	
 	setTimeout(function(){
 		console.log(tableID)
 		$.getJSON( getJSONPath(tableID), function(resp){

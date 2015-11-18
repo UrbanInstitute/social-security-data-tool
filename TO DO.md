@@ -1,6 +1,6 @@
 - Determine which tables to scrape (4,5,6)
-- Scrape all the tables
 
+- Scrape all the tables
 - Fix units for all columns
 - Fix y axis labels for all units
 - Format years correctly
@@ -10,6 +10,7 @@
 - add filters
 - bump table down and add more title info
 - Tidy up sheet list/ ordering
+- table scroll buttons
 - Once final, update
 	- Embed code for charts
 	- years in embed code
