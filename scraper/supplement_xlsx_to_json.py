@@ -19,6 +19,23 @@ def parseTitle(sheet, sheetType, multiSubtitle=False):
 	title["name"] = fullTitle.split(u'\u2014')[1]
 	return title
 
+def parseFootnotes(sheet, lastRow):
+	notes = []
+	for i in range(lastRow, xl_sheet.nrows):
+		row = xl_sheet.row(i)
+		type0 = row[0].ctype
+		type1 = row[1].ctype
+		if(type0 == 6):
+			type0 = 0
+		if(type1 == 6):
+			type1 = 0
+		if(type0 == 0 and type1 ==0):
+			continue
+		elif(type0 != 0 and type1 == 0):
+			notes.append({"type":"note", "content":row[0].value})
+		else:
+			notes.append({"type":"footnote", "symbol":row[0].value, "content":row[1].value})
+	return notes
 
 def parseHeader(output, headRows, lastRow, sheet, sheetType, startRow=False):
 	headerString = "<thead>"
@@ -35,12 +52,12 @@ def parseHeader(output, headRows, lastRow, sheet, sheetType, startRow=False):
 	fixRows = copy.deepcopy(rows)
 	for c in range(0, len(fixRows[0])):
 		last = len(fixRows)
-		if fixRows[last-1][c].ctype == 0:
+		if fixRows[last-1][c].ctype == 0 or fixRows[last-1][c].ctype == 6:
 			counter = last-1
 			while True:
 				if  abs(counter) > len(rows):
 					break
-				elif fixRows[counter][c].ctype == 0:
+				elif fixRows[counter][c].ctype == 0 or fixRows[last-1][c].ctype == 6:
 					counter -= 1
 					continue
 				elif counter < 0:
@@ -52,10 +69,14 @@ def parseHeader(output, headRows, lastRow, sheet, sheetType, startRow=False):
 	for r in range(2,headRows):
 		headerString += "<tr>"
 		for c in range(0,len(rows[r-2])):
-			if(rows[r-2][c].ctype != 0):
-				headerString += getTH(rows, r, c)
+			if(rows[r-2][c].ctype != 0 and rows[r-2][c].ctype !=6):
+				headerString += getTH(sheet, rows, r, c)
 			if(fixRows[r-2][c].ctype != 0):
+				# if sheet.name == "5.J2":
+				# 	print r, c, "a"
 				if((r == headRows-1 and c != 0) or (c == 0 and r ==2)):
+					if sheet.name == "5.J2":
+						print headRows, r, c, "b"
 					getData(data, fixRows, r, c, headRows, lastRow, sheet, sheetType, startRow)
 		headerString += "</tr>"
 	headerString += "</thead>"
@@ -108,8 +129,38 @@ def getTbody(sheet, sheetType, headR, lastRow, startRow):
 				tbody += ">"
 			if (sheetType == "weirdTime" and r == headRows and c==0):
 				cell = "Total"
+				runlist = sheet.rich_text_runlist_map.get((r, c))
 			else:
 				cell = sheet.cell_value(rowx=r, colx=c)
+				# print cell
+				runlist = sheet.rich_text_runlist_map.get((r, c))
+			# if sheet.name == "2.A3":
+			# 	print sheet.name, r, c
+			if runlist:
+				# print runlist2
+				for rl in runlist:
+					# print rl
+					offset = rl[0]
+					font_index = rl[1]
+					# for offset, font_index in rl:
+						# print offset, font_index
+					# 	# if sheet.name == 	"2.A3":
+					# 		# print sheet.name
+					# 		# print r, c
+					# 		# print offset, book.font_list[font_index].escapement
+					if book.font_list[font_index].escapement != 0 or font_index == 0:
+						# print sheet.name
+						# print cell
+						# print offset
+						# print ""
+						cell = cell.replace(u'\xa0', u' ')
+						cs = cell.split(' ')
+						if len(cs) == 2:
+							if len(cs[0]) > len(cs[1]):
+								cell = "%s<span class = \"top_footnote top_%s\">%s</span>"%(cs[0],cs[1],cs[1])
+							else:
+								cell = "<span class = \"top_footnote top_%s\">%s</span>%s"%(cs[0],cs[0],cs[1])
+
 			tbody += "<td class=\"col%i\">%s</td>"%(c, cell)
 			if(c==len(row)):
 				tbody += "</tr>"
@@ -117,8 +168,7 @@ def getTbody(sheet, sheetType, headR, lastRow, startRow):
 	return tbody
 		# if(sheetType in TIME_TYPES):
 			# years = getYear()
-
-def getTH(rows, rowNum, colNum):
+def getTH(sheet, rows, rowNum, colNum):
 	edge = True
 	rowNum -= 2
 	th = "<th"
@@ -126,12 +176,15 @@ def getTH(rows, rowNum, colNum):
 	colspan = 1
 	for r in range(rowNum, len(rows)):
 		row = rows[r]
-		if(row[colNum].ctype == 0):
+		# fmt = book.xf_list[row[0].xf_index]
+		# fmt.dump()
+
+		if(row[colNum].ctype == 0 or row[colNum].ctype == 6):
 			rowspan += 1
 	for i in range(colNum+1, len(rows[rowNum])):
-		if(rows[rowNum][i].ctype == 0):
+		if(rows[rowNum][i].ctype == 0 or rows[rowNum][i].ctype == 6):
 			if rowNum-1 >= 0:
-				if(rows[rowNum-1][i].ctype == 0):
+				if(rows[rowNum-1][i].ctype == 0 or rows[rowNum-1][i].ctype == 6):
 					colspan += 1
 			else:
 				colspan += 1
@@ -155,11 +208,27 @@ def getTH(rows, rowNum, colNum):
 
 	th += ">"
 	val = rows[rowNum][colNum].value
+	cell = sheet.cell(rowNum, colNum)
+	# print sheet.cell_xf_index(rowNum, colNum)
+	# print cell
+	# print cell.xf_index
+	# print book.xf_list
+
+	# runlist = sheet.rich_text_runlist_map.get((rowNum, colNum))
+	# if runlist:
+	# 	for offset, font_index in runlist:
+	# 		if book.font_list[font_index].escapement != 0:
+	# 			print "finally"
+	# 		pass
+	# if book.font_list[fmt.font_index].escapement != 0:
+	# 	print "asdlfk"
 	if(isinstance(val, float)):
 		val = str(val)
 	th += val
 	th += "</th>"
 	return th
+
+
 
 def getData(data, rows, rowNum, colNum, headR, lastRow, sheet, sheetType, startRow):
 	if(startRow):
@@ -248,6 +317,9 @@ def getSeries(rowN, colNum, lastRow, sheet, sheetType, startRow):
 	return series
 
 def getMapSeries(rowN, colNum, lastRow, sheet, sheetType, startRow):
+	# print sheet.name
+	# if sheet.name == "5.J2":
+	# 	print colNum
 	if(startRow):
 		rowNum = startRow
 	else:
@@ -258,6 +330,13 @@ def getMapSeries(rowN, colNum, lastRow, sheet, sheetType, startRow):
 		type0 = sheet.cell_type(rowx=i, colx=0)
 		type1 = sheet.cell_type(rowx=i, colx=1)
 		type2 = sheet.cell_type(rowx=i, colx=2)
+		if(type0 == 6):
+			type0 = 0
+		if(type1 == 6):
+			type1 = 0
+		if(type2 == 6):
+			type2 = 0
+		# print type0, type1, type2			
 #row blank, blank, "All areas"
 		if(type0 == 0 and type1==0):
 			continue
@@ -308,9 +387,9 @@ def getLabel(rows, colNum):
 	for r in range(0, len(rows)):
 		row = rows[r]
 		c = colNum
-		while(row[c].ctype == 0 and c > 0):
+		while((row[c].ctype == 0 or row[c].ctype == 6) and c > 0):
 			c -= 1
-		if(row[c].ctype != 0):
+		if(row[c].ctype != 0 and row[c].ctype != 6):
 			val = row[c].value
 			if(isinstance(val, float)):
 				val = str(val)
@@ -331,8 +410,8 @@ def addWords(words, string):
 	string = re.sub(r'[^\w\s]+', ' ', string)
 	words.extend(string.split())
 
-book = xlrd.open_workbook("../data/statistical_supplement/supplement14.xlsx")
-
+book = xlrd.open_workbook("../data/statistical_supplement/supplement14.xls", formatting_info=True)
+# print fonts
 sheets = book.sheet_names()
 
 #Years in 1st column (or year ranges), blank 2nd column, data
@@ -368,8 +447,6 @@ medBar = ['5.D2','5.E1','5.F7','5.H3','5.H4','6.C1']
 medBarMulti = ['6.D5']
 nestedBar = ['2.F9','3.C6','5.A1','5.A1.1','5.A1.2','5.A1.4','5.A1.6','5.A1.7','5.A5','5.A7','6.F2','6.F3']
 nestedBarMulti = ['2.F7','3.C3','5.A1.3','5.A3','5.A6','5.A8','5.A10','5.A15','5.A16','5.H2','6.A3','6.A4','6.A5','6.D7']
-
-
 
 timeBarEdge = ['5.M1']
 mapPlusTime = ['3.C5']
@@ -409,6 +486,12 @@ for sheet_id in medMap:
 		testType1 = xl_sheet.cell_type(rowx=i, colx=0)
 		testType2 = xl_sheet.cell_type(rowx=i, colx=1)
 		testType3 = xl_sheet.cell_type(rowx=i, colx=2)
+		if testType1 == 6:
+			testType1 = 0
+		if testType2 == 6:
+			testType2 = 0
+		if testType3 == 6:
+			testType3 = 0
 
 		if(testType1 == 0 and testType2 == 0 and testType3 == 0):
 			lastRow = i
@@ -416,11 +499,13 @@ for sheet_id in medMap:
 
 	output["html"] = {}
 	values = parseHeader(output, headRows, lastRow, xl_sheet, "medMap")
+	footnotes = parseFootnotes(xl_sheet, lastRow)
 	titles = parseTitle(xl_sheet, "medMap")
 	output["html"]["header"] = values["headerString"]
 	output["html"]["body"] = values["bodyString"]
 	output["data"] = values["data"]
 	output["title"] = titles
+	output["footnotes"] = footnotes
 	addWords(words, titles["name"])
 	titleList[titles["id"]] = titles["id"] + " :: " + titles["name"]
 	output["category"] = values["chartType"]
@@ -468,7 +553,7 @@ for sheet_id in timeMulti:
 		else:
 			for j in range(startRow+1, xl_sheet.nrows):
 				testVal = xl_sheet.row(j)[0]
-				if(testVal.ctype == 0):
+				if(testVal.ctype == 0 or testVal.ctype == 6):
 					subHead = xl_sheet.row(j)
 					startRow = j
 					rowBreaks.append(startRow)
@@ -477,7 +562,7 @@ for sheet_id in timeMulti:
 		empty = True
 		multiSubtitle = ""
 		for s in subHead:
-			if(s.ctype != 0):
+			if(s.ctype != 0 and s.ctype != 6):
 				empty  = False
 				multiSubtitle = s.value
 				multiSubtitles.append(multiSubtitle)
@@ -485,10 +570,12 @@ for sheet_id in timeMulti:
 			output["html"] = {}
 			values = parseHeader(output, headRows, rowBreaks[i+1], xl_sheet, "multiTime", rowBreaks[i]+1)
 			titles = parseTitle(xl_sheet, "multiTime", {"value" : multiSubtitles[i], "index":i})
+			footnotes = parseFootnotes(xl_sheet, rowBreaks[len(rowBreaks)-1])
 			output["html"]["header"] = values["headerString"]
 			output["html"]["body"] = values["bodyString"]
 			output["data"] = values["data"]
 			output["title"] = titles
+			output["footnotes"] = footnotes
 			addWords(words, titles["name"])
 			titleList[titles["id"]] = titles["id"] + " :: " + titles["name"]
 			output["category"] = values["chartType"]
@@ -513,6 +600,8 @@ for sheet_id in weirdTime:
 	for i in range(0, xl_sheet.nrows):
 		row = xl_sheet.row(i)
 		firstType = xl_sheet.cell_type(rowx=i, colx=0) 
+		if firstType == 6:
+			firstType = 0
 		secondVal = xl_sheet.cell_value(rowx=i, colx=1)
 		# reg = re.compile(r'19|20', re.UNICODE)
 		if(str(secondVal).find("Total") != -1 and firstType == 0):
@@ -524,17 +613,19 @@ for sheet_id in weirdTime:
 	for i in range(headRows+1, xl_sheet.nrows):
 		row = xl_sheet.row(i)
 		testType = xl_sheet.cell_type(rowx=i, colx=0)
-		if(testType == 0):
+		if(testType == 0 or testType == 6):
 			lastRow = i
 			break
 
 	output["html"] = {}
 	values = parseHeader(output, headRows, lastRow, xl_sheet, "weirdTime")
+	footnotes = parseFootnotes(xl_sheet, lastRow)
 	titles = parseTitle(xl_sheet, "weirdTime")
 	output["html"]["header"] = values["headerString"]
 	output["html"]["body"] = values["bodyString"]
 	output["data"] = values["data"]
 	output["title"] = titles
+	output["footnotes"] = footnotes
 	addWords(words, titles["name"])
 	titleList[titles["id"]] = titles["id"] + " :: " + titles["name"]
 	output["category"] = values["chartType"]
@@ -562,17 +653,19 @@ for sheet_id in simpleTimeSheets:
 	for i in range(headRows+1, xl_sheet.nrows):
 		row = xl_sheet.row(i)
 		testType = xl_sheet.cell_type(rowx=i, colx=0)
-		if(testType == 0):
+		if(testType == 0 or testType == 6):
 			lastRow = i
 			break
 
 	output["html"] = {}
 	values = parseHeader(output, headRows, lastRow, xl_sheet, "simpleTime")
 	titles = parseTitle(xl_sheet, "simpleTime")
+	footnotes = parseFootnotes(xl_sheet, lastRow)
 	output["html"]["header"] = values["headerString"]
 	output["html"]["body"] = values["bodyString"]
 	output["data"] = values["data"]
 	output["title"] = titles
+	output["footnotes"] = footnotes
 	addWords(words, titles["name"])
 	titleList[titles["id"]] = titles["id"] + " :: " + titles["name"]
 	output["category"] = values["chartType"]
@@ -600,17 +693,19 @@ for sheet_id in monthsTime:
 	for i in range(headRows+1, xl_sheet.nrows):
 		row = xl_sheet.row(i)
 		testType = xl_sheet.cell_type(rowx=i, colx=0)
-		if(testType == 0):
+		if(testType == 0 or testType == 6):
 			lastRow = i
 			break
 
 	output["html"] = {}
 	values = parseHeader(output, headRows, lastRow, xl_sheet, "monthsTime")
 	titles = parseTitle(xl_sheet, "monthsTime")
+	footnotes = parseFootnotes(xl_sheet, lastRow)
 	output["html"]["header"] = values["headerString"]
 	output["html"]["body"] = values["bodyString"]
 	output["data"] = values["data"]
 	output["title"] = titles
+	output["footnotes"] = footnotes
 	addWords(words, titles["name"])
 	titleList[titles["id"]] = titles["id"] + " :: " + titles["name"]
 	output["category"] = values["chartType"]
