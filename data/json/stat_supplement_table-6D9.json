@@ -350,6 +350,7 @@
         "header": "<thead><tr><th rowspan=\"2\"  class=\"series col0\" >Year</th><th colspan=\"2\"  class=\"series col1\" >Number of\u2014</th><th rowspan=\"2\"  class=\"series col3\" >Average lump sum per worker (dollars)</th></tr><tr><th class=\"series col1\" >Deceased workers</th><th class=\"series col2\" >Lump-sum payments</th></tr></thead>"
     }, 
     "title": {
+        "category": "6.D OASDI Benefits Awarded: Dependents and Survivors", 
         "id": "6D9", 
         "name": "Number and average amount of lump-sum death payment awards, 1940\u20132013"
     }

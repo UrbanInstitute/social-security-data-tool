@@ -640,6 +640,7 @@
         "header": "<thead><tr><th rowspan=\"2\"  class=\"series col0\" >Year</th><th rowspan=\"2\"  class=\"series col1\" >Number</th><th rowspan=\"2\"  class=\"series col2\" >Average age</th><th colspan=\"10\"  class=\"series col3\" >Percentage distribution, by age</th></tr><tr><th class=\"series col3\" >Total, all ages</th><th class=\"series col4\" >Under 30</th><th class=\"series col5\" >30\u201339</th><th class=\"series col6\" >40\u201344</th><th class=\"series col7\" >45\u201349</th><th class=\"series col8\" >50\u201354</th><th class=\"series col9\" >55\u201359</th><th class=\"series col10\" >60\u201361</th><th class=\"series col11\" >62\u201364</th><th class=\"series col12\" >65 <span class = \"top_footnote top_a\">a</span></th></tr></thead>"
     }, 
     "title": {
+        "category": "6.C OASDI Benefits Awarded: Disabled Workers", 
         "id": "6C2-M0", 
         "name": "Number, average age, and percentage distribution, by sex and age,\nselected years 1957\u20132013 :: Subtable : Men"
     }

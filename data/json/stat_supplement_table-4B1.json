@@ -794,6 +794,7 @@
         "header": "<thead><tr><th rowspan=\"3\"  class=\"series col0\" >Year</th><th rowspan=\"2\"  colspan=\"3\"  class=\"series col1\" >Number a (thousands)</th><th rowspan=\"2\"  colspan=\"5\"  class=\"series col4\" >Earnings</th><th rowspan=\"3\"  class=\"series col9\" >Social Security numbers issued e (thousands)</th></tr><tr><th rowspan=\"2\"  class=\"series col1\" >Total</th><th rowspan=\"2\"  class=\"series col2\" >With maximum earnings <span class = \"top_footnote top_b\">b</span></th><th rowspan=\"2\"  class=\"series col3\" >New entrants into covered employment <span class = \"top_footnote top_c\">c</span></th><th rowspan=\"2\"  class=\"series col4\" >Total in covered employment d (millions of dollars)</th><th colspan=\"2\"  class=\"series col5\" >Reported taxable <span class = \"top_footnote top_a\">a</span></th><th colspan=\"2\"  class=\"series col7\" >Average per worker (dollars)</th></tr><tr><th class=\"series col5\" >Amount (millions of dollars)</th><th class=\"series col6\" >Percentage of total</th><th class=\"series col7\" >Total\nearnings <span class = \"top_footnote top_d\">d</span></th><th colspan=\"2\"  class=\"series col8\" >Reported taxable</th></tr></thead>"
     }, 
     "title": {
+        "category": "4.B OASDI: Covered Workers", 
         "id": "4B1", 
         "name": "Number of workers with taxable earnings, amount of earnings, and Social Security numbers issued, selected years 1937\u20132013"
     }

@@ -675,6 +675,7 @@
         "header": "<thead><tr><th rowspan=\"3\"  class=\"series col0\" >Year of award action <span class = \"top_footnote top_a\">a</span></th><th rowspan=\"3\"  class=\"series col1\" >Number (thousands)</th><th rowspan=\"3\"  class=\"series col2\" >Average age</th><th rowspan=\"2\"  colspan=\"11\"  class=\"series col3\" >Percentage distribution by age <span class = \"top_footnote top_b\">b</span></th></tr><tr><th rowspan=\"2\"  class=\"series col3\" >Total, all ages</th><th rowspan=\"2\"  class=\"series col4\" >62.0</th><th rowspan=\"2\"  class=\"series col5\" >63.0</th><th rowspan=\"2\"  class=\"series col6\" >64.0</th><th rowspan=\"2\"  class=\"series col7\" >65 to FRA <span class = \"top_footnote top_c\">c</span></th><th colspan=\"3\"  class=\"series col8\" >FRA <span class = \"top_footnote top_d\">d</span></th><th rowspan=\"2\"  class=\"series col11\" >FRA to 69 <span class = \"top_footnote top_g\">g</span></th><th rowspan=\"2\"  class=\"series col12\" >70\u201374</th><th rowspan=\"2\"  class=\"series col13\" >75 or older</th></tr><tr><th class=\"series col8\" >Total</th><th class=\"series col9\" >Newly entitled <span class = \"top_footnote top_e\">e</span></th><th class=\"series col10\" >Disability conversions <span class = \"top_footnote top_f\">f</span></th></tr></thead>"
     }, 
     "title": {
+        "category": "6.B OASDI Benefits Awarded: Retired Workers", 
         "id": "6B5-M0", 
         "name": "Number, average age, and percentage distribution, by sex and age, selected years\n1940\u20132013 :: Subtable : Men"
     }

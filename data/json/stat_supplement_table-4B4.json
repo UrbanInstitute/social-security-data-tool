@@ -614,6 +614,7 @@
         "header": "<thead><tr><th rowspan=\"2\"  class=\"series col0\" >Year</th><th colspan=\"3\"  class=\"series col1\" >All workers <span class = \"top_footnote top_a\">a</span></th><th colspan=\"3\"  class=\"series col4\" >All self-employed workers</th><th rowspan=\"2\"  class=\"series col7\" >Annual maximum taxable earnings (dollars)</th></tr><tr><th class=\"series col1\" >Total</th><th class=\"series col2\" >Men</th><th class=\"series col3\" >Women</th><th class=\"series col4\" >Total</th><th class=\"series col5\" >Men</th><th class=\"series col6\" >Women</th></tr></thead>"
     }, 
     "title": {
+        "category": "4.B OASDI: Covered Workers", 
         "id": "4B4", 
         "name": "Percentage of workers with earnings below annual maximum taxable, by sex, selected years 1937\u20132012"
     }

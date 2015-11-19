@@ -375,6 +375,7 @@
         "header": "<thead><tr><th rowspan=\"2\"  colspan=\"3\"  class=\"series col0\" >Year</th><th colspan=\"2\"  class=\"series col3\" >Spouses</th><th colspan=\"4\"  class=\"series col5\" >Children</th></tr><tr><th class=\"series col1\" >Men</th><th class=\"series col2\" >Women</th><th class=\"series col3\" >Wives</th><th class=\"series col4\" >Husbands</th><th class=\"series col5\" >All</th><th class=\"series col6\" >Under age 18</th><th class=\"series col7\" >Disabled adult children</th><th class=\"series col8\" >Students</th></tr></thead>"
     }, 
     "title": {
+        "category": "5.E OASDI Current-Pay Benefits: Disabled Workers and Dependents", 
         "id": "5E2", 
         "name": "Average monthly benefit, by type of benefit, sex, and age, December 1957\u20132013, selected years (in\u00a0dollars)"
     }

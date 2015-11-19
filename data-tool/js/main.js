@@ -50,6 +50,14 @@ function init(){
 		  		drawMap(data,"col3")
 		  		hideScrubber();
 		  		break;
+		  	case "barChart":
+		  		exportParams.chartType = "barChart";
+	  			var col = (typeof(data.default) != "undefined") ? data.default : "col1"
+		  	  	exportParams.columns=[col];
+		  		drawTable(data);
+		  		drawBar(data,col);
+		  		hideScrubber();
+		  		break;
 		  }
 		});
 		setTheme();
@@ -84,6 +92,14 @@ function newTable(index){
 		  		drawMap(data, "col3");
 		  		hideScrubber();
 		  		break;
+		  	case "barChart":
+		  		exportParams.chartType = "barChart";
+	  			var col = (typeof(data.default) != "undefined") ? data.default : "col1"
+		  	  	exportParams.columns=[col];
+		  		drawTable(data);
+		  		drawBar(data,col);
+		  		hideScrubber();
+		  		break;
 		  }
 		});
 		drawScrubber();
@@ -113,7 +129,7 @@ function setLayout(){
 function drawTable(input){
 	d3.select("#testTable table").remove()
 	d3.select("#tableTitle")
-		.text(input.title.id + ": " + input.title.name)
+		.html("<div class =\"titleCategory\">" + input.title.category + "</div>" + input.title.id + ": " + input.title.name)
 
 	d3.select("#testTable")
 		.append("table")
@@ -195,12 +211,23 @@ function drawTable(input){
 						th.classed("selected", true)
 					}
 				}
+				else if (category == "barChart"){
+			  		if( !selected ){
+			  			exportParams.columns = [series]
+						drawBar(data, series[0])
+
+						// checkUnitCompatibility(data["data"][series]["type"], input, [lineChart, singleYearBarChart])
+						d3.selectAll("th").classed("selected",false)
+						th.classed("selected", true)
+					}	
+				}
 
 			});
 		});
 	formatTable("testTable")
-	if(input.category == "timeSeries"){
-		d3.selectAll("th.col1").classed("selected",function(){
+	if(input.category == "timeSeries" || input.category == "barChart"){
+		var col = (typeof(input.default) != "undefined") ? input.default : "col1"
+		d3.selectAll("th." + col).classed("selected",function(){
 			if(d3.select(this).attr("colspan") > 0){
 				return false;
 			}else{ return true;}
@@ -214,6 +241,12 @@ function drawTable(input){
 		})
 	}
 	// console.log(input)
+	if(input.category == "timeSeries"){
+		d3.selectAll("td.col0")
+			.html(function(){
+				return d3.select(this).html().replace(/\.0/g,"")
+			})
+	}
 	d3.selectAll(".footnotes").remove()
 	d3.select("#testTable")
 		.append("div")
@@ -225,10 +258,21 @@ function drawTable(input){
 			.attr("class",note.type + " footer")
 			.html(function(){
 				if(note.type == "footnote"){
-					return "<span id = symbol_" + note.symbol + ">" + note.symbol + "</span>" + note.content
+					return "<span id = symbol_" + note.symbol.replace(".","") + ">" + note.symbol + "</span>" + note.content
 				}else{ return note.content}
 			})
 	}
+	d3.selectAll(".top_footnote")
+		.on("click", function(){
+			var symbol = d3.select(this).attr("class").replace("top_footnote","").split("_")[1]
+			console.log($("#symbol_" + symbol).offset().top, $(window).height())
+			var diff = $("#symbol_" + symbol).offset().top
+			$('html, body').animate({
+//diff minus height of controls minus thead minus title height				
+        		scrollTop: diff - 360 - d3.select("thead").node().getBoundingClientRect().height - 100
+    		}, 1000);
+
+		})
 }
 function resizeHeader(header, bodyCells){
 // 	var oldWidth = parseFloat(d3.select(header).style("width").replace("px",""));
@@ -446,21 +490,128 @@ function getDate(y1, y2, parenthetical){
 		}
 	}
 }
+function drawBar(input, col){
+	console.log(input.default)
+	// var col = (typeof(input.default) != "undefined") ? input.default : "col1"
+	var labels = (input["data"]["categories"]["series"].length > 6) ? false : true;
+	var marginBottom = (labels) ? 80 : 110;
+	var marginLeft = (labels) ? 10 : 80;
+	var initId = input["data"][col]["label"]
+        $('#barChart').highcharts({
+            chart: {
+                marginTop: 50,
+                marginBottom: marginBottom,
+                marginLeft: marginLeft,
+                type: 'column'
+
+            },
+            plotOptions: {
+                series: {
+                    marker: {
+                        enabled: true
+                    },
+
+                    dataLabels: {
+                        enabled: labels,
+                        align: 'center',
+                        formatter: function (){
+                        	if(this.y == false || this.y==null){
+                        		return null
+                        	}else{
+                            	return '' + '$' + this.y + ' million';
+                            }
+                        }
+                    }
+                }
+            },
+            title: {
+                text: input.title.category
+            },
+            subtitle: {
+                text: input.title.name
+                // x: 0,
+                // y: 35
+            },
+            xAxis: {
+                gridLineWidth: '0',
+                lineWidth: 2,
+                tickInterval: 0,
+                categories: input["data"]["categories"]["series"],
+                plotLines: [{
+                    value: 0,
+                    width: 0
+                        }],
+                labels: {
+                    step: 0,
+                    x: 0,
+                    y: 20
+                }
+            },
+            yAxis: {
+                lineWidth: 0,
+                gridLineWidth: 0,
+                minorGridLineWidth: 0,
+                lineColor: 'transparent',
+                labels: {
+                    enabled: false
+                },
+                minorTickLength: 0,
+                tickLength: 0,
+                title: {
+                    text: null
+                }
+            },
+            tooltip: {
+                formatter: function () {
+                	if(this.y == false || this.y==null){
+                        return null
+                    }else{
+                    	return '' +
+                        	this.x + ': $' + this.y + ' million';
+                        }
+                }
+            },
+            legend: {
+                enabled: true,
+                floating: 'true',
+                align: 'center',
+                verticalAlign: 'left',
+                layout: 'horizontal',
+                borderWidth: 0,
+                itemDistance: 9,
+                y: 40
+            },
+            series: [{
+            			id: initId,
+                    	name: initId,
+                    	data: input["data"][col]["series"]
+                    }
+                  ]
+
+        });
+	d3.select("#lineChart")
+		.transition()
+		.style("left",-2000)
+	d3.select("#singleYearBarChart")
+		.transition()
+		.style("left",2000)
+	d3.select("#map")
+		.transition()
+		.style("left",2000)
+	d3.select("#barChart")
+		.transition()
+		.style("left","400px")
+}
+
 function drawMap(input, col){
 	// console.log(col)
 	var initId = input["data"][col]["label"]
 	$('#map').highcharts('Map', {
         title : {
-            text : input.title.name
+            text : input.title.category
         },
         subtitle:{
-        	text: initId,
-        	style:{
-        		"font-weight": "bolder",
-        		"font-size": "1.2em",
-        		"color": "#fcb918"
-        	}
-
+        	text: input.title.name,
         },
         mapNavigation: {
         	enableMouseWheelZoom: false,
@@ -470,7 +621,7 @@ function drawMap(input, col){
             }
         },
         chart:{
-        	marginTop: 50,
+        	marginTop: 80,
         	marginBottom: 70
         },
         colorAxis: {
@@ -479,7 +630,11 @@ function drawMap(input, col){
             minColor: "#f0f0f0",
             maxColor: "#1696d2"
         },
-
+        legend:{
+        	title: {
+        		text: initId
+        	}
+        },
         series : [{
             data : input["data"][col]["series"],
             mapData: Highcharts.maps['countries/us/custom/us-all-territories'],
@@ -515,6 +670,9 @@ function drawMap(input, col){
 	d3.select("#singleYearBarChart")
 		.transition()
 		.style("left",2000)
+	d3.select("#barChart")
+		.transition()
+		.style("left",2000)
 	d3.select("#map")
 		.transition()
 		.style("left","400px")
@@ -524,7 +682,7 @@ function drawLineChart(input){
 	var initId = input["data"]["col1"]["label"]
     $('#lineChart').highcharts({
             chart: {
-                marginTop: 100,
+                marginTop: 150,
                 marginBottom: 40
             },
             plotOptions: {
@@ -620,7 +778,7 @@ function drawSingleYearBarChart(input){
 	var initId = input["data"]["col1"]["label"]
         $('#singleYearBarChart').highcharts({
             chart: {
-                marginTop: 10,
+                marginTop: 90,
                 marginBottom: 80,
                 type: 'column'
 
@@ -788,6 +946,9 @@ function multiYear(){
 		.transition()
 		.style("left",2000)
 	d3.select("#map")
+		.transition()
+		.style("left",2000)
+	d3.select("#barChart")
 		.transition()
 		.style("left",2000)
 	d3.select("#valueScrubber .left.thumb")
@@ -1111,7 +1272,7 @@ function setTheme(){
 }
 var simpleTimeSheets = ['2.A3','2.A4','2.A8','2.A9','2.A13','2.A27','2.A28','2.C1','2.F3','3.C4','3.C6.1','3.E1','4.A1','4.A2','4.A3','4.A4','4.A5','4.A6','4.B1','4.B2','4.B4','4.B11','4.C1','5.A17','5.C2','5.D3','5.E2','5.F6','5.F8','5.F12','5.G2','6.C7','6.D6','6.D8','6.D9','7.A9','7.E6','8.A1','8.A2','8.B10','9.B1','9.D1']
 var notok = ['2A27','2A28','2C1','3C4','3E1','4B1','4B2']
-var tempAllSheets = ['5.J1','5F1-M0','5.J2','5.J4','5.J8','5.J10','5.J14','6.A6','5.B4','5.D1','6.A1','6.F1','6A2','2A30','5A14-M0','5A14-M1','5A4-M0','5A4-M1','5F1-M1','5F4-M0','5F4-M1','5F4-M2','5H1-M0','5H1-M1','6B5-M0','6B5-M1','6B51-M0','6B51-M1','6C2-M0','6C2-M1','6D4-M0','6D4-M1','6D4-M2','6D4-M3','2.A3','2.A4','2.A8','2.A9','2.A13','2.F3','3.C6.1','4.A1','4.A2','4.A3','4.A4','4.A5','4.A6','4.B4','4.B11','4.C1','5.A17','5.C2','5.D3','5.E2','5.F6','5.F8','5.F12','5.G2','6.C7','6.D6','6.D8','6.D9','7.A9','7.E6','8.A1','8.A2','8.B10','9.B1','9.D1']
+var tempAllSheets = ['5.D2','5.E1','5.F7','5.H3','5.H4','6.C1','5.A1.8','2.F4','2.F5','2.F6','2.F8','2.F11','5.J1','5F1-M0','5.J2','5.J4','5.J8','5.J10','5.J14','6.A6','5.B4','5.D1','6.A1','6.F1','6A2','2A30','5A14-M0','5A14-M1','5A4-M0','5A4-M1','5F1-M1','5F4-M0','5F4-M1','5F4-M2','5H1-M0','5H1-M1','6B5-M0','6B5-M1','6B51-M0','6B51-M1','6C2-M0','6C2-M1','6D4-M0','6D4-M1','6D4-M2','6D4-M3','2.A3','2.A4','2.A8','2.A9','2.A13','2.F3','3.C6.1','4.A1','4.A2','4.A3','4.A4','4.A5','4.A6','4.B4','4.B11','4.C1','5.A17','5.C2','5.D3','5.E2','5.F6','5.F8','5.F12','5.G2','6.C7','6.D6','6.D8','6.D9','7.A9','7.E6','8.A1','8.A2','8.B10','9.B1','9.D1']
 // var allSheets = ['2.A3','2.A4','2.A9','2.A13','2.F3','3.C6.1','4.A1','4.A2','4.A3','4.A6','4.B11','5.A17','5.D3','5.F6','6.D8','7.A9','8.B10','9.D1']
 var allSheets = tempAllSheets;
 var sheets = tempAllSheets;

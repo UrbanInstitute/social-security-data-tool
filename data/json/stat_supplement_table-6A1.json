@@ -1019,6 +1019,7 @@
         "header": "<thead><tr><th rowspan=\"2\"  class=\"series col0\" >Year</th><th rowspan=\"2\"  class=\"series col1\" >All benefits <span class = \"top_footnote top_a\">a</span></th><th rowspan=\"2\"  class=\"series col2\" >Retired workers</th><th rowspan=\"2\"  class=\"series col3\" >Disabled workers</th><th colspan=\"2\"  class=\"series col4\" >Wives and husbands of\u2014</th><th colspan=\"3\"  class=\"series col6\" >Children of\u2014</th><th rowspan=\"2\"  class=\"series col9\" >Widowed mothers and fathers</th><th rowspan=\"2\"  class=\"series col10\" >Widow(er)s</th><th rowspan=\"2\"  class=\"series col11\" >Parents</th></tr><tr><th class=\"series col4\" >Retired workers</th><th class=\"series col5\" >Disabled workers</th><th class=\"series col6\" >Retired workers</th><th class=\"series col7\" >Deceased workers</th><th class=\"series col8\" >Disabled workers</th></tr></thead>"
     }, 
     "title": {
+        "category": "6.A OASDI Benefits Awarded: Summary", 
         "id": "6A1", 
         "name": "Number, by type of benefit, 1940\u20132013"
     }

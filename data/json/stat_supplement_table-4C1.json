@@ -360,6 +360,7 @@
         "header": "<thead><tr><th rowspan=\"2\"  colspan=\"3\"  class=\"series col0\" >Year</th><th rowspan=\"2\"  class=\"series col3\" >Insured in event of disability</th></tr><tr><th class=\"series col1\" >Permanently insured</th><th class=\"series col2\" >Not permanently insured</th></tr></thead>"
     }, 
     "title": {
+        "category": "4.C OASDI: Insured Workers", 
         "id": "4C1", 
         "name": "Estimated number of insured workers, by insured status, December 31, 1940\u20132014\n(in\u00a0millions)"
     }

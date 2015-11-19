@@ -952,6 +952,7 @@
         "header": "<thead><tr><th rowspan=\"3\"  class=\"series col0\" >Year</th><th rowspan=\"2\"  colspan=\"3\"  class=\"series col1\" >Unrelated individuals</th><th colspan=\"10\"  class=\"series col4\" >Families</th><th rowspan=\"3\"  class=\"series col14\" >Annual average CPI <span class = \"top_footnote top_a\">a</span></th></tr><tr><th colspan=\"3\"  class=\"series col4\" >2 persons</th><th rowspan=\"2\"  class=\"series col7\" >3 persons</th><th rowspan=\"2\"  class=\"series col8\" >4 persons</th><th rowspan=\"2\"  class=\"series col9\" >5 persons</th><th rowspan=\"2\"  class=\"series col10\" >6 persons</th><th rowspan=\"2\"  class=\"series col11\" >7 persons</th><th rowspan=\"2\"  class=\"series col12\" >8 persons</th><th rowspan=\"2\"  class=\"series col13\" >9 persons or more</th></tr><tr><th class=\"series col1\" >All\nages</th><th class=\"series col2\" >Under\nage 65</th><th class=\"series col3\" >Aged\n65 or\nolder</th><th class=\"series col4\" >All\nages</th><th class=\"series col5\" >House-holder under age 65</th><th colspan=\"2\"  class=\"series col6\" >House-holder aged 65 or older</th></tr></thead>"
     }, 
     "title": {
+        "category": "3.E Poverty", 
         "id": "3E1", 
         "name": "Weighted average poverty thresholds for nonfarm families, by size, 1959\u20132013 \n(in dollars)"
     }

@@ -30,7 +30,7 @@ body{
 #innerControls{
     margin-top: 20%;
 }
-#lineChart, #singleYearBarChart, #map{
+#lineChart, #singleYearBarChart, #map, #barChart, #stackedBar{
     width: calc(100% - 400px);
     top: 0;
     left: 400px;
@@ -56,7 +56,7 @@ body{
     top: 5px;
     position: absolute;
 }
-#interactionInstructions{
+#spacer{
     position: fixed;
     top: 326px;
     z-index: 0;
@@ -68,9 +68,30 @@ body{
     padding-top: 71px;
 
 }
+#interactionInstructions{
+    position: fixed;
+    top: 193px;
+    left: 10px;
+    z-index: 200;
+    font-size: 14px;
+    font-style: italic;
+    height: 103px;
+    width: 397px;
+    padding-top: 71px;
+}
 #tableTitle{
     position: fixed;
-    top: 416px;
+    top: 402px;
+    left: 50px;
+    z-index: 999;
+}
+.subtitleCat{
+    color: #fdbf11;
+}
+.titleCategory{
+    text-transform: uppercase;
+    font-size: 12px;
+    color: #1696d2;
 }
 #tableContainer{
     width: 80%;
@@ -316,10 +337,11 @@ th.selected{
     color: #ec008b;
     position: relative;
     top: -5px;
+    cursor: pointer;
 }
 .footer{
     margin-top: 4px;
-    margin-left: 40px;
+    margin-left: 44px;
     font-size: 13px;
     font-style: italic;
 }
@@ -331,5 +353,5 @@ th.selected{
 }
 .footnotes{
     margin-top: 16px;
-    margin-bottom: 40px;
+    margin-bottom: 43px;
 }

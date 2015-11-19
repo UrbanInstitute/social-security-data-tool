@@ -458,6 +458,7 @@
         "header": "<thead><tr><th rowspan=\"2\"  class=\"series col0\" >Year</th><th rowspan=\"2\"  class=\"series col1\" >Total</th><th colspan=\"2\"  class=\"series col2\" >Entitled because of age</th><th colspan=\"2\"  class=\"series col4\" >Entitled because of disability</th></tr><tr><th class=\"series col2\" >Widows</th><th class=\"series col3\" >Widowers</th><th class=\"series col4\" >Widows</th><th class=\"series col5\" >Widowers</th></tr></thead>"
     }, 
     "title": {
+        "category": "6.D OASDI Benefits Awarded: Dependents and Survivors", 
         "id": "6D8", 
         "name": "Number of widow(er)s, by type of benefit, 1950\u20132013"
     }

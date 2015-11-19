@@ -4025,6 +4025,7 @@
         "header": "<thead><tr><th rowspan=\"2\"  colspan=\"3\"  class=\"series col0\" >State or area</th><th rowspan=\"2\"  class=\"series col3\" >Number</th><th colspan=\"11\"  class=\"series col4\" >Percentage distribution by dollar amount of benefit</th><th colspan=\"2\"  class=\"series col15\" >Monthly benefit (dollars)</th></tr><tr><th class=\"series col4\" >Total</th><th class=\"series col5\" >Less than 600.00</th><th class=\"series col6\" >600.00\u2013\n699.90</th><th class=\"series col7\" >700.00\u2013\n799.90</th><th class=\"series col8\" >800.00\u2013\n899.90</th><th class=\"series col9\" >900.00\u2013\n999.90</th><th class=\"series col10\" >1,000.00\u2013\n1,099.90</th><th class=\"series col11\" >1,100.00\u2013\n1,199.90</th><th class=\"series col12\" >1,200.00\u2013\n1,299.90</th><th class=\"series col13\" >1,300.00\u2013\n1,399.90</th><th class=\"series col14\" >1,400.00 or more</th><th class=\"series col15\" >Average</th><th class=\"series col16\" >Median</th></tr></thead>"
     }, 
     "title": {
+        "category": "5.J OASDI Current-Pay Benefits: Geographic Data", 
         "id": "5J8", 
         "name": "Percentage distribution of disabled workers, by state or other area and monthly benefit, December\u00a02013"
     }

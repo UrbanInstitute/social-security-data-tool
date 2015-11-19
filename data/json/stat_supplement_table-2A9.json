@@ -804,6 +804,7 @@
         "header": "<thead><tr><th rowspan=\"2\"  class=\"series col0\" >Year</th><th rowspan=\"2\"  class=\"series col1\" >Annual maximum taxable earnings</th><th rowspan=\"2\"  class=\"series col2\" >Average annual \nwage <span class = \"top_footnote top_a\">a</span></th><th colspan=\"8\"  class=\"series col3\" >Annual maximum indexed earnings for workers who were first eligible \n(attained age 62, became disabled, or died) in <span class = \"top_footnote top_b\u2014\">b\u2014</span></th></tr><tr><th class=\"series col3\" >2007.0</th><th class=\"series col4\" >2008.0</th><th class=\"series col5\" >2009.0</th><th class=\"series col6\" >2010.0</th><th class=\"series col7\" >2011.0</th><th class=\"series col8\" >2012.0</th><th class=\"series col9\" >2013</th><th class=\"series col10\" >2014</th></tr></thead>"
     }, 
     "title": {
+        "category": "2.A OASDI: Benefit Computation and Automatic Adjustments", 
         "id": "2A9", 
         "name": "Indexed earnings for workers with maximum earnings, 1951\u20132014 (in dollars)"
     }

@@ -590,6 +590,7 @@
         "header": "<thead><tr><th rowspan=\"3\"  class=\"series col0\" >Year</th><th colspan=\"4\"  class=\"series col1\" >Average monthly Social Security\nbenefit in current-payment status</th><th colspan=\"2\"  class=\"series col5\" >Average monthly Supplemental Security Income amount for\u2014</th><th rowspan=\"3\"  class=\"series col7\" >Consumer Price Index <span class = \"top_footnote top_b\">b</span></th></tr><tr><th colspan=\"2\"  class=\"series col1\" >Retired workers</th><th colspan=\"2\"  class=\"series col3\" >Widowed mother or father and 2 children</th><th colspan=\"2\"  class=\"series col5\" >Aged recipients <span class = \"top_footnote top_a\">a</span></th></tr><tr><th class=\"series col1\" >Current dollars</th><th class=\"series col2\" >2013 dollars</th><th class=\"series col3\" >Current dollars</th><th class=\"series col4\" >2013 dollars</th><th class=\"series col5\" >Current dollars</th><th colspan=\"2\"  class=\"series col6\" >2013 dollars</th></tr></thead>"
     }, 
     "title": {
+        "category": "3.C Interprogram Data", 
         "id": "3C4", 
         "name": "Average monthly amount of Social Security and Supplemental Security Income, December\u00a01950\u20132013 (in current and 2013\u00a0dollars)"
     }

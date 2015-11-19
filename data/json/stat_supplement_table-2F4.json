@@ -1,0 +1,68 @@
+{
+    "category": "barChart", 
+    "data": {
+        "categories": {
+            "series": [
+                "Received", 
+                "Processed a"
+            ], 
+            "type": "barLabel"
+        }, 
+        "col1": {
+            "label": "Total", 
+            "series": [
+                4952.6, 
+                5006.9
+            ], 
+            "type": "********** unknown *******"
+        }, 
+        "col2": {
+            "label": "Worker", 
+            "series": [
+                3363.5, 
+                3390.8
+            ], 
+            "type": "********** unknown *******"
+        }, 
+        "col3": {
+            "label": "Family members and survivors", 
+            "series": [
+                1589.1, 
+                1616.1
+            ], 
+            "type": "********** unknown *******"
+        }
+    }, 
+    "footnotes": [
+        {
+            "content": "SOURCE: Social Security Administration, Office of Systems, Integrated Work Measurement System.", 
+            "type": "note"
+        }, 
+        {
+            "content": "NOTE: Totals do not necessarily equal the sum of rounded components.", 
+            "type": "note"
+        }, 
+        {
+            "content": "See Table 6.A1 for data on number of awards.", 
+            "symbol": "a.", 
+            "type": "footnote"
+        }, 
+        {
+            "content": "CONTACT: (410) 965-0090 or statistics@ssa.gov.", 
+            "type": "note"
+        }, 
+        {
+            "content": "File available from:\nU.S. Social Security Administration \u2022 Office of Retirement and Disability Policy \u2022 Office of Research, Evaluation, and Statistics\nAnnual Statistical Supplement, 2014\nhttp://www.socialsecurity.gov/policy/docs/statcomps/supplement/2014/", 
+            "type": "note"
+        }
+    ], 
+    "html": {
+        "body": "<tbody><tr class=Received><td class=\"col0\">Received</td><td class=\"col2\">4952.6</td><td class=\"col3\">3363.5</td><td class=\"col4\">1589.1</td><tr class=Processed a><td class=\"col0\">Processed<span class = \"top_footnote top_a\">a</span></td><td class=\"col2\">5006.9</td><td class=\"col3\">3390.8</td><td class=\"col4\">1616.1</td></tbody>", 
+        "header": "<thead><tr><th class=\"series col0\" >Workload</th><th class=\"series col1\" >Total</th><th class=\"series col2\" >Worker</th><th class=\"series col3\" >Family members and survivors</th></tr></thead>"
+    }, 
+    "title": {
+        "category": "2.F SSA Administrative Data: Claims Workloads", 
+        "id": "2F4", 
+        "name": "Number of Old-Age and Survivors Insurance claims, fiscal year 2013 (in thousands)"
+    }
+}

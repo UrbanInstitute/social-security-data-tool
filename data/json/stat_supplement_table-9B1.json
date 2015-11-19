@@ -783,6 +783,7 @@
         "header": "<thead><tr><th rowspan=\"3\"  class=\"series col0\" >Year</th><th rowspan=\"3\"  class=\"series col1\" >Estimated number of workers \ncovered per month (millions)</th><th rowspan=\"2\"  colspan=\"6\"  class=\"series col2\" >Benefits paid during year (millions of dollars)</th><th rowspan=\"3\"  class=\"series col8\" >Cost of program as a percentage\nof covered payroll <span class = \"top_footnote top_d\">d</span></th><th rowspan=\"3\"  class=\"series col9\" >Benefits as a percentage\nof covered payroll <span class = \"top_footnote top_c\">c</span></th></tr><tr><th rowspan=\"2\"  class=\"series col2\" >Total</th><th colspan=\"3\"  class=\"series col3\" >Type of insurance</th><th colspan=\"2\"  class=\"series col6\" >Type of benefits</th></tr><tr><th class=\"series col3\" >Private carriers <span class = \"top_footnote top_a\">a</span></th><th class=\"series col4\" >State and federal funds <span class = \"top_footnote top_b\">b</span></th><th class=\"series col5\" >Employers' \nself-insurance <span class = \"top_footnote top_c\">c</span></th><th class=\"series col6\" >Medical and hospitalization</th><th colspan=\"3\"  class=\"series col7\" >Compensation payments</th></tr></thead>"
     }, 
     "title": {
+        "category": "9.B Other Social Insurance Programs: Workers' Compensation", 
         "id": "9B1", 
         "name": "Coverage, benefits, and costs, selected years 1940\u20132012"
     }

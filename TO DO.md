@@ -4,6 +4,7 @@
 - Fix units for all columns
 - Fix y axis labels for all units
 - Format years correctly
+- Tooltips with correct units
 - footnotes
 - Fix broken scrapers
 - mobile

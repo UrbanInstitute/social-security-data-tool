@@ -212,6 +212,7 @@
         "header": "<thead><tr><th rowspan=\"2\"  colspan=\"2\"  class=\"series col0\" >Year</th><th colspan=\"2\"  class=\"series col2\" >Aged</th><th colspan=\"2\"  class=\"series col4\" >Blind and disabled</th></tr><tr><th class=\"series col1\" >Percentage of total SSI</th><th class=\"series col2\" >Number</th><th class=\"series col3\" >Percentage of total SSI</th><th class=\"series col4\" >Number</th><th class=\"series col5\" >Percentage of total SSI</th></tr></thead>"
     }, 
     "title": {
+        "category": "7.E SSI: Recipient Characteristics", 
         "id": "7E6", 
         "name": "Number of noncitizens receiving federally administered payments as a percentage of SSI recipients, by eligibility category, December 1982\u20132013, selected years"
     }

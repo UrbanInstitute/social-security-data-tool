@@ -284,6 +284,7 @@
         "header": "<thead><tr><th class=\"series col0\" >Year</th><th class=\"series col1\" >Disabled workers</th><th class=\"series col2\" >Wives and husbands</th><th class=\"series col3\" >Children</th></tr></thead>"
     }, 
     "title": {
+        "category": "4.A OASDI: Trust Funds", 
         "id": "4A6", 
         "name": "Total annual benefits paid from DI trust fund, by type of benefit, 1957\u20132013 (in millions of\u00a0dollars)"
     }

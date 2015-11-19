@@ -2039,6 +2039,7 @@
         "header": "<thead><tr><th rowspan=\"2\"  colspan=\"3\"  class=\"series col0\" >State or area</th><th colspan=\"3\"  class=\"series col3\" >Retired workers</th><th colspan=\"3\"  class=\"series col6\" >Disabled workers</th></tr><tr><th class=\"series col3\" >Number</th><th class=\"series col4\" >Percent</th><th class=\"series col5\" >Average monthly benefit a (dollars)</th><th class=\"series col6\" >Number</th><th class=\"series col7\" >Percent</th><th class=\"series col8\" >Average monthly benefit a (dollars)</th></tr></thead>"
     }, 
     "title": {
+        "category": "6.A OASDI Benefits Awarded: Summary", 
         "id": "6A6", 
         "name": "Number, percentage distribution, and average monthly benefit for retired and disabled workers, by state or other area, 2013"
     }

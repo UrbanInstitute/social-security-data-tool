@@ -763,6 +763,7 @@
         "header": "<thead><tr><th rowspan=\"2\"  class=\"series col0\" >Year</th><th colspan=\"5\"  class=\"series col1\" >Employee</th><th colspan=\"5\"  class=\"series col6\" >Self-employed person</th></tr><tr><th class=\"series col1\" >Total, OASDI and HI</th><th class=\"series col2\" >Subtotal, OASDI</th><th class=\"series col3\" >OASI</th><th class=\"series col4\" >DI</th><th class=\"series col5\" >HI</th><th class=\"series col6\" >Total, OASDI and HI</th><th class=\"series col7\" >Subtotal, OASDI</th><th class=\"series col8\" >OASI</th><th class=\"series col9\" >DI</th><th class=\"series col10\" >HI</th></tr></thead>"
     }, 
     "title": {
+        "category": "2.A OASDI: Coverage, Financing, and Insured Status", 
         "id": "2A4", 
         "name": "Maximum annual amount of contributions, 1937\u20132014 (in\u00a0dollars)"
     }

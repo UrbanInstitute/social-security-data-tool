@@ -17,6 +17,7 @@ def parseTitle(sheet, sheetType, multiSubtitle=False):
 		fullTitle = sheet.row(1)[0].value
 		title["id"] = fullTitle	.split(u'\u2014')[0].replace(".","").replace("Table ","")
 	title["name"] = fullTitle.split(u'\u2014')[1]
+	title["category"] = sheet.row(0)[0].value
 	return title
 
 def parseFootnotes(sheet, lastRow):
@@ -45,7 +46,7 @@ def parseHeader(output, headRows, lastRow, sheet, sheetType, startRow=False):
 		rows.append(sheet.row(i))
 #For these sheet types, the first two columns (e.g "Year") are mereged into 1 with the second column totally empty because shrug
 #So just popping 2nd column out for simplicity (instead of preserving strange colspans in html table or data table)
-	if(sheetType in TIME_TYPES and (sheet.name not in col1_exceptions)):
+	if((sheetType in TIME_TYPES or sheetType in SIMPLE_BARS) and (sheet.name not in col1_exceptions)):
 		for row in rows:
 			del(row[1])
 
@@ -73,7 +74,13 @@ def parseHeader(output, headRows, lastRow, sheet, sheetType, startRow=False):
 				headerString += getTH(sheet, rows, r, c)
 			if(fixRows[r-2][c].ctype != 0):
 				if((r == headRows-1 and c != 0) or (c == 0 and r ==2)):
-					getData(data, fixRows, r, c, headRows, lastRow, sheet, sheetType, startRow)
+					if sheetType == "medBar":
+						if (sheet.name == "5.H3" or sheet.name == "5.H4") and (c != 1 and c != 2):
+							getData(data, fixRows, r, c, headRows, lastRow, sheet, sheetType, startRow)
+						elif (c != 1 and sheet.name != "5.H3" and sheet.name != "5.H4"):
+							getData(data, fixRows, r, c, headRows, lastRow, sheet, sheetType, startRow)
+					else:
+						getData(data, fixRows, r, c, headRows, lastRow, sheet, sheetType, startRow)
 		headerString += "</tr>"
 	headerString += "</thead>"
 	bodyString = getTbody(sheet, sheetType, headRows, lastRow, startRow)
@@ -82,6 +89,8 @@ def parseHeader(output, headRows, lastRow, sheet, sheetType, startRow=False):
 		chartType = "timeSeries"
 	elif sheetType == "medMap":
 		chartType = "map"
+	elif sheetType in SIMPLE_BARS or sheetType == "medBar":
+		chartType = "barChart"
 	return{ "headerString": headerString, "data": data, "bodyString": bodyString, "chartType": chartType}
 
 def getTbody(sheet, sheetType, headR, lastRow, startRow):
@@ -94,7 +103,7 @@ def getTbody(sheet, sheetType, headR, lastRow, startRow):
 		row = sheet.row(r)
 
 		for c in range(0, len(row)):
-			if sheetType in TIME_TYPES and c==1 and sheet.name not in col1_exceptions:
+			if (sheetType in TIME_TYPES or sheetType in SIMPLE_BARS) and c==1 and sheet.name not in col1_exceptions:
 				continue
 			if(c==0):
 				tbody += "<tr class="
@@ -110,7 +119,7 @@ def getTbody(sheet, sheetType, headR, lastRow, startRow):
 						val = getYear(sheet.cell_value(rowx=r, colx=c), monthly)
 					else:
 						val = sheet.cell_value(rowx=r, colx=c)
-					if isinstance(val, basestring) and not monthly:
+					if isinstance(val, basestring) and not monthly and sheetType not in SIMPLE_BARS and sheetType != "medBar":
 						if(val.find("-") != -1):
 							y1 = int(val.split("-")[0])
 							y2 = int(val.split("-")[1])
@@ -121,6 +130,8 @@ def getTbody(sheet, sheetType, headR, lastRow, startRow):
 						else:
 							tbody += str(val)
 					else:
+						if isinstance(val, basestring):
+							val = val.replace(u'\xe2', '').replace(u'\u2013','-').replace(u'\xa0', u' ')
 						tbody += str(val)
 				tbody += ">"
 			if (sheetType == "weirdTime" and r == headRows and c==0):
@@ -128,12 +139,8 @@ def getTbody(sheet, sheetType, headR, lastRow, startRow):
 				runlist = sheet.rich_text_runlist_map.get((r, c))
 			else:
 				cell = sheet.cell_value(rowx=r, colx=c)
-				# print cell
 				runlist = sheet.rich_text_runlist_map.get((r, c))
-			# if sheet.name == "2.A3":
-			# 	print sheet.name, r, c
 			if runlist:
-				# print runlist2
 				for rl in runlist:
 					offset = rl[0]
 					font_index = rl[1]
@@ -202,8 +209,6 @@ def getTH(sheet, rows, rowNum, colNum):
 		vs = val.split(" ")
 		last = vs[len(vs)-1].replace(u"\u2014","")
 		if len(last) == 1:
-			print val
-			# print tmp
 			val = ""
 			for i in range(0, len(vs)):
 				if(i != len(vs) -1):
@@ -211,7 +216,6 @@ def getTH(sheet, rows, rowNum, colNum):
 					val += " "
 				else:
 					val += "<span class = \"top_footnote top_%s\">%s</span>"%(vs[i],vs[i])
-			print val
 	if(isinstance(val, float)):
 		val = str(val)
 	th += val
@@ -230,6 +234,10 @@ def getData(data, rows, rowNum, colNum, headR, lastRow, sheet, sheetType, startR
 			obj = data["years"] = {}
 			obj["series"] = getXSeries(rowNum, 0, headRows, lastRow, sheet, sheetType, startRow)
 			dType = obj["type"] = "year"
+		elif sheetType in SIMPLE_BARS or sheetType == "medBar":
+			obj = data["categories"] = {}
+			obj["series"] = getBarSeries(rowNum, 0, headRows, lastRow, sheet, sheetType, startRow)
+			dType = obj["type"] = "barLabel"
 	else:
 		obj = data["col%i"%colNum] = {}
 		if (sheetType == "medMap"):
@@ -256,6 +264,24 @@ def getXSeries(rowNum, colNum, headR, lastRow, sheet, sheetType, startRow):
 			val = getYear(val, monthly)
 			series.append(val)
 		return series
+def getBarSeries(rowNum, colNum, headR, lastRow, sheet, sheetType, startRow):
+	if(startRow):
+		headRows = startRow
+	else:
+		headRows = headR
+	series = []
+	for i in range(headRows, lastRow):
+		val = sheet.cell_value(rowx=i, colx=colNum)
+		val = val.replace(u'\xe2', '').replace(u'\u2013','-')
+		ctype = sheet.cell_type(rowx=i, colx=colNum)
+		if sheetType == "medBar":
+			if ctype == 0 or ctype == 6 or val.upper().find("AVERAGE") >= 0:
+				continue
+			else:
+				series.append(val)
+		else:
+			series.append(val)
+	return series
 
 def getYear(val, monthly=False):
 	if isinstance(val, basestring):
@@ -283,7 +309,7 @@ def getSeries(rowN, colNum, lastRow, sheet, sheetType, startRow):
 	else:
 		rowNum = rowN
 	series = []
-	if sheetType in TIME_TYPES and sheet.name not in col1_exceptions:
+	if (sheetType in TIME_TYPES or sheetType in SIMPLE_BARS) and sheet.name not in col1_exceptions:
 		colNum += 1
 	for i in range(rowNum+1, lastRow):
 		val = sheet.cell_value(rowx=i, colx=colNum)
@@ -293,7 +319,7 @@ def getSeries(rowN, colNum, lastRow, sheet, sheetType, startRow):
 			val = False
 #strip footnotes markers and space from numeric values, then parse to float
 #Should hold for any sheetType where all data is expected to be numeric
-		elif(sheetType in TIME_TYPES and isinstance(val, basestring)):
+		elif((sheetType in TIME_TYPES or sheetType in SIMPLE_BARS or sheetType == "medBar") and isinstance(val, basestring)):
 ##allow for negative numbers and decimal points
 			non_decimal = re.compile(r'[^\d.-]+')
 			decimal = re.compile(r'\d')
@@ -303,13 +329,34 @@ def getSeries(rowN, colNum, lastRow, sheet, sheetType, startRow):
 				val = float(val)
 			else:
 				val = False
-		series.append(val)
+		if sheetType == "medBar":
+			if sheet.name !="5.F7" and sheet.name != "5.A1.8":
+				if i == lastRow-1:
+					break
+			print i, lastRow, val, sheet.name
+			if sheet.name == "5.H3" or sheet.name == "5.H4":
+#Ignore first 3 rows, which are totals
+				if i > rowNum + 3:
+					series.append(val)
+				else:
+					continue
+			else:
+#Ignore first 1 row, which is a total
+				if i > rowNum + 1:
+					series.append(val)
+				else:
+					continue
+# 			if i < lastRow-2 and sheet.name != "5.F7" and sheet.name != "5.A1.8":
+# #Ignore last row, which is an average
+# 				series.append(val)
+# 			else:
+# 				print "c3", val
+# 				continue
+		else:
+			series.append(val)
 	return series
 
 def getMapSeries(rowN, colNum, lastRow, sheet, sheetType, startRow):
-	# print sheet.name
-	# if sheet.name == "5.J2":
-	# 	print colNum
 	if(startRow):
 		rowNum = startRow
 	else:
@@ -326,7 +373,6 @@ def getMapSeries(rowN, colNum, lastRow, sheet, sheetType, startRow):
 			type1 = 0
 		if(type2 == 6):
 			type2 = 0
-		# print type0, type1, type2			
 #row blank, blank, "All areas"
 		if(type0 == 0 and type1==0):
 			continue
@@ -401,7 +447,6 @@ def addWords(words, string):
 	words.extend(string.split())
 
 book = xlrd.open_workbook("../data/statistical_supplement/supplement14.xls", formatting_info=True)
-# print fonts
 sheets = book.sheet_names()
 
 #Years in 1st column (or year ranges), blank 2nd column, data
@@ -423,21 +468,29 @@ weirdTime = ['5.B4','5.D1','6.A1','6.F1']
 #Map of US states and territories
 medMap = ['5.J1','5.J2','5.J4','5.J8','5.J10','5.J14','6.A6']
 
+#Small bar graphs, no stacking
+simpleBar = ['2.F4','2.F5','2.F6','2.F8','2.F11']
+
+#Do not graph 1st row(s) (total) or last if it includes "average", 5.H3/H4 have 3 total rows
+#no stacking
+medBar = ['5.D2','5.E1','5.F7','5.H3','5.H4','6.C1','5.A1.8']
 
 
 
 
 #Some but not all divider headers are on 2 rows
-edgeTimeMulti = ['4.C2']
 
 policy = ['2.A20', '2.A21']
-simpleBar = ['2.F4','2.F5','2.F6','2.F8','2.F11','5.A1.8']
+
 weirdBar = ['5.B6','5.B7','6.B3']
-medBar = ['5.D2','5.E1','5.F7','5.H3','5.H4','6.C1']
-medBarMulti = ['6.D5']
+
+
 nestedBar = ['2.F9','3.C6','5.A1','5.A1.1','5.A1.2','5.A1.4','5.A1.6','5.A1.7','5.A5','5.A7','6.F2','6.F3']
 nestedBarMulti = ['2.F7','3.C3','5.A1.3','5.A3','5.A6','5.A8','5.A10','5.A15','5.A16','5.H2','6.A3','6.A4','6.A5','6.D7']
 
+
+edgeTimeMulti = ['4.C2']
+medBarMulti = ['6.D5']
 timeBarEdge = ['5.M1']
 mapPlusTime = ['3.C5']
 
@@ -456,8 +509,102 @@ fix = ['4.C1','5.D4','5.E2','5A14-M0','5H1-M0','6B5-M0','6B51-M0']
 
 
 TIME_TYPES = ["simpleTime", "multiTime", "monthsTime","weirdTime"]
+SIMPLE_BARS = ["simpleBar"]
 wordList = {}
 titleList = {}
+
+for sheet_id in simpleBar:
+	words = wordList[sheet_id] = []
+	xl_sheet = book.sheet_by_name(sheet_id)
+	output = {}
+	headRows = 0
+	lastRow = 0
+	for i in range(0, xl_sheet.nrows):
+		row = xl_sheet.row(i)
+		testVal = xl_sheet.cell_value(rowx=i, colx=2)
+#1st column isn't predictable, but 2nd column (A/B merged into 1st column) is always a number
+		if(isinstance(testVal,float)):
+			headRows = i
+			break
+	for i in range(headRows+1, xl_sheet.nrows):
+		row = xl_sheet.row(i)
+		testType = xl_sheet.cell_type(rowx=i, colx=0)
+		if(testType == 0 or testType == 6):
+			lastRow = i
+			break
+
+	output["html"] = {}
+	values = parseHeader(output, headRows, lastRow, xl_sheet, "simpleBar")
+	footnotes = parseFootnotes(xl_sheet, lastRow)
+	titles = parseTitle(xl_sheet, "simpleBar")
+	output["html"]["header"] = values["headerString"]
+	output["html"]["body"] = values["bodyString"]
+	output["data"] = values["data"]
+	output["title"] = titles
+	output["footnotes"] = footnotes
+	addWords(words, titles["name"])
+	titleList[titles["id"]] = titles["id"] + " :: " + titles["name"]
+	output["category"] = values["chartType"]
+
+	with open('../data/json/stat_supplement_table-%s.json'%titles["id"], 'w') as fp:
+		json.dump(output, fp, indent=4, sort_keys=True)
+
+
+for sheet_id in medBar:
+	words = wordList[sheet_id] = []
+	xl_sheet = book.sheet_by_name(sheet_id)
+	output = {}
+	headRows = 0
+	lastRow = 0
+	for i in range(0, xl_sheet.nrows):
+		row = xl_sheet.row(i)
+		testType1 = xl_sheet.cell_type(rowx=i, colx=0)
+		testType2 = xl_sheet.cell_type(rowx=i, colx=1)
+		if testType1 == 6:
+			testType1 = 0
+		if testType2 == 6:
+			testType2 = 0
+		testVal = xl_sheet.cell_value(rowx=i, colx=2)
+		if (isinstance(testVal,float) and testType1 == 0 and testType2 != 0) or (xl_sheet.cell_value(rowx=i, colx=1).upper().find("TOTAL") >= 0 and testType1 == 0):
+			headRows = i
+			break
+	for i in range(headRows+1, xl_sheet.nrows):
+		row = xl_sheet.row(i)
+		testType1 = xl_sheet.cell_type(rowx=i, colx=0)
+		testType2 = xl_sheet.cell_type(rowx=i, colx=1)
+		testType3 = xl_sheet.cell_type(rowx=i, colx=2)
+		if testType1 == 6:
+			testType1 = 0
+		if testType2 == 6:
+			testType2 = 0
+		if testType3 == 6:
+			testType3 = 0
+
+		if(testType1 == 0 and testType2 == 0 and testType3 == 0):
+			lastRow = i
+			break
+
+	output["html"] = {}
+	values = parseHeader(output, headRows, lastRow, xl_sheet, "medBar")
+	footnotes = parseFootnotes(xl_sheet, lastRow)
+	titles = parseTitle(xl_sheet, "medBar")
+	output["html"]["header"] = values["headerString"]
+	output["html"]["body"] = values["bodyString"]
+	output["data"] = values["data"]
+	output["title"] = titles
+	output["footnotes"] = footnotes
+	addWords(words, titles["name"])
+	titleList[titles["id"]] = titles["id"] + " :: " + titles["name"]
+	output["category"] = values["chartType"]
+	if(sheet_id == "5.H3" or sheet_id == "5.H4"):
+		output["default"] = "col3"
+	else:
+		output["default"] = "col2"
+
+	with open('../data/json/stat_supplement_table-%s.json'%titles["id"], 'w') as fp:
+		json.dump(output, fp, indent=4, sort_keys=True)
+
+
 
 for sheet_id in medMap:
 	words = wordList[sheet_id] = []
@@ -499,6 +646,7 @@ for sheet_id in medMap:
 	addWords(words, titles["name"])
 	titleList[titles["id"]] = titles["id"] + " :: " + titles["name"]
 	output["category"] = values["chartType"]
+
 
 	with open('../data/json/stat_supplement_table-%s.json'%titles["id"], 'w') as fp:
 		json.dump(output, fp, indent=4, sort_keys=True)

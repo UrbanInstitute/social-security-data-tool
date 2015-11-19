@@ -506,6 +506,7 @@
         "header": "<thead><tr><th rowspan=\"3\"  class=\"series col0\" >Year <span class = \"top_footnote top_a\">a</span></th><th rowspan=\"2\"  colspan=\"2\"  class=\"series col1\" >Minimum benefit payable</th><th colspan=\"4\"  class=\"series col3\" >Maximum benefit payable</th></tr><tr><th rowspan=\"2\"  class=\"series col1\" >At retirement</th><th rowspan=\"2\"  class=\"series col2\" >Effective December 2013 <span class = \"top_footnote top_b\">b</span></th><th colspan=\"2\"  class=\"series col3\" >At retirement</th><th colspan=\"2\"  class=\"series col5\" >Effective December 2013 <span class = \"top_footnote top_b\">b</span></th></tr><tr><th class=\"series col3\" >Men</th><th class=\"series col4\" >Women</th><th class=\"series col5\" >Men</th><th class=\"series col6\" >Women</th></tr></thead>"
     }, 
     "title": {
+        "category": "2.A OASDI: Benefit Types and Levels", 
         "id": "2A27", 
         "name": "Minimum and maximum monthly retired-worker benefits payable to individuals who retired at age 62, by year they attained age 62, 1957\u20132014 (in dollars)"
     }

@@ -793,6 +793,7 @@
         "header": "<thead><tr><th rowspan=\"2\"  class=\"series col0\" >Year</th><th colspan=\"3\"  class=\"series col1\" >Number a\n(thousands)</th><th colspan=\"3\"  class=\"series col4\" >Taxable earnings b\n(millions of dollars)</th><th colspan=\"3\"  class=\"series col7\" >OASDI contributions c,d\n(millions of dollars)</th></tr><tr><th class=\"series col1\" >Total</th><th class=\"series col2\" >Wage and\nsalary</th><th class=\"series col3\" >Self-\nemployed</th><th class=\"series col4\" >Total</th><th class=\"series col5\" >Wage and\nsalary</th><th class=\"series col6\" >Self-\nemployed</th><th class=\"series col7\" >Total</th><th class=\"series col8\" >Wage and\nsalary</th><th class=\"series col9\" >Self-\nemployed</th></tr></thead>"
     }, 
     "title": {
+        "category": "4.B OASDI: Covered Workers", 
         "id": "4B11", 
         "name": "Number of workers with Social Security (OASDI) taxable earnings, amount taxable, and contributions, by type of earnings, selected years 1937\u20132013"
     }

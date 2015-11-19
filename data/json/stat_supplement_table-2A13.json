@@ -331,6 +331,7 @@
         "header": "<thead><tr><th rowspan=\"2\"  class=\"series col0\" >Eligibility year</th><th colspan=\"4\"  class=\"series col1\" >Calculation of maximum family benefit (based on percentage of PIA) (dollars)</th><th colspan=\"2\"  class=\"series col5\" >First applicable cost-of-living adjustment</th></tr><tr><th class=\"series col1\" >150 percent \nof the first</th><th class=\"series col2\" >Plus 272 percent \nof the next</th><th class=\"series col3\" >Plus 134 percent \nof the next</th><th class=\"series col4\" >Plus 175 percent of\nthe amount above</th><th class=\"series col5\" >Effective \ndate</th><th class=\"series col6\" >Percentage \nincrease</th></tr></thead>"
     }, 
     "title": {
+        "category": "2.A OASDI: Benefit Computation and Automatic Adjustments", 
         "id": "2A13", 
         "name": "Formulas enacted in 1977 for computing OASI maximum family benefit from PIA and \ncost-of-living adjustments for workers who were first eligible in 1979 or later, by year of first eligibility"
     }

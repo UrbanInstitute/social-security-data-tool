@@ -393,6 +393,7 @@
         "header": "<thead><tr><th rowspan=\"2\"  class=\"series col0\" >Year</th><th rowspan=\"2\"  class=\"series col1\" >Total</th><th colspan=\"3\"  class=\"series col2\" >Category</th><th colspan=\"3\"  class=\"series col5\" >Age</th></tr><tr><th class=\"series col2\" >Aged</th><th class=\"series col3\" >Blind</th><th class=\"series col4\" >Disabled</th><th class=\"series col5\" >Under 18</th><th class=\"series col6\" >18\u201364</th><th class=\"series col7\" >65 or older <span class = \"top_footnote top_a\">a</span></th></tr></thead>"
     }, 
     "title": {
+        "category": "7.A SSI: Summary", 
         "id": "7A9", 
         "name": "Number of recipients of federally administered payments, by eligibility category and age, December 1974\u20132013"
     }

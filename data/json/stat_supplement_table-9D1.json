@@ -375,6 +375,7 @@
         "header": "<thead><tr><th rowspan=\"2\"  class=\"series col0\" >Year</th><th colspan=\"4\"  class=\"series col1\" >Number</th><th colspan=\"2\"  class=\"series col5\" >Benefits (thousands of dollars)</th></tr><tr><th class=\"series col1\" >Total</th><th class=\"series col2\" >Miners</th><th class=\"series col3\" >Widows</th><th class=\"series col4\" >Dependents <span class = \"top_footnote top_a\">a</span></th><th class=\"series col5\" >Monthly amount</th><th class=\"series col6\" >Annual amount</th></tr></thead>"
     }, 
     "title": {
+        "category": "9.D Other Social Insurance Programs: Black Lung Benefits", 
         "id": "9D1", 
         "name": "Benefits currently payable to miners, widows, and dependents, December 1970\u20132013"
     }

@@ -321,6 +321,7 @@
         "header": "<thead><tr><th rowspan=\"2\"  class=\"series col0\" >Year</th><th colspan=\"2\"  class=\"series col1\" >All disabled workers</th><th colspan=\"2\"  class=\"series col3\" >Men</th><th colspan=\"2\"  class=\"series col5\" >Women</th></tr><tr><th class=\"series col1\" >Number</th><th class=\"series col2\" >Total monthly benefits (thousands of dollars)</th><th class=\"series col3\" >Number</th><th class=\"series col4\" >Total monthly benefits (thousands of dollars)</th><th class=\"series col5\" >Number</th><th class=\"series col6\" >Total monthly benefits (thousands of dollars)</th></tr></thead>"
     }, 
     "title": {
+        "category": "5.D OASDI Current-Pay Benefits: Disabled Workers", 
         "id": "5D3", 
         "name": "Number and total monthly benefits, by sex, December 1957\u20132013, selected years"
     }

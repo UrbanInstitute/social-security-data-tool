@@ -521,6 +521,7 @@
         "header": "<thead><tr><th rowspan=\"2\"  class=\"series col0\" >Year</th><th colspan=\"3\"  class=\"series col1\" >OASDI</th><th rowspan=\"2\"  class=\"series col4\" >Retired workers</th><th rowspan=\"2\"  class=\"series col5\" >Disabled workers</th><th rowspan=\"2\"  class=\"series col6\" >Wives and husbands</th><th rowspan=\"2\"  class=\"series col7\" >Children</th><th rowspan=\"2\"  class=\"series col8\" >Widowed mothers and fathers</th><th rowspan=\"2\"  class=\"series col9\" >Widow(er)s</th><th rowspan=\"2\"  class=\"series col10\" >Parents</th><th rowspan=\"2\"  class=\"series col11\" >Special\nage-72 beneficiaries</th></tr><tr><th class=\"series col1\" >Total</th><th class=\"series col2\" >OASI trust fund</th><th class=\"series col3\" >DI trust fund</th></tr></thead>"
     }, 
     "title": {
+        "category": "5.A OASDI Current-Pay Benefits: Summary", 
         "id": "5A4-M1", 
         "name": "Number and total monthly benefits, by trust fund and type of benefit, December 1940\u20132013, selected years :: Subtable : Total monthly benefits (thousands of dollars)"
     }

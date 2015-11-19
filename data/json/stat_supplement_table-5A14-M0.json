@@ -220,6 +220,7 @@
         "header": "<thead><tr><th rowspan=\"3\"  class=\"series col0\" >Year</th><th rowspan=\"3\"  class=\"series col1\" >Total <span class = \"top_footnote top_a\">a</span></th><th rowspan=\"2\"  colspan=\"5\"  class=\"series col2\" >Entitled as worker <span class = \"top_footnote top_b\">b</span></th><th rowspan=\"2\"  colspan=\"3\"  class=\"series col7\" >Entitled as wife, widow, or parent only</th></tr><tr><th rowspan=\"2\"  class=\"series col2\" >Subtotal</th><th rowspan=\"2\"  class=\"series col3\" >Worker only</th><th colspan=\"5\"  class=\"series col4\" >Dually entitled</th></tr><tr><th class=\"series col4\" >Subtotal</th><th class=\"series col5\" >Wife's benefit</th><th class=\"series col6\" >Widow's or parent's benefit <span class = \"top_footnote top_c\">c</span></th><th class=\"series col7\" >Subtotal</th><th class=\"series col8\" >Wife's benefit</th><th class=\"series col9\" >Widow's or parent's benefit <span class = \"top_footnote top_c\">c</span></th></tr></thead>"
     }, 
     "title": {
+        "category": "5.A OASDI Current-Pay Benefits: Summary", 
         "id": "5A14-M0", 
         "name": "Number and percentage distribution of women aged 62 or\u00a0older, by basis of entitlement, type of benefit, and dual entitlement status, December 1960\u20132013, selected years :: Subtable : Number (thousands)"
     }

@@ -272,6 +272,7 @@
         "header": "<thead><tr><th rowspan=\"2\"  class=\"series col0\" >Year</th><th colspan=\"4\"  class=\"series col1\" >Number of children of\u2014</th><th colspan=\"4\"  class=\"series col5\" >Total monthly benefits for children of\u2014\n(thousands of dollars)</th></tr><tr><th class=\"series col1\" >All workers</th><th class=\"series col2\" >Retired workers</th><th class=\"series col3\" >Deceased workers</th><th class=\"series col4\" >Disabled workers</th><th class=\"series col5\" >All workers</th><th class=\"series col6\" >Retired workers</th><th class=\"series col7\" >Deceased workers</th><th class=\"series col8\" >Disabled workers</th></tr></thead>"
     }, 
     "title": {
+        "category": "5.F OASDI Current-Pay Benefits: Dependents and Survivors", 
         "id": "5F4-M1", 
         "name": "Number of children and total monthly benefits, by type of benefit, December 1940\u20132013, selected years :: Subtable : Children under age 18"
     }

@@ -178,6 +178,7 @@
         "header": "<thead><tr><th class=\"series col0\" >Year</th><th class=\"series col1\" >Total number of claims (thousands)</th><th class=\"series col2\" >Net assignment rate a (percent)</th></tr></thead>"
     }, 
     "title": {
+        "category": "8.B Medicare: Enrollment, Utilization, and Reimbursement", 
         "id": "8B10", 
         "name": "Medicare Part B (Supplementary Medical Insurance): Claims received by carriers and assignment rates, 1969\u20132013"
     }

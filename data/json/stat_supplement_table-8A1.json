@@ -879,6 +879,7 @@
         "header": "<thead><tr><th rowspan=\"3\"  class=\"series col0\" >Year</th><th rowspan=\"2\"  colspan=\"8\"  class=\"series col1\" >Receipts</th><th rowspan=\"2\"  colspan=\"4\"  class=\"series col9\" >Expenditures</th><th rowspan=\"3\"  class=\"series col13\" >Trust fund\nassets\nat end\nof year</th></tr><tr><th rowspan=\"2\"  class=\"series col1\" >Total</th><th rowspan=\"2\"  class=\"series col2\" >Payroll taxes</th><th rowspan=\"2\"  class=\"series col3\" >Income from taxation\nof\nbenefits</th><th rowspan=\"2\"  class=\"series col4\" >Transfers from Railroad Retirement account</th><th colspan=\"2\"  class=\"series col5\" >Reimbursements from general revenues for\u2014</th><th rowspan=\"2\"  class=\"series col7\" >Premiums from voluntary enrollees</th><th rowspan=\"2\"  class=\"series col8\" >Interest on investments and other income a,b</th><th rowspan=\"2\"  class=\"series col9\" >Total</th><th rowspan=\"2\"  class=\"series col10\" >Benefit\npayments b,c</th><th colspan=\"2\"  class=\"series col11\" >Administrative expenses</th></tr><tr><th class=\"series col5\" >Uninsured\npersons</th><th class=\"series col6\" >Military\nwage\ncredits</th><th class=\"series col11\" >Amount <span class = \"top_footnote top_d\">d</span></th><th colspan=\"2\"  class=\"series col12\" >Percent-age of\nbenefit\npayments</th></tr></thead>"
     }, 
     "title": {
+        "category": "8.A Medicare: Trust Funds", 
         "id": "8A1", 
         "name": "Hospital Insurance, calendar years 1966\u20132013 (in millions of dollars)"
     }

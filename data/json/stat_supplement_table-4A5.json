@@ -823,6 +823,7 @@
         "header": "<thead><tr><th rowspan=\"2\"  class=\"series col0\" >Year</th><th rowspan=\"2\"  class=\"series col1\" >Total</th><th colspan=\"3\"  class=\"series col2\" >Retired-worker and dependents benefits</th><th colspan=\"4\"  class=\"series col5\" >Survivors benefits</th><th rowspan=\"2\"  class=\"series col9\" >Special\nage-72 beneficiaries</th><th rowspan=\"2\"  class=\"series col10\" >Lump-sum death payments</th></tr><tr><th class=\"series col2\" >Retired workers</th><th class=\"series col3\" >Wives and\nhusbands</th><th class=\"series col4\" >Children</th><th class=\"series col5\" >Children</th><th class=\"series col6\" >Widowed mothers and fathers</th><th class=\"series col7\" >Widow(er)s <span class = \"top_footnote top_a\">a</span></th><th class=\"series col8\" >Parents</th></tr></thead>"
     }, 
     "title": {
+        "category": "4.A OASDI: Trust Funds", 
         "id": "4A5", 
         "name": "Total annual benefits paid from OASI trust fund, by type of benefit, selected years 1937\u20132013 (in\u00a0millions of dollars)"
     }

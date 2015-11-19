@@ -3775,6 +3775,7 @@
         "header": "<thead><tr><th rowspan=\"2\"  colspan=\"3\"  class=\"series col0\" >State or area</th><th rowspan=\"2\"  class=\"series col3\" >Total</th><th colspan=\"4\"  class=\"series col4\" >Children under age 18 of\u2014</th><th colspan=\"4\"  class=\"series col8\" >Disabled adult children of\u2014</th><th colspan=\"4\"  class=\"series col12\" >Students aged 18\u201319 of\u2014</th></tr><tr><th class=\"series col4\" >Subtotal</th><th class=\"series col5\" >Retired workers</th><th class=\"series col6\" >Deceased workers</th><th class=\"series col7\" >Disabled workers</th><th class=\"series col8\" >Subtotal</th><th class=\"series col9\" >Retired workers</th><th class=\"series col10\" >Deceased workers</th><th class=\"series col11\" >Disabled workers</th><th class=\"series col12\" >Subtotal</th><th class=\"series col13\" >Retired workers</th><th class=\"series col14\" >Deceased workers</th><th class=\"series col15\" >Disabled workers</th></tr></thead>"
     }, 
     "title": {
+        "category": "5.J OASDI Current-Pay Benefits: Geographic Data", 
         "id": "5J10", 
         "name": "Number of children, by state or other area and type of benefit, December\u00a02013"
     }

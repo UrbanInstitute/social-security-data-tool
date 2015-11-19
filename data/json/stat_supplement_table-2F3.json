@@ -118,6 +118,7 @@
         "header": "<thead><tr><th class=\"series col0\" >Year</th><th class=\"series col1\" >Full-time permanent staff <span class = \"top_footnote top_a\">a</span></th><th colspan=\"2\"  class=\"series col2\" >Total work years <span class = \"top_footnote top_b\">b</span></th></tr></thead>"
     }, 
     "title": {
+        "category": "2.F SSA Administrative Data: Offices and Staff", 
         "id": "2F3", 
         "name": "Number of work years, fiscal years 1995\u20132014"
     }

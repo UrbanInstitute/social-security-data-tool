@@ -648,6 +648,7 @@
         "header": "<thead><tr><th rowspan=\"2\"  class=\"series col0\" >Year of entitlement</th><th colspan=\"4\"  class=\"series col1\" >All retired workers</th><th colspan=\"4\"  class=\"series col5\" >Men</th><th colspan=\"4\"  class=\"series col9\" >Women</th></tr><tr><th class=\"series col1\" >Number</th><th class=\"series col2\" >Percentage distribution</th><th class=\"series col3\" >Cumulative percent-age <span class = \"top_footnote top_a\">a</span></th><th class=\"series col4\" >Average monthly benefit (dollars)</th><th class=\"series col5\" >Number</th><th class=\"series col6\" >Percentage distribution</th><th class=\"series col7\" >Cumulative percent-age <span class = \"top_footnote top_a\">a</span></th><th class=\"series col8\" >Average monthly benefit (dollars)</th><th class=\"series col9\" >Number</th><th class=\"series col10\" >Percentage distribution</th><th class=\"series col11\" >Cumulative percent-age <span class = \"top_footnote top_a\">a</span></th><th class=\"series col12\" >Average monthly benefit (dollars)</th></tr></thead>"
     }, 
     "title": {
+        "category": "5.B OASDI Current-Pay Benefits: Retired Workers", 
         "id": "5B4", 
         "name": "Number, percentage, and average monthly benefit, by year of entitlement as retired worker and sex, December\u00a02013"
     }

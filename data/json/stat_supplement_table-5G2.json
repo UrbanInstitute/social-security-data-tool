@@ -913,6 +913,7 @@
         "header": "<thead><tr><th rowspan=\"3\"  class=\"series col0\" >Year</th><th rowspan=\"3\"  class=\"series col1\" >Total</th><th colspan=\"7\"  class=\"series col2\" >Women</th><th rowspan=\"2\"  colspan=\"4\"  class=\"series col9\" >Men</th></tr><tr><th colspan=\"2\"  class=\"series col2\" >Subtotal</th><th colspan=\"2\"  class=\"series col4\" >Wife's benefit</th><th colspan=\"2\"  class=\"series col6\" >Widow's benefit</th><th rowspan=\"2\"  class=\"series col8\" >Parent's benefit</th><th rowspan=\"2\"  class=\"series col9\" >Subtotal</th><th rowspan=\"2\"  class=\"series col10\" >Husband's benefit</th><th rowspan=\"2\"  class=\"series col11\" >Widower's benefit</th><th rowspan=\"2\"  class=\"series col12\" >Parent's benefit</th></tr><tr><th class=\"series col2\" >Number</th><th class=\"series col3\" >Percentage of all women retired workers</th><th class=\"series col4\" >Number</th><th class=\"series col5\" >Percentage of all women entitled to wife's benefit because of age</th><th class=\"series col6\" >Number</th><th class=\"series col7\" >Percentage of all women entitled to widow's benefit</th></tr></thead>"
     }, 
     "title": {
+        "category": "5.G OASDI Current-Pay Benefits: Retired Workers with Dual Entitlement", 
         "id": "5G2", 
         "name": "Number receiving both a retired-worker and a secondary benefit, by sex and type of secondary benefit, December 1952\u20132013"
     }

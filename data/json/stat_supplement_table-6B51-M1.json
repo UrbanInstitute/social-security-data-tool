@@ -358,6 +358,7 @@
         "header": "<thead><tr><th rowspan=\"3\"  class=\"series col0\" >Year of entitlement</th><th rowspan=\"3\"  class=\"series col1\" >Number (thousands)</th><th rowspan=\"3\"  class=\"series col2\" >Average age</th><th rowspan=\"2\"  colspan=\"12\"  class=\"series col3\" >Percentage distribution by age at month of entitlement</th></tr><tr><th rowspan=\"2\"  class=\"series col3\" >Total, all ages</th><th rowspan=\"2\"  class=\"series col4\" >62.0</th><th rowspan=\"2\"  class=\"series col5\" >63.0</th><th rowspan=\"2\"  class=\"series col6\" >64.0</th><th colspan=\"3\"  class=\"series col7\" >65 <span class = \"top_footnote top_a\">a</span></th><th colspan=\"2\"  class=\"series col10\" >66 <span class = \"top_footnote top_a\">a</span></th><th rowspan=\"2\"  class=\"series col12\" >Disability conversions <span class = \"top_footnote top_b\">b</span></th><th rowspan=\"2\"  class=\"series col13\" >67\u201369</th><th rowspan=\"2\"  class=\"series col14\" >70 or older</th></tr><tr><th class=\"series col7\" >Before FRA</th><th class=\"series col8\" >At FRA</th><th class=\"series col9\" >After FRA</th><th class=\"series col10\" >At FRA</th><th class=\"series col11\" >After FRA</th></tr></thead>"
     }, 
     "title": {
+        "category": "6.B OASDI Benefits Awarded: Retired Workers", 
         "id": "6B51-M1", 
         "name": "Number, average age, and percentage distribution, by sex and age at entitlement,\n1998\u20132013 :: Subtable : Women"
     }
