@@ -522,7 +522,7 @@ function drawBar(input, col){
                         	if(this.y == false || this.y==null){
                         		return null
                         	}else{
-                            	return '' + '$' + this.y + ' million';
+                            	return this.y;
                             }
                         }
                     }
@@ -571,7 +571,7 @@ function drawBar(input, col){
                         return null
                     }else{
                     	return '' +
-                        	this.x + ': $' + this.y + ' million';
+                        	this.x + ' : ' + this.y;
                         }
                 }
             },
@@ -721,12 +721,11 @@ function drawLineChart(input){
                     text: ''
                 },
                 labels: {
-                    format: '${value:.0f}'
+                    // format: '${value:.0f}'
                 }
             },
             tooltip: {
                 shared: true,
-                valuePrefix: '$',
                 valueDecimals: 0
             },
             credits: {
@@ -800,7 +799,7 @@ function drawSingleYearBarChart(input){
                         	if(this.y == false || this.y==null){
                         		return null
                         	}else{
-                            	return '' + '$' + this.y + ' million';
+                            	return this.y;
                             }
                         }
                     }
@@ -849,7 +848,7 @@ function drawSingleYearBarChart(input){
                         return null
                     }else{
                     	return '' +
-                        	this.x + ': $' + this.y + ' million';
+                        	this.x + ' : ' + this.y;
                         }
                 }
             },
