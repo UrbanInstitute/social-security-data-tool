@@ -273,6 +273,10 @@ function drawTable(input){
     		}, 1000);
 
 		})
+		if(d3.select("#testTable thead").node().getBoundingClientRect().width - $(window).width() + 44 <= 0){
+			d3.select(".rightFader").style("opacity", 0)
+		}else{ d3.select(".rightFader").style("opacity",1)}
+
 }
 function resizeHeader(header, bodyCells){
 // 	var oldWidth = parseFloat(d3.select(header).style("width").replace("px",""));
@@ -1362,37 +1366,22 @@ d3.select("#refresh")
 		filterSheets(0)
 		newTable(0)
 	})
-
 $(document).ready(function() {
+
    $(window).scroll(function() {
-       
-//        var headerH = $('thead').outerHeight(true);
-//        console.log(headerH);
-// //this will calculate header's full height, with borders, margins, paddings
-//        var scrollTopVal = $(this).scrollTop();
-//         if ( scrollTopVal > headerH ) {
-//             $('#subnav').css({'position':'fixed','top' :'0px'});
-//         } else {
-//             $('#subnav').css({'position':'static','top':'0px'});
-//         }
 	   var end = d3.select("#testTable thead").node().getBoundingClientRect().width - $(window).width() + 44;       
        var scrollLeftVal = $(this).scrollLeft();
        d3.select("thead")
        	.style("left", -1*scrollLeftVal + 49)
-       if(Math.abs(scrollLeftVal-end) <= 120){
+       if(Math.abs(scrollLeftVal-end) <= 220){
        	d3.select(".rightFader")
-       		// .transition()
-       		// .style("opacity",0)
-       		.style("right", -120+Math.abs(scrollLeftVal-end))
+       		.style("right", -220+Math.abs(scrollLeftVal-end))
        }
        else{
        	  d3.select(".rightFader")
-       	  // .transition()
-       		// .style("opacity",1)
        		.style("right",0)
 
        }
-       // if ( scrollLeftVal > 1 ) { alert('i scrolled to the left'); }
     });
  });
 

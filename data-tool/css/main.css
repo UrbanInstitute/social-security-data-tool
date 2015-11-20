@@ -1,5 +1,6 @@
 body{
 	font-family: Lato;
+    margin: 0;
 }
 *:focus{
     outline: 0;
@@ -42,12 +43,13 @@ body{
 }
 #valueScrubber{
     top: 293px;
+    left: 10px;
     z-index: 300;
     position: fixed;
 }
 #singleYearCheck{
     top: 331px;
-    left: 53px;
+    left: 63px;
     z-index: 300;
     position: fixed;
 }
@@ -354,4 +356,49 @@ th.selected{
 .footnotes{
     margin-top: 16px;
     margin-bottom: 43px;
+}
+
+/****************************************/
+/************ FOOTER *****************/
+/****************************************/
+footer{
+    background-color: #000;
+    bottom: 0;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    position: relative;
+    width: 100%;
+    z-index: 9999;
+    height: 96px;
+}
+
+footer img{
+    float:left;
+    width:auto;
+}
+
+footer p{
+    float:right; 
+    color:#fff;
+    margin-top:40px;
+    font-weight:300;
+    background-color: #000;
+    margin-right: 14px; 
+}
+
+footer a{
+    color:#00a6d2;   
+}
+
+footer a:hover{
+    color:#fff; 
+    text-decoration: none;   
+}
+footer #disclaimer{
+    width: 450px;
+    float: left;
+    font-size: 12px;
+    margin-top: 10px;
+    margin-left: 26px;
+}
 }
