@@ -62,7 +62,7 @@
                 840190.0, 
                 855021.0
             ], 
-            "type": "********** unknown *******"
+            "type": "dollarMillion"
         }, 
         "col10": {
             "label": "Assets :: Net \nincrease during year", 
@@ -125,7 +125,7 @@
                 54409.0, 
                 32096.0
             ], 
-            "type": "********** unknown *******"
+            "type": "dollarMillion"
         }, 
         "col11": {
             "label": "Assets :: Amount at end of year", 
@@ -188,7 +188,7 @@
                 2732334.0, 
                 2764431.0
             ], 
-            "type": "********** unknown *******"
+            "type": "dollarMillion"
         }, 
         "col2": {
             "label": "Receipts a :: Net payroll tax contri-butions\u00a0b", 
@@ -251,7 +251,7 @@
                 589508.0, 
                 726217.0
             ], 
-            "type": "********** unknown *******"
+            "type": "dollarMillion"
         }, 
         "col3": {
             "label": "Receipts a :: Income \nfrom taxation of\u00a0benefits", 
@@ -314,7 +314,7 @@
                 27258.0, 
                 21086.0
             ], 
-            "type": "********** unknown *******"
+            "type": "dollarMillion"
         }, 
         "col4": {
             "label": "Receipts a :: Reimburse-ments from the general fund of the Treasury\u00a0c", 
@@ -377,7 +377,7 @@
                 114280.0, 
                 4899.0
             ], 
-            "type": "********** unknown *******"
+            "type": "dollarMillion"
         }, 
         "col5": {
             "label": "Receipts a :: Net \ninterest\u00a0d", 
@@ -440,7 +440,7 @@
                 109143.0, 
                 102820.0
             ], 
-            "type": "********** unknown *******"
+            "type": "dollarMillion"
         }, 
         "col6": {
             "label": "Expenditures :: Total", 
@@ -503,7 +503,7 @@
                 785781.0, 
                 822925.0
             ], 
-            "type": "********** unknown *******"
+            "type": "dollarMillion"
         }, 
         "col7": {
             "label": "Expenditures :: Benefit payments\u00a0e", 
@@ -566,7 +566,7 @@
                 774791.0, 
                 812259.0
             ], 
-            "type": "********** unknown *******"
+            "type": "dollarMillion"
         }, 
         "col8": {
             "label": "Expenditures :: Adminis-trative expenses", 
@@ -629,7 +629,7 @@
                 6338.0, 
                 6166.0
             ], 
-            "type": "********** unknown *******"
+            "type": "dollarMillion"
         }, 
         "col9": {
             "label": "Expenditures :: Transfers to Railroad Retirement program", 
@@ -692,7 +692,7 @@
                 4651.0, 
                 4499.0
             ], 
-            "type": "********** unknown *******"
+            "type": "dollarMillion"
         }, 
         "years": {
             "series": [

@@ -4,8 +4,18 @@ import re
 import pprint
 import json
 import copy
+import csv
 
 STATES = {"Alabama": "AL", "Alaska": "AK", "American Samoa": "AS", "Arizona": "AZ", "Arkansas": "AR", "California": "CA", "Colorado": "CO", "Connecticut": "CT", "Delaware": "DE", "District Of Columbia": "DC","District of Columbia": "DC", "Federated States Of Micronesia": "FM", "Florida": "FL", "Georgia": "GA", "Guam": "GU", "Hawaii": "HI", "Idaho": "ID", "Illinois": "IL", "Indiana": "IN", "Iowa": "IA", "Kansas": "KS", "Kentucky": "KY", "Louisiana": "LA", "Maine": "ME", "Marshall Islands": "MH", "Maryland": "MD", "Massachusetts": "MA", "Michigan": "MI", "Minnesota": "MN", "Mississippi": "MS", "Missouri": "MO", "Montana": "MT", "Nebraska": "NE", "Nevada": "NV", "New Hampshire": "NH", "New Jersey": "NJ", "New Mexico": "NM", "New York": "NY", "North Carolina": "NC", "North Dakota": "ND", "Northern Mariana Islands": "MP", "Ohio": "OH", "Oklahoma": "OK", "Oregon": "OR", "Palau": "PW", "Pennsylvania": "PA", "Puerto Rico": "PR", "Rhode Island": "RI", "South Carolina": "SC", "South Dakota": "SD", "Tennessee": "TN", "Texas": "TX", "Utah": "UT", "Vermont": "VT", "Virgin Islands": "VI", "U.S. Virgin Islands": "VI", "Virginia": "VA", "Washington": "WA", "West Virginia": "WV", "Wisconsin": "WI", "Wyoming": "WY"}
+units = {}
+
+def parseUnits():
+	cr = csv.reader(open("supplement_units.csv","rU"))
+	head = cr.next()
+	for row in cr:
+		u = units[row[0]] = []
+		for c in range(1, len(row)):
+			u.append(row[c])
 
 def parseTitle(sheet, sheetType, multiSubtitle=False):
 	title = {}
@@ -38,7 +48,7 @@ def parseFootnotes(sheet, lastRow):
 			notes.append({"type":"footnote", "symbol":row[0].value, "content":row[1].value})
 	return notes
 
-def parseHeader(output, headRows, lastRow, sheet, sheetType, startRow=False):
+def parseHeader(output, headRows, lastRow, sheet, sheetType, startRow=False, multi=False):
 	headerString = "<thead>"
 	rows = []
 	data = {}
@@ -76,11 +86,11 @@ def parseHeader(output, headRows, lastRow, sheet, sheetType, startRow=False):
 				if((r == headRows-1 and c != 0) or (c == 0 and r ==2)):
 					if sheetType == "medBar":
 						if (sheet.name == "5.H3" or sheet.name == "5.H4") and (c != 1 and c != 2):
-							getData(data, fixRows, r, c, headRows, lastRow, sheet, sheetType, startRow)
+							getData(data, fixRows, r, c, headRows, lastRow, sheet, sheetType, startRow, multi)
 						elif (c != 1 and sheet.name != "5.H3" and sheet.name != "5.H4"):
-							getData(data, fixRows, r, c, headRows, lastRow, sheet, sheetType, startRow)
+							getData(data, fixRows, r, c, headRows, lastRow, sheet, sheetType, startRow, multi)
 					else:
-						getData(data, fixRows, r, c, headRows, lastRow, sheet, sheetType, startRow)
+						getData(data, fixRows, r, c, headRows, lastRow, sheet, sheetType, startRow, multi)
 		headerString += "</tr>"
 	headerString += "</thead>"
 	bodyString = getTbody(sheet, sheetType, headRows, lastRow, startRow)
@@ -224,7 +234,7 @@ def getTH(sheet, rows, rowNum, colNum):
 
 
 
-def getData(data, rows, rowNum, colNum, headR, lastRow, sheet, sheetType, startRow):
+def getData(data, rows, rowNum, colNum, headR, lastRow, sheet, sheetType, startRow, multi=False):
 	if(startRow):
 		headRows = startRow
 	else:
@@ -246,7 +256,18 @@ def getData(data, rows, rowNum, colNum, headR, lastRow, sheet, sheetType, startR
 			obj["series"] = getSeries(rowNum, colNum, lastRow, sheet, sheetType, startRow)
 		label = obj["label"] = getLabel(rows, colNum)
 		addWords(words, label)
-		dType = obj["type"] = getType(label)
+		if multi:
+			name = sheet.name + "-M" + str(multi["index"])
+			unit = " **** unknown ****"
+			if name in units:
+				unit = units[sheet.name + "-M" + str(multi["index"])][colNum]
+			else:
+				unit = units[sheet.name][colNum]
+		else:
+			unit = units[sheet.name][colNum]
+		if unit == "":
+			print unit, colNum, sheet.name
+		dType = obj["type"] = unit
 
 def getXSeries(rowNum, colNum, headR, lastRow, sheet, sheetType, startRow):
 	if(startRow):
@@ -333,7 +354,6 @@ def getSeries(rowN, colNum, lastRow, sheet, sheetType, startRow):
 			if sheet.name !="5.F7" and sheet.name != "5.A1.8":
 				if i == lastRow-1:
 					break
-			print i, lastRow, val, sheet.name
 			if sheet.name == "5.H3" or sheet.name == "5.H4":
 #Ignore first 3 rows, which are totals
 				if i > rowNum + 3:
@@ -446,11 +466,13 @@ def addWords(words, string):
 	string = re.sub(r'[^\w\s]+', ' ', string)
 	words.extend(string.split())
 
+parseUnits()
+
 book = xlrd.open_workbook("../data/statistical_supplement/supplement14.xls", formatting_info=True)
 sheets = book.sheet_names()
 
 #Years in 1st column (or year ranges), blank 2nd column, data
-simpleTimeSheets = ['2.A3','2.A4','2.A8','2.A9','2.A13','2.A27','2.A28','2.C1','2.F3','3.C4','3.C6.1','3.E1','4.A1','4.A2','4.A3','4.A4','4.A5','4.A6','4.B1','4.B2','4.B4','4.B11','4.C1','5.A17','5.C2','5.D3','5.E2','5.F6','5.F8','5.F12','5.G2','6.C7','6.D6','6.D8','6.D9','7.A9','7.E6','8.A1','8.A2','8.B10','9.B1','9.D1']
+simpleTimeSheets = ['2.A3','2.A4','4.A1','4.A2','4.A3','4.A4','4.A5','4.A6','4.C1','5.A17','5.D3','5.E2','5.F6','5.F8','6.C7','6.D8']
 
 #time series without blank 2nd column
 col1_exceptions = ['5.A4','5.F4','6.D4','6.C7','5.F8','5E.2','5.D3','5.C2','5.A17']
@@ -706,7 +728,7 @@ for sheet_id in timeMulti:
 				multiSubtitles.append(multiSubtitle)
 		for i in range(0, len(rowBreaks)-1):
 			output["html"] = {}
-			values = parseHeader(output, headRows, rowBreaks[i+1], xl_sheet, "multiTime", rowBreaks[i]+1)
+			values = parseHeader(output, headRows, rowBreaks[i+1], xl_sheet, "multiTime", rowBreaks[i]+1, {"value" : multiSubtitles[i], "index":i})
 			titles = parseTitle(xl_sheet, "multiTime", {"value" : multiSubtitles[i], "index":i})
 			footnotes = parseFootnotes(xl_sheet, rowBreaks[len(rowBreaks)-1])
 			output["html"]["header"] = values["headerString"]

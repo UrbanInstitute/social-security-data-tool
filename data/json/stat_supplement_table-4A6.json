@@ -62,7 +62,7 @@
                 127155.0, 
                 130427.0
             ], 
-            "type": "********** unknown *******"
+            "type": "dollarMillion"
         }, 
         "col2": {
             "label": "Wives and husbands", 
@@ -125,7 +125,7 @@
                 631.0, 
                 615.0
             ], 
-            "type": "********** unknown *******"
+            "type": "dollarMillion"
         }, 
         "col3": {
             "label": "Children", 
@@ -188,7 +188,7 @@
                 9092.0, 
                 9028.0
             ], 
-            "type": "********** unknown *******"
+            "type": "dollarMillion"
         }, 
         "years": {
             "series": [

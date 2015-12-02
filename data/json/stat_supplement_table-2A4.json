@@ -64,7 +64,7 @@
                 false, 
                 false
             ], 
-            "type": "********** unknown *******"
+            "type": "dollar"
         }, 
         "col10": {
             "label": "Self-employed person :: HI", 
@@ -129,7 +129,7 @@
                 false, 
                 false
             ], 
-            "type": "********** unknown *******"
+            "type": "dollar"
         }, 
         "col2": {
             "label": "Employee :: Subtotal, OASDI", 
@@ -194,7 +194,7 @@
                 7049.4, 
                 7254.0
             ], 
-            "type": "********** unknown *******"
+            "type": "dollar"
         }, 
         "col3": {
             "label": "Employee :: OASI", 
@@ -259,7 +259,7 @@
                 6026.1, 
                 6201.0
             ], 
-            "type": "********** unknown *******"
+            "type": "dollar"
         }, 
         "col4": {
             "label": "Employee :: DI", 
@@ -324,7 +324,7 @@
                 1023.3, 
                 1053.0
             ], 
-            "type": "********** unknown *******"
+            "type": "dollar"
         }, 
         "col5": {
             "label": "Employee :: HI", 
@@ -389,7 +389,7 @@
                 false, 
                 false
             ], 
-            "type": "********** unknown *******"
+            "type": "dollar"
         }, 
         "col6": {
             "label": "Self-employed person :: Total, OASDI and HI", 
@@ -454,7 +454,7 @@
                 false, 
                 false
             ], 
-            "type": "********** unknown *******"
+            "type": "dollar"
         }, 
         "col7": {
             "label": "Self-employed person :: Subtotal, OASDI", 
@@ -519,7 +519,7 @@
                 14098.8, 
                 14508.0
             ], 
-            "type": "********** unknown *******"
+            "type": "dollar"
         }, 
         "col8": {
             "label": "Self-employed person :: OASI", 
@@ -584,7 +584,7 @@
                 12052.2, 
                 12402.0
             ], 
-            "type": "********** unknown *******"
+            "type": "dollar"
         }, 
         "col9": {
             "label": "Self-employed person :: DI", 
@@ -649,7 +649,7 @@
                 2046.6, 
                 2106.0
             ], 
-            "type": "********** unknown *******"
+            "type": "dollar"
         }, 
         "years": {
             "series": [

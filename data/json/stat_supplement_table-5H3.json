@@ -138,7 +138,7 @@
                 0.9, 
                 7.4
             ], 
-            "type": "********** unknown *******"
+            "type": "percent"
         }, 
         "col11": {
             "label": "Disabled worker, wife, and\u2014 :: 2 or more children", 
@@ -208,7 +208,7 @@
                 0.5, 
                 5.0
             ], 
-            "type": "********** unknown *******"
+            "type": "percent"
         }, 
         "col3": {
             "label": "Retired worker only :: Men", 
@@ -278,7 +278,7 @@
                 false, 
                 0.1
             ], 
-            "type": "********** unknown *******"
+            "type": "percent"
         }, 
         "col4": {
             "label": "Retired worker only :: Women", 
@@ -348,7 +348,7 @@
                 false, 
                 false
             ], 
-            "type": "********** unknown *******"
+            "type": "percent"
         }, 
         "col5": {
             "label": "Retired worker and wife :: Women", 
@@ -418,7 +418,7 @@
                 0.9, 
                 8.9
             ], 
-            "type": "********** unknown *******"
+            "type": "percent"
         }, 
         "col6": {
             "label": "Retired worker, wife, and\u2014 :: 1 child", 
@@ -488,7 +488,7 @@
                 1.9, 
                 26.7
             ], 
-            "type": "********** unknown *******"
+            "type": "percent"
         }, 
         "col7": {
             "label": "Retired worker, wife, and\u2014 :: 2 or more children", 
@@ -558,7 +558,7 @@
                 1.6, 
                 30.6
             ], 
-            "type": "********** unknown *******"
+            "type": "percent"
         }, 
         "col8": {
             "label": "Disabled worker only :: Men", 
@@ -628,7 +628,7 @@
                 false, 
                 false
             ], 
-            "type": "********** unknown *******"
+            "type": "percent"
         }, 
         "col9": {
             "label": "Disabled worker only :: Women", 
@@ -698,7 +698,7 @@
                 false, 
                 false
             ], 
-            "type": "********** unknown *******"
+            "type": "percent"
         }
     }, 
     "default": "col3", 

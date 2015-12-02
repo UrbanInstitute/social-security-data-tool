@@ -45,7 +45,7 @@
                 293466.0, 
                 277824.0
             ], 
-            "type": "********** unknown *******"
+            "type": "number"
         }, 
         "col2": {
             "label": "Children of\u2014 :: Retired workers", 
@@ -91,7 +91,7 @@
                 40442.0, 
                 40089.0
             ], 
-            "type": "********** unknown *******"
+            "type": "number"
         }, 
         "col3": {
             "label": "Children of\u2014 :: Deceased workers", 
@@ -137,7 +137,7 @@
                 116714.0, 
                 110193.0
             ], 
-            "type": "********** unknown *******"
+            "type": "number"
         }, 
         "col4": {
             "label": "Children of\u2014 :: Disabled workers", 
@@ -183,7 +183,7 @@
                 136310.0, 
                 127542.0
             ], 
-            "type": "********** unknown *******"
+            "type": "number"
         }, 
         "years": {
             "series": [

@@ -249,7 +249,7 @@
                     "value": "U.S. Virgin Islands"
                 }
             ], 
-            "type": "********** unknown *******"
+            "type": ""
         }, 
         "col10": {
             "label": "Percentage distribution by dollar amount of benefit :: 1,000.00\u2013\n1,099.90", 
@@ -499,7 +499,7 @@
                     "value": 9.4
                 }
             ], 
-            "type": "dollar"
+            "type": "percent"
         }, 
         "col11": {
             "label": "Percentage distribution by dollar amount of benefit :: 1,100.00\u2013\n1,199.90", 
@@ -749,7 +749,7 @@
                     "value": 7.8
                 }
             ], 
-            "type": "dollar"
+            "type": "percent"
         }, 
         "col12": {
             "label": "Percentage distribution by dollar amount of benefit :: 1,200.00\u2013\n1,299.90", 
@@ -999,7 +999,7 @@
                     "value": 7.3
                 }
             ], 
-            "type": "dollar"
+            "type": "percent"
         }, 
         "col13": {
             "label": "Percentage distribution by dollar amount of benefit :: 1,300.00\u2013\n1,399.90", 
@@ -1249,7 +1249,7 @@
                     "value": 6.2
                 }
             ], 
-            "type": "dollar"
+            "type": "percent"
         }, 
         "col14": {
             "label": "Percentage distribution by dollar amount of benefit :: 1,400.00 or more", 
@@ -1499,7 +1499,7 @@
                     "value": 26.5
                 }
             ], 
-            "type": "dollar"
+            "type": "percent"
         }, 
         "col15": {
             "label": "Monthly benefit (dollars) :: Average", 
@@ -2249,7 +2249,7 @@
                     "value": ""
                 }
             ], 
-            "type": "********** unknown *******"
+            "type": ""
         }, 
         "col3": {
             "label": "Number :: ", 
@@ -2499,7 +2499,7 @@
                     "value": 1683.0
                 }
             ], 
-            "type": "********** unknown *******"
+            "type": "number"
         }, 
         "col4": {
             "label": "Percentage distribution by dollar amount of benefit :: Total", 
@@ -2749,7 +2749,7 @@
                     "value": 100.0
                 }
             ], 
-            "type": "dollar"
+            "type": "percent"
         }, 
         "col5": {
             "label": "Percentage distribution by dollar amount of benefit :: Less than 600.00", 
@@ -2999,7 +2999,7 @@
                     "value": 9.9
                 }
             ], 
-            "type": "dollar"
+            "type": "percent"
         }, 
         "col6": {
             "label": "Percentage distribution by dollar amount of benefit :: 600.00\u2013\n699.90", 
@@ -3249,7 +3249,7 @@
                     "value": 5.7
                 }
             ], 
-            "type": "dollar"
+            "type": "percent"
         }, 
         "col7": {
             "label": "Percentage distribution by dollar amount of benefit :: 700.00\u2013\n799.90", 
@@ -3499,7 +3499,7 @@
                     "value": 8.8
                 }
             ], 
-            "type": "dollar"
+            "type": "percent"
         }, 
         "col8": {
             "label": "Percentage distribution by dollar amount of benefit :: 800.00\u2013\n899.90", 
@@ -3749,7 +3749,7 @@
                     "value": 9.1
                 }
             ], 
-            "type": "dollar"
+            "type": "percent"
         }, 
         "col9": {
             "label": "Percentage distribution by dollar amount of benefit :: 900.00\u2013\n999.90", 
@@ -3999,7 +3999,7 @@
                     "value": 9.3
                 }
             ], 
-            "type": "dollar"
+            "type": "percent"
         }
     }, 
     "footnotes": [

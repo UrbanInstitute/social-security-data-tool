@@ -22,7 +22,7 @@
                 303.0, 
                 283.0
             ], 
-            "type": "********** unknown *******"
+            "type": "number"
         }, 
         "col3": {
             "label": "All parents :: Average monthly benefit (dollars)", 
@@ -46,7 +46,7 @@
                 34.0, 
                 28.0
             ], 
-            "type": "********** unknown *******"
+            "type": "number"
         }, 
         "col5": {
             "label": "Men :: Average monthly benefit (dollars)", 
@@ -70,7 +70,7 @@
                 269.0, 
                 255.0
             ], 
-            "type": "********** unknown *******"
+            "type": "number"
         }, 
         "col7": {
             "label": "Women :: Average monthly benefit (dollars)", 

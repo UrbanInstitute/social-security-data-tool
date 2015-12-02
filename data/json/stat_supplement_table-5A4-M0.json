@@ -40,7 +40,7 @@
                 56758185.0, 
                 57978610.0
             ], 
-            "type": "********** unknown *******"
+            "type": "number"
         }, 
         "col10": {
             "label": "Parents :: DI trust fund", 
@@ -81,7 +81,7 @@
                 1427.0, 
                 1371.0
             ], 
-            "type": "********** unknown *******"
+            "type": "number"
         }, 
         "col11": {
             "label": "Special\nage-72 beneficiaries :: DI trust fund", 
@@ -122,7 +122,7 @@
                 0.0, 
                 0.0
             ], 
-            "type": "********** unknown *******"
+            "type": "number"
         }, 
         "col2": {
             "label": "OASDI :: OASI trust fund", 
@@ -163,7 +163,7 @@
                 45868992.0, 
                 46992611.0
             ], 
-            "type": "********** unknown *******"
+            "type": "number"
         }, 
         "col3": {
             "label": "OASDI :: DI trust fund", 
@@ -204,7 +204,7 @@
                 10889193.0, 
                 10985999.0
             ], 
-            "type": "********** unknown *******"
+            "type": "number"
         }, 
         "col4": {
             "label": "Retired workers :: DI trust fund", 
@@ -245,7 +245,7 @@
                 36720492.0, 
                 37892659.0
             ], 
-            "type": "********** unknown *******"
+            "type": "number"
         }, 
         "col5": {
             "label": "Disabled workers :: DI trust fund", 
@@ -286,7 +286,7 @@
                 8826591.0, 
                 8940950.0
             ], 
-            "type": "********** unknown *******"
+            "type": "number"
         }, 
         "col6": {
             "label": "Wives and husbands :: DI trust fund", 
@@ -327,7 +327,7 @@
                 2443212.0, 
                 2442308.0
             ], 
-            "type": "********** unknown *******"
+            "type": "number"
         }, 
         "col7": {
             "label": "Children :: DI trust fund", 
@@ -368,7 +368,7 @@
                 4419404.0, 
                 4412620.0
             ], 
-            "type": "********** unknown *******"
+            "type": "number"
         }, 
         "col8": {
             "label": "Widowed mothers and fathers :: DI trust fund", 
@@ -409,7 +409,7 @@
                 153628.0, 
                 149778.0
             ], 
-            "type": "********** unknown *******"
+            "type": "number"
         }, 
         "col9": {
             "label": "Widow(er)s :: DI trust fund", 
@@ -450,7 +450,7 @@
                 4193431.0, 
                 4138924.0
             ], 
-            "type": "********** unknown *******"
+            "type": "number"
         }, 
         "years": {
             "series": [

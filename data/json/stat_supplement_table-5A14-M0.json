@@ -17,7 +17,7 @@
                 25097.0, 
                 25685.0
             ], 
-            "type": "********** unknown *******"
+            "type": "numberThousand"
         }, 
         "col2": {
             "label": "Entitled as worker\u00a0b :: Subtotal :: ", 
@@ -35,7 +35,7 @@
                 19001.0, 
                 19662.0
             ], 
-            "type": "********** unknown *******"
+            "type": "numberThousand"
         }, 
         "col3": {
             "label": "Entitled as worker\u00a0b :: Worker only :: ", 
@@ -53,7 +53,7 @@
                 12227.0, 
                 12825.0
             ], 
-            "type": "********** unknown *******"
+            "type": "numberThousand"
         }, 
         "col4": {
             "label": "Entitled as worker\u00a0b :: Dually entitled :: Subtotal", 
@@ -71,7 +71,7 @@
                 6775.0, 
                 6837.0
             ], 
-            "type": "********** unknown *******"
+            "type": "numberThousand"
         }, 
         "col5": {
             "label": "Entitled as worker\u00a0b :: Dually entitled :: Wife's benefit", 
@@ -89,7 +89,7 @@
                 2995.0, 
                 3029.0
             ], 
-            "type": "********** unknown *******"
+            "type": "numberThousand"
         }, 
         "col6": {
             "label": "Entitled as worker\u00a0b :: Dually entitled :: Widow's or parent's benefit\u00a0c", 
@@ -107,7 +107,7 @@
                 3779.0, 
                 3808.0
             ], 
-            "type": "********** unknown *******"
+            "type": "numberThousand"
         }, 
         "col7": {
             "label": "Entitled as wife, widow, or parent only :: Dually entitled :: Subtotal", 
@@ -125,7 +125,7 @@
                 6095.0, 
                 6024.0
             ], 
-            "type": "********** unknown *******"
+            "type": "numberThousand"
         }, 
         "col8": {
             "label": "Entitled as wife, widow, or parent only :: Dually entitled :: Wife's benefit", 
@@ -143,7 +143,7 @@
                 2260.0, 
                 2250.0
             ], 
-            "type": "********** unknown *******"
+            "type": "numberThousand"
         }, 
         "col9": {
             "label": "Entitled as wife, widow, or parent only :: Dually entitled :: Widow's or parent's benefit\u00a0c", 
@@ -161,7 +161,7 @@
                 3836.0, 
                 3774.0
             ], 
-            "type": "********** unknown *******"
+            "type": "numberThousand"
         }, 
         "years": {
             "series": [

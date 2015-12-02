@@ -80,7 +80,7 @@
                 165.6, 
                 167.7
             ], 
-            "type": "********** unknown *******"
+            "type": "numberMillion"
         }, 
         "col2": {
             "label": "Year :: Not permanently insured", 
@@ -161,7 +161,7 @@
                 43.8, 
                 43.8
             ], 
-            "type": "********** unknown *******"
+            "type": "numberMillion"
         }, 
         "col3": {
             "label": "Insured in event of disability :: Not permanently insured", 
@@ -242,7 +242,7 @@
                 150.5, 
                 151.1
             ], 
-            "type": "********** unknown *******"
+            "type": "numberMillion"
         }, 
         "years": {
             "series": [

@@ -38,7 +38,7 @@
                 1256.2, 
                 1271.42
             ], 
-            "type": "********** unknown *******"
+            "type": "dollar"
         }, 
         "col2": {
             "label": "Year :: Women", 
@@ -77,7 +77,7 @@
                 992.98, 
                 1011.44
             ], 
-            "type": "********** unknown *******"
+            "type": "dollar"
         }, 
         "col3": {
             "label": "Spouses :: Wives", 
@@ -116,7 +116,7 @@
                 305.74, 
                 309.34
             ], 
-            "type": "********** unknown *******"
+            "type": "dollar"
         }, 
         "col4": {
             "label": "Spouses :: Husbands", 
@@ -155,7 +155,7 @@
                 266.55, 
                 282.69
             ], 
-            "type": "********** unknown *******"
+            "type": "dollar"
         }, 
         "col5": {
             "label": "Children :: All", 
@@ -194,7 +194,7 @@
                 336.12, 
                 341.38
             ], 
-            "type": "********** unknown *******"
+            "type": "dollar"
         }, 
         "col6": {
             "label": "Children :: Under age 18", 
@@ -233,7 +233,7 @@
                 323.19, 
                 328.05
             ], 
-            "type": "********** unknown *******"
+            "type": "dollar"
         }, 
         "col7": {
             "label": "Children :: Disabled adult children", 
@@ -272,7 +272,7 @@
                 465.6, 
                 471.85
             ], 
-            "type": "********** unknown *******"
+            "type": "dollar"
         }, 
         "col8": {
             "label": "Children :: Students", 
@@ -311,7 +311,7 @@
                 457.16, 
                 465.34
             ], 
-            "type": "********** unknown *******"
+            "type": "dollar"
         }, 
         "years": {
             "series": [

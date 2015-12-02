@@ -26,7 +26,7 @@
                 3258426.0, 
                 3236746.0
             ], 
-            "type": "********** unknown *******"
+            "type": "number"
         }, 
         "col2": {
             "label": "Number of children of\u2014 :: Retired workers", 
@@ -53,7 +53,7 @@
                 321534.0, 
                 325846.0
             ], 
-            "type": "********** unknown *******"
+            "type": "number"
         }, 
         "col3": {
             "label": "Number of children of\u2014 :: Deceased workers", 
@@ -80,7 +80,7 @@
                 1213164.0, 
                 1200282.0
             ], 
-            "type": "********** unknown *******"
+            "type": "number"
         }, 
         "col4": {
             "label": "Number of children of\u2014 :: Disabled workers", 
@@ -107,7 +107,7 @@
                 1723728.0, 
                 1710618.0
             ], 
-            "type": "********** unknown *******"
+            "type": "number"
         }, 
         "col5": {
             "label": "Total monthly benefits for children of\u2014\n(thousands of dollars) :: All workers", 
@@ -134,7 +134,7 @@
                 1711882.0, 
                 1728766.0
             ], 
-            "type": "dollar"
+            "type": "dollarThousand"
         }, 
         "col6": {
             "label": "Total monthly benefits for children of\u2014\n(thousands of dollars) :: Retired workers", 
@@ -161,7 +161,7 @@
                 193294.0, 
                 200324.0
             ], 
-            "type": "dollar"
+            "type": "dollarThousand"
         }, 
         "col7": {
             "label": "Total monthly benefits for children of\u2014\n(thousands of dollars) :: Deceased workers", 
@@ -188,7 +188,7 @@
                 961500.0, 
                 967270.0
             ], 
-            "type": "dollar"
+            "type": "dollarThousand"
         }, 
         "col8": {
             "label": "Total monthly benefits for children of\u2014\n(thousands of dollars) :: Disabled workers", 
@@ -215,7 +215,7 @@
                 557088.0, 
                 561172.0
             ], 
-            "type": "dollar"
+            "type": "dollarThousand"
         }, 
         "years": {
             "series": [

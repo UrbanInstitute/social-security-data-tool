@@ -23,7 +23,7 @@
                 154302.0, 
                 145708.0
             ], 
-            "type": "********** unknown *******"
+            "type": "number"
         }, 
         "col2": {
             "label": "Number of children of\u2014 :: Retired workers", 
@@ -47,7 +47,7 @@
                 20923.0, 
                 20440.0
             ], 
-            "type": "********** unknown *******"
+            "type": "number"
         }, 
         "col3": {
             "label": "Number of children of\u2014 :: Deceased workers", 
@@ -71,7 +71,7 @@
                 69460.0, 
                 64731.0
             ], 
-            "type": "********** unknown *******"
+            "type": "number"
         }, 
         "col4": {
             "label": "Number of children of\u2014 :: Disabled workers", 
@@ -95,7 +95,7 @@
                 63919.0, 
                 60537.0
             ], 
-            "type": "********** unknown *******"
+            "type": "number"
         }, 
         "col5": {
             "label": "Total monthly benefits for children of\u2014\n(thousands of dollars) :: All workers", 
@@ -119,7 +119,7 @@
                 103437.0, 
                 99683.0
             ], 
-            "type": "dollar"
+            "type": "dollarThousand"
         }, 
         "col6": {
             "label": "Total monthly benefits for children of\u2014\n(thousands of dollars) :: Retired workers", 
@@ -143,7 +143,7 @@
                 14511.0, 
                 14521.0
             ], 
-            "type": "dollar"
+            "type": "dollarThousand"
         }, 
         "col7": {
             "label": "Total monthly benefits for children of\u2014\n(thousands of dollars) :: Deceased workers", 
@@ -167,7 +167,7 @@
                 59705.0, 
                 56992.0
             ], 
-            "type": "dollar"
+            "type": "dollarThousand"
         }, 
         "col8": {
             "label": "Total monthly benefits for children of\u2014\n(thousands of dollars) :: Disabled workers", 
@@ -191,7 +191,7 @@
                 29221.0, 
                 28170.0
             ], 
-            "type": "dollar"
+            "type": "dollarThousand"
         }, 
         "years": {
             "series": [

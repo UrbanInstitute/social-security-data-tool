@@ -72,7 +72,7 @@
                 3922509.0, 
                 3990917.0
             ], 
-            "type": "********** unknown *******"
+            "type": "number"
         }, 
         "col10": {
             "label": "Widow(er)s :: Students", 
@@ -145,7 +145,7 @@
                 392487.0, 
                 416752.0
             ], 
-            "type": "********** unknown *******"
+            "type": "number"
         }, 
         "col11": {
             "label": "Parents :: Students", 
@@ -218,7 +218,7 @@
                 140.0, 
                 191.0
             ], 
-            "type": "********** unknown *******"
+            "type": "number"
         }, 
         "col2": {
             "label": "Retired workers :: ", 
@@ -291,7 +291,7 @@
                 1609455.0, 
                 1629995.0
             ], 
-            "type": "********** unknown *******"
+            "type": "number"
         }, 
         "col3": {
             "label": "Disabled workers :: ", 
@@ -364,7 +364,7 @@
                 728320.0, 
                 769171.0
             ], 
-            "type": "********** unknown *******"
+            "type": "number"
         }, 
         "col4": {
             "label": "Wives and husbands :: ", 
@@ -437,7 +437,7 @@
                 243006.0, 
                 242932.0
             ], 
-            "type": "********** unknown *******"
+            "type": "number"
         }, 
         "col5": {
             "label": "Children :: Total", 
@@ -510,7 +510,7 @@
                 915308.0, 
                 899184.0
             ], 
-            "type": "********** unknown *******"
+            "type": "number"
         }, 
         "col6": {
             "label": "Children :: Under\nage 18", 
@@ -583,7 +583,7 @@
                 575638.0, 
                 561745.0
             ], 
-            "type": "********** unknown *******"
+            "type": "number"
         }, 
         "col7": {
             "label": "Children :: Disabled adult children", 
@@ -656,7 +656,7 @@
                 48033.0, 
                 50081.0
             ], 
-            "type": "********** unknown *******"
+            "type": "number"
         }, 
         "col8": {
             "label": "Children :: Students", 
@@ -729,7 +729,7 @@
                 291637.0, 
                 287358.0
             ], 
-            "type": "********** unknown *******"
+            "type": "number"
         }, 
         "col9": {
             "label": "Widowed mothers and fathers :: Students", 
@@ -802,7 +802,7 @@
                 33793.0, 
                 32692.0
             ], 
-            "type": "********** unknown *******"
+            "type": "number"
         }, 
         "years": {
             "series": [

@@ -14,7 +14,7 @@
                 4952.6, 
                 5006.9
             ], 
-            "type": "********** unknown *******"
+            "type": "numberThousand"
         }, 
         "col2": {
             "label": "Worker", 
@@ -22,7 +22,7 @@
                 3363.5, 
                 3390.8
             ], 
-            "type": "********** unknown *******"
+            "type": "numberThousand"
         }, 
         "col3": {
             "label": "Family members and survivors", 
@@ -30,7 +30,7 @@
                 1589.1, 
                 1616.1
             ], 
-            "type": "********** unknown *******"
+            "type": "numberThousand"
         }
     }, 
     "footnotes": [

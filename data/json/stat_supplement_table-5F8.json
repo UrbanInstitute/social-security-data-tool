@@ -69,7 +69,7 @@
                 4193431.0, 
                 4138924.0
             ], 
-            "type": "********** unknown *******"
+            "type": "number"
         }, 
         "col2": {
             "label": "Total :: Total monthly benefits (thousands of dollars)", 
@@ -139,7 +139,7 @@
                 4967481.0, 
                 5013184.0
             ], 
-            "type": "dollar"
+            "type": "dollarThousand"
         }, 
         "col3": {
             "label": "Nondisabled\u2014 :: Widows :: Number", 
@@ -209,7 +209,7 @@
                 3860506.0, 
                 3798108.0
             ], 
-            "type": "********** unknown *******"
+            "type": "number"
         }, 
         "col4": {
             "label": "Nondisabled\u2014 :: Widows :: Total monthly benefits (thousands of dollars)", 
@@ -279,7 +279,7 @@
                 4703820.0, 
                 4738188.0
             ], 
-            "type": "dollar"
+            "type": "dollarThousand"
         }, 
         "col5": {
             "label": "Nondisabled\u2014 :: Widowers :: Number", 
@@ -349,7 +349,7 @@
                 77453.0, 
                 83568.0
             ], 
-            "type": "********** unknown *******"
+            "type": "number"
         }, 
         "col6": {
             "label": "Nondisabled\u2014 :: Widowers :: Total monthly benefits (thousands of dollars)", 
@@ -419,7 +419,7 @@
                 81901.0, 
                 90604.0
             ], 
-            "type": "dollar"
+            "type": "dollarThousand"
         }, 
         "col7": {
             "label": "Disabled widow(er)s :: Widowers :: Number", 
@@ -489,7 +489,7 @@
                 255472.0, 
                 257248.0
             ], 
-            "type": "********** unknown *******"
+            "type": "number"
         }, 
         "col8": {
             "label": "Disabled widow(er)s :: Widowers :: Total monthly benefits (thousands of dollars)", 
@@ -559,7 +559,7 @@
                 181760.0, 
                 184392.0
             ], 
-            "type": "dollar"
+            "type": "dollarThousand"
         }, 
         "years": {
             "series": [

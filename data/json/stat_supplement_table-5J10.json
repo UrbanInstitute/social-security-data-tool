@@ -249,7 +249,7 @@
                     "value": "U.S. Virgin\n  Islands"
                 }
             ], 
-            "type": "********** unknown *******"
+            "type": ""
         }, 
         "col10": {
             "label": "Disabled adult children of\u2014 :: Deceased workers", 
@@ -499,7 +499,7 @@
                     "value": 197.0
                 }
             ], 
-            "type": "********** unknown *******"
+            "type": "number"
         }, 
         "col11": {
             "label": "Disabled adult children of\u2014 :: Disabled workers", 
@@ -749,7 +749,7 @@
                     "value": 15.0
                 }
             ], 
-            "type": "********** unknown *******"
+            "type": "number"
         }, 
         "col12": {
             "label": "Students aged 18\u201319 of\u2014 :: Subtotal", 
@@ -999,7 +999,7 @@
                     "value": 53.0
                 }
             ], 
-            "type": "********** unknown *******"
+            "type": "number"
         }, 
         "col13": {
             "label": "Students aged 18\u201319 of\u2014 :: Retired workers", 
@@ -1249,7 +1249,7 @@
                     "value": 19.0
                 }
             ], 
-            "type": "********** unknown *******"
+            "type": "number"
         }, 
         "col14": {
             "label": "Students aged 18\u201319 of\u2014 :: Deceased workers", 
@@ -1499,7 +1499,7 @@
                     "value": 25.0
                 }
             ], 
-            "type": "********** unknown *******"
+            "type": "number"
         }, 
         "col15": {
             "label": "Students aged 18\u201319 of\u2014 :: Disabled workers", 
@@ -1749,7 +1749,7 @@
                     "value": 9.0
                 }
             ], 
-            "type": "********** unknown *******"
+            "type": "number"
         }, 
         "col2": {
             "label": "State or area :: ", 
@@ -1999,7 +1999,7 @@
                     "value": ""
                 }
             ], 
-            "type": "********** unknown *******"
+            "type": ""
         }, 
         "col3": {
             "label": "Total :: ", 
@@ -2249,7 +2249,7 @@
                     "value": 1763.0
                 }
             ], 
-            "type": "********** unknown *******"
+            "type": "number"
         }, 
         "col4": {
             "label": "Children under age 18 of\u2014 :: Subtotal", 
@@ -2499,7 +2499,7 @@
                     "value": 1368.0
                 }
             ], 
-            "type": "********** unknown *******"
+            "type": "number"
         }, 
         "col5": {
             "label": "Children under age 18 of\u2014 :: Retired workers", 
@@ -2749,7 +2749,7 @@
                     "value": 321.0
                 }
             ], 
-            "type": "********** unknown *******"
+            "type": "number"
         }, 
         "col6": {
             "label": "Children under age 18 of\u2014 :: Deceased workers", 
@@ -2999,7 +2999,7 @@
                     "value": 621.0
                 }
             ], 
-            "type": "********** unknown *******"
+            "type": "number"
         }, 
         "col7": {
             "label": "Children under age 18 of\u2014 :: Disabled workers", 
@@ -3249,7 +3249,7 @@
                     "value": 426.0
                 }
             ], 
-            "type": "********** unknown *******"
+            "type": "number"
         }, 
         "col8": {
             "label": "Disabled adult children of\u2014 :: Subtotal", 
@@ -3499,7 +3499,7 @@
                     "value": 342.0
                 }
             ], 
-            "type": "********** unknown *******"
+            "type": "number"
         }, 
         "col9": {
             "label": "Disabled adult children of\u2014 :: Retired workers", 
@@ -3749,7 +3749,7 @@
                     "value": 130.0
                 }
             ], 
-            "type": "********** unknown *******"
+            "type": "number"
         }
     }, 
     "footnotes": [

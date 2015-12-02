@@ -80,6 +80,7 @@ body{
     height: 103px;
     width: 397px;
     padding-top: 71px;
+    pointer-events: none;
 }
 #tableTitle{
     position: fixed;

@@ -54,7 +54,7 @@
                 2820.8, 
                 2640.1
             ], 
-            "type": "********** unknown *******"
+            "type": "numberThousand"
         }, 
         "col2": {
             "label": "Number (thousands) :: Awards", 
@@ -109,7 +109,7 @@
                 983.6, 
                 888.1
             ], 
-            "type": "********** unknown *******"
+            "type": "numberThousand"
         }, 
         "col3": {
             "label": "Awards as a percentage of\u00a0applications :: Awards", 
@@ -219,7 +219,7 @@
                 6.6, 
                 5.9
             ], 
-            "type": "********** unknown *******"
+            "type": "numberThousand"
         }, 
         "years": {
             "series": [

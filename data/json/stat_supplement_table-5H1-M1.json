@@ -41,7 +41,7 @@
                 1250.19, 
                 1282.37
             ], 
-            "type": "********** unknown *******"
+            "type": "dollar"
         }, 
         "col10": {
             "label": "Disabled-worker families :: Worker only :: Men", 
@@ -83,7 +83,7 @@
                 1242.0, 
                 1257.28
             ], 
-            "type": "********** unknown *******"
+            "type": "dollar"
         }, 
         "col11": {
             "label": "Disabled-worker families :: Worker only :: Women", 
@@ -125,7 +125,7 @@
                 980.77, 
                 999.44
             ], 
-            "type": "********** unknown *******"
+            "type": "dollar"
         }, 
         "col12": {
             "label": "Disabled-worker families :: Worker, wife, b\nand\u2014 :: 1 child", 
@@ -167,7 +167,7 @@
                 2007.33, 
                 2035.6
             ], 
-            "type": "********** unknown *******"
+            "type": "dollar"
         }, 
         "col13": {
             "label": "Disabled-worker families :: Worker, wife, b\nand\u2014 :: 2 or more children", 
@@ -209,7 +209,7 @@
                 1880.52, 
                 1908.76
             ], 
-            "type": "********** unknown *******"
+            "type": "dollar"
         }, 
         "col14": {
             "label": "Disabled-worker families :: Worker and spouse :: 2 or more children", 
@@ -251,7 +251,7 @@
                 2051.01, 
                 2074.92
             ], 
-            "type": "********** unknown *******"
+            "type": "dollar"
         }, 
         "col2": {
             "label": "Retired-worker families :: Worker only :: Men", 
@@ -293,7 +293,7 @@
                 1414.89, 
                 1448.37
             ], 
-            "type": "********** unknown *******"
+            "type": "dollar"
         }, 
         "col3": {
             "label": "Retired-worker families :: Worker only :: Women", 
@@ -335,7 +335,7 @@
                 1103.94, 
                 1134.97
             ], 
-            "type": "********** unknown *******"
+            "type": "dollar"
         }, 
         "col4": {
             "label": "Retired-worker families :: Worker and wife\u00a0a :: Women", 
@@ -377,7 +377,7 @@
                 2077.57, 
                 2140.05
             ], 
-            "type": "********** unknown *******"
+            "type": "dollar"
         }, 
         "col5": {
             "label": "Survivor families :: Non-disabled widow only :: Women", 
@@ -419,7 +419,7 @@
                 1216.99, 
                 1245.87
             ], 
-            "type": "********** unknown *******"
+            "type": "dollar"
         }, 
         "col6": {
             "label": "Survivor families :: Widowed mother or father\nand\u2014 :: 1 child", 
@@ -461,7 +461,7 @@
                 2068.43, 
                 2108.95
             ], 
-            "type": "********** unknown *******"
+            "type": "dollar"
         }, 
         "col7": {
             "label": "Survivor families :: Widowed mother or father\nand\u2014 :: 2 children", 
@@ -503,7 +503,7 @@
                 2561.39, 
                 2603.72
             ], 
-            "type": "********** unknown *******"
+            "type": "dollar"
         }, 
         "col8": {
             "label": "Survivor families :: Widowed mother or father\nand\u2014 :: 3 or more children", 
@@ -545,7 +545,7 @@
                 2332.83, 
                 2362.85
             ], 
-            "type": "********** unknown *******"
+            "type": "dollar"
         }, 
         "col9": {
             "label": "Disabled-worker families :: Worker only :: All", 
@@ -587,7 +587,7 @@
                 1111.78, 
                 1128.22
             ], 
-            "type": "********** unknown *******"
+            "type": "dollar"
         }, 
         "years": {
             "series": [

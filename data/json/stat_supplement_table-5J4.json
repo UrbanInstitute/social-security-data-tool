@@ -249,7 +249,7 @@
                     "value": "U.S. Virgin Islands"
                 }
             ], 
-            "type": "********** unknown *******"
+            "type": ""
         }, 
         "col10": {
             "label": "Disability :: Spouses", 
@@ -499,7 +499,7 @@
                     "value": 16.0
                 }
             ], 
-            "type": "********** unknown *******"
+            "type": "dollarThousand"
         }, 
         "col11": {
             "label": "Disability :: Children", 
@@ -749,7 +749,7 @@
                     "value": 146.0
                 }
             ], 
-            "type": "********** unknown *******"
+            "type": "dollarThousand"
         }, 
         "col2": {
             "label": "State or area :: ", 
@@ -999,7 +999,7 @@
                     "value": ""
                 }
             ], 
-            "type": "********** unknown *******"
+            "type": ""
         }, 
         "col3": {
             "label": "Total :: ", 
@@ -1249,7 +1249,7 @@
                     "value": 22029.0
                 }
             ], 
-            "type": "********** unknown *******"
+            "type": "dollarThousand"
         }, 
         "col4": {
             "label": "Retirement :: Retired workers", 
@@ -1499,7 +1499,7 @@
                     "value": 17248.0
                 }
             ], 
-            "type": "********** unknown *******"
+            "type": "dollarThousand"
         }, 
         "col5": {
             "label": "Retirement :: Spouses", 
@@ -1749,7 +1749,7 @@
                     "value": 529.0
                 }
             ], 
-            "type": "********** unknown *******"
+            "type": "dollarThousand"
         }, 
         "col6": {
             "label": "Retirement :: Children", 
@@ -1999,7 +1999,7 @@
                     "value": 265.0
                 }
             ], 
-            "type": "********** unknown *******"
+            "type": "dollarThousand"
         }, 
         "col7": {
             "label": "Survivors :: Widow(er)s and parents", 
@@ -2249,7 +2249,7 @@
                     "value": 1314.0
                 }
             ], 
-            "type": "********** unknown *******"
+            "type": "dollarThousand"
         }, 
         "col8": {
             "label": "Survivors :: Children", 
@@ -2499,7 +2499,7 @@
                     "value": 583.0
                 }
             ], 
-            "type": "********** unknown *******"
+            "type": "dollarThousand"
         }, 
         "col9": {
             "label": "Disability :: Disabled workers", 
@@ -2749,7 +2749,7 @@
                     "value": 1929.0
                 }
             ], 
-            "type": "********** unknown *******"
+            "type": "dollarThousand"
         }
     }, 
     "footnotes": [

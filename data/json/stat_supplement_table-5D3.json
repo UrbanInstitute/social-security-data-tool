@@ -42,7 +42,7 @@
                 8826591.0, 
                 8940950.0
             ], 
-            "type": "********** unknown *******"
+            "type": "number"
         }, 
         "col2": {
             "label": "All disabled workers :: Total monthly benefits (thousands of dollars)", 
@@ -85,7 +85,7 @@
                 9977027.0, 
                 10250098.0
             ], 
-            "type": "dollar"
+            "type": "dollarThousand"
         }, 
         "col3": {
             "label": "Men :: Number", 
@@ -128,7 +128,7 @@
                 4606044.0, 
                 4642134.0
             ], 
-            "type": "********** unknown *******"
+            "type": "number"
         }, 
         "col4": {
             "label": "Men :: Total monthly benefits (thousands of dollars)", 
@@ -171,7 +171,7 @@
                 5786094.0, 
                 5902109.0
             ], 
-            "type": "dollar"
+            "type": "dollarThousand"
         }, 
         "col5": {
             "label": "Women :: Number", 
@@ -214,7 +214,7 @@
                 4220547.0, 
                 4298816.0
             ], 
-            "type": "********** unknown *******"
+            "type": "number"
         }, 
         "col6": {
             "label": "Women :: Total monthly benefits (thousands of dollars)", 
@@ -257,7 +257,7 @@
                 4190933.0, 
                 4347989.0
             ], 
-            "type": "dollar"
+            "type": "dollarThousand"
         }, 
         "years": {
             "series": [

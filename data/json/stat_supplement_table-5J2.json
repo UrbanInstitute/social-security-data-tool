@@ -249,7 +249,7 @@
                     "value": "U.S. Virgin Islands"
                 }
             ], 
-            "type": "********** unknown *******"
+            "type": ""
         }, 
         "col10": {
             "label": "Disability :: Spouses", 
@@ -499,7 +499,7 @@
                     "value": 47.0
                 }
             ], 
-            "type": "********** unknown *******"
+            "type": "number"
         }, 
         "col11": {
             "label": "Disability :: Children", 
@@ -749,7 +749,7 @@
                     "value": 450.0
                 }
             ], 
-            "type": "********** unknown *******"
+            "type": "number"
         }, 
         "col2": {
             "label": "State or area :: ", 
@@ -999,7 +999,7 @@
                     "value": ""
                 }
             ], 
-            "type": "********** unknown *******"
+            "type": ""
         }, 
         "col3": {
             "label": "Total :: ", 
@@ -1249,7 +1249,7 @@
                     "value": 20993.0
                 }
             ], 
-            "type": "********** unknown *******"
+            "type": "number"
         }, 
         "col4": {
             "label": "Retirement :: Retired workers", 
@@ -1499,7 +1499,7 @@
                     "value": 15183.0
                 }
             ], 
-            "type": "********** unknown *******"
+            "type": "number"
         }, 
         "col5": {
             "label": "Retirement :: Spouses", 
@@ -1749,7 +1749,7 @@
                     "value": 970.0
                 }
             ], 
-            "type": "********** unknown *******"
+            "type": "number"
         }, 
         "col6": {
             "label": "Retirement :: Children", 
@@ -1999,7 +1999,7 @@
                     "value": 470.0
                 }
             ], 
-            "type": "********** unknown *******"
+            "type": "number"
         }, 
         "col7": {
             "label": "Survivors :: Widow(er)s and parents", 
@@ -2249,7 +2249,7 @@
                     "value": 1347.0
                 }
             ], 
-            "type": "********** unknown *******"
+            "type": "number"
         }, 
         "col8": {
             "label": "Survivors :: Children", 
@@ -2499,7 +2499,7 @@
                     "value": 843.0
                 }
             ], 
-            "type": "********** unknown *******"
+            "type": "number"
         }, 
         "col9": {
             "label": "Disability :: Disabled workers", 
@@ -2749,7 +2749,7 @@
                     "value": 1683.0
                 }
             ], 
-            "type": "********** unknown *******"
+            "type": "number"
         }
     }, 
     "footnotes": [

@@ -62,7 +62,7 @@
                 10088739.0, 
                 10228364.0
             ], 
-            "type": "********** unknown *******"
+            "type": "number"
         }, 
         "col2": {
             "label": "Number :: Workers", 
@@ -125,7 +125,7 @@
                 8826591.0, 
                 8940950.0
             ], 
-            "type": "********** unknown *******"
+            "type": "number"
         }, 
         "col3": {
             "label": "Number :: Widow(er)s", 
@@ -188,7 +188,7 @@
                 255472.0, 
                 257248.0
             ], 
-            "type": "********** unknown *******"
+            "type": "number"
         }, 
         "col4": {
             "label": "Number :: Disabled adult children", 
@@ -251,7 +251,7 @@
                 1006676.0, 
                 1030166.0
             ], 
-            "type": "********** unknown *******"
+            "type": "number"
         }, 
         "col5": {
             "label": "Average monthly benefit (dollars) :: Workers", 

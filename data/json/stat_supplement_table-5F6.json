@@ -75,7 +75,7 @@
                 900.32, 
                 917.69
             ], 
-            "type": "********** unknown *******"
+            "type": "dollar"
         }, 
         "col10": {
             "label": "Disabled :: Widowers", 
@@ -151,7 +151,7 @@
                 521.97, 
                 526.48
             ], 
-            "type": "********** unknown *******"
+            "type": "dollar"
         }, 
         "col2": {
             "label": "Nondisabled :: Widows", 
@@ -227,7 +227,7 @@
                 1218.45, 
                 1247.51
             ], 
-            "type": "********** unknown *******"
+            "type": "dollar"
         }, 
         "col3": {
             "label": "Nondisabled :: Widowers", 
@@ -303,7 +303,7 @@
                 1057.42, 
                 1084.19
             ], 
-            "type": "********** unknown *******"
+            "type": "dollar"
         }, 
         "col4": {
             "label": "Parents :: Widowers", 
@@ -379,7 +379,7 @@
                 1072.76, 
                 1094.2
             ], 
-            "type": "********** unknown *******"
+            "type": "dollar"
         }, 
         "col5": {
             "label": "Children :: Total", 
@@ -455,7 +455,7 @@
                 799.08, 
                 813.8
             ], 
-            "type": "********** unknown *******"
+            "type": "dollar"
         }, 
         "col6": {
             "label": "Children :: Under age 18", 
@@ -531,7 +531,7 @@
                 792.56, 
                 805.87
             ], 
-            "type": "********** unknown *******"
+            "type": "dollar"
         }, 
         "col7": {
             "label": "Children :: Disabled adult children", 
@@ -607,7 +607,7 @@
                 805.03, 
                 822.02
             ], 
-            "type": "********** unknown *******"
+            "type": "dollar"
         }, 
         "col8": {
             "label": "Children :: Students", 
@@ -683,7 +683,7 @@
                 859.56, 
                 880.44
             ], 
-            "type": "********** unknown *******"
+            "type": "dollar"
         }, 
         "col9": {
             "label": "Disabled :: Widows", 
@@ -759,7 +759,7 @@
                 723.14, 
                 729.33
             ], 
-            "type": "********** unknown *******"
+            "type": "dollar"
         }, 
         "years": {
             "series": [

@@ -70,7 +70,7 @@
                 637948.0, 
                 672175.0
             ], 
-            "type": "********** unknown *******"
+            "type": "dollarMillion"
         }, 
         "col10": {
             "label": "Lump-sum death payments :: Parents", 
@@ -141,7 +141,7 @@
                 200.0, 
                 201.0
             ], 
-            "type": "********** unknown *******"
+            "type": "dollarMillion"
         }, 
         "col2": {
             "label": "Retired-worker and dependents benefits :: Retired workers", 
@@ -212,7 +212,7 @@
                 497471.0, 
                 528862.0
             ], 
-            "type": "********** unknown *******"
+            "type": "dollarMillion"
         }, 
         "col3": {
             "label": "Retired-worker and dependents benefits :: Wives and\nhusbands", 
@@ -283,7 +283,7 @@
                 25348.0, 
                 26300.0
             ], 
-            "type": "********** unknown *******"
+            "type": "dollarMillion"
         }, 
         "col4": {
             "label": "Retired-worker and dependents benefits :: Children", 
@@ -354,7 +354,7 @@
                 4583.0, 
                 4780.0
             ], 
-            "type": "********** unknown *******"
+            "type": "dollarMillion"
         }, 
         "col5": {
             "label": "Survivors benefits :: Children", 
@@ -425,7 +425,7 @@
                 18752.0, 
                 18923.0
             ], 
-            "type": "********** unknown *******"
+            "type": "dollarMillion"
         }, 
         "col6": {
             "label": "Survivors benefits :: Widowed mothers and fathers", 
@@ -496,7 +496,7 @@
                 1676.0, 
                 1660.0
             ], 
-            "type": "********** unknown *******"
+            "type": "dollarMillion"
         }, 
         "col7": {
             "label": "Survivors benefits :: Widow(er)s\u00a0a", 
@@ -567,7 +567,7 @@
                 89896.0, 
                 91427.0
             ], 
-            "type": "********** unknown *******"
+            "type": "dollarMillion"
         }, 
         "col8": {
             "label": "Survivors benefits :: Parents", 
@@ -638,7 +638,7 @@
                 22.0, 
                 22.0
             ], 
-            "type": "********** unknown *******"
+            "type": "dollarMillion"
         }, 
         "col9": {
             "label": "Special\nage-72 beneficiaries :: Parents", 
@@ -709,7 +709,7 @@
                 0.0, 
                 0.0
             ], 
-            "type": "********** unknown *******"
+            "type": "dollarMillion"
         }, 
         "years": {
             "series": [

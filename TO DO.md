@@ -3,15 +3,16 @@
 - Scrape all the tables
 - Fix units for all columns
 - Fix y axis labels for all units
-- Format years correctly
 - Tooltips with correct units
-- footnotes
 - Fix broken scrapers
 - mobile
 - add filters
 - bump table down and add more title info
 - Tidy up sheet list/ ordering
+	- remove empty values
 - table scroll buttons
+- left justify legends
+- small width footer
 - Once final, update
 	- Embed code for charts
 	- years in embed code

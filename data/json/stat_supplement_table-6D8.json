@@ -69,7 +69,7 @@
                 552135.0, 
                 546435.0
             ], 
-            "type": "********** unknown *******"
+            "type": "number"
         }, 
         "col2": {
             "label": "Entitled because of age :: Widows", 
@@ -139,7 +139,7 @@
                 477062.0, 
                 471744.0
             ], 
-            "type": "********** unknown *******"
+            "type": "number"
         }, 
         "col3": {
             "label": "Entitled because of age :: Widowers", 
@@ -209,7 +209,7 @@
                 41876.0, 
                 43092.0
             ], 
-            "type": "********** unknown *******"
+            "type": "number"
         }, 
         "col4": {
             "label": "Entitled because of disability :: Widows", 
@@ -279,7 +279,7 @@
                 30222.0, 
                 28688.0
             ], 
-            "type": "********** unknown *******"
+            "type": "number"
         }, 
         "col5": {
             "label": "Entitled because of disability :: Widowers", 
@@ -349,7 +349,7 @@
                 2975.0, 
                 2911.0
             ], 
-            "type": "********** unknown *******"
+            "type": "number"
         }, 
         "years": {
             "series": [

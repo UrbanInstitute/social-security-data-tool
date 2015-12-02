@@ -249,7 +249,7 @@
                     "value": "U.S. Virgin Islands"
                 }
             ], 
-            "type": "********** unknown *******"
+            "type": ""
         }, 
         "col2": {
             "label": "State or area", 
@@ -499,7 +499,7 @@
                     "value": ""
                 }
             ], 
-            "type": "********** unknown *******"
+            "type": ""
         }, 
         "col3": {
             "label": "Total, OASDI", 
@@ -749,7 +749,7 @@
                     "value": 258.0
                 }
             ], 
-            "type": "********** unknown *******"
+            "type": "dollarMillion"
         }, 
         "col4": {
             "label": "Retirement", 
@@ -999,7 +999,7 @@
                     "value": 199.0
                 }
             ], 
-            "type": "********** unknown *******"
+            "type": "dollarMillion"
         }, 
         "col5": {
             "label": "Survivors", 
@@ -1249,7 +1249,7 @@
                     "value": 32.0
                 }
             ], 
-            "type": "********** unknown *******"
+            "type": "dollarMillion"
         }, 
         "col6": {
             "label": "Disability", 
@@ -1499,7 +1499,7 @@
                     "value": 27.0
                 }
             ], 
-            "type": "********** unknown *******"
+            "type": "dollarMillion"
         }
     }, 
     "footnotes": [

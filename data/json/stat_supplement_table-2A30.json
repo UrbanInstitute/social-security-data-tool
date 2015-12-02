@@ -43,7 +43,7 @@
                 false, 
                 false
             ], 
-            "type": "********** unknown *******"
+            "type": "dollar"
         }, 
         "col2": {
             "label": "Nonblind beneficiaries a :: Maximum", 
@@ -87,7 +87,7 @@
                 1040.0, 
                 1070.0
             ], 
-            "type": "********** unknown *******"
+            "type": "dollar"
         }, 
         "col3": {
             "label": "Blind beneficiaries b :: Maximum", 
@@ -131,7 +131,7 @@
                 1740.0, 
                 1800.0
             ], 
-            "type": "********** unknown *******"
+            "type": "dollar"
         }, 
         "years": {
             "series": [

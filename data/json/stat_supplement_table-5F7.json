@@ -90,7 +90,7 @@
                 16500.0, 
                 84050.0
             ], 
-            "type": "********** unknown *******"
+            "type": "number"
         }, 
         "col11": {
             "label": "Children :: Percent", 
@@ -182,7 +182,7 @@
                 2706.0, 
                 15309.0
             ], 
-            "type": "********** unknown *******"
+            "type": "number"
         }, 
         "col3": {
             "label": "Widowed mothers and fathers :: Percent", 
@@ -274,7 +274,7 @@
                 58041.0, 
                 227180.0
             ], 
-            "type": "********** unknown *******"
+            "type": "number"
         }, 
         "col5": {
             "label": "Nondisabled widow(er)s :: Percent", 
@@ -366,7 +366,7 @@
                 14.0, 
                 111.0
             ], 
-            "type": "********** unknown *******"
+            "type": "number"
         }, 
         "col7": {
             "label": "Parents :: Percent", 
@@ -458,7 +458,7 @@
                 5345.0, 
                 17647.0
             ], 
-            "type": "********** unknown *******"
+            "type": "number"
         }, 
         "col9": {
             "label": "Disabled widow(er)s :: Percent", 

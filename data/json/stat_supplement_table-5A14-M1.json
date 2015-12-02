@@ -17,7 +17,7 @@
                 100.0, 
                 100.0
             ], 
-            "type": "********** unknown *******"
+            "type": "percent"
         }, 
         "col2": {
             "label": "Entitled as worker\u00a0b :: Subtotal :: ", 
@@ -35,7 +35,7 @@
                 75.7, 
                 76.5
             ], 
-            "type": "********** unknown *******"
+            "type": "percent"
         }, 
         "col3": {
             "label": "Entitled as worker\u00a0b :: Worker only :: ", 
@@ -53,7 +53,7 @@
                 48.7, 
                 49.9
             ], 
-            "type": "********** unknown *******"
+            "type": "percent"
         }, 
         "col4": {
             "label": "Entitled as worker\u00a0b :: Dually entitled :: Subtotal", 
@@ -71,7 +71,7 @@
                 27.0, 
                 26.6
             ], 
-            "type": "********** unknown *******"
+            "type": "percent"
         }, 
         "col5": {
             "label": "Entitled as worker\u00a0b :: Dually entitled :: Wife's benefit", 
@@ -89,7 +89,7 @@
                 11.9, 
                 11.8
             ], 
-            "type": "********** unknown *******"
+            "type": "percent"
         }, 
         "col6": {
             "label": "Entitled as worker\u00a0b :: Dually entitled :: Widow's or parent's benefit\u00a0c", 
@@ -107,7 +107,7 @@
                 15.1, 
                 14.8
             ], 
-            "type": "********** unknown *******"
+            "type": "percent"
         }, 
         "col7": {
             "label": "Entitled as wife, widow, or parent only :: Dually entitled :: Subtotal", 
@@ -125,7 +125,7 @@
                 24.3, 
                 23.5
             ], 
-            "type": "********** unknown *******"
+            "type": "percent"
         }, 
         "col8": {
             "label": "Entitled as wife, widow, or parent only :: Dually entitled :: Wife's benefit", 
@@ -143,7 +143,7 @@
                 9.0, 
                 8.8
             ], 
-            "type": "********** unknown *******"
+            "type": "percent"
         }, 
         "col9": {
             "label": "Entitled as wife, widow, or parent only :: Dually entitled :: Widow's or parent's benefit\u00a0c", 
@@ -161,7 +161,7 @@
                 15.3, 
                 14.7
             ], 
-            "type": "********** unknown *******"
+            "type": "percent"
         }, 
         "years": {
             "series": [

@@ -94,7 +94,7 @@
                 14369.0, 
                 61347.0
             ], 
-            "type": "********** unknown *******"
+            "type": "number"
         }, 
         "col3": {
             "label": "Total :: Percent", 
@@ -190,7 +190,7 @@
                 10658.0, 
                 48826.0
             ], 
-            "type": "********** unknown *******"
+            "type": "number"
         }, 
         "col5": {
             "label": "Men :: Percent", 
@@ -286,7 +286,7 @@
                 3711.0, 
                 12521.0
             ], 
-            "type": "********** unknown *******"
+            "type": "number"
         }, 
         "col7": {
             "label": "Women :: Percent", 

@@ -45,7 +45,7 @@
                 511370.0, 
                 459732.0
             ], 
-            "type": "********** unknown *******"
+            "type": "number"
         }, 
         "col10": {
             "label": "Percentage distribution, by age :: 60\u201361", 
@@ -229,7 +229,7 @@
                 50.5, 
                 50.9
             ], 
-            "type": "********** unknown *******"
+            "type": "number"
         }, 
         "col3": {
             "label": "Percentage distribution, by age :: Total, all ages", 

@@ -20,7 +20,7 @@
                 1322.0, 
                 1293.0
             ], 
-            "type": "********** unknown *******"
+            "type": "numberThousand"
         }, 
         "col10": {
             "label": "Percentage distribution by age at month of entitlement :: 66\u00a0a :: At FRA", 
@@ -146,7 +146,7 @@
                 64.0, 
                 64.1
             ], 
-            "type": "********** unknown *******"
+            "type": "number"
         }, 
         "col3": {
             "label": "Percentage distribution by age at month of entitlement :: Total, all ages :: ", 

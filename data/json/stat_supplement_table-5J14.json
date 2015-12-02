@@ -249,7 +249,7 @@
                     "value": "U.S. Virgin Islands"
                 }
             ], 
-            "type": "********** unknown *******"
+            "type": ""
         }, 
         "col10": {
             "label": "Disabled widow(er)s :: Average monthly benefit (dollars)", 
@@ -999,7 +999,7 @@
                     "value": 342.0
                 }
             ], 
-            "type": "********** unknown *******"
+            "type": "number"
         }, 
         "col13": {
             "label": "Disabled adult children :: Average monthly benefit (dollars)", 
@@ -1749,7 +1749,7 @@
                     "value": ""
                 }
             ], 
-            "type": "********** unknown *******"
+            "type": ""
         }, 
         "col3": {
             "label": "All disabled beneficiaries :: Number", 
@@ -1999,7 +1999,7 @@
                     "value": 2088.0
                 }
             ], 
-            "type": "********** unknown *******"
+            "type": "number"
         }, 
         "col4": {
             "label": "All disabled beneficiaries :: Average monthly benefit (dollars)", 
@@ -2749,7 +2749,7 @@
                     "value": 1683.0
                 }
             ], 
-            "type": "********** unknown *******"
+            "type": "number"
         }, 
         "col7": {
             "label": "Disabled workers :: Average monthly benefit (dollars)", 
@@ -3499,7 +3499,7 @@
                     "value": 63.0
                 }
             ], 
-            "type": "********** unknown *******"
+            "type": "number"
         }
     }, 
     "footnotes": [

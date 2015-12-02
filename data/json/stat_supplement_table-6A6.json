@@ -249,7 +249,7 @@
                     "value": "Other b"
                 }
             ], 
-            "type": "********** unknown *******"
+            "type": ""
         }, 
         "col2": {
             "label": "State or area :: ", 
@@ -499,7 +499,7 @@
                     "value": ""
                 }
             ], 
-            "type": "********** unknown *******"
+            "type": ""
         }, 
         "col3": {
             "label": "Retired workers :: Number", 
@@ -749,7 +749,7 @@
                     "value": 27158.0
                 }
             ], 
-            "type": "********** unknown *******"
+            "type": "number"
         }, 
         "col4": {
             "label": "Retired workers :: Percent", 
@@ -1499,7 +1499,7 @@
                     "value": 1265.0
                 }
             ], 
-            "type": "********** unknown *******"
+            "type": "number"
         }, 
         "col7": {
             "label": "Disabled workers :: Percent", 

@@ -40,7 +40,7 @@
                 2280662.0, 
                 2285636.0
             ], 
-            "type": "********** unknown *******"
+            "type": "number"
         }, 
         "col10": {
             "label": "Wives entitled because of children :: With at least 1 disabled child\u00a0b :: Total monthly benefits (thousands of dollars)", 
@@ -81,7 +81,7 @@
                 5311.0, 
                 5229.0
             ], 
-            "type": "dollar"
+            "type": "dollarThousand"
         }, 
         "col11": {
             "label": "Husbands :: With at least 1 disabled child\u00a0b :: Number", 
@@ -122,7 +122,7 @@
                 72476.0, 
                 84476.0
             ], 
-            "type": "********** unknown *******"
+            "type": "number"
         }, 
         "col12": {
             "label": "Husbands :: With at least 1 disabled child\u00a0b :: Total monthly benefits (thousands of dollars)", 
@@ -163,7 +163,7 @@
                 31371.0, 
                 40060.0
             ], 
-            "type": "dollar"
+            "type": "dollarThousand"
         }, 
         "col2": {
             "label": "Total :: Total monthly benefits (thousands of dollars)", 
@@ -204,7 +204,7 @@
                 1428684.0, 
                 1481837.0
             ], 
-            "type": "dollar"
+            "type": "dollarThousand"
         }, 
         "col3": {
             "label": "Wives entitled solely because of age :: Number", 
@@ -245,7 +245,7 @@
                 2166432.0, 
                 2160404.0
             ], 
-            "type": "********** unknown *******"
+            "type": "number"
         }, 
         "col4": {
             "label": "Wives entitled solely because of age :: Total monthly benefits (thousands of dollars)", 
@@ -286,7 +286,7 @@
                 1374556.0, 
                 1419049.0
             ], 
-            "type": "dollar"
+            "type": "dollarThousand"
         }, 
         "col5": {
             "label": "Wives entitled because of children :: Subtotal :: Number", 
@@ -327,7 +327,7 @@
                 41754.0, 
                 40756.0
             ], 
-            "type": "********** unknown *******"
+            "type": "number"
         }, 
         "col6": {
             "label": "Wives entitled because of children :: Subtotal :: Total monthly benefits (thousands of dollars)", 
@@ -368,7 +368,7 @@
                 22756.0, 
                 22728.0
             ], 
-            "type": "dollar"
+            "type": "dollarThousand"
         }, 
         "col7": {
             "label": "Wives entitled because of children :: With at least 1 child under age 16\u00a0a :: Number", 
@@ -409,7 +409,7 @@
                 32989.0, 
                 32306.0
             ], 
-            "type": "********** unknown *******"
+            "type": "number"
         }, 
         "col8": {
             "label": "Wives entitled because of children :: With at least 1 child under age 16\u00a0a :: Total monthly benefits (thousands of dollars)", 
@@ -450,7 +450,7 @@
                 17445.0, 
                 17499.0
             ], 
-            "type": "dollar"
+            "type": "dollarThousand"
         }, 
         "col9": {
             "label": "Wives entitled because of children :: With at least 1 disabled child\u00a0b :: Number", 
@@ -491,7 +491,7 @@
                 8765.0, 
                 8450.0
             ], 
-            "type": "********** unknown *******"
+            "type": "number"
         }, 
         "years": {
             "series": [

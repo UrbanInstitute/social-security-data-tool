@@ -90,7 +90,7 @@
                 76587.0, 
                 280785.0
             ], 
-            "type": "********** unknown *******"
+            "type": "number"
         }, 
         "col3": {
             "label": "Disabled workers :: Percent", 
@@ -182,7 +182,7 @@
                 4230.0, 
                 19631.0
             ], 
-            "type": "********** unknown *******"
+            "type": "number"
         }, 
         "col5": {
             "label": "Spouses :: Percent", 
@@ -274,7 +274,7 @@
                 13212.0, 
                 53423.0
             ], 
-            "type": "********** unknown *******"
+            "type": "number"
         }, 
         "col7": {
             "label": "Children :: Percent", 
