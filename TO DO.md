@@ -1,21 +1,15 @@
-- Determine which tables to scrape (4,5,6)
-
 - Scrape all the tables
-- Fix units for all columns
-- Fix y axis labels for all units
-- Tooltips with correct units
 - Fix broken scrapers
 - mobile
 - add filters
-- bump table down and add more title info
 - Tidy up sheet list/ ordering
 	- remove empty values
 - table scroll buttons
-- left justify legends
 - small width footer
 - Once final, update
 	- Embed code for charts
 	- years in embed code
+- Fucking gradient thing on the right
 
 - Dec: Announcement blog post
 - Jan: Sharing data blog post

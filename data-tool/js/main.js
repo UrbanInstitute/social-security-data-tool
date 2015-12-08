@@ -83,6 +83,12 @@ function newTable(index){
 		  		drawTable(data);
 		  		multiYear();
 		  		showScrubber();
+				d3.select("#valueScrubber")
+					.transition()
+					.style("top","393px")
+				d3.select("#singleYearCheck")
+					.transition()
+					.style("top","403px")
 		  		break;
 		  	case "map":
 		  	  	exportParams.chartType = "map"
@@ -580,12 +586,7 @@ function drawBar(input, col){
                 }
             },
             title: {
-                text: input.title.category
-            },
-            subtitle: {
-                text: input.title.name
-                // x: 0,
-                // y: 35
+                text: "<div class = \"chartSubtitle\">" + input.title.category + "</div>" + "<div class = \"chartTitle\">" + input.title.name + "</div>"
             },
             xAxis: {
                 gridLineWidth: '0',
@@ -661,12 +662,9 @@ function drawBar(input, col){
 function drawMap(input, col){
 	var initId = input["data"][col]["label"]
 	$('#map').highcharts('Map', {
-        title : {
-            text : input.title.category
-        },
-        subtitle:{
-        	text: input.title.name,
-        },
+        title: {
+                text: "<div class = \"chartSubtitle\">" + input.title.category + "</div>" + "<div class = \"chartTitle\">" + input.title.name + "</div>"
+            },
         mapNavigation: {
         	enableMouseWheelZoom: false,
             enabled: true,
@@ -686,7 +684,7 @@ function drawMap(input, col){
             labels:{
             	formatter: function(){
             		// console.log(this.axis.defaultLabelFormatter.call(this) + "ADSf")
-            		return formatLabel(null, null, this, col, "label")
+            		return formatLabel(this, null, input, col, "labelMap")
             		// return this.axis.labelFormatter.call(this)
             		// console.log(this.axis.labelFormatter(this))
             		// return formatLabel(null, null, input, col, "legend")
@@ -775,8 +773,13 @@ function drawLineChart(input){
             },
 
             title: {
-                text: input.title.name
+                text: "<div class = \"chartSubtitle\">" + input.title.category + "</div>" + "<div class = \"chartTitle\">" + input.title.name + "</div>"
             },
+            // subtitle: {
+            //     text: "<div class = \"chartSubtitle\">" + input.title.name + "</div>"
+            //     // x: 0,
+            //     // y: 35
+            // },
             subtitle: {
                 text: '',
                 x: 0,
@@ -895,13 +898,8 @@ function drawSingleYearBarChart(input){
                     }
                 }
             },
-            title: {
-                text: input.title.name
-            },
-            subtitle: {
-                text: '',
-                x: 0,
-                y: 35
+			title: {
+                text: "<div class = \"chartSubtitle\">" + input.title.category + "</div>" + "<div class = \"chartTitle\">" + input.title.name + "</div>"
             },
             xAxis: {
                 gridLineWidth: '0',
@@ -1325,7 +1323,10 @@ function setTheme(){
 	            fontSize: '18px',
 	            color: '#5a5a5a'
 	        },
-	        align: 'left'
+	        align: 'left',
+	        margin: 50,
+	        useHTML: true,
+	        floating: false
 	    },
 	    tooltip: {
 	        backgroundColor: '#000000',
@@ -1439,6 +1440,11 @@ var tableIndex = 0;
 // init("2A9");
 // init("4C1");
 init();
+window.onresize = function(){
+			if(d3.select("#testTable thead").node().getBoundingClientRect().width - $(window).width() + 44 <= 0){
+			d3.select(".rightFader").style("opacity", 0)
+		}else{ d3.select(".rightFader").style("opacity",1)}
+}
 function test(index){
 	init(simpleTimeSheets[index].replace(/\./g,""))
 }
@@ -1498,6 +1504,9 @@ function filterSheets(current){
 
 }
 function formatLabel(x, y, input, col, type){
+	if(type == "tooltipBar" && Object.keys(yearBarCache).length > 0){
+		col = yearBarCache.id
+	}
 	var label = input.data[col].type
 
 	if(type == "label"){
@@ -1521,8 +1530,16 @@ function formatLabel(x, y, input, col, type){
 		// console.log(input, col)
 		// return ''
 	}
-	if(type == "tooltipBar" && Object.keys(yearBarCache).length > 0){
-		col = yearBarCache.id
+	else if(type == "labelMap"){
+		if(label == "dollar"){
+			return '$' + x.axis.defaultLabelFormatter.call(x);
+		}
+		else if(label == "percent"){
+			return x.axis.defaultLabelFormatter.call(x) + "%";
+		}
+		else{
+			return x.axis.defaultLabelFormatter.call(x);	
+		}	
 	}
 
 	var dollar = d3.format("$,")
