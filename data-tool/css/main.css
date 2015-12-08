@@ -11,7 +11,7 @@ body{
 /****************************************/
 #chartContainer{
     background-color: #fff;
-    height: 470px;
+    height: 400px;
     width: 100%;
     top: 100%;
     position: fixed;
@@ -22,7 +22,7 @@ body{
     height: 100%;
     position: fixed;
     background-color: #fff;
-    top: 0;
+    top: 60;
     left: 0;
     text-align: center;
     /*border: 2000px solid red;*/
@@ -33,7 +33,7 @@ body{
 }
 #lineChart, #singleYearBarChart, #map, #barChart, #stackedBar{
     width: calc(100% - 400px);
-    top: 0;
+    top: 60;
     left: 400px;
     position: fixed;
     z-index: 2;    
@@ -42,14 +42,14 @@ body{
     left: 2000px;
 }
 #valueScrubber{
-    top: 293px;
-    left: 10px;
+    top: 393px;
+    left: 455px;
     z-index: 300;
     position: fixed;
 }
 #singleYearCheck{
-    top: 331px;
-    left: 63px;
+    top: 403px;
+    left: 803px;
     z-index: 300;
     position: fixed;
 }
@@ -60,19 +60,19 @@ body{
 }
 #spacer{
     position: fixed;
-    top: 326px;
+    top: 386px;
     z-index: 0;
     font-size: 14px;
     font-style: italic;
     background-color: #fff;
-    height: 103px;
+    height: 80px;
     width: 100%;
     padding-top: 71px;
 
 }
 #interactionInstructions{
     position: fixed;
-    top: 193px;
+    top: 253px;
     left: 10px;
     z-index: 200;
     font-size: 14px;
@@ -84,7 +84,7 @@ body{
 }
 #tableTitle{
     position: fixed;
-    top: 402px;
+    top: 462px;
     left: 50px;
     z-index: 999;
 }
@@ -98,7 +98,7 @@ body{
 }
 #tableContainer{
     width: 80%;
-    margin-top: 460;    
+    margin-top: 510;    
 }
 thead{
     z-index: 2;
@@ -110,14 +110,14 @@ tbody{
 
 #left_arrow, #right_arrow{
     position: fixed;
-    bottom: 200;
+    top: 458;
     z-index: 999;
     height: 50px;
     cursor: pointer;
 }
 .leftFader{
     position: fixed;
-    top: 460px;
+    top: 510px;
     width: 80px;
     left: 0;
     z-index: 100;
@@ -125,7 +125,7 @@ tbody{
 }
 .rightFader{
     position: fixed;
-    top: 460px;
+    top: 510px;
     width: 320px;
     right: 0;
     z-index: 100;
@@ -147,18 +147,32 @@ tbody{
 /****************************************/
 #searchBox{
     position: absolute;
-    top: 49px;
-    left: 52px;
-    width: 296px;
-    height: 28px;
+    top: 29px;
+    left: 10px;
+    width: 256px;
+    height: 45px;
     vertical-align: middle;
     text-indent: 6px;
+    font-size: 13pt;
+}
+#checkboxes{
+    font-size: 10pt;
+    position: fixed;
+    top: 200px;
+    left: 10px;
+}
+#checkboxes .col{
+    float: left;
+    width: 90px;
+}
+.col label{
+    float: left;
 }
 
 #tableMenu{
-    left: 52px;
+    left: 10px;
     position: absolute;
-    top: 96px;
+    top: 240px;
     width: 296px;
 }
 #refresh{
@@ -253,10 +267,26 @@ tbody{
 }
 
 /****************************************/
+/************ CHART STYLES **************/
+/****************************************/
+.highcharts-button text{
+    color: #fff !important;
+    fill: #fff !important;
+    text-transform: uppercase;
+}
+
+/****************************************/
 /************ TABLE STYLEs **************/
 /****************************************/
 th.selected{
-    background-color: #fcb918;
+    background-color: #1696d2;
+    color: white;
+}
+th.singleSelected{
+    background-color: #1696d2 !important;    
+}
+th:not(.selected){
+    background-color: #e0e0e0 !important;
 }
 .pure-table {
     /* Remove spacing between table cells (from Normalize.css) */
@@ -294,7 +324,7 @@ th.selected{
     background-color: #e0e0e0;
     color: #000;
     text-align: left;
-    vertical-align: bottom;
+    vertical-align: middle;
 }
 
 .pure-table td {
@@ -358,6 +388,226 @@ th.selected{
     margin-top: 16px;
     margin-bottom: 43px;
 }
+
+/****************************************/
+/************ NAVBAR ********************/
+/****************************************/
+    #header-pinned {
+        background: #333;
+        position: fixed;
+        top: 0px;
+        left: 0;
+        width: 100%;
+        border-bottom: 11px solid #fff;
+        z-index: 999;
+        -webkit-transition: top 0.25s linear;
+        -moz-transition: top 0.25s linear;
+        -o-transition: top 0.25s linear;
+        transition: top 0.25s linear;
+
+    }
+    
+    #header-pinned .content {
+        height: 49px;
+        max-width: 1500px;
+        margin: 0 auto;
+        position: relative;
+    }
+    #header-pinned * {
+  color: #fff;
+        font-weight: 400;
+        text-decoration: none;
+}
+    
+    #header-pinned .site-logo {
+        display: block;
+        width: 34px;
+        height: 34px;
+        position: absolute;
+        left: 10px;
+        top: 8px;
+        background: url(http://www.urban.org/sites/all/themes/urban/images/logo-mini-dark.png) no-repeat;
+        background-size: 34px 34px;
+    }
+    
+        #header-pinned .title {
+  font-size: 14px;
+  line-height: 49px;
+  margin: 0 65px 0 55px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+    
+    
+    #header-pinned .title {
+        font-size: 20px;
+        margin-left: 80px;
+    }
+    
+
+    #header-pinned .title span,
+    #header-pinned .title a {
+        display: inline;
+    }
+    
+    #header-pinned .share-icons {
+        background-color: transparent;
+        width: 69px;
+        height: 50px;
+        margin: 0;
+        padding: 0;
+        top: 0;
+        width: 60px;
+        position: absolute;
+        right: 0;
+    }
+    
+    #header-pinned .share-icons .shareThisP {
+        border-top: 0;
+        border-left: 1px solid #e6e5e5  ;
+        height: 40px;
+        padding: 9px 0 0;
+    }
+    
+    #header-pinned .share-icons .shareThisB {
+        float: none;
+    }
+    
+    #header-pinned .share-icons .shareThisB {
+        display: block;
+        background-repeat: no-repeat;
+        background-image: url(http://www.urban.org/sites/all/themes/urban/images/generated/icons-s8fe141aaaa.png);
+        background-position: 0 -2396px;
+        height: 32px;
+        width: 32px;
+        float: none;
+        margin: 0 auto;
+    }
+    
+    #header-pinned .share-icons .shareThisB:hover {
+    background-position: 0 -1948px;
+    }
+    #header-pinned .share-icons .shareThisW {
+        display: none;
+        float: none;
+        top: 50px;
+        right: 0;
+        left: auto;
+        width: 300px;
+        text-align: right;
+        border: 0;
+        background: transparent;
+    }
+    
+    #header-pinned .share-icons .shareThisW {
+        background-color: #fff;
+        border: 1px solid #ccc;
+        position: absolute;
+        top: 42px;
+        left: -138px;
+        padding: 0 0 9px;
+        border-top: 0;
+        width: 200px;
+    }
+    
+    #header-pinned .share-icons .addthis_toolbox {
+        display: inline-block;
+        width: auto;
+        border: 1px solid #e6e5e5  ;
+        border-top: 0;
+        background: #fff;
+        padding: 10px 10px 0 0;
+        margin: 0 auto;
+    }
+    
+    #header-pinned .share-icons .at15t_twitter.at16t_twitter,
+    #header-pinned .share-icons .addthis_button_facebook {
+        display: block;
+        background-repeat: no-repeat;
+        background-image: url(http://www.urban.org/sites/all/themes/urban/images/generated/icons-s8fe141aaaa.png);
+        background-position: 0 -2056px;
+        height: 32px;
+        width: 32px;
+    }
+
+
+    #header-pinned .share-icons .at15t_twitter.at16t_twitter,
+    #header-pinned .share-icons .addthis_button_facebook:hover {
+        background-position: 0 -1609px;
+ 
+    }
+    
+    #header-pinned .share-icons .at15t_twitter.at16t_twitter,
+    #header-pinned .share-icons .addthis_button_twitter {
+        display: block;
+        background-repeat: no-repeat;
+        background-image: url(http://www.urban.org/sites/all/themes/urban/images/generated/icons-s8fe141aaaa.png);
+        background-position: 0 -1169px;
+        height: 32px;
+        width: 32px;
+    }
+
+       #header-pinned .share-icons .at15t_twitter.at16t_twitter,
+    #header-pinned .share-icons .addthis_button_twitter:hover {
+        background-position: 0 -1577px;
+    }
+    
+    #header-pinned .share-icons .at15t_linkedin.at16t_linkedin,
+    #header-pinned .share-icons .addthis_button_linkedin {
+        display: block;
+        background-repeat: no-repeat;
+        background-image: url(http://www.urban.org/sites/all/themes/urban/images/generated/icons-s8fe141aaaa.png);
+        background-position: 0 -1641px;
+        height: 32px;
+        width: 32px;
+    }
+    
+           #header-pinned .share-icons .at15t_linkedin.at16t_linkedin,
+    #header-pinned .share-icons .addthis_button_linkedin:hover {
+        background-position: 0 -1379px;
+    }
+
+    #header-pinned .share-icons .at15t_google_plusone_share.at16t_google_plusone_share,
+    #header-pinned .share-icons .addthis_button_google_plusone_share {
+        display: block;
+        background-repeat: no-repeat;
+        background-image: url(http://www.urban.org/sites/all/themes/urban/images/generated/icons-s8fe141aaaa.png);
+        background-position: 0 -1719px;
+        height: 32px;
+        width: 32px;
+    }
+    
+    #header-pinned .share-icons .at15t_email.at16t_email,
+    #header-pinned .share-icons .addthis_button_email {
+        display: block;
+        background-repeat: no-repeat;
+        background-image: url(http://www.urban.org/sites/all/themes/urban/images/generated/icons-s8fe141aaaa.png);
+        background-position: 0 -1449px;
+        height: 32px;
+        width: 32px;
+    }
+
+               #header-pinned .share-icons .at15t_email.at16t_email,
+    #header-pinned .share-icons .addthis_button_email:hover {
+        background-position: 0 -1271px;
+    }
+    
+    #header-pinned .share-icons [class^="addthis_button_"] {
+        display: inline-block !important;
+        margin: 0 0 0 10px;
+    }
+    
+    #header-pinned .share-icons .addthis_toolbox a {
+        margin-bottom: 5px;
+    }
+    
+    .at_a11y{
+     display: none;
+    }
+
+    /*end css for header*/
+
 
 /****************************************/
 /************ FOOTER *****************/

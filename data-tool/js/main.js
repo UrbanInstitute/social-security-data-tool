@@ -74,7 +74,6 @@ function newTable(index){
 		  // var data = resp.results[0];
 		  var data = resp;
 		  var category = data.category;
-		  console.log(id, category)
 		  switch(category){
 		  	case "timeSeries":
 		  	  	exportParams.chartType = "lineChart"
@@ -125,6 +124,7 @@ function setLayout(){
 
 }
 function drawTable(input){
+	console.log(input)
 	d3.select("#testTable table").remove()
 	d3.select("#tableTitle")
 		.html("<div class =\"titleCategory\">" + input.title.category + "</div>" + input.title.id + ": " + input.title.name)
@@ -181,8 +181,8 @@ function drawTable(input){
 							id: series[0],
 			            	name: seriesID,
 			            	data: generateTimeSeries(data.data.years.series, data["data"][series]["series"])
-
 						});
+
 
 						// barChart.addSeries({
 						// 	id: series[0],
@@ -204,7 +204,15 @@ function drawTable(input){
 						yearBarCache["id"] = series[0]
 						checkUnitCompatibility(data["data"][series]["type"], input, [lineChart, singleYearBarChart])
 						th.classed("selected", true)
+						if(d3.select("#singleYearCheck circle").classed("checked")){
+							th.classed("singleSelected", true)
+						}
 			  			exportParams.columns.push(series)
+						for(var i = 0; i < lineChart.series.length; i++){
+							if(lineChart.series[i].userOptions.id == series[0]){
+								th.style("background-color", lineChart.series[i].color)
+							}
+						}
 
 					} else{
 						var tmp = exportParams.columns.indexOf(series);
@@ -213,6 +221,9 @@ function drawTable(input){
 						removeSeries(lineChart, seriesID)
 						removeSeries(singleYearBarChart, seriesID)
 						th.classed("selected", false)
+						th.classed("singleSelected", false)
+						th.style("background-color", "#e0e0e0")
+
 					}
 				}
 				else if (category == "map"){
@@ -247,10 +258,18 @@ function drawTable(input){
 						// d3.selectAll("th").classed("selected",false)
 						checkUnitCompatibility(data["data"][series]["type"], input, [barChart])
 						th.classed("selected", true)
+
+						for(var i = 0; i < barChart.series.length; i++){
+							if(barChart.series[i].userOptions.id == series[0]){
+								th.style("background-color", barChart.series[i].color)
+							}
+						}
 					}
 					else{
 						th.classed("selected", false)
 						removeSeries(barChart, seriesID)
+						th.style("background-color", "#e0e0e0")
+
 					}
 				}
 
@@ -299,7 +318,7 @@ function drawTable(input){
 			var diff = $("#symbol_" + symbol).offset().top
 			$('html, body').animate({
 //diff minus height of controls minus thead minus title height				
-        		scrollTop: diff - 360 - d3.select("thead").node().getBoundingClientRect().height - 100
+        		scrollTop: diff - 420 - d3.select("thead").node().getBoundingClientRect().height - 100
     		}, 1000);
 
 		})
@@ -442,6 +461,9 @@ function checkUnitCompatibility(unit, input, charts){
 				return false
 			}
 		})
+
+	d3.selectAll("th.singleSelected:not(.selected)")
+		.classed("singleSelected",false)
 
 }
 function generateTimeSeries(year, column){
@@ -624,13 +646,13 @@ function drawBar(input, col){
         });
 	d3.select("#lineChart")
 		.transition()
-		.style("left",-2000)
+		.style("left",-3000)
 	d3.select("#singleYearBarChart")
 		.transition()
-		.style("left",2000)
+		.style("left",3000)
 	d3.select("#map")
 		.transition()
-		.style("left",2000)
+		.style("left",3000)
 	d3.select("#barChart")
 		.transition()
 		.style("left","400px")
@@ -660,17 +682,32 @@ function drawMap(input, col){
             // min: 0,
             // max: 100000,
             minColor: "#f0f0f0",
-            maxColor: "#1696d2"
+            maxColor: "#1696d2",
+            labels:{
+            	formatter: function(){
+            		// console.log(this.axis.defaultLabelFormatter.call(this) + "ADSf")
+            		return formatLabel(null, null, this, col, "label")
+            		// return this.axis.labelFormatter.call(this)
+            		// console.log(this.axis.labelFormatter(this))
+            		// return formatLabel(null, null, input, col, "legend")
+            	}
+            }
+
         },
         legend:{
         	title: {
         		text: initId
-        	}
+        	}        	// ,
+        	// labelFormatter: function(){
+        	// 	console.log(this.labelFormatter, this)
+        	// 	                    	console.log(JSON.stringify(this))
+
+        	// 	// return this.axis.defaultLabelFormatter.call(this) + "%";
+        	// 	// return this.labelFormatter.call(5) + "%"
+        	// }
         },
         tooltip: {
                 formatter: function () {
-                	                    	console.log(this)
-
                 	// if(this.y == false || this.y==null){
                         // return null
                     // }else{
@@ -709,24 +746,25 @@ function drawMap(input, col){
     });
 	d3.select("#lineChart")
 		.transition()
-		.style("left",-2000)
+		.style("left",-3000)
 	d3.select("#singleYearBarChart")
 		.transition()
-		.style("left",2000)
+		.style("left",3000)
 	d3.select("#barChart")
 		.transition()
-		.style("left",2000)
+		.style("left",3000)
 	d3.select("#map")
 		.transition()
 		.style("left","400px")
 }
+
 
 function drawLineChart(input){
 	var initId = input["data"]["col1"]["label"]
     $('#lineChart').highcharts({
             chart: {
                 marginTop: 150,
-                marginBottom: 40
+                marginBottom: 100
             },
             plotOptions: {
                 series: {
@@ -760,6 +798,10 @@ function drawLineChart(input){
                     text: ''
                 },
                 labels: {
+                	formatter: function(){
+                		console.log(this)
+                		return formatLabel(this, null, input, this.chart.series[0].userOptions.id, "label")
+                	}
                     // format: '${value:.0f}'
                 }
             },
@@ -965,12 +1007,30 @@ function getJSONPath(id){
 	}
 }
 function singleYear(){
+	d3.selectAll("th.selected")
+		.classed("singleSelected",true)
+
+// 	#singleYearBarChart{
+//     left: 2000px;
+// }
+// #valueScrubber{
+//     top: 393px;
+//     left: 455px;
+//     z-index: 300;
+//     position: fixed;
+// }
+	d3.select("#valueScrubber")
+		.transition()
+		.style("top","450px")
+	d3.select("#singleYearCheck")
+		.transition()
+		.style("top","460px")
 
 	exportParams.chartType = "timeBar";
 
 	d3.select("#lineChart")
 		.transition()
-		.style("left",-2000)
+		.style("left",-3000)
 	d3.select("#singleYearBarChart")
 		.transition()
 		.style("left","400px")
@@ -988,6 +1048,15 @@ function singleYear(){
 		})
 }
 function multiYear(){
+	d3.selectAll("th.selected")
+		.classed("singleSelected",false)
+
+	d3.select("#valueScrubber")
+		.transition()
+		.style("top","393px")
+	d3.select("#singleYearCheck")
+		.transition()
+		.style("top","403px")
 
 	exportParams.chartType = "lineChart";
 
@@ -996,13 +1065,13 @@ function multiYear(){
 		.style("left","400px")
 	d3.select("#singleYearBarChart")
 		.transition()
-		.style("left",2000)
+		.style("left",3000)
 	d3.select("#map")
 		.transition()
-		.style("left",2000)
+		.style("left",3000)
 	d3.select("#barChart")
 		.transition()
-		.style("left",2000)
+		.style("left",3000)
 	d3.select("#valueScrubber .left.thumb")
 		.style("display","block")
 	d3.select("#leftValue")
@@ -1174,19 +1243,32 @@ function drawScrubber(){
 
 }
 function hideScrubber(){
-	d3.select("#hideScrubber")
-		.style("display","block")
-	d3.select("#valueScrubber").classed("hidden",true)
-	d3.select("#singleYearCheck").classed("hidden",true)	
+	// d3.select("#hideScrubber")
+		// .style("display","block")
+	// d3.select("#valueScrubber").classed("hidden",true)
+	// d3.select("#singleYearCheck").classed("hidden",true)	
+	d3.select("#valueScrubber")
+		.transition()
+		.style("left",-3000)
+	d3.select("#singleYearCheck")
+		.transition()
+		.style("left", -3000)
 
 }
 function showScrubber(){
-	d3.select("#hideScrubber")
-		.style("display","none")
-	d3.select("#valueScrubber").classed("hidden",false)
-	d3.select("#singleYearCheck").classed("hidden",false)	
-}
+	// d3.select("#hideScrubber")
+	// 	.style("display","none")
+	// d3.select("#valueScrubber").classed("hidden",false)
+	// d3.select("#singleYearCheck").classed("hidden",false)	
+	d3.select("#valueScrubber")
+		.transition()
+		.style("left",455)
+	d3.select("#singleYearCheck")
+		.transition()
+		.style("left", 803)
 
+
+}
 function setTheme(){
 	Highcharts.createElement('link', {
 	    href: 'http://fonts.googleapis.com/css?family=Lato:400,600',
@@ -1224,11 +1306,12 @@ function setTheme(){
             	}
 	}
 	var oldMenu = Highcharts.getOptions().exporting.buttons.contextButton.menuItems
+	// console.log(oldMenu)
 	oldMenu.unshift(embed)
 
 	Highcharts.theme = {
-	    colors: ["#0096d2", "#00578b", "#fcb918", "#f47d20", "#6d6d6d", "#c6c6c6", "#ec008c",
-	      "#55BF3B", "#DF5353", "#7798BF", "#aaeeee"],
+	    colors: ["#0096d2", "#00578b", "#fcb918", "#f47d20", "#ec008c",
+	      "#55BF3B", "#DF5353"],
 	    chart: {
 	        backgroundColor: "#ffffff",
 	        style: {
@@ -1265,8 +1348,30 @@ function setTheme(){
         exporting: {
             buttons: {
                 contextButton: {
-	            	text: "Share",
-                    menuItems: oldMenu
+                	symbol: false,
+
+	            	text: "Download",
+                    menuItems: oldMenu,
+                    theme: {
+                	// width: 200,
+                	// height: 100,
+                    'stroke-width': 10,
+                    stroke: '#333',
+                    r: 0,
+                    fill: "#333",
+                    color: "#fff !important",
+                    font: "Lato",
+                    states: {
+                        hover: {
+                            fill: '#1696d2',
+                            stroke: '#1696d2'
+                        },
+                        select: {
+                            fill: '#1696d2',
+                            stroke: '#1696d2'
+                        }
+                    }
+                }
                 }
             }
         },
@@ -1322,10 +1427,12 @@ function setTheme(){
 	// Apply the theme
 	Highcharts.setOptions(Highcharts.theme);
 }
-var simpleTimeSheets = ['2.A3','2.A4','2.A8','2.A9','2.A13','2.A27','2.A28','2.C1','2.F3','3.C4','3.C6.1','3.E1','4.A1','4.A2','4.A3','4.A4','4.A5','4.A6','4.B1','4.B2','4.B4','4.B11','4.C1','5.A17','5.C2','5.D3','5.E2','5.F6','5.F8','5.F12','5.G2','6.C7','6.D6','6.D8','6.D9','7.A9','7.E6','8.A1','8.A2','8.B10','9.B1','9.D1']
-var notok = ['2A27','2A28','2C1','3C4','3E1','4B1','4B2']
-var tempAllSheets = ['2.A3','2.A4','2.A20','2.A21','2.A30','2.F4','2.F5','2.F6','2.F7','2.F8','2.F9','2.F11','3.C3','3.C5','3.C6','4.A2','4.A3','4.A4','4.A6','4.C1','4.C2','5.A1','5.A1.2','5.A1.3','5.A1.4','5.A3','5.A4','5.A5','5.A6','5.A7','5.A8','5.A10','5.A17','5.D1','5.D2','5.D3','5.D4','5.E1','5.E2','5.F1','5.F4','5.F6','5.F7','5.F8','5.H1','5.H2','5.H3','5.H4','5.J1','5.J2','5.J4','5.J8','5.J10','5.J14','5.M1','6.A1','6.A2','6.A3','6.A4','6.A5','6.A6','6.C1','6.C2','6.C7','6.D4','6.D5','6.D7','6.D8','6.F1','6.F2','6.F3']
-// var allSheets = ['2.A3','2.A4','2.A9','2.A13','2.F3','3.C6.1','4.A1','4.A2','4.A3','4.A6','4.B11','5.A17','5.D3','5.F6','6.D8','7.A9','8.B10','9.D1']
+// var tempAllSheets = ['2.A3','2.A4','2.A20','2.A21','2.A30','2.F4','2.F5','2.F6','2.F7','2.F8','2.F9','2.F11','3.C3','3.C5','3.C6','4.A2','4.A3','4.A4','4.A6','4.C1','4.C2','5.A1','5.A1.2','5.A1.3','5.A1.4','5.A3','5.A4','5.A5','5.A6','5.A7','5.A8','5.A10','5.A17','5.D1','5.D2','5.D3','5.D4','5.E1','5.E2','5.F1','5.F4','5.F6','5.F7','5.F8','5.H1','5.H2','5.H3','5.H4','5.J1','5.J2','5.J4','5.J8','5.J10','5.J14','5.M1','6.A1','6.A2','6.A3','6.A4','6.A5','6.A6','6.C1','6.C2','6.C7','6.D4','6.D5','6.D7','6.D8','6.F1','6.F2','6.F3']
+
+
+var tempAllSheets = ['2.A3','2.A4','2.A30','2.F4','2.F5','2.F6','2.F8','2.F11','4.A2','4.A3','4.A4','4.A6','4.C1','5.A1.3','5.A7','5.A17','5.D1','5.D2','5.D3','5.D4','5.E1','5.E2','5.F1','5.F4','5.F6','5.F7','5.F8','5.H1','5.H3','5.H4','5.J1','5.J2','5.J4','5.J8','5.J10','5.J14','6.A1','6.A2','6.A3','6.A6','6.C1','6.C2','6.C7','6.D4','6.D8','6.F1']
+
+
 var allSheets = tempAllSheets;
 var sheets = tempAllSheets;
 var tableIndex = 0;
@@ -1341,45 +1448,83 @@ function searchTables(val){
 	word = val.value
 	word = word.toUpperCase()
 	current = sheets[tableIndex]
+	// console.log(current)
 	$.getJSON(getJSONPath("words"), function(words){
-		sheets = words[word]
-		filterSheets(current)
+		if(typeof(words[word]) != "undefined"){
+			sheets = words[word]
+			console.log(sheets.length)
+			filterSheets(current)
+		}
 	})
 
 }
 
 function filterSheets(current){
+	// console.log(current)
 	if(sheets.indexOf(current) != -1){
+		console.log("foo", current)
 		tableIndex = sheets.indexOf(current);
 		// newTable(tableIndex)
 	}else{
+		console.log("bar", current, sheets)
+	// d3.select("#testTable table").remove()
+
 		tableIndex = 0;
 		newTable(0);
 	}
 
 	var select = document.getElementById("tableMenu"); 
 	d3.selectAll("#tableMenu option").remove()
+
 	$.getJSON(getJSONPath("titles"), function(titles){
 		for(var i = 0; i < sheets.length; i++){
 		    var opt = sheets[i];
 		    var el = document.createElement("option");
+		    var content = titles[opt.replace(/\./g,"")];
 		    el.textContent = titles[opt.replace(/\./g,"")];
 		    el.value = opt;
-		    select.appendChild(el);
+		    if(typeof(content) != "undefined"){
+		    	select.appendChild(el);
+		    }
 		}
 	$("#tableMenu").html($("#tableMenu option").sort(function (a, b) {
 	    return a.text == b.text ? 0 : a.text < b.text ? -1 : 1
 	}))
+	// var first = d3.select("#tableMenu option").node()
+	d3.select("#tableMenu")
+		.insert("option", "option")
+		.text("Select a table")
 	});
 
 }
 function formatLabel(x, y, input, col, type){
+	var label = input.data[col].type
+
+	if(type == "label"){
+		// console.log(x, y, input, col, type)
+		// return '{value}'
+		// return "$" + ""
+		// console.log(this)
+		// return ""
+		// return(Highcharts.numberFormat('{value}'))
+		// console.log(Highcharts.Axis.defaultLabelFormatter)
+		if(label == "dollar"){
+			return '$' + x.axis.defaultLabelFormatter.call(x);
+		}
+		else if(label == "percent"){
+			return x.axis.defaultLabelFormatter.call(x) + "%";
+		}
+		else{
+			return x.axis.defaultLabelFormatter.call(x);	
+		}
+		// else if(col == "")
+		// console.log(input, col)
+		// return ''
+	}
 	if(type == "tooltipBar" && Object.keys(yearBarCache).length > 0){
 		col = yearBarCache.id
 	}
 
-	var label = input.data[col].type
-	console.log(label)
 	var dollar = d3.format("$,")
 	var num = d3.format(",")
 	if(type == "tooltipLine"){
@@ -1509,7 +1654,7 @@ $(document).ready(function() {
 	   var end = d3.select("#testTable thead").node().getBoundingClientRect().width - $(window).width() + 44;       
        var scrollLeftVal = $(this).scrollLeft();
        d3.select("thead")
-       	.style("left", -1*scrollLeftVal + 49)
+       	.style("left", -1*scrollLeftVal + 39)
        if(Math.abs(scrollLeftVal-end) <= 220){
        	d3.select(".rightFader")
        		.style("right", -220+Math.abs(scrollLeftVal-end))

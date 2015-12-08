@@ -12,18 +12,86 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
+    <!--    header-->
+    <div id="header-pinned" class="no-touch is-visible">
+        <div class="content">
+            <a target="_blank" href="http://www.urban.org" title="Home" rel="home" class="site-logo"></a>
+            <div class="title"><a href="http://www.urban.org/features" class="title-linkback">Features</a> <span>: :</span> DI thingmajigger</div>
+            <div class="share-icons">
+                <div class="shareThisP">
+                    <a href="#" onclick="toggle_visibility('shareBox');">
+                    <div class="shareThisB"></div></a>
+                    <div class="shareThisW" id="shareBox">
+                        <script type="text/javascript">
+<!--
+    function toggle_visibility(id) {
+       var e = document.getElementById(id);
+       if(e.style.display == 'inline-block')
+          e.style.display = 'none';
+       else
+          e.style.display = 'inline-block';
+    }
+//-->
+</script>
+                        
+                        
+                        
+                        <div class="addthis_toolbox addthis_default_style  " addthis:title="" addthis:url="">
+                            <a href="https://www.facebook.com/sharer/sharer.php?u=http://urbn.is/massincarceration"  target="_blank"  class="addthis_button_facebook at300b" title="Facebook" onclick="toggle_visibility('shareBox');"><span class="at4-icon aticon-facebook" style="background-color: rgb(48, 88, 145);"><span class="at_a11y">Share on facebook</span></span></a>
+                            
+                            <a href="http://twitter.com/intent/tweet?text=Interactive%20tool%20from%20%40urbaninstitute%3A%20Explore%20how%20policy%20changes%20could%20affect%20the%20US%20prison%20population%20http%3A%2F%2Furbn.is%2Fmassincarceration%20%23prisonreform"  target="_blank"  class="addthis_button_twitter at300b" title="Tweet" onclick="toggle_visibility('shareBox');"><span class="at4-icon aticon-twitter" style="background-color: rgb(44, 168, 210);"><span class="at_a11y">Share on twitter</span></span></a>
+
+                            <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://urbn.is/massincarceration&title=Reducing%20Mass%20Incarceration%20Requires%20Far-Reaching%20Reforms&summary=A%20new%20Urban%20Institute%20tool%20lets%20you%20explore%20how%20potential%20policy%20changes%20could%20affect%20the%20US%20prison%20population.&source=Urban%20Institute"  target="_blank"  class="addthis_button_linkedin at300b" target="_blank" title="LinkedIn" onclick="toggle_visibility('shareBox');"><span class="at4-icon aticon-linkedin" style="background-color: rgb(68, 152, 200);"><span class="at_a11y">Share on linkedin</span></span></a>
+                            
+                            <a href="mailto:%20?Subject= New interactive tool from the Urban Institute &amp;Body=Hi! I thought you'd be interested in this new interactive tool from the Urban Institute: “Reducing Mass Incarceration Requires Far-Reaching Reforms.” http://urbn.is/massincarceration" target="_blank" class="addthis_button_email at300b" target="_blank" title="Email" onclick="toggle_visibility('shareBox');"><span class="at4-icon aticon-email" style="background-color: rgb(115, 138, 141);"><span class="at_a11y">Share on email</span></span></a>
+                            <div class="atclear"></div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--    end header-->
+
+
+
 <div id = "chartContainer">
 	<div id = "controls">
 		<div id = "innerControls">
-			Search the data
-			<input type="text" name="search" id="searchBox"  value="Search tables for keywords..." onblur="if (this.value == '') {this.value = 'Search tables for keywords...';}" onfocus="if (this.value == 'Search tables for keywords...') {this.value = '';}" />
+				<input type="text" name="search" id="searchBox"  value="Search tables for keywords..." onblur="if (this.value == '') {this.value = 'Search tables for keywords...';}" onfocus="if (this.value == 'Search tables for keywords...') {this.value = '';}" />
+			<div id = "checkboxes">
+				<div class = "col">
+					<label><input type="checkbox" id="Disability" value="Disability">Disability</label><br>
+					<label><input type="checkbox" id="Disability" value="Disability">Family</label><br>
+					<label><input type="checkbox" id="Disability" value="Disability">Survivors</label><br>
+					<label><input type="checkbox" id="Disability" value="Disability">Disability</label><br>
+				</div>
+				<div class = "col">
+					<label><input type="checkbox" id="Disability" value="Disability">OASDI</label><br>
+					<label><input type="checkbox" id="Disability" value="Disability">OASI</label><br>
+					<label><input type="checkbox" id="Disability" value="Disability">DI&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><br>
+					<label><input type="checkbox" id="Disability" value="Disability">RET</label><br>
+				</div>
+				<div class = "col">
+					<label><input type="checkbox" id="Disability" value="Disability">Disability</label><br>
+					<label><input type="checkbox" id="Disability" value="Disability">Disability</label><br>
+					<label><input type="checkbox" id="Disability" value="Disability">Disability</label><br>
+					<label><input type="checkbox" id="Disability" value="Disability">Disability</label><br>
+				</div>
+				<div class = "col">
+					<label><input type="checkbox" id="Disability" value="Disability">Disability</label><br>
+					<label><input type="checkbox" id="Disability" value="Disability">Disability</label><br>
+					<label><input type="checkbox" id="Disability" value="Disability">Disability</label><br>
+					<label><input type="checkbox" id="Disability" value="Disability">Disability</label><br>
+				</div>	
+			</div>
 		    <select id="tableMenu">
     	    	<option>Select a table</option>
   			</select>
   			<div id = "refresh"></div>
 		</div>
 	</div>
-	<div id = "hideScrubber"></div>
 
 	<div id = "lineChart"></div>
 	<div id = "singleYearBarChart"></div>
@@ -79,6 +147,8 @@ The views expressed are those of the authors and should not be attributed to our
 <script type="text/javascript" src="js/vendor/jquery.tablesorter.min.js"></script>
 
 <script src="http://code.highcharts.com/modules/exporting.js"></script>
-<script src="http://highslide-software.github.io/export-csv/export-csv.js"></script>
+<!-- <script src="http://highslide-software.github.io/export-csv/export-csv.js"></script> -->
+<script src="http://highcharts.github.io/export-csv/export-csv.js"></script>
+
 <script src = "js/main.js"></script>
 </body>
