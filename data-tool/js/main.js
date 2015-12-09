@@ -11,6 +11,7 @@ function getQueryVariable(variable) {
 
 
 
+
 var yearBarCache;
 var MONTHNAMES = ["January", "February", "March", "April", "May", "June",
   "July", "August", "September", "October", "November", "December"
@@ -130,7 +131,6 @@ function setLayout(){
 
 }
 function drawTable(input){
-	console.log(input)
 	d3.select("#testTable table").remove()
 	d3.select("#tableTitle")
 		.html("<div class =\"titleCategory\">" + input.title.category + "</div>" + input.title.id + ": " + input.title.name)
@@ -802,7 +802,6 @@ function drawLineChart(input){
                 },
                 labels: {
                 	formatter: function(){
-                		console.log(this)
                 		return formatLabel(this, null, input, this.chart.series[0].userOptions.id, "label")
                 	}
                     // format: '${value:.0f}'
@@ -1436,6 +1435,7 @@ var tempAllSheets = ['2.A3','2.A4','2.A30','2.F4','2.F5','2.F6','2.F8','2.F11','
 
 var allSheets = tempAllSheets;
 var sheets = tempAllSheets;
+var TOTAL_TABLES = sheets.length
 var tableIndex = 0;
 // init("2A9");
 // init("4C1");
@@ -1451,28 +1451,77 @@ function test(index){
 
 
 function searchTables(val){
-	word = val.value
-	word = word.toUpperCase()
-	current = sheets[tableIndex]
-	// console.log(current)
-	$.getJSON(getJSONPath("words"), function(words){
-		if(typeof(words[word]) != "undefined"){
-			sheets = words[word]
-			console.log(sheets.length)
-			filterSheets(current)
-		}
-	})
+	var words = val.value
+	words = words.toUpperCase().replace(/\s+/g," ").split(" ")
+	
+	// var promise = new Promise(function(resolve, reject){
+	
+		var results = [];
+		current = sheets[tableIndex]
+		// console.log(words)
+		// for(var i = 0, len = words.length; i < len; i++){
+		words.map(function(word){
+			// console.log(word, words.length)
+			// console.log(current)
+			// console.log(current)
+				// console.log(word)
+				$.getJSON(getJSONPath("words"), function(allWords){
+					// word = words[i]
+					console.log(word,words)
+					if(typeof(allWords[word]) != "undefined"){
+						// sheets = words[word]
+						// filterSheets(current)
+						// console.log(allWords[word])
+						// console.log(word,i,words, words.length)
+						console.log(word)
+						results.push(allWords[word])
+						// console.log(results,i)
+						// if(ii == len-1){
+						// 	console.log(results)
+						// 	console.log(results)
+						// 	sheets = _.intersection.apply(this, results)
+						// 	console.log(results, sheets)
+						// 	filterSheets(current)		
+						// }
+						if(results.length == words.length){
+							sheets = _.intersection.apply(this, results)
+							filterSheets(current, val.value)	
+						}
+					}else{
+						d3.select("#searchText")
+					  		.html("No tables found matching \"" + val.value + "\"")
+					  	// return false
+					}
+				})
+			// console.log(results)
 
-}
+		})
+		// console.log(results, words)
+		// if(results.length == words.length){
+		// 	console.log(results)
+		// }
+		// console.log(i, words.length)
 
-function filterSheets(current){
-	// console.log(current)
+	}
+		// resolve(results)
+		// return results
+	// .then(function(results){
+
+
+
+
+
+function filterSheets(current, val){
+	console.log(sheets)
+	if(sheets.length == 0){
+		d3.select("#searchText")
+	  		.html("No tables found matching \"" + val + "\"")	
+	  	return false;
+	}
 	if(sheets.indexOf(current) != -1){
-		console.log("foo", current)
 		tableIndex = sheets.indexOf(current);
 		// newTable(tableIndex)
 	}else{
-		console.log("bar", current, sheets)
 	// d3.select("#testTable table").remove()
 
 		tableIndex = 0;
@@ -1492,6 +1541,9 @@ function filterSheets(current){
 		    if(typeof(content) != "undefined"){
 		    	select.appendChild(el);
 		    }
+		  d3.select("#searchText")
+		  	.html("Displaying " + sheets.length + " of " + TOTAL_TABLES + " tables")
+		 // console.log("found "  + sheets.length + " tables")
 		}
 	$("#tableMenu").html($("#tableMenu option").sort(function (a, b) {
 	    return a.text == b.text ? 0 : a.text < b.text ? -1 : 1
@@ -1631,6 +1683,11 @@ document.getElementById("searchBox").addEventListener("keydown", function(e) {
     // Enter is pressed
     if (e.keyCode == 13) { searchTables(this); }
 }, false);
+
+d3.select("#searchButton")
+	.on("click", function(){
+		searchTables(document.getElementById("searchBox"))
+	})
 // WORDS = getJSON
 d3.select("#left_arrow")
 	.on("click", function(){
@@ -1658,10 +1715,10 @@ $(function() {
     });
 });
 
-d3.select("#refresh")
+d3.select("#resetButton")
 	.on("click", function(){
 		sheets = allSheets;
-		$("#searchBox").val("Search tables for keywords...")
+		$("#searchBox").val("Search tables for keywords")
 		filterSheets(0)
 		newTable(0)
 	})

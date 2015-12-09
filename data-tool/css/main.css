@@ -147,13 +147,41 @@ tbody{
 /****************************************/
 #searchBox{
     position: absolute;
-    top: 29px;
+    top: 33px;
     left: 10px;
-    width: 256px;
-    height: 45px;
+    width: 228px;
+    height: 37px;
     vertical-align: middle;
     text-indent: 6px;
-    font-size: 13pt;
+    font-size: 12pt;
+    border: none
+}
+#searchText{
+    position: fixed;
+    left: 12px;
+    top: 140px;
+    font-size: 14px;
+    font-style: italic;
+}
+#searchButton, #resetButton{
+    position: fixed;
+    background-color: #333;
+    color: white;
+    text-transform: uppercase;
+    font-size: 13px;
+    padding: 11px;
+    cursor: pointer;
+}
+#searchButton:hover, #resetButton:hover{
+    background-color: #1696d2;
+}
+#searchButton{
+    left: 247px;
+    top: 93px;
+}
+#resetButton{
+    left: 328px;
+    top: 93px;
 }
 #checkboxes{
     font-size: 10pt;
@@ -280,7 +308,8 @@ tbody{
     color: #1696d2;
 }
 .chartTitle, .chartSubtitle{
-    width: calc(100% - 108px);
+    /*pointer-events: none;*/
+    width: 100%;
     display: block;
     white-space: pre-wrap;      /* CSS3 */   
     white-space: -moz-pre-wrap; /* Firefox */    
@@ -290,7 +319,8 @@ tbody{
 
 }
 span.highcharts-title{
-    width: 100% !important;
+    /*pointer-events: none;*/
+    width: calc(100% - 108px) !important;
 }
 
 /****************************************/
