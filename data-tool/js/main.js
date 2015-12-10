@@ -556,7 +556,7 @@ function drawBar(input, col){
 	// var col = (typeof(input.default) != "undefined") ? input.default : "col1"
 	var labels = (input["data"]["categories"]["series"].length > 6) ? false : true;
 	var marginBottom = (labels) ? 80 : 110;
-	var marginLeft = (labels) ? 10 : 80;
+	var marginLeft = (labels) ? 60 : 80;
 	var initId = input["data"][col]["label"]
         $('#barChart').highcharts({
             chart: {
