@@ -1441,81 +1441,88 @@ var tableIndex = 0;
 // init("4C1");
 init();
 window.onresize = function(){
-			if(d3.select("#testTable thead").node().getBoundingClientRect().width - $(window).width() + 44 <= 0){
-			d3.select(".rightFader").style("opacity", 0)
-		}else{ d3.select(".rightFader").style("opacity",1)}
+	if(d3.select("#testTable thead").node().getBoundingClientRect().width - $(window).width() + 44 <= 0){
+		d3.select(".rightFader").style("opacity", 0)
+	}else{ d3.select(".rightFader").style("opacity",1)}
 }
-function test(index){
-	init(simpleTimeSheets[index].replace(/\./g,""))
-}
+
 
 
 function searchTables(val){
-	var words = val.value
-	words = words.toUpperCase().replace(/\s+/g," ").split(" ")
-	
-	// var promise = new Promise(function(resolve, reject){
-	
-		var results = [];
-		current = sheets[tableIndex]
-		// console.log(words)
-		// for(var i = 0, len = words.length; i < len; i++){
-		words.map(function(word){
-			// console.log(word, words.length)
-			// console.log(current)
-			// console.log(current)
-				// console.log(word)
-				$.getJSON(getJSONPath("words"), function(allWords){
-					// word = words[i]
-					console.log(word,words)
-					if(typeof(allWords[word]) != "undefined"){
-						// sheets = words[word]
-						// filterSheets(current)
-						// console.log(allWords[word])
-						// console.log(word,i,words, words.length)
-						console.log(word)
-						results.push(allWords[word])
-						// console.log(results,i)
-						// if(ii == len-1){
-						// 	console.log(results)
-						// 	console.log(results)
-						// 	sheets = _.intersection.apply(this, results)
-						// 	console.log(results, sheets)
-						// 	filterSheets(current)		
-						// }
-						if(results.length == words.length){
-							sheets = _.intersection.apply(this, results)
-							filterSheets(current, val.value)	
-						}
-					}else{
-						d3.select("#searchText")
-					  		.html("No tables found matching \"" + val.value + "\"")
-					  	// return false
-					}
-				})
-			// console.log(results)
-
-		})
-		// console.log(results, words)
-		// if(results.length == words.length){
-		// 	console.log(results)
-		// }
-		// console.log(i, words.length)
-
+	// console.log(d3.selectAll("#checkBoxes"))
+	// var tmp = []
+	var checked = d3.selectAll("#checkBoxes input").filter(function(d){return this.checked})
+	console.log(checked)
+	var results, tmp;
+	// console.log(checked.node())
+	if(checked.node() != null){
+		var tmp = keywords[d3.select(checked.node()).attr("id")]
+	}else{ tmp = null}
+	console.log(tmp)
+	if (val.value == "Enter keywords" && checked.node() == null){
+		reset();
+		return false;
 	}
-		// resolve(results)
-		// return results
-	// .then(function(results){
+	if (val.value == "Enter keywords"){
+		sheets = tmp;
+		filterSheets(sheets[tableIndex], "")
+		return false;
+	}
+	else if (tmp == null){
+		// results.push(tmp)
+		console.log("foo")
+		results = [];
 
+	}else{
+		results = [tmp]
+	}
+	// checked[0].map(function(c){
+	// 	tmp.push(keywords[d3.select(c).attr("id")])
+	// })
+	// if(tmp.length != 0){
+	// 	results = _.intersection.apply(this, tmp)
+	// }
+	console.log(results, tmp)
+	var words = val.value
+	words = words.toUpperCase().replace(/\s+/g," ").split(" ")	
+	
+	current = sheets[tableIndex]
+	words.map(function(word){
+		$.getJSON(getJSONPath("words"), function(allWords){
+			if(typeof(allWords[word]) != "undefined"){
+				results.push(allWords[word])
+				console.log("asdfa",typeof(tmp), tmp == null)
+				if(results.length == words.length || (tmp != null && results.length == words.length +1)){
+					console.log("bar")
+					sheets = _.intersection.apply(this, results)
+					filterSheets(current, val.value)	
+				}
+			}else{
+				noResults(val.value)
+			}
+		})
 
+	})
+}
 
+function noResults(val){
+	var checked = d3.selectAll("#checkBoxes input").filter(function(d){return this.checked})
+	if(checked.node() == null){
+		d3.select("#searchText")
+	  		.html("No tables found matching \"" + val + "\"")
+	}else{
+		var filter = d3.select(checked.node().parentNode).text().replace(/\s/g,"")
+		if(filter == "EarningsTest"){ filter = "Earnings Test"}
+		if(filter == "Trustfund"){ filter = "Trust fund"}
+		d3.select("#searchText")
+	  		.html("No tables found matching \"" + val + "\" and \"" + filter + "\"")
+	}
 
+}
 
 function filterSheets(current, val){
-	console.log(sheets)
 	if(sheets.length == 0){
-		d3.select("#searchText")
-	  		.html("No tables found matching \"" + val + "\"")	
+		noResults(val)
 	  	return false;
 	}
 	if(sheets.indexOf(current) != -1){
@@ -1688,6 +1695,19 @@ d3.select("#searchButton")
 	.on("click", function(){
 		searchTables(document.getElementById("searchBox"))
 	})
+
+d3.selectAll("#checkBoxes input")
+	.on("click", function(){
+		console.log(d3.select(this).property("checked"))
+		if(!d3.select(this).property("checked")){
+			d3.selectAll("#checkBoxes input").property("checked",false)
+			searchTables(document.getElementById("searchBox"))
+		}else{
+			d3.selectAll("#checkBoxes input").property("checked",false)
+			d3.select(this).property("checked",true)
+			searchTables(document.getElementById("searchBox"))
+		}
+	})
 // WORDS = getJSON
 d3.select("#left_arrow")
 	.on("click", function(){
@@ -1715,13 +1735,15 @@ $(function() {
     });
 });
 
+function reset(){
+	sheets = allSheets;
+	$("#searchBox").val("Enter keywords")
+	d3.selectAll("#checkBoxes input").property("checked",false)
+	filterSheets(0)
+	newTable(0)
+}
 d3.select("#resetButton")
-	.on("click", function(){
-		sheets = allSheets;
-		$("#searchBox").val("Search tables for keywords")
-		filterSheets(0)
-		newTable(0)
-	})
+	.on("click", reset)
 $(document).ready(function() {
 
    $(window).scroll(function() {

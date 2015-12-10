@@ -72,13 +72,13 @@ body{
 }
 #interactionInstructions{
     position: fixed;
-    top: 253px;
+    top: 307px;
     left: 10px;
     z-index: 200;
     font-size: 14px;
     font-style: italic;
     height: 103px;
-    width: 397px;
+    width: 385px;
     padding-top: 71px;
     pointer-events: none;
 }
@@ -145,6 +145,11 @@ tbody{
 /****************************************/
 /*********** FILTERS LAYOUT *************/
 /****************************************/
+#searchSubhead{
+    position: fixed;
+    left: 10px;
+    top: 73px;
+}
 #searchBox{
     position: absolute;
     top: 33px;
@@ -153,7 +158,9 @@ tbody{
     height: 37px;
     vertical-align: middle;
     text-indent: 6px;
-    font-size: 12pt;
+    font-style: italic;
+    color: #aaa;
+    font-size: 15pt;
     border: none
 }
 #searchText{
@@ -183,41 +190,34 @@ tbody{
     left: 328px;
     top: 93px;
 }
+#checkSubhead{
+    position: fixed;
+    left: 10px;
+    top: 171px;
+}
 #checkboxes{
     font-size: 10pt;
     position: fixed;
-    top: 200px;
+    top: 190px;
     left: 10px;
 }
 #checkboxes .col{
     float: left;
-    width: 90px;
+    width: 100px;
 }
 .col label{
     float: left;
 }
-
+#menuSubhead{
+    position: fixed;
+    left: 10px;
+    top: 330px;
+}
 #tableMenu{
     left: 10px;
     position: absolute;
-    top: 240px;
+    top: 290px;
     width: 296px;
-}
-#refresh{
-    z-index: 3;
-    display: block;
-    position: fixed;
-    top: 66px;
-    left: 351px;
-    background-repeat: no-repeat;
-    background-image: url(http://www.urban.org/sites/all/themes/urban/images/generated/icons-s8fe141aaaa.png);
-    background-position: 0 -1519px;
-    height: 35px;
-    width: 45px;
-    cursor: pointer;
-}
-#refresh:hover{
-        background-position: 0 -1751px;
 }
 /****************************************/
 /************ SCRUBBER STYLEs ***********/
@@ -302,7 +302,7 @@ tbody{
     fill: #fff !important;
     text-transform: uppercase;
 }
-.chartSubtitle{
+.chartSubtitle, .controlSubhead{
     text-transform: uppercase;
     font-size: 12px;
     color: #1696d2;
@@ -446,7 +446,7 @@ th:not(.selected){
         top: 0px;
         left: 0;
         width: 100%;
-        border-bottom: 11px solid #fff;
+        border-bottom: 12px solid #fff;
         z-index: 999;
         -webkit-transition: top 0.25s linear;
         -moz-transition: top 0.25s linear;

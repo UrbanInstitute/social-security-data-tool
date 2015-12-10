@@ -59,34 +59,52 @@
 <div id = "chartContainer">
 	<div id = "controls">
 		<div id = "innerControls">
-				<input type="text" name="search" id="searchBox"  value="Search tables for keywords" onblur="if (this.value == '') {this.value = 'Search tables for keywords';}" onfocus="if (this.value == 'Search tables for keywords') {this.value = '';}" />
+		<div class = "controlSubhead" id = "searchSubhead">Search</div>
+				<input type="text" name="search" id="searchBox"  value="Enter keywords" onblur="if (this.value == '') {this.value = 'Enter keywords';}" onfocus="if (this.value == 'Enter keywords') {this.value = '';}" />
 				<div id = "searchText"></div>
+			<div class = "controlSubhead" id = "checkSubhead">filter by category</div>
 			<div id = "checkboxes">
 				<div class = "col">
-					<label><input type="checkbox" id="Disability" value="Disability">Disability</label><br>
-					<label><input type="checkbox" id="Disability" value="Disability">Family</label><br>
-					<label><input type="checkbox" id="Disability" value="Disability">Survivors</label><br>
-					<label><input type="checkbox" id="Disability" value="Disability">Disability</label><br>
+					<label><input type="checkbox" id="OASDI" value="OASDI">OASDI</label><br>
+					<label><input type="checkbox" id="OASI" value="OASI">OASI</label><br>
+					<label><input type="checkbox" id="DI" value="DI">DI&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><br>
+					<label><input type="checkbox" id="RET" value="RET">RET&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><br>
+					<label><input type="checkbox" id="SGA" value="SGA">SGA&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><br>
+					<label><input type="checkbox" id="PIA" value="PIA">PIA&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><br>
+					<label><input type="checkbox" id="DAC" value="DAC">DAC</label><br>
+
+
 				</div>
 				<div class = "col">
-					<label><input type="checkbox" id="Disability" value="Disability">OASDI</label><br>
-					<label><input type="checkbox" id="Disability" value="Disability">OASI</label><br>
-					<label><input type="checkbox" id="Disability" value="Disability">DI&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><br>
-					<label><input type="checkbox" id="Disability" value="Disability">RET</label><br>
+					<label><input type="checkbox" id="application" value="application">Application</label><br>
+					<label><input type="checkbox" id="awards" value="awards">Awards</label><br>
+					<label><input type="checkbox" id="balance" value="balance">Balance</label><br>
+					<label><input type="checkbox" id="children" value="children">Children</label><br>
+					<label><input type="checkbox" id="claims" value="claims">Claims</label><br>
+					<label><input type="checkbox" id="countries" value="countries">Countries</label><br>
+					<label><input type="checkbox" id="disability" value="disability">Disability</label><br>
 				</div>
 				<div class = "col">
-					<label><input type="checkbox" id="Disability" value="Disability">Disability</label><br>
-					<label><input type="checkbox" id="Disability" value="Disability">Disability</label><br>
-					<label><input type="checkbox" id="Disability" value="Disability">Disability</label><br>
-					<label><input type="checkbox" id="Disability" value="Disability">Disability</label><br>
+					<label><input type="checkbox" id="earnings test" value="earnings test">Earnings Test</label><br>
+					<label><input type="checkbox" id="family" value="family">Family</label><br>
+					<label><input type="checkbox" id="formula" value="formula">Formula</label><br>
+					<label><input type="checkbox" id="geography" value="geography">Geography</label><br>
+					<label><input type="checkbox" id="international" value="international">International</label><br>
+					<label><input type="checkbox" id="policy" value="policy">Policy&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><br>
+					<label><input type="checkbox" id="process" value="process">Process</label><br>
+
 				</div>
 				<div class = "col">
-					<label><input type="checkbox" id="Disability" value="Disability">Disability</label><br>
-					<label><input type="checkbox" id="Disability" value="Disability">Disability</label><br>
-					<label><input type="checkbox" id="Disability" value="Disability">Disability</label><br>
-					<label><input type="checkbox" id="Disability" value="Disability">Disability</label><br>
+					<label><input type="checkbox" id="receipt" value="receipt">Receipt</label><br>
+					<label><input type="checkbox" id="rules" value="rules">Rule</label><br>
+					<label><input type="checkbox" id="spouses" value="spouses">Spouses</label><br>
+					<label><input type="checkbox" id="survivors" value="survivors">Survivors</label><br>
+					<label><input type="checkbox" id="taxes" value="taxes">Taxes</label><br>
+					<label><input type="checkbox" id="taxmax" value="taxmax">Taxmax</label><br>
+					<label><input type="checkbox" id="trustfund" value="trustfund">Trust fund</label><br>
 				</div>	
 			</div>
+			<div class = "controlSubhead" id = "menuSubhead">All selected tables</div>
 		    <select id="tableMenu">
     	    	<option>Select a table</option>
   			</select>
@@ -152,6 +170,6 @@ The views expressed are those of the authors and should not be attributed to our
 <script src="http://code.highcharts.com/modules/exporting.js"></script>
 <!-- <script src="http://highslide-software.github.io/export-csv/export-csv.js"></script> -->
 <script src="http://highcharts.github.io/export-csv/export-csv.js"></script>
-
+<script src = "js/keywords_hand.js"></script>
 <script src = "js/main.js"></script>
 </body>
