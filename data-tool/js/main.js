@@ -29,9 +29,9 @@ function init(){
 	setLayout();
 
 	setTimeout(function(){
-		$.getJSON( getJSONPath(sheets[tableIndex].replace(".","")), function(resp){
+		$.getJSON( getJSONPath(sheets[tableIndex].replace(/\./g,"_")), function(resp){
 		  // var data = resp.results[0];
-		  exportParams.tableID = sheets[tableIndex].replace(".","")
+		  exportParams.tableID = sheets[tableIndex].replace(/\./g,"_")
 		  var data = resp;
 		  var category = data.category;
 		  switch(category){
@@ -69,7 +69,8 @@ function init(){
 }
 
 function newTable(index){
-	var id = sheets[index].replace(/\./g,"")
+	tableIndex = index;
+	var id = sheets[index]
 	exportParams.tableID = id;
 	$.getJSON( getJSONPath(id), function(resp){
 		  // var data = resp.results[0];
@@ -127,7 +128,7 @@ function setLayout(){
 function drawTable(input){
 	d3.select("#testTable table").remove()
 	d3.select("#tableTitle")
-		.html("<div class =\"titleCategory\">" + input.title.category + "</div>" + input.title.id + ": " + input.title.name)
+		.html("<div class =\"titleCategory\">" + input.title.category + "</div>" + input.title.id.replace(/\_/g,".") + ": " + input.title.name)
 
 	d3.select("#testTable")
 		.append("table")
@@ -913,7 +914,6 @@ function drawSingleYearBarChart(input){
                 },
                 labels: {
                 	formatter: function(){
-                		console.log($('#lineChart').highcharts())
                 		return formatLabel(this, null, input, $('#lineChart').highcharts().series[0].userOptions.id, "label")
                 	}
                     // format: '${value:.0f}'
@@ -978,7 +978,7 @@ function removeSeries(chart, id){
 	}
 }
 function getId(doc){
-	return doc.title.id.replace(".","")
+	return doc.title.id.replace(/\./g,"_")
 }
 function getDocURL(id){
 	return "http://localhost:27080/test/tables/_find?criteria=" + encodeURIComponent('{"title.id":"' + id + '"}')
@@ -1421,7 +1421,10 @@ function setTheme(){
 // var tempAllSheets = ['2.A3','2.A4','2.A20','2.A21','2.A30','2.F4','2.F5','2.F6','2.F7','2.F8','2.F9','2.F11','3.C3','3.C5','3.C6','4.A2','4.A3','4.A4','4.A6','4.C1','4.C2','5.A1','5.A1.2','5.A1.3','5.A1.4','5.A3','5.A4','5.A5','5.A6','5.A7','5.A8','5.A10','5.A17','5.D1','5.D2','5.D3','5.D4','5.E1','5.E2','5.F1','5.F4','5.F6','5.F7','5.F8','5.H1','5.H2','5.H3','5.H4','5.J1','5.J2','5.J4','5.J8','5.J10','5.J14','5.M1','6.A1','6.A2','6.A3','6.A4','6.A5','6.A6','6.C1','6.C2','6.C7','6.D4','6.D5','6.D7','6.D8','6.F1','6.F2','6.F3']
 
 
-var tempAllSheets = ['2.A3','2.A4','2.A30','2.F4','2.F5','2.F6','2.F8','2.F11','4.A2','4.A3','4.A4','4.A6','4.C1','5.A1.3','5.A7','5.A17','5.D1','5.D2','5.D3','5.D4','5.E1','5.E2','5.F1','5.F4','5.F6','5.F7','5.F8','5.H1','5.H3','5.H4','5.J1','5.J2','5.J4','5.J8','5.J10','5.J14','6.A1','6.A2','6.A3','6.A6','6.C1','6.C2','6.C7','6.D4','6.D8','6.F1']
+// var tempAllSheets = ['2.A3','2.A4','2.A30','2.F4','2.F5','2.F6','2.F8','2.F11','4.A2','4.A3','4.A4','4.A6','4.C1','5.A1.3','5.A7','5.A17','5.D1','5.D2','5.D3','5.D4','5.E1','5.E2','5.F1','5.F4','5.F6','5.F7','5.F8','5.H1','5.H3','5.H4','5.J1','5.J2','5.J4','5.J8','5.J10','5.J14','6.A1','6.A2','6.A3','6.A6','6.C1','6.C2','6.C7','6.D4','6.D8','6.F1']
+
+
+var tempAllSheets = ["2_A3","2_A30","2_A4","2_F11","2_F4","2_F5","2_F6","2_F8","4_A1","4_A2","4_A3","4_A4","4_A5","4_A6","4_C1","5_A14-M0","5_A14-M1","5_A17","5_A1_8","5_A4-M0","5_A4-M1","5_B4","5_D1","5_D2","5_D3","5_E1","5_E2","5_F1-M0","5_F1-M1","5_F4-M0","5_F4-M1","5_F4-M2","5_F4-M3","5_F6","5_F7","5_F8","5_H1-M0","5_H1-M1","5_H3","5_H4","5_J1","5_J10","5_J14","5_J2","5_J4","5_J8","6_A1","6_A2","6_A6","6_B5-M0","6_B5-M1","6_B5_1-M0","6_B5_1-M1","6_C1","6_C2-M0","6_C2-M1","6_C7","6_D4-M0","6_D4-M1","6_D4-M2","6_D4-M3","6_D8","6_F1"]
 
 
 var allSheets = tempAllSheets;
@@ -1443,19 +1446,17 @@ function searchTables(val){
 	// console.log(d3.selectAll("#checkBoxes"))
 	// var tmp = []
 	var checked = d3.selectAll("#checkBoxes input").filter(function(d){return this.checked})
-	console.log(checked)
 	var results, tmp;
 	// console.log(checked.node())
 	if(checked.node() != null){
 		var tmp = keywords[d3.select(checked.node()).attr("id")]
 	}else{ tmp = null}
-	console.log(tmp)
 	if (val.value == "Enter keywords" && checked.node() == null){
 		reset();
 		return false;
 	}
 	if (val.value == "Enter keywords"){
-		sheets = tmp;
+		sheets = _.intersection.apply(this, [tmp, allSheets])
 		filterSheets(sheets[tableIndex], "")
 		return false;
 	}
@@ -1478,6 +1479,7 @@ function searchTables(val){
 	words = words.toUpperCase().replace(/\s+/g," ").split(" ")	
 	
 	current = sheets[tableIndex]
+	console.log("ti",tableIndex)
 	words.map(function(word){
 		$.getJSON(getJSONPath("words"), function(allWords){
 			if(typeof(allWords[word]) != "undefined"){
@@ -1485,6 +1487,7 @@ function searchTables(val){
 				console.log("asdfa",typeof(tmp), tmp == null)
 				if(results.length == words.length || (tmp != null && results.length == words.length +1)){
 					console.log("bar")
+					results.push(allSheets)
 					sheets = _.intersection.apply(this, results)
 					filterSheets(current, val.value)	
 				}
@@ -1512,18 +1515,22 @@ function noResults(val){
 }
 
 function filterSheets(current, val){
-	if(sheets.length == 0){
-		noResults(val)
-	  	return false;
-	}
-	if(sheets.indexOf(current) != -1){
-		tableIndex = sheets.indexOf(current);
-		// newTable(tableIndex)
+	if(d3.select("table").node() == null){
+		// return false;
 	}else{
-	// d3.select("#testTable table").remove()
-
-		tableIndex = 0;
-		newTable(0);
+		var tID = d3.select("table").attr("id")
+		console.log(sheets, tID)
+		// cleanSheets = sheets.map(function(t){ t = t.replace(/\./g,"_")})
+		if(sheets.length == 0){
+			noResults(val)
+		  	return false;
+		}
+		if(sheets.indexOf(tID) != -1){
+			tableIndex = sheets.indexOf(tID);
+		}else{
+			tableIndex = 0;
+			newTable(0);
+		}
 	}
 
 	var select = document.getElementById("tableMenu"); 
@@ -1533,8 +1540,8 @@ function filterSheets(current, val){
 		for(var i = 0; i < sheets.length; i++){
 		    var opt = sheets[i];
 		    var el = document.createElement("option");
-		    var content = titles[opt.replace(/\./g,"")];
-		    el.textContent = titles[opt.replace(/\./g,"")];
+		    var content = titles[opt];
+		    el.textContent = titles[opt];
 		    el.value = opt;
 		    if(typeof(content) != "undefined"){
 		    	select.appendChild(el);
@@ -1546,6 +1553,9 @@ function filterSheets(current, val){
 	$("#tableMenu").html($("#tableMenu option").sort(function (a, b) {
 	    return a.text == b.text ? 0 : a.text < b.text ? -1 : 1
 	}))
+	sheets = sheets.sort(function (a, b) {
+	    return a == b ? 0 : a < b ? -1 : 1
+	})
 	// var first = d3.select("#tableMenu option").node()
 	d3.select("#tableMenu")
 		.insert("option", "option")

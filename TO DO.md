@@ -1,15 +1,11 @@
 - Scrape all the tables
 - Fix broken scrapers
 - mobile
-- add filters
-- Tidy up sheet list/ ordering
-	- remove empty values
 - table scroll buttons
 - small width footer
 - Once final, update
 	- Embed code for charts
 	- years in embed code
-- Fucking gradient thing on the right
 
 - Dec: Announcement blog post
 - Jan: Sharing data blog post

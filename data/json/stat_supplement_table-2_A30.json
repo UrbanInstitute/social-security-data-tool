@@ -1,0 +1,239 @@
+{
+    "category": "timeSeries", 
+    "data": {
+        "col1": {
+            "label": "Nonblind beneficiaries a :: Minimum", 
+            "series": [
+                50.0, 
+                75.0, 
+                90.0, 
+                130.0, 
+                150.0, 
+                160.0, 
+                170.0, 
+                180.0, 
+                190.0, 
+                190.0, 
+                190.0, 
+                190.0, 
+                300.0, 
+                300.0, 
+                300.0, 
+                300.0, 
+                300.0, 
+                300.0, 
+                300.0, 
+                300.0, 
+                300.0, 
+                300.0, 
+                300.0, 
+                300.0, 
+                false, 
+                false, 
+                false, 
+                false, 
+                false, 
+                false, 
+                false, 
+                false, 
+                false, 
+                false, 
+                false, 
+                false, 
+                false, 
+                false
+            ], 
+            "type": "dollar"
+        }, 
+        "col2": {
+            "label": "Nonblind beneficiaries a :: Maximum", 
+            "series": [
+                100.0, 
+                125.0, 
+                140.0, 
+                200.0, 
+                230.0, 
+                240.0, 
+                260.0, 
+                280.0, 
+                300.0, 
+                300.0, 
+                300.0, 
+                300.0, 
+                500.0, 
+                500.0, 
+                500.0, 
+                500.0, 
+                500.0, 
+                500.0, 
+                500.0, 
+                500.0, 
+                500.0, 
+                500.0, 
+                700.0, 
+                700.0, 
+                740.0, 
+                780.0, 
+                800.0, 
+                810.0, 
+                830.0, 
+                860.0, 
+                900.0, 
+                940.0, 
+                980.0, 
+                1000.0, 
+                1000.0, 
+                1010.0, 
+                1040.0, 
+                1070.0
+            ], 
+            "type": "dollar"
+        }, 
+        "col3": {
+            "label": "Blind beneficiaries b :: Maximum", 
+            "series": [
+                false, 
+                false, 
+                false, 
+                false, 
+                false, 
+                false, 
+                334.0, 
+                375.0, 
+                417.0, 
+                459.0, 
+                500.0, 
+                false, 
+                780.0, 
+                810.0, 
+                850.0, 
+                880.0, 
+                930.0, 
+                940.0, 
+                960.0, 
+                1000.0, 
+                1050.0, 
+                1110.0, 
+                1110.0, 
+                1170.0, 
+                1240.0, 
+                1300.0, 
+                1330.0, 
+                1350.0, 
+                1380.0, 
+                1450.0, 
+                1500.0, 
+                1570.0, 
+                1640.0, 
+                1640.0, 
+                1640.0, 
+                1690.0, 
+                1740.0, 
+                1800.0
+            ], 
+            "type": "dollar"
+        }, 
+        "years": {
+            "series": [
+                "1961-1965", 
+                "1966-June 1968", 
+                "July 1968-1973", 
+                "1974-1975", 
+                1976, 
+                1977, 
+                1978, 
+                1979, 
+                1980, 
+                1981, 
+                1982, 
+                "1983-1989", 
+                1990, 
+                1991, 
+                1992, 
+                1993, 
+                1994, 
+                1995, 
+                1996, 
+                1997, 
+                1998, 
+                "January-June 1999", 
+                "July 1999", 
+                "January 2000", 
+                "January 2001", 
+                "January 2002", 
+                "January 2003", 
+                "January 2004", 
+                "January 2005", 
+                "January 2006", 
+                "January 2007", 
+                "January 2008", 
+                "January 2009", 
+                "January 2010", 
+                "January 2011", 
+                "January 2012", 
+                "January 2013", 
+                "January 2014"
+            ], 
+            "type": "year"
+        }
+    }, 
+    "footnotes": [
+        {
+            "content": "SOURCES: Social Security Act of 1935 (the Act), as amended through December 31, 2013; regulations issued under the Act; and precedential case decisions (rulings). Social Security Administration, \"Cost-of-Living Increase and Other Determinations for 2014,\"  Federal Register, vol. 78, no. 214 (November 5, 2013). See the Social Security Program Rules page (http://www.socialsecurity.gov/regulations/index.htm) for specific laws, regulations, rulings, legislation, and a link to the \u2009 Federal\u00a0Register.", 
+            "type": "note"
+        }, 
+        {
+            "content": "NOTES: Earnings are net of any wage subsidies and impairment-related expenses.", 
+            "type": "note"
+        }, 
+        {
+            "content": "The guidelines for substantial gainful activity (SGA) for self-employed individuals differ from the guidelines for wage earners.", 
+            "type": "note"
+        }, 
+        {
+            "content": "Self-employment activity is generally examined in terms of time spent and degree of effort, as compared with that of nondisabled self-employed individuals.", 
+            "type": "note"
+        }, 
+        {
+            "content": ". . . = not applicable.", 
+            "type": "note"
+        }, 
+        {
+            "content": "Earnings above the maximum amount ordinarily demonstrate SGA; earnings below the minimum amount show that SGA has not occurred. When earnings are between the minimum and maximum, other factors are considered.", 
+            "symbol": "a.", 
+            "type": "footnote"
+        }, 
+        {
+            "content": "The amendments in 1977 provided that, effective 1978, earnings of blind beneficiaries would be evaluated under different SGA guidelines from those of nonblind beneficiaries.", 
+            "symbol": "b.", 
+            "type": "footnote"
+        }, 
+        {
+            "content": "Pre-1978 guidelines are the same as those for nonblind beneficiaries.", 
+            "symbol": "c.", 
+            "type": "footnote"
+        }, 
+        {
+            "content": "Annual amounts were determined by automatic adjustments linked to increases in average wage level. The amounts equal the monthly exempt amounts under the earnings test applicable to beneficiaries who have reached full retirement age (see Table 2.A29 for the amounts for 1983\u20131995).", 
+            "symbol": "d.", 
+            "type": "footnote"
+        }, 
+        {
+            "content": "CONTACT: (410) 965-0090 or statistics@ssa.gov.", 
+            "type": "note"
+        }, 
+        {
+            "content": "File available from:\nU.S. Social Security Administration \u2022 Office of Retirement and Disability Policy \u2022 Office of Research, Evaluation, and Statistics\nAnnual Statistical Supplement, 2014\nhttp://www.socialsecurity.gov/policy/docs/statcomps/supplement/2014/", 
+            "type": "note"
+        }
+    ], 
+    "html": {
+        "body": "<tbody><tr class=1961-1965><td class=\"col0\">1961\u20131965</td><td class=\"col2\">50.0</td><td class=\"col3\">100.0</td><td class=\"col4\">c</td><tr class=1966-June 1968><td class=\"col0\">1966\u2013June 1968</td><td class=\"col2\">75.0</td><td class=\"col3\">125.0</td><td class=\"col4\">c</td><tr class=July 1968-1973><td class=\"col0\">July 1968\u20131973</td><td class=\"col2\">90.0</td><td class=\"col3\">140.0</td><td class=\"col4\">c</td><tr class=1974-1975><td class=\"col0\">1974\u20131975</td><td class=\"col2\">130.0</td><td class=\"col3\">200.0</td><td class=\"col4\">c</td><tr class=1976><td class=\"col0\">1976.0</td><td class=\"col2\">150.0</td><td class=\"col3\">230.0</td><td class=\"col4\">c</td><tr class=1977><td class=\"col0\">1977.0</td><td class=\"col2\">160.0</td><td class=\"col3\">240.0</td><td class=\"col4\">c</td><tr class=1978><td class=\"col0\">1978.0</td><td class=\"col2\">170.0</td><td class=\"col3\">260.0</td><td class=\"col4\">334.0</td><tr class=1979><td class=\"col0\">1979.0</td><td class=\"col2\">180.0</td><td class=\"col3\">280.0</td><td class=\"col4\">375.0</td><tr class=1980><td class=\"col0\">1980.0</td><td class=\"col2\">190.0</td><td class=\"col3\">300.0</td><td class=\"col4\">417.0</td><tr class=1981><td class=\"col0\">1981.0</td><td class=\"col2\">190.0</td><td class=\"col3\">300.0</td><td class=\"col4\">459.0</td><tr class=1982><td class=\"col0\">1982.0</td><td class=\"col2\">190.0</td><td class=\"col3\">300.0</td><td class=\"col4\">500.0</td><tr class=1983-1989><td class=\"col0\">1983\u20131989</td><td class=\"col2\">190.0</td><td class=\"col3\">300.0</td><td class=\"col4\">d</td><tr class=1990><td class=\"col0\">1990.0</td><td class=\"col2\">300.0</td><td class=\"col3\">500.0</td><td class=\"col4\">780.0</td><tr class=1991><td class=\"col0\">1991.0</td><td class=\"col2\">300.0</td><td class=\"col3\">500.0</td><td class=\"col4\">810.0</td><tr class=1992><td class=\"col0\">1992.0</td><td class=\"col2\">300.0</td><td class=\"col3\">500.0</td><td class=\"col4\">850.0</td><tr class=1993><td class=\"col0\">1993.0</td><td class=\"col2\">300.0</td><td class=\"col3\">500.0</td><td class=\"col4\">880.0</td><tr class=1994><td class=\"col0\">1994.0</td><td class=\"col2\">300.0</td><td class=\"col3\">500.0</td><td class=\"col4\">930.0</td><tr class=1995><td class=\"col0\">1995.0</td><td class=\"col2\">300.0</td><td class=\"col3\">500.0</td><td class=\"col4\">940.0</td><tr class=1996><td class=\"col0\">1996.0</td><td class=\"col2\">300.0</td><td class=\"col3\">500.0</td><td class=\"col4\">960.0</td><tr class=1997><td class=\"col0\">1997.0</td><td class=\"col2\">300.0</td><td class=\"col3\">500.0</td><td class=\"col4\">1000.0</td><tr class=1998><td class=\"col0\">1998.0</td><td class=\"col2\">300.0</td><td class=\"col3\">500.0</td><td class=\"col4\">1050.0</td><tr class=January-June 1999><td class=\"col0\">January\u2013June 1999</td><td class=\"col2\">300.0</td><td class=\"col3\">500.0</td><td class=\"col4\">1110.0</td><tr class=July 1999><td class=\"col0\">July 1999</td><td class=\"col2\">300.0</td><td class=\"col3\">700.0</td><td class=\"col4\">1110.0</td><tr class=January 2000><td class=\"col0\">January 2000</td><td class=\"col2\">300.0</td><td class=\"col3\">700.0</td><td class=\"col4\">1170.0</td><tr class=January 2001><td class=\"col0\">January 2001</td><td class=\"col2\">Discontinued</td><td class=\"col3\">740.0</td><td class=\"col4\">1240.0</td><tr class=January 2002><td class=\"col0\">January 2002</td><td class=\"col2\">. . .</td><td class=\"col3\">780.0</td><td class=\"col4\">1300.0</td><tr class=January 2003><td class=\"col0\">January 2003</td><td class=\"col2\">. . .</td><td class=\"col3\">800.0</td><td class=\"col4\">1330.0</td><tr class=January 2004><td class=\"col0\">January 2004</td><td class=\"col2\">. . .</td><td class=\"col3\">810.0</td><td class=\"col4\">1350.0</td><tr class=January 2005><td class=\"col0\">January 2005</td><td class=\"col2\">. . .</td><td class=\"col3\">830.0</td><td class=\"col4\">1380.0</td><tr class=January 2006><td class=\"col0\">January 2006</td><td class=\"col2\">. . .</td><td class=\"col3\">860.0</td><td class=\"col4\">1450.0</td><tr class=January 2007><td class=\"col0\">January 2007</td><td class=\"col2\">. . .</td><td class=\"col3\">900.0</td><td class=\"col4\">1500.0</td><tr class=January 2008><td class=\"col0\">January 2008</td><td class=\"col2\">. . .</td><td class=\"col3\">940.0</td><td class=\"col4\">1570.0</td><tr class=January 2009><td class=\"col0\">January 2009</td><td class=\"col2\">. . .</td><td class=\"col3\">980.0</td><td class=\"col4\">1640.0</td><tr class=January 2010><td class=\"col0\">January 2010</td><td class=\"col2\">. . .</td><td class=\"col3\">1000.0</td><td class=\"col4\">1640.0</td><tr class=January 2011><td class=\"col0\">January 2011</td><td class=\"col2\">. . .</td><td class=\"col3\">1000.0</td><td class=\"col4\">1640.0</td><tr class=January 2012><td class=\"col0\">January 2012</td><td class=\"col2\">. . .</td><td class=\"col3\">1010.0</td><td class=\"col4\">1690.0</td><tr class=January 2013><td class=\"col0\">January 2013</td><td class=\"col2\">. . .</td><td class=\"col3\">1040.0</td><td class=\"col4\">1740.0</td><tr class=January 2014><td class=\"col0\">January 2014</td><td class=\"col2\">. . .</td><td class=\"col3\">1070.0</td><td class=\"col4\">1800.0</td></tbody>", 
+        "header": "<thead><tr><th rowspan=\"2\"  class=\"series col0\" >Year</th><th colspan=\"2\"  class=\"series col1\" >Nonblind beneficiaries <span class = \"top_footnote top_a\">a</span></th><th rowspan=\"2\"  class=\"series col3\" >Blind beneficiaries <span class = \"top_footnote top_b\">b</span></th></tr><tr><th class=\"series col1\" >Minimum</th><th class=\"series col2\" >Maximum</th></tr></thead>"
+    }, 
+    "title": {
+        "category": "2.A OASDI: Effect of Current Earnings and Taxation of Benefits", 
+        "id": "2_A30", 
+        "name": "Monthly earnings guidelines for substantial gainful activity, 1961\u20132014 (in dollars)"
+    }
+}

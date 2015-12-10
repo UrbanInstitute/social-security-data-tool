@@ -21,11 +21,11 @@ def parseTitle(sheet, sheetType, multiSubtitle=False):
 	title = {}
 	if(multiSubtitle):
 		fullTitle = sheet.row(1)[0].value + " :: Subtable : " +  multiSubtitle["value"]
-		title["id"] = fullTitle	.split(u'\u2014')[0].replace(".","").replace("Table ","")+ "-M" + str(multiSubtitle["index"])
+		title["id"] = fullTitle.split(u'\u2014')[0].replace(".","_").replace("Table ","")+ "-M" + str(multiSubtitle["index"])
 
 	else:
 		fullTitle = sheet.row(1)[0].value
-		title["id"] = fullTitle	.split(u'\u2014')[0].replace(".","").replace("Table ","")
+		title["id"] = fullTitle	.split(u'\u2014')[0].replace(".","_").replace("Table ","")
 	title["name"] = fullTitle.split(u'\u2014')[1]
 	title["category"] = sheet.row(0)[0].value
 	return title
@@ -518,9 +518,9 @@ mapPlusTime = ['3.C5']
 
 
 # #top priority
-# mustHaves = ['2.A3','2.A4','2.A20','2.A21','2.A30','2.F4','2.F5','2.F6','2.F7','2.F8','2.F9','2.F11','3.C3','3.C5','3.C6','4.A2','4.A3','4.A4','4.A6','4.C1','4.C2','5.A1','5.A1.2','5.A1.3','5.A1.4','5.A3','5.A4','5.A5','5.A6','5.A7','5.A8','5.A10','5.A17','5.D1','5.D2','5.D3','5.D4','5.E1','5.E2','5.F1','5.F4','5.F6','5.F7','5.F8','5.H1','5.H2','5.H3','5.H4','5.J1','5.J2','5.J4','5.J8','5.J10','5.J14','5.M1','6.A1','6.A2','6.A3','6.A4','6.A5','6.A6','6.C1','6.C2','6.C7','6.D4','6.D5','6.D7','6.D8','6.F1','6.F2','6.F3']
+mustHaves = ['2.A3','2.A4','2.A20','2.A21','2.A30','2.F4','2.F5','2.F6','2.F7','2.F8','2.F9','2.F11','3.C3','3.C5','3.C6','4.A2','4.A3','4.A4','4.A6','4.C1','4.C2','5.A1','5.A1.2','5.A1.3','5.A1.4','5.A3','5.A4','5.A5','5.A6','5.A7','5.A8','5.A10','5.A17','5.D1','5.D2','5.D3','5.D4','5.E1','5.E2','5.F1','5.F4','5.F6','5.F7','5.F8','5.H1','5.H2','5.H3','5.H4','5.J1','5.J2','5.J4','5.J8','5.J10','5.J14','5.M1','6.A1','6.A2','6.A3','6.A4','6.A5','6.A6','6.C1','6.C2','6.C7','6.D4','6.D5','6.D7','6.D8','6.F1','6.F2','6.F3']
 # #high priority
-# shouldHaves = ['4.A1','4.A5','5.A1.1','5.A1.5','5.A1.6','5.A1.7','5.A1.8','5.A14','5.A15','5.A16','5.B4','5.B6','5.B7','6.B3','6.B5','6.B5.1']
+shouldHaves = ['3.C4','3.C6.1','3.C7a','3.C7b','3.C8','4.A1','4.A5','4.B3','4.B10','5.A1.1','5.A1.5','5.A1.6','5.A1.7','5.A1.8','5.A14','5.A15','5.A16','5.B1','5.B2','5.B4','5.B6','5.B7','6.B3','6.B5','6.B5.1']
 
 #top + high priority not in simpletimesheets
 needs = ['2.A20','2.A21','2.A30','2.F4','2.F5','2.F6','2.F7','2.F8','2.F9','2.F11','3.C3','3.C5','3.C6','4.C2','5.A1','5.A1.1','5.A1.2','5.A1.3','5.A1.4','5.A1.5','5.A1.6','5.A1.7','5.A1.8','5.A3','5.A4','5.A5','5.A6','5.A7','5.A8','5.A10','5.A14','5.A15','5.A16','5.B4','5.B6','5.B7','5.D1','5.D2','5.E1','5.F1','5.F4','5.F7','5.H1','5.H2','5.H3','5.H4','5.J1','5.J2','5.J4','5.J8','5.J10','5.J14','5.M1','6.A1','6.A2','6.A3','6.A4','6.A5','6.A6','6.B3','6.B5','6.B5.1','6.C1','6.C2','6.D4','6.D5','6.D7','6.F1','6.F2','6.F3']
@@ -536,7 +536,7 @@ wordList = {}
 titleList = {}
 
 for sheet_id in simpleBar:
-	words = wordList[sheet_id] = []
+	words = wordList[sheet_id.replace(".","_")] = []
 	xl_sheet = book.sheet_by_name(sheet_id)
 	output = {}
 	headRows = 0
@@ -565,7 +565,7 @@ for sheet_id in simpleBar:
 	output["title"] = titles
 	output["footnotes"] = footnotes
 	addWords(words, titles["name"])
-	titleList[titles["id"]] = titles["id"] + " :: " + titles["name"]
+	titleList[titles["id"].replace(".","_")] = titles["id"] + " :: " + titles["name"]
 	output["category"] = values["chartType"]
 
 	with open('../data/json/stat_supplement_table-%s.json'%titles["id"], 'w') as fp:
@@ -573,7 +573,7 @@ for sheet_id in simpleBar:
 
 
 for sheet_id in medBar:
-	words = wordList[sheet_id] = []
+	words = wordList[sheet_id.replace(".","_")] = []
 	xl_sheet = book.sheet_by_name(sheet_id)
 	output = {}
 	headRows = 0
@@ -616,7 +616,7 @@ for sheet_id in medBar:
 	output["title"] = titles
 	output["footnotes"] = footnotes
 	addWords(words, titles["name"])
-	titleList[titles["id"]] = titles["id"] + " :: " + titles["name"]
+	titleList[titles["id"].replace(".","_")] = titles["id"] + " :: " + titles["name"]
 	output["category"] = values["chartType"]
 	if(sheet_id == "5.H3" or sheet_id == "5.H4"):
 		output["default"] = "col3"
@@ -629,7 +629,7 @@ for sheet_id in medBar:
 
 
 for sheet_id in medMap:
-	words = wordList[sheet_id] = []
+	words = wordList[sheet_id.replace(".","_")] = []
 	xl_sheet = book.sheet_by_name(sheet_id)
 	output = {}
 	headRows = 0
@@ -666,7 +666,7 @@ for sheet_id in medMap:
 	output["title"] = titles
 	output["footnotes"] = footnotes
 	addWords(words, titles["name"])
-	titleList[titles["id"]] = titles["id"] + " :: " + titles["name"]
+	titleList[titles["id"].replace(".","_")] = titles["id"] + " :: " + titles["name"]
 	output["category"] = values["chartType"]
 
 
@@ -675,7 +675,7 @@ for sheet_id in medMap:
 
 
 for sheet_id in timeMulti:
-	words = wordList[sheet_id] = []
+	words = wordList[sheet_id.replace(".","_")] = []
 	multiSubtitles = []
 	xl_sheet = book.sheet_by_name(sheet_id)
 	output = {}
@@ -737,7 +737,7 @@ for sheet_id in timeMulti:
 			output["title"] = titles
 			output["footnotes"] = footnotes
 			addWords(words, titles["name"])
-			titleList[titles["id"]] = titles["id"] + " :: " + titles["name"]
+			titleList[titles["id"].replace(".","_")] = titles["id"] + " :: " + titles["name"]
 			output["category"] = values["chartType"]
 
 			with open('../data/json/stat_supplement_table-%s.json'%titles["id"], 'w') as fp:
@@ -752,7 +752,7 @@ for sheet_id in timeMulti:
 
 
 for sheet_id in weirdTime:
-	words = wordList[sheet_id] = []
+	words = wordList[sheet_id.replace(".","_")] = []
 	xl_sheet = book.sheet_by_name(sheet_id)
 	output = {}
 	headRows = 0
@@ -787,7 +787,7 @@ for sheet_id in weirdTime:
 	output["title"] = titles
 	output["footnotes"] = footnotes
 	addWords(words, titles["name"])
-	titleList[titles["id"]] = titles["id"] + " :: " + titles["name"]
+	titleList[titles["id"].replace(".","_")] = titles["id"] + " :: " + titles["name"]
 	output["category"] = values["chartType"]
 
 	with open('../data/json/stat_supplement_table-%s.json'%titles["id"], 'w') as fp:
@@ -795,7 +795,7 @@ for sheet_id in weirdTime:
 
 
 for sheet_id in simpleTimeSheets:
-	words = wordList[sheet_id] = []
+	words = wordList[sheet_id.replace(".","_")] = []
 	xl_sheet = book.sheet_by_name(sheet_id)
 	output = {}
 	headRows = 0
@@ -827,7 +827,7 @@ for sheet_id in simpleTimeSheets:
 	output["title"] = titles
 	output["footnotes"] = footnotes
 	addWords(words, titles["name"])
-	titleList[titles["id"]] = titles["id"] + " :: " + titles["name"]
+	titleList[titles["id"].replace(".","_")] = titles["id"] + " :: " + titles["name"]
 	output["category"] = values["chartType"]
 
 
@@ -835,7 +835,7 @@ for sheet_id in simpleTimeSheets:
 		json.dump(output, fp, indent=4, sort_keys=True)
 
 for sheet_id in monthsTime:
-	words = wordList[sheet_id] = []
+	words = wordList[sheet_id.replace(".","_")] = []
 	xl_sheet = book.sheet_by_name(sheet_id)
 	output = {}
 	headRows = 0
@@ -867,7 +867,7 @@ for sheet_id in monthsTime:
 	output["title"] = titles
 	output["footnotes"] = footnotes
 	addWords(words, titles["name"])
-	titleList[titles["id"]] = titles["id"] + " :: " + titles["name"]
+	titleList[titles["id"].replace(".","_")] = titles["id"] + " :: " + titles["name"]
 	output["category"] = values["chartType"]
 
 

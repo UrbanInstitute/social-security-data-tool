@@ -1,0 +1,112 @@
+{
+    "category": "barChart", 
+    "data": {
+        "categories": {
+            "series": [
+                "62-69", 
+                "70-74", 
+                "75-79", 
+                "80-84", 
+                "85-89", 
+                "90 or\u00a0older"
+            ], 
+            "type": "barLabel"
+        }, 
+        "col2": {
+            "label": "All parents :: Number", 
+            "series": [
+                74.0, 
+                147.0, 
+                239.0, 
+                325.0, 
+                303.0, 
+                283.0
+            ], 
+            "type": "number"
+        }, 
+        "col3": {
+            "label": "All parents :: Average monthly benefit (dollars)", 
+            "series": [
+                1103.49, 
+                1173.26, 
+                1120.47, 
+                1082.88, 
+                1094.73, 
+                1040.97
+            ], 
+            "type": "dollar"
+        }, 
+        "col4": {
+            "label": "Men :: Number", 
+            "series": [
+                7.0, 
+                25.0, 
+                24.0, 
+                57.0, 
+                34.0, 
+                28.0
+            ], 
+            "type": "number"
+        }, 
+        "col5": {
+            "label": "Men :: Average monthly benefit (dollars)", 
+            "series": [
+                866.67, 
+                1069.18, 
+                1011.59, 
+                1043.43, 
+                989.78, 
+                869.19
+            ], 
+            "type": "dollar"
+        }, 
+        "col6": {
+            "label": "Women :: Number", 
+            "series": [
+                67.0, 
+                122.0, 
+                215.0, 
+                268.0, 
+                269.0, 
+                255.0
+            ], 
+            "type": "number"
+        }, 
+        "col7": {
+            "label": "Women :: Average monthly benefit (dollars)", 
+            "series": [
+                1128.23, 
+                1194.59, 
+                1132.62, 
+                1091.27, 
+                1107.99, 
+                1059.84
+            ], 
+            "type": "dollar"
+        }
+    }, 
+    "default": "col2", 
+    "footnotes": [
+        {
+            "content": "SOURCE: Social Security Administration, Master Beneficiary Record, 100\u00a0percent data.", 
+            "type": "note"
+        }, 
+        {
+            "content": "CONTACT: (410) 965-0090 or statistics@ssa.gov.", 
+            "type": "note"
+        }, 
+        {
+            "content": "File available from:\nU.S. Social Security Administration \u2022 Office of Retirement and Disability Policy \u2022 Office of Research, Evaluation, and Statistics\nAnnual Statistical Supplement, 2014\nhttp://www.socialsecurity.gov/policy/docs/statcomps/supplement/2014/", 
+            "type": "note"
+        }
+    ], 
+    "html": {
+        "body": "<tbody><tr class=><td class=\"col0\"></td><td class=\"col1\">Total</td><td class=\"col2\">1371.0</td><td class=\"col3\">1094.2</td><td class=\"col4\">175.0</td><td class=\"col5\">997.37</td><td class=\"col6\">1196.0</td><td class=\"col7\">1108.37</td><tr class=62-69><td class=\"col0\">62\u201369</td><td class=\"col1\"></td><td class=\"col2\">74.0</td><td class=\"col3\">1103.49</td><td class=\"col4\">7.0</td><td class=\"col5\">866.67</td><td class=\"col6\">67.0</td><td class=\"col7\">1128.23</td><tr class=70-74><td class=\"col0\">70\u201374</td><td class=\"col1\"></td><td class=\"col2\">147.0</td><td class=\"col3\">1173.26</td><td class=\"col4\">25.0</td><td class=\"col5\">1069.18</td><td class=\"col6\">122.0</td><td class=\"col7\">1194.59</td><tr class=75-79><td class=\"col0\">75\u201379</td><td class=\"col1\"></td><td class=\"col2\">239.0</td><td class=\"col3\">1120.47</td><td class=\"col4\">24.0</td><td class=\"col5\">1011.59</td><td class=\"col6\">215.0</td><td class=\"col7\">1132.62</td><tr class=80-84><td class=\"col0\">80\u201384</td><td class=\"col1\"></td><td class=\"col2\">325.0</td><td class=\"col3\">1082.88</td><td class=\"col4\">57.0</td><td class=\"col5\">1043.43</td><td class=\"col6\">268.0</td><td class=\"col7\">1091.27</td><tr class=85-89><td class=\"col0\">85\u201389</td><td class=\"col1\"></td><td class=\"col2\">303.0</td><td class=\"col3\">1094.73</td><td class=\"col4\">34.0</td><td class=\"col5\">989.78</td><td class=\"col6\">269.0</td><td class=\"col7\">1107.99</td><tr class=90 or older><td class=\"col0\">90 or\u00a0older</td><td class=\"col1\"></td><td class=\"col2\">283.0</td><td class=\"col3\">1040.97</td><td class=\"col4\">28.0</td><td class=\"col5\">869.19</td><td class=\"col6\">255.0</td><td class=\"col7\">1059.84</td></tbody>", 
+        "header": "<thead><tr><th rowspan=\"2\"  colspan=\"2\"  class=\"series col0\" >Age</th><th colspan=\"2\"  class=\"series col2\" >All parents</th><th colspan=\"2\"  class=\"series col4\" >Men</th><th colspan=\"2\"  class=\"series col6\" >Women</th></tr><tr><th class=\"series col2\" >Number</th><th class=\"series col3\" >Average monthly benefit (dollars)</th><th class=\"series col4\" >Number</th><th class=\"series col5\" >Average monthly benefit (dollars)</th><th class=\"series col6\" >Number</th><th class=\"series col7\" >Average monthly benefit (dollars)</th></tr></thead>"
+    }, 
+    "title": {
+        "category": "5.A OASDI Current-Pay Benefits: Summary", 
+        "id": "5_A1_8", 
+        "name": "Number and average monthly benefit for parents, by age and sex, December\u00a02013"
+    }
+}
