@@ -914,17 +914,15 @@ function drawSingleYearBarChart(input){
                 }
             },
             yAxis: {
-                lineWidth: 0,
-                gridLineWidth: 0,
-                minorGridLineWidth: 0,
-                lineColor: 'transparent',
-                labels: {
-                    enabled: false
-                },
-                minorTickLength: 0,
-                tickLength: 0,
                 title: {
-                    text: null
+                    text: ''
+                },
+                labels: {
+                	formatter: function(){
+                		console.log($('#lineChart').highcharts())
+                		return formatLabel(this, null, input, $('#lineChart').highcharts().series[0].userOptions.id, "label")
+                	}
+                    // format: '${value:.0f}'
                 }
             },
             tooltip: {
@@ -1624,7 +1622,7 @@ function formatLabel(x, y, input, col, type){
 				return full + ": " + num(y) + " million"
 				break;
 			case "percent":
-				return full + ": " + "%" +  y
+				return full + ": " + y + "%"
 				break;
 
 		}
@@ -1650,7 +1648,7 @@ function formatLabel(x, y, input, col, type){
 				return num(y) + " million"
 				break;
 			case "percent":
-				return "%" +  y
+				return y + "%"
 				break;
 		}
 	}
@@ -1675,7 +1673,7 @@ function formatLabel(x, y, input, col, type){
 				return x + ": " + num(y) + " million"
 				break;
 			case "percent":
-				return x + ": " + "%" +  y
+				return x + ": " + y + "%"
 				break;
 		}
 	}
