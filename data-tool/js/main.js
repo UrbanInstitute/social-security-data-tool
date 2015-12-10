@@ -84,12 +84,6 @@ function newTable(index){
 		  		drawTable(data);
 		  		multiYear();
 		  		showScrubber();
-				d3.select("#valueScrubber")
-					.transition()
-					.style("top","393px")
-				d3.select("#singleYearCheck")
-					.transition()
-					.style("top","403px")
 		  		break;
 		  	case "map":
 		  	  	exportParams.chartType = "map"
@@ -1256,10 +1250,11 @@ function showScrubber(){
 	d3.select("#valueScrubber")
 		.transition()
 		.style("left",455)
+		.style("top","393px")
 	d3.select("#singleYearCheck")
 		.transition()
 		.style("left", 803)
-
+		.style("top","403px")
 
 }
 function setTheme(){
