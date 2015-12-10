@@ -675,7 +675,6 @@ for sheet_id in medMap:
 
 
 for sheet_id in timeMulti:
-	words = wordList[sheet_id.replace(".","_")] = []
 	multiSubtitles = []
 	xl_sheet = book.sheet_by_name(sheet_id)
 	output = {}
@@ -736,6 +735,7 @@ for sheet_id in timeMulti:
 			output["data"] = values["data"]
 			output["title"] = titles
 			output["footnotes"] = footnotes
+			words = wordList[titles["id"].replace(".","_")] = []
 			addWords(words, titles["name"])
 			titleList[titles["id"].replace(".","_")] = titles["id"] + " :: " + titles["name"]
 			output["category"] = values["chartType"]
