@@ -485,7 +485,7 @@ function generateTimeSeries(year, column){
 			series.push([Date.UTC(year[i], 0, 1), y]);
 		}
 		else if(year[i].indexOf("Before 1975") != -1){
-			series.push([Date.UTC(1935, 0, 1), y]);
+			series.push([Date.UTC(1957, 0, 1), y]);
 		}
 //cases like 1950 (Jan.–Aug.) or 1995 (Dec.)
 		else if(year[i].indexOf("(") != -1){
@@ -604,17 +604,14 @@ function drawBar(input, col){
                 }
             },
             yAxis: {
-                lineWidth: 0,
-                gridLineWidth: 0,
-                minorGridLineWidth: 0,
-                lineColor: 'transparent',
-                labels: {
-                    enabled: false
-                },
-                minorTickLength: 0,
-                tickLength: 0,
                 title: {
-                    text: null
+                    text: ''
+                },
+                labels: {
+                	formatter: function(){
+                		return formatLabel(this, null, input, this.chart.series[0].userOptions.id, "label")
+                	}
+                    // format: '${value:.0f}'
                 }
             },
             tooltip: {
@@ -623,7 +620,8 @@ function drawBar(input, col){
                 	if(this.y == false || this.y==null){
                         return null
                     }else{
-                    	return formatLabel(this.x, this.y, input, col, "tooltipBar")
+                    	console.log(this)
+                    	return formatLabel(this.x, this.y, input, this.series.userOptions.id, "tooltipBar")
                     }
                 }
             },
@@ -638,7 +636,7 @@ function drawBar(input, col){
                 y: 40
             },
             series: [{
-            			id: initId,
+            			id: col,
                     	name: initId,
                     	data: input["data"][col]["series"]
                     }
