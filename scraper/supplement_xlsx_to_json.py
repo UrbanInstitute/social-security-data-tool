@@ -184,18 +184,26 @@ def getTH(sheet, rows, rowNum, colNum):
 	th = "<th"
 	rowspan = 1
 	colspan = 1
-	for r in range(rowNum, len(rows)):
+	for r in range(rowNum+1, len(rows)):
 		row = rows[r]
-		# fmt = book.xf_list[row[0].xf_index]
-		# fmt.dump()
-
+		# # fmt = book.xf_list[row[0].xf_index]
+		# # fmt.dump()
+		# # print sheet.name
+		# if sheet.name == '5.A14':
+		# 	# print colNum, r
+		# 	if(colNum == 2):
+		# 		print row[colNum]
 		if(row[colNum].ctype == 0 or row[colNum].ctype == 6):
 			rowspan += 1
+		else:
+			break
 	for i in range(colNum+1, len(rows[rowNum])):
 		if(rows[rowNum][i].ctype == 0 or rows[rowNum][i].ctype == 6):
 			if rowNum-1 >= 0:
 				if(rows[rowNum-1][i].ctype == 0 or rows[rowNum-1][i].ctype == 6):
 					colspan += 1
+				else:
+					break
 			else:
 				colspan += 1
 		else:
@@ -483,7 +491,7 @@ sheets = book.sheet_names()
 simpleTimeSheets = ['2.A3','2.A4','4.A1','4.A2','4.A3','4.A4','4.A5','4.A6','4.C1','5.A17','5.D3','5.E2','5.F6','5.F8','6.C7','6.D8']
 
 #time series without blank 2nd column
-col1_exceptions = ['5.A4','5.F4','6.D4','6.C7','5.F8','5E.2','5.D3','5.C2','5.A17']
+col1_exceptions = ['5.A4','5.F4','6.D4','6.C7','5.F8','5.E2','5.D3','5.C2','5.A17','4.C1']
 
 #multiple nested time series tables, with merged cells in mostly blank rows serving as table divider/header
 timeMulti = ['5.A4','5.A14','5.F1','5.F4','5.H1','6.B5','6.B5.1','6.C2','6.D4']

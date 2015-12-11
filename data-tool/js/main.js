@@ -302,10 +302,10 @@ function drawTable(input){
 	d3.select("#testTable")
 		.append("div")
 		.attr("class", "footnotes")
-
+	var tWidth = d3.select("thead").node().getBoundingClientRect().width;
 	for(var i = 0; i<input.footnotes.length; i++){
 		var note = input.footnotes[i]
-		d3.select(".footnotes")
+		var footnote = d3.select(".footnotes")
 			.append("div")
 			.attr("class",note.type + " footer")
 			.html(function(){
@@ -313,6 +313,13 @@ function drawTable(input){
 					return "<span id = symbol_" + note.symbol.replace(".","") + ">" + note.symbol + "</span>" + note.content
 				}else{ return note.content}
 			})
+			.style("width", (tWidth)  + "px")
+
+		footnote.append("div")
+			.attr("class","things")
+			.html('<br>')
+			.style("width", (tWidth + 70)  + "px")
+
 	}
 	d3.selectAll(".top_footnote")
 		.on("click", function(){
@@ -393,33 +400,49 @@ function formatTable(tableID){
 	d3.selectAll("th")
 		.style("width", function(){
 			var cs = d3.select(this).attr("colspan")
-			var w = (cs == null || cs == 1) ? 100 : 120*cs-20+2.22
+			var w;
+			if(d3.select(this).classed("col0") && cs > 1){
+				w = (cs == null || cs == 1) ? 100 : 120*cs-20 + 2	
+			}else{
+				w = (cs == null || cs == 1) ? 100 : 120*cs-20
+			}
 			return w;
 		})
 		.style("max-width", function(){
 			var cs = d3.select(this).attr("colspan")
-			var w = (cs == null || cs == 1) ? 100 : 120*cs-20+2.22
+			var w;
+			if(d3.select(this).classed("col0") && cs > 1){
+				w = (cs == null || cs == 1) ? 100 : 120*cs-20 + 2	
+			}else{
+				w = (cs == null || cs == 1) ? 100 : 120*cs-20
+			}
 			return w;
 		})
 		.style("min-width", function(){
 			var cs = d3.select(this).attr("colspan")
-			var w = (cs == null || cs == 1) ? 100 : 120*cs-20+2.22
+			var w;
+			if(d3.select(this).classed("col0") && cs > 1){
+				w = (cs == null || cs == 1) ? 100 : 120*cs-20 + 2	
+			}else{
+				w = (cs == null || cs == 1) ? 100 : 120*cs-20
+			}
 			return w;
 		})
+	// d3.selectAll("th")
 	d3.selectAll("td")
 		.style("width", function(){
 			var cs = d3.select(this).attr("colspan")
-			var w = (cs == null || cs == 1) ? 100 : 120*cs-20+2.22
+			var w = (cs == null || cs == 1) ? 100 : 120*cs-20
 			return w
 		})
 		.style("max-width", function(){
 			var cs = d3.select(this).attr("colspan")
-			var w = (cs == null || cs == 1) ? 100 : 120*cs-20+2.22
+			var w = (cs == null || cs == 1) ? 100 : 120*cs-20
 			return w;
 		})
 		.style("min-width", function(){
 			var cs = d3.select(this).attr("colspan")
-			var w = (cs == null || cs == 1) ? 100 : 120*cs-20+2.22
+			var w = (cs == null || cs == 1) ? 100 : 120*cs-20
 			return w;
 		})
 
@@ -1762,7 +1785,7 @@ d3.selectAll("#checkBoxes input")
 		}
 	})
 // WORDS = getJSON
-d3.select("#left_arrow")
+d3.select("#prevButton")
 	.on("click", function(){
 		if(tableIndex <= 0){
 			tableIndex = sheets.length -1;
@@ -1771,7 +1794,7 @@ d3.select("#left_arrow")
 		}
 		newTable(tableIndex)
 	})
-d3.select("#right_arrow")
+d3.select("#nextButton")
 	.on("click", function(){
 		if(tableIndex >= sheets.length-1){
 			tableIndex = 0;
@@ -1803,7 +1826,7 @@ $(document).ready(function() {
 	   var end = d3.select("#testTable thead").node().getBoundingClientRect().width - $(window).width() + 74;       
        var scrollLeftVal = $(this).scrollLeft();
        d3.select("thead")
-       	.style("left", -1*scrollLeftVal + 69)
+       	.style("left", -1*scrollLeftVal + 70)
        if(Math.abs(scrollLeftVal-end) <= 220){
        	d3.select(".rightFader")
        		.style("right", -220+Math.abs(scrollLeftVal-end))

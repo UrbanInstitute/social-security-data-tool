@@ -171,17 +171,40 @@ tbody{
     font-size: 14px;
     font-style: italic;
 }
-#searchButton, #resetButton{
+#searchButton, #resetButton, #nextButton, #prevButton{
     position: fixed;
-    background-color: #333;
-    color: white;
+    background-color: #fff;
+    color: black;
     text-transform: uppercase;
     font-size: 13px;
     padding: 11px;
     cursor: pointer;
 }
-#searchButton:hover, #resetButton:hover{
+#nextButton, #prevButton{
+    top: 456px;
+    z-index: 999;
+    padding-bottom: 0px;
+    padding-top: 6px;
+}
+#nextButton span, #prevButton span{
+    font-size: 20px;
+    /* margin: 0 auto; */
+    /* text-indent: 1px; */
+    margin-left: 6px;
+    top: -3px;
+    position: relative;
+}
+#prevButton{
+    left: 5px;
+}
+#nextButton{
+    right: 5px;
+}
+#searchButton:hover, #resetButton:hover, #nextButton:hover, #prevButton:hover{
     background-color: #1696d2;
+}
+#nextButton:hover, #prevButton:hover{
+    color: white;
 }
 #searchButton{
     left: 247px;
