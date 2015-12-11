@@ -889,12 +889,17 @@ function generateBarFromYear(years, column, year){
 	var series = [];
 	for(var i = 0; i< years.length; i++){
 //ignore "Total" row in tables such as 5.B4
-		if(years[i] == false){
+		var y = years[i]
+		if(typeof(y) == "string"){
+			y = y.replace(/\s/g,"").replace(/[A-Z|a-z]/g,"")
+		}
+		if(y == false){
 			return null;
 		}
-		else if(typeof(years[i]) == "number"){
+		else if(typeof(y) == "number" || y.search("-") == -1){
 			series.push([Date.UTC(years[i], 0, 1), column[i]]);
 		}else{
+			// console.log(years[i])
 			var range = years[i].split("-");
 			var start = parseInt(range[0]);
 			var end = parseInt(range[1]);
@@ -1002,6 +1007,7 @@ function drawSingleYearBarChart(input){
 
         });
 		yearBarCache[initId] = [input.data.years.series, input.data.col1.series]
+		// yearBarCache[initId] = generateTimeSeries(input.data.years.series, input.data.col1.series)
 		yearBarCache["id"] = "col1"
 }
 function removeSeries(chart, id){
