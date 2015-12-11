@@ -21,13 +21,21 @@ def parseTitle(sheet, sheetType, multiSubtitle=False):
 	title = {}
 	if(multiSubtitle):
 		fullTitle = sheet.row(1)[0].value + " :: Subtable : " +  multiSubtitle["value"]
-		title["id"] = fullTitle.split(u'\u2014')[0].replace(".","_").replace("Table ","")+ "-M" + str(multiSubtitle["index"])
+		title["id"] = fullTitle.split(u'\u2014')[0].replace(".","_").replace("Table ","")+ "-" + str(multiSubtitle["index"])
 
 	else:
 		fullTitle = sheet.row(1)[0].value
 		title["id"] = fullTitle	.split(u'\u2014')[0].replace(".","_").replace("Table ","")
 	title["name"] = fullTitle.split(u'\u2014')[1]
-	title["category"] = sheet.row(0)[0].value
+	fullCat = sheet.row(0)[0].value.split(" ")
+	catID = fullCat[0]
+	cat = ""
+	for i in range(1, len(fullCat)):
+		cat += fullCat[i]
+		if(i != len(fullCat)-1):
+			cat += " "
+	title["category"] = cat
+	title["catID"] = catID
 	return title
 
 def parseFootnotes(sheet, lastRow):
@@ -506,7 +514,7 @@ policy = ['2.A20', '2.A21']
 
 weirdBar = ['5.B6','5.B7','6.B3']
 
-
+#"Total" 
 nestedBar = ['2.F9','3.C6','5.A1','5.A1.1','5.A1.2','5.A1.4','5.A1.6','5.A1.7','5.A5','5.A7','6.F2','6.F3']
 nestedBarMulti = ['2.F7','3.C3','5.A1.3','5.A3','5.A6','5.A8','5.A10','5.A15','5.A16','5.H2','6.A3','6.A4','6.A5','6.D7']
 
@@ -565,7 +573,7 @@ for sheet_id in simpleBar:
 	output["title"] = titles
 	output["footnotes"] = footnotes
 	addWords(words, titles["name"])
-	titleList[titles["id"].replace(".","_")] = titles["id"] + " :: " + titles["name"]
+	titleList[titles["id"].replace(".","_")] = titles["name"] + " (" + titles["id"].replace("_",".") + ")" 
 	output["category"] = values["chartType"]
 
 	with open('../data/json/stat_supplement_table-%s.json'%titles["id"], 'w') as fp:
@@ -616,7 +624,7 @@ for sheet_id in medBar:
 	output["title"] = titles
 	output["footnotes"] = footnotes
 	addWords(words, titles["name"])
-	titleList[titles["id"].replace(".","_")] = titles["id"] + " :: " + titles["name"]
+	titleList[titles["id"].replace(".","_")] = titles["name"] + " (" + titles["id"].replace("_",".") + ")" 
 	output["category"] = values["chartType"]
 	if(sheet_id == "5.H3" or sheet_id == "5.H4"):
 		output["default"] = "col3"
@@ -666,7 +674,7 @@ for sheet_id in medMap:
 	output["title"] = titles
 	output["footnotes"] = footnotes
 	addWords(words, titles["name"])
-	titleList[titles["id"].replace(".","_")] = titles["id"] + " :: " + titles["name"]
+	titleList[titles["id"].replace(".","_")] = titles["name"] + " (" + titles["id"].replace("_",".") + ")" 
 	output["category"] = values["chartType"]
 
 
@@ -737,7 +745,7 @@ for sheet_id in timeMulti:
 			output["footnotes"] = footnotes
 			words = wordList[titles["id"].replace(".","_")] = []
 			addWords(words, titles["name"])
-			titleList[titles["id"].replace(".","_")] = titles["id"] + " :: " + titles["name"]
+			titleList[titles["id"].replace(".","_")] = titles["name"] + " (" + titles["id"].replace("_",".") + ")" 
 			output["category"] = values["chartType"]
 
 			with open('../data/json/stat_supplement_table-%s.json'%titles["id"], 'w') as fp:
@@ -787,7 +795,7 @@ for sheet_id in weirdTime:
 	output["title"] = titles
 	output["footnotes"] = footnotes
 	addWords(words, titles["name"])
-	titleList[titles["id"].replace(".","_")] = titles["id"] + " :: " + titles["name"]
+	titleList[titles["id"].replace(".","_")] = titles["name"] + " (" + titles["id"].replace("_",".") + ")" 
 	output["category"] = values["chartType"]
 
 	with open('../data/json/stat_supplement_table-%s.json'%titles["id"], 'w') as fp:
@@ -827,7 +835,7 @@ for sheet_id in simpleTimeSheets:
 	output["title"] = titles
 	output["footnotes"] = footnotes
 	addWords(words, titles["name"])
-	titleList[titles["id"].replace(".","_")] = titles["id"] + " :: " + titles["name"]
+	titleList[titles["id"].replace(".","_")] = titles["name"] + " (" + titles["id"].replace("_",".") + ")" 
 	output["category"] = values["chartType"]
 
 
@@ -867,7 +875,8 @@ for sheet_id in monthsTime:
 	output["title"] = titles
 	output["footnotes"] = footnotes
 	addWords(words, titles["name"])
-	titleList[titles["id"].replace(".","_")] = titles["id"] + " :: " + titles["name"]
+	# titleList[titles["id"].replace(".","_")] = titles["id"] + " :: " + titles["name"]
+	titleList[titles["id"].replace(".","_")] = titles["name"] + " (" + titles["id"].replace("_",".") + ")" 
 	output["category"] = values["chartType"]
 
 

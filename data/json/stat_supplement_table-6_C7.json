@@ -295,7 +295,8 @@
         "header": "<thead><tr><th rowspan=\"2\"  class=\"series col0\" >Year</th><th colspan=\"2\"  class=\"series col1\" >Number (thousands)</th><th rowspan=\"2\"  class=\"series col3\" >Awards as a percentage of applications</th><th rowspan=\"2\"  class=\"series col4\" >Awards per \n1,000 insured workers</th></tr><tr><th class=\"series col1\" >Applications</th><th class=\"series col2\" >Awards</th></tr></thead>"
     }, 
     "title": {
-        "category": "6.C OASDI Benefits Awarded: Disabled Workers", 
+        "catID": "6.C", 
+        "category": "OASDI Benefits Awarded: Disabled Workers", 
         "id": "6_C7", 
         "name": "Number of applications, awards, ratio of awards to applications, and awards per 1,000 insured workers, 1965\u20132013"
     }

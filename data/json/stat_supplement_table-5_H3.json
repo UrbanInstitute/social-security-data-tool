@@ -734,7 +734,8 @@
         "header": "<thead><tr><th rowspan=\"2\"  colspan=\"3\"  class=\"series col0\" >Monthly family benefit a (dollars)</th><th colspan=\"2\"  class=\"series col3\" >Retired worker only</th><th rowspan=\"2\"  class=\"series col5\" >Retired worker and wife</th><th colspan=\"2\"  class=\"series col6\" >Retired worker, wife, and\u2014</th><th colspan=\"2\"  class=\"series col8\" >Disabled worker only</th><th colspan=\"2\"  class=\"series col10\" >Disabled worker, wife, and\u2014</th></tr><tr><th class=\"series col3\" >Men</th><th class=\"series col4\" >Women</th><th class=\"series col6\" >1 child</th><th class=\"series col7\" >2 or more children</th><th class=\"series col8\" >Men</th><th class=\"series col9\" >Women</th><th class=\"series col10\" >1 child</th><th class=\"series col11\" >2 or more children</th></tr></thead>"
     }, 
     "title": {
-        "category": "5.H OASDI Current-Pay Benefits: Beneficiary Families", 
+        "catID": "5.H", 
+        "category": "OASDI Current-Pay Benefits: Beneficiary Families", 
         "id": "5_H3", 
         "name": "Percentage distribution of retired-worker and disabled-worker families, by monthly benefit for selected family groups, December\u00a02013"
     }

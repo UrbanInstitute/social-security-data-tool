@@ -128,7 +128,7 @@ function setLayout(){
 function drawTable(input){
 	d3.select("#testTable table").remove()
 	d3.select("#tableTitle")
-		.html("<div class =\"titleCategory\">" + input.title.category + "</div>" + input.title.id.replace(/\_/g,".") + ": " + input.title.name)
+		.html("<div class =\"titleCategory\">" + input.title.category +  " (" + input.title.catID + ")</div>" + input.title.name + " (" + input.title.id.replace(/\_/g,".") + ")")
 
 	d3.select("#testTable")
 		.append("table")
@@ -302,6 +302,7 @@ function drawTable(input){
 	d3.select("#testTable")
 		.append("div")
 		.attr("class", "footnotes")
+
 	for(var i = 0; i<input.footnotes.length; i++){
 		var note = input.footnotes[i]
 		d3.select(".footnotes")
@@ -323,7 +324,7 @@ function drawTable(input){
     		}, 1000);
 
 		})
-		if(d3.select("#testTable thead").node().getBoundingClientRect().width - $(window).width() + 44 <= 0){
+		if(d3.select("#testTable thead").node().getBoundingClientRect().width - $(window).width() + 74 <= 0){
 			d3.select(".rightFader").style("opacity", 0)
 		}else{ d3.select(".rightFader").style("opacity",1)}
 
@@ -428,13 +429,25 @@ function formatTable(tableID){
 	var wWidth = $(window).width()
 	var margin = (wWidth - tWidth) / 2.0
 	d3.select("table")
-		.style("margin-left",40)
+		.style("margin-left",70)
 	var headHeight = d3.select("thead").node().getBoundingClientRect().height
 	var bodyHeight = d3.select("tbody").node().getBoundingClientRect().height
 	var tablePos = parseInt(d3.select("#tableContainer").style("margin-top").replace("px",""))
 	d3.select("tbody").style("top", (headHeight + tablePos) + "px")
 
 	d3.select("table").style("height", (headHeight + bodyHeight) + "px")
+	var comma = d3.format(",")
+	d3.selectAll("td")
+		.html(function(){
+			var val = d3.select(this).html()
+			if(d3.select(this).classed("col0")){
+				return val;
+			}
+			else if(!isNaN(parseFloat(val))){
+				return comma(d3.select(this).html())
+			}
+			else{ return val}
+		})
 
 }
 function checkUnitCompatibility(unit, input, charts){
@@ -555,7 +568,7 @@ function drawBar(input, col){
 	var initId = input["data"][col]["label"]
         $('#barChart').highcharts({
             chart: {
-                marginTop: 50,
+                marginTop: 150,
                 marginBottom: marginBottom,
                 marginLeft: marginLeft,
                 type: 'column'
@@ -615,10 +628,14 @@ function drawBar(input, col){
                 	if(this.y == false || this.y==null){
                         return null
                     }else{
-                    	console.log(this)
                     	return formatLabel(this.x, this.y, input, this.series.userOptions.id, "tooltipBar")
                     }
                 }
+            },
+            credits: {
+                enabled: true,
+                text: "Data tables from the SSA statistical supplement blah blah",
+                href: "https://www.ssa.gov/policy/docs/statcomps/supplement/"
             },
             legend: {
                 enabled: true,
@@ -662,7 +679,9 @@ function drawMap(input, col){
         	enableMouseWheelZoom: false,
             enabled: true,
             buttonOptions: {
-                verticalAlign: 'bottom'
+                verticalAlign: 'bottom',
+                symbolFill: "#333333",
+                symbolStroke: "#333333"
             }
         },
         chart:{
@@ -705,6 +724,11 @@ function drawMap(input, col){
                     	return formatLabel(this.key, this.point.value, input, col, "tooltipMap")
                     // }
                 }
+        },
+        credits: {
+            enabled: true,
+            text: "Data tables from the SSA statistical supplement blah blah",
+            href: "https://www.ssa.gov/policy/docs/statcomps/supplement/"
         },
         series : [{
             data : input["data"][col]["series"],
@@ -814,19 +838,20 @@ function drawLineChart(input){
                 }
             },
             credits: {
-                enabled: false,
-                text: "",
-                href: "http://www.neighborhoodinfodc.org"
+                enabled: true,
+                text: "Data tables from the SSA statistical supplement blah blah",
+                href: "https://www.ssa.gov/policy/docs/statcomps/supplement/"
             },
             legend: {
-                enabled: true,
-                floating: 'true',
-                align: 'left',
-                verticalAlign: 'left',
-                layout: 'horizontal',
+            align: 'top',
+            verticalAlign: 'top',
+            layout: 'vertical',
+            // width: 140,
+            // useHTML: true,
+            x: 0,
+            y: 40,
                 borderWidth: 0,
                 itemDistance: 9,
-                y: 40
             },
 
         series: [{
@@ -929,6 +954,11 @@ function drawSingleYearBarChart(input){
 // 
                     // }
                 // }
+            },
+            credits: {
+                enabled: true,
+                text: "Data tables from the SSA statistical supplement blah blah",
+                href: "https://www.ssa.gov/policy/docs/statcomps/supplement/"
             },
             legend: {
                 enabled: false,
@@ -1318,6 +1348,12 @@ function setTheme(){
 	        useHTML: true,
 	        floating: false
 	    },
+    subtitle: {
+        text: '* Footnote',
+        align: 'right',
+        x: -50,
+        y: 305
+    },
 	    tooltip: {
 	        backgroundColor: '#000000',
 	        borderWidth: 0,
@@ -1341,7 +1377,7 @@ function setTheme(){
                 contextButton: {
                 	symbol: false,
 
-	            	text: "Download",
+	            	text: "<span>Download</span>",
                     menuItems: oldMenu,
                     theme: {
                 	// width: 200,
@@ -1350,7 +1386,7 @@ function setTheme(){
                     stroke: '#333',
                     r: 0,
                     fill: "#333",
-                    color: "#fff !important",
+                    color: "#fff",
                     font: "Lato",
                     states: {
                         hover: {
@@ -1424,7 +1460,7 @@ function setTheme(){
 // var tempAllSheets = ['2.A3','2.A4','2.A30','2.F4','2.F5','2.F6','2.F8','2.F11','4.A2','4.A3','4.A4','4.A6','4.C1','5.A1.3','5.A7','5.A17','5.D1','5.D2','5.D3','5.D4','5.E1','5.E2','5.F1','5.F4','5.F6','5.F7','5.F8','5.H1','5.H3','5.H4','5.J1','5.J2','5.J4','5.J8','5.J10','5.J14','6.A1','6.A2','6.A3','6.A6','6.C1','6.C2','6.C7','6.D4','6.D8','6.F1']
 
 
-var tempAllSheets = ["2_A3","2_A30","2_A4","2_F11","2_F4","2_F5","2_F6","2_F8","4_A1","4_A2","4_A3","4_A4","4_A5","4_A6","4_C1","5_A14-M0","5_A14-M1","5_A17","5_A1_8","5_A4-M0","5_A4-M1","5_B4","5_D1","5_D2","5_D3","5_E1","5_E2","5_F1-M0","5_F1-M1","5_F4-M0","5_F4-M1","5_F4-M2","5_F4-M3","5_F6","5_F7","5_F8","5_H1-M0","5_H1-M1","5_H3","5_H4","5_J1","5_J10","5_J14","5_J2","5_J4","5_J8","6_A1","6_A2","6_A6","6_B5-M0","6_B5-M1","6_B5_1-M0","6_B5_1-M1","6_C1","6_C2-M0","6_C2-M1","6_C7","6_D4-M0","6_D4-M1","6_D4-M2","6_D4-M3","6_D8","6_F1"]
+var tempAllSheets = ["2_A3","2_A30","2_A4","2_F11","2_F4","2_F5","2_F6","2_F8","4_A1","4_A2","4_A3","4_A4","4_A5","4_A6","4_C1","5_A14-0","5_A14-1","5_A17","5_A1_8","5_A4-0","5_A4-1","5_B4","5_D1","5_D2","5_D3","5_E1","5_E2","5_F1-0","5_F1-1","5_F4-0","5_F4-1","5_F4-2","5_F4-3","5_F6","5_F7","5_F8","5_H1-0","5_H1-1","5_H3","5_H4","5_J1","5_J10","5_J14","5_J2","5_J4","5_J8","6_A1","6_A2","6_A6","6_B5-0","6_B5-1","6_B5_1-0","6_B5_1-1","6_C1","6_C2-0","6_C2-1","6_C7","6_D4-0","6_D4-1","6_D4-2","6_D4-3","6_D8","6_F1"]
 
 
 var allSheets = tempAllSheets;
@@ -1435,7 +1471,7 @@ var tableIndex = 0;
 // init("4C1");
 init();
 window.onresize = function(){
-	if(d3.select("#testTable thead").node().getBoundingClientRect().width - $(window).width() + 44 <= 0){
+	if(d3.select("#testTable thead").node().getBoundingClientRect().width - $(window).width() + 74 <= 0){
 		d3.select(".rightFader").style("opacity", 0)
 	}else{ d3.select(".rightFader").style("opacity",1)}
 }
@@ -1462,7 +1498,6 @@ function searchTables(val){
 	}
 	else if (tmp == null){
 		// results.push(tmp)
-		console.log("foo")
 		results = [];
 
 	}else{
@@ -1474,19 +1509,15 @@ function searchTables(val){
 	// if(tmp.length != 0){
 	// 	results = _.intersection.apply(this, tmp)
 	// }
-	console.log(results, tmp)
 	var words = val.value
 	words = words.toUpperCase().replace(/\s+/g," ").split(" ")	
 	
 	current = sheets[tableIndex]
-	console.log("ti",tableIndex)
 	words.map(function(word){
 		$.getJSON(getJSONPath("words"), function(allWords){
 			if(typeof(allWords[word]) != "undefined"){
 				results.push(allWords[word])
-				console.log("asdfa",typeof(tmp), tmp == null)
 				if(results.length == words.length || (tmp != null && results.length == words.length +1)){
-					console.log("bar")
 					results.push(allSheets)
 					sheets = _.intersection.apply(this, results)
 					filterSheets(current, val.value)	
@@ -1519,7 +1550,6 @@ function filterSheets(current, val){
 		// return false;
 	}else{
 		var tID = d3.select("table").attr("id")
-		console.log(sheets, tID)
 		// cleanSheets = sheets.map(function(t){ t = t.replace(/\./g,"_")})
 		if(sheets.length == 0){
 			noResults(val)
@@ -1551,7 +1581,7 @@ function filterSheets(current, val){
 		 // console.log("found "  + sheets.length + " tables")
 		}
 	$("#tableMenu").html($("#tableMenu option").sort(function (a, b) {
-	    return a.text == b.text ? 0 : a.text < b.text ? -1 : 1
+	    return a.value == b.value ? 0 : a.value < b.value ? -1 : 1
 	}))
 	sheets = sheets.sort(function (a, b) {
 	    return a == b ? 0 : a < b ? -1 : 1
@@ -1568,6 +1598,31 @@ function formatLabel(x, y, input, col, type){
 		col = yearBarCache.id
 	}
 	var label = input.data[col].type
+	var dollarOld = d3.format("$s")
+
+	function dollar(x) {
+	  var s = dollarOld(x);
+	  switch (s[s.length - 1]) {
+	    case "k": return s.slice(0, -1) + " thousand";
+	    case "M": return s.slice(0, -1) + " million";
+	    case "G": return s.slice(0, -1) + " billion";
+	    case "T": return s.slice(0, -1) + " trillion";
+	  }
+	  return s;
+	}
+	var numOld = d3.format("s")
+	function num(x) {
+	  var s = numOld(x);
+	  switch (s[s.length - 1]) {
+	    case "k": return s.slice(0, -1) + " thousand";
+	    case "M": return s.slice(0, -1) + " million";
+	    case "G": return s.slice(0, -1) + " billion";
+	    case "T": return s.slice(0, -1) + " trillion";
+	  }
+	  return s;
+	}
+
+
 
 	if(type == "label"){
 		// console.log(x, y, input, col, type)
@@ -1578,13 +1633,13 @@ function formatLabel(x, y, input, col, type){
 		// return(Highcharts.numberFormat('{value}'))
 		// console.log(Highcharts.Axis.defaultLabelFormatter)
 		if(label == "dollar"){
-			return '$' + x.axis.defaultLabelFormatter.call(x);
+			return '$' + (x.axis.defaultLabelFormatter.call(x)).replace("k","K").replace("G","B");
 		}
 		else if(label == "percent"){
 			return x.axis.defaultLabelFormatter.call(x) + "%";
 		}
 		else{
-			return x.axis.defaultLabelFormatter.call(x);	
+			return (x.axis.defaultLabelFormatter.call(x)).replace("k","K").replace("G","B");	
 		}
 		// else if(col == "")
 		// console.log(input, col)
@@ -1602,8 +1657,6 @@ function formatLabel(x, y, input, col, type){
 		}	
 	}
 
-	var dollar = d3.format("$,")
-	var num = d3.format(",")
 	if(type == "tooltipLine"){
 		var date = new Date(x)
 		var full = MONTHNAMES[date.getMonth()] + " " + date.getFullYear()
@@ -1612,19 +1665,19 @@ function formatLabel(x, y, input, col, type){
 				return full + ": " + dollar(y)
 				break;
 			case "dollarThousand":
-				return full + ": " + dollar(y) + " thousand"
+				return full + ": " + dollar(y * 1000)
 				break;
 			case "dollarMillion":
-				return full + ": " + dollar(y) + " million"
+				return full + ": " + dollar(y * 1000000)
 				break;
 			case "number":
 				return full + ": " + num(y)
 				break;				
 			case "numberThousand":
-				return full + ": " + num(y) + " thousand"
+				return full + ": " + num(y * 1000)
 				break;
 			case "numberMillion":
-				return full + ": " + num(y) + " million"
+				return full + ": " + num(y * 1000000)
 				break;
 			case "percent":
 				return full + ": " + y + "%"
@@ -1638,19 +1691,19 @@ function formatLabel(x, y, input, col, type){
 				return dollar(y)
 				break;
 			case "dollarThousand":
-				return num(y) + " thousand dollars"
+				return dollar(y * 1000)
 				break;
 			case "dollarMillion":
-				return num(y) + " million dollars"
+				return dollar(y * 1000000)
 				break;
 			case "number":
 				return num(y)
 				break;				
 			case "numberThousand":
-				return num(y) + " thousand"
+				return num(y * 1000)
 				break;
 			case "numberMillion":
-				return num(y) + " million"
+				return num(y * 1000000)
 				break;
 			case "percent":
 				return y + "%"
@@ -1663,19 +1716,19 @@ function formatLabel(x, y, input, col, type){
 				return x + ": " + dollar(y)
 				break;
 			case "dollarThousand":
-				return x + ": " + dollar(y) + " thousand"
+				return x + ": " + dollar(y * 1000)
 				break;
 			case "dollarMillion":
-				return x + ": " + dollar(y) + " million"
+				return x + ": " + dollar(y * 1000000)
 				break;
 			case "number":
 				return x + ": " + num(y)
 				break;				
 			case "numberThousand":
-				return x + ": " + num(y) + " thousand"
+				return x + ": " + num(y *1000)
 				break;
 			case "numberMillion":
-				return x + ": " + num(y) + " million"
+				return x + ": " + num(y * 1000000)
 				break;
 			case "percent":
 				return x + ": " + y + "%"
@@ -1699,7 +1752,6 @@ d3.select("#searchButton")
 
 d3.selectAll("#checkBoxes input")
 	.on("click", function(){
-		console.log(d3.select(this).property("checked"))
 		if(!d3.select(this).property("checked")){
 			d3.selectAll("#checkBoxes input").property("checked",false)
 			searchTables(document.getElementById("searchBox"))
@@ -1748,10 +1800,10 @@ d3.select("#resetButton")
 $(document).ready(function() {
 
    $(window).scroll(function() {
-	   var end = d3.select("#testTable thead").node().getBoundingClientRect().width - $(window).width() + 44;       
+	   var end = d3.select("#testTable thead").node().getBoundingClientRect().width - $(window).width() + 74;       
        var scrollLeftVal = $(this).scrollLeft();
        d3.select("thead")
-       	.style("left", -1*scrollLeftVal + 39)
+       	.style("left", -1*scrollLeftVal + 69)
        if(Math.abs(scrollLeftVal-end) <= 220){
        	d3.select(".rightFader")
        		.style("right", -220+Math.abs(scrollLeftVal-end))

@@ -528,7 +528,8 @@
         "header": "<thead><tr><th rowspan=\"2\"  class=\"series col0\" >Year</th><th colspan=\"4\"  class=\"series col1\" >Number</th><th colspan=\"3\"  class=\"series col5\" >Average monthly benefit (dollars)</th></tr><tr><th class=\"series col1\" >All disabled beneficiaries</th><th class=\"series col2\" >Workers</th><th class=\"series col3\" >Widow(er)s</th><th class=\"series col4\" >Disabled adult children</th><th class=\"series col5\" >Workers</th><th class=\"series col6\" >Widow(er)s</th><th class=\"series col7\" >Disabled adult children</th></tr></thead>"
     }, 
     "title": {
-        "category": "5.A OASDI Current-Pay Benefits: Summary", 
+        "catID": "5.A", 
+        "category": "OASDI Current-Pay Benefits: Summary", 
         "id": "5_A17", 
         "name": "Number and average monthly benefit for disabled beneficiaries, by type of benefit, December 1957\u20132013"
     }

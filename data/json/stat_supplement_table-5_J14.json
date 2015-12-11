@@ -3521,7 +3521,8 @@
         "header": "<thead><tr><th rowspan=\"2\"  colspan=\"3\"  class=\"series col0\" >State or area</th><th colspan=\"3\"  class=\"series col3\" >All disabled beneficiaries</th><th colspan=\"3\"  class=\"series col6\" >Disabled workers</th><th colspan=\"3\"  class=\"series col9\" >Disabled widow(er)s</th><th colspan=\"3\"  class=\"series col12\" >Disabled adult children</th></tr><tr><th class=\"series col3\" >Number</th><th class=\"series col4\" >Average monthly benefit (dollars)</th><th class=\"series col5\" >Median monthly benefit (dollars)</th><th class=\"series col6\" >Number</th><th class=\"series col7\" >Average monthly benefit (dollars)</th><th class=\"series col8\" >Median monthly benefit (dollars)</th><th class=\"series col9\" >Number</th><th class=\"series col10\" >Average monthly benefit (dollars)</th><th class=\"series col11\" >Median monthly benefit (dollars)</th><th class=\"series col12\" >Number</th><th class=\"series col13\" >Average monthly benefit (dollars)</th><th class=\"series col14\" >Median monthly benefit (dollars)</th></tr></thead>"
     }, 
     "title": {
-        "category": "5.J OASDI Current-Pay Benefits: Geographic Data", 
+        "catID": "5.J", 
+        "category": "OASDI Current-Pay Benefits: Geographic Data", 
         "id": "5_J14", 
         "name": "Number, average monthly benefit, and median monthly benefit, by state or other area and type of disabled beneficiary, December\u00a02013"
     }

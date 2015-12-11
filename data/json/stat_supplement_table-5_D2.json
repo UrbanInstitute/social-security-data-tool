@@ -347,7 +347,8 @@
         "header": "<thead><tr><th rowspan=\"2\"  colspan=\"2\"  class=\"series col0\" >Monthly benefit (dollars)</th><th colspan=\"2\"  class=\"series col2\" >Total</th><th colspan=\"2\"  class=\"series col4\" >Men</th><th colspan=\"2\"  class=\"series col6\" >Women</th></tr><tr><th class=\"series col2\" >Number</th><th class=\"series col3\" >Percent</th><th class=\"series col4\" >Number</th><th class=\"series col5\" >Percent</th><th class=\"series col6\" >Number</th><th class=\"series col7\" >Percent</th></tr></thead>"
     }, 
     "title": {
-        "category": "5.D OASDI Current-Pay Benefits: Disabled Workers", 
+        "catID": "5.D", 
+        "category": "OASDI Current-Pay Benefits: Disabled Workers", 
         "id": "5_D2", 
         "name": "Number and percentage distribution, by monthly benefit and sex, December\u00a02013"
     }

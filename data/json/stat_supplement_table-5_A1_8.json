@@ -105,7 +105,8 @@
         "header": "<thead><tr><th rowspan=\"2\"  colspan=\"2\"  class=\"series col0\" >Age</th><th colspan=\"2\"  class=\"series col2\" >All parents</th><th colspan=\"2\"  class=\"series col4\" >Men</th><th colspan=\"2\"  class=\"series col6\" >Women</th></tr><tr><th class=\"series col2\" >Number</th><th class=\"series col3\" >Average monthly benefit (dollars)</th><th class=\"series col4\" >Number</th><th class=\"series col5\" >Average monthly benefit (dollars)</th><th class=\"series col6\" >Number</th><th class=\"series col7\" >Average monthly benefit (dollars)</th></tr></thead>"
     }, 
     "title": {
-        "category": "5.A OASDI Current-Pay Benefits: Summary", 
+        "catID": "5.A", 
+        "category": "OASDI Current-Pay Benefits: Summary", 
         "id": "5_A1_8", 
         "name": "Number and average monthly benefit for parents, by age and sex, December\u00a02013"
     }

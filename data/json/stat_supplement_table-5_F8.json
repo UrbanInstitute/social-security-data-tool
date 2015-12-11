@@ -658,7 +658,8 @@
         "header": "<thead><tr><th rowspan=\"3\"  class=\"series col0\" >Year</th><th rowspan=\"2\"  colspan=\"2\"  class=\"series col1\" >Total</th><th colspan=\"4\"  class=\"series col3\" >Nondisabled\u2014</th><th rowspan=\"2\"  colspan=\"2\"  class=\"series col7\" >Disabled widow(er)s</th></tr><tr><th colspan=\"2\"  class=\"series col3\" >Widows</th><th colspan=\"3\"  class=\"series col5\" >Widowers</th></tr><tr><th class=\"series col1\" >Number</th><th class=\"series col2\" >Total monthly benefits (thousands of dollars)</th><th class=\"series col3\" >Number</th><th class=\"series col4\" >Total monthly benefits (thousands of dollars)</th><th class=\"series col5\" >Number</th><th class=\"series col6\" >Total monthly benefits (thousands of dollars)</th><th class=\"series col7\" >Number</th><th class=\"series col8\" >Total monthly benefits (thousands of dollars)</th></tr></thead>"
     }, 
     "title": {
-        "category": "5.F OASDI Current-Pay Benefits: Dependents and Survivors", 
+        "catID": "5.F", 
+        "category": "OASDI Current-Pay Benefits: Dependents and Survivors", 
         "id": "5_F8", 
         "name": "Number of widow(er)s and total monthly benefits, by type of benefit,\nDecember 1950\u20132013"
     }

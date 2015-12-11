@@ -1059,7 +1059,8 @@
         "header": "<thead><tr><th rowspan=\"2\"  class=\"series col0\" >Year</th><th colspan=\"5\"  class=\"series col1\" >Receipts <span class = \"top_footnote top_a\">a</span></th><th colspan=\"4\"  class=\"series col6\" >Expenditures</th><th colspan=\"2\"  class=\"series col10\" >Assets</th></tr><tr><th class=\"series col1\" >Total</th><th class=\"series col2\" >Net payroll tax contri-butions <span class = \"top_footnote top_b\">b</span></th><th class=\"series col3\" >Income \nfrom taxation of benefits</th><th class=\"series col4\" >Reimburse-ments from the general fund of the Treasury <span class = \"top_footnote top_c\">c</span></th><th class=\"series col5\" >Net \ninterest <span class = \"top_footnote top_d\">d</span></th><th class=\"series col6\" >Total</th><th class=\"series col7\" >Benefit payments <span class = \"top_footnote top_e\">e</span></th><th class=\"series col8\" >Adminis-trative expenses</th><th class=\"series col9\" >Transfers to Railroad Retirement program</th><th class=\"series col10\" >Net \nincrease during year</th><th class=\"series col11\" >Amount at end of year</th></tr></thead>"
     }, 
     "title": {
-        "category": "4.A OASDI: Trust Funds", 
+        "catID": "4.A", 
+        "category": "OASDI: Trust Funds", 
         "id": "4_A1", 
         "name": "Old-Age and Survivors Insurance, 1937\u20132013 (in millions of dollars)"
     }

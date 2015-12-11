@@ -946,7 +946,8 @@
         "header": "<thead><tr><th rowspan=\"3\"  class=\"series col0\" >Year <span class = \"top_footnote top_a\">a</span></th><th rowspan=\"2\"  colspan=\"3\"  class=\"series col1\" >Average primary insurance amount for retired workers (dollars)</th><th colspan=\"7\"  class=\"series col4\" >Average monthly benefit (dollars)</th></tr><tr><th colspan=\"3\"  class=\"series col4\" >Retired workers</th><th colspan=\"3\"  class=\"series col7\" >Disabled workers</th><th rowspan=\"2\"  class=\"series col10\" >Non-disabled widows</th></tr><tr><th class=\"series col1\" >All</th><th class=\"series col2\" >Men</th><th class=\"series col3\" >Women</th><th class=\"series col4\" >All</th><th class=\"series col5\" >Men</th><th class=\"series col6\" >Women</th><th class=\"series col7\" >All</th><th class=\"series col8\" >Men</th><th class=\"series col9\" >Women</th></tr></thead>"
     }, 
     "title": {
-        "category": "6.A OASDI Benefits Awarded: Summary", 
+        "catID": "6.A", 
+        "category": "OASDI Benefits Awarded: Summary", 
         "id": "6_A2", 
         "name": "Average primary insurance amount for retired workers and average monthly benefit for retired and disabled workers, and nondisabled widows, by type of benefit and sex, selected years 1940\u20132013 (in\u00a0dollars)"
     }

@@ -531,7 +531,8 @@
         "header": "<thead><tr><th rowspan=\"2\"  colspan=\"2\"  class=\"series col0\" >Primary insurance amount (dollars)</th><th colspan=\"2\"  class=\"series col2\" >Widowed mothers and fathers</th><th colspan=\"2\"  class=\"series col4\" >Nondisabled widow(er)s</th><th colspan=\"2\"  class=\"series col6\" >Parents</th><th colspan=\"2\"  class=\"series col8\" >Disabled widow(er)s</th><th colspan=\"2\"  class=\"series col10\" >Children</th></tr><tr><th class=\"series col2\" >Number</th><th class=\"series col3\" >Percent</th><th class=\"series col4\" >Number</th><th class=\"series col5\" >Percent</th><th class=\"series col6\" >Number</th><th class=\"series col7\" >Percent</th><th class=\"series col8\" >Number</th><th class=\"series col9\" >Percent</th><th class=\"series col10\" >Number</th><th class=\"series col11\" >Percent</th></tr></thead>"
     }, 
     "title": {
-        "category": "5.F OASDI Current-Pay Benefits: Dependents and Survivors", 
+        "catID": "5.F", 
+        "category": "OASDI Current-Pay Benefits: Dependents and Survivors", 
         "id": "5_F7", 
         "name": "Number and percentage distribution of survivors, by primary insurance amount and type of benefit, December\u00a02013"
     }

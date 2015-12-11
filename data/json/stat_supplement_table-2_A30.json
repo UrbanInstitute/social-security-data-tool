@@ -232,7 +232,8 @@
         "header": "<thead><tr><th rowspan=\"2\"  class=\"series col0\" >Year</th><th colspan=\"2\"  class=\"series col1\" >Nonblind beneficiaries <span class = \"top_footnote top_a\">a</span></th><th rowspan=\"2\"  class=\"series col3\" >Blind beneficiaries <span class = \"top_footnote top_b\">b</span></th></tr><tr><th class=\"series col1\" >Minimum</th><th class=\"series col2\" >Maximum</th></tr></thead>"
     }, 
     "title": {
-        "category": "2.A OASDI: Effect of Current Earnings and Taxation of Benefits", 
+        "catID": "2.A", 
+        "category": "OASDI: Effect of Current Earnings and Taxation of Benefits", 
         "id": "2_A30", 
         "name": "Monthly earnings guidelines for substantial gainful activity, 1961\u20132014 (in dollars)"
     }

@@ -80,7 +80,8 @@
         "header": "<thead><tr><th class=\"series col0\" >Cases</th><th class=\"series col1\" >2010</th><th class=\"series col2\" >2011</th><th class=\"series col3\" >2012</th><th class=\"series col4\" >2013</th></tr></thead>"
     }, 
     "title": {
-        "category": "2.F SSA Administrative Data: Hearings and Appeals", 
+        "catID": "2.F", 
+        "category": "SSA Administrative Data: Hearings and Appeals", 
         "id": "2_F11", 
         "name": "Number of SSA Appeals Council cases, fiscal years 2010\u20132013"
     }

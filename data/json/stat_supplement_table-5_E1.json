@@ -351,7 +351,8 @@
         "header": "<thead><tr><th rowspan=\"2\"  colspan=\"2\"  class=\"series col0\" >Primary insurance amount (dollars)</th><th colspan=\"2\"  class=\"series col2\" >Disabled workers</th><th colspan=\"2\"  class=\"series col4\" >Spouses</th><th colspan=\"2\"  class=\"series col6\" >Children</th></tr><tr><th class=\"series col2\" >Number</th><th class=\"series col3\" >Percent</th><th class=\"series col4\" >Number</th><th class=\"series col5\" >Percent</th><th class=\"series col6\" >Number</th><th class=\"series col7\" >Percent</th></tr></thead>"
     }, 
     "title": {
-        "category": "5.E OASDI Current-Pay Benefits: Disabled Workers and Dependents", 
+        "catID": "5.E", 
+        "category": "OASDI Current-Pay Benefits: Disabled Workers and Dependents", 
         "id": "5_E1", 
         "name": "Number and percentage distribution, by primary insurance amount and type of benefit, December\u00a02013"
     }

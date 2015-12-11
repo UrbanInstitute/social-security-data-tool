@@ -1,0 +1,228 @@
+{
+    "category": "timeSeries", 
+    "data": {
+        "col1": {
+            "label": "Total\u00a0a :: ", 
+            "series": [
+                11374.0, 
+                14010.0, 
+                16350.0, 
+                18412.0, 
+                19954.0, 
+                20888.0, 
+                21381.0, 
+                22066.0, 
+                24004.0, 
+                24533.0, 
+                25097.0, 
+                25685.0
+            ], 
+            "type": "numberThousand"
+        }, 
+        "col2": {
+            "label": "Entitled as worker\u00a0b :: Subtotal :: ", 
+            "series": [
+                5753.0, 
+                7586.0, 
+                9304.0, 
+                10805.0, 
+                12037.0, 
+                12974.0, 
+                14013.0, 
+                15291.0, 
+                17750.0, 
+                18360.0, 
+                19001.0, 
+                19662.0
+            ], 
+            "type": "numberThousand"
+        }, 
+        "col3": {
+            "label": "Entitled as worker\u00a0b :: Worker only :: ", 
+            "series": [
+                4786.0, 
+                5926.0, 
+                6710.0, 
+                7096.0, 
+                7359.0, 
+                7554.0, 
+                8117.0, 
+                9126.0, 
+                11118.0, 
+                11657.0, 
+                12227.0, 
+                12825.0
+            ], 
+            "type": "numberThousand"
+        }, 
+        "col4": {
+            "label": "Entitled as worker\u00a0b :: Dually entitled :: Subtotal", 
+            "series": [
+                967.0, 
+                1660.0, 
+                2594.0, 
+                3709.0, 
+                4678.0, 
+                5420.0, 
+                5896.0, 
+                6165.0, 
+                6632.0, 
+                6702.0, 
+                6775.0, 
+                6837.0
+            ], 
+            "type": "numberThousand"
+        }, 
+        "col5": {
+            "label": "Entitled as worker\u00a0b :: Dually entitled :: Wife's benefit", 
+            "series": [
+                388.0, 
+                617.0, 
+                1016.0, 
+                1594.0, 
+                2077.0, 
+                2398.0, 
+                2568.0, 
+                2650.0, 
+                2911.0, 
+                2952.0, 
+                2995.0, 
+                3029.0
+            ], 
+            "type": "numberThousand"
+        }, 
+        "col6": {
+            "label": "Entitled as worker\u00a0b :: Dually entitled :: Widow's or parent's benefit\u00a0c", 
+            "series": [
+                574.0, 
+                1039.0, 
+                1575.0, 
+                2112.0, 
+                2600.0, 
+                3022.0, 
+                3327.0, 
+                3514.0, 
+                3721.0, 
+                3750.0, 
+                3779.0, 
+                3808.0
+            ], 
+            "type": "numberThousand"
+        }, 
+        "col7": {
+            "label": "Entitled as wife, widow, or parent only :: Dually entitled :: Subtotal", 
+            "series": [
+                5621.0, 
+                6424.0, 
+                7046.0, 
+                7607.0, 
+                7917.0, 
+                7914.0, 
+                7368.0, 
+                6775.0, 
+                6254.0, 
+                6173.0, 
+                6095.0, 
+                6024.0
+            ], 
+            "type": "numberThousand"
+        }, 
+        "col8": {
+            "label": "Entitled as wife, widow, or parent only :: Dually entitled :: Wife's benefit", 
+            "series": [
+                2546.0, 
+                2745.0, 
+                2884.0, 
+                3018.0, 
+                3059.0, 
+                2985.0, 
+                2768.0, 
+                2511.0, 
+                2306.0, 
+                2279.0, 
+                2260.0, 
+                2250.0
+            ], 
+            "type": "numberThousand"
+        }, 
+        "col9": {
+            "label": "Entitled as wife, widow, or parent only :: Dually entitled :: Widow's or parent's benefit\u00a0c", 
+            "series": [
+                3048.0, 
+                3659.0, 
+                4148.0, 
+                4580.0, 
+                4853.0, 
+                4926.0, 
+                4598.0, 
+                4264.0, 
+                3948.0, 
+                3894.0, 
+                3836.0, 
+                3774.0
+            ], 
+            "type": "numberThousand"
+        }, 
+        "years": {
+            "series": [
+                1960, 
+                1970, 
+                1975, 
+                1980, 
+                1985, 
+                1990, 
+                1995, 
+                2000, 
+                2005, 
+                2010, 
+                2011, 
+                2012, 
+                2013
+            ], 
+            "type": "year"
+        }
+    }, 
+    "footnotes": [
+        {
+            "content": "SOURCE: Social Security Administration, Master Beneficiary Record. All data for 2005 and dual entitlement data for 1995 and 2000 are based on a 10\u00a0percent sample. All other years are 100\u00a0percent data.", 
+            "type": "note"
+        }, 
+        {
+            "content": "NOTE: Totals do not necessarily equal the sum of rounded components.", 
+            "type": "note"
+        }, 
+        {
+            "content": "Excludes disabled adult children.", 
+            "symbol": "a.", 
+            "type": "footnote"
+        }, 
+        {
+            "content": "Includes disabled workers.", 
+            "symbol": "b.", 
+            "type": "footnote"
+        }, 
+        {
+            "content": "Includes disabled widows and mothers.", 
+            "symbol": "c.", 
+            "type": "footnote"
+        }, 
+        {
+            "content": "CONTACT: (410) 965-0090 or statistics@ssa.gov.", 
+            "type": "note"
+        }, 
+        {
+            "content": "File available from:\nU.S. Social Security Administration \u2022 Office of Retirement and Disability Policy \u2022 Office of Research, Evaluation, and Statistics\nAnnual Statistical Supplement, 2014\nhttp://www.socialsecurity.gov/policy/docs/statcomps/supplement/2014/", 
+            "type": "note"
+        }
+    ], 
+    "html": {
+        "body": "<tbody><tr class=1960><td class=\"col0\">1960.0</td><td class=\"col2\">6619.0</td><td class=\"col3\">2866.0</td><td class=\"col4\">2563.0</td><td class=\"col5\">303.0</td><td class=\"col6\">159.0</td><td class=\"col7\">141.0</td><td class=\"col8\">3753.0</td><td class=\"col9\">2174.0</td><td class=\"col10\">1546.0</td><tr class=1970><td class=\"col0\">1970.0</td><td class=\"col2\">11374.0</td><td class=\"col3\">5753.0</td><td class=\"col4\">4786.0</td><td class=\"col5\">967.0</td><td class=\"col6\">388.0</td><td class=\"col7\">574.0</td><td class=\"col8\">5621.0</td><td class=\"col9\">2546.0</td><td class=\"col10\">3048.0</td><tr class=1975><td class=\"col0\">1975.0</td><td class=\"col2\">14010.0</td><td class=\"col3\">7586.0</td><td class=\"col4\">5926.0</td><td class=\"col5\">1660.0</td><td class=\"col6\">617.0</td><td class=\"col7\">1039.0</td><td class=\"col8\">6424.0</td><td class=\"col9\">2745.0</td><td class=\"col10\">3659.0</td><tr class=1980><td class=\"col0\">1980.0</td><td class=\"col2\">16350.0</td><td class=\"col3\">9304.0</td><td class=\"col4\">6710.0</td><td class=\"col5\">2594.0</td><td class=\"col6\">1016.0</td><td class=\"col7\">1575.0</td><td class=\"col8\">7046.0</td><td class=\"col9\">2884.0</td><td class=\"col10\">4148.0</td><tr class=1985><td class=\"col0\">1985.0</td><td class=\"col2\">18412.0</td><td class=\"col3\">10805.0</td><td class=\"col4\">7096.0</td><td class=\"col5\">3709.0</td><td class=\"col6\">1594.0</td><td class=\"col7\">2112.0</td><td class=\"col8\">7607.0</td><td class=\"col9\">3018.0</td><td class=\"col10\">4580.0</td><tr class=1990><td class=\"col0\">1990.0</td><td class=\"col2\">19954.0</td><td class=\"col3\">12037.0</td><td class=\"col4\">7359.0</td><td class=\"col5\">4678.0</td><td class=\"col6\">2077.0</td><td class=\"col7\">2600.0</td><td class=\"col8\">7917.0</td><td class=\"col9\">3059.0</td><td class=\"col10\">4853.0</td><tr class=1995><td class=\"col0\">1995.0</td><td class=\"col2\">20888.0</td><td class=\"col3\">12974.0</td><td class=\"col4\">7554.0</td><td class=\"col5\">5420.0</td><td class=\"col6\">2398.0</td><td class=\"col7\">3022.0</td><td class=\"col8\">7914.0</td><td class=\"col9\">2985.0</td><td class=\"col10\">4926.0</td><tr class=2000><td class=\"col0\">2000.0</td><td class=\"col2\">21381.0</td><td class=\"col3\">14013.0</td><td class=\"col4\">8117.0</td><td class=\"col5\">5896.0</td><td class=\"col6\">2568.0</td><td class=\"col7\">3327.0</td><td class=\"col8\">7368.0</td><td class=\"col9\">2768.0</td><td class=\"col10\">4598.0</td><tr class=2005><td class=\"col0\">2005.0</td><td class=\"col2\">22066.0</td><td class=\"col3\">15291.0</td><td class=\"col4\">9126.0</td><td class=\"col5\">6165.0</td><td class=\"col6\">2650.0</td><td class=\"col7\">3514.0</td><td class=\"col8\">6775.0</td><td class=\"col9\">2511.0</td><td class=\"col10\">4264.0</td><tr class=2010><td class=\"col0\">2010.0</td><td class=\"col2\">24004.0</td><td class=\"col3\">17750.0</td><td class=\"col4\">11118.0</td><td class=\"col5\">6632.0</td><td class=\"col6\">2911.0</td><td class=\"col7\">3721.0</td><td class=\"col8\">6254.0</td><td class=\"col9\">2306.0</td><td class=\"col10\">3948.0</td><tr class=2011><td class=\"col0\">2011.0</td><td class=\"col2\">24533.0</td><td class=\"col3\">18360.0</td><td class=\"col4\">11657.0</td><td class=\"col5\">6702.0</td><td class=\"col6\">2952.0</td><td class=\"col7\">3750.0</td><td class=\"col8\">6173.0</td><td class=\"col9\">2279.0</td><td class=\"col10\">3894.0</td><tr class=2012><td class=\"col0\">2012.0</td><td class=\"col2\">25097.0</td><td class=\"col3\">19001.0</td><td class=\"col4\">12227.0</td><td class=\"col5\">6775.0</td><td class=\"col6\">2995.0</td><td class=\"col7\">3779.0</td><td class=\"col8\">6095.0</td><td class=\"col9\">2260.0</td><td class=\"col10\">3836.0</td><tr class=2013><td class=\"col0\">2013.0</td><td class=\"col2\">25685.0</td><td class=\"col3\">19662.0</td><td class=\"col4\">12825.0</td><td class=\"col5\">6837.0</td><td class=\"col6\">3029.0</td><td class=\"col7\">3808.0</td><td class=\"col8\">6024.0</td><td class=\"col9\">2250.0</td><td class=\"col10\">3774.0</td></tbody>", 
+        "header": "<thead><tr><th rowspan=\"3\"  class=\"series col0\" >Year</th><th rowspan=\"3\"  class=\"series col1\" >Total <span class = \"top_footnote top_a\">a</span></th><th rowspan=\"2\"  colspan=\"5\"  class=\"series col2\" >Entitled as worker <span class = \"top_footnote top_b\">b</span></th><th rowspan=\"2\"  colspan=\"3\"  class=\"series col7\" >Entitled as wife, widow, or parent only</th></tr><tr><th rowspan=\"2\"  class=\"series col2\" >Subtotal</th><th rowspan=\"2\"  class=\"series col3\" >Worker only</th><th colspan=\"5\"  class=\"series col4\" >Dually entitled</th></tr><tr><th class=\"series col4\" >Subtotal</th><th class=\"series col5\" >Wife's benefit</th><th class=\"series col6\" >Widow's or parent's benefit <span class = \"top_footnote top_c\">c</span></th><th class=\"series col7\" >Subtotal</th><th class=\"series col8\" >Wife's benefit</th><th class=\"series col9\" >Widow's or parent's benefit <span class = \"top_footnote top_c\">c</span></th></tr></thead>"
+    }, 
+    "title": {
+        "catID": "5.A", 
+        "category": "OASDI Current-Pay Benefits: Summary", 
+        "id": "5_A14-0", 
+        "name": "Number and percentage distribution of women aged 62 or\u00a0older, by basis of entitlement, type of benefit, and dual entitlement status, December 1960\u20132013, selected years :: Subtable : Number (thousands)"
+    }
+}

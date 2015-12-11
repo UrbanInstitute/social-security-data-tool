@@ -905,7 +905,8 @@
         "header": "<thead><tr><th rowspan=\"2\"  class=\"series col0\" >Year</th><th rowspan=\"2\"  class=\"series col1\" >Total, all benefits <span class = \"top_footnote top_a\">a</span></th><th rowspan=\"2\"  class=\"series col2\" >Retired workers</th><th rowspan=\"2\"  class=\"series col3\" >Disabled workers</th><th rowspan=\"2\"  class=\"series col4\" >Wives and husbands</th><th colspan=\"4\"  class=\"series col5\" >Children</th><th rowspan=\"2\"  class=\"series col9\" >Widowed mothers and fathers</th><th rowspan=\"2\"  class=\"series col10\" >Widow(er)s</th><th rowspan=\"2\"  class=\"series col11\" >Parents</th></tr><tr><th class=\"series col5\" >Total</th><th class=\"series col6\" >Under\nage 18</th><th class=\"series col7\" >Disabled adult children</th><th class=\"series col8\" >Students</th></tr></thead>"
     }, 
     "title": {
-        "category": "6.F OASDI: Benefits Terminated", 
+        "catID": "6.F", 
+        "category": "OASDI: Benefits Terminated", 
         "id": "6_F1", 
         "name": "Number of benefits terminated, by type, 1940\u20132013"
     }

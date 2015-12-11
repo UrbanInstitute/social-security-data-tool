@@ -783,7 +783,8 @@
         "header": "<thead><tr><th rowspan=\"3\"  class=\"series col0\" >Year</th><th rowspan=\"2\"  colspan=\"2\"  class=\"series col1\" >Annual maximum taxable earnings (dollars)</th><th colspan=\"8\"  class=\"series col3\" >Contribution rate (percent)</th></tr><tr><th colspan=\"4\"  class=\"series col3\" >Employer and employee, each</th><th colspan=\"4\"  class=\"series col7\" >Self-employed person</th></tr><tr><th class=\"series col1\" >OASDI</th><th class=\"series col2\" >HI</th><th class=\"series col3\" >Total, OASDI and HI</th><th class=\"series col4\" >OASI</th><th class=\"series col5\" >DI</th><th class=\"series col6\" >HI</th><th class=\"series col7\" >Total, OASDI and HI</th><th class=\"series col8\" >OASI</th><th class=\"series col9\" >DI</th><th class=\"series col10\" >HI</th></tr></thead>"
     }, 
     "title": {
-        "category": "2.A OASDI: Coverage, Financing, and Insured Status", 
+        "catID": "2.A", 
+        "category": "OASDI: Coverage, Financing, and Insured Status", 
         "id": "2_A3", 
         "name": "Annual maximum taxable earnings and contribution rates, 1937\u20132014"
     }

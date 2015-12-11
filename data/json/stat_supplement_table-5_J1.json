@@ -1529,7 +1529,8 @@
         "header": "<thead><tr><th colspan=\"3\"  class=\"series col0\" >State or area</th><th class=\"series col3\" >Total, OASDI</th><th class=\"series col4\" >Retirement</th><th class=\"series col5\" >Survivors</th><th class=\"series col6\" >Disability</th></tr></thead>"
     }, 
     "title": {
-        "category": "5.J OASDI Current-Pay Benefits: Geographic Data", 
+        "catID": "5.J", 
+        "category": "OASDI Current-Pay Benefits: Geographic Data", 
         "id": "5_J1", 
         "name": "Estimated total annual benefits paid, by state or other area and program, 2013 (in millions of\u00a0dollars)"
     }

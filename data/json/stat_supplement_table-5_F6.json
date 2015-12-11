@@ -865,7 +865,8 @@
         "header": "<thead><tr><th rowspan=\"2\"  class=\"series col0\" >Year</th><th rowspan=\"2\"  class=\"series col1\" >Widowed mothers and fathers</th><th colspan=\"2\"  class=\"series col2\" >Nondisabled</th><th rowspan=\"2\"  class=\"series col4\" >Parents</th><th colspan=\"4\"  class=\"series col5\" >Children</th><th colspan=\"2\"  class=\"series col9\" >Disabled</th></tr><tr><th class=\"series col2\" >Widows</th><th class=\"series col3\" >Widowers</th><th class=\"series col5\" >Total</th><th class=\"series col6\" >Under age 18</th><th class=\"series col7\" >Disabled adult children</th><th class=\"series col8\" >Students</th><th class=\"series col9\" >Widows</th><th class=\"series col10\" >Widowers</th></tr></thead>"
     }, 
     "title": {
-        "category": "5.F OASDI Current-Pay Benefits: Dependents and Survivors", 
+        "catID": "5.F", 
+        "category": "OASDI Current-Pay Benefits: Dependents and Survivors", 
         "id": "5_F6", 
         "name": "Average monthly benefit for survivors, by type of benefit, December 1940\u20132013, selected years (in\u00a0dollars)"
     }

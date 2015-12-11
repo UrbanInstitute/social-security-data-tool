@@ -61,7 +61,8 @@
         "header": "<thead><tr><th class=\"series col0\" >Workload</th><th class=\"series col1\" >Total</th><th class=\"series col2\" >Worker</th><th class=\"series col3\" >Family members and survivors</th></tr></thead>"
     }, 
     "title": {
-        "category": "2.F SSA Administrative Data: Claims Workloads", 
+        "catID": "2.F", 
+        "category": "SSA Administrative Data: Claims Workloads", 
         "id": "2_F4", 
         "name": "Number of Old-Age and Survivors Insurance claims, fiscal year 2013 (in thousands)"
     }

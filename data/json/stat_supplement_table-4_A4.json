@@ -738,7 +738,8 @@
         "header": "<thead><tr><th rowspan=\"2\"  class=\"series col0\" >Year</th><th rowspan=\"2\"  class=\"series col1\" >Total benefits</th><th colspan=\"2\"  class=\"series col2\" >Cash benefits <span class = \"top_footnote top_a\">a</span></th><th colspan=\"2\"  class=\"series col4\" >Service benefits</th><th colspan=\"2\"  class=\"series col6\" >Rehabilitation services <span class = \"top_footnote top_d\">d</span></th><th rowspan=\"2\"  class=\"series col8\" >Personal income <span class = \"top_footnote top_e\">e</span></th><th rowspan=\"2\"  class=\"series col9\" >Total benefits as a percentage of personal income</th></tr><tr><th class=\"series col2\" >Old-Age and Survivors Insurance <span class = \"top_footnote top_b\">b</span></th><th class=\"series col3\" >Disability Insurance</th><th class=\"series col4\" >Hospital Insurance</th><th class=\"series col5\" >Supplementary Medical Insurance <span class = \"top_footnote top_c\">c</span></th><th class=\"series col6\" >Old-Age and Survivors Insurance</th><th class=\"series col7\" >Disability Insurance</th></tr></thead>"
     }, 
     "title": {
-        "category": "4.A OASDI: Trust Funds", 
+        "catID": "4.A", 
+        "category": "OASDI: Trust Funds", 
         "id": "4_A4", 
         "name": "Total annual benefits paid, by type of benefit and trust fund, and as a percentage of personal income, selected years 1937\u20132013 (in millions of dollars)"
     }
