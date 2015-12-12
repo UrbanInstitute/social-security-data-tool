@@ -299,9 +299,11 @@ function drawTable(input){
 			})
 	}
 	d3.selectAll(".footnotes").remove()
-	d3.select("#testTable")
+	var fn = d3.select("#testTable")
 		.append("div")
 		.attr("class", "footnotes")
+	fn.append("div")
+	.html("<div class = \"tableSource\">Placeholder source information</div>")
 	var tWidth = d3.select("thead").node().getBoundingClientRect().width;
 	for(var i = 0; i<input.footnotes.length; i++){
 		var note = input.footnotes[i]
@@ -657,7 +659,7 @@ function drawBar(input, col){
             },
             credits: {
                 enabled: true,
-                text: "Data tables from the SSA statistical supplement blah blah",
+                text: "Placeholder source information",
                 href: "https://www.ssa.gov/policy/docs/statcomps/supplement/"
             },
             legend: {
@@ -750,7 +752,7 @@ function drawMap(input, col){
         },
         credits: {
             enabled: true,
-            text: "Data tables from the SSA statistical supplement blah blah",
+            text: "Placeholder source information",
             href: "https://www.ssa.gov/policy/docs/statcomps/supplement/"
         },
         series : [{
@@ -862,7 +864,7 @@ function drawLineChart(input){
             },
             credits: {
                 enabled: true,
-                text: "Data tables from the SSA statistical supplement blah blah",
+                text: "Placeholder source information",
                 href: "https://www.ssa.gov/policy/docs/statcomps/supplement/"
             },
             legend: {
@@ -897,10 +899,10 @@ function generateBarFromYear(years, column, year){
 			return null;
 		}
 		else if(typeof(y) == "number" || y.search("-") == -1){
-			series.push([Date.UTC(years[i], 0, 1), column[i]]);
+			series.push([Date.UTC(y, 0, 1), column[i]]);
 		}else{
 			// console.log(years[i])
-			var range = years[i].split("-");
+			var range = y.split("-");
 			var start = parseInt(range[0]);
 			var end = parseInt(range[1]);
 			for(var c=start; c<=end; c++){
@@ -985,7 +987,7 @@ function drawSingleYearBarChart(input){
             },
             credits: {
                 enabled: true,
-                text: "Data tables from the SSA statistical supplement blah blah",
+                text: "Placeholder source information",
                 href: "https://www.ssa.gov/policy/docs/statcomps/supplement/"
             },
             legend: {

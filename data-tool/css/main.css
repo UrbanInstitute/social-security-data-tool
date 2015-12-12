@@ -452,6 +452,13 @@ th:not(.selected){
 /****************************************/
 /************ FOOTNOTES *****************/
 /****************************************/
+.tableSource{
+    color: #1696d2;
+    margin-left: 75px;
+    text-transform: uppercase;
+    font-style: italic;
+    margin-bottom: 10px;
+}
 .top_footnote{
     font-style: 18px;
     color: #ec008b;
