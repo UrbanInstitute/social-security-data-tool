@@ -4,6 +4,7 @@
         "col1": {
             "label": "Number of children of\u2014 :: All workers", 
             "series": [
+                28869.0, 
                 104054.0, 
                 198390.0, 
                 270557.0, 
@@ -30,6 +31,7 @@
         "col2": {
             "label": "Number of children of\u2014 :: Retired workers", 
             "series": [
+                16686.0, 
                 53825.0, 
                 87122.0, 
                 101341.0, 
@@ -56,6 +58,7 @@
         "col3": {
             "label": "Number of children of\u2014 :: Deceased workers", 
             "series": [
+                12183.0, 
                 47267.0, 
                 102287.0, 
                 154921.0, 
@@ -82,6 +85,7 @@
         "col4": {
             "label": "Number of children of\u2014 :: Disabled workers", 
             "series": [
+                false, 
                 2962.0, 
                 8981.0, 
                 14295.0, 
@@ -108,6 +112,7 @@
         "col5": {
             "label": "Total monthly benefits for children of\u2014\n(thousands of dollars) :: All workers", 
             "series": [
+                1115.0, 
                 4594.0, 
                 10271.0, 
                 19807.0, 
@@ -134,6 +139,7 @@
         "col6": {
             "label": "Total monthly benefits for children of\u2014\n(thousands of dollars) :: Retired workers", 
             "series": [
+                526.0, 
                 1922.0, 
                 3541.0, 
                 5755.0, 
@@ -160,6 +166,7 @@
         "col7": {
             "label": "Total monthly benefits for children of\u2014\n(thousands of dollars) :: Deceased workers", 
             "series": [
+                589.0, 
                 2557.0, 
                 6357.0, 
                 13290.0, 
@@ -186,6 +193,7 @@
         "col8": {
             "label": "Total monthly benefits for children of\u2014\n(thousands of dollars) :: Disabled workers", 
             "series": [
+                false, 
                 115.0, 
                 374.0, 
                 761.0, 

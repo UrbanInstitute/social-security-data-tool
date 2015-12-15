@@ -4,6 +4,7 @@
         "col1": {
             "label": "All children :: ", 
             "series": [
+                313163.0, 
                 415719.0, 
                 783202.0, 
                 1090865.0, 
@@ -52,6 +53,7 @@
         "col2": {
             "label": "Children of\u2014 :: Retired workers", 
             "series": [
+                81842.0, 
                 69979.0, 
                 134187.0, 
                 182595.0, 
@@ -100,6 +102,7 @@
         "col3": {
             "label": "Children of\u2014 :: Deceased workers", 
             "series": [
+                231321.0, 
                 241430.0, 
                 451399.0, 
                 591724.0, 
@@ -148,6 +151,7 @@
         "col4": {
             "label": "Children of\u2014 :: Disabled workers", 
             "series": [
+                false, 
                 104310.0, 
                 197616.0, 
                 316546.0, 

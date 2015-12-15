@@ -4,6 +4,7 @@
         "col1": {
             "label": "Total :: Number", 
             "series": [
+                12231.0, 
                 76599.0, 
                 193362.0, 
                 283447.0, 
@@ -44,6 +45,7 @@
         "col10": {
             "label": "Wives entitled because of children :: With at least 1 disabled child\u00a0b :: Total monthly benefits (thousands of dollars)", 
             "series": [
+                1.0, 
                 42.0, 
                 123.0, 
                 307.0, 
@@ -84,6 +86,7 @@
         "col11": {
             "label": "Husbands :: With at least 1 disabled child\u00a0b :: Number", 
             "series": [
+                16.0, 
                 211.0, 
                 510.0, 
                 524.0, 
@@ -124,6 +127,7 @@
         "col12": {
             "label": "Husbands :: With at least 1 disabled child\u00a0b :: Total monthly benefits (thousands of dollars)", 
             "series": [
+                1.0, 
                 7.0, 
                 17.0, 
                 22.0, 
@@ -164,6 +168,7 @@
         "col2": {
             "label": "Total :: Total monthly benefits (thousands of dollars)", 
             "series": [
+                415.0, 
                 2636.0, 
                 6761.0, 
                 12060.0, 
@@ -204,6 +209,7 @@
         "col3": {
             "label": "Wives entitled solely because of age :: Number", 
             "series": [
+                4845.0, 
                 21845.0, 
                 29352.0, 
                 41582.0, 
@@ -244,6 +250,7 @@
         "col4": {
             "label": "Wives entitled solely because of age :: Total monthly benefits (thousands of dollars)", 
             "series": [
+                192.0, 
                 841.0, 
                 1109.0, 
                 2063.0, 
@@ -284,6 +291,7 @@
         "col5": {
             "label": "Wives entitled because of children :: Subtotal :: Number", 
             "series": [
+                7370.0, 
                 54543.0, 
                 163500.0, 
                 241341.0, 
@@ -324,6 +332,7 @@
         "col6": {
             "label": "Wives entitled because of children :: Subtotal :: Total monthly benefits (thousands of dollars)", 
             "series": [
+                223.0, 
                 1788.0, 
                 5635.0, 
                 9975.0, 
@@ -364,6 +373,7 @@
         "col7": {
             "label": "Wives entitled because of children :: With at least 1 child under age 16\u00a0a :: Number", 
             "series": [
+                7345.0, 
                 53549.0, 
                 160922.0, 
                 235892.0, 
@@ -404,6 +414,7 @@
         "col8": {
             "label": "Wives entitled because of children :: With at least 1 child under age 16\u00a0a :: Total monthly benefits (thousands of dollars)", 
             "series": [
+                222.0, 
                 1746.0, 
                 5512.0, 
                 9667.0, 
@@ -444,6 +455,7 @@
         "col9": {
             "label": "Wives entitled because of children :: With at least 1 disabled child\u00a0b :: Number", 
             "series": [
+                25.0, 
                 994.0, 
                 2578.0, 
                 5449.0, 

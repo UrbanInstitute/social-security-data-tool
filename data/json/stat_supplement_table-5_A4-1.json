@@ -4,6 +4,7 @@
         "col1": {
             "label": "OASDI :: Total", 
             "series": [
+                4070.0, 
                 23801.0, 
                 126857.0, 
                 411613.0, 
@@ -45,6 +46,7 @@
         "col10": {
             "label": "Parents :: DI trust fund", 
             "series": [
+                11.0, 
                 81.0, 
                 535.0, 
                 1256.0, 
@@ -92,6 +94,7 @@
                 false, 
                 false, 
                 false, 
+                false, 
                 21777.0, 
                 24128.0, 
                 15354.0, 
@@ -127,6 +130,7 @@
         "col2": {
             "label": "OASDI :: OASI trust fund", 
             "series": [
+                4070.0, 
                 23801.0, 
                 126857.0, 
                 411613.0, 
@@ -171,6 +175,7 @@
                 false, 
                 false, 
                 false, 
+                false, 
                 10904.0, 
                 48000.0, 
                 120986.0, 
@@ -209,6 +214,7 @@
         "col4": {
             "label": "Retired workers :: DI trust fund", 
             "series": [
+                2539.0, 
                 12538.0, 
                 77678.0, 
                 276942.0, 
@@ -253,6 +259,7 @@
                 false, 
                 false, 
                 false, 
+                false, 
                 10904.0, 
                 40668.0, 
                 96599.0, 
@@ -291,6 +298,7 @@
         "col6": {
             "label": "Wives and husbands :: DI trust fund", 
             "series": [
+                361.0, 
                 2040.0, 
                 11995.0, 
                 39416.0, 
@@ -332,6 +340,7 @@
         "col7": {
             "label": "Children :: DI trust fund", 
             "series": [
+                668.0, 
                 4858.0, 
                 19366.0, 
                 46444.0, 
@@ -373,6 +382,7 @@
         "col8": {
             "label": "Widowed mothers and fathers :: DI trust fund", 
             "series": [
+                402.0, 
                 2391.0, 
                 5801.0, 
                 13403.0, 
@@ -414,6 +424,7 @@
         "col9": {
             "label": "Widow(er)s :: DI trust fund", 
             "series": [
+                90.0, 
                 1893.0, 
                 11481.0, 
                 34152.0, 

@@ -4,6 +4,7 @@
         "col1": {
             "label": "Retired-worker families :: Worker only :: All", 
             "series": [
+                23.5, 
                 42.2, 
                 59.1, 
                 69.9, 
@@ -48,6 +49,7 @@
             "series": [
                 false, 
                 false, 
+                false, 
                 91.9, 
                 100.7, 
                 136.3, 
@@ -88,6 +90,7 @@
         "col11": {
             "label": "Disabled-worker families :: Worker only :: Women", 
             "series": [
+                false, 
                 false, 
                 false, 
                 76.9, 
@@ -132,6 +135,7 @@
             "series": [
                 false, 
                 false, 
+                false, 
                 184.7, 
                 201.0, 
                 264.1, 
@@ -172,6 +176,7 @@
         "col13": {
             "label": "Disabled-worker families :: Worker, wife, b\nand\u2014 :: 2 or more children", 
             "series": [
+                false, 
                 false, 
                 false, 
                 192.2, 
@@ -216,6 +221,7 @@
             "series": [
                 false, 
                 false, 
+                false, 
                 135.5, 
                 145.9, 
                 199.2, 
@@ -256,6 +262,7 @@
         "col2": {
             "label": "Retired-worker families :: Worker only :: Men", 
             "series": [
+                24.5, 
                 44.6, 
                 64.6, 
                 79.9, 
@@ -298,6 +305,7 @@
         "col3": {
             "label": "Retired-worker families :: Worker only :: Women", 
             "series": [
+                19.5, 
                 34.8, 
                 49.8, 
                 59.6, 
@@ -340,6 +348,7 @@
         "col4": {
             "label": "Retired-worker families :: Worker and wife\u00a0a :: Women", 
             "series": [
+                38.5, 
                 71.7, 
                 103.5, 
                 123.9, 
@@ -382,6 +391,7 @@
         "col5": {
             "label": "Survivor families :: Non-disabled widow only :: Women", 
             "series": [
+                20.2, 
                 36.5, 
                 48.7, 
                 57.7, 
@@ -424,6 +434,7 @@
         "col6": {
             "label": "Survivor families :: Widowed mother or father\nand\u2014 :: 1 child", 
             "series": [
+                34.1, 
                 76.9, 
                 106.8, 
                 131.7, 
@@ -466,6 +477,7 @@
         "col7": {
             "label": "Survivor families :: Widowed mother or father\nand\u2014 :: 2 children", 
             "series": [
+                47.7, 
                 93.9, 
                 135.4, 
                 188.0, 
@@ -508,6 +520,7 @@
         "col8": {
             "label": "Survivor families :: Widowed mother or father\nand\u2014 :: 3 or more children", 
             "series": [
+                50.4, 
                 92.4, 
                 133.2, 
                 181.7, 
@@ -550,6 +563,7 @@
         "col9": {
             "label": "Disabled-worker families :: Worker only :: All", 
             "series": [
+                false, 
                 false, 
                 false, 
                 87.9, 

@@ -4,6 +4,7 @@
         "col1": {
             "label": "Number of children of\u2014 :: All workers", 
             "series": [
+                1502077.0, 
                 2000451.0, 
                 3092659.0, 
                 4122305.0, 
@@ -30,6 +31,7 @@
         "col2": {
             "label": "Number of children of\u2014 :: Retired workers", 
             "series": [
+                179697.0, 
                 268168.0, 
                 460781.0, 
                 545708.0, 
@@ -56,6 +58,7 @@
         "col3": {
             "label": "Number of children of\u2014 :: Deceased workers", 
             "series": [
+                1322380.0, 
                 1576802.0, 
                 2074263.0, 
                 2687997.0, 
@@ -82,6 +85,7 @@
         "col4": {
             "label": "Number of children of\u2014 :: Disabled workers", 
             "series": [
+                false, 
                 155481.0, 
                 557615.0, 
                 888600.0, 
@@ -108,6 +112,7 @@
         "col5": {
             "label": "Total monthly benefits for children of\u2014\n(thousands of dollars) :: All workers", 
             "series": [
+                57951.0, 
                 93276.0, 
                 159428.0, 
                 279845.0, 
@@ -134,6 +139,7 @@
         "col6": {
             "label": "Total monthly benefits for children of\u2014\n(thousands of dollars) :: Retired workers", 
             "series": [
+                3932.0, 
                 7576.0, 
                 14736.0, 
                 24473.0, 
@@ -160,6 +166,7 @@
         "col7": {
             "label": "Total monthly benefits for children of\u2014\n(thousands of dollars) :: Deceased workers", 
             "series": [
+                54019.0, 
                 81003.0, 
                 127067.0, 
                 221041.0, 
@@ -186,6 +193,7 @@
         "col8": {
             "label": "Total monthly benefits for children of\u2014\n(thousands of dollars) :: Disabled workers", 
             "series": [
+                false, 
                 4697.0, 
                 17627.0, 
                 34330.0, 

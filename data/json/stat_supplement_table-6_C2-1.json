@@ -4,6 +4,7 @@
         "col1": {
             "label": "Number :: ", 
             "series": [
+                30426.0, 
                 24379.0, 
                 31264.0, 
                 39339.0, 
@@ -50,6 +51,7 @@
         "col10": {
             "label": "Percentage distribution, by age :: 60\u201361", 
             "series": [
+                19.8, 
                 17.8, 
                 17.6, 
                 12.4, 
@@ -96,6 +98,7 @@
         "col11": {
             "label": "Percentage distribution, by age :: 62\u201364", 
             "series": [
+                15.3, 
                 15.2, 
                 14.2, 
                 10.1, 
@@ -142,6 +145,7 @@
         "col12": {
             "label": "Percentage distribution, by age :: 65\u00a0a", 
             "series": [
+                0.5, 
                 1.2, 
                 1.1, 
                 0.8, 
@@ -188,6 +192,7 @@
         "col2": {
             "label": "Average age :: ", 
             "series": [
+                57.4, 
                 57.2, 
                 57.0, 
                 52.5, 
@@ -273,6 +278,7 @@
                 100.0, 
                 100.0, 
                 100.0, 
+                100.0, 
                 100.0
             ], 
             "type": "percent"
@@ -280,6 +286,7 @@
         "col4": {
             "label": "Percentage distribution, by age :: Under 30", 
             "series": [
+                false, 
                 false, 
                 false, 
                 0.7, 
@@ -328,6 +335,7 @@
             "series": [
                 false, 
                 false, 
+                false, 
                 8.1, 
                 6.5, 
                 6.3, 
@@ -372,6 +380,7 @@
         "col6": {
             "label": "Percentage distribution, by age :: 40\u201344", 
             "series": [
+                false, 
                 false, 
                 false, 
                 8.0, 
@@ -420,6 +429,7 @@
             "series": [
                 false, 
                 false, 
+                false, 
                 13.3, 
                 11.7, 
                 11.0, 
@@ -464,6 +474,7 @@
         "col8": {
             "label": "Percentage distribution, by age :: 50\u201354", 
             "series": [
+                25.5, 
                 28.6, 
                 30.2, 
                 21.9, 
@@ -510,6 +521,7 @@
         "col9": {
             "label": "Percentage distribution, by age :: 55\u201359", 
             "series": [
+                38.9, 
                 37.2, 
                 36.9, 
                 24.6, 

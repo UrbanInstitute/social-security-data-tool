@@ -4,6 +4,7 @@
         "col1": {
             "label": "Number of children of\u2014 :: All workers", 
             "series": [
+                205677.0, 
                 537170.0, 
                 733267.0, 
                 89278.0, 
@@ -28,6 +29,7 @@
         "col2": {
             "label": "Number of children of\u2014 :: Retired workers", 
             "series": [
+                34152.0, 
                 89994.0, 
                 143366.0, 
                 12208.0, 
@@ -52,6 +54,7 @@
         "col3": {
             "label": "Number of children of\u2014 :: Deceased workers", 
             "series": [
+                155088.0, 
                 371982.0, 
                 449744.0, 
                 52938.0, 
@@ -76,6 +79,7 @@
         "col4": {
             "label": "Number of children of\u2014 :: Disabled workers", 
             "series": [
+                16437.0, 
                 75194.0, 
                 140157.0, 
                 24132.0, 
@@ -100,6 +104,7 @@
         "col5": {
             "label": "Total monthly benefits for children of\u2014\n(thousands of dollars) :: All workers", 
             "series": [
+                13725.0, 
                 44672.0, 
                 167107.0, 
                 34641.0, 
@@ -124,6 +129,7 @@
         "col6": {
             "label": "Total monthly benefits for children of\u2014\n(thousands of dollars) :: Retired workers", 
             "series": [
+                1597.0, 
                 5351.0, 
                 26375.0, 
                 3673.0, 
@@ -148,6 +154,7 @@
         "col7": {
             "label": "Total monthly benefits for children of\u2014\n(thousands of dollars) :: Deceased workers", 
             "series": [
+                11318.0, 
                 35252.0, 
                 119368.0, 
                 24935.0, 
@@ -172,6 +179,7 @@
         "col8": {
             "label": "Total monthly benefits for children of\u2014\n(thousands of dollars) :: Disabled workers", 
             "series": [
+                811.0, 
                 4069.0, 
                 21363.0, 
                 6033.0, 

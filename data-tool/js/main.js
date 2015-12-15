@@ -142,6 +142,10 @@ function drawTable(input){
 	d3.selectAll("#testTable th")
 		.on("click", function(){
 			var th = d3.select(this)
+			var colspan = th.attr("colspan")
+			if(colspan > 1 || th.classed("col0")){
+				return false;
+			}
 			var selected = th.classed("selected")
 			var re = /col\d*/g
 			var series = th.attr("class").match(re)
@@ -303,7 +307,7 @@ function drawTable(input){
 		.append("div")
 		.attr("class", "footnotes")
 	fn.append("div")
-	.html("<div class = \"tableSource\">Placeholder source information</div>")
+	.html("<div class = \"tableSource\"><a href = \"https://www.ssa.gov/policy/docs/statcomps/supplement/\">Social Security Administration, Annual Statistical Supplement, 2014</a></div>")
 	var tWidth = d3.select("thead").node().getBoundingClientRect().width;
 	for(var i = 0; i<input.footnotes.length; i++){
 		var note = input.footnotes[i]
@@ -492,9 +496,9 @@ function checkUnitCompatibility(unit, input, charts){
 				d3.select("#interactionInstructions .warning")
 					.transition()
 					.duration(100)
-					.style("color","#ff0000")
+					.style("color","#ec008b")
 					.transition()
-					.delay(1000)
+					.delay(3000)
 					.duration(500)
 					.style("color","#000000	")
 				return false
@@ -515,10 +519,10 @@ function generateTimeSeries(year, column){
 		}
 		else if(typeof(year[i]) == "number"){
 //simple case, like "2014"
-			series.push([Date.UTC(year[i], 0, 1), y]);
+			series.push([Date.UTC(year[i], 0, 2), y]);
 		}
 		else if(year[i].indexOf("Before 1975") != -1){
-			series.push([Date.UTC(1957, 0, 1), y]);
+			series.push([Date.UTC(1957, 0, 2), y]);
 		}
 //cases like 1950 (Jan.–Aug.) or 1995 (Dec.)
 		else if(year[i].indexOf("(") != -1){
@@ -555,7 +559,7 @@ function getDate(y1, y2, parenthetical){
 				break;
 			}
 		}
-		return Date.UTC(parseInt(year),m,1)
+		return Date.UTC(parseInt(year),m,2)
 
 	}else{
 		for (var i = 0; i< MONTHNAMES.length; i++){
@@ -567,21 +571,21 @@ function getDate(y1, y2, parenthetical){
 		if(!y2){
 //cases like January 2005	
 			mYear = y1.replace(/[A-Za-z ]/g,"")
-			return Date.UTC(parseInt(mYear),m,1)
+			return Date.UTC(parseInt(mYear),m,2)
 		}
 		else if(typeof(m)== "number" && !isNaN(m)){
 			year = y1.replace(/[A-Za-z ]/g,"")
 			if(year == ""){
 //cases like January–June 1999	
 				year2 = y2.replace(/[A-Za-z ]/g,"")
-				return Date.UTC(parseInt(year2),m,1)
+				return Date.UTC(parseInt(year2),m,2)
 			}else{
 //cases like July 1968–1973
-				return Date.UTC(parseInt(year),m,1)
+				return Date.UTC(parseInt(year),m,2)
 			}
 		}else{
 //cases like 1968-June 1999
-			return Date.UTC(parseInt(y1), 0, 1)
+			return Date.UTC(parseInt(y1), 0, 2)
 		}
 	}
 }
@@ -659,7 +663,7 @@ function drawBar(input, col){
             },
             credits: {
                 enabled: true,
-                text: "Placeholder source information",
+                text: "<a href = \"https://www.ssa.gov/policy/docs/statcomps/supplement/\">Social Security Administration, Annual Statistical Supplement, 2014</a>",
                 href: "https://www.ssa.gov/policy/docs/statcomps/supplement/"
             },
             legend: {
@@ -752,7 +756,7 @@ function drawMap(input, col){
         },
         credits: {
             enabled: true,
-            text: "Placeholder source information",
+            text: "<a href = \"https://www.ssa.gov/policy/docs/statcomps/supplement/\">Social Security Administration, Annual Statistical Supplement, 2014</a>",
             href: "https://www.ssa.gov/policy/docs/statcomps/supplement/"
         },
         series : [{
@@ -864,7 +868,7 @@ function drawLineChart(input){
             },
             credits: {
                 enabled: true,
-                text: "Placeholder source information",
+                text: "<a href = \"https://www.ssa.gov/policy/docs/statcomps/supplement/\">Social Security Administration, Annual Statistical Supplement, 2014</a>",
                 href: "https://www.ssa.gov/policy/docs/statcomps/supplement/"
             },
             legend: {
@@ -899,19 +903,19 @@ function generateBarFromYear(years, column, year){
 			return null;
 		}
 		else if(typeof(y) == "number" || y.search("-") == -1){
-			series.push([Date.UTC(y, 0, 1), column[i]]);
+			series.push([Date.UTC(y, 0, 2), column[i]]);
 		}else{
 			// console.log(years[i])
 			var range = y.split("-");
 			var start = parseInt(range[0]);
 			var end = parseInt(range[1]);
 			for(var c=start; c<=end; c++){
-				series.push([Date.UTC(c, 0, 1), column[i]]);	
+				series.push([Date.UTC(c, 0, 2), column[i]]);	
 			}
 		}
 	}
 	for(var j = 0; j < series.length; j++){
-		if(series[j][0] == Date.UTC(parseInt(year), 0, 1)){
+		if(series[j][0] == Date.UTC(parseInt(year), 0, 2)){
 			return series[j][1]
 		}
 	}
@@ -987,7 +991,7 @@ function drawSingleYearBarChart(input){
             },
             credits: {
                 enabled: true,
-                text: "Placeholder source information",
+                text: "<a href = \"https://www.ssa.gov/policy/docs/statcomps/supplement/\">Social Security Administration, Annual Statistical Supplement, 2014</a>",
                 href: "https://www.ssa.gov/policy/docs/statcomps/supplement/"
             },
             legend: {
@@ -1149,8 +1153,8 @@ function changeYears(start, end){
 
 	var lineChart = $('#lineChart').highcharts();
     lineChart.xAxis[0].setExtremes(
-            Date.UTC(parseInt(start), 0, 1),
-            Date.UTC(parseInt(end), 0, 1)
+            Date.UTC(parseInt(start), 0, 2),
+            Date.UTC(parseInt(end), 0, 2)
     );
     var singleYearBarChart = $('#singleYearBarChart').highcharts();
 		$.each(singleYearBarChart.series[0].data, function(k,v){

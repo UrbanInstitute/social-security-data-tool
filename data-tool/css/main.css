@@ -104,9 +104,12 @@ body{
 thead{
     z-index: 2;
     position: fixed;
+    border-right: 1px solid #cbcbcb;
 }
 tbody{
     position: absolute;
+    border-bottom: 1px solid #cbcbcb;
+    border-right: 1px solid #cbcbcb;
 }
 
 #left_arrow, #right_arrow{
@@ -452,8 +455,13 @@ th:not(.selected){
 /****************************************/
 /************ FOOTNOTES *****************/
 /****************************************/
+a{
+    color: #1696d2 !important;
+    text-decoration: none !important;
+}
 .tableSource{
-    color: #1696d2;
+    color: #1696d2 !important;
+    text-decoration: none !important;
     margin-left: 75px;
     text-transform: uppercase;
     font-style: italic;

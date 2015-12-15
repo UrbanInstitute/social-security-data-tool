@@ -98,7 +98,10 @@ def parseHeader(output, headRows, lastRow, sheet, sheetType, startRow=False, mul
 						elif (c != 1 and sheet.name != "5.H3" and sheet.name != "5.H4"):
 							getData(data, fixRows, r, c, headRows, lastRow, sheet, sheetType, startRow, multi)
 					else:
-						getData(data, fixRows, r, c, headRows, lastRow, sheet, sheetType, startRow, multi)
+						if multi:
+							getData(data, fixRows, r, c, headRows, lastRow, sheet, sheetType, startRow-1, multi)
+						else:
+							getData(data, fixRows, r, c, headRows, lastRow, sheet, sheetType, startRow, multi)
 		headerString += "</tr>"
 	headerString += "</thead>"
 	bodyString = getTbody(sheet, sheetType, headRows, lastRow, startRow)
@@ -299,7 +302,8 @@ def getXSeries(rowNum, colNum, headR, lastRow, sheet, sheetType, startRow):
 		for i in range(headRows, lastRow):
 			val = sheet.cell_value(rowx=i, colx=colNum)
 			val = getYear(val, monthly)
-			series.append(val)
+			if val:
+				series.append(val)
 		return series
 def getBarSeries(rowNum, colNum, headR, lastRow, sheet, sheetType, startRow):
 	if(startRow):

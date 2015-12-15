@@ -4,6 +4,7 @@
         "col1": {
             "label": "Number (thousands) :: ", 
             "series": [
+                15.0, 
                 20.0, 
                 123.0, 
                 281.0, 
@@ -50,6 +51,7 @@
                 false, 
                 false, 
                 false, 
+                false, 
                 1.0, 
                 3.0, 
                 5.5, 
@@ -90,6 +92,7 @@
         "col11": {
             "label": "Percentage distribution by age\u00a0b :: FRA to 69\u00a0g :: Disability conversions\u00a0f", 
             "series": [
+                62.3, 
                 45.0, 
                 53.6, 
                 38.7, 
@@ -133,6 +136,7 @@
         "col12": {
             "label": "Percentage distribution by age\u00a0b :: 70\u201374 :: Disability conversions\u00a0f", 
             "series": [
+                12.5, 
                 23.6, 
                 19.6, 
                 18.1, 
@@ -176,6 +180,7 @@
         "col13": {
             "label": "Percentage distribution by age\u00a0b :: 75 or\u00a0older :: Disability conversions\u00a0f", 
             "series": [
+                4.3, 
                 7.3, 
                 4.4, 
                 6.6, 
@@ -219,6 +224,7 @@
         "col2": {
             "label": "Average age :: ", 
             "series": [
+                67.4, 
                 68.5, 
                 68.0, 
                 67.8, 
@@ -298,6 +304,7 @@
                 100.0, 
                 100.0, 
                 100.0, 
+                100.0, 
                 100.0
             ], 
             "type": "percent"
@@ -305,6 +312,7 @@
         "col4": {
             "label": "Percentage distribution by age\u00a0b :: 62.0 :: ", 
             "series": [
+                false, 
                 false, 
                 false, 
                 false, 
@@ -351,6 +359,7 @@
                 false, 
                 false, 
                 false, 
+                false, 
                 13.3, 
                 12.1, 
                 14.3, 
@@ -391,6 +400,7 @@
         "col6": {
             "label": "Percentage distribution by age\u00a0b :: 64.0 :: ", 
             "series": [
+                false, 
                 false, 
                 false, 
                 false, 
@@ -460,6 +470,7 @@
                 false, 
                 false, 
                 false, 
+                false, 
                 3.1, 
                 4.5, 
                 6.2, 
@@ -477,6 +488,7 @@
         "col8": {
             "label": "Percentage distribution by age\u00a0b :: FRA\u00a0d :: Total", 
             "series": [
+                20.8, 
                 24.0, 
                 22.3, 
                 36.6, 
@@ -520,6 +532,7 @@
         "col9": {
             "label": "Percentage distribution by age\u00a0b :: FRA\u00a0d :: Newly entitled\u00a0e", 
             "series": [
+                20.8, 
                 24.0, 
                 22.3, 
                 36.6, 

@@ -36,7 +36,8 @@
             x,
 
             // Options
-            dateFormat = options.dateFormat || '%Y-%m-%d %H:%M:%S',
+            dateFormat = options.dateFormat || '%m/%Y',
+            shortFormat = '%Y',
             columnHeaderFormatter = options.columnHeaderFormatter || function (series, key, keyLength) {
                 return series.name + (keyLength > 1 ? ' ('+ key + ')' : '');
             };
@@ -104,7 +105,7 @@
         });
 
         // Add header row
-        dataRows = [[xAxis.isDatetimeAxis ? 'DateTime' : 'Category'].concat(names)];
+        dataRows = [[xAxis.isDatetimeAxis ? 'year' : 'category'].concat(names)];
 
         // Transform the rows to CSV
         each(rowArr, function (row) {
@@ -112,7 +113,11 @@
             var category = row.name;
             if (!category) {
                 if (xAxis.isDatetimeAxis) {
-                    category = Highcharts.dateFormat(dateFormat, row.x);
+                    var d = new Date(row.x),
+                        m = d.getMonth();
+                    if(m == 0){
+                        category = Highcharts.dateFormat(shortFormat, row.x);    
+                    }else{ category = Highcharts.dateFormat(dateFormat, row.x); }
                 } else if (xAxis.categories) {
                     category = pick(xAxis.names[row.x], xAxis.categories[row.x], row.x)
                 } else {

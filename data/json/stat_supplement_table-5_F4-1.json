@@ -4,6 +4,7 @@
         "col1": {
             "label": "Number of children of\u2014 :: All workers", 
             "series": [
+                54648.0, 
                 699703.0, 
                 1896397.0, 
                 2688592.0, 
@@ -31,6 +32,7 @@
         "col2": {
             "label": "Number of children of\u2014 :: Retired workers", 
             "series": [
+                6410.0, 
                 46241.0, 
                 214343.0, 
                 339507.0, 
@@ -58,6 +60,7 @@
         "col3": {
             "label": "Number of children of\u2014 :: Deceased workers", 
             "series": [
+                48238.0, 
                 653462.0, 
                 1529535.0, 
                 1816888.0, 
@@ -86,6 +89,7 @@
             "label": "Number of children of\u2014 :: Disabled workers", 
             "series": [
                 false, 
+                false, 
                 152519.0, 
                 532197.0, 
                 799111.0, 
@@ -112,6 +116,7 @@
         "col5": {
             "label": "Total monthly benefits for children of\u2014\n(thousands of dollars) :: All workers", 
             "series": [
+                668.0, 
                 19366.0, 
                 88682.0, 
                 135432.0, 
@@ -139,6 +144,7 @@
         "col6": {
             "label": "Total monthly benefits for children of\u2014\n(thousands of dollars) :: Retired workers", 
             "series": [
+                62.0, 
                 788.0, 
                 5654.0, 
                 9598.0, 
@@ -166,6 +172,7 @@
         "col7": {
             "label": "Total monthly benefits for children of\u2014\n(thousands of dollars) :: Deceased workers", 
             "series": [
+                606.0, 
                 18578.0, 
                 78446.0, 
                 109392.0, 
@@ -193,6 +200,7 @@
         "col8": {
             "label": "Total monthly benefits for children of\u2014\n(thousands of dollars) :: Disabled workers", 
             "series": [
+                false, 
                 false, 
                 4582.0, 
                 16442.0, 

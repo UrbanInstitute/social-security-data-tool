@@ -4,6 +4,7 @@
         "col1": {
             "label": "Total\u00a0a :: ", 
             "series": [
+                6619.0, 
                 11374.0, 
                 14010.0, 
                 16350.0, 
@@ -22,6 +23,7 @@
         "col2": {
             "label": "Entitled as worker\u00a0b :: Subtotal :: ", 
             "series": [
+                2866.0, 
                 5753.0, 
                 7586.0, 
                 9304.0, 
@@ -40,6 +42,7 @@
         "col3": {
             "label": "Entitled as worker\u00a0b :: Worker only :: ", 
             "series": [
+                2563.0, 
                 4786.0, 
                 5926.0, 
                 6710.0, 
@@ -58,6 +61,7 @@
         "col4": {
             "label": "Entitled as worker\u00a0b :: Dually entitled :: Subtotal", 
             "series": [
+                303.0, 
                 967.0, 
                 1660.0, 
                 2594.0, 
@@ -76,6 +80,7 @@
         "col5": {
             "label": "Entitled as worker\u00a0b :: Dually entitled :: Wife's benefit", 
             "series": [
+                159.0, 
                 388.0, 
                 617.0, 
                 1016.0, 
@@ -94,6 +99,7 @@
         "col6": {
             "label": "Entitled as worker\u00a0b :: Dually entitled :: Widow's or parent's benefit\u00a0c", 
             "series": [
+                141.0, 
                 574.0, 
                 1039.0, 
                 1575.0, 
@@ -112,6 +118,7 @@
         "col7": {
             "label": "Entitled as wife, widow, or parent only :: Dually entitled :: Subtotal", 
             "series": [
+                3753.0, 
                 5621.0, 
                 6424.0, 
                 7046.0, 
@@ -130,6 +137,7 @@
         "col8": {
             "label": "Entitled as wife, widow, or parent only :: Dually entitled :: Wife's benefit", 
             "series": [
+                2174.0, 
                 2546.0, 
                 2745.0, 
                 2884.0, 
@@ -148,6 +156,7 @@
         "col9": {
             "label": "Entitled as wife, widow, or parent only :: Dually entitled :: Widow's or parent's benefit\u00a0c", 
             "series": [
+                1546.0, 
                 3048.0, 
                 3659.0, 
                 4148.0, 
