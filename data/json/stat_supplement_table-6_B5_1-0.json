@@ -2,7 +2,7 @@
     "category": "timeSeries", 
     "data": {
         "col1": {
-            "label": "Number (thousands) :: ", 
+            "label": "Number (thousands)", 
             "series": [
                 902.0, 
                 964.0, 
@@ -68,7 +68,7 @@
             "type": "percent"
         }, 
         "col12": {
-            "label": "Percentage distribution by age at month of entitlement :: Disability conversions\u00a0b :: After FRA", 
+            "label": "Percentage distribution by age at month of entitlement :: Disability conversions\u00a0b", 
             "series": [
                 12.7, 
                 12.3, 
@@ -90,7 +90,7 @@
             "type": "percent"
         }, 
         "col13": {
-            "label": "Percentage distribution by age at month of entitlement :: 67\u201369 :: After FRA", 
+            "label": "Percentage distribution by age at month of entitlement :: 67\u201369", 
             "series": [
                 2.1, 
                 2.7, 
@@ -112,7 +112,7 @@
             "type": "percent"
         }, 
         "col14": {
-            "label": "Percentage distribution by age at month of entitlement :: 70 or\u00a0older :: After FRA", 
+            "label": "Percentage distribution by age at month of entitlement :: 70 or\u00a0older", 
             "series": [
                 1.1, 
                 1.2, 
@@ -134,7 +134,7 @@
             "type": "percent"
         }, 
         "col2": {
-            "label": "Average age :: ", 
+            "label": "Average age", 
             "series": [
                 63.4, 
                 63.5, 
@@ -156,7 +156,7 @@
             "type": "number"
         }, 
         "col3": {
-            "label": "Percentage distribution by age at month of entitlement :: Total, all ages :: ", 
+            "label": "Percentage distribution by age at month of entitlement :: Total, all ages", 
             "series": [
                 100.0, 
                 100.0, 
@@ -178,7 +178,7 @@
             "type": "percent"
         }, 
         "col4": {
-            "label": "Percentage distribution by age at month of entitlement :: 62.0 :: ", 
+            "label": "Percentage distribution by age at month of entitlement :: 62.0", 
             "series": [
                 50.8, 
                 49.0, 
@@ -200,7 +200,7 @@
             "type": "percent"
         }, 
         "col5": {
-            "label": "Percentage distribution by age at month of entitlement :: 63.0 :: ", 
+            "label": "Percentage distribution by age at month of entitlement :: 63.0", 
             "series": [
                 6.7, 
                 6.8, 
@@ -222,7 +222,7 @@
             "type": "percent"
         }, 
         "col6": {
-            "label": "Percentage distribution by age at month of entitlement :: 64.0 :: ", 
+            "label": "Percentage distribution by age at month of entitlement :: 64.0", 
             "series": [
                 10.6, 
                 10.8, 

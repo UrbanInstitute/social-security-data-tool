@@ -2,7 +2,7 @@
     "category": "timeSeries", 
     "data": {
         "col1": {
-            "label": "Total, all benefits\u00a0a :: ", 
+            "label": "Total, all benefits\u00a0a", 
             "series": [
                 174286099.0, 
                 246534.0, 
@@ -75,7 +75,7 @@
             "type": "number"
         }, 
         "col10": {
-            "label": "Widow(er)s :: Students", 
+            "label": "Widow(er)s", 
             "series": [
                 16406958.0, 
                 5680.0, 
@@ -148,7 +148,7 @@
             "type": "number"
         }, 
         "col11": {
-            "label": "Parents :: Students", 
+            "label": "Parents", 
             "series": [
                 109244.0, 
                 1044.0, 
@@ -221,7 +221,7 @@
             "type": "number"
         }, 
         "col2": {
-            "label": "Retired workers :: ", 
+            "label": "Retired workers", 
             "series": [
                 63665893.0, 
                 84737.0, 
@@ -294,7 +294,7 @@
             "type": "number"
         }, 
         "col3": {
-            "label": "Disabled workers :: ", 
+            "label": "Disabled workers", 
             "series": [
                 20663968.0, 
                 false, 
@@ -367,7 +367,7 @@
             "type": "number"
         }, 
         "col4": {
-            "label": "Wives and husbands :: ", 
+            "label": "Wives and husbands", 
             "series": [
                 19902823.0, 
                 40811.0, 
@@ -732,7 +732,7 @@
             "type": "number"
         }, 
         "col9": {
-            "label": "Widowed mothers and fathers :: Students", 
+            "label": "Widowed mothers and fathers", 
             "series": [
                 4920684.0, 
                 40868.0, 

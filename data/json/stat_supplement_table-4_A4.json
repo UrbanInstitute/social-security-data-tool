@@ -2,7 +2,7 @@
     "category": "timeSeries", 
     "data": {
         "col1": {
-            "label": "Total benefits :: ", 
+            "label": "Total benefits", 
             "series": [
                 1.0, 
                 10.0, 
@@ -471,7 +471,7 @@
             "type": "dollarMillion"
         }, 
         "col8": {
-            "label": "Personal income\u00a0e :: Disability Insurance", 
+            "label": "Personal income\u00a0e", 
             "series": [
                 74700.0, 
                 69100.0, 
@@ -538,7 +538,7 @@
             "type": "dollarMillion"
         }, 
         "col9": {
-            "label": "Total benefits as a percentage of personal income :: Disability Insurance", 
+            "label": "Total benefits as a percentage of personal income", 
             "series": [
                 false, 
                 false, 

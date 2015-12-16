@@ -2,7 +2,7 @@
     "category": "timeSeries", 
     "data": {
         "col1": {
-            "label": "Widowed mothers and fathers :: ", 
+            "label": "Widowed mothers and fathers", 
             "series": [
                 19.61, 
                 19.5, 
@@ -306,7 +306,7 @@
             "type": "dollar"
         }, 
         "col4": {
-            "label": "Parents :: Widowers", 
+            "label": "Parents", 
             "series": [
                 13.09, 
                 12.97, 

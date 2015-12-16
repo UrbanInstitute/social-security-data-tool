@@ -217,7 +217,7 @@
             "type": "numberThousand"
         }, 
         "col14": {
-            "label": "Disabled-worker families :: Worker and spouse :: 2 or more children", 
+            "label": "Disabled-worker families :: Worker and spouse", 
             "series": [
                 false, 
                 false, 
@@ -346,7 +346,7 @@
             "type": "numberThousand"
         }, 
         "col4": {
-            "label": "Retired-worker families :: Worker and wife\u00a0a :: Women", 
+            "label": "Retired-worker families :: Worker and wife\u00a0a", 
             "series": [
                 181.0, 
                 498.0, 
@@ -389,7 +389,7 @@
             "type": "numberThousand"
         }, 
         "col5": {
-            "label": "Survivor families :: Non-disabled widow only :: Women", 
+            "label": "Survivor families :: Non-disabled widow only", 
             "series": [
                 95.0, 
                 314.0, 

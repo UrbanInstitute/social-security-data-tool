@@ -2,7 +2,7 @@
     "category": "timeSeries", 
     "data": {
         "col1": {
-            "label": "Total :: ", 
+            "label": "Total", 
             "series": [
                 1.0, 
                 10.0, 
@@ -73,7 +73,7 @@
             "type": "dollarMillion"
         }, 
         "col10": {
-            "label": "Lump-sum death payments :: Parents", 
+            "label": "Lump-sum death payments", 
             "series": [
                 1.0, 
                 10.0, 
@@ -641,7 +641,7 @@
             "type": "dollarMillion"
         }, 
         "col9": {
-            "label": "Special\nage-72 beneficiaries :: Parents", 
+            "label": "Special\nage-72 beneficiaries", 
             "series": [
                 false, 
                 false, 

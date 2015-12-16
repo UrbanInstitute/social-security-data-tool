@@ -245,7 +245,7 @@
             "type": "numberMillion"
         }, 
         "col4": {
-            "label": "Insured in event of disability :: Not permanently insured", 
+            "label": "Insured in event of disability", 
             "series": [
                 false, 
                 false, 

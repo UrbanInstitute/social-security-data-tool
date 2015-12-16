@@ -2,7 +2,7 @@
     "category": "map", 
     "data": {
         "col1": {
-            "label": "State or area :: ", 
+            "label": "", 
             "series": [
                 {
                     "hc-key": "us-al", 
@@ -1502,7 +1502,7 @@
             "type": "dollar"
         }, 
         "col2": {
-            "label": "State or area :: ", 
+            "label": "", 
             "series": [
                 {
                     "hc-key": "us-al", 

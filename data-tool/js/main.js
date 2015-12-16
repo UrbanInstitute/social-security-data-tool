@@ -9,7 +9,20 @@ function getQueryVariable(variable) {
     }
 }
 
+function getHashParams() {
 
+    var hashParams = {};
+    var e,
+        a = /\+/g,  // Regex for replacing addition symbol with a space
+        r = /([^&;=]+)=?([^&;]*)/g,
+        d = function (s) { return decodeURIComponent(s.replace(a, " ")); },
+        q = window.location.hash.substring(1);
+
+    while (e = r.exec(q))
+       hashParams[d(e[1])] = d(e[2]);
+
+    return hashParams;
+}
 
 
 var yearBarCache;
@@ -25,6 +38,15 @@ var exportParams = {tableID:"",columns:[],chartType:""}
 
 
 function init(){
+	// console.log(getHashParams())
+	var hashID = window.location.hash.substring(1)
+	if(hashID != ""){
+		hashID = hashID.replace(/\./g,"_")
+		tableIndex = sheets.indexOf(hashID)
+		if(tableIndex == -1){
+			tableIndex = 0;
+		}
+	}
 	// $.get( getDocURL("2A3"), function(resp) {
 	setLayout();
 
@@ -71,6 +93,11 @@ function init(){
 function newTable(index){
 	tableIndex = index;
 	var id = sheets[index]
+	// console.log(id)
+	if(id){
+		var hash = "#" + id.replace(/\_/g,".")
+		window.history.pushState('index.html', 'Title', hash);
+	}
 	exportParams.tableID = id;
 	$.getJSON( getJSONPath(id), function(resp){
 		  // var data = resp.results[0];

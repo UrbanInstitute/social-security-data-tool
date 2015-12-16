@@ -459,20 +459,66 @@ def getMapSeries(rowN, colNum, lastRow, sheet, sheetType, startRow):
 	return series
 
 def getLabel(rows, colNum):
-	label = ""
-	for r in range(0, len(rows)):
-		row = rows[r]
+	# label = ""
+	# c = colNum
+	# for r in range(0, len(rows)):
+	# 	row = rows[r]
+	# 	while((row[c].ctype == 0 or row[c].ctype == 6) and c > 0):
+	# 		c -= 1
+
+	# 	if(row[c].ctype != 0 and row[c].ctype != 6):
+	# 		val = row[c].value
+	# 		if(isinstance(val, float)):
+	# 			val = str(val)
+	# 		label += val
+	# 		sep = "" if (r==len(rows)-1) else " :: "
+	# 		label += sep
+	# return label
+	# print rows[len(rows)-1][colNum]
+	# return rows[len(rows)-1][colNum].value
+	label = []
+	tmp = copy.copy(rows)
+	tmp.reverse()
+	flag = 0
+	for i in range(0, len(tmp)):
+		if flag != 0:
+			i -= flag
+		row = tmp[i]
+		if(row[colNum].ctype != 0 and row[colNum].ctype != 6):
+			flag = 0
+			val = row[colNum].value
+			if(isinstance(val, float)):
+				val = str(val)
+			if val != "":
+				label.append((val,colNum))
+			del tmp[i]
+			break
+		else:
+			del tmp[i]
+			flag += 1
+	# print tmp
+	for r in range(0, len(tmp)):
+		row = tmp[r]
 		c = colNum
 		while((row[c].ctype == 0 or row[c].ctype == 6) and c > 0):
 			c -= 1
-		if(row[c].ctype != 0 and row[c].ctype != 6):
-			val = row[c].value
-			if(isinstance(val, float)):
-				val = str(val)
-			label += val
-			sep = "" if (r==len(rows)-1) else " :: "
-			label += sep
-	return label
+
+		val = row[c].value
+		if(isinstance(val, float)):
+			val = str(val)
+		if val != "":
+			label.append((val,c))
+
+	label.reverse()
+	ret = ""
+	for l in range(0, len(label)):
+		if l != 0:
+			if label[l-1][1] > label[l][1]:
+				continue
+		ret += label[l][0]
+		if(l != len(label)-1 and label[l][0] != ""):
+			ret += " :: "
+	return ret
 
 def getType(label):
 	labels = ["dollar","percent"]

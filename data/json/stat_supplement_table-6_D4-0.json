@@ -2,7 +2,7 @@
     "category": "timeSeries", 
     "data": {
         "col1": {
-            "label": "All children :: ", 
+            "label": "All children", 
             "series": [
                 313163.0, 
                 415719.0, 

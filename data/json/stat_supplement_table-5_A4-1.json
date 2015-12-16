@@ -44,7 +44,7 @@
             "type": "dollarThousand"
         }, 
         "col10": {
-            "label": "Parents :: DI trust fund", 
+            "label": "Parents", 
             "series": [
                 11.0, 
                 81.0, 
@@ -86,7 +86,7 @@
             "type": "dollarThousand"
         }, 
         "col11": {
-            "label": "Special\nage-72 beneficiaries :: DI trust fund", 
+            "label": "Special\nage-72 beneficiaries", 
             "series": [
                 false, 
                 false, 
@@ -212,7 +212,7 @@
             "type": "dollarThousand"
         }, 
         "col4": {
-            "label": "Retired workers :: DI trust fund", 
+            "label": "Retired workers", 
             "series": [
                 2539.0, 
                 12538.0, 
@@ -254,7 +254,7 @@
             "type": "dollarThousand"
         }, 
         "col5": {
-            "label": "Disabled workers :: DI trust fund", 
+            "label": "Disabled workers", 
             "series": [
                 false, 
                 false, 
@@ -296,7 +296,7 @@
             "type": "dollarThousand"
         }, 
         "col6": {
-            "label": "Wives and husbands :: DI trust fund", 
+            "label": "Wives and husbands", 
             "series": [
                 361.0, 
                 2040.0, 
@@ -338,7 +338,7 @@
             "type": "dollarThousand"
         }, 
         "col7": {
-            "label": "Children :: DI trust fund", 
+            "label": "Children", 
             "series": [
                 668.0, 
                 4858.0, 
@@ -380,7 +380,7 @@
             "type": "dollarThousand"
         }, 
         "col8": {
-            "label": "Widowed mothers and fathers :: DI trust fund", 
+            "label": "Widowed mothers and fathers", 
             "series": [
                 402.0, 
                 2391.0, 
@@ -422,7 +422,7 @@
             "type": "dollarThousand"
         }, 
         "col9": {
-            "label": "Widow(er)s :: DI trust fund", 
+            "label": "Widow(er)s", 
             "series": [
                 90.0, 
                 1893.0, 

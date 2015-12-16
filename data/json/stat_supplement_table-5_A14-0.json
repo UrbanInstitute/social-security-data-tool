@@ -2,7 +2,7 @@
     "category": "timeSeries", 
     "data": {
         "col1": {
-            "label": "Total\u00a0a :: ", 
+            "label": "Total\u00a0a", 
             "series": [
                 6619.0, 
                 11374.0, 
@@ -21,7 +21,7 @@
             "type": "numberThousand"
         }, 
         "col2": {
-            "label": "Entitled as worker\u00a0b :: Subtotal :: ", 
+            "label": "Entitled as worker\u00a0b :: Subtotal", 
             "series": [
                 2866.0, 
                 5753.0, 
@@ -40,7 +40,7 @@
             "type": "numberThousand"
         }, 
         "col3": {
-            "label": "Entitled as worker\u00a0b :: Worker only :: ", 
+            "label": "Entitled as worker\u00a0b :: Worker only", 
             "series": [
                 2563.0, 
                 4786.0, 
@@ -116,7 +116,7 @@
             "type": "numberThousand"
         }, 
         "col7": {
-            "label": "Entitled as wife, widow, or parent only :: Dually entitled :: Subtotal", 
+            "label": "Entitled as wife, widow, or parent only :: Subtotal", 
             "series": [
                 3753.0, 
                 5621.0, 
@@ -135,7 +135,7 @@
             "type": "numberThousand"
         }, 
         "col8": {
-            "label": "Entitled as wife, widow, or parent only :: Dually entitled :: Wife's benefit", 
+            "label": "Entitled as wife, widow, or parent only :: Wife's benefit", 
             "series": [
                 2174.0, 
                 2546.0, 
@@ -154,7 +154,7 @@
             "type": "numberThousand"
         }, 
         "col9": {
-            "label": "Entitled as wife, widow, or parent only :: Dually entitled :: Widow's or parent's benefit\u00a0c", 
+            "label": "Entitled as wife, widow, or parent only :: Widow's or parent's benefit\u00a0c", 
             "series": [
                 1546.0, 
                 3048.0, 

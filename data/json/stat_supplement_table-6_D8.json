@@ -2,7 +2,7 @@
     "category": "timeSeries", 
     "data": {
         "col1": {
-            "label": "Total :: ", 
+            "label": "Total", 
             "series": [
                 66735.0, 
                 89591.0, 

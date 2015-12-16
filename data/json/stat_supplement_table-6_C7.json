@@ -112,7 +112,7 @@
             "type": "numberThousand"
         }, 
         "col3": {
-            "label": "Awards as a percentage of\u00a0applications :: Awards", 
+            "label": "Awards as a percentage of\u00a0applications", 
             "series": [
                 47.9, 
                 51.1, 
@@ -167,7 +167,7 @@
             "type": "percent"
         }, 
         "col4": {
-            "label": "Awards per \n1,000 insured workers :: Awards", 
+            "label": "Awards per \n1,000 insured workers", 
             "series": [
                 4.7, 
                 5.1, 

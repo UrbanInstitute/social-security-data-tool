@@ -90,7 +90,7 @@
             "type": "dollar"
         }, 
         "col3": {
-            "label": "Blind beneficiaries b :: Maximum", 
+            "label": "Blind beneficiaries b", 
             "series": [
                 false, 
                 false, 

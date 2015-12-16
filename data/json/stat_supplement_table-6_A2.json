@@ -85,7 +85,7 @@
             "type": "dollar"
         }, 
         "col10": {
-            "label": "Average monthly benefit (dollars) :: Non-disabled widows :: Women", 
+            "label": "Average monthly benefit (dollars) :: Non-disabled widows", 
             "series": [
                 20.36, 
                 20.17, 

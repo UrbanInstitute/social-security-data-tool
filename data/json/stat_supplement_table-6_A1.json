@@ -2,7 +2,7 @@
     "category": "timeSeries", 
     "data": {
         "col1": {
-            "label": "All benefits\u00a0a :: ", 
+            "label": "All benefits\u00a0a", 
             "series": [
                 241709300.0, 
                 254984.0, 
@@ -83,7 +83,7 @@
             "type": "number"
         }, 
         "col10": {
-            "label": "Widow(er)s :: Disabled workers", 
+            "label": "Widow(er)s", 
             "series": [
                 25816418.0, 
                 4600.0, 
@@ -164,7 +164,7 @@
             "type": "number"
         }, 
         "col11": {
-            "label": "Parents :: Disabled workers", 
+            "label": "Parents", 
             "series": [
                 115266.0, 
                 852.0, 
@@ -245,7 +245,7 @@
             "type": "number"
         }, 
         "col2": {
-            "label": "Retired workers :: ", 
+            "label": "Retired workers", 
             "series": [
                 101828420.0, 
                 132335.0, 
@@ -326,7 +326,7 @@
             "type": "number"
         }, 
         "col3": {
-            "label": "Disabled workers :: ", 
+            "label": "Disabled workers", 
             "series": [
                 29532450.0, 
                 false, 
@@ -812,7 +812,7 @@
             "type": "number"
         }, 
         "col9": {
-            "label": "Widowed mothers and fathers :: Disabled workers", 
+            "label": "Widowed mothers and fathers", 
             "series": [
                 5113209.0, 
                 23260.0, 

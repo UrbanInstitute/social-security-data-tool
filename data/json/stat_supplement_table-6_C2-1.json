@@ -2,7 +2,7 @@
     "category": "timeSeries", 
     "data": {
         "col1": {
-            "label": "Number :: ", 
+            "label": "Number", 
             "series": [
                 30426.0, 
                 24379.0, 
@@ -190,7 +190,7 @@
             "type": "percent"
         }, 
         "col2": {
-            "label": "Average age :: ", 
+            "label": "Average age", 
             "series": [
                 57.4, 
                 57.2, 

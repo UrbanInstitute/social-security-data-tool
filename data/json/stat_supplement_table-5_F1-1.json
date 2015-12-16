@@ -84,7 +84,7 @@
             "type": "dollarThousand"
         }, 
         "col11": {
-            "label": "Husbands :: With at least 1 disabled child\u00a0b :: Number", 
+            "label": "Husbands :: Number", 
             "series": [
                 16.0, 
                 211.0, 
@@ -125,7 +125,7 @@
             "type": "number"
         }, 
         "col12": {
-            "label": "Husbands :: With at least 1 disabled child\u00a0b :: Total monthly benefits (thousands of dollars)", 
+            "label": "Husbands :: Total monthly benefits (thousands of dollars)", 
             "series": [
                 1.0, 
                 7.0, 

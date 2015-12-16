@@ -44,7 +44,7 @@
             "type": "number"
         }, 
         "col10": {
-            "label": "Parents :: DI trust fund", 
+            "label": "Parents", 
             "series": [
                 824.0, 
                 6209.0, 
@@ -86,7 +86,7 @@
             "type": "number"
         }, 
         "col11": {
-            "label": "Special\nage-72 beneficiaries :: DI trust fund", 
+            "label": "Special\nage-72 beneficiaries", 
             "series": [
                 false, 
                 false, 
@@ -212,7 +212,7 @@
             "type": "number"
         }, 
         "col4": {
-            "label": "Retired workers :: DI trust fund", 
+            "label": "Retired workers", 
             "series": [
                 112331.0, 
                 518234.0, 
@@ -254,7 +254,7 @@
             "type": "number"
         }, 
         "col5": {
-            "label": "Disabled workers :: DI trust fund", 
+            "label": "Disabled workers", 
             "series": [
                 false, 
                 false, 
@@ -296,7 +296,7 @@
             "type": "number"
         }, 
         "col6": {
-            "label": "Wives and husbands :: DI trust fund", 
+            "label": "Wives and husbands", 
             "series": [
                 29749.0, 
                 159168.0, 
@@ -338,7 +338,7 @@
             "type": "number"
         }, 
         "col7": {
-            "label": "Children :: DI trust fund", 
+            "label": "Children", 
             "series": [
                 54648.0, 
                 390134.0, 
@@ -380,7 +380,7 @@
             "type": "number"
         }, 
         "col8": {
-            "label": "Widowed mothers and fathers :: DI trust fund", 
+            "label": "Widowed mothers and fathers", 
             "series": [
                 20499.0, 
                 120581.0, 
@@ -422,7 +422,7 @@
             "type": "number"
         }, 
         "col9": {
-            "label": "Widow(er)s :: DI trust fund", 
+            "label": "Widow(er)s", 
             "series": [
                 4437.0, 
                 93781.0, 

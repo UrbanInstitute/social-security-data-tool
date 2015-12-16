@@ -2,7 +2,7 @@
     "category": "map", 
     "data": {
         "col1": {
-            "label": "State or area", 
+            "label": "", 
             "series": [
                 {
                     "hc-key": "us-al", 
@@ -252,7 +252,7 @@
             "type": ""
         }, 
         "col2": {
-            "label": "State or area", 
+            "label": "", 
             "series": [
                 {
                     "hc-key": "us-al", 

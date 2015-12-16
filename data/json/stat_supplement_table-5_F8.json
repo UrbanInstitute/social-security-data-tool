@@ -422,7 +422,7 @@
             "type": "dollarThousand"
         }, 
         "col7": {
-            "label": "Disabled widow(er)s :: Widowers :: Number", 
+            "label": "Disabled widow(er)s :: Number", 
             "series": [
                 false, 
                 false, 
@@ -492,7 +492,7 @@
             "type": "number"
         }, 
         "col8": {
-            "label": "Disabled widow(er)s :: Widowers :: Total monthly benefits (thousands of dollars)", 
+            "label": "Disabled widow(er)s :: Total monthly benefits (thousands of dollars)", 
             "series": [
                 false, 
                 false, 

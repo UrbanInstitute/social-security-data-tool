@@ -2,7 +2,7 @@
     "category": "timeSeries", 
     "data": {
         "col1": {
-            "label": "Total\u00a0a :: ", 
+            "label": "Total\u00a0a", 
             "series": [
                 100.0, 
                 100.0, 
@@ -21,7 +21,7 @@
             "type": "percent"
         }, 
         "col2": {
-            "label": "Entitled as worker\u00a0b :: Subtotal :: ", 
+            "label": "Entitled as worker\u00a0b :: Subtotal", 
             "series": [
                 43.3, 
                 50.6, 
@@ -40,7 +40,7 @@
             "type": "percent"
         }, 
         "col3": {
-            "label": "Entitled as worker\u00a0b :: Worker only :: ", 
+            "label": "Entitled as worker\u00a0b :: Worker only", 
             "series": [
                 38.7, 
                 42.1, 
@@ -116,7 +116,7 @@
             "type": "percent"
         }, 
         "col7": {
-            "label": "Entitled as wife, widow, or parent only :: Dually entitled :: Subtotal", 
+            "label": "Entitled as wife, widow, or parent only :: Subtotal", 
             "series": [
                 56.7, 
                 49.4, 
@@ -135,7 +135,7 @@
             "type": "percent"
         }, 
         "col8": {
-            "label": "Entitled as wife, widow, or parent only :: Dually entitled :: Wife's benefit", 
+            "label": "Entitled as wife, widow, or parent only :: Wife's benefit", 
             "series": [
                 32.8, 
                 22.4, 
@@ -154,7 +154,7 @@
             "type": "percent"
         }, 
         "col9": {
-            "label": "Entitled as wife, widow, or parent only :: Dually entitled :: Widow's or parent's benefit\u00a0c", 
+            "label": "Entitled as wife, widow, or parent only :: Widow's or parent's benefit\u00a0c", 
             "series": [
                 23.4, 
                 26.8, 
