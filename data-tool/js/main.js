@@ -38,7 +38,6 @@ var exportParams = {tableID:"",columns:[],chartType:""}
 
 
 function init(){
-	// console.log(getHashParams())
 	var hashID = window.location.hash.substring(1)
 	if(hashID != ""){
 		hashID = hashID.replace(/\./g,"_")
@@ -58,6 +57,8 @@ function init(){
 		  var category = data.category;
 		  switch(category){
 		  	case "timeSeries":
+		  		var years = data.data.years.series;
+		  		drawScrubber(getYear(years[0]), getYear(years[years.length-1]));
 		  	  	exportParams.chartType = "lineChart"
 		  	  	exportParams.columns=["col1"]
 		  		drawLineChart(data);
@@ -84,16 +85,26 @@ function init(){
 		  }
 		});
 		setTheme();
-		drawScrubber();
 		filterSheets(0)
 		yearBarCache = {};
 	}, 1000);
 }
 
+function getYear(year){
+	if(typeof(year) == "number"){
+		return year;
+	}
+	else if(year.indexOf("-") != -1){
+		var ys = year.split("-")
+		if(ys[0].search(/\d/g) != -1){
+			return parseFloat(ys[0].replace(/[^\d]/g,""))
+		} else{ return parseFloat(ys[1].replace(/[^\d]/g,""))}
+	} else{ return parseFloat(year.replace(/[^\d]/g,""))}
+}
+
 function newTable(index){
 	tableIndex = index;
 	var id = sheets[index]
-	// console.log(id)
 	if(id){
 		var hash = "#" + id.replace(/\_/g,".")
 		window.history.pushState('index.html', 'Title', hash);
@@ -103,8 +114,11 @@ function newTable(index){
 		  // var data = resp.results[0];
 		  var data = resp;
 		  var category = data.category;
+		  // drawScrubber(1901,2003)
 		  switch(category){
 		  	case "timeSeries":
+		  		var years = data.data.years.series
+		  		drawScrubber(getYear(years[0]), getYear(years[years.length-1]))
 		  	  	exportParams.chartType = "lineChart"
 		  	  	exportParams.columns=["col1"]
 		  		drawLineChart(data);
@@ -130,7 +144,7 @@ function newTable(index){
 		  		break;
 		  }
 		});
-		drawScrubber();
+		// drawScrubber(1927,2014);
 		yearBarCache = {};
 }
 
@@ -164,13 +178,16 @@ function drawTable(input){
 			return getId(input)
 		})
 	.html(function(){
-		return input.html.header + input.html.body
+		return "<div>" + input.html.header +  input.html.body + "</div>"
 	})
 	d3.selectAll("#testTable th")
 		.on("click", function(){
 			var th = d3.select(this)
 			var colspan = th.attr("colspan")
 			if(colspan > 1 || th.classed("col0")){
+				return false;
+			}
+			if(d3.selectAll("th.selected")[0].length == 1 && th.classed("selected")){
 				return false;
 			}
 			var selected = th.classed("selected")
@@ -493,10 +510,12 @@ function formatTable(tableID){
 
 	d3.select("table").style("height", (headHeight + bodyHeight) + "px")
 	var comma = d3.format(",")
+	var dec = d3.format(".2,")
 	d3.selectAll("td")
 		.html(function(){
-			var val = d3.select(this).html()
-			if(d3.select(this).classed("col0")){
+			var td = d3.select(this)
+			var val = td.html()
+			if(td.classed("col0")){
 				return val;
 			}
 			else if(!isNaN(parseFloat(val))){
@@ -751,11 +770,7 @@ function drawMap(input, col){
             maxColor: "#1696d2",
             labels:{
             	formatter: function(){
-            		// console.log(this.axis.defaultLabelFormatter.call(this) + "ADSf")
             		return formatLabel(this, null, input, col, "labelMap")
-            		// return this.axis.labelFormatter.call(this)
-            		// console.log(this.axis.labelFormatter(this))
-            		// return formatLabel(null, null, input, col, "legend")
             	}
             }
 
@@ -764,13 +779,6 @@ function drawMap(input, col){
         	title: {
         		text: initId
         	}        	// ,
-        	// labelFormatter: function(){
-        	// 	console.log(this.labelFormatter, this)
-        	// 	                    	console.log(JSON.stringify(this))
-
-        	// 	// return this.axis.defaultLabelFormatter.call(this) + "%";
-        	// 	// return this.labelFormatter.call(5) + "%"
-        	// }
         },
         tooltip: {
                 formatter: function () {
@@ -881,6 +889,10 @@ function drawLineChart(input){
                 }
             },
             tooltip: {
+			    crosshairs: {
+			        color: 'rgb(159,159,159)',
+			        dashStyle: 'solid'
+			    },
                 shared: false,
                 valueDecimals: 0,
                 formatter: function () {
@@ -932,7 +944,6 @@ function generateBarFromYear(years, column, year){
 		else if(typeof(y) == "number" || y.search("-") == -1){
 			series.push([Date.UTC(y, 0, 2), column[i]]);
 		}else{
-			// console.log(years[i])
 			var range = y.split("-");
 			var start = parseInt(range[0]);
 			var end = parseInt(range[1]);
@@ -946,7 +957,7 @@ function generateBarFromYear(years, column, year){
 			return series[j][1]
 		}
 	}
-	return false;
+	return "not found";
 }
 function drawSingleYearBarChart(input){
 	var initId = input["data"]["col1"]["label"]
@@ -1186,33 +1197,39 @@ function changeYears(start, end){
     var singleYearBarChart = $('#singleYearBarChart').highcharts();
 		$.each(singleYearBarChart.series[0].data, function(k,v){
 			var barData = yearBarCache[v.category]
-			v.update({
-				y: generateBarFromYear(barData[0], barData[1], end),
-			});
-
+			var realEnd;
+			if(generateBarFromYear(barData[0], barData[1], end) != "not found"){
+				v.update({
+					y: generateBarFromYear(barData[0], barData[1], end)
+				});
+				realEnd = end;
+			}
 		});
 
 }
-function drawScrubber(){
+function drawScrubber(lower, upper){
 	d3.select("#singleYearCheck svg").remove();
 	d3.selectAll("#valueScrubber div").remove();
 	var width = 240,
 	    height = 45,
 	    radius = 7,
-		lowerBound = 1937,
-		upperBound = 2014,
+		lowerBound = lower,
+		upperBound = upper,
 		margin = {top: 0, right: 4, bottom: 0, left: 4};
 	
 	d3.select("#singleYearCheck")
 		.append("svg")
+		.attr("class", "unchecked")
 		.attr("width", 2*radius)
 		.attr("height", 2*radius)
 		.append("g")
 		.append("circle")
-		.attr("class", "unchecked")
+		.attr("class","outer")
 		.attr("cx",radius)
 		.attr("cy",radius)
 		.attr("r",radius)
+
+	d3.select("#singleYearCheck svg")
 		.on("mousedown", function(){
 			d3.select(this).classed("pressed", true)
 		})
@@ -1225,6 +1242,11 @@ function drawScrubber(){
 				singleYear();
 			}
 		})
+		.append("circle")
+		.attr("cx",radius)
+		.attr("cy",radius)
+		.attr("r",radius/2)
+		.attr("class","inner")
 
 	var scale = d3.scale.linear()
 		.domain([radius+margin.left, width-radius-margin.right])
@@ -1237,7 +1259,7 @@ function drawScrubber(){
 	var leftValue = d3.select("#valueScrubber")
 		.append("div")
 		.attr("id", "leftValue")
-		.text("1937")
+		.text(String(lower))
 
 	var svg = d3.select("#valueScrubber").append("div")
 	  	.append("svg")
@@ -1247,7 +1269,7 @@ function drawScrubber(){
 	var rightValue = d3.select("#valueScrubber")
 		.append("div")
 		.attr("id", "rightValue")
-		.text("2014")
+		.text(String(upper))
 
 	svg.append("rect")
 		.attr("id", "sliderTrack")
@@ -1386,7 +1408,6 @@ function setTheme(){
             	}
 	}
 	var oldMenu = Highcharts.getOptions().exporting.buttons.contextButton.menuItems
-	// console.log(oldMenu)
 	oldMenu.unshift(embed)
 
 	Highcharts.theme = {
@@ -1541,11 +1562,8 @@ window.onresize = function(){
 
 
 function searchTables(val){
-	// console.log(d3.selectAll("#checkBoxes"))
-	// var tmp = []
 	var checked = d3.selectAll("#checkBoxes input").filter(function(d){return this.checked})
 	var results, tmp;
-	// console.log(checked.node())
 	if(checked.node() != null){
 		var tmp = keywords[d3.select(checked.node()).attr("id")]
 	}else{ tmp = null}
@@ -1640,15 +1658,57 @@ function filterSheets(current, val){
 		    }
 		  d3.select("#searchText")
 		  	.html("Displaying " + sheets.length + " of " + TOTAL_TABLES + " tables")
-		 // console.log("found "  + sheets.length + " tables")
 		}
 	$("#tableMenu").html($("#tableMenu option").sort(function (a, b) {
-	    return a.value == b.value ? 0 : a.value < b.value ? -1 : 1
+		// var catA, catB,
+		aV = a.value.split("_")[0];
+		bV = b.value.split("_")[0]; 
+		// aD = a.value.split("_")[1].replace()
+		if(aV != bV){
+	    	return aV < bV ? -1 : 1
+	    }else{
+	    	aV = a.value.split("_")[1].split("-")[0]
+	    	bV = b.value.split("_")[1].split("-")[0]
+	    	aW = aV.replace(/\d/g,"")
+	    	bW = bV.replace(/\d/g,"")
+	    	aD = parseInt(aV.replace(/[^\d]/g,""))
+	    	bD = parseInt(bV.replace(/[^\d]/g,""))
+	    	if(aW != bW){
+	    		return aW < bW ? -1 : 1
+	    	}else{
+	    		if(aD != bD){
+	    			return aD < bD ? -1 : 1	
+	    		}else{
+	    			return a.value < b.value ? -1 : 1
+	    		}
+	    	}
+
+	    }
 	}))
 	sheets = sheets.sort(function (a, b) {
-	    return a == b ? 0 : a < b ? -1 : 1
+	    aV = a.split("_")[0];
+		bV = b.split("_")[0]; 
+		if(aV != bV){
+	    	return aV < bV ? -1 : 1
+	    }else{
+	    	aV = a.split("_")[1].split("-")[0]
+	    	bV = b.split("_")[1].split("-")[0]
+	    	aW = aV.replace(/\d/g,"")
+	    	bW = bV.replace(/\d/g,"")
+	    	aD = parseInt(aV.replace(/[^\d]/g,""))
+	    	bD = parseInt(bV.replace(/[^\d]/g,""))
+	    	if(aW != bW){
+	    		return aW < bW ? -1 : 1
+	    	}else{
+	    		if(aD != bD){
+	    			return aD < bD ? -1 : 1	
+	    		}else{
+	    			return a < b ? -1 : 1
+	    		}
+	    	}
+
+	    }
 	})
-	// var first = d3.select("#tableMenu option").node()
 	d3.select("#tableMenu")
 		.insert("option", "option")
 		.text("Select a table")
@@ -1660,7 +1720,7 @@ function formatLabel(x, y, input, col, type){
 		col = yearBarCache.id
 	}
 	var label = input.data[col].type
-	var dollarOld = d3.format("$s")
+	var dollarOld = d3.format("$.4s")
 
 	function dollar(x) {
 	  var s = dollarOld(x);
@@ -1672,7 +1732,7 @@ function formatLabel(x, y, input, col, type){
 	  }
 	  return s;
 	}
-	var numOld = d3.format("s")
+	var numOld = d3.format(".4s")
 	function num(x) {
 	  var s = numOld(x);
 	  switch (s[s.length - 1]) {
@@ -1687,13 +1747,6 @@ function formatLabel(x, y, input, col, type){
 
 
 	if(type == "label"){
-		// console.log(x, y, input, col, type)
-		// return '{value}'
-		// return "$" + ""
-		// console.log(this)
-		// return ""
-		// return(Highcharts.numberFormat('{value}'))
-		// console.log(Highcharts.Axis.defaultLabelFormatter)
 		if(label == "dollar"){
 			return '$' + (x.axis.defaultLabelFormatter.call(x)).replace("k","K").replace("G","B");
 		}
@@ -1703,9 +1756,6 @@ function formatLabel(x, y, input, col, type){
 		else{
 			return (x.axis.defaultLabelFormatter.call(x)).replace("k","K").replace("G","B");	
 		}
-		// else if(col == "")
-		// console.log(input, col)
-		// return ''
 	}
 	else if(type == "labelMap"){
 		if(label == "dollar"){

@@ -85,6 +85,7 @@ body{
 #tableTitle{
     position: fixed;
     top: 462px;
+    width: calc(100% - 140px);
     left: 70px;
     z-index: 999;
     font-size: 14px;
@@ -184,10 +185,11 @@ tbody{
     cursor: pointer;
 }
 #nextButton, #prevButton{
-    top: 456px;
+    top: 469px;
     z-index: 999;
     padding-bottom: 0px;
     padding-top: 6px;
+    background: none;
 }
 #nextButton span, #prevButton span{
     font-size: 20px;
@@ -198,6 +200,7 @@ tbody{
     position: relative;
 }
 #prevButton{
+    text-align: right;
     left: 5px;
 }
 #nextButton{
@@ -308,16 +311,19 @@ tbody{
 /****************************************/
 /************ SWITCH STYLEs *************/
 /****************************************/
-#singleYearCheck circle.checked{
-    fill: #1696d2;
-}
-#singleYearCheck circle.unchecked{
+#singleYearCheck .unchecked circle{
     fill: #999;
 }
-#singleYearCheck circle.checked.pressed{
+#singleYearCheck .checked circle.inner{
+    fill: #1696d2;
+}
+#singleYearCheck .checked circle.outer{
+    fill: #ccc;
+}
+#singleYearCheck .checked.pressed circle.inner{
     fill: #0076bc;
 }
-#singleYearCheck circle.unchecked.pressed{
+#singleYearCheck .unchecked.pressed circle.inner{
     fill: #888;
 }
 
