@@ -146,6 +146,7 @@ function newTable(index){
 		});
 		// drawScrubber(1927,2014);
 		yearBarCache = {};
+
 }
 
 function setLayout(){
@@ -351,7 +352,7 @@ function drawTable(input){
 		.append("div")
 		.attr("class", "footnotes")
 	fn.append("div")
-	.html("<div class = \"tableSource\"><a href = \"https://www.ssa.gov/policy/docs/statcomps/supplement/\">Social Security Administration, Annual Statistical Supplement, 2014</a></div>")
+	.html("<div class = \"tableSource\"><a href = \"https://www.ssa.gov/policy/docs/statcomps/supplement/\">The data in this table are from the Social Security Administration’s Annual Statistical Supplement, 2014. The parenthetical numbers with the titles are retained from the supplement for reference.</a></div>")
 	var tWidth = d3.select("thead").node().getBoundingClientRect().width;
 	for(var i = 0; i<input.footnotes.length; i++){
 		var note = input.footnotes[i]
@@ -384,6 +385,18 @@ function drawTable(input){
 		if(d3.select("#testTable thead").node().getBoundingClientRect().width - $(window).width() + 74 <= 0){
 			d3.select(".rightFader").style("opacity", 0)
 		}else{ d3.select(".rightFader").style("opacity",1)}
+
+
+	if(d3.select("#testTable thead").node().getBoundingClientRect().width - $(window).width() + 74 <= 0){
+		d3.select(".rightFader").style("opacity", 0)
+       	d3.select("#panRight").style("display","none")
+       	d3.select("#panLeft").style("display","none")
+
+	}else{
+	   	d3.select("#panRight").style("display","block")
+	   	d3.select("#panLeft").style("display","block")
+		d3.select(".rightFader").style("opacity",1)
+	}
 
 }
 function resizeHeader(header, bodyCells){
@@ -1556,7 +1569,14 @@ init();
 window.onresize = function(){
 	if(d3.select("#testTable thead").node().getBoundingClientRect().width - $(window).width() + 74 <= 0){
 		d3.select(".rightFader").style("opacity", 0)
-	}else{ d3.select(".rightFader").style("opacity",1)}
+       	d3.select("#panRight").style("display","none")
+       	d3.select("#panLeft").style("display","none")
+
+	}else{
+	   	d3.select("#panRight").style("display","block")
+	   	d3.select("#panLeft").style("display","block")
+		d3.select(".rightFader").style("opacity",1)
+	}
 }
 
 
@@ -1900,6 +1920,60 @@ $(function() {
     });
 });
 
+
+
+(function () {
+
+	var scrollHandle = 0,
+	    scrollStep = 5,
+	    fixTable = $("body");
+	  // console.log(fixTable)
+
+	//Start the scrolling process
+	$(".panner").mousedown(function () {
+	    var data = $(this).data('scrollModifier'),
+	        direction = parseInt(data, 10);
+
+	    $(this).addClass('active');
+
+	    startScrolling(direction, scrollStep);
+	});
+
+	//Kill the scrolling
+	$(".panner").mouseup(function () {
+	    stopScrolling();
+	    $(this).removeClass('active');
+	});
+
+	//Actual handling of the scrolling
+	function startScrolling(modifier, step) {
+	    if (scrollHandle === 0) {
+	        scrollHandle = setInterval(function () {
+	            var newOffset = fixTable.scrollLeft() + (scrollStep * modifier);
+
+	            fixTable.scrollLeft(newOffset);
+	        }, 10);
+	    }
+
+	   // var $foo = $("#headerWrapper");
+	    // $foo.bind('scroll', function() {
+	        // "Disable" the horizontal scroll.
+	        // if ($foo.scrollLeft() !== 0) {
+	            // $foo.scrollLeft(0);
+	        // }
+	    // });
+
+	}
+
+	function stopScrolling() {
+	    clearInterval(scrollHandle);
+	    scrollHandle = 0;
+	}
+
+}());
+
+
+
 function reset(){
 	sheets = allSheets;
 	$("#searchBox").val("Enter keywords")
@@ -1925,6 +1999,41 @@ $(document).ready(function() {
        		.style("right",0)
 
        }
+
+
+		var pos = window.pageXOffset || document.documentElement.scrollLeft
+		var posLeft =  window.pageXOffset || document.documentElement.scrollRight
+		if(pos+window.innerWidth >=1400){
+		d3.select("#panRight img")
+				.classed("enabled", false)
+				.transition()
+				.duration(100)
+				.style("opacity", 0.1)
+		}else{
+			d3.select("#panRight img")
+				.classed("enabled", true)
+				.style("opacity", 0.3)
+			d3.select(".rightFader")
+				.style("right", 0)			
+		}
+
+		if(posLeft <= 20 || typeof(posLeft) == "undefined"){
+			d3.select("#panLeft img")
+					.classed("enabled", false)
+					.transition()
+					.duration(100)
+					.style("opacity", 0.1)
+		}else{
+			d3.select("#panLeft img")
+				.classed("enabled", true)
+				.style("opacity", 0.3)
+		}
+
     });
  });
+
+
+
+
+
 

@@ -1,5 +1,6 @@
 <html>
 <head>
+	<title>Social Security Data Tool</title>
 	<meta charset="utf-8">
 	<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
 	  <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
@@ -16,7 +17,7 @@
     <div id="header-pinned" class="no-touch is-visible">
         <div class="content">
             <a target="_blank" href="http://www.urban.org" title="Home" rel="home" class="site-logo"></a>
-            <div class="title"><a href="http://www.urban.org/features" class="title-linkback">Features</a> <span>: :</span> DI thingmajigger</div>
+            <div class="title"><a href="http://www.urban.org/features" class="title-linkback">Features</a> <span>: :</span> Social Security Data Tool</div>
             <div class="share-icons">
                 <div class="shareThisP">
                     <a href="#" onclick="toggle_visibility('shareBox');">
@@ -68,7 +69,7 @@
 					<label><input type="radio" id="OASDI" value="OASDI">OASDI</label><br>
 					<label><input type="radio" id="OASI" value="OASI">OASI</label><br>
 					<label><input type="radio" id="DI" value="DI">DI&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><br>
-					<label><input type="radio" id="RET" value="RET">RET&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><br>
+					<!-- <label><input type="radio" id="RET" value="RET">RET&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><br> -->
 					<label><input type="radio" id="SGA" value="SGA">SGA&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><br>
 					<label><input type="radio" id="PIA" value="PIA">PIA&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><br>
 					<label><input type="radio" id="DAC" value="DAC">DAC</label><br>
@@ -81,23 +82,23 @@
 					<label><input type="radio" id="balance" value="balance">Balance</label><br>
 					<label><input type="radio" id="children" value="children">Children</label><br>
 					<label><input type="radio" id="claims" value="claims">Claims</label><br>
-					<label><input type="radio" id="countries" value="countries">Countries</label><br>
+					<!-- <label><input type="radio" id="countries" value="countries">Countries</label><br> -->
 					<label><input type="radio" id="disability" value="disability">Disability</label><br>
 				</div>
 				<div class = "col">
-					<label><input type="radio" id="earnings test" value="earnings test">Earnings Test</label><br>
+					<!-- <label><input type="radio" id="earnings test" value="earnings test">Earnings Test</label><br> -->
 					<label><input type="radio" id="family" value="family">Family</label><br>
-					<label><input type="radio" id="formula" value="formula">Formula</label><br>
+					<!-- <label><input type="radio" id="formula" value="formula">Formula</label><br> -->
 					<label><input type="radio" id="geography" value="geography">Geography</label><br>
-					<label><input type="radio" id="international" value="international">International</label><br>
-					<label><input type="radio" id="policy" value="policy">Policy&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><br>
+					<!-- <label><input type="radio" id="international" value="international">International</label><br> -->
+					<!-- <label><input type="radio" id="policy" value="policy">Policy&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><br> -->
 					<label><input type="radio" id="process" value="process">Process</label><br>
-
-				</div>
-				<div class = "col">
 					<label><input type="radio" id="receipt" value="receipt">Receipt</label><br>
 					<label><input type="radio" id="rules" value="rules">Rule</label><br>
 					<label><input type="radio" id="spouses" value="spouses">Spouses</label><br>
+				</div>
+				<div class = "col buttons4">
+
 					<label><input type="radio" id="survivors" value="survivors">Survivors</label><br>
 					<label><input type="radio" id="taxes" value="taxes">Taxes</label><br>
 					<label><input type="radio" id="taxmax" value="taxmax">Taxmax</label><br>
@@ -120,6 +121,7 @@
 	<div id = "valueScrubber" class = "initial_hide"></div>
 	<div id = "singleYearCheck" class="initial_hide">Single year (bar chart)</div>
 	<div id = "interactionInstructions" class="initial_hide">Click a column header to graph it. <span class = "warning">Only columns with the same units can be graphed against each other.</span></div>
+	<div id = "mobileDisclaimer" class="initial_hide">For a better viewing experience, please view this page on a desktop device or in a wider window.</div>
 	<div id = "spacer"></div>
 	<div id = "tableTitle" class="initial_hide"></div>
 
@@ -136,13 +138,22 @@
 <!-- 
 <img id = "left_arrow" src = "img/left_arrow.png">
 <img id = "right_arrow" src = "img/right_arrow.png"> -->
+
+
+<span id="panLeft" class="panner" data-scroll-modifier='-1'><img src="img/left.png" width="45" height="43" alt="Left"></span>
+<span id="panRight" class="panner" data-scroll-modifier='1'><img class = "enabled" src="img/right.png" width="45" height="43" alt="Right"></span>
+
+
 <div id = "nextButton">Next<br>Table<br><span>&rarr;</span></div>
 <div id = "prevButton">Prev<br>Table<br><span>&larr;</span></div>
   <footer>
         <div class="container"><a href="http://www.urban.org" target="_blank"><img src="img/urban.jpg"></a>
         	<p id = "disclaimer">This tool was funded by the Laura and John Arnold Foundation. We thank our funders, who make it possible for Urban to advance its mission.
  
-The views expressed are those of the authors and should not be attributed to our funders, the Urban Institute, or its trustees. Funders do not determine our research findings or the insights and recommendations of our experts. For more information on our funding principles, go to <a href = "http://www.urban.org/support">urban.org/support</a>.
+The views expressed are those of the authors and should not be attributed to our funders, the Urban Institute, or its trustees. Funders do not determine our research findings or the insights and recommendations of our experts. For more information on our funding principles, go to <a href = "http://www.urban.org/support">urban.org/support</a>.</p>
+<p id = "disclaimer2">
+	Users are encouraged to consult the Social Security Administration’s Annual Statistical Supplements for additional data and documentation. The Urban Institute takes no responsibility for the quality of the original data.
+</p>
         	<p>© 2015 Urban Institute :: <a target="_blank" href="https://github.com/UrbanInstitute/ssa-di">View on Github</a> :: <a target="_blank" href="http://www.urban.org/about/contact.cfm">Contact Us</a></p>  </div>
   </footer>
 <div id="dialog-message" title="Embed This Chart">
