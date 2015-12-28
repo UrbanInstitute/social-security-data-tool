@@ -3,6 +3,7 @@
     "data": {
         "categories": {
             "series": [
+                "Total", 
                 "62-69", 
                 "70-74", 
                 "75-79", 
@@ -12,7 +13,7 @@
             ], 
             "type": "barLabel"
         }, 
-        "col2": {
+        "col1": {
             "label": "All parents :: Number", 
             "series": [
                 74.0, 
@@ -22,9 +23,9 @@
                 303.0, 
                 283.0
             ], 
-            "type": "number"
+            "type": ""
         }, 
-        "col3": {
+        "col2": {
             "label": "All parents :: Average monthly benefit (dollars)", 
             "series": [
                 1103.49, 
@@ -34,9 +35,9 @@
                 1094.73, 
                 1040.97
             ], 
-            "type": "dollar"
+            "type": "number"
         }, 
-        "col4": {
+        "col3": {
             "label": "Men :: Number", 
             "series": [
                 7.0, 
@@ -46,9 +47,9 @@
                 34.0, 
                 28.0
             ], 
-            "type": "number"
+            "type": "dollar"
         }, 
-        "col5": {
+        "col4": {
             "label": "Men :: Average monthly benefit (dollars)", 
             "series": [
                 866.67, 
@@ -58,9 +59,9 @@
                 989.78, 
                 869.19
             ], 
-            "type": "dollar"
+            "type": "number"
         }, 
-        "col6": {
+        "col5": {
             "label": "Women :: Number", 
             "series": [
                 67.0, 
@@ -70,9 +71,9 @@
                 269.0, 
                 255.0
             ], 
-            "type": "number"
+            "type": "dollar"
         }, 
-        "col7": {
+        "col6": {
             "label": "Women :: Average monthly benefit (dollars)", 
             "series": [
                 1128.23, 
@@ -82,7 +83,7 @@
                 1107.99, 
                 1059.84
             ], 
-            "type": "dollar"
+            "type": "number"
         }
     }, 
     "default": "col2", 
@@ -92,17 +93,13 @@
             "type": "note"
         }, 
         {
-            "content": "CONTACT: (410) 965-0090 or statistics@ssa.gov.", 
-            "type": "note"
-        }, 
-        {
             "content": "File available from:\nU.S. Social Security Administration \u2022 Office of Retirement and Disability Policy \u2022 Office of Research, Evaluation, and Statistics\nAnnual Statistical Supplement, 2014\nhttp://www.socialsecurity.gov/policy/docs/statcomps/supplement/2014/", 
             "type": "note"
         }
     ], 
     "html": {
-        "body": "<tbody><tr class=><td class=\"col0\"></td><td class=\"col1\">Total</td><td class=\"col2\">1371.0</td><td class=\"col3\">1094.2</td><td class=\"col4\">175.0</td><td class=\"col5\">997.37</td><td class=\"col6\">1196.0</td><td class=\"col7\">1108.37</td><tr class=62-69><td class=\"col0\">62-69</td><td class=\"col1\"></td><td class=\"col2\">74.0</td><td class=\"col3\">1103.49</td><td class=\"col4\">7.0</td><td class=\"col5\">866.67</td><td class=\"col6\">67.0</td><td class=\"col7\">1128.23</td><tr class=70-74><td class=\"col0\">70-74</td><td class=\"col1\"></td><td class=\"col2\">147.0</td><td class=\"col3\">1173.26</td><td class=\"col4\">25.0</td><td class=\"col5\">1069.18</td><td class=\"col6\">122.0</td><td class=\"col7\">1194.59</td><tr class=75-79><td class=\"col0\">75-79</td><td class=\"col1\"></td><td class=\"col2\">239.0</td><td class=\"col3\">1120.47</td><td class=\"col4\">24.0</td><td class=\"col5\">1011.59</td><td class=\"col6\">215.0</td><td class=\"col7\">1132.62</td><tr class=80-84><td class=\"col0\">80-84</td><td class=\"col1\"></td><td class=\"col2\">325.0</td><td class=\"col3\">1082.88</td><td class=\"col4\">57.0</td><td class=\"col5\">1043.43</td><td class=\"col6\">268.0</td><td class=\"col7\">1091.27</td><tr class=85-89><td class=\"col0\">85-89</td><td class=\"col1\"></td><td class=\"col2\">303.0</td><td class=\"col3\">1094.73</td><td class=\"col4\">34.0</td><td class=\"col5\">989.78</td><td class=\"col6\">269.0</td><td class=\"col7\">1107.99</td><tr class=90 or older><td class=\"col0\">90 or\u00a0older</td><td class=\"col1\"></td><td class=\"col2\">283.0</td><td class=\"col3\">1040.97</td><td class=\"col4\">28.0</td><td class=\"col5\">869.19</td><td class=\"col6\">255.0</td><td class=\"col7\">1059.84</td></tbody>", 
-        "header": "<thead><tr><th rowspan=\"2\"  colspan=\"2\"  class=\"series col0\" >Age</th><th colspan=\"2\"  class=\"series col2\" >All parents</th><th colspan=\"2\"  class=\"series col4\" >Men</th><th colspan=\"2\"  class=\"series col6\" >Women</th></tr><tr><th class=\"series col2\" >Number</th><th class=\"series col3\" >Average monthly benefit (dollars)</th><th class=\"series col4\" >Number</th><th class=\"series col5\" >Average monthly benefit (dollars)</th><th class=\"series col6\" >Number</th><th class=\"series col7\" >Average monthly benefit (dollars)</th></tr></thead>"
+        "body": "<tbody><tr class=Total><td class=\"col0\">Total</td><td class=\"col1\">1371.0</td><td class=\"col2\">1094.2</td><td class=\"col3\">175.0</td><td class=\"col4\">997.37</td><td class=\"col5\">1196.0</td><td class=\"col6\">1108.37</td><tr class=62-69><td class=\"col0\">62-69</td><td class=\"col1\">74.0</td><td class=\"col2\">1103.49</td><td class=\"col3\">7.0</td><td class=\"col4\">866.67</td><td class=\"col5\">67.0</td><td class=\"col6\">1128.23</td><tr class=70-74><td class=\"col0\">70-74</td><td class=\"col1\">147.0</td><td class=\"col2\">1173.26</td><td class=\"col3\">25.0</td><td class=\"col4\">1069.18</td><td class=\"col5\">122.0</td><td class=\"col6\">1194.59</td><tr class=75-79><td class=\"col0\">75-79</td><td class=\"col1\">239.0</td><td class=\"col2\">1120.47</td><td class=\"col3\">24.0</td><td class=\"col4\">1011.59</td><td class=\"col5\">215.0</td><td class=\"col6\">1132.62</td><tr class=80-84><td class=\"col0\">80-84</td><td class=\"col1\">325.0</td><td class=\"col2\">1082.88</td><td class=\"col3\">57.0</td><td class=\"col4\">1043.43</td><td class=\"col5\">268.0</td><td class=\"col6\">1091.27</td><tr class=85-89><td class=\"col0\">85-89</td><td class=\"col1\">303.0</td><td class=\"col2\">1094.73</td><td class=\"col3\">34.0</td><td class=\"col4\">989.78</td><td class=\"col5\">269.0</td><td class=\"col6\">1107.99</td><tr class=90 or older><td class=\"col0\">90 or\u00a0older</td><td class=\"col1\">283.0</td><td class=\"col2\">1040.97</td><td class=\"col3\">28.0</td><td class=\"col4\">869.19</td><td class=\"col5\">255.0</td><td class=\"col6\">1059.84</td></tbody>", 
+        "header": "<thead><tr><th rowspan=\"2\"  class=\"series col0\" >Age</th><th colspan=\"2\"  class=\"series col1\" >All parents</th><th colspan=\"2\"  class=\"series col3\" >Men</th><th colspan=\"2\"  class=\"series col5\" >Women</th></tr><tr><th class=\"series col1\" >Number</th><th class=\"series col2\" >Average monthly benefit (dollars)</th><th class=\"series col3\" >Number</th><th class=\"series col4\" >Average monthly benefit (dollars)</th><th class=\"series col5\" >Number</th><th class=\"series col6\" >Average monthly benefit (dollars)</th></tr></thead>"
     }, 
     "title": {
         "catID": "5.A", 

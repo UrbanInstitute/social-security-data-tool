@@ -35,11 +35,11 @@
     }, 
     "footnotes": [
         {
-            "content": "SOURCE: Social Security Administration, Office of Systems, Integrated Work Measurement System.", 
+            "content": "Source: Social Security Administration, Office of Systems, Integrated Work Measurement System.", 
             "type": "note"
         }, 
         {
-            "content": "NOTE: Totals do not necessarily equal the sum of rounded components.", 
+            "content": "Note: Totals do not necessarily equal the sum of rounded components.", 
             "type": "note"
         }, 
         {
@@ -48,11 +48,7 @@
             "type": "footnote"
         }, 
         {
-            "content": "CONTACT: (410) 965-0090 or statistics@ssa.gov.", 
-            "type": "note"
-        }, 
-        {
-            "content": "File available from:\nU.S. Social Security Administration \u2022 Office of Retirement and Disability Policy \u2022 Office of Research, Evaluation, and Statistics\nAnnual Statistical Supplement, 2014\nhttp://www.socialsecurity.gov/policy/docs/statcomps/supplement/2014/", 
+            "content": "File available from\nUS Social Security Administration \u2022 Office of Retirement and Disability Policy \u2022 Office of Research, Evaluation, and Statistics,\nAnnual Statistical Supplement, 2014,\nhttp://www.socialsecurity.gov/policy/docs/statcomps/supplement/2014/.", 
             "type": "note"
         }
     ], 

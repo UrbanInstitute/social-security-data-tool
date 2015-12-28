@@ -93,10 +93,13 @@ def parseHeader(output, headRows, lastRow, sheet, sheetType, startRow=False, mul
 			if(fixRows[r-2][c].ctype != 0):
 				if((r == headRows-1 and c != 0) or (c == 0 and r ==2)):
 					if sheetType == "medBar":
-						if (sheet.name == "5.H3" or sheet.name == "5.H4") and (c != 1 and c != 2):
+						if(sheet.name == "5.A1.8"):
+							getData(data, fixRows, r, c, headRows, lastRow, sheet, sheetType, startRow, multi)
+						elif (sheet.name == "5.H3" or sheet.name == "5.H4") and (c != 1 and c != 2):
 							getData(data, fixRows, r, c, headRows, lastRow, sheet, sheetType, startRow, multi)
 						elif (c != 1 and sheet.name != "5.H3" and sheet.name != "5.H4"):
 							getData(data, fixRows, r, c, headRows, lastRow, sheet, sheetType, startRow, multi)
+
 					else:
 						if multi:
 							getData(data, fixRows, r, c, headRows, lastRow, sheet, sheetType, startRow-1, multi)
@@ -542,7 +545,7 @@ def addWords(words, string):
 
 parseUnits()
 
-book = xlrd.open_workbook("../data/statistical_supplement/supplement14.xls", formatting_info=True)
+book = xlrd.open_workbook("../data/statistical_supplement/supplement14_new.xls", formatting_info=True)
 sheets = book.sheet_names()
 
 #Years in 1st column (or year ranges), blank 2nd column, data
@@ -661,7 +664,8 @@ for sheet_id in medBar:
 		if testType2 == 6:
 			testType2 = 0
 		testVal = xl_sheet.cell_value(rowx=i, colx=2)
-		if (isinstance(testVal,float) and testType1 == 0 and testType2 != 0) or (xl_sheet.cell_value(rowx=i, colx=1).upper().find("TOTAL") >= 0 and testType1 == 0):
+		# print testVal, testType1, testType2, sheet_id
+		if (isinstance(testVal,float) and testType1 == 0 and testType2 != 0) or xl_sheet.cell_value(rowx=i, colx=0).upper().find("TOTAL") >= 0 or (xl_sheet.cell_value(rowx=i, colx=1).upper().find("TOTAL") >= 0 and testType1 == 0):
 			headRows = i
 			break
 	for i in range(headRows+1, xl_sheet.nrows):
