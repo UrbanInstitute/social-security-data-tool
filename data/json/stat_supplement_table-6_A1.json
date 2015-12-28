@@ -4,7 +4,6 @@
         "col1": {
             "label": "All benefits\u00a0a", 
             "series": [
-                241709300.0, 
                 254984.0, 
                 269286.0, 
                 258116.0, 
@@ -85,7 +84,6 @@
         "col10": {
             "label": "Widow(er)s", 
             "series": [
-                25816418.0, 
                 4600.0, 
                 11020.0, 
                 14774.0, 
@@ -166,7 +164,6 @@
         "col11": {
             "label": "Parents", 
             "series": [
-                115266.0, 
                 852.0, 
                 1272.0, 
                 1266.0, 
@@ -247,7 +244,6 @@
         "col2": {
             "label": "Retired workers", 
             "series": [
-                101828420.0, 
                 132335.0, 
                 114660.0, 
                 99622.0, 
@@ -328,7 +324,6 @@
         "col3": {
             "label": "Disabled workers", 
             "series": [
-                29532450.0, 
                 false, 
                 false, 
                 false, 
@@ -409,7 +404,6 @@
         "col4": {
             "label": "Wives and husbands of\u2014 :: Retired workers", 
             "series": [
-                21642443.0, 
                 34555.0, 
                 36213.0, 
                 33250.0, 
@@ -490,7 +484,6 @@
         "col5": {
             "label": "Wives and husbands of\u2014 :: Disabled workers", 
             "series": [
-                4245812.0, 
                 false, 
                 false, 
                 false, 
@@ -571,7 +564,6 @@
         "col6": {
             "label": "Children of\u2014 :: Retired workers", 
             "series": [
-                8508179.0, 
                 8249.0, 
                 6031.0, 
                 4859.0, 
@@ -652,7 +644,6 @@
         "col7": {
             "label": "Children of\u2014 :: Deceased workers", 
             "series": [
-                24079671.0, 
                 51133.0, 
                 69588.0, 
                 72525.0, 
@@ -733,7 +724,6 @@
         "col8": {
             "label": "Children of\u2014 :: Disabled workers", 
             "series": [
-                19559998.0, 
                 false, 
                 false, 
                 false, 
@@ -814,7 +804,6 @@
         "col9": {
             "label": "Widowed mothers and fathers", 
             "series": [
-                5113209.0, 
                 23260.0, 
                 30502.0, 
                 31820.0, 

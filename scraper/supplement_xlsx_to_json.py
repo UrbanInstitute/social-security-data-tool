@@ -277,6 +277,8 @@ def getData(data, rows, rowNum, colNum, headR, lastRow, sheet, sheetType, startR
 		obj = data["col%i"%colNum] = {}
 		if (sheetType == "medMap"):
 			obj["series"] = getMapSeries(rowNum, colNum, lastRow, sheet, sheetType, startRow)
+		elif (sheetType == "weirdTime"):
+			obj["series"] = getSeries(rowNum+1, colNum, lastRow, sheet, sheetType, startRow)
 		else:
 			obj["series"] = getSeries(rowNum, colNum, lastRow, sheet, sheetType, startRow)
 		label = obj["label"] = getLabel(rows, colNum)
@@ -838,6 +840,7 @@ for sheet_id in weirdTime:
 		secondVal = xl_sheet.cell_value(rowx=i, colx=1)
 		# reg = re.compile(r'19|20', re.UNICODE)
 		if(str(firstVal).find("Total") != -1):
+			print firstVal
 			headRows = i
 			break
 		if(str(secondVal).find("Total") != -1 and firstType == 0):

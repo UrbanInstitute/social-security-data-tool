@@ -4,7 +4,6 @@
         "col1": {
             "label": "Total, all benefits\u00a0a", 
             "series": [
-                174286099.0, 
                 246534.0, 
                 896041.0, 
                 266615.0, 
@@ -77,7 +76,6 @@
         "col10": {
             "label": "Widow(er)s", 
             "series": [
-                16406958.0, 
                 5680.0, 
                 36144.0, 
                 13642.0, 
@@ -150,7 +148,6 @@
         "col11": {
             "label": "Parents", 
             "series": [
-                109244.0, 
                 1044.0, 
                 3901.0, 
                 1118.0, 
@@ -223,7 +220,6 @@
         "col2": {
             "label": "Retired workers", 
             "series": [
-                63665893.0, 
                 84737.0, 
                 304902.0, 
                 98280.0, 
@@ -296,7 +292,6 @@
         "col3": {
             "label": "Disabled workers", 
             "series": [
-                20663968.0, 
                 false, 
                 false, 
                 false, 
@@ -369,7 +364,6 @@
         "col4": {
             "label": "Wives and husbands", 
             "series": [
-                19902823.0, 
                 40811.0, 
                 154261.0, 
                 51200.0, 
@@ -442,7 +436,6 @@
         "col5": {
             "label": "Children :: Total", 
             "series": [
-                47383745.0, 
                 73394.0, 
                 250835.0, 
                 69062.0, 
@@ -515,7 +508,6 @@
         "col6": {
             "label": "Children :: Under\nage 18", 
             "series": [
-                29986145.0, 
                 73394.0, 
                 250835.0, 
                 69062.0, 
@@ -588,7 +580,6 @@
         "col7": {
             "label": "Children :: Disabled adult children", 
             "series": [
-                1143093.0, 
                 false, 
                 false, 
                 false, 
@@ -661,7 +652,6 @@
         "col8": {
             "label": "Children :: Students", 
             "series": [
-                16254507.0, 
                 false, 
                 false, 
                 false, 
@@ -734,7 +724,6 @@
         "col9": {
             "label": "Widowed mothers and fathers", 
             "series": [
-                4920684.0, 
                 40868.0, 
                 145998.0, 
                 33313.0, 

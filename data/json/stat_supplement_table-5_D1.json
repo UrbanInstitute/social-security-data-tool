@@ -4,7 +4,6 @@
         "col1": {
             "label": "All disabled workers :: Number", 
             "series": [
-                8940950.0, 
                 355956.0, 
                 606392.0, 
                 736326.0, 
@@ -51,7 +50,6 @@
         "col10": {
             "label": "Women :: Percentage distribution", 
             "series": [
-                100.0, 
                 3.7, 
                 6.5, 
                 8.1, 
@@ -98,7 +96,6 @@
         "col11": {
             "label": "Women :: Cumulative percent-age\u00a0a", 
             "series": [
-                false, 
                 3.7, 
                 10.2, 
                 18.2, 
@@ -145,7 +142,6 @@
         "col12": {
             "label": "Women :: Average monthly benefit (dollars)", 
             "series": [
-                1011.44, 
                 1108.48, 
                 1084.98, 
                 1085.35, 
@@ -192,7 +188,6 @@
         "col2": {
             "label": "All disabled workers :: Percentage distribution", 
             "series": [
-                100.0, 
                 4.0, 
                 6.8, 
                 8.2, 
@@ -239,7 +234,6 @@
         "col3": {
             "label": "All disabled workers :: Cumulative percentage\u00a0a", 
             "series": [
-                false, 
                 4.0, 
                 10.8, 
                 19.0, 
@@ -286,7 +280,6 @@
         "col4": {
             "label": "All disabled workers :: Average monthly benefit (dollars)", 
             "series": [
-                1146.42, 
                 1284.76, 
                 1251.11, 
                 1248.35, 
@@ -333,7 +326,6 @@
         "col5": {
             "label": "Men :: Number", 
             "series": [
-                4642134.0, 
                 198385.0, 
                 326071.0, 
                 389802.0, 
@@ -380,7 +372,6 @@
         "col6": {
             "label": "Men :: Percentage distribution", 
             "series": [
-                100.0, 
                 4.3, 
                 7.0, 
                 8.4, 
@@ -427,7 +418,6 @@
         "col7": {
             "label": "Men :: Cumulative percent-age\u00a0a", 
             "series": [
-                false, 
                 4.3, 
                 11.3, 
                 19.7, 
@@ -474,7 +464,6 @@
         "col8": {
             "label": "Men :: Average monthly benefit (dollars)", 
             "series": [
-                1271.42, 
                 1424.78, 
                 1393.92, 
                 1393.24, 
@@ -521,7 +510,6 @@
         "col9": {
             "label": "Women :: Number", 
             "series": [
-                4298816.0, 
                 157571.0, 
                 280321.0, 
                 346524.0, 
