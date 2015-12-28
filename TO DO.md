@@ -1,8 +1,7 @@
-- Scrape all the tables
-- Fix broken scrapers
-- mobile
-- table scroll buttons
-- small width footer
+For medBar updates to total columns, fix:
+line 96 in scraper
+supplement_units.csv
+
 - Once final, update
 	- Embed code for charts
 	- years in embed code

@@ -23,7 +23,7 @@
                 303.0, 
                 283.0
             ], 
-            "type": ""
+            "type": "number"
         }, 
         "col2": {
             "label": "All parents :: Average monthly benefit (dollars)", 
@@ -35,7 +35,7 @@
                 1094.73, 
                 1040.97
             ], 
-            "type": "number"
+            "type": "dollar"
         }, 
         "col3": {
             "label": "Men :: Number", 
@@ -47,7 +47,7 @@
                 34.0, 
                 28.0
             ], 
-            "type": "dollar"
+            "type": "number"
         }, 
         "col4": {
             "label": "Men :: Average monthly benefit (dollars)", 
@@ -59,7 +59,7 @@
                 989.78, 
                 869.19
             ], 
-            "type": "number"
+            "type": "dollar"
         }, 
         "col5": {
             "label": "Women :: Number", 
@@ -71,7 +71,7 @@
                 269.0, 
                 255.0
             ], 
-            "type": "dollar"
+            "type": "number"
         }, 
         "col6": {
             "label": "Women :: Average monthly benefit (dollars)", 
@@ -83,7 +83,7 @@
                 1107.99, 
                 1059.84
             ], 
-            "type": "number"
+            "type": "dollar"
         }
     }, 
     "default": "col2", 
