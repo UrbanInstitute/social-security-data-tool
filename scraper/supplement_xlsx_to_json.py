@@ -173,6 +173,12 @@ def getTbody(sheet, sheetType, headR, lastRow, startRow):
 								cell = "%s<span class = \"top_footnote top_%s\">%s</span>"%(cs[0],cs[1],cs[1])
 							else:
 								cell = "<span class = \"top_footnote top_%s\">%s</span>%s"%(cs[0],cs[0],cs[1])
+			else:
+				single = re.compile("^[A-Z|a-z]$")
+				if isinstance(cell, basestring):
+					cell = cell.replace(u'\u2013','-')
+					if(single.match(cell)):
+						cell = "<span class = \"top_footnote top_%s\">%s</span>"%(cell, cell)
 
 			tbody += "<td class=\"col%i\">%s</td>"%(c, cell)
 			if(c==len(row)):
@@ -828,8 +834,12 @@ for sheet_id in weirdTime:
 		firstType = xl_sheet.cell_type(rowx=i, colx=0) 
 		if firstType == 6:
 			firstType = 0
+		firstVal = xl_sheet.cell_type(rowx=i, colx=1) 
 		secondVal = xl_sheet.cell_value(rowx=i, colx=1)
 		# reg = re.compile(r'19|20', re.UNICODE)
+		if(str(firstVal).find("Total") != -1):
+			headRows = i
+			break
 		if(str(secondVal).find("Total") != -1 and firstType == 0):
 			headRows = i
 			break

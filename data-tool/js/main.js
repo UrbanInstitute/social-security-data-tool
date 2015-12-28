@@ -944,6 +944,7 @@ function drawLineChart(input){
     });
 }
 function generateBarFromYear(years, column, year){
+	console.log(years,column,year)
 	var series = [];
 	for(var i = 0; i< years.length; i++){
 //ignore "Total" row in tables such as 5.B4
@@ -1058,7 +1059,7 @@ function drawSingleYearBarChart(input){
             series: [{
             			id: "col1",
                     	name: initId,
-                    	data: [generateBarFromYear(input.data.years.series, input.data.col1.series, "2014")]
+                    	data: [generateBarFromYear(input.data.years.series, input.data.col1.series, String(input.data.years.series[input.data.years.series.length-1]))]
                     }
                   ]
 
