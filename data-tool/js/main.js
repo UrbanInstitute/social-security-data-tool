@@ -91,7 +91,10 @@ function init(){
 }
 
 function getYear(year){
-	if(typeof(year) == "number"){
+	if(year == "Before 1975"){
+		return 1957
+	}
+	else if(typeof(year) == "number"){
 		return year;
 	}
 	else if(year.indexOf("-") != -1){

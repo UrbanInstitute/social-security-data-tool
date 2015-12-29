@@ -196,15 +196,12 @@ def getTH(sheet, rows, rowNum, colNum):
 	th = "<th"
 	rowspan = 1
 	colspan = 1
+	if sheet.name == "5.B4" or sheet.name == "5.D1":
+		print sheet.name, rows
+		print ""
 	for r in range(rowNum+1, len(rows)):
 		row = rows[r]
-		# # fmt = book.xf_list[row[0].xf_index]
-		# # fmt.dump()
-		# # print sheet.name
-		# if sheet.name == '5.A14':
-		# 	# print colNum, r
-		# 	if(colNum == 2):
-		# 		print row[colNum]
+
 		if(row[colNum].ctype == 0 or row[colNum].ctype == 6):
 			rowspan += 1
 		else:
@@ -220,6 +217,9 @@ def getTH(sheet, rows, rowNum, colNum):
 				colspan += 1
 		else:
 			break
+	# if sheet.name == "5.B4" and rows[rowNum][colNum].value == "Year of entitlement":
+	# 	# print rows[rowNum][colNum].value, colspan
+	# 	colspan = 1
 	if (rowspan != 1):
 		th += " rowspan=\"%i\" "%rowspan
 	if (colspan != 1):
@@ -295,8 +295,6 @@ def getData(data, rows, rowNum, colNum, headR, lastRow, sheet, sheetType, startR
 				unit = units[sheet.name][colNum]
 		else:
 			unit = units[sheet.name][colNum]
-		if unit == "":
-			print unit, colNum, sheet.name
 		dType = obj["type"] = unit
 
 def getXSeries(rowNum, colNum, headR, lastRow, sheet, sheetType, startRow):
@@ -314,7 +312,13 @@ def getXSeries(rowNum, colNum, headR, lastRow, sheet, sheetType, startRow):
 			val = sheet.cell_value(rowx=i, colx=colNum)
 			val = getYear(val, monthly)
 			if val:
-				series.append(val)
+				if not isinstance(val, float) and not isinstance(val, int):
+					if val.find("Total") == -1:
+						series.append(val)
+				else:
+					series.append(val)
+		if sheet.name == "5.B4" or sheet.name == "5.D1":
+			series.reverse()
 		return series
 def getBarSeries(rowNum, colNum, headR, lastRow, sheet, sheetType, startRow):
 	if(startRow):
@@ -397,14 +401,11 @@ def getSeries(rowN, colNum, lastRow, sheet, sheetType, startRow):
 					series.append(val)
 				else:
 					continue
-# 			if i < lastRow-2 and sheet.name != "5.F7" and sheet.name != "5.A1.8":
-# #Ignore last row, which is an average
-# 				series.append(val)
-# 			else:
-# 				print "c3", val
-# 				continue
+
 		else:
 			series.append(val)
+	if sheet.name == "5.B4" or sheet.name == "5.D1":
+		series.reverse()
 	return series
 
 def getMapSeries(rowN, colNum, lastRow, sheet, sheetType, startRow):
@@ -470,23 +471,7 @@ def getMapSeries(rowN, colNum, lastRow, sheet, sheetType, startRow):
 	return series
 
 def getLabel(rows, colNum):
-	# label = ""
-	# c = colNum
-	# for r in range(0, len(rows)):
-	# 	row = rows[r]
-	# 	while((row[c].ctype == 0 or row[c].ctype == 6) and c > 0):
-	# 		c -= 1
 
-	# 	if(row[c].ctype != 0 and row[c].ctype != 6):
-	# 		val = row[c].value
-	# 		if(isinstance(val, float)):
-	# 			val = str(val)
-	# 		label += val
-	# 		sep = "" if (r==len(rows)-1) else " :: "
-	# 		label += sep
-	# return label
-	# print rows[len(rows)-1][colNum]
-	# return rows[len(rows)-1][colNum].value
 	label = []
 	tmp = copy.copy(rows)
 	tmp.reverse()
@@ -507,7 +492,6 @@ def getLabel(rows, colNum):
 		else:
 			del tmp[i]
 			flag += 1
-	# print tmp
 	for r in range(0, len(tmp)):
 		row = tmp[r]
 		c = colNum
@@ -552,7 +536,7 @@ sheets = book.sheet_names()
 simpleTimeSheets = ['2.A3','2.A4','4.A1','4.A2','4.A3','4.A4','4.A5','4.A6','4.C1','5.A17','5.D3','5.E2','5.F6','5.F8','6.C7','6.D8']
 
 #time series without blank 2nd column
-col1_exceptions = ['5.A4','5.F4','6.D4','6.C7','5.F8','5.E2','5.D3','5.C2','5.A17','4.C1']
+col1_exceptions = ['5.A4','5.F4','6.D4','6.C7','5.F8','5.E2','5.D3','5.C2','5.A17','4.C1', '5.B4']
 
 #multiple nested time series tables, with merged cells in mostly blank rows serving as table divider/header
 timeMulti = ['5.A4','5.A14','5.F1','5.F4','5.H1','6.B5','6.B5.1','6.C2','6.D4']
@@ -839,11 +823,14 @@ for sheet_id in weirdTime:
 		firstType = xl_sheet.cell_type(rowx=i, colx=0) 
 		if firstType == 6:
 			firstType = 0
-		firstVal = xl_sheet.cell_type(rowx=i, colx=1) 
+		firstVal = xl_sheet.cell_value(rowx=i, colx=0)
+		if not isinstance(firstVal, float):
+			firstVal = firstVal.replace(u'\u2014',"").replace(u'\xa0', u' ').replace(u'\u2013', u' ')
 		secondVal = xl_sheet.cell_value(rowx=i, colx=1)
+		if not isinstance(secondVal, float):
+			secondVal = secondVal.replace(u'\u2014',"").replace(u'\xa0', u' ').replace(u'\u2013', u' ')
 		# reg = re.compile(r'19|20', re.UNICODE)
 		if(str(firstVal).find("Total") != -1):
-			print firstVal
 			headRows = i
 			break
 		if(str(secondVal).find("Total") != -1 and firstType == 0):
