@@ -499,7 +499,7 @@
                     "value": 27158.0
                 }
             ], 
-            "type": ""
+            "type": "number"
         }, 
         "col3": {
             "label": "Retired workers :: Percent", 
@@ -749,7 +749,7 @@
                     "value": 1.0
                 }
             ], 
-            "type": "number"
+            "type": "percent"
         }, 
         "col4": {
             "label": "Retired workers :: Average monthly benefit\u00a0a (dollars)", 
@@ -999,7 +999,7 @@
                     "value": 702.73
                 }
             ], 
-            "type": "percent"
+            "type": "dollar"
         }, 
         "col5": {
             "label": "Disabled workers :: Number", 
@@ -1249,7 +1249,7 @@
                     "value": 1265.0
                 }
             ], 
-            "type": "dollar"
+            "type": "number"
         }, 
         "col6": {
             "label": "Disabled workers :: Percent", 
@@ -1499,7 +1499,7 @@
                     "value": 0.1
                 }
             ], 
-            "type": "number"
+            "type": "percent"
         }, 
         "col7": {
             "label": "Disabled workers :: Average monthly benefit\u00a0a (dollars)", 
@@ -1749,7 +1749,7 @@
                     "value": 1049.96
                 }
             ], 
-            "type": "percent"
+            "type": "dollar"
         }
     }, 
     "footnotes": [
@@ -1776,7 +1776,7 @@
             "type": "footnote"
         }, 
         {
-            "content": "File available from\nUS Social Security Administration \u2022 Office of Retirement and Disability Policy \u2022 Office of Research, Evaluation, and Statistics,\nAnnual Statistical Supplement, 2014,\nhttp://www.socialsecurity.gov/policy/docs/statcomps/supplement/2014/.", 
+            "content": "File available from\nUS Social Security Administration \u2022 Office of Retirement and Disability Policy \u2022 Office of Research, Evaluation, and Statistics,\n<span class =\"suppTitle\">Annual Statistical Supplement, 2014</span>,\nhttp://www.socialsecurity.gov/policy/docs/statcomps/supplement/2014/.", 
             "type": "note"
         }
     ], 

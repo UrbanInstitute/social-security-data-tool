@@ -51,7 +51,10 @@ def parseFootnotes(sheet, lastRow):
 		if(type0 == 0 and type1 ==0):
 			continue
 		elif(type0 != 0 and type1 == 0):
-			notes.append({"type":"note", "content":row[0].value})
+			if(isinstance(row[0].value, float)):
+				notes.append({"type":"note", "content":row[0].value})
+			else:
+				notes.append({"type":"note", "content":row[0].value.replace("Annual Statistical Supplement, 2014", "<span class =\"suppTitle\">Annual Statistical Supplement, 2014</span>")})
 		else:
 			notes.append({"type":"footnote", "symbol":row[0].value, "content":row[1].value})
 	return notes

@@ -806,7 +806,7 @@
             "type": "footnote"
         }, 
         {
-            "content": "File available from\nUS Social Security Administration \u2022 Office of Retirement and Disability Policy \u2022 Office of Research, Evaluation, and Statistics,\nAnnual Statistical Supplement, 2014,\nhttp://www.socialsecurity.gov/policy/docs/statcomps/supplement/2014/.", 
+            "content": "File available from\nUS Social Security Administration \u2022 Office of Retirement and Disability Policy \u2022 Office of Research, Evaluation, and Statistics,\n<span class =\"suppTitle\">Annual Statistical Supplement, 2014</span>,\nhttp://www.socialsecurity.gov/policy/docs/statcomps/supplement/2014/.", 
             "type": "note"
         }
     ], 

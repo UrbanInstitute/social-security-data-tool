@@ -354,8 +354,8 @@ function drawTable(input){
 	var fn = d3.select("#testTable")
 		.append("div")
 		.attr("class", "footnotes")
-	fn.append("div")
-	.html("<div class = \"tableSource\"><a href = \"https://www.ssa.gov/policy/docs/statcomps/supplement/\">The data in this table are from the Social Security Administration’s Annual Statistical Supplement, 2014. The parenthetical numbers with the titles are retained from the supplement for reference.</a></div>")
+	// fn.append("div")
+	// .html("<div class = \"tableSource\"><a href = \"https://www.ssa.gov/policy/docs/statcomps/supplement/\">The data in this table are from the Social Security Administration’s Annual Statistical Supplement, 2014. The parenthetical numbers with the titles are retained from the supplement for reference.</a></div>")
 	var tWidth = d3.select("thead").node().getBoundingClientRect().width;
 	for(var i = 0; i<input.footnotes.length; i++){
 		var note = input.footnotes[i]
@@ -725,8 +725,13 @@ function drawBar(input, col){
             },
             credits: {
                 enabled: true,
-                text: "<a href = \"https://www.ssa.gov/policy/docs/statcomps/supplement/\">Social Security Administration, Annual Statistical Supplement, 2014</a>",
-                href: "https://www.ssa.gov/policy/docs/statcomps/supplement/"
+                text: "<a href = \"https://www.ssa.gov/policy/docs/statcomps/supplement/\">These data are from the Social Security Administration's <em>Annual Statistical Supplement, 2014</em>. The parenthetical numbers with the titles are retained from the supplement for reference.</a>",
+                href: "https://www.ssa.gov/policy/docs/statcomps/supplement/",
+                style:{
+                		color: '#1696d2',
+                		fill: '#1696d2'
+                },
+                title: false
             },
             legend: {
                 enabled: true,
@@ -807,8 +812,13 @@ function drawMap(input, col){
         },
         credits: {
             enabled: true,
-            text: "<a href = \"https://www.ssa.gov/policy/docs/statcomps/supplement/\">Social Security Administration, Annual Statistical Supplement, 2014</a>",
-            href: "https://www.ssa.gov/policy/docs/statcomps/supplement/"
+            text: "<a href = \"https://www.ssa.gov/policy/docs/statcomps/supplement/\">These data are from the Social Security Administration's <em>Annual Statistical Supplement, 2014</em>. The parenthetical numbers with the titles are retained from the supplement for reference.</a>",
+            href: "https://www.ssa.gov/policy/docs/statcomps/supplement/",
+            style:{
+            		color: '#1696d2',
+            		fill: '#1696d2'
+            },
+            title: false
         },
         series : [{
             data : input["data"][col]["series"],
@@ -923,8 +933,13 @@ function drawLineChart(input){
             },
             credits: {
                 enabled: true,
-                text: "<a href = \"https://www.ssa.gov/policy/docs/statcomps/supplement/\">Social Security Administration, Annual Statistical Supplement, 2014</a>",
-                href: "https://www.ssa.gov/policy/docs/statcomps/supplement/"
+                text: "<a href = \"https://www.ssa.gov/policy/docs/statcomps/supplement/\">These data are from the Social Security Administration's <em>Annual Statistical Supplement, 2014</em>. The parenthetical numbers with the titles are retained from the supplement for reference.</a>",
+                href: "https://www.ssa.gov/policy/docs/statcomps/supplement/",
+                style:{
+                		color: '#1696d2',
+                		fill: '#1696d2'
+                },
+                title: false
             },
             legend: {
             align: 'top',
@@ -1046,8 +1061,13 @@ function drawSingleYearBarChart(input){
             },
             credits: {
                 enabled: true,
-                text: "<a href = \"https://www.ssa.gov/policy/docs/statcomps/supplement/\">Social Security Administration, Annual Statistical Supplement, 2014</a>",
-                href: "https://www.ssa.gov/policy/docs/statcomps/supplement/"
+                text: "<a href = \"https://www.ssa.gov/policy/docs/statcomps/supplement/\">These data are from the Social Security Administration's <em>Annual Statistical Supplement, 2014</em>. The parenthetical numbers with the titles are retained from the supplement for reference.</a>",
+                href: "https://www.ssa.gov/policy/docs/statcomps/supplement/",
+                style:{
+                		color: '#1696d2',
+                		fill: '#1696d2'
+                },
+                title: false
             },
             legend: {
                 enabled: false,

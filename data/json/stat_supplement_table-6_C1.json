@@ -95,7 +95,7 @@
                 14369.0, 
                 61347.0
             ], 
-            "type": ""
+            "type": "number"
         }, 
         "col2": {
             "label": "Total :: Percent", 
@@ -143,7 +143,7 @@
                 1.7, 
                 7.1
             ], 
-            "type": "number"
+            "type": "percent"
         }, 
         "col3": {
             "label": "Men :: Number", 
@@ -191,7 +191,7 @@
                 10658.0, 
                 48826.0
             ], 
-            "type": "percent"
+            "type": "number"
         }, 
         "col4": {
             "label": "Men :: Percent", 
@@ -239,7 +239,7 @@
                 2.3, 
                 10.6
             ], 
-            "type": "number"
+            "type": "percent"
         }, 
         "col5": {
             "label": "Women :: Number", 
@@ -287,7 +287,7 @@
                 3711.0, 
                 12521.0
             ], 
-            "type": "percent"
+            "type": "number"
         }, 
         "col6": {
             "label": "Women :: Percent", 
@@ -335,7 +335,7 @@
                 0.9, 
                 3.1
             ], 
-            "type": "number"
+            "type": "percent"
         }
     }, 
     "default": "col2", 
@@ -357,7 +357,7 @@
             "type": "note"
         }, 
         {
-            "content": "File available from\nUS Social Security Administration \u2022 Office of Retirement and Disability Policy \u2022 Office of Research, Evaluation, and Statistics,\nAnnual Statistical Supplement, 2014,\nhttp://www.socialsecurity.gov/policy/docs/statcomps/supplement/2014/.", 
+            "content": "File available from\nUS Social Security Administration \u2022 Office of Retirement and Disability Policy \u2022 Office of Research, Evaluation, and Statistics,\n<span class =\"suppTitle\">Annual Statistical Supplement, 2014</span>,\nhttp://www.socialsecurity.gov/policy/docs/statcomps/supplement/2014/.", 
             "type": "note"
         }
     ], 
