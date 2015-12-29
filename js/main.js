@@ -1105,12 +1105,12 @@ function getDocURL(id){
 }
 function getJSONPath(id){
 	if (id == "words"){
-		return "../data/words.json"
+		return "data/words.json"
 	}
 	else if (id == "titles"){
-		return "../data/titles.json"
+		return "data/titles.json"
 	}else{
-		return "../data/json/stat_supplement_table-" + id + ".json"
+		return "data/json/stat_supplement_table-" + id + ".json"
 	}
 }
 function singleYear(){
