@@ -22,36 +22,129 @@ var MONTHABBREVS = ["Jan", "Feb", "Mar", "Apr", "May", "June",
 var IE = false;
 // var embed = false;
 
+
+var exportParams = {}
+
 function init(){
+	tableIndex = sheets.indexOf(getQueryVariable("tableID"))
+	columns = getQueryVariable("columns").split(",")
+	category = getQueryVariable("chartType")
+	inYears = getQueryVariable("years").split(",")
 	// $.get( getDocURL("2A3"), function(resp) {
 	setLayout();
-	// if(getQueryVariable("tableID") != null){
-	tableID = getQueryVariable("tableID")
-	columns = getQueryVariable("columns").split(",")
-	chartType = getQueryVariable("chartType")
-	
+
 	setTimeout(function(){
-		console.log(tableID)
-		$.getJSON( getJSONPath(tableID), function(resp){
+		$.getJSON( getJSONPath(sheets[tableIndex].replace(/\./g,"_")), function(resp){
 		  // var data = resp.results[0];
 		  var data = resp;
-		  console.log(data, tableIndex)
 		  // var category = data.category;
-		  switch(chartType){
-		  	case "lineChart":
+		  switch(category){
+		  	case "timeSeries":
+		  		var years = data.data.years.series;
+		  		drawScrubber(getYear(years[0]), getYear(years[years.length-1]));
 		  		drawLineChart(data);
+		  		multiYear();
+		  		showScrubber();
+				var lineChart = $('#lineChart').highcharts();
+		  		for(var i = 0; i< columns.length; i++){
+		  			var series = columns[i]
+		  			var seriesID = data["data"][series]["label"]
+
+	  				lineChart.addSeries({
+						id: series,
+		            	name: seriesID,
+		            	data: generateTimeSeries(data.data.years.series, data["data"][series]["series"])
+					});
+		  		}
+		  		changeYears(inYears[0],inYears[1])
 		  		break;
 		  	case "timeBar":
-	  			drawSingleYearBarChart(data);
+		  		var years = data.data.years.series;
+		  		drawScrubber(getYear(years[0]), getYear(years[years.length-1]));
+		  		drawLineChart(data);
+		  		var lineChart = $('#lineChart').highcharts();
+
+		  		for(var i = 0; i< columns.length; i++){
+		  			var series = columns[i]
+		  			var seriesID = data["data"][series]["label"]
+
+	  				lineChart.addSeries({
+						id: series,
+		            	name: seriesID,
+		            	data: generateTimeSeries(data.data.years.series, data["data"][series]["series"])
+					});
+		  		}
+		  		drawSingleYearBarChart(data, columns[0], inYears[0]);
+
+		  		for(var i = 1; i< columns.length; i++){
+			  			var series = columns[i]
+			  			var seriesID = data["data"][series]["label"]
+					    var singleYearBarChart = $('#singleYearBarChart').highcharts();
+
+						singleYearBarChart.series[0].addPoint(generateBarFromYear(data.data.years.series, data["data"][series]["series"], inYears[0]))
+
+						$.each(singleYearBarChart.series[0].data, function(k,v){
+							v.update({
+								x: k
+							});
+						});
+
+						var categories = singleYearBarChart.xAxis[0].categories
+						categories.push(seriesID)
+						singleYearBarChart.xAxis[0].setCategories(categories)
+
+						singleYearBarChart.redraw();
+						var options = lineChart.options;
+    					options.tooltip.enabled = false;
+    			}
+
+
+
+		  		singleYear();
+		  		showScrubber();
+		  		break;
 		  	case "map":
+		  	  	exportParams.chartType = "map"
 		  		drawMap(data,columns[0])
+		  		hideScrubber();
+		  		break;
+		  	case "barChart":
+		  		exportParams.chartType = "barChart";
+				drawBar(data,columns[0]);
+		  	  	for(var i = 1; i< columns.length; i++){
+		  	  						var barChart = $('#barChart').highcharts();
+
+		  			var series = columns[i]
+		  			var seriesID = data["data"][series]["label"]
+
+		  			barChart.addSeries({
+						id: series[0],
+		            	name: seriesID,
+                		data: data["data"][series]["series"]
+					})
+		  		}
+		  		hideScrubber();
 		  		break;
 		  }
 		});
 		setTheme();
-		// filterSheets(tableIndex)
 		yearBarCache = {};
 	}, 1000);
+}
+
+function getYear(year){
+	if(year == "Before 1975"){
+		return 1957
+	}
+	else if(typeof(year) == "number"){
+		return year;
+	}
+	else if(year.indexOf("-") != -1){
+		var ys = year.split("-")
+		if(ys[0].search(/\d/g) != -1){
+			return parseFloat(ys[0].replace(/[^\d]/g,""))
+		} else{ return parseFloat(ys[1].replace(/[^\d]/g,""))}
+	} else{ return parseFloat(year.replace(/[^\d]/g,""))}
 }
 
 
@@ -72,8 +165,145 @@ function setLayout(){
 		.duration(0)
 		.style("margin-top","20px")
 
-	// var nameValue = document.getElementById("searchBox").value;
-	// console.log(nameValue)
+}
+function resizeHeader(header, bodyCells){
+// 	var oldWidth = parseFloat(d3.select(header).style("width").replace("px",""));
+// 	var headerRemainder = parseFloat(header.getBoundingClientRect().width) - oldWidth;
+// 	var bodyWidth = 0;
+// 	for(var i = 0; i < bodyCells.length; i++){
+// 		bodyWidth += parseFloat(bodyCells[i].getBoundingClientRect().width);
+// 	}
+//  	var w =  bodyWidth - headerRemainder;
+// //If header is longer than body cell, resize bodycell's width.
+//  	if(oldWidth > w && bodyCells.length == 1){
+//  		d3.select(bodyCells[0]).style("width", oldWidth)
+//  		d3.select(header).style("width", oldWidth)
+
+//  	}
+//  //otherwise, resize header to width of bodycell(s)
+// 	else{
+// 		d3.select(header).style("width", w)
+// 		d3.select(header).select("div").style("width", w)
+
+// 	}
+	// return false
+}
+function formatTable(tableID){
+//draw sortArrows
+// 	d3.selectAll("#" + tableID + " thead th")
+// 		.append("i")
+// 		.attr("class","sortArrow")
+
+// //Make table sortable using mottie's jquery tablesorter, bind click events to sort arrows
+// 	$(function(){
+// 	  $("#" + tableID + " table").tablesorter({
+// 	  		selectorSort: "i"
+// 	  });
+// 	});
+
+//Determine which columns fall under which headers, and resize width to width of child columns
+	// var rows = d3.selectAll("thead tr")[0]
+	// var bodyRow = d3.select("tbody tr").selectAll("td")
+	// var holder = Array.apply(null, Array(rows.length)).map(function(){return bodyRow[0].slice()});
+	// for(var i = 0; i < rows.length; i++){
+	// 	var headers = d3.select(rows[i]).selectAll("th")
+	// 	headers[0].forEach(function(h){
+	// 		var colspan = (d3.select(h).attr("colspan") == null) ? 1 : parseInt(d3.select(h).attr("colspan"));
+	// 		var rowspan = (d3.select(h).attr("rowspan") == null) ? 1 : parseInt(d3.select(h).attr("rowspan"));
+	// 		resizeHeader(h, holder[i].splice(0,colspan))
+	// 		if(rowspan != 1 && i != rows.length-1){
+	// 			for(j = i+1; j + i < rowspan; j++ ){
+	// 				holder[j].splice(0,colspan)
+	// 			}
+	// 		}
+	// 	})			
+	// }
+
+
+//Determine height of thead, and set initial position of tbody to be just under thead
+
+//unbind charting to sort arrows (clicking arrow does not add/remove series)
+	d3.selectAll(".sortArrow").on("click", function(){
+			d3.event.stopPropagation()
+	})
+
+	d3.selectAll("th")
+		.style("width", function(){
+			var cs = d3.select(this).attr("colspan")
+			var w;
+			if(d3.select(this).classed("col0") && cs > 1){
+				w = (cs == null || cs == 1) ? 100 : 120*cs-20 + 2	
+			}else{
+				w = (cs == null || cs == 1) ? 100 : 120*cs-20
+			}
+			return w;
+		})
+		.style("max-width", function(){
+			var cs = d3.select(this).attr("colspan")
+			var w;
+			if(d3.select(this).classed("col0") && cs > 1){
+				w = (cs == null || cs == 1) ? 100 : 120*cs-20 + 2	
+			}else{
+				w = (cs == null || cs == 1) ? 100 : 120*cs-20
+			}
+			return w;
+		})
+		.style("min-width", function(){
+			var cs = d3.select(this).attr("colspan")
+			var w;
+			if(d3.select(this).classed("col0") && cs > 1){
+				w = (cs == null || cs == 1) ? 100 : 120*cs-20 + 2	
+			}else{
+				w = (cs == null || cs == 1) ? 100 : 120*cs-20
+			}
+			return w;
+		})
+	// d3.selectAll("th")
+	d3.selectAll("td")
+		.style("width", function(){
+			var cs = d3.select(this).attr("colspan")
+			var w = (cs == null || cs == 1) ? 100 : 120*cs-20
+			return w
+		})
+		.style("max-width", function(){
+			var cs = d3.select(this).attr("colspan")
+			var w = (cs == null || cs == 1) ? 100 : 120*cs-20
+			return w;
+		})
+		.style("min-width", function(){
+			var cs = d3.select(this).attr("colspan")
+			var w = (cs == null || cs == 1) ? 100 : 120*cs-20
+			return w;
+		})
+
+
+//center table in window
+	var tWidth = $("thead").width()
+	var wWidth = $(window).width()
+	var margin = (wWidth - tWidth) / 2.0
+	d3.select("table")
+		.style("margin-left",70)
+	var headHeight = d3.select("thead").node().getBoundingClientRect().height
+	var bodyHeight = d3.select("tbody").node().getBoundingClientRect().height
+	var tablePos = parseInt(d3.select("#tableContainer").style("margin-top").replace("px",""))
+	d3.select("tbody").style("top", (headHeight + tablePos) + "px")
+
+	d3.select("table").style("height", (headHeight + bodyHeight) + "px")
+	var comma = d3.format(",")
+	var dec = d3.format(".2,")
+	d3.selectAll("td")
+		.html(function(){
+			var td = d3.select(this)
+			var val = td.html()
+			if(td.classed("col0")){
+				return val;
+			}
+			else if(!isNaN(parseFloat(val))){
+				return comma(d3.select(this).html())
+			}
+			else{ return val}
+		})
+
 }
 function checkUnitCompatibility(unit, input, charts){
 	d3.selectAll("th.selected")
@@ -83,18 +313,26 @@ function checkUnitCompatibility(unit, input, charts){
 			if(input["data"][series]["type"] == unit){
 				return true
 			} else{
-				for(var i = 0; i<charts.length; i++){ removeSeries(charts[i], input["data"][series]["label"]) }
+				for(var i = 0; i<charts.length; i++){
+				 	removeSeries(charts[i], input["data"][series]["label"]) 
+		 			var tmp = exportParams.columns.indexOf(series);
+					exportParams.columns.splice(tmp, 1)
+
+				}
 				d3.select("#interactionInstructions .warning")
 					.transition()
 					.duration(100)
-					.style("color","#ff0000")
+					.style("color","#ec008b")
 					.transition()
-					.delay(1000)
+					.delay(3000)
 					.duration(500)
 					.style("color","#000000	")
 				return false
 			}
 		})
+
+	d3.selectAll("th.singleSelected:not(.selected)")
+		.classed("singleSelected",false)
 
 }
 function generateTimeSeries(year, column){
@@ -107,10 +345,10 @@ function generateTimeSeries(year, column){
 		}
 		else if(typeof(year[i]) == "number"){
 //simple case, like "2014"
-			series.push([Date.UTC(year[i], 0, 1), y]);
+			series.push([Date.UTC(year[i], 0, 2), y]);
 		}
 		else if(year[i].indexOf("Before 1975") != -1){
-			series.push([Date.UTC(1935, 0, 1), y]);
+			series.push([Date.UTC(1957, 0, 2), y]);
 		}
 //cases like 1950 (Jan.–Aug.) or 1995 (Dec.)
 		else if(year[i].indexOf("(") != -1){
@@ -147,7 +385,7 @@ function getDate(y1, y2, parenthetical){
 				break;
 			}
 		}
-		return Date.UTC(parseInt(year),m,1)
+		return Date.UTC(parseInt(year),m,2)
 
 	}else{
 		for (var i = 0; i< MONTHNAMES.length; i++){
@@ -159,48 +397,193 @@ function getDate(y1, y2, parenthetical){
 		if(!y2){
 //cases like January 2005	
 			mYear = y1.replace(/[A-Za-z ]/g,"")
-			return Date.UTC(parseInt(mYear),m,1)
+			return Date.UTC(parseInt(mYear),m,2)
 		}
 		else if(typeof(m)== "number" && !isNaN(m)){
 			year = y1.replace(/[A-Za-z ]/g,"")
 			if(year == ""){
 //cases like January–June 1999	
 				year2 = y2.replace(/[A-Za-z ]/g,"")
-				return Date.UTC(parseInt(year2),m,1)
+				return Date.UTC(parseInt(year2),m,2)
 			}else{
 //cases like July 1968–1973
-				return Date.UTC(parseInt(year),m,1)
+				return Date.UTC(parseInt(year),m,2)
 			}
 		}else{
 //cases like 1968-June 1999
-			return Date.UTC(parseInt(y1), 0, 1)
+			return Date.UTC(parseInt(y1), 0, 2)
 		}
 	}
 }
+function drawBar(input, col){
+	// var col = (typeof(input.default) != "undefined") ? input.default : "col1"
+	var labels = (input["data"]["categories"]["series"].length > 6) ? false : true;
+	var marginBottom = (labels) ? 80 : 110;
+	var marginLeft = (labels) ? 60 : 80;
+	var initId = input["data"][col]["label"]
+        $('#barChart').highcharts({
+            chart: {
+                marginTop: 150,
+                marginBottom: marginBottom,
+                marginLeft: marginLeft,
+                type: 'column'
+
+            },
+            plotOptions: {
+                series: {
+                    marker: {
+                        enabled: true
+                    },
+
+                    dataLabels: {
+                        enabled: labels,
+                        align: 'center',
+                        formatter: function (){
+                        	if(this.y == false || this.y==null){
+                        		return null
+                        	}else{
+                        		return formatLabel(this.x, this.y, input, col, "tooltipBar")
+                            }
+                        }
+                    }
+                }
+            },
+            title: {
+                text: "<div class = \"chartSubtitle\">" + input.title.category + "</div>" + "<div class = \"chartTitle\">" + input.title.name + "</div>"
+            },
+            xAxis: {
+                gridLineWidth: '0',
+                lineWidth: 2,
+                tickInterval: 0,
+                categories: input["data"]["categories"]["series"],
+                plotLines: [{
+                    value: 0,
+                    width: 0
+                        }],
+                labels: {
+                    step: 0,
+                    x: 0,
+                    y: 20
+                }
+            },
+            yAxis: {
+                title: {
+                    text: ''
+                },
+                labels: {
+                	formatter: function(){
+                		return formatLabel(this, null, input, this.chart.series[0].userOptions.id, "label")
+                	}
+                    // format: '${value:.0f}'
+                }
+            },
+            tooltip: {
+            	enabled: !labels,
+                formatter: function () {
+                	if(this.y == false || this.y==null){
+                        return null
+                    }else{
+                    	return formatLabel(this.x, this.y, input, this.series.userOptions.id, "tooltipBar")
+                    }
+                }
+            },
+            credits: {
+                enabled: true,
+                text: "<a href = \"https://www.ssa.gov/policy/docs/statcomps/supplement/\">These data are from the Social Security Administration's <em>Annual Statistical Supplement, 2014</em>. The parenthetical numbers with the titles are retained from the supplement for reference.</a>",
+                href: "https://www.ssa.gov/policy/docs/statcomps/supplement/",
+                style:{
+                		color: '#1696d2',
+                		fill: '#1696d2'
+                },
+                title: false
+            },
+            legend: {
+                enabled: true,
+                floating: 'true',
+                align: 'left',
+                verticalAlign: 'left',
+                layout: 'horizontal',
+                borderWidth: 0,
+                itemDistance: 9,
+                y: 40
+            },
+            series: [{
+            			id: col,
+                    	name: initId,
+                    	data: input["data"][col]["series"]
+                    }
+                  ]
+
+        });
+	d3.select("#lineChart")
+		.transition()
+		.style("left",-3000)
+	d3.select("#singleYearBarChart")
+		.transition()
+		.style("left",3000)
+	d3.select("#map")
+		.transition()
+		.style("left",3000)
+	d3.select("#barChart")
+		.transition()
+		.style("left","0px")
+}
+
 function drawMap(input, col){
 	var initId = input["data"][col]["label"]
 	$('#map').highcharts('Map', {
-        title : {
-            text : input.title.name
-        },
+        title: {
+                text: "<div class = \"chartSubtitle\">" + input.title.category + "</div>" + "<div class = \"chartTitle\">" + input.title.name + "</div>"
+            },
         mapNavigation: {
         	enableMouseWheelZoom: false,
             enabled: true,
             buttonOptions: {
-                verticalAlign: 'bottom'
+                verticalAlign: 'bottom',
+                symbolFill: "#333333",
+                symbolStroke: "#333333"
             }
         },
         chart:{
-        	marginTop: 50,
+        	marginTop: 80,
         	marginBottom: 70
         },
         colorAxis: {
             // min: 0,
             // max: 100000,
             minColor: "#f0f0f0",
-            maxColor: "#1696d2"
-        },
+            maxColor: "#1696d2",
+            labels:{
+            	formatter: function(){
+            		return formatLabel(this, null, input, col, "labelMap")
+            	}
+            }
 
+        },
+        legend:{
+        	title: {
+        		text: initId
+        	}        	// ,
+        },
+        tooltip: {
+                formatter: function () {
+                	// if(this.y == false || this.y==null){
+                        // return null
+                    // }else{
+                    	return formatLabel(this.key, this.point.value, input, col, "tooltipMap")
+                    // }
+                }
+        },
+        credits: {
+            enabled: true,
+            text: "<a href = \"https://www.ssa.gov/policy/docs/statcomps/supplement/\">These data are from the Social Security Administration's <em>Annual Statistical Supplement, 2014</em>. The parenthetical numbers with the titles are retained from the supplement for reference.</a>",
+            href: "https://www.ssa.gov/policy/docs/statcomps/supplement/",
+            style:{
+            		color: '#1696d2',
+            		fill: '#1696d2'
+            },
+            title: false
+        },
         series : [{
             data : input["data"][col]["series"],
             mapData: Highcharts.maps['countries/us/custom/us-all-territories'],
@@ -232,21 +615,25 @@ function drawMap(input, col){
     });
 	d3.select("#lineChart")
 		.transition()
-		.style("left",-2000)
+		.style("left",-3000)
 	d3.select("#singleYearBarChart")
 		.transition()
-		.style("left",2000)
+		.style("left",3000)
+	d3.select("#barChart")
+		.transition()
+		.style("left",3000)
 	d3.select("#map")
 		.transition()
-		.style("left","400px")
+		.style("left","0px")
 }
+
 
 function drawLineChart(input){
 	var initId = input["data"]["col1"]["label"]
     $('#lineChart').highcharts({
             chart: {
-                marginTop: 100,
-                marginBottom: 40
+                marginTop: 150,
+                marginBottom: 100
             },
             plotOptions: {
                 series: {
@@ -257,8 +644,13 @@ function drawLineChart(input){
             },
 
             title: {
-                text: input.title.name
+                text: "<div class = \"chartSubtitle\">" + input.title.category + "</div>" + "<div class = \"chartTitle\">" + input.title.name + "</div>"
             },
+            // subtitle: {
+            //     text: "<div class = \"chartSubtitle\">" + input.title.name + "</div>"
+            //     // x: 0,
+            //     // y: 35
+            // },
             subtitle: {
                 text: '',
                 x: 0,
@@ -280,68 +672,93 @@ function drawLineChart(input){
                     text: ''
                 },
                 labels: {
-                    format: '${value:.0f}'
+                	formatter: function(){
+                		return formatLabel(this, null, input, this.chart.series[0].userOptions.id, "label")
+                	}
+                    // format: '${value:.0f}'
                 }
             },
             tooltip: {
-                shared: true,
-                valuePrefix: '$',
-                valueDecimals: 0
+			    crosshairs: {
+			        color: 'rgb(159,159,159)',
+			        dashStyle: 'solid'
+			    },
+                shared: false,
+                valueDecimals: 0,
+                formatter: function () {
+                	if(this.y == false || this.y==null){
+                        return null
+                    }else{
+                    	var arrayOfSeries = this;
+                    	return formatLabel(this.x, this.y, input, this.series.userOptions.id, "tooltipLine")
+
+                    }
+                }
             },
             credits: {
-                enabled: false,
-                text: "",
-                href: "http://www.neighborhoodinfodc.org"
+                enabled: true,
+                text: "<a href = \"https://www.ssa.gov/policy/docs/statcomps/supplement/\">These data are from the Social Security Administration's <em>Annual Statistical Supplement, 2014</em>. The parenthetical numbers with the titles are retained from the supplement for reference.</a>",
+                href: "https://www.ssa.gov/policy/docs/statcomps/supplement/",
+                style:{
+                		color: '#1696d2',
+                		fill: '#1696d2'
+                },
+                title: false
             },
             legend: {
-                enabled: true,
-                floating: 'true',
-                align: 'center',
-                verticalAlign: 'left',
-                layout: 'horizontal',
+            align: 'top',
+            verticalAlign: 'top',
+            layout: 'vertical',
+            // width: 140,
+            // useHTML: true,
+            x: 0,
+            y: 40,
                 borderWidth: 0,
                 itemDistance: 9,
-                y: 40
             },
 
-        series: [{
-        	id: initId,
-            name: initId,
-            data: generateTimeSeries(input.data.years.series, input.data.col1.series)
-        }
-        ]
+        // series: [{
+        // 	id: "col1",
+        //     name: initId,
+        //     data: generateTimeSeries(input.data.years.series, input.data.col1.series)
+        // }
+        // ]
     });
 }
 function generateBarFromYear(years, column, year){
 	var series = [];
 	for(var i = 0; i< years.length; i++){
 //ignore "Total" row in tables such as 5.B4
-		if(years[i] == false){
+		var y = years[i]
+		if(typeof(y) == "string"){
+			y = y.replace(/\s/g,"").replace(/[A-Z|a-z]/g,"")
+		}
+		if(y == false){
 			return null;
 		}
-		else if(typeof(years[i]) == "number"){
-			series.push([Date.UTC(years[i], 0, 1), column[i]]);
+		else if(typeof(y) == "number" || y.search("-") == -1){
+			series.push([Date.UTC(y, 0, 2), column[i]]);
 		}else{
-			var range = years[i].split("-");
+			var range = y.split("-");
 			var start = parseInt(range[0]);
 			var end = parseInt(range[1]);
 			for(var c=start; c<=end; c++){
-				series.push([Date.UTC(c, 0, 1), column[i]]);	
+				series.push([Date.UTC(c, 0, 2), column[i]]);	
 			}
 		}
 	}
 	for(var j = 0; j < series.length; j++){
-		if(series[j][0] == Date.UTC(parseInt(year), 0, 1)){
+		if(series[j][0] == Date.UTC(parseInt(year), 0, 2)){
 			return series[j][1]
 		}
 	}
-	return false;
+	return "not found";
 }
-function drawSingleYearBarChart(input){
-	var initId = input["data"]["col1"]["label"]
+function drawSingleYearBarChart(input, col, year){
+	var initId = input["data"][col]["label"]
         $('#singleYearBarChart').highcharts({
             chart: {
-                marginTop: 10,
+                marginTop: 90,
                 marginBottom: 80,
                 type: 'column'
 
@@ -359,19 +776,14 @@ function drawSingleYearBarChart(input){
                         	if(this.y == false || this.y==null){
                         		return null
                         	}else{
-                            	return '' + '$' + this.y + ' million';
+                            	return formatLabel(this.x, this.y, input, this.series.userOptions.id, "tooltipBar")
                             }
                         }
                     }
                 }
             },
-            title: {
-                text: input.title.name
-            },
-            subtitle: {
-                text: '',
-                x: 0,
-                y: 35
+			title: {
+                text: "<div class = \"chartSubtitle\">" + input.title.category + "</div>" + "<div class = \"chartTitle\">" + input.title.name + " :: " + String(year) + "</div>"
             },
             xAxis: {
                 gridLineWidth: '0',
@@ -389,51 +801,62 @@ function drawSingleYearBarChart(input){
                 }
             },
             yAxis: {
-                lineWidth: 0,
-                gridLineWidth: 0,
-                minorGridLineWidth: 0,
-                lineColor: 'transparent',
-                labels: {
-                    enabled: false
-                },
-                minorTickLength: 0,
-                tickLength: 0,
                 title: {
-                    text: null
+                    text: ''
+                },
+                labels: {
+                	formatter: function(){
+                		return formatLabel(this, null, input, $('#lineChart').highcharts().series[0].userOptions.id, "label")
+                	}
+                    // format: '${value:.0f}'
                 }
             },
             tooltip: {
-                formatter: function () {
-                	if(this.y == false || this.y==null){
-                        return null
-                    }else{
-                    	return '' +
-                        	this.x + ': $' + this.y + ' million';
-                        }
-                }
+            	enabled: false
+                // formatter: function () {
+                	// if(this.y == false || this.y==null){
+                        // return null
+                    // }else{
+                    	// return formatLabel(this.x, this.y, input, this.series.userOptions.id, "tooltipBar")
+// 
+                    // }
+                // }
+            },
+            credits: {
+                enabled: true,
+                text: "<a href = \"https://www.ssa.gov/policy/docs/statcomps/supplement/\">These data are from the Social Security Administration's <em>Annual Statistical Supplement, 2014</em>. The parenthetical numbers with the titles are retained from the supplement for reference.</a>",
+                href: "https://www.ssa.gov/policy/docs/statcomps/supplement/",
+                style:{
+                		color: '#1696d2',
+                		fill: '#1696d2'
+                },
+                title: false
             },
             legend: {
                 enabled: false,
                 floating: 'true',
-                align: 'center',
+                align: 'left',
                 verticalAlign: 'left',
                 layout: 'horizontal',
                 borderWidth: 0,
                 itemDistance: 9,
                 y: 40
-            },
-            series: [{
-            			id: initId,
+            }
+            ,
+            series:[{
+            			id: "col1",
                     	name: initId,
-                    	data: [generateBarFromYear(input.data.years.series, input.data.col1.series, "2014")]
-                    }
-                  ]
+                    	data: [generateBarFromYear(input.data.years.series, input.data.col1.series, String(year))]
+                    }]
 
         });
-		yearBarCache[initId] = [input.data.years.series, input.data.col1.series]
+		yearBarCache[initId] = [input.data.years.series, input["data"][col]["series"]]
+		// yearBarCache[initId] = generateTimeSeries(input.data.years.series, input.data.col1.series)
+		yearBarCache["id"] = col
 }
 function removeSeries(chart, id){
 	if(chart.renderTo.id == "singleYearBarChart"){
+
 		var index = chart.xAxis[0].categories.indexOf(id)
 		chart.series[0].removePoint(index)
 
@@ -451,25 +874,56 @@ function removeSeries(chart, id){
 	else{
 		for(var i = 0; i<chart.series.length; i++){
 			var ser = chart.series[i];
-			if(ser.options.id == id){
+			if(ser.options.name == id){
 				ser.remove();
 			}
 		}
 	}
 }
 function getId(doc){
-	return doc.title.id.replace(".","")
+	return doc.title.id.replace(/\./g,"_")
 }
 function getDocURL(id){
 	return "http://localhost:27080/test/tables/_find?criteria=" + encodeURIComponent('{"title.id":"' + id + '"}')
 }
+function getJSONPath(id){
+	if (id == "words"){
+		return "data/words.json"
+	}
+	else if (id == "titles"){
+		return "data/titles.json"
+	}else{
+		return "data/json/stat_supplement_table-" + id + ".json"
+	}
+}
 function singleYear(){
+	d3.selectAll("th.selected")
+		.classed("singleSelected",true)
+
+// 	#singleYearBarChart{
+//     left: 2000px;
+// }
+// #valueScrubber{
+//     top: 393px;
+//     left: 455px;
+//     z-index: 300;
+//     position: fixed;
+// }
+	d3.select("#valueScrubber")
+		.transition()
+		.style("top","450px")
+	d3.select("#singleYearCheck")
+		.transition()
+		.style("top","460px")
+
+	exportParams.chartType = "timeBar";
+
 	d3.select("#lineChart")
 		.transition()
-		.style("left",-2000)
+		.style("left",-3000)
 	d3.select("#singleYearBarChart")
 		.transition()
-		.style("left","400px")
+		.style("left","0px")
 	d3.select("#valueScrubber .left.thumb")
 		.style("display","none")
 	d3.select("#leftValue")
@@ -484,16 +938,29 @@ function singleYear(){
 		})
 }
 function multiYear(){
+	d3.selectAll("th.selected")
+		.classed("singleSelected",false)
+
+	d3.select("#valueScrubber")
+		.transition()
+		.style("top","393px")
+	d3.select("#singleYearCheck")
+		.transition()
+		.style("top","403px")
+
 
 	d3.select("#lineChart")
 		.transition()
-		.style("left","400px")
+		.style("left","0px")
 	d3.select("#singleYearBarChart")
 		.transition()
-		.style("left",2000)
+		.style("left",3000)
 	d3.select("#map")
 		.transition()
-		.style("left",2000)
+		.style("left",3000)
+	d3.select("#barChart")
+		.transition()
+		.style("left",3000)
 	d3.select("#valueScrubber .left.thumb")
 		.style("display","block")
 	d3.select("#leftValue")
@@ -523,20 +990,188 @@ function changeYears(start, end){
 
 	var lineChart = $('#lineChart').highcharts();
     lineChart.xAxis[0].setExtremes(
-            Date.UTC(parseInt(start), 0, 1),
-            Date.UTC(parseInt(end), 0, 1)
+            Date.UTC(parseInt(start), 0, 2),
+            Date.UTC(parseInt(end), 0, 2)
     );
     var singleYearBarChart = $('#singleYearBarChart').highcharts();
+    // console.log(category)
+    if(category == "timeBar"){
 		$.each(singleYearBarChart.series[0].data, function(k,v){
 			var barData = yearBarCache[v.category]
-			v.update({
-				y: generateBarFromYear(barData[0], barData[1], end),
-			});
-
+			var realEnd;
+			if(generateBarFromYear(barData[0], barData[1], end) != "not found"){
+				v.update({
+					y: generateBarFromYear(barData[0], barData[1], end)
+				});
+				realEnd = end;
+			}
 		});
+	}
+}
+function drawScrubber(lower, upper){
+	d3.select("#singleYearCheck svg").remove();
+	d3.selectAll("#valueScrubber div").remove();
+	var width = 240,
+	    height = 45,
+	    radius = 7,
+		lowerBound = lower,
+		upperBound = upper,
+		margin = {top: 0, right: 4, bottom: 0, left: 4};
+	
+	d3.select("#singleYearCheck")
+		.append("svg")
+		.attr("class", "unchecked")
+		.attr("width", 2*radius)
+		.attr("height", 2*radius)
+		.append("g")
+		.append("circle")
+		.attr("class","outer")
+		.attr("cx",radius)
+		.attr("cy",radius)
+		.attr("r",radius)
+
+	d3.select("#singleYearCheck svg")
+		.on("mousedown", function(){
+			d3.select(this).classed("pressed", true)
+		})
+		.on("mouseup", function(){
+			if(d3.select(this).classed("checked")){
+				d3.select(this).attr("class", "unchecked");
+				multiYear();
+			}else{
+				d3.select(this).attr("class", "checked");
+				singleYear();
+			}
+		})
+		.append("circle")
+		.attr("cx",radius)
+		.attr("cy",radius)
+		.attr("r",radius/2)
+		.attr("class","inner")
+
+	var scale = d3.scale.linear()
+		.domain([radius+margin.left, width-radius-margin.right])
+		.range([lowerBound, upperBound]);
+
+	var drag = d3.behavior.drag()
+	    .origin(function(d) { return d; })
+	    .on("drag", dragmove);
+
+	var leftValue = d3.select("#valueScrubber")
+		.append("div")
+		.attr("id", "leftValue")
+		.text(String(lower))
+
+	var svg = d3.select("#valueScrubber").append("div")
+	  	.append("svg")
+	    .attr("width", width)
+	    .attr("height", height);
+	    
+	var rightValue = d3.select("#valueScrubber")
+		.append("div")
+		.attr("id", "rightValue")
+		.text(String(upper))
+
+	svg.append("rect")
+		.attr("id", "sliderTrack")
+		.attr("x", margin.left)
+		.attr("y", height/2 - 2)
+		.attr("height", 4)
+		.attr("width", width-margin.right-margin.left)
+		.attr("rx", 2)
+		.attr("ry", 2)
+
+	svg.append("rect")
+		.attr("id", "sliderHighlight")
+		.attr("x", margin.left)
+		.attr("y", height/2 - 2)
+		.attr("height", 4)
+		.attr("width", width-margin.right-margin.left)
+		.attr("rx", 2)
+		.attr("ry", 2)
+
+	svg.selectAll(".left")
+		.data(d3.range(1).map(function() { return {x: radius+margin.left, y: height / 2}; }))
+		.enter()
+		.append("circle")
+		.attr("class","thumb left")
+	    .attr("r", radius)
+	    .attr("cx", function(d) { return d.x; })
+	    .attr("cy", function(d) { return d.y; })
+	    .call(drag);
+
+	svg.selectAll(".right")
+		.data(d3.range(1).map(function() { return {x: width - radius-margin.right, y: height / 2}; }))
+		.enter()
+		.append("circle")
+		.attr("class","thumb right")
+	    .attr("r", radius)
+	    .attr("cx", function(d) { return d.x; })
+	    .attr("cy", function(d) { return d.y; })
+	    .call(drag);
+
+	function dragmove(d) {
+	  var dragged = d3.select(this)
+	  var isLeft = dragged.classed("left")
+	  var isSingleYear = dragged.classed("singleYear")
+	  var other = (isLeft) ? d3.select("circle.right") : d3.select("circle.left")
+	  if(!isLeft){
+	  	var pos = (isSingleYear) ? Math.min(width-radius-margin.right, Math.max(radius+2, d3.event.x)) : Math.min(width-radius-margin.right, Math.max(other.data()[0].x, d3.event.x));
+		var value = Math.round(scale(pos));
+		rightValue.text(value);
+		changeYears(leftValue.text(), value);
+		d3.select("#sliderHighlight")
+			.attr("width", function(){
+				return pos - d3.select(this).attr("x")
+			})
+	  	dragged
+	    	.attr("cx", d.x = pos);
+	  } else{
+	  	var pos = Math.min(other.data()[0].x, Math.max(radius+margin.left, d3.event.x));
+		var value = Math.round(scale(pos));
+		leftValue.text(value);
+		changeYears(value, rightValue.text());
+		d3.select("#sliderHighlight")
+			.attr("x", function(){
+				return pos;
+			})
+			.attr("width", function(){
+				return d3.select("circle.right").attr("cx") - pos
+			})
+	  	dragged
+	  		.attr("cx", d.x = pos);
+	  }
+	}
 
 }
+function hideScrubber(){
+	// d3.select("#hideScrubber")
+		// .style("display","block")
+	// d3.select("#valueScrubber").classed("hidden",true)
+	// d3.select("#singleYearCheck").classed("hidden",true)	
+	d3.select("#valueScrubber")
+		.transition()
+		.style("left",-3000)
+	d3.select("#singleYearCheck")
+		.transition()
+		.style("left", -3000)
 
+}
+function showScrubber(){
+	// d3.select("#hideScrubber")
+	// 	.style("display","none")
+	// d3.select("#valueScrubber").classed("hidden",false)
+	// d3.select("#singleYearCheck").classed("hidden",false)	
+	d3.select("#valueScrubber")
+		.transition()
+		.style("left",10)
+		.style("top","393px")
+	d3.select("#singleYearCheck")
+		.transition()
+		.style("left", 803)
+		.style("top","403px")
+
+}
 function setTheme(){
 	Highcharts.createElement('link', {
 	    href: 'http://fonts.googleapis.com/css?family=Lato:400,600',
@@ -545,18 +1180,40 @@ function setTheme(){
 	}, null, document.getElementsByTagName('head')[0]);
 
 	var embed = {
-                        text: 'Get embeddable chart',
-                        onclick: function () {
-                        	console.log("embed")
-                        }
-
+            text: 'Get embeddable chart',
+                onclick: function () {
+                	d3.select("#dialog-message textarea")
+                		.html(function(){
+                			var url = "http://localhost:8081/data-tool/embed.html?"
+                			url += "tableID=" + exportParams.tableID + "&"
+                			url += "chartType=" + exportParams.chartType + "&"
+                			url += "columns="
+                			for(var i=0; i< exportParams.columns.length; i++){
+                				url += exportParams.columns[i]
+                				if(i != exportParams.columns.length-1){
+                					url += ","
+                				}
+                			}
+                			return "&lt;iframe frameborder=\"0\" height=\"400px\" marginheight=\"0\" scrolling=\"no\" src=\"" + url + "\" width=\"100%\"&gt;&lt;/iframe&gt"
+                		})
+                		// &lt;iframe frameborder="0" height="450px" marginheight="0" scrolling="no" src="http://webapp.urban.org/reducing-mass-incarceration/embed_child.html" width="100%"&gt;&lt;/iframe&gt;
+                	$( "#dialog-message" ).dialog({
+					      modal: true,
+					      minWidth: 400,
+      					  buttons: {
+        				  	Ok: function() {
+          				  		$( this ).dialog( "close" );
+        				  	}
+      					  }
+    				});
+            	}
 	}
 	var oldMenu = Highcharts.getOptions().exporting.buttons.contextButton.menuItems
 	oldMenu.unshift(embed)
 
 	Highcharts.theme = {
-	    colors: ["#0096d2", "#00578b", "#fcb918", "#f47d20", "#6d6d6d", "#c6c6c6", "#ec008c",
-	      "#55BF3B", "#DF5353", "#7798BF", "#aaeeee"],
+	    colors: ["#0096d2", "#00578b", "#fcb918", "#f47d20", "#ec008c",
+	      "#55BF3B", "#DF5353"],
 	    chart: {
 	        backgroundColor: "#ffffff",
 	        style: {
@@ -570,8 +1227,17 @@ function setTheme(){
 	            fontSize: '18px',
 	            color: '#5a5a5a'
 	        },
-	        align: 'left'
+	        align: 'left',
+	        margin: 50,
+	        useHTML: true,
+	        floating: false
 	    },
+    subtitle: {
+        text: '* Footnote',
+        align: 'right',
+        x: -50,
+        y: 305
+    },
 	    tooltip: {
 	        backgroundColor: '#000000',
 	        borderWidth: 0,
@@ -593,8 +1259,30 @@ function setTheme(){
         exporting: {
             buttons: {
                 contextButton: {
-	            	text: "Share",
-                    menuItems: oldMenu
+                	symbol: false,
+
+	            	text: "<span>Download</span>",
+                    menuItems: oldMenu,
+                    theme: {
+                	// width: 200,
+                	// height: 100,
+                    'stroke-width': 10,
+                    stroke: '#333',
+                    r: 0,
+                    fill: "#333",
+                    color: "#fff",
+                    font: "Lato",
+                    states: {
+                        hover: {
+                            fill: '#1696d2',
+                            stroke: '#1696d2'
+                        },
+                        select: {
+                            fill: '#1696d2',
+                            stroke: '#1696d2'
+                        }
+                    }
+                }
                 }
             }
         },
@@ -650,20 +1338,224 @@ function setTheme(){
 	// Apply the theme
 	Highcharts.setOptions(Highcharts.theme);
 }
-function getJSONPath(id){
-	return "../data/json/stat_supplement_table-" + id + ".json"
-}
-var simpleTimeSheets = ['2.A3','2.A4','2.A8','2.A9','2.A13','2.A27','2.A28','2.C1','2.F3','3.C4','3.C6.1','3.E1','4.A1','4.A2','4.A3','4.A4','4.A5','4.A6','4.B1','4.B2','4.B4','4.B11','4.C1','5.A17','5.C2','5.D3','5.E2','5.F6','5.F8','5.F12','5.G2','6.C7','6.D6','6.D8','6.D9','7.A9','7.E6','8.A1','8.A2','8.B10','9.B1','9.D1']
-var notok = ['2A27','2A28','2C1','3C4','3E1','4B1','4B2']
-var tempAllSheets = ['5.J1','5F1-M0','5.J2','5.J4','5.J8','5.J10','5.J14','6.A6','5.B4','5.D1','6.A1','6.F1','6A2','2A30','5A14-M0','5A14-M1','5A4-M0','5A4-M1','5F1-M1','5F4-M0','5F4-M1','5F4-M2','5H1-M0','5H1-M1','6B5-M0','6B5-M1','6B51-M0','6B51-M1','6C2-M0','6C2-M1','6D4-M0','6D4-M1','6D4-M2','6D4-M3','2.A3','2.A4','2.A8','2.A9','2.A13','2.F3','3.C6.1','4.A1','4.A2','4.A3','4.A4','4.A5','4.A6','4.B4','4.B11','4.C1','5.A17','5.C2','5.D3','5.E2','5.F6','5.F8','5.F12','5.G2','6.C7','6.D6','6.D8','6.D9','7.A9','7.E6','8.A1','8.A2','8.B10','9.B1','9.D1']
-var allSheets = ['2.A3','2.A4','2.A9','2.A13','2.F3','3.C6.1','4.A1','4.A2','4.A3','4.A6','4.B11','5.A17','5.D3','5.F6','6.D8','7.A9','8.B10','9.D1']
+// var tempAllSheets = ['2.A3','2.A4','2.A20','2.A21','2.A30','2.F4','2.F5','2.F6','2.F7','2.F8','2.F9','2.F11','3.C3','3.C5','3.C6','4.A2','4.A3','4.A4','4.A6','4.C1','4.C2','5.A1','5.A1.2','5.A1.3','5.A1.4','5.A3','5.A4','5.A5','5.A6','5.A7','5.A8','5.A10','5.A17','5.D1','5.D2','5.D3','5.D4','5.E1','5.E2','5.F1','5.F4','5.F6','5.F7','5.F8','5.H1','5.H2','5.H3','5.H4','5.J1','5.J2','5.J4','5.J8','5.J10','5.J14','5.M1','6.A1','6.A2','6.A3','6.A4','6.A5','6.A6','6.C1','6.C2','6.C7','6.D4','6.D5','6.D7','6.D8','6.F1','6.F2','6.F3']
+
+
+// var tempAllSheets = ['2.A3','2.A4','2.A30','2.F4','2.F5','2.F6','2.F8','2.F11','4.A2','4.A3','4.A4','4.A6','4.C1','5.A1.3','5.A7','5.A17','5.D1','5.D2','5.D3','5.D4','5.E1','5.E2','5.F1','5.F4','5.F6','5.F7','5.F8','5.H1','5.H3','5.H4','5.J1','5.J2','5.J4','5.J8','5.J10','5.J14','6.A1','6.A2','6.A3','6.A6','6.C1','6.C2','6.C7','6.D4','6.D8','6.F1']
+
+
+var tempAllSheets = ["2_A3","2_A30","2_A4","2_F11","2_F4","2_F5","2_F6","2_F8","4_A1","4_A2","4_A3","4_A4","4_A5","4_A6","4_C1","5_A14-0","5_A14-1","5_A17","5_A1_8","5_A4-0","5_A4-1","5_B4","5_D1","5_D2","5_D3","5_E1","5_E2","5_F1-0","5_F1-1","5_F4-0","5_F4-1","5_F4-2","5_F4-3","5_F6","5_F7","5_F8","5_H1-0","5_H1-1","5_H3","5_H4","5_J1","5_J10","5_J14","5_J2","5_J4","5_J8","6_A1","6_A2","6_A6","6_B5-0","6_B5-1","6_B5_1-0","6_B5_1-1","6_C1","6_C2-0","6_C2-1","6_C7","6_D4-0","6_D4-1","6_D4-2","6_D4-3","6_D8","6_F1"]
+
+
+var allSheets = tempAllSheets;
 var sheets = tempAllSheets;
+var TOTAL_TABLES = sheets.length
 var tableIndex = 0;
 // init("2A9");
 // init("4C1");
 init();
-function test(index){
-	init(simpleTimeSheets[index].replace(/\./g,""))
+
+function searchTables(val){
+	var checked = d3.selectAll("#checkBoxes input").filter(function(d){return this.checked})
+	var results, tmp;
+	if(checked.node() != null){
+		var tmp = keywords[d3.select(checked.node()).attr("id")]
+	}else{ tmp = null}
+	if (val.value == "Enter keywords" && checked.node() == null){
+		reset();
+		return false;
+	}
+	if (val.value == "Enter keywords"){
+		sheets = _.intersection.apply(this, [tmp, allSheets])
+		filterSheets(sheets[tableIndex], "")
+		return false;
+	}
+	else if (tmp == null){
+		// results.push(tmp)
+		results = [];
+
+	}else{
+		results = [tmp]
+	}
+	// checked[0].map(function(c){
+	// 	tmp.push(keywords[d3.select(c).attr("id")])
+	// })
+	// if(tmp.length != 0){
+	// 	results = _.intersection.apply(this, tmp)
+	// }
+	var words = val.value
+	words = words.toUpperCase().replace(/\s+/g," ").split(" ")	
+	
+	current = sheets[tableIndex]
+	words.map(function(word){
+		$.getJSON(getJSONPath("words"), function(allWords){
+			if(typeof(allWords[word]) != "undefined"){
+				results.push(allWords[word])
+				if(results.length == words.length || (tmp != null && results.length == words.length +1)){
+					results.push(allSheets)
+					sheets = _.intersection.apply(this, results)
+					filterSheets(current, val.value)	
+				}
+			}else{
+				noResults(val.value)
+			}
+		})
+
+	})
 }
+
+function noResults(val){
+	var checked = d3.selectAll("#checkBoxes input").filter(function(d){return this.checked})
+	if(checked.node() == null){
+		d3.select("#searchText")
+	  		.html("No tables found matching \"" + val + "\"")
+	}else{
+		var filter = d3.select(checked.node().parentNode).text().replace(/\s/g,"")
+		if(filter == "EarningsTest"){ filter = "Earnings Test"}
+		if(filter == "Trustfund"){ filter = "Trust fund"}
+		d3.select("#searchText")
+	  		.html("No tables found matching \"" + val + "\" and \"" + filter + "\"")
+	}
+
+}
+
+function formatLabel(x, y, input, col, type){
+	if(type == "tooltipBar" && Object.keys(yearBarCache).length > 0){
+		col = yearBarCache.id
+	}
+	var label = input.data[col].type
+	var dollarOld = d3.format("$.4s")
+
+	function dollar(x) {
+	  var s = dollarOld(x);
+	  switch (s[s.length - 1]) {
+	    case "k": return s.slice(0, -1) + " thousand";
+	    case "M": return s.slice(0, -1) + " million";
+	    case "G": return s.slice(0, -1) + " billion";
+	    case "T": return s.slice(0, -1) + " trillion";
+	  }
+	  return s;
+	}
+	var numOld = d3.format(".4s")
+	function num(x) {
+	  var s = numOld(x);
+	  switch (s[s.length - 1]) {
+	    case "k": return s.slice(0, -1) + " thousand";
+	    case "M": return s.slice(0, -1) + " million";
+	    case "G": return s.slice(0, -1) + " billion";
+	    case "T": return s.slice(0, -1) + " trillion";
+	  }
+	  return s;
+	}
+
+
+
+	if(type == "label"){
+		if(label == "dollar"){
+			return '$' + (x.axis.defaultLabelFormatter.call(x)).replace("k","K").replace("G","B");
+		}
+		else if(label == "percent"){
+			return x.axis.defaultLabelFormatter.call(x) + "%";
+		}
+		else{
+			return (x.axis.defaultLabelFormatter.call(x)).replace("k","K").replace("G","B");	
+		}
+	}
+	else if(type == "labelMap"){
+		if(label == "dollar"){
+			return '$' + x.axis.defaultLabelFormatter.call(x);
+		}
+		else if(label == "percent"){
+			return x.axis.defaultLabelFormatter.call(x) + "%";
+		}
+		else{
+			return x.axis.defaultLabelFormatter.call(x);	
+		}	
+	}
+
+	if(type == "tooltipLine"){
+		var date = new Date(x)
+		var full = MONTHNAMES[date.getMonth()] + " " + date.getFullYear()
+		switch(label){
+			case "dollar":
+				return full + ": " + dollar(y)
+				break;
+			case "dollarThousand":
+				return full + ": " + dollar(y * 1000)
+				break;
+			case "dollarMillion":
+				return full + ": " + dollar(y * 1000000)
+				break;
+			case "number":
+				return full + ": " + num(y)
+				break;				
+			case "numberThousand":
+				return full + ": " + num(y * 1000)
+				break;
+			case "numberMillion":
+				return full + ": " + num(y * 1000000)
+				break;
+			case "percent":
+				return full + ": " + y + "%"
+				break;
+
+		}
+	}
+	else if(type == "tooltipBar"){
+		switch(label){
+			case "dollar":
+				return dollar(y)
+				break;
+			case "dollarThousand":
+				return dollar(y * 1000)
+				break;
+			case "dollarMillion":
+				return dollar(y * 1000000)
+				break;
+			case "number":
+				return num(y)
+				break;				
+			case "numberThousand":
+				return num(y * 1000)
+				break;
+			case "numberMillion":
+				return num(y * 1000000)
+				break;
+			case "percent":
+				return y + "%"
+				break;
+		}
+	}
+	else if(type == "tooltipMap"){
+		switch(label){
+			case "dollar":
+				return x + ": " + dollar(y)
+				break;
+			case "dollarThousand":
+				return x + ": " + dollar(y * 1000)
+				break;
+			case "dollarMillion":
+				return x + ": " + dollar(y * 1000000)
+				break;
+			case "number":
+				return x + ": " + num(y)
+				break;				
+			case "numberThousand":
+				return x + ": " + num(y *1000)
+				break;
+			case "numberMillion":
+				return x + ": " + num(y * 1000000)
+				break;
+			case "percent":
+				return x + ": " + y + "%"
+				break;
+		}
+	}
+}
+
+pymChild = new pym.Child({ renderCallback: init });
+
+
+
 
 

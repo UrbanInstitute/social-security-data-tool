@@ -1,0 +1,927 @@
+body{
+	font-family: Lato;
+    margin: 0;
+}
+*:focus{
+    outline: 0;
+}
+
+/****************************************/
+/************ TOOLTIPS ******************/
+/****************************************/
+[data-tooltip] {
+    display: inline-block;
+    position: relative;
+    cursor: help;
+}
+/* Tooltip styling */
+[data-tooltip]:before {
+    content: attr(data-tooltip);
+    display: none;
+    position: absolute;
+    background: #000;
+    color: #fff;
+    padding: 4px 8px;
+    font-size: 10pt;
+    line-height: 1.4;
+    min-width: 100px;
+    text-align: left;
+    border-radius: 4px;
+}
+/* Dynamic horizontal centering */
+[data-tooltip-position="top"]:before,
+[data-tooltip-position="bottom"]:before {
+    left: 50%;
+    -ms-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+/* Dynamic vertical centering */
+[data-tooltip-position="right"]:before,
+[data-tooltip-position="left"]:before {
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+[data-tooltip-position="top"]:before {
+    bottom: 100%;
+    margin-bottom: 6px;
+}
+[data-tooltip-position="right"]:before {
+    left: 100%;
+    margin-left: 6px;
+}
+[data-tooltip-position="bottom"]:before {
+    top: 100%;
+    margin-top: 6px;
+}
+[data-tooltip-position="left"]:before {
+    right: 100%;
+    margin-right: 6px;
+}
+
+/* Tooltip arrow styling/placement */
+[data-tooltip]:after {
+    content: '';
+    display: none;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-color: transparent;
+    border-style: solid;
+}
+/* Dynamic horizontal centering for the tooltip */
+[data-tooltip-position="top"]:after,
+[data-tooltip-position="bottom"]:after {
+    left: 50%;
+    margin-left: -6px;
+}
+/* Dynamic vertical centering for the tooltip */
+[data-tooltip-position="right"]:after,
+[data-tooltip-position="left"]:after {
+    top: 50%;
+    margin-top: -6px;
+}
+[data-tooltip-position="top"]:after {
+    bottom: 100%;
+    border-width: 6px 6px 0;
+    border-top-color: #000;
+}
+[data-tooltip-position="right"]:after {
+    left: 100%;
+    border-width: 6px 6px 6px 0;
+    border-right-color: #000;
+}
+[data-tooltip-position="bottom"]:after {
+    top: 100%;
+    border-width: 0 6px 6px;
+    border-bottom-color: #000;
+}
+[data-tooltip-position="left"]:after {
+    right: 100%;
+    border-width: 6px 0 6px 6px;
+    border-left-color: #000;
+}
+/* Show the tooltip when hovering */
+[data-tooltip]:hover:before,
+[data-tooltip]:hover:after {
+    display: block;
+    z-index: 50;
+}
+
+
+/****************************************/
+/************ PANEL LAYOUT **************/
+/****************************************/
+#chartContainer{
+    background-color: #fff;
+    height: 400px;
+    width: 100%;
+    top: 100%;
+    position: fixed;
+    z-index: 2;
+}
+#controls{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: #fff;
+    top: 60;
+    left: 0;
+    text-align: center;
+    /*border: 2000px solid red;*/
+    z-index: 200;
+}
+#innerControls{
+    margin-top: 20%;
+}
+#lineChart, #singleYearBarChart, #map, #barChart, #stackedBar{
+    width: 100%;
+    top: 0;
+    left: 0px;
+    position: fixed;
+    z-index: 2;    
+}
+#singleYearBarChart{
+    left: 2000px;
+}
+#valueScrubber{
+    top: 393px;
+    left: 10px;
+    z-index: 300;
+    display: none !important;
+}
+#singleYearCheck{
+    top: 403px;
+    left: 803px;
+    z-index: 1200;
+    position: fixed;
+}
+#singleYearCheck svg{
+    margin-left: 8px;
+    top: 5px;
+    position: absolute;
+}
+#spacer{
+    position: fixed;
+    top: 386px;
+    z-index: 0;
+    font-size: 14px;
+    font-style: italic;
+    background-color: #fff;
+    height: 80px;
+    width: 100%;
+    padding-top: 71px;
+
+}
+#interactionInstructions, #mobileDisclaimer{
+    position: fixed;
+    top: 307px;
+    left: 10px;
+    z-index: 200;
+    font-size: 14px;
+    font-style: italic;
+    height: 103px;
+    width: 385px;
+    padding-top: 71px;
+    pointer-events: none;
+}
+#mobileDisclaimer{
+    display: none;
+    color: #1696d2;
+    /*font-weight: bold;*/
+}
+#tableTitle{
+    position: fixed;
+    top: 462px;
+    width: calc(100% - 140px);
+    left: 70px;
+    z-index: 999;
+    font-size: 14px;
+}
+.subtitleCat{
+    color: #fdbf11;
+}
+.titleCategory{
+    text-transform: uppercase;
+    font-size: 12px;
+    color: #1696d2;
+}
+#tableContainer{
+    width: 80%;
+    margin-top: 510;    
+}
+thead{
+    z-index: 2;
+    position: fixed;
+    border-right: 1px solid #cbcbcb;
+}
+tbody{
+    position: absolute;
+    border-bottom: 1px solid #cbcbcb;
+    border-right: 1px solid #cbcbcb;
+}
+
+#left_arrow, #right_arrow{
+    position: fixed;
+    top: 458;
+    z-index: 999;
+    height: 50px;
+    cursor: pointer;
+}
+.leftFader{
+    position: fixed;
+    top: 510px;
+    width: 80px;
+    left: 0;
+    z-index: 100;
+    pointer-events: none;
+}
+.rightFader{
+    position: fixed;
+    top: 510px;
+    width: 320px;
+    right: 0;
+    z-index: 100;
+    pointer-events: none;
+
+}
+#left_arrow{
+    transform: rotate(180deg);
+    left: 5px;
+}
+#right_arrow{
+    right: 5px;
+}
+.initial_hide{
+    opacity: 0;
+}
+/****************************************/
+/*********** FILTERS LAYOUT *************/
+/****************************************/
+#searchSubhead{
+    position: fixed;
+    left: 10px;
+    top: 73px;
+}
+#searchBox{
+    position: absolute;
+    top: 33px;
+    left: 10px;
+    width: 228px;
+    height: 37px;
+    vertical-align: middle;
+    text-indent: 6px;
+    font-style: italic;
+    color: #aaa;
+    font-size: 15pt;
+    border: none
+}
+#searchText{
+    position: fixed;
+    left: 12px;
+    top: 140px;
+    font-size: 14px;
+    font-style: italic;
+}
+#searchButton, #resetButton, #nextButton, #prevButton{
+    position: fixed;
+    text-transform: uppercase;
+    font-size: 13px;
+    padding: 11px;
+    cursor: pointer;
+}
+#searchButton, #resetButton{
+    background-color: black;
+    color: white;
+}
+#nextButton, #prevButton{
+    bottom: 10px;
+    z-index: 999;
+    padding-bottom: 0px;
+    padding-top: 6px;
+    background: rgba(255,255,255,.8);
+    /*background-color: #fff;*/
+    color: black;
+}
+#nextButton span, #prevButton span{
+    font-size: 20px;
+    /* margin: 0 auto; */
+    /* text-indent: 1px; */
+    margin-left: 6px;
+    top: -3px;
+    position: relative;
+}
+#prevButton{
+    text-align: right;
+    left: 5px;
+}
+#nextButton{
+    right: 5px;
+}
+#panLeft{
+    position: fixed;
+    right: 60px;
+    top: 463px;
+    z-index: 1200;
+    cursor: pointer;
+}
+#panRight{
+    position: fixed;
+    right: 10px;
+    top: 463px;
+    z-index: 1200;
+    cursor: pointer;
+}
+/*#tableEmbed #scrollArrows.scroll{*/
+    /*position: fixed;*/
+    /*right: -12px;*/
+/*}*/
+#panLeft img, #panRight img{
+    opacity: 0.3;
+}
+#panRight img.enabled:hover, #panLeft img.enabled:hover{
+    opacity: 1 !important;
+}
+#panLeft img{
+    opacity: 0.1;   
+}
+/*#tableEmbed #headerWrapper{*/
+    /*width: 100%;*/
+    /*position: absolute;*/
+/*}*/
+
+
+
+#searchButton:hover, #resetButton:hover, #nextButton:hover, #prevButton:hover{
+    background-color: #1696d2;
+}
+#nextButton:hover, #prevButton:hover{
+    color: white;
+}
+#searchButton{
+    left: 247px;
+    top: 93px;
+}
+#resetButton{
+    left: 328px;
+    top: 93px;
+}
+#checkSubhead{
+    position: fixed;
+    left: 10px;
+    top: 171px;
+}
+#checkboxes{
+    font-size: 10pt;
+    position: fixed;
+    top: 190px;
+    left: 10px;
+}
+#checkboxes .col{
+    float: left;
+    width: 100px;
+}
+.col label{
+    float: left;
+}
+.buttons4{
+    position: fixed;
+    left: 309px;
+}
+#menuSubhead{
+    position: fixed;
+    left: 10px;
+    top: 330px;
+}
+#tableMenu{
+    left: 10px;
+    position: absolute;
+    top: 290px;
+    width: 296px;
+}
+/****************************************/
+/************ SCRUBBER STYLEs ***********/
+/****************************************/
+#valueScrubber{
+	display: inline-block;
+    margin-bottom: 10px;
+    z-index: 1200;
+}
+#valueScrubber div{
+	font: 14px Lato;
+	float: left;
+}
+#valueScrubber #leftValue{
+	margin: 11px 10px 0px 0px;
+}
+#valueScrubber #rightValue{
+	margin: 11px 0px 0px 10px;
+}
+#sliderTrack{
+	fill: #c6c6c6;
+	stroke: none;
+}
+#sliderHighlight{
+	fill: #1696d2;
+	stroke: none;
+}
+.thumb{
+	fill: #ffffff;
+	stroke: #1696d2;
+	stroke-width: 4px;
+	cursor: pointer;
+}
+#hideScrubber{
+    position: fixed;
+    top: 280px;
+    left: 0;
+    width: 400px;
+    /*background: red;*/
+    z-index: 301;
+    height: 80px;
+    opacity: 0;
+}
+
+
+#valueScrubber.hidden{
+    color: #bbb;
+}
+#valueScrubber.hidden .thumb{
+    stroke: #bbb;
+}
+#valueScrubber.hidden #sliderHighlight{
+    fill: #bbb;
+}
+#singleYearCheck.hidden{
+    color: #bbb;
+}
+#singleYearCheck.hidden circle{
+    fill: #bbb !important;
+}
+/****************************************/
+/************ SWITCH STYLEs *************/
+/****************************************/
+#singleYearCheck .unchecked circle{
+    fill: #999;
+}
+#singleYearCheck .checked circle.inner{
+    fill: #1696d2;
+}
+#singleYearCheck .checked circle.outer{
+    fill: #ccc;
+}
+#singleYearCheck .checked.pressed circle.inner{
+    fill: #0076bc;
+}
+#singleYearCheck .unchecked.pressed circle.inner{
+    fill: #888;
+}
+
+/****************************************/
+/************ CHART STYLES **************/
+/****************************************/
+.highcharts-button text tspan{
+    color: #fff !important;
+    fill: #fff !important;
+    text-transform: uppercase;
+}
+.chartSubtitle, .controlSubhead{
+    text-transform: uppercase;
+    font-size: 12px;
+    color: #1696d2;
+}
+.chartTitle{
+    font-size: 12px;
+}
+.chartTitle, .chartSubtitle{
+    /*pointer-events: none;*/
+    width: 100%;
+    display: block;
+    white-space: pre-wrap;      /* CSS3 */   
+    white-space: -moz-pre-wrap; /* Firefox */    
+    white-space: -pre-wrap;     /* Opera <7 */   
+    white-space: -o-pre-wrap;   /* Opera 7 */    
+    word-wrap: break-word;      /* IE */
+
+}
+span.highcharts-title{
+    /*pointer-events: none;*/
+    width: calc(100% - 108px) !important;
+}
+
+/****************************************/
+/************ TABLE STYLEs **************/
+/****************************************/
+th.selected{
+    background-color: #1696d2;
+    color: white;
+}
+th.singleSelected{
+    background-color: #1696d2 !important;    
+}
+th:not(.selected){
+    background-color: #e0e0e0 !important;
+}
+.pure-table {
+    /* Remove spacing between table cells (from Normalize.css) */
+    border-collapse: collapse;
+    border-spacing: 0;
+    empty-cells: show;
+    border: 1px solid #cbcbcb;
+}
+
+.pure-table caption {
+    color: #000;
+    font: italic 85%/1 arial, sans-serif;
+    padding: 1em 0;
+    text-align: center;
+}
+
+.pure-table td,
+.pure-table th {
+    border-left: 1px solid #cbcbcb;/*  inner column border */
+    border-width: 0 0 0 1px;
+    font-size: 12px;
+    margin: 0;
+    overflow: visible; /*to make ths where the title is really long work*/
+    padding: 8px 10px; /* cell padding */
+    text-align: right;
+/*    width: 100px !important;
+    max-width: 100px;
+    min-width: 100px;*/
+}
+
+.pure-table th {
+    border-bottom: 1px solid #cbcbcb;
+    text-align: center;
+}
+.pure-table thead {
+    background-color: #e0e0e0;
+    color: #000;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.pure-table td {
+    font-size: 14px;
+    background-color: transparent;
+}
+.pure-table tr td:first-child{
+    text-align: left;
+}
+
+.spacer2{
+        float: right;
+    clear: both;
+    display: inline-block;
+    width: 70px;
+    background: red;
+    position: relative;
+    height: 10px;
+}
+
+/****************************************/
+/************ EMBED MODAL ***************/
+/****************************************/
+.ui-widget{
+    font-family: Lato !important;
+}
+#dialog-message{
+    display: none;
+    width: 300px;
+}
+#dialog-message textarea{
+    width: 100%;
+    font-size: 12px;
+}
+.ui-dialog-titlebar{
+    border-radius: 0 !important;
+    border: none;
+    /* padding: 0; */
+    width: 100%;
+    margin-top: -5px;
+    margin-left: -4px;
+    background: #e2e2e2;
+    text-align: center;
+}
+.ui-widget.ui-button{
+    margin-right: 43px;
+}
+
+/****************************************/
+/************ FOOTNOTES *****************/
+/****************************************/
+a{
+    color: #1696d2 !important;
+    text-decoration: none !important;
+}
+.tableSource{
+    color: #1696d2 !important;
+    text-decoration: none !important;
+    margin-left: 75px;
+    text-transform: uppercase;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+.top_footnote{
+    font-style: 18px;
+    color: #ec008b;
+    position: relative;
+    top: -5px;
+    cursor: pointer;
+}
+.footer{
+    margin-top: 4px;
+    margin-left: 74px;
+    font-size: 13px;
+    font-style: italic;
+}
+.footnote span{
+    font-weight: bolder;
+    font-size: 17px;
+    margin-right: 7px;
+    color: #ec008b;
+}
+.footnotes{
+    margin-top: 16px;
+    margin-bottom: 43px;
+}
+.suppTitle{
+    font-style: normal;
+}
+
+/****************************************/
+/************ NAVBAR ********************/
+/****************************************/
+    #header-pinned {
+        background: #333;
+        position: fixed;
+        top: 0px;
+        left: 0;
+        width: 100%;
+        border-bottom: 12px solid #fff;
+        z-index: 999;
+        -webkit-transition: top 0.25s linear;
+        -moz-transition: top 0.25s linear;
+        -o-transition: top 0.25s linear;
+        transition: top 0.25s linear;
+
+    }
+    
+    #header-pinned .content {
+        height: 49px;
+        max-width: 1500px;
+        margin: 0 auto;
+        position: relative;
+    }
+    #header-pinned * {
+  color: #fff;
+        font-weight: 400;
+        text-decoration: none;
+}
+    
+    #header-pinned .site-logo {
+        display: block;
+        width: 34px;
+        height: 34px;
+        position: absolute;
+        left: 10px;
+        top: 8px;
+        background: url(http://www.urban.org/sites/all/themes/urban/images/logo-mini-dark.png) no-repeat;
+        background-size: 34px 34px;
+    }
+    
+        #header-pinned .title {
+  font-size: 14px;
+  line-height: 49px;
+  margin: 0 65px 0 55px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+    
+    
+    #header-pinned .title {
+        font-size: 20px;
+        margin-left: 80px;
+    }
+    
+
+    #header-pinned .title span,
+    #header-pinned .title a {
+        display: inline;
+    }
+    
+    #header-pinned .share-icons {
+        background-color: transparent;
+        width: 69px;
+        height: 50px;
+        margin: 0;
+        padding: 0;
+        top: 0;
+        width: 60px;
+        position: absolute;
+        right: 0;
+    }
+    
+    #header-pinned .share-icons .shareThisP {
+        border-top: 0;
+        border-left: 1px solid #e6e5e5  ;
+        height: 40px;
+        padding: 9px 0 0;
+    }
+    
+    #header-pinned .share-icons .shareThisB {
+        float: none;
+    }
+    
+    #header-pinned .share-icons .shareThisB {
+        display: block;
+        background-repeat: no-repeat;
+        background-image: url(http://www.urban.org/sites/all/themes/urban/images/generated/icons-s8fe141aaaa.png);
+        background-position: 0 -2396px;
+        height: 32px;
+        width: 32px;
+        float: none;
+        margin: 0 auto;
+    }
+    
+    #header-pinned .share-icons .shareThisB:hover {
+    background-position: 0 -1948px;
+    }
+    #header-pinned .share-icons .shareThisW {
+        display: none;
+        float: none;
+        top: 50px;
+        right: 0;
+        left: auto;
+        width: 300px;
+        text-align: right;
+        border: 0;
+        background: transparent;
+    }
+    
+    #header-pinned .share-icons .shareThisW {
+        background-color: #fff;
+        border: 1px solid #ccc;
+        position: absolute;
+        top: 42px;
+        left: -138px;
+        padding: 0 0 9px;
+        border-top: 0;
+        width: 200px;
+    }
+    
+    #header-pinned .share-icons .addthis_toolbox {
+        display: inline-block;
+        width: auto;
+        border: 1px solid #e6e5e5  ;
+        border-top: 0;
+        background: #fff;
+        padding: 10px 10px 0 0;
+        margin: 0 auto;
+    }
+    
+    #header-pinned .share-icons .at15t_twitter.at16t_twitter,
+    #header-pinned .share-icons .addthis_button_facebook {
+        display: block;
+        background-repeat: no-repeat;
+        background-image: url(http://www.urban.org/sites/all/themes/urban/images/generated/icons-s8fe141aaaa.png);
+        background-position: 0 -2056px;
+        height: 32px;
+        width: 32px;
+    }
+
+
+    #header-pinned .share-icons .at15t_twitter.at16t_twitter,
+    #header-pinned .share-icons .addthis_button_facebook:hover {
+        background-position: 0 -1609px;
+ 
+    }
+    
+    #header-pinned .share-icons .at15t_twitter.at16t_twitter,
+    #header-pinned .share-icons .addthis_button_twitter {
+        display: block;
+        background-repeat: no-repeat;
+        background-image: url(http://www.urban.org/sites/all/themes/urban/images/generated/icons-s8fe141aaaa.png);
+        background-position: 0 -1169px;
+        height: 32px;
+        width: 32px;
+    }
+
+       #header-pinned .share-icons .at15t_twitter.at16t_twitter,
+    #header-pinned .share-icons .addthis_button_twitter:hover {
+        background-position: 0 -1577px;
+    }
+    
+    #header-pinned .share-icons .at15t_linkedin.at16t_linkedin,
+    #header-pinned .share-icons .addthis_button_linkedin {
+        display: block;
+        background-repeat: no-repeat;
+        background-image: url(http://www.urban.org/sites/all/themes/urban/images/generated/icons-s8fe141aaaa.png);
+        background-position: 0 -1641px;
+        height: 32px;
+        width: 32px;
+    }
+    
+           #header-pinned .share-icons .at15t_linkedin.at16t_linkedin,
+    #header-pinned .share-icons .addthis_button_linkedin:hover {
+        background-position: 0 -1379px;
+    }
+
+    #header-pinned .share-icons .at15t_google_plusone_share.at16t_google_plusone_share,
+    #header-pinned .share-icons .addthis_button_google_plusone_share {
+        display: block;
+        background-repeat: no-repeat;
+        background-image: url(http://www.urban.org/sites/all/themes/urban/images/generated/icons-s8fe141aaaa.png);
+        background-position: 0 -1719px;
+        height: 32px;
+        width: 32px;
+    }
+    
+    #header-pinned .share-icons .at15t_email.at16t_email,
+    #header-pinned .share-icons .addthis_button_email {
+        display: block;
+        background-repeat: no-repeat;
+        background-image: url(http://www.urban.org/sites/all/themes/urban/images/generated/icons-s8fe141aaaa.png);
+        background-position: 0 -1449px;
+        height: 32px;
+        width: 32px;
+    }
+
+               #header-pinned .share-icons .at15t_email.at16t_email,
+    #header-pinned .share-icons .addthis_button_email:hover {
+        background-position: 0 -1271px;
+    }
+    
+    #header-pinned .share-icons [class^="addthis_button_"] {
+        display: inline-block !important;
+        margin: 0 0 0 10px;
+    }
+    
+    #header-pinned .share-icons .addthis_toolbox a {
+        margin-bottom: 5px;
+    }
+    
+    .at_a11y{
+     display: none;
+    }
+
+    /*end css for header*/
+
+
+/****************************************/
+/************ FOOTER *****************/
+/****************************************/
+footer{
+    background-color: #000;
+    bottom: 0;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    position: relative;
+    width: 100%;
+    z-index: 9999;
+    height: 176px;
+}
+
+footer img{
+    float:left;
+    width:auto;
+}
+
+footer p{
+    float:right; 
+    color:#fff;
+    margin-top:40px;
+    font-weight:300;
+    background-color: #000;
+    margin-right: 14px; 
+}
+
+footer a{
+    color:#00a6d2;   
+}
+
+footer a:hover{
+    color:#fff; 
+    text-decoration: none;   
+}
+footer #disclaimer, footer #disclaimer2{
+    width: 450px;
+    float: left;
+    font-size: 12px;
+    margin-top: 10px;
+}
+footer #disclaimer{
+    margin-left: 26px;
+}
+footer #disclaimer2{
+    float: left;
+    clear: both;
+    margin-left: 376px;
+}
+

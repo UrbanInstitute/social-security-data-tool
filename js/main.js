@@ -298,17 +298,6 @@ function drawTable(input){
                     		data: input["data"][series]["series"]
 						})
 
-						// drawBar(data, series[0])
-
-						// 						barChart.addSeries({
-						// 	id: series[0],
-			   //          	name: seriesID,
-      //               	data: input["data"][series]["series"]
-
-						// })
-
-						// checkUnitCompatibility(data["data"][series]["type"], input, [lineChart, singleYearBarChart])
-						// d3.selectAll("th").classed("selected",false)
 						checkUnitCompatibility(data["data"][series]["type"], input, [barChart])
 						th.classed("selected", true)
 
@@ -1420,7 +1409,7 @@ function setTheme(){
                 onclick: function () {
                 	d3.select("#dialog-message textarea")
                 		.html(function(){
-                			var url = "http://localhost:8081/data-tool/embed.html?"
+                			var url = "http://apps.urban.org/features/social-security-data-tool/embed.html?"
                 			url += "tableID=" + exportParams.tableID + "&"
                 			url += "chartType=" + exportParams.chartType + "&"
                 			url += "columns="
@@ -1602,7 +1591,6 @@ window.onresize = function(){
 		d3.select(".rightFader").style("opacity",1)
 	}
 }
-
 
 
 function searchTables(val){
