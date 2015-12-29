@@ -6,7 +6,7 @@ import json
 import copy
 import csv
 
-STATES = {"Alabama": "AL", "Alaska": "AK", "American Samoa": "AS", "Arizona": "AZ", "Arkansas": "AR", "California": "CA", "Colorado": "CO", "Connecticut": "CT", "Delaware": "DE", "District Of Columbia": "DC","District of Columbia": "DC", "Federated States Of Micronesia": "FM", "Florida": "FL", "Georgia": "GA", "Guam": "GU", "Hawaii": "HI", "Idaho": "ID", "Illinois": "IL", "Indiana": "IN", "Iowa": "IA", "Kansas": "KS", "Kentucky": "KY", "Louisiana": "LA", "Maine": "ME", "Marshall Islands": "MH", "Maryland": "MD", "Massachusetts": "MA", "Michigan": "MI", "Minnesota": "MN", "Mississippi": "MS", "Missouri": "MO", "Montana": "MT", "Nebraska": "NE", "Nevada": "NV", "New Hampshire": "NH", "New Jersey": "NJ", "New Mexico": "NM", "New York": "NY", "North Carolina": "NC", "North Dakota": "ND", "Northern Mariana Islands": "MP", "Ohio": "OH", "Oklahoma": "OK", "Oregon": "OR", "Palau": "PW", "Pennsylvania": "PA", "Puerto Rico": "PR", "Rhode Island": "RI", "South Carolina": "SC", "South Dakota": "SD", "Tennessee": "TN", "Texas": "TX", "Utah": "UT", "Vermont": "VT", "Virgin Islands": "VI", "U.S. Virgin Islands": "VI", "Virginia": "VA", "Washington": "WA", "West Virginia": "WV", "Wisconsin": "WI", "Wyoming": "WY"}
+STATES = {"Alabama": "AL", "Alaska": "AK", "American Samoa": "AS", "Arizona": "AZ", "Arkansas": "AR", "California": "CA", "Colorado": "CO", "Connecticut": "CT", "Delaware": "DE", "District Of Columbia": "DC","District of Columbia": "DC", "Federated States Of Micronesia": "FM", "Florida": "FL", "Georgia": "GA", "Guam": "GU", "Hawaii": "HI", "Idaho": "ID", "Illinois": "IL", "Indiana": "IN", "Iowa": "IA", "Kansas": "KS", "Kentucky": "KY", "Louisiana": "LA", "Maine": "ME", "Marshall Islands": "MH", "Maryland": "MD", "Massachusetts": "MA", "Michigan": "MI", "Minnesota": "MN", "Mississippi": "MS", "Missouri": "MO", "Montana": "MT", "Nebraska": "NE", "Nevada": "NV", "New Hampshire": "NH", "New Jersey": "NJ", "New Mexico": "NM", "New York": "NY", "North Carolina": "NC", "North Dakota": "ND", "Northern Mariana Islands": "MP", "Ohio": "OH", "Oklahoma": "OK", "Oregon": "OR", "Palau": "PW", "Pennsylvania": "PA", "Puerto Rico": "PR", "Rhode Island": "RI", "South Carolina": "SC", "South Dakota": "SD", "Tennessee": "TN", "Texas": "TX", "Utah": "UT", "Vermont": "VT", "Virgin Islands": "VI", "US Virgin Islands": "VI", "Virginia": "VA", "Washington": "WA", "West Virginia": "WV", "Wisconsin": "WI", "Wyoming": "WY"}
 units = {}
 
 def parseUnits():
@@ -93,7 +93,7 @@ def parseHeader(output, headRows, lastRow, sheet, sheetType, startRow=False, mul
 			if(fixRows[r-2][c].ctype != 0):
 				if((r == headRows-1 and c != 0) or (c == 0 and r ==2)):
 					if sheetType == "medBar":
-						if(sheet.name == "5.A1.8"):
+						if(sheet.name == "5.A1.8" or sheet.name == "6.C1"):
 							getData(data, fixRows, r, c, headRows, lastRow, sheet, sheetType, startRow, multi)
 						elif (sheet.name == "5.H3" or sheet.name == "5.H4") and (c != 1 and c != 2):
 							getData(data, fixRows, r, c, headRows, lastRow, sheet, sheetType, startRow, multi)
@@ -432,11 +432,11 @@ def getMapSeries(rowN, colNum, lastRow, sheet, sheetType, startRow):
 			state = [sheet.cell_value(rowx=i, colx=1).replace("\n","").replace("  "," ")]
 		else:
 			state = [sheet.cell_value(rowx=i, colx=0).replace("\n","").replace("  "," ")]
-		if(state[0] == "Outlying areas" or state[0] == "Foreign countries"):
+		if(state[0] == "Outlying areas" or state[0] == "Foreign countries" or state[0] == "All areas"):
 			continue
 #"Other" Includes American Samoa, Guam, Northern Mariana Islands, U.S. Virgin Islands, and foreign countries.
 		elif(state[0].find("Other") >= 0):
-			state = ["American Samoa","Guam","Northern Mariana Islands","U.S. Virgin Islands"]
+			state = ["American Samoa","Guam","Northern Mariana Islands","US Virgin Islands"]
 		for s in state:
 			obj = {}
 			abbrev = STATES[s].lower()
@@ -664,8 +664,7 @@ for sheet_id in medBar:
 		if testType2 == 6:
 			testType2 = 0
 		testVal = xl_sheet.cell_value(rowx=i, colx=2)
-		# print testVal, testType1, testType2, sheet_id
-		if (isinstance(testVal,float) and testType1 == 0 and testType2 != 0) or xl_sheet.cell_value(rowx=i, colx=0).upper().find("TOTAL") >= 0 or (xl_sheet.cell_value(rowx=i, colx=1).upper().find("TOTAL") >= 0 and testType1 == 0):
+		if (isinstance(testVal,float) and testType1 == 0 and testType2 != 0) or xl_sheet.cell_value(rowx=i, colx=0).upper().find("TOTAL") >= 0 or xl_sheet.cell_value(rowx=i, colx=0).upper().find("ALL DISABLED") >= 0 or (xl_sheet.cell_value(rowx=i, colx=1).upper().find("TOTAL") >= 0 and testType1 == 0):
 			headRows = i
 			break
 	for i in range(headRows+1, xl_sheet.nrows):

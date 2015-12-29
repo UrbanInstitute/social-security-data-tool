@@ -248,11 +248,11 @@
     }, 
     "footnotes": [
         {
-            "content": "SOURCE: Social Security Administration, Master Beneficiary Record, 100\u00a0percent data.", 
+            "content": "Source: Social Security Administration, Master Beneficiary Record, 100\u00a0percent data.", 
             "type": "note"
         }, 
         {
-            "content": "NOTES: Beginning with 2006, individuals whose benefits have been reinstated under the Expedited Reinstatement provisions are no longer included. Therefore, the statistics reported in this publication differ from those reported by the Office of the Chief Actuary.", 
+            "content": "Notes: Beginning with 2006, individuals whose benefits have been reinstated under the Expedited Reinstatement provisions are no longer included. Therefore, the statistics reported in this publication differ from those reported by the Office of the Chief Actuary.", 
             "type": "note"
         }, 
         {
@@ -260,11 +260,7 @@
             "type": "note"
         }, 
         {
-            "content": "CONTACT: (410) 965-0090 or statistics@ssa.gov.", 
-            "type": "note"
-        }, 
-        {
-            "content": "File available from:\nU.S. Social Security Administration \u2022 Office of Retirement and Disability Policy \u2022 Office of Research, Evaluation, and Statistics\nAnnual Statistical Supplement, 2014\nhttp://www.socialsecurity.gov/policy/docs/statcomps/supplement/2014/", 
+            "content": "File available from\nUS Social Security Administration \u2022 Office of Retirement and Disability Policy \u2022 Office of Research, Evaluation, and Statistics,\nAnnual Statistical Supplement, 2014,\nhttp://www.socialsecurity.gov/policy/docs/statcomps/supplement/2014/.", 
             "type": "note"
         }
     ], 

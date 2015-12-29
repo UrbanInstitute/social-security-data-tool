@@ -252,256 +252,6 @@
             "type": ""
         }, 
         "col2": {
-            "label": "", 
-            "series": [
-                {
-                    "hc-key": "us-al", 
-                    "value": ""
-                }, 
-                {
-                    "hc-key": "us-ak", 
-                    "value": ""
-                }, 
-                {
-                    "hc-key": "us-az", 
-                    "value": ""
-                }, 
-                {
-                    "hc-key": "us-ar", 
-                    "value": ""
-                }, 
-                {
-                    "hc-key": "us-ca", 
-                    "value": ""
-                }, 
-                {
-                    "hc-key": "us-co", 
-                    "value": ""
-                }, 
-                {
-                    "hc-key": "us-ct", 
-                    "value": ""
-                }, 
-                {
-                    "hc-key": "us-de", 
-                    "value": ""
-                }, 
-                {
-                    "hc-key": "us-dc", 
-                    "value": ""
-                }, 
-                {
-                    "hc-key": "us-fl", 
-                    "value": ""
-                }, 
-                {
-                    "hc-key": "us-ga", 
-                    "value": ""
-                }, 
-                {
-                    "hc-key": "us-hi", 
-                    "value": ""
-                }, 
-                {
-                    "hc-key": "us-id", 
-                    "value": ""
-                }, 
-                {
-                    "hc-key": "us-il", 
-                    "value": ""
-                }, 
-                {
-                    "hc-key": "us-in", 
-                    "value": ""
-                }, 
-                {
-                    "hc-key": "us-ia", 
-                    "value": ""
-                }, 
-                {
-                    "hc-key": "us-ks", 
-                    "value": ""
-                }, 
-                {
-                    "hc-key": "us-ky", 
-                    "value": ""
-                }, 
-                {
-                    "hc-key": "us-la", 
-                    "value": ""
-                }, 
-                {
-                    "hc-key": "us-me", 
-                    "value": ""
-                }, 
-                {
-                    "hc-key": "us-md", 
-                    "value": ""
-                }, 
-                {
-                    "hc-key": "us-ma", 
-                    "value": ""
-                }, 
-                {
-                    "hc-key": "us-mi", 
-                    "value": ""
-                }, 
-                {
-                    "hc-key": "us-mn", 
-                    "value": ""
-                }, 
-                {
-                    "hc-key": "us-ms", 
-                    "value": ""
-                }, 
-                {
-                    "hc-key": "us-mo", 
-                    "value": ""
-                }, 
-                {
-                    "hc-key": "us-mt", 
-                    "value": ""
-                }, 
-                {
-                    "hc-key": "us-ne", 
-                    "value": ""
-                }, 
-                {
-                    "hc-key": "us-nv", 
-                    "value": ""
-                }, 
-                {
-                    "hc-key": "us-nh", 
-                    "value": ""
-                }, 
-                {
-                    "hc-key": "us-nj", 
-                    "value": ""
-                }, 
-                {
-                    "hc-key": "us-nm", 
-                    "value": ""
-                }, 
-                {
-                    "hc-key": "us-ny", 
-                    "value": ""
-                }, 
-                {
-                    "hc-key": "us-nc", 
-                    "value": ""
-                }, 
-                {
-                    "hc-key": "us-nd", 
-                    "value": ""
-                }, 
-                {
-                    "hc-key": "us-oh", 
-                    "value": ""
-                }, 
-                {
-                    "hc-key": "us-ok", 
-                    "value": ""
-                }, 
-                {
-                    "hc-key": "us-or", 
-                    "value": ""
-                }, 
-                {
-                    "hc-key": "us-pa", 
-                    "value": ""
-                }, 
-                {
-                    "hc-key": "us-ri", 
-                    "value": ""
-                }, 
-                {
-                    "hc-key": "us-sc", 
-                    "value": ""
-                }, 
-                {
-                    "hc-key": "us-sd", 
-                    "value": ""
-                }, 
-                {
-                    "hc-key": "us-tn", 
-                    "value": ""
-                }, 
-                {
-                    "hc-key": "us-tx", 
-                    "value": ""
-                }, 
-                {
-                    "hc-key": "us-ut", 
-                    "value": ""
-                }, 
-                {
-                    "hc-key": "us-vt", 
-                    "value": ""
-                }, 
-                {
-                    "hc-key": "us-va", 
-                    "value": ""
-                }, 
-                {
-                    "hc-key": "us-wa", 
-                    "value": ""
-                }, 
-                {
-                    "hc-key": "us-wv", 
-                    "value": ""
-                }, 
-                {
-                    "hc-key": "us-wi", 
-                    "value": ""
-                }, 
-                {
-                    "hc-key": "us-wy", 
-                    "value": ""
-                }, 
-                {
-                    "hc-key": "pr-3614", 
-                    "value": ""
-                }, 
-                {
-                    "hc-key": "as-6514", 
-                    "value": ""
-                }, 
-                {
-                    "hc-key": "as-6514", 
-                    "value": ""
-                }, 
-                {
-                    "hc-key": "gu-3605", 
-                    "value": ""
-                }, 
-                {
-                    "hc-key": "mp-ro", 
-                    "value": ""
-                }, 
-                {
-                    "hc-key": "mp-ro", 
-                    "value": ""
-                }, 
-                {
-                    "hc-key": "mp-ro", 
-                    "value": ""
-                }, 
-                {
-                    "hc-key": "vi-6399", 
-                    "value": ""
-                }, 
-                {
-                    "hc-key": "vi-6399", 
-                    "value": ""
-                }, 
-                {
-                    "hc-key": "vi-6399", 
-                    "value": ""
-                }
-            ], 
-            "type": ""
-        }, 
-        "col3": {
             "label": "Retired workers :: Number", 
             "series": [
                 {
@@ -749,9 +499,9 @@
                     "value": 27158.0
                 }
             ], 
-            "type": "number"
+            "type": ""
         }, 
-        "col4": {
+        "col3": {
             "label": "Retired workers :: Percent", 
             "series": [
                 {
@@ -999,9 +749,9 @@
                     "value": 1.0
                 }
             ], 
-            "type": "percent"
+            "type": "number"
         }, 
-        "col5": {
+        "col4": {
             "label": "Retired workers :: Average monthly benefit\u00a0a (dollars)", 
             "series": [
                 {
@@ -1249,9 +999,9 @@
                     "value": 702.73
                 }
             ], 
-            "type": "dollar"
+            "type": "percent"
         }, 
-        "col6": {
+        "col5": {
             "label": "Disabled workers :: Number", 
             "series": [
                 {
@@ -1499,9 +1249,9 @@
                     "value": 1265.0
                 }
             ], 
-            "type": "number"
+            "type": "dollar"
         }, 
-        "col7": {
+        "col6": {
             "label": "Disabled workers :: Percent", 
             "series": [
                 {
@@ -1749,9 +1499,9 @@
                     "value": 0.1
                 }
             ], 
-            "type": "percent"
+            "type": "number"
         }, 
-        "col8": {
+        "col7": {
             "label": "Disabled workers :: Average monthly benefit\u00a0a (dollars)", 
             "series": [
                 {
@@ -1999,16 +1749,16 @@
                     "value": 1049.96
                 }
             ], 
-            "type": "dollar"
+            "type": "percent"
         }
     }, 
     "footnotes": [
         {
-            "content": "SOURCE: Social Security Administration, Master Beneficiary Record, 100\u00a0percent data.", 
+            "content": "Source: Social Security Administration, Master Beneficiary Record, 100\u00a0percent data.", 
             "type": "note"
         }, 
         {
-            "content": "NOTES: Effective 2006, individuals whose benefits have been reinstated under the Expedited Reinstatement provisions are no longer included. Therefore, the statistics reported in this publication differ from those reported by the Office of the Chief Actuary.", 
+            "content": "Notes: Effective 2006, individuals whose benefits have been reinstated under the Expedited Reinstatement provisions are no longer included. Therefore, the statistics reported in this publication differ from those reported by the Office of the Chief Actuary.", 
             "type": "note"
         }, 
         {
@@ -2021,22 +1771,18 @@
             "type": "footnote"
         }, 
         {
-            "content": "Includes American Samoa, Guam, Northern Mariana Islands, U.S. Virgin Islands, and foreign countries.", 
+            "content": "Includes American Samoa, Guam, Northern Mariana Islands, US Virgin Islands, and foreign countries.", 
             "symbol": "b.", 
             "type": "footnote"
         }, 
         {
-            "content": "CONTACT: (410) 965-0090 or statistics@ssa.gov.", 
-            "type": "note"
-        }, 
-        {
-            "content": "File available from:\nU.S. Social Security Administration \u2022 Office of Retirement and Disability Policy \u2022 Office of Research, Evaluation, and Statistics\nAnnual Statistical Supplement, 2014\nhttp://www.socialsecurity.gov/policy/docs/statcomps/supplement/2014/", 
+            "content": "File available from\nUS Social Security Administration \u2022 Office of Retirement and Disability Policy \u2022 Office of Research, Evaluation, and Statistics,\nAnnual Statistical Supplement, 2014,\nhttp://www.socialsecurity.gov/policy/docs/statcomps/supplement/2014/.", 
             "type": "note"
         }
     ], 
     "html": {
-        "body": "<tbody><tr class=><td class=\"col0\"></td><td class=\"col1\"></td><td class=\"col2\">All areas</td><td class=\"col3\">2794285.0</td><td class=\"col4\">100.0</td><td class=\"col5\">1334.49</td><td class=\"col6\">868965.0</td><td class=\"col7\">100.0</td><td class=\"col8\">1222.34</td><tr class=Alabama><td class=\"col0\">Alabama</td><td class=\"col1\"></td><td class=\"col2\"></td><td class=\"col3\">46868.0</td><td class=\"col4\">1.7</td><td class=\"col5\">1309.1</td><td class=\"col6\">22265.0</td><td class=\"col7\">2.6</td><td class=\"col8\">1201.82</td><tr class=Alaska><td class=\"col0\">Alaska</td><td class=\"col1\"></td><td class=\"col2\"></td><td class=\"col3\">5420.0</td><td class=\"col4\">0.2</td><td class=\"col5\">1294.2</td><td class=\"col6\">1255.0</td><td class=\"col7\">0.1</td><td class=\"col8\">1255.11</td><tr class=Arizona><td class=\"col0\">Arizona</td><td class=\"col1\"></td><td class=\"col2\"></td><td class=\"col3\">56959.0</td><td class=\"col4\">2.0</td><td class=\"col5\">1342.84</td><td class=\"col6\">13674.0</td><td class=\"col7\">1.6</td><td class=\"col8\">1260.07</td><tr class=Arkansas><td class=\"col0\">Arkansas</td><td class=\"col1\"></td><td class=\"col2\"></td><td class=\"col3\">28388.0</td><td class=\"col4\">1.0</td><td class=\"col5\">1259.04</td><td class=\"col6\">12212.0</td><td class=\"col7\">1.4</td><td class=\"col8\">1162.16</td><tr class=California><td class=\"col0\">California</td><td class=\"col1\"></td><td class=\"col2\"></td><td class=\"col3\">282882.0</td><td class=\"col4\">10.1</td><td class=\"col5\">1302.61</td><td class=\"col6\">71618.0</td><td class=\"col7\">8.2</td><td class=\"col8\">1190.74</td><tr class=Colorado><td class=\"col0\">Colorado</td><td class=\"col1\"></td><td class=\"col2\"></td><td class=\"col3\">42029.0</td><td class=\"col4\">1.5</td><td class=\"col5\">1339.23</td><td class=\"col6\">10605.0</td><td class=\"col7\">1.2</td><td class=\"col8\">1280.08</td><tr class=Connecticut><td class=\"col0\">Connecticut</td><td class=\"col1\"></td><td class=\"col2\"></td><td class=\"col3\">31929.0</td><td class=\"col4\">1.1</td><td class=\"col5\">1509.3</td><td class=\"col6\">7575.0</td><td class=\"col7\">0.9</td><td class=\"col8\">1330.97</td><tr class=Delaware><td class=\"col0\">Delaware</td><td class=\"col1\"></td><td class=\"col2\"></td><td class=\"col3\">9078.0</td><td class=\"col4\">0.3</td><td class=\"col5\">1445.58</td><td class=\"col6\">2502.0</td><td class=\"col7\">0.3</td><td class=\"col8\">1334.36</td><tr class=District of Columbia><td class=\"col0\">District of Columbia</td><td class=\"col1\"></td><td class=\"col2\"></td><td class=\"col3\">4035.0</td><td class=\"col4\">0.1</td><td class=\"col5\">1317.26</td><td class=\"col6\">1611.0</td><td class=\"col7\">0.2</td><td class=\"col8\">1055.95</td><tr class=Florida><td class=\"col0\">Florida</td><td class=\"col1\"></td><td class=\"col2\"></td><td class=\"col3\">187629.0</td><td class=\"col4\">6.7</td><td class=\"col5\">1296.6</td><td class=\"col6\">55275.0</td><td class=\"col7\">6.4</td><td class=\"col8\">1210.34</td><tr class=Georgia><td class=\"col0\">Georgia</td><td class=\"col1\"></td><td class=\"col2\"></td><td class=\"col3\">84045.0</td><td class=\"col4\">3.0</td><td class=\"col5\">1307.57</td><td class=\"col6\">29087.0</td><td class=\"col7\">3.3</td><td class=\"col8\">1226.89</td><tr class=Hawaii><td class=\"col0\">Hawaii</td><td class=\"col1\"></td><td class=\"col2\"></td><td class=\"col3\">13027.0</td><td class=\"col4\">0.5</td><td class=\"col5\">1311.7</td><td class=\"col6\">2356.0</td><td class=\"col7\">0.3</td><td class=\"col8\">1261.54</td><tr class=Idaho><td class=\"col0\">Idaho</td><td class=\"col1\"></td><td class=\"col2\"></td><td class=\"col3\">14719.0</td><td class=\"col4\">0.5</td><td class=\"col5\">1282.05</td><td class=\"col6\">4389.0</td><td class=\"col7\">0.5</td><td class=\"col8\">1180.46</td><tr class=Illinois><td class=\"col0\">Illinois</td><td class=\"col1\"></td><td class=\"col2\"></td><td class=\"col3\">105902.0</td><td class=\"col4\">3.8</td><td class=\"col5\">1358.61</td><td class=\"col6\">28598.0</td><td class=\"col7\">3.3</td><td class=\"col8\">1263.37</td><tr class=Indiana><td class=\"col0\">Indiana</td><td class=\"col1\"></td><td class=\"col2\"></td><td class=\"col3\">59654.0</td><td class=\"col4\">2.1</td><td class=\"col5\">1385.8</td><td class=\"col6\">21172.0</td><td class=\"col7\">2.4</td><td class=\"col8\">1263.5</td><tr class=Iowa><td class=\"col0\">Iowa</td><td class=\"col1\"></td><td class=\"col2\"></td><td class=\"col3\">28424.0</td><td class=\"col4\">1.0</td><td class=\"col5\">1350.31</td><td class=\"col6\">7794.0</td><td class=\"col7\">0.9</td><td class=\"col8\">1188.33</td><tr class=Kansas><td class=\"col0\">Kansas</td><td class=\"col1\"></td><td class=\"col2\"></td><td class=\"col3\">24976.0</td><td class=\"col4\">0.9</td><td class=\"col5\">1392.93</td><td class=\"col6\">7458.0</td><td class=\"col7\">0.9</td><td class=\"col8\">1223.08</td><tr class=Kentucky><td class=\"col0\">Kentucky</td><td class=\"col1\"></td><td class=\"col2\"></td><td class=\"col3\">41275.0</td><td class=\"col4\">1.5</td><td class=\"col5\">1269.56</td><td class=\"col6\">17152.0</td><td class=\"col7\">2.0</td><td class=\"col8\">1208.91</td><tr class=Louisiana><td class=\"col0\">Louisiana</td><td class=\"col1\"></td><td class=\"col2\"></td><td class=\"col3\">37654.0</td><td class=\"col4\">1.3</td><td class=\"col5\">1231.25</td><td class=\"col6\">15367.0</td><td class=\"col7\">1.8</td><td class=\"col8\">1132.68</td><tr class=Maine><td class=\"col0\">Maine</td><td class=\"col1\"></td><td class=\"col2\"></td><td class=\"col3\">15107.0</td><td class=\"col4\">0.5</td><td class=\"col5\">1244.3</td><td class=\"col6\">4662.0</td><td class=\"col7\">0.5</td><td class=\"col8\">1164.48</td><tr class=Maryland><td class=\"col0\">Maryland</td><td class=\"col1\"></td><td class=\"col2\"></td><td class=\"col3\">49703.0</td><td class=\"col4\">1.8</td><td class=\"col5\">1455.51</td><td class=\"col6\">14825.0</td><td class=\"col7\">1.7</td><td class=\"col8\">1288.59</td><tr class=Massachusetts><td class=\"col0\">Massachusetts</td><td class=\"col1\"></td><td class=\"col2\"></td><td class=\"col3\">56423.0</td><td class=\"col4\">2.0</td><td class=\"col5\">1410.44</td><td class=\"col6\">19497.0</td><td class=\"col7\">2.2</td><td class=\"col8\">1247.5</td><tr class=Michigan><td class=\"col0\">Michigan</td><td class=\"col1\"></td><td class=\"col2\"></td><td class=\"col3\">94480.0</td><td class=\"col4\">3.4</td><td class=\"col5\">1405.32</td><td class=\"col6\">34908.0</td><td class=\"col7\">4.0</td><td class=\"col8\">1274.68</td><tr class=Minnesota><td class=\"col0\">Minnesota</td><td class=\"col1\"></td><td class=\"col2\"></td><td class=\"col3\">46887.0</td><td class=\"col4\">1.7</td><td class=\"col5\">1416.24</td><td class=\"col6\">12615.0</td><td class=\"col7\">1.5</td><td class=\"col8\">1253.35</td><tr class=Mississippi><td class=\"col0\">Mississippi</td><td class=\"col1\"></td><td class=\"col2\"></td><td class=\"col3\">28831.0</td><td class=\"col4\">1.0</td><td class=\"col5\">1253.31</td><td class=\"col6\">11521.0</td><td class=\"col7\">1.3</td><td class=\"col8\">1162.89</td><tr class=Missouri><td class=\"col0\">Missouri</td><td class=\"col1\"></td><td class=\"col2\"></td><td class=\"col3\">55903.0</td><td class=\"col4\">2.0</td><td class=\"col5\">1305.12</td><td class=\"col6\">21850.0</td><td class=\"col7\">2.5</td><td class=\"col8\">1204.53</td><tr class=Montana><td class=\"col0\">Montana</td><td class=\"col1\"></td><td class=\"col2\"></td><td class=\"col3\">10919.0</td><td class=\"col4\">0.4</td><td class=\"col5\">1242.64</td><td class=\"col6\">2543.0</td><td class=\"col7\">0.3</td><td class=\"col8\">1135.88</td><tr class=Nebraska><td class=\"col0\">Nebraska</td><td class=\"col1\"></td><td class=\"col2\"></td><td class=\"col3\">15653.0</td><td class=\"col4\">0.6</td><td class=\"col5\">1351.05</td><td class=\"col6\">3944.0</td><td class=\"col7\">0.5</td><td class=\"col8\">1182.24</td><tr class=Nevada><td class=\"col0\">Nevada</td><td class=\"col1\"></td><td class=\"col2\"></td><td class=\"col3\">24927.0</td><td class=\"col4\">0.9</td><td class=\"col5\">1276.72</td><td class=\"col6\">6386.0</td><td class=\"col7\">0.7</td><td class=\"col8\">1280.05</td><tr class=New Hampshire><td class=\"col0\">New Hampshire</td><td class=\"col1\"></td><td class=\"col2\"></td><td class=\"col3\">13823.0</td><td class=\"col4\">0.5</td><td class=\"col5\">1459.91</td><td class=\"col6\">4695.0</td><td class=\"col7\">0.5</td><td class=\"col8\">1252.83</td><tr class=New Jersey><td class=\"col0\">New Jersey</td><td class=\"col1\"></td><td class=\"col2\"></td><td class=\"col3\">77395.0</td><td class=\"col4\">2.8</td><td class=\"col5\">1498.38</td><td class=\"col6\">22588.0</td><td class=\"col7\">2.6</td><td class=\"col8\">1351.19</td><tr class=New Mexico><td class=\"col0\">New Mexico</td><td class=\"col1\"></td><td class=\"col2\"></td><td class=\"col3\">19465.0</td><td class=\"col4\">0.7</td><td class=\"col5\">1253.29</td><td class=\"col6\">6832.0</td><td class=\"col7\">0.8</td><td class=\"col8\">1129.79</td><tr class=New York><td class=\"col0\">New York</td><td class=\"col1\"></td><td class=\"col2\"></td><td class=\"col3\">167679.0</td><td class=\"col4\">6.0</td><td class=\"col5\">1390.68</td><td class=\"col6\">51144.0</td><td class=\"col7\">5.9</td><td class=\"col8\">1252.05</td><tr class=North Carolina><td class=\"col0\">North Carolina</td><td class=\"col1\"></td><td class=\"col2\"></td><td class=\"col3\">93267.0</td><td class=\"col4\">3.3</td><td class=\"col5\">1330.16</td><td class=\"col6\">31519.0</td><td class=\"col7\">3.6</td><td class=\"col8\">1223.18</td><tr class=North Dakota><td class=\"col0\">North Dakota</td><td class=\"col1\"></td><td class=\"col2\"></td><td class=\"col3\">6064.0</td><td class=\"col4\">0.2</td><td class=\"col5\">1303.37</td><td class=\"col6\">1419.0</td><td class=\"col7\">0.2</td><td class=\"col8\">1170.71</td><tr class=Ohio><td class=\"col0\">Ohio</td><td class=\"col1\"></td><td class=\"col2\"></td><td class=\"col3\">102818.0</td><td class=\"col4\">3.7</td><td class=\"col5\">1298.46</td><td class=\"col6\">37027.0</td><td class=\"col7\">4.3</td><td class=\"col8\">1192.08</td><tr class=Oklahoma><td class=\"col0\">Oklahoma</td><td class=\"col1\"></td><td class=\"col2\"></td><td class=\"col3\">34127.0</td><td class=\"col4\">1.2</td><td class=\"col5\">1297.09</td><td class=\"col6\">12908.0</td><td class=\"col7\">1.5</td><td class=\"col8\">1153.1</td><tr class=Oregon><td class=\"col0\">Oregon</td><td class=\"col1\"></td><td class=\"col2\"></td><td class=\"col3\">39627.0</td><td class=\"col4\">1.4</td><td class=\"col5\">1322.5</td><td class=\"col6\">10509.0</td><td class=\"col7\">1.2</td><td class=\"col8\">1222.19</td><tr class=Pennsylvania><td class=\"col0\">Pennsylvania</td><td class=\"col1\"></td><td class=\"col2\"></td><td class=\"col3\">124342.0</td><td class=\"col4\">4.4</td><td class=\"col5\">1405.29</td><td class=\"col6\">40784.0</td><td class=\"col7\">4.7</td><td class=\"col8\">1233.26</td><tr class=Rhode Island><td class=\"col0\">Rhode Island</td><td class=\"col1\"></td><td class=\"col2\"></td><td class=\"col3\">10114.0</td><td class=\"col4\">0.4</td><td class=\"col5\">1382.0</td><td class=\"col6\">3505.0</td><td class=\"col7\">0.4</td><td class=\"col8\">1217.78</td><tr class=South Carolina><td class=\"col0\">South Carolina</td><td class=\"col1\"></td><td class=\"col2\"></td><td class=\"col3\">48737.0</td><td class=\"col4\">1.7</td><td class=\"col5\">1326.7</td><td class=\"col6\">16782.0</td><td class=\"col7\">1.9</td><td class=\"col8\">1226.36</td><tr class=South Dakota><td class=\"col0\">South Dakota</td><td class=\"col1\"></td><td class=\"col2\"></td><td class=\"col3\">7939.0</td><td class=\"col4\">0.3</td><td class=\"col5\">1276.45</td><td class=\"col6\">1810.0</td><td class=\"col7\">0.2</td><td class=\"col8\">1131.98</td><tr class=Tennessee><td class=\"col0\">Tennessee</td><td class=\"col1\"></td><td class=\"col2\"></td><td class=\"col3\">63053.0</td><td class=\"col4\">2.3</td><td class=\"col5\">1320.81</td><td class=\"col6\">22700.0</td><td class=\"col7\">2.6</td><td class=\"col8\">1199.61</td><tr class=Texas><td class=\"col0\">Texas</td><td class=\"col1\"></td><td class=\"col2\"></td><td class=\"col3\">186147.0</td><td class=\"col4\">6.7</td><td class=\"col5\">1306.23</td><td class=\"col6\">55701.0</td><td class=\"col7\">6.4</td><td class=\"col8\">1199.39</td><tr class=Utah><td class=\"col0\">Utah</td><td class=\"col1\"></td><td class=\"col2\"></td><td class=\"col3\">17254.0</td><td class=\"col4\">0.6</td><td class=\"col5\">1366.4</td><td class=\"col6\">4794.0</td><td class=\"col7\">0.6</td><td class=\"col8\">1212.67</td><tr class=Vermont><td class=\"col0\">Vermont</td><td class=\"col1\"></td><td class=\"col2\"></td><td class=\"col3\">6854.0</td><td class=\"col4\">0.2</td><td class=\"col5\">1357.58</td><td class=\"col6\">2000.0</td><td class=\"col7\">0.2</td><td class=\"col8\">1170.45</td><tr class=Virginia><td class=\"col0\">Virginia</td><td class=\"col1\"></td><td class=\"col2\"></td><td class=\"col3\">71393.0</td><td class=\"col4\">2.6</td><td class=\"col5\">1406.52</td><td class=\"col6\">18248.0</td><td class=\"col7\">2.1</td><td class=\"col8\">1243.7</td><tr class=Washington><td class=\"col0\">Washington</td><td class=\"col1\"></td><td class=\"col2\"></td><td class=\"col3\">62290.0</td><td class=\"col4\">2.2</td><td class=\"col5\">1408.72</td><td class=\"col6\">18791.0</td><td class=\"col7\">2.2</td><td class=\"col8\">1274.28</td><tr class=West Virginia><td class=\"col0\">West Virginia</td><td class=\"col1\"></td><td class=\"col2\"></td><td class=\"col3\">20444.0</td><td class=\"col4\">0.7</td><td class=\"col5\">1320.99</td><td class=\"col6\">7314.0</td><td class=\"col7\">0.8</td><td class=\"col8\">1248.92</td><tr class=Wisconsin><td class=\"col0\">Wisconsin</td><td class=\"col1\"></td><td class=\"col2\"></td><td class=\"col3\">55976.0</td><td class=\"col4\">2.0</td><td class=\"col5\">1380.66</td><td class=\"col6\">16064.0</td><td class=\"col7\">1.8</td><td class=\"col8\">1261.48</td><tr class=Wyoming><td class=\"col0\">Wyoming</td><td class=\"col1\"></td><td class=\"col2\"></td><td class=\"col3\">5379.0</td><td class=\"col4\">0.2</td><td class=\"col5\">1357.77</td><td class=\"col6\">1506.0</td><td class=\"col7\">0.2</td><td class=\"col8\">1231.68</td><tr class=Outlying areas><td class=\"col0\">Outlying areas</td><td class=\"col1\"></td><td class=\"col2\"></td><td class=\"col3\"></td><td class=\"col4\"></td><td class=\"col5\"></td><td class=\"col6\"></td><td class=\"col7\"></td><td class=\"col8\"></td><tr class=><td class=\"col0\"></td><td class=\"col1\">Puerto Rico</td><td class=\"col2\"></td><td class=\"col3\">29214.0</td><td class=\"col4\">1.0</td><td class=\"col5\">898.96</td><td class=\"col6\">14344.0</td><td class=\"col7\">1.7</td><td class=\"col8\">1034.4</td><tr class=><td class=\"col0\"></td><td class=\"col1\">Other<span class = \"top_footnote top_b\">b</span></td><td class=\"col2\"></td><td class=\"col3\">27158.0</td><td class=\"col4\">1.0</td><td class=\"col5\">702.73</td><td class=\"col6\">1265.0</td><td class=\"col7\">0.1</td><td class=\"col8\">1049.96</td></tbody>", 
-        "header": "<thead><tr><th rowspan=\"2\"  colspan=\"3\"  class=\"series col0\" >State or area</th><th colspan=\"3\"  class=\"series col3\" >Retired workers</th><th colspan=\"3\"  class=\"series col6\" >Disabled workers</th></tr><tr><th class=\"series col3\" >Number</th><th class=\"series col4\" >Percent</th><th class=\"series col5\" >Average monthly benefit a (dollars)</th><th class=\"series col6\" >Number</th><th class=\"series col7\" >Percent</th><th class=\"series col8\" >Average monthly benefit a (dollars)</th></tr></thead>"
+        "body": "<tbody><tr class=All areas><td class=\"col0\">All areas</td><td class=\"col1\"></td><td class=\"col2\">2794285.0</td><td class=\"col3\">100.0</td><td class=\"col4\">1334.49</td><td class=\"col5\">868965.0</td><td class=\"col6\">100.0</td><td class=\"col7\">1222.34</td><tr class=Alabama><td class=\"col0\">Alabama</td><td class=\"col1\"></td><td class=\"col2\">46868.0</td><td class=\"col3\">1.7</td><td class=\"col4\">1309.1</td><td class=\"col5\">22265.0</td><td class=\"col6\">2.6</td><td class=\"col7\">1201.82</td><tr class=Alaska><td class=\"col0\">Alaska</td><td class=\"col1\"></td><td class=\"col2\">5420.0</td><td class=\"col3\">0.2</td><td class=\"col4\">1294.2</td><td class=\"col5\">1255.0</td><td class=\"col6\">0.1</td><td class=\"col7\">1255.11</td><tr class=Arizona><td class=\"col0\">Arizona</td><td class=\"col1\"></td><td class=\"col2\">56959.0</td><td class=\"col3\">2.0</td><td class=\"col4\">1342.84</td><td class=\"col5\">13674.0</td><td class=\"col6\">1.6</td><td class=\"col7\">1260.07</td><tr class=Arkansas><td class=\"col0\">Arkansas</td><td class=\"col1\"></td><td class=\"col2\">28388.0</td><td class=\"col3\">1.0</td><td class=\"col4\">1259.04</td><td class=\"col5\">12212.0</td><td class=\"col6\">1.4</td><td class=\"col7\">1162.16</td><tr class=California><td class=\"col0\">California</td><td class=\"col1\"></td><td class=\"col2\">282882.0</td><td class=\"col3\">10.1</td><td class=\"col4\">1302.61</td><td class=\"col5\">71618.0</td><td class=\"col6\">8.2</td><td class=\"col7\">1190.74</td><tr class=Colorado><td class=\"col0\">Colorado</td><td class=\"col1\"></td><td class=\"col2\">42029.0</td><td class=\"col3\">1.5</td><td class=\"col4\">1339.23</td><td class=\"col5\">10605.0</td><td class=\"col6\">1.2</td><td class=\"col7\">1280.08</td><tr class=Connecticut><td class=\"col0\">Connecticut</td><td class=\"col1\"></td><td class=\"col2\">31929.0</td><td class=\"col3\">1.1</td><td class=\"col4\">1509.3</td><td class=\"col5\">7575.0</td><td class=\"col6\">0.9</td><td class=\"col7\">1330.97</td><tr class=Delaware><td class=\"col0\">Delaware</td><td class=\"col1\"></td><td class=\"col2\">9078.0</td><td class=\"col3\">0.3</td><td class=\"col4\">1445.58</td><td class=\"col5\">2502.0</td><td class=\"col6\">0.3</td><td class=\"col7\">1334.36</td><tr class=District of Columbia><td class=\"col0\">District of Columbia</td><td class=\"col1\"></td><td class=\"col2\">4035.0</td><td class=\"col3\">0.1</td><td class=\"col4\">1317.26</td><td class=\"col5\">1611.0</td><td class=\"col6\">0.2</td><td class=\"col7\">1055.95</td><tr class=Florida><td class=\"col0\">Florida</td><td class=\"col1\"></td><td class=\"col2\">187629.0</td><td class=\"col3\">6.7</td><td class=\"col4\">1296.6</td><td class=\"col5\">55275.0</td><td class=\"col6\">6.4</td><td class=\"col7\">1210.34</td><tr class=Georgia><td class=\"col0\">Georgia</td><td class=\"col1\"></td><td class=\"col2\">84045.0</td><td class=\"col3\">3.0</td><td class=\"col4\">1307.57</td><td class=\"col5\">29087.0</td><td class=\"col6\">3.3</td><td class=\"col7\">1226.89</td><tr class=Hawaii><td class=\"col0\">Hawaii</td><td class=\"col1\"></td><td class=\"col2\">13027.0</td><td class=\"col3\">0.5</td><td class=\"col4\">1311.7</td><td class=\"col5\">2356.0</td><td class=\"col6\">0.3</td><td class=\"col7\">1261.54</td><tr class=Idaho><td class=\"col0\">Idaho</td><td class=\"col1\"></td><td class=\"col2\">14719.0</td><td class=\"col3\">0.5</td><td class=\"col4\">1282.05</td><td class=\"col5\">4389.0</td><td class=\"col6\">0.5</td><td class=\"col7\">1180.46</td><tr class=Illinois><td class=\"col0\">Illinois</td><td class=\"col1\"></td><td class=\"col2\">105902.0</td><td class=\"col3\">3.8</td><td class=\"col4\">1358.61</td><td class=\"col5\">28598.0</td><td class=\"col6\">3.3</td><td class=\"col7\">1263.37</td><tr class=Indiana><td class=\"col0\">Indiana</td><td class=\"col1\"></td><td class=\"col2\">59654.0</td><td class=\"col3\">2.1</td><td class=\"col4\">1385.8</td><td class=\"col5\">21172.0</td><td class=\"col6\">2.4</td><td class=\"col7\">1263.5</td><tr class=Iowa><td class=\"col0\">Iowa</td><td class=\"col1\"></td><td class=\"col2\">28424.0</td><td class=\"col3\">1.0</td><td class=\"col4\">1350.31</td><td class=\"col5\">7794.0</td><td class=\"col6\">0.9</td><td class=\"col7\">1188.33</td><tr class=Kansas><td class=\"col0\">Kansas</td><td class=\"col1\"></td><td class=\"col2\">24976.0</td><td class=\"col3\">0.9</td><td class=\"col4\">1392.93</td><td class=\"col5\">7458.0</td><td class=\"col6\">0.9</td><td class=\"col7\">1223.08</td><tr class=Kentucky><td class=\"col0\">Kentucky</td><td class=\"col1\"></td><td class=\"col2\">41275.0</td><td class=\"col3\">1.5</td><td class=\"col4\">1269.56</td><td class=\"col5\">17152.0</td><td class=\"col6\">2.0</td><td class=\"col7\">1208.91</td><tr class=Louisiana><td class=\"col0\">Louisiana</td><td class=\"col1\"></td><td class=\"col2\">37654.0</td><td class=\"col3\">1.3</td><td class=\"col4\">1231.25</td><td class=\"col5\">15367.0</td><td class=\"col6\">1.8</td><td class=\"col7\">1132.68</td><tr class=Maine><td class=\"col0\">Maine</td><td class=\"col1\"></td><td class=\"col2\">15107.0</td><td class=\"col3\">0.5</td><td class=\"col4\">1244.3</td><td class=\"col5\">4662.0</td><td class=\"col6\">0.5</td><td class=\"col7\">1164.48</td><tr class=Maryland><td class=\"col0\">Maryland</td><td class=\"col1\"></td><td class=\"col2\">49703.0</td><td class=\"col3\">1.8</td><td class=\"col4\">1455.51</td><td class=\"col5\">14825.0</td><td class=\"col6\">1.7</td><td class=\"col7\">1288.59</td><tr class=Massachusetts><td class=\"col0\">Massachusetts</td><td class=\"col1\"></td><td class=\"col2\">56423.0</td><td class=\"col3\">2.0</td><td class=\"col4\">1410.44</td><td class=\"col5\">19497.0</td><td class=\"col6\">2.2</td><td class=\"col7\">1247.5</td><tr class=Michigan><td class=\"col0\">Michigan</td><td class=\"col1\"></td><td class=\"col2\">94480.0</td><td class=\"col3\">3.4</td><td class=\"col4\">1405.32</td><td class=\"col5\">34908.0</td><td class=\"col6\">4.0</td><td class=\"col7\">1274.68</td><tr class=Minnesota><td class=\"col0\">Minnesota</td><td class=\"col1\"></td><td class=\"col2\">46887.0</td><td class=\"col3\">1.7</td><td class=\"col4\">1416.24</td><td class=\"col5\">12615.0</td><td class=\"col6\">1.5</td><td class=\"col7\">1253.35</td><tr class=Mississippi><td class=\"col0\">Mississippi</td><td class=\"col1\"></td><td class=\"col2\">28831.0</td><td class=\"col3\">1.0</td><td class=\"col4\">1253.31</td><td class=\"col5\">11521.0</td><td class=\"col6\">1.3</td><td class=\"col7\">1162.89</td><tr class=Missouri><td class=\"col0\">Missouri</td><td class=\"col1\"></td><td class=\"col2\">55903.0</td><td class=\"col3\">2.0</td><td class=\"col4\">1305.12</td><td class=\"col5\">21850.0</td><td class=\"col6\">2.5</td><td class=\"col7\">1204.53</td><tr class=Montana><td class=\"col0\">Montana</td><td class=\"col1\"></td><td class=\"col2\">10919.0</td><td class=\"col3\">0.4</td><td class=\"col4\">1242.64</td><td class=\"col5\">2543.0</td><td class=\"col6\">0.3</td><td class=\"col7\">1135.88</td><tr class=Nebraska><td class=\"col0\">Nebraska</td><td class=\"col1\"></td><td class=\"col2\">15653.0</td><td class=\"col3\">0.6</td><td class=\"col4\">1351.05</td><td class=\"col5\">3944.0</td><td class=\"col6\">0.5</td><td class=\"col7\">1182.24</td><tr class=Nevada><td class=\"col0\">Nevada</td><td class=\"col1\"></td><td class=\"col2\">24927.0</td><td class=\"col3\">0.9</td><td class=\"col4\">1276.72</td><td class=\"col5\">6386.0</td><td class=\"col6\">0.7</td><td class=\"col7\">1280.05</td><tr class=New Hampshire><td class=\"col0\">New Hampshire</td><td class=\"col1\"></td><td class=\"col2\">13823.0</td><td class=\"col3\">0.5</td><td class=\"col4\">1459.91</td><td class=\"col5\">4695.0</td><td class=\"col6\">0.5</td><td class=\"col7\">1252.83</td><tr class=New Jersey><td class=\"col0\">New Jersey</td><td class=\"col1\"></td><td class=\"col2\">77395.0</td><td class=\"col3\">2.8</td><td class=\"col4\">1498.38</td><td class=\"col5\">22588.0</td><td class=\"col6\">2.6</td><td class=\"col7\">1351.19</td><tr class=New Mexico><td class=\"col0\">New Mexico</td><td class=\"col1\"></td><td class=\"col2\">19465.0</td><td class=\"col3\">0.7</td><td class=\"col4\">1253.29</td><td class=\"col5\">6832.0</td><td class=\"col6\">0.8</td><td class=\"col7\">1129.79</td><tr class=New York><td class=\"col0\">New York</td><td class=\"col1\"></td><td class=\"col2\">167679.0</td><td class=\"col3\">6.0</td><td class=\"col4\">1390.68</td><td class=\"col5\">51144.0</td><td class=\"col6\">5.9</td><td class=\"col7\">1252.05</td><tr class=North Carolina><td class=\"col0\">North Carolina</td><td class=\"col1\"></td><td class=\"col2\">93267.0</td><td class=\"col3\">3.3</td><td class=\"col4\">1330.16</td><td class=\"col5\">31519.0</td><td class=\"col6\">3.6</td><td class=\"col7\">1223.18</td><tr class=North Dakota><td class=\"col0\">North Dakota</td><td class=\"col1\"></td><td class=\"col2\">6064.0</td><td class=\"col3\">0.2</td><td class=\"col4\">1303.37</td><td class=\"col5\">1419.0</td><td class=\"col6\">0.2</td><td class=\"col7\">1170.71</td><tr class=Ohio><td class=\"col0\">Ohio</td><td class=\"col1\"></td><td class=\"col2\">102818.0</td><td class=\"col3\">3.7</td><td class=\"col4\">1298.46</td><td class=\"col5\">37027.0</td><td class=\"col6\">4.3</td><td class=\"col7\">1192.08</td><tr class=Oklahoma><td class=\"col0\">Oklahoma</td><td class=\"col1\"></td><td class=\"col2\">34127.0</td><td class=\"col3\">1.2</td><td class=\"col4\">1297.09</td><td class=\"col5\">12908.0</td><td class=\"col6\">1.5</td><td class=\"col7\">1153.1</td><tr class=Oregon><td class=\"col0\">Oregon</td><td class=\"col1\"></td><td class=\"col2\">39627.0</td><td class=\"col3\">1.4</td><td class=\"col4\">1322.5</td><td class=\"col5\">10509.0</td><td class=\"col6\">1.2</td><td class=\"col7\">1222.19</td><tr class=Pennsylvania><td class=\"col0\">Pennsylvania</td><td class=\"col1\"></td><td class=\"col2\">124342.0</td><td class=\"col3\">4.4</td><td class=\"col4\">1405.29</td><td class=\"col5\">40784.0</td><td class=\"col6\">4.7</td><td class=\"col7\">1233.26</td><tr class=Rhode Island><td class=\"col0\">Rhode Island</td><td class=\"col1\"></td><td class=\"col2\">10114.0</td><td class=\"col3\">0.4</td><td class=\"col4\">1382.0</td><td class=\"col5\">3505.0</td><td class=\"col6\">0.4</td><td class=\"col7\">1217.78</td><tr class=South Carolina><td class=\"col0\">South Carolina</td><td class=\"col1\"></td><td class=\"col2\">48737.0</td><td class=\"col3\">1.7</td><td class=\"col4\">1326.7</td><td class=\"col5\">16782.0</td><td class=\"col6\">1.9</td><td class=\"col7\">1226.36</td><tr class=South Dakota><td class=\"col0\">South Dakota</td><td class=\"col1\"></td><td class=\"col2\">7939.0</td><td class=\"col3\">0.3</td><td class=\"col4\">1276.45</td><td class=\"col5\">1810.0</td><td class=\"col6\">0.2</td><td class=\"col7\">1131.98</td><tr class=Tennessee><td class=\"col0\">Tennessee</td><td class=\"col1\"></td><td class=\"col2\">63053.0</td><td class=\"col3\">2.3</td><td class=\"col4\">1320.81</td><td class=\"col5\">22700.0</td><td class=\"col6\">2.6</td><td class=\"col7\">1199.61</td><tr class=Texas><td class=\"col0\">Texas</td><td class=\"col1\"></td><td class=\"col2\">186147.0</td><td class=\"col3\">6.7</td><td class=\"col4\">1306.23</td><td class=\"col5\">55701.0</td><td class=\"col6\">6.4</td><td class=\"col7\">1199.39</td><tr class=Utah><td class=\"col0\">Utah</td><td class=\"col1\"></td><td class=\"col2\">17254.0</td><td class=\"col3\">0.6</td><td class=\"col4\">1366.4</td><td class=\"col5\">4794.0</td><td class=\"col6\">0.6</td><td class=\"col7\">1212.67</td><tr class=Vermont><td class=\"col0\">Vermont</td><td class=\"col1\"></td><td class=\"col2\">6854.0</td><td class=\"col3\">0.2</td><td class=\"col4\">1357.58</td><td class=\"col5\">2000.0</td><td class=\"col6\">0.2</td><td class=\"col7\">1170.45</td><tr class=Virginia><td class=\"col0\">Virginia</td><td class=\"col1\"></td><td class=\"col2\">71393.0</td><td class=\"col3\">2.6</td><td class=\"col4\">1406.52</td><td class=\"col5\">18248.0</td><td class=\"col6\">2.1</td><td class=\"col7\">1243.7</td><tr class=Washington><td class=\"col0\">Washington</td><td class=\"col1\"></td><td class=\"col2\">62290.0</td><td class=\"col3\">2.2</td><td class=\"col4\">1408.72</td><td class=\"col5\">18791.0</td><td class=\"col6\">2.2</td><td class=\"col7\">1274.28</td><tr class=West Virginia><td class=\"col0\">West Virginia</td><td class=\"col1\"></td><td class=\"col2\">20444.0</td><td class=\"col3\">0.7</td><td class=\"col4\">1320.99</td><td class=\"col5\">7314.0</td><td class=\"col6\">0.8</td><td class=\"col7\">1248.92</td><tr class=Wisconsin><td class=\"col0\">Wisconsin</td><td class=\"col1\"></td><td class=\"col2\">55976.0</td><td class=\"col3\">2.0</td><td class=\"col4\">1380.66</td><td class=\"col5\">16064.0</td><td class=\"col6\">1.8</td><td class=\"col7\">1261.48</td><tr class=Wyoming><td class=\"col0\">Wyoming</td><td class=\"col1\"></td><td class=\"col2\">5379.0</td><td class=\"col3\">0.2</td><td class=\"col4\">1357.77</td><td class=\"col5\">1506.0</td><td class=\"col6\">0.2</td><td class=\"col7\">1231.68</td><tr class=Outlying areas><td class=\"col0\">Outlying areas</td><td class=\"col1\"></td><td class=\"col2\"></td><td class=\"col3\"></td><td class=\"col4\"></td><td class=\"col5\"></td><td class=\"col6\"></td><td class=\"col7\"></td><tr class=><td class=\"col0\"></td><td class=\"col1\">Puerto Rico</td><td class=\"col2\">29214.0</td><td class=\"col3\">1.0</td><td class=\"col4\">898.96</td><td class=\"col5\">14344.0</td><td class=\"col6\">1.7</td><td class=\"col7\">1034.4</td><tr class=><td class=\"col0\"></td><td class=\"col1\">Other<span class = \"top_footnote top_b\">b</span></td><td class=\"col2\">27158.0</td><td class=\"col3\">1.0</td><td class=\"col4\">702.73</td><td class=\"col5\">1265.0</td><td class=\"col6\">0.1</td><td class=\"col7\">1049.96</td></tbody>", 
+        "header": "<thead><tr><th rowspan=\"2\"  colspan=\"2\"  class=\"series col0\" >State or area</th><th colspan=\"3\"  class=\"series col2\" >Retired workers</th><th colspan=\"3\"  class=\"series col5\" >Disabled workers</th></tr><tr><th class=\"series col2\" >Number</th><th class=\"series col3\" >Percent</th><th class=\"series col4\" >Average monthly benefit a (dollars)</th><th class=\"series col5\" >Number</th><th class=\"series col6\" >Percent</th><th class=\"series col7\" >Average monthly benefit a (dollars)</th></tr></thead>"
     }, 
     "title": {
         "catID": "6.A", 

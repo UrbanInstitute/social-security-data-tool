@@ -32,7 +32,7 @@ body{
     margin-top: 20%;
 }
 #lineChart, #singleYearBarChart, #map, #barChart, #stackedBar{
-    width: calc(100% - 400px);
+    width: calc(100% - 420px);
     top: 60;
     left: 400px;
     position: fixed;
