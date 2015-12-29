@@ -68,6 +68,7 @@ function init(){
 		  		showScrubber();
 		  		break;
 		  	case "map":
+		  		exportParams.years = "null"
 		  	  	exportParams.chartType = "map"
 		  	  	exportParams.columns=["col3"]
 		  		drawTable(data);
@@ -75,6 +76,7 @@ function init(){
 		  		hideScrubber();
 		  		break;
 		  	case "barChart":
+		  		exportParams.years = "null"
 		  		exportParams.chartType = "barChart";
 	  			var col = (typeof(data.default) != "undefined") ? data.default : "col1"
 		  	  	exportParams.columns=[col];
@@ -131,6 +133,7 @@ function newTable(index){
 		  		showScrubber();
 		  		break;
 		  	case "map":
+		  		exportParams.years = "null"
 		  	  	exportParams.chartType = "map"
 		  	  	exportParams.columns=["col3"]
 		  		drawTable(data);
@@ -138,6 +141,7 @@ function newTable(index){
 		  		hideScrubber();
 		  		break;
 		  	case "barChart":
+		  		exportParams.years = "null"
 		  		exportParams.chartType = "barChart";
 	  			var col = (typeof(data.default) != "undefined") ? data.default : "col1"
 		  	  	exportParams.columns=[col];
@@ -291,7 +295,6 @@ function drawTable(input){
 				}
 				else if (category == "barChart"){
 			  		if( !selected ){
-			  			exportParams.columns = [series]
 			  			barChart.addSeries({
 							id: series[0],
 			            	name: seriesID,
@@ -300,6 +303,7 @@ function drawTable(input){
 
 						checkUnitCompatibility(data["data"][series]["type"], input, [barChart])
 						th.classed("selected", true)
+			  			exportParams.columns.push(series)
 
 						for(var i = 0; i < barChart.series.length; i++){
 							if(barChart.series[i].userOptions.id == series[0]){
@@ -308,6 +312,9 @@ function drawTable(input){
 						}
 					}
 					else{
+						var tmp = exportParams.columns.indexOf(series);
+						exportParams.columns.splice(tmp, 1)
+						
 						th.classed("selected", false)
 						removeSeries(barChart, seriesID)
 						th.style("background-color", "#e0e0e0")
@@ -1214,6 +1221,7 @@ function multiYear(){
 
 }
 function changeYears(start, end){
+	exportParams["years"] = start + "," + end
 
 	var lineChart = $('#lineChart').highcharts();
     lineChart.xAxis[0].setExtremes(
@@ -1234,6 +1242,7 @@ function changeYears(start, end){
 
 }
 function drawScrubber(lower, upper){
+	exportParams["years"] = lower + "," + upper
 	d3.select("#singleYearCheck svg").remove();
 	d3.selectAll("#valueScrubber div").remove();
 	var width = 240,
@@ -1419,6 +1428,7 @@ function setTheme(){
                 					url += ","
                 				}
                 			}
+                			url += "&years=" + exportParams.years
                 			return "&lt;iframe frameborder=\"0\" height=\"400px\" marginheight=\"0\" scrolling=\"no\" src=\"" + url + "\" width=\"100%\"&gt;&lt;/iframe&gt"
                 		})
                 		// &lt;iframe frameborder="0" height="450px" marginheight="0" scrolling="no" src="http://webapp.urban.org/reducing-mass-incarceration/embed_child.html" width="100%"&gt;&lt;/iframe&gt;

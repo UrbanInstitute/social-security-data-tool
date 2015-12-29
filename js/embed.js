@@ -39,7 +39,7 @@ function init(){
 		  var data = resp;
 		  // var category = data.category;
 		  switch(category){
-		  	case "timeSeries":
+		  	case "lineChart":
 		  		var years = data.data.years.series;
 		  		drawScrubber(getYear(years[0]), getYear(years[years.length-1]));
 		  		drawLineChart(data);
@@ -74,14 +74,14 @@ function init(){
 		            	data: generateTimeSeries(data.data.years.series, data["data"][series]["series"])
 					});
 		  		}
-		  		drawSingleYearBarChart(data, columns[0], inYears[0]);
+		  		drawSingleYearBarChart(data, columns[0], inYears[1]);
 
 		  		for(var i = 1; i< columns.length; i++){
 			  			var series = columns[i]
 			  			var seriesID = data["data"][series]["label"]
 					    var singleYearBarChart = $('#singleYearBarChart').highcharts();
 
-						singleYearBarChart.series[0].addPoint(generateBarFromYear(data.data.years.series, data["data"][series]["series"], inYears[0]))
+						singleYearBarChart.series[0].addPoint(generateBarFromYear(data.data.years.series, data["data"][series]["series"], inYears[1]))
 
 						$.each(singleYearBarChart.series[0].data, function(k,v){
 							v.update({
@@ -1553,7 +1553,7 @@ function formatLabel(x, y, input, col, type){
 	}
 }
 
-pymChild = new pym.Child({ renderCallback: init });
+// pymChild = new pym.Child({ renderCallback: init });
 
 
 
