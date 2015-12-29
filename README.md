@@ -2,7 +2,7 @@
 Data scraping and organization tool for Social Security and Disability Insurance data
 
 ##To run the scrapers:
-#Statistical Supplement
+###Statistical Supplement
 Data are stored in .xls file in `data/statistical_supplement/supplement14_new.xls`
 
 Run `python scraper/supplement_xlsx_to_json` to generate JSON's from xls file.
