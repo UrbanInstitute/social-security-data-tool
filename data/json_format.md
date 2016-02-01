@@ -19,7 +19,7 @@ https://www.ssa.gov/oact/tr/2015/lr4b2.html
  - "id": the table id, as specified in the file name above (e.g. "IV_B2-1")
 
 - footnotes: an array of objects, each object with the following properties
-	- "content": the text of the footnote NOTE including the footnote symbol
+	- "content": the text of the footnote NOT including the footnote symbol
 	- "type": has the value "footnote" for footnotes which include footnote symbols, or "note" for those with no symbol (examples include "Source" or "Note" information below tables)
 	- "symbol": for objects of typle "footnote", include the footnote symbol (do not include this key for objects of type "note"
 	- __Note:__ for subtables, repeat the "footnotes" object for all tables
