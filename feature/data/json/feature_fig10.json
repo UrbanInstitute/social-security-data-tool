@@ -1,0 +1,199 @@
+{
+    "category": "timeSeries", 
+    "data": {
+        "col1": {
+            "label": "1980's", 
+            "series": [
+                11.2,
+                10.3,
+                9.1,
+                9.1,
+                8.9,
+                8.9,
+                9.1,
+                8.8,
+                7.9,
+                7.5                ],
+            "xvals": [
+                7.1,
+                7.6,
+                9.7,
+                9.6,
+                7.5,
+                7.2,
+                7,
+                6.2,
+                5.5,
+                5.3
+            ], 
+            "type": "percent"
+        },
+        "col2": {
+            "label": "1990's", 
+            "series": [
+                7.5,
+                8.0,
+                9.1,
+                10.0,
+                10.5,
+                10.4,
+                9.5,
+                8.9,
+                8.1,
+                7.9,
+                7.9   
+                ],
+            "xvals": [
+                5.3,
+                5.6,
+                6.8,
+                7.5,
+                6.9,
+                6.1,
+                5.6,
+                5.4,
+                4.9,
+                4.5,
+                4.2     
+            ], 
+            "type": "percent"
+        },
+        "col3": {
+            "label": "2000's", 
+            "series": [
+                7.9,
+                8.6,
+                9.6,
+                10.9,
+                12.3,
+                13.7,
+                13.4,
+                13.3,
+                13.4,
+                14.3,
+                17.8      
+                ],
+            "xvals": [
+                4.2,
+                4,
+                4.7,
+                5.8,
+                6,
+                5.5,
+                5.1,
+                4.6,
+                4.6,
+                5.8,
+                9.3
+            ], 
+            "type": "percent"
+        },
+        "col4": {
+            "label": "2010's", 
+            "series": [
+                17.8,
+                18.7,
+                18.1,
+                17.4,
+                16.2      
+                ],
+            "xvals": [
+                9.3,
+                9.6,
+                8.9,
+                8.1,
+                7.4
+            ], 
+            "type": "percent"
+        },
+
+        "years": {
+            "series": [
+                1996,
+                1997,
+                1998,
+                1999,
+                2000,
+                2001,
+                2002,
+                2003,
+                2004,
+                2005,
+                2006,
+                2007,
+                2008,
+                2009,
+                2010,
+                2011,
+                2012,
+                2013,
+                2014           
+            ], 
+            "type": "year"
+        }
+    }, 
+    "footnotes": [
+        {
+            "content": "Sources: Social Security Act of 1935 (the Act), as amended through December 31, 2013; regulations issued under the Act; and precedential case decisions (rulings). Social Security Administration, \"Cost-of-Living Increase and Other Determinations for 2014,\"  Federal Register, vol. 78, no. 214 (November 5, 2013). See the Social Security Program Rules page (http://www.socialsecurity.gov/regulations/index.htm) for specific laws, regulations, rulings, legislation, and a link to the  Federal Register.", 
+            "type": "note"
+        }, 
+        {
+            "content": "Notes: DI = Disability Insurance; HI = Hospital Insurance; OASI = Old-Age and Survivors Insurance; OASDI = Old-Age, Survivors, and Disability Insurance; .\u00a0.\u00a0.\u00a0=\u00a0not\u00a0applicable.", 
+            "type": "note"
+        }, 
+        {
+            "content": "Table shows the contribution (tax) rates used to determine total amounts received by the trust funds. Occasional temporary tax credits and rate reductions affect the rates\u00a0paid by employers, employees, or self-employed persons, and are summarized in footnotes as applicable.", 
+            "type": "note"
+        }, 
+        {
+            "content": "Based on automatic adjustment, under legislation in 1972 (as modified by legislation in 1973), in proportion to increases in average wage level.", 
+            "symbol": "a.", 
+            "type": "footnote"
+        }, 
+        {
+            "content": "In 1984, the 5.7 percent OASDI tax on taxable wages of employees was offset by a tax credit of 0.3 percent, resulting in an effective employee tax rate of 5.4 percent. However, the OASDI trust funds received the full 5.7 percent because of a general revenue transfer equivalent to 0.3 percent of taxable wages. Similar credits of 2.7\u00a0percent, 2.3 percent, and 2.0\u00a0percent were allowed against the combined OASDI and HI taxes on net earnings from self-employment in 1984, 1985, and from 1986 to 1989, respectively.", 
+            "symbol": "b.", 
+            "type": "footnote"
+        }, 
+        {
+            "content": "Based on automatic adjustment, under legislation in 1972 (as modified by legislation in 1973), using a transitional rule, specified by the Omnibus Budget Reconciliation Act (OBRA) of 1989, for computing a \"deemed\" average annual wage for 1988, 1989, and 1990.", 
+            "symbol": "c.", 
+            "type": "footnote"
+        }, 
+        {
+            "content": "Based on legislation in 1990.", 
+            "symbol": "d.", 
+            "type": "footnote"
+        }, 
+        {
+            "content": "Upper limit on earnings subject to HI taxes was repealed by OBRA 1993.", 
+            "symbol": "e.", 
+            "type": "footnote"
+        }, 
+        {
+            "content": "For 2010, most employers were exempt from paying the employer share of OASDI tax on wages paid to certain qualified individuals hired after February 3. Amounts equal to the revenue forgone will be transferred from the general fund of the Treasury to the OASI and DI trust funds.", 
+            "symbol": "f.", 
+            "type": "footnote"
+        }, 
+        {
+            "content": "For 2011 and 2012, the combined OASDI payroll tax rate was reduced by 2.0\u00a0percent for employees and for self-employed workers, resulting in a 4.2 percent effective tax rate for employees and a 10.4 percent effective tax rate for self-employed workers. The authorizing legislation does not specify percentage reductions attributable to the separate OASI and DI trust funds. Amounts equal to the revenue forgone were transferred from the general fund of the Treasury to the trust funds.", 
+            "symbol": "g.", 
+            "type": "footnote"
+        }, 
+        {
+            "content": "Beginning in 2013, an additional HI tax of 0.9 percent is assessed on earned income exceeding $200,000 for individuals and $250,000 for married couples filing jointly. This additional HI tax rate is not reflected in the contribution rates shown in the table.", 
+            "symbol": "h.", 
+            "type": "footnote"
+        }, 
+        {
+            "content": "File available from\nUS Social Security Administration \u2022 Office of Retirement and Disability Policy \u2022 Office of Research, Evaluation, and Statistics,\n<span class =\"suppTitle\">Annual Statistical Supplement, 2014</span>,\nhttp://www.socialsecurity.gov/policy/docs/statcomps/supplement/2014/.", 
+            "type": "note"
+        }
+    ], 
+    "title": {
+        "catID": "2.A", 
+        "category": "Disabled Worker Incidence Rates", 
+        "id": "2", 
+        "name": "(Awards per thousand, adjusted for distributions of age and sex)"
+    }
+}

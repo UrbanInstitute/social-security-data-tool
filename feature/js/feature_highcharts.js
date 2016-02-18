@@ -11,6 +11,14 @@ function getQueryVariable(variable) {
 
 
 
+var allSheets = tempAllSheets;
+var sheets = tempAllSheets;
+var TOTAL_TABLES = sheets.length
+var tableIndex = 0;
+// init("2A9");
+// init("4C1");
+init();
+
 var yearBarCache;
 var MONTHNAMES = ["January", "February", "March", "April", "May", "June",
   "July", "August", "September", "October", "November", "December"
@@ -20,44 +28,71 @@ var MONTHABBREVS = ["Jan", "Feb", "Mar", "Apr", "May", "June",
     ]
 
 var IE = false;
+var FIG2, FIG9,FIG7;
 // var embed = false;
 
 
 var exportParams = {}
 
 function init(){
-	tableIndex = sheets.indexOf(getQueryVariable("tableID"))
-	columns = getQueryVariable("columns").split(",")
-	category = getQueryVariable("chartType")
-	inYears = getQueryVariable("years").split(",")
-	// $.get( getDocURL("2A3"), function(resp) {
-	setLayout();
+var tableIndex = 0
+var allSheets = tempAllSheets;
+var sheets = tempAllSheets;
+var TOTAL_TABLES = sheets.length
+var tableIndex = 0;
+FIG2 = (sheets[tableIndex] == "2")
+FIG9 = (sheets[tableIndex] == "9-1")
+FIG7 = (sheets[tableIndex] == "7")
+FIG10 = (sheets[tableIndex] == "10")
+
+setLayout();
 
 	setTimeout(function(){
-		console.log(getJSONPath(sheets[tableIndex].replace(/\./g,"_")))
 		$.getJSON( getJSONPath(sheets[tableIndex].replace(/\./g,"_")), function(resp){
 		  // var data = resp.results[0];
 		  var data = resp;
+		  
+		
 		  // var category = data.category;
 		  switch(category){
 		  	case "lineChart":
-		  		var years = data.data.years.series;
-		  		drawScrubber(getYear(years[0]), getYear(years[years.length-1]));
+		  		// if(!FIG10){
+	  			var years = data.data.years.series;
+	  			drawScrubber(getYear(years[0]), getYear(years[years.length-1]));
+
 		  		drawLineChart(data);
 		  		multiYear();
 		  		showScrubber();
 				var lineChart = $('#lineChart').highcharts();
+				var lineType = (FIG10) ? "spline" : "line"
+
 		  		for(var i = 0; i< columns.length; i++){
 		  			var series = columns[i]
+					var lineData = (FIG10) ? generateSpline(data["data"][series]["xvals"], data["data"][series]["series"]) : generateTimeSeries(data.data.years.series, data["data"][series]["series"])
+					
 		  			var seriesID = data["data"][series]["label"]
-
+				
+		  			console.log(series)
 	  				lineChart.addSeries({
 						id: series,
 		            	name: seriesID,
-		            	data: generateTimeSeries(data.data.years.series, data["data"][series]["series"])
+		            	type: lineType,
+		            	data: lineData
 					});
+
 		  		}
-		  		changeYears(inYears[0],inYears[1])
+		  			if(FIG2){
+						lineChart.addSeries({
+						id: "Recessions",
+		            	name: "Recessions",
+		            	type: "area",
+		            	color: "#cfe8f3"
+
+					});
+					}
+				if(!FIG10){
+		  			changeYears(inYears[0],inYears[1])
+		  		}
 		  		break;
 		  	case "timeBar":
 		  		var years = data.data.years.series;
@@ -68,7 +103,6 @@ function init(){
 		  		for(var i = 0; i< columns.length; i++){
 		  			var series = columns[i]
 		  			var seriesID = data["data"][series]["label"]
-
 	  				lineChart.addSeries({
 						id: series,
 		            	name: seriesID,
@@ -370,6 +404,24 @@ function generateTimeSeries(year, column){
 	return series;
 }
 
+
+function generateSpline(xval, column){
+	var series = [];
+	for(var i = 0; i< xval.length; i++){
+		var y = (column[i] == false || isNaN(column[i])) ? null : column[i];
+//ignore "Total" row in tables such as 5.B4
+		if(xval[i] == false){
+			continue
+		}
+		else if(typeof(xval[i]) == "number"){
+//simple case, like "2014"
+			series.push([xval[i], y]);
+		}
+	}
+	return series;
+}
+
+
 function getDate(y1, y2, parenthetical){
 	// y2 = y2 || false;
 	var year, year2, mYear;
@@ -489,7 +541,7 @@ function drawBar(input, col){
                 }
             },
             credits: {
-                enabled: true,
+                enabled: false,
                 text: "<a href = \"https://www.ssa.gov/policy/docs/statcomps/supplement/\">These data are from the Social Security Administration's <em>Annual Statistical Supplement, 2014</em>. The parenthetical numbers with the titles are retained from the supplement for reference.</a>",
                 href: "https://www.ssa.gov/policy/docs/statcomps/supplement/",
                 style:{
@@ -631,9 +683,49 @@ function drawMap(input, col){
 
 function drawLineChart(input){
 	var initId = input["data"]["col1"]["label"]
+	var axisType = (FIG10) ? "linear" : "datetime"
+	var mTop = (FIG7) ? 120 : 90;
+	var plotBands = (FIG2) ? [
+				{ 
+	                color: '#cfe8f3',
+	                from: Date.UTC(1991, 0, 1),
+	                to: Date.UTC(1991, 2, 1)
+	            },
+				{ 
+	                color: '#cfe8f3',
+	                from: Date.UTC(2001, 2, 1),
+	                to: Date.UTC(2001, 9, 1)
+	            },
+				{ 
+	                color: '#cfe8f3',
+	                from: Date.UTC(2007,11, 1),
+	                to: Date.UTC(2009, 5, 1)
+	            }
+            ]
+            : []
+    var annotations = (FIG10) ?[
+    	{
+            title: {
+                text: '<span style="">drag me anywhere <br> dblclick to remove</span>',
+
+            },
+            anchorX: "left",
+            anchorY: "top",
+            allowDragX: true,
+            allowDragY: true,
+            x: 515,
+            y: 155,
+            linkedTo: "col1"
+        }
+        ]
+        :[]
     $('#lineChart').highcharts({
+	        annotationsOptions: {
+      	      enabledButtons: false   
+        	},
+        	annotations: annotations,
             chart: {
-                marginTop: 150,
+                marginTop: mTop,
                 marginBottom: 100
             },
             plotOptions: {
@@ -658,17 +750,21 @@ function drawLineChart(input){
                 y: 0
             },
             xAxis: {
+            	min: 0,
+        	    plotBands: plotBands,
+
                 gridLineWidth: '0',
                 lineWidth: 2,
                 plotLines: [{
                     value: 0,
                     width: 0
                         }],
-                type: "datetime",
+                type: axisType,
                 minRange: 1
             },
 
             yAxis: {
+            	min: 0,
                 title: {
                     text: ''
                 },
@@ -691,25 +787,27 @@ function drawLineChart(input){
                         return null
                     }else{
                     	var arrayOfSeries = this;
-                    	return formatLabel(this.x, this.y, input, this.series.userOptions.id, "tooltipLine")
+                    	console.log("this",this)
+                    	return formatLabel(this.x, this.y, input, this.series.userOptions.id, "tooltipLine", this.point.index)
 
                     }
                 }
             },
-            credits: {
-                enabled: true,
-                text: "<a href = \"https://www.ssa.gov/policy/docs/statcomps/supplement/\">These data are from the Social Security Administration's <em>Annual Statistical Supplement, 2014</em>. The parenthetical numbers with the titles are retained from the supplement for reference.</a>",
-                href: "https://www.ssa.gov/policy/docs/statcomps/supplement/",
-                style:{
-                		color: '#1696d2',
-                		fill: '#1696d2'
-                },
-                title: false
-            },
+            // credits: {
+            //     enabled: true,
+            //     text: "<a href = \"https://www.ssa.gov/policy/docs/statcomps/supplement/\">These data are from the Social Security Administration's <em>Annual Statistical Supplement, 2014</em>. The parenthetical numbers with the titles are retained from the supplement for reference.</a>",
+            //     href: "https://www.ssa.gov/policy/docs/statcomps/supplement/",
+            //     style:{
+            //     		color: '#1696d2',
+            //     		fill: '#1696d2'
+            //     },
+            //     title: false
+            // },
             legend: {
+            enabled: !FIG9,
             align: 'top',
             verticalAlign: 'top',
-            layout: 'vertical',
+            layout: 'horizontal',
             // width: 140,
             // useHTML: true,
             x: 0,
@@ -725,6 +823,10 @@ function drawLineChart(input){
         // }
         // ]
     });
+
+}
+function getRect(month,day,year){
+
 }
 function generateBarFromYear(years, column, year){
 	var series = [];
@@ -894,7 +996,7 @@ function getJSONPath(id){
 	else if (id == "titles"){
 		return "data/titles.json"
 	}else{
-		return "data/json/stat_supplement_table-" + id + ".json"
+		return "data/json/feature_fig" + id + ".json"
 	}
 }
 function singleYear(){
@@ -995,7 +1097,7 @@ function changeYears(start, end){
             Date.UTC(parseInt(end), 0, 2)
     );
     var singleYearBarChart = $('#singleYearBarChart').highcharts();
-    // console.log(category)
+    
     if(category == "timeBar"){
 		$.each(singleYearBarChart.series[0].data, function(k,v){
 			var barData = yearBarCache[v.category]
@@ -1221,7 +1323,8 @@ function setTheme(){
 	            fontFamily: "Lato, sans-serif"
 	        },
 	        marginTop: 0,
-	        marginBottom: 40
+	        marginBottom: 40,
+	        height: 500
 	    },
 	    title: {
 	        style: {
@@ -1345,16 +1448,9 @@ function setTheme(){
 // var tempAllSheets = ['2.A3','2.A4','2.A30','2.F4','2.F5','2.F6','2.F8','2.F11','4.A2','4.A3','4.A4','4.A6','4.C1','5.A1.3','5.A7','5.A17','5.D1','5.D2','5.D3','5.D4','5.E1','5.E2','5.F1','5.F4','5.F6','5.F7','5.F8','5.H1','5.H3','5.H4','5.J1','5.J2','5.J4','5.J8','5.J10','5.J14','6.A1','6.A2','6.A3','6.A6','6.C1','6.C2','6.C7','6.D4','6.D8','6.F1']
 
 
-var tempAllSheets = ["2_A3","2_A30","2_A4","2_F11","2_F4","2_F5","2_F6","2_F8","4_A1","4_A2","4_A3","4_A4","4_A5","4_A6","4_C1","5_A14-0","5_A14-1","5_A17","5_A1_8","5_A4-0","5_A4-1","5_B4","5_D1","5_D2","5_D3","5_E1","5_E2","5_F1-0","5_F1-1","5_F4-0","5_F4-1","5_F4-2","5_F4-3","5_F6","5_F7","5_F8","5_H1-0","5_H1-1","5_H3","5_H4","5_J1","5_J10","5_J14","5_J2","5_J4","5_J8","6_A1","6_A2","6_A6","6_B5-0","6_B5-1","6_B5_1-0","6_B5_1-1","6_C1","6_C2-0","6_C2-1","6_C7","6_D4-0","6_D4-1","6_D4-2","6_D4-3","6_D8","6_F1"]
 
 
-var allSheets = tempAllSheets;
-var sheets = tempAllSheets;
-var TOTAL_TABLES = sheets.length
-var tableIndex = 0;
-// init("2A9");
-// init("4C1");
-init();
+
 
 function searchTables(val){
 	var checked = d3.selectAll("#checkBoxes input").filter(function(d){return this.checked})
@@ -1420,7 +1516,8 @@ function noResults(val){
 
 }
 
-function formatLabel(x, y, input, col, type){
+function formatLabel(x, y, input, col, type, ind){
+	
 	if(type == "tooltipBar" && Object.keys(yearBarCache).length > 0){
 		col = yearBarCache.id
 	}
@@ -1475,31 +1572,41 @@ function formatLabel(x, y, input, col, type){
 	}
 
 	if(type == "tooltipLine"){
+		var catLabel = (FIG7) ? input["data"][col]["label"] + "<br>": ""
 		var date = new Date(x)
-		var full = MONTHNAMES[date.getMonth()] + " " + date.getFullYear()
-		switch(label){
-			case "dollar":
-				return full + ": " + dollar(y)
-				break;
-			case "dollarThousand":
-				return full + ": " + dollar(y * 1000)
-				break;
-			case "dollarMillion":
-				return full + ": " + dollar(y * 1000000)
-				break;
-			case "number":
-				return full + ": " + num(y)
-				break;				
-			case "numberThousand":
-				return full + ": " + num(y * 1000)
-				break;
-			case "numberMillion":
-				return full + ": " + num(y * 1000000)
-				break;
-			case "percent":
-				return full + ": " + y + "%"
-				break;
+		var full = date.getFullYear()
+		if(FIG10){
+			var tmp = d3.format(".1f")
+			var colNum = parseInt(col.replace("col",""))
+			var fudge = (colNum == 1) ? 0 : 1;
+			var decade = colNum*10 + 1970-fudge
+			return (decade + ind) + "<br>" + tmp(x) + "%" + " unemployed" + "<br>" + y + " applications per 1,000 workers"
+		}
+		else{
+			switch(label){
+				case "dollar":
+					return full + ": " + dollar(y)
+					break;
+				case "dollarThousand":
+					return full + ": " + dollar(y * 1000)
+					break;
+				case "dollarMillion":
+					return full + ": " + dollar(y * 1000000)
+					break;
+				case "number":
+					return full + ": " + num(y)
+					break;				
+				case "numberThousand":
+					return full + ": " + num(y * 1000)
+					break;
+				case "numberMillion":
+					return full + ": " + num(y * 1000000)
+					break;
+				case "percent":
+					return catLabel  + full + ": " + y + "%"
+					break;
 
+			}
 		}
 	}
 	else if(type == "tooltipBar"){
