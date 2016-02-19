@@ -685,6 +685,10 @@ function drawLineChart(input){
 	var initId = input["data"]["col1"]["label"]
 	var axisType = (FIG10) ? "linear" : "datetime"
 	var mTop = (FIG7) ? 120 : 90;
+	var xMin = (FIG10) ? 2 : 0;
+	var xMax = (FIG10) ? 10 : null;
+	var yText = (FIG10) ? "Number of DI applications per 1,000 workers with taxable earnings" : "";
+	var xText = (FIG10) ? "Unemployment rate (percent)" : "";
 	var plotBands = (FIG2) ? [
 				{ 
 	                color: '#cfe8f3',
@@ -706,16 +710,15 @@ function drawLineChart(input){
     var annotations = (FIG10) ?[
     	{
             title: {
-                text: '<span style="">drag me anywhere <br> dblclick to remove</span>',
+                text: '',
 
             },
             anchorX: "left",
             anchorY: "top",
-            allowDragX: true,
-            allowDragY: true,
-            x: 515,
-            y: 155,
-            linkedTo: "col1"
+            allowDragX: false,
+            allowDragY: false,
+            x: 325,
+            y: 85,
         }
         ]
         :[]
@@ -723,7 +726,6 @@ function drawLineChart(input){
 	        annotationsOptions: {
       	      enabledButtons: false   
         	},
-        	annotations: annotations,
             chart: {
                 marginTop: mTop,
                 marginBottom: 100
@@ -750,7 +752,11 @@ function drawLineChart(input){
                 y: 0
             },
             xAxis: {
-            	min: 0,
+                title: {
+                    text: xText
+                },
+            	min: xMin,
+            	max: xMax,
         	    plotBands: plotBands,
 
                 gridLineWidth: '0',
@@ -760,13 +766,23 @@ function drawLineChart(input){
                     width: 0
                         }],
                 type: axisType,
-                minRange: 1
+                minRange: 1,
+                labels: {
+                	formatter: function(){
+                		if(FIG10){
+                			return this.value + "%"
+                		}else{
+                			var d = new Date(this.value)
+                			return d.getUTCFullYear()
+                		}
+                	}
+                }
             },
 
             yAxis: {
             	min: 0,
                 title: {
-                    text: ''
+                    text: yText
                 },
                 labels: {
                 	formatter: function(){
@@ -787,7 +803,6 @@ function drawLineChart(input){
                         return null
                     }else{
                     	var arrayOfSeries = this;
-                    	console.log("this",this)
                     	return formatLabel(this.x, this.y, input, this.series.userOptions.id, "tooltipLine", this.point.index)
 
                     }
@@ -822,6 +837,62 @@ function drawLineChart(input){
         //     data: generateTimeSeries(input.data.years.series, input.data.col1.series)
         // }
         // ]
+    }    , function (chart) { // on complete
+    	if(FIG10){
+      		chart.renderer.text('2010s<br>Over the last few years, the unemployment<br>rate and applications have fallen together.', 335, 105)
+        // ["#1696d2", "#062635", "#eb3f1c","#370b0a"]
+        	.css({
+        		    'fill': '#370b0a',
+        		    'font-weight':'bolder',
+        		    'font-size': '11px'
+        	})
+            .add();
+      		chart.renderer.text('Great Recession<br>During the Great Recession in the<br>late-2000s, both the unemployment<br>rate and share of DI applications<br>surged.', 495, 205)
+        // ["#1696d2", "#062635", "#eb3f1c","#370b0a"]
+        	.css({
+        		    'fill': '#eb3f1c',
+        		    'font-weight':'bolder',
+        		    'font-size': '11px'
+        	})
+            .add();
+      		chart.renderer.text('2000s<br>Unemployment and applications<br>tracked each other during much<br>of the 2000s.', 145, 295)
+        // ["#1696d2", "#062635", "#eb3f1c","#370b0a"]
+        	.css({
+        		    'fill': '#eb3f1c',
+        		    'font-weight':'bolder',
+        		    'font-size': '11px'
+        	})
+            .add();
+      		chart.renderer.text('1990s<br>Unemployment rose during the early-1990s<br>recession, taking applications with it, but<br>when unemployment fell, applications per<br>1,000 workers fell slightly.', 325, 430)
+        // ["#1696d2", "#062635", "#eb3f1c","#370b0a"]
+        	.css({
+        		    'fill': '#062635',
+        		    'font-weight':'bolder',
+        		    'font-size': '11px'
+        	})
+            .add();
+      		chart.renderer.text('1980s<br>As the unemployment rate fell<br>in mid- and late-1980s, the<br>share of applications remained<br>unchanged, then fell in 1988<br><span style = "margin-left:20px">and 1989.</span>', 550, 272)
+        // ["#1696d2", "#062635", "#eb3f1c","#370b0a"]
+        	.css({
+        		    'fill': '#1696d2',
+        		    'font-weight':'bolder',
+        		    'font-size': '11px'
+        	})
+            .add();
+      		chart.renderer.text('1980', 445, 309)
+        // ["#1696d2", "#062635", "#eb3f1c","#370b0a"]
+        	.css({
+        		    'fill': '#333333'
+        	})
+            .add();
+      		chart.renderer.text('2013', 468, 181)
+        // ["#1696d2", "#062635", "#eb3f1c","#370b0a"]
+        	.css({
+        		    'fill': '#333333'
+        	})
+            .add();
+         }
+
     });
 
 }
@@ -1313,10 +1384,12 @@ function setTheme(){
 	}
 	var oldMenu = Highcharts.getOptions().exporting.buttons.contextButton.menuItems
 	oldMenu.unshift(embed)
-
+	var chartHeight = (FIG10) ? 700 : 500;
+	var colors = (FIG10) ? ["#1696d2", "#062635", "#eb3f1c",
+	       "#370b0a"] : ["#1696d2", "#fdbf11", "#062635", "#eb3f1c", "#55b748",
+	      "#ec008b", "#db2b27"]
 	Highcharts.theme = {
-	    colors: ["#0096d2", "#00578b", "#fcb918", "#f47d20", "#ec008c",
-	      "#55BF3B", "#DF5353"],
+	    colors: colors,
 	    chart: {
 	        backgroundColor: "#ffffff",
 	        style: {
@@ -1324,7 +1397,7 @@ function setTheme(){
 	        },
 	        marginTop: 0,
 	        marginBottom: 40,
-	        height: 500
+	        height: chartHeight
 	    },
 	    title: {
 	        style: {
@@ -1361,6 +1434,7 @@ function setTheme(){
 	        }
 	    },
         exporting: {
+            sourceWidth: 745,
             buttons: {
                 contextButton: {
                 	symbol: false,

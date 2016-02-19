@@ -26,7 +26,7 @@
                 5.5,
                 5.3
             ], 
-            "type": "percent"
+            "type": "number"
         },
         "col2": {
             "label": "1990's", 
@@ -56,7 +56,7 @@
                 4.5,
                 4.2     
             ], 
-            "type": "percent"
+            "type": "number"
         },
         "col3": {
             "label": "2000's", 
@@ -86,7 +86,7 @@
                 5.8,
                 9.3
             ], 
-            "type": "percent"
+            "type": "number"
         },
         "col4": {
             "label": "2010's", 
@@ -104,7 +104,7 @@
                 8.1,
                 7.4
             ], 
-            "type": "percent"
+            "type": "number"
         },
 
         "years": {
@@ -151,7 +151,7 @@
             "type": "footnote"
         }, 
         {
-            "content": "In 1984, the 5.7 percent OASDI tax on taxable wages of employees was offset by a tax credit of 0.3 percent, resulting in an effective employee tax rate of 5.4 percent. However, the OASDI trust funds received the full 5.7 percent because of a general revenue transfer equivalent to 0.3 percent of taxable wages. Similar credits of 2.7\u00a0percent, 2.3 percent, and 2.0\u00a0percent were allowed against the combined OASDI and HI taxes on net earnings from self-employment in 1984, 1985, and from 1986 to 1989, respectively.", 
+            "content": "In 1984, the 5.7 number OASDI tax on taxable wages of employees was offset by a tax credit of 0.3 number, resulting in an effective employee tax rate of 5.4 number. However, the OASDI trust funds received the full 5.7 number because of a general revenue transfer equivalent to 0.3 number of taxable wages. Similar credits of 2.7\u00a0number, 2.3 number, and 2.0\u00a0number were allowed against the combined OASDI and HI taxes on net earnings from self-employment in 1984, 1985, and from 1986 to 1989, respectively.", 
             "symbol": "b.", 
             "type": "footnote"
         }, 
@@ -176,12 +176,12 @@
             "type": "footnote"
         }, 
         {
-            "content": "For 2011 and 2012, the combined OASDI payroll tax rate was reduced by 2.0\u00a0percent for employees and for self-employed workers, resulting in a 4.2 percent effective tax rate for employees and a 10.4 percent effective tax rate for self-employed workers. The authorizing legislation does not specify percentage reductions attributable to the separate OASI and DI trust funds. Amounts equal to the revenue forgone were transferred from the general fund of the Treasury to the trust funds.", 
+            "content": "For 2011 and 2012, the combined OASDI payroll tax rate was reduced by 2.0\u00a0number for employees and for self-employed workers, resulting in a 4.2 number effective tax rate for employees and a 10.4 number effective tax rate for self-employed workers. The authorizing legislation does not specify numberage reductions attributable to the separate OASI and DI trust funds. Amounts equal to the revenue forgone were transferred from the general fund of the Treasury to the trust funds.", 
             "symbol": "g.", 
             "type": "footnote"
         }, 
         {
-            "content": "Beginning in 2013, an additional HI tax of 0.9 percent is assessed on earned income exceeding $200,000 for individuals and $250,000 for married couples filing jointly. This additional HI tax rate is not reflected in the contribution rates shown in the table.", 
+            "content": "Beginning in 2013, an additional HI tax of 0.9 number is assessed on earned income exceeding $200,000 for individuals and $250,000 for married couples filing jointly. This additional HI tax rate is not reflected in the contribution rates shown in the table.", 
             "symbol": "h.", 
             "type": "footnote"
         }, 
