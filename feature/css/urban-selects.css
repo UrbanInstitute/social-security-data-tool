@@ -1,0 +1,43 @@
+.styled-select.filter select{
+  pointer-events: none;
+}
+.styled-select select {
+   background: transparent;
+   width: 410px;
+   height: 45px;
+   padding-left: 10px;
+   font: 16px Lato;
+   color: #818385;
+   line-height: 1;
+   border: 0;
+   border-radius: 0;
+   -webkit-appearance: none;
+   pointer-events: none;
+}
+.styled-select select::-ms-expand {
+ display: none !important;
+}
+.styled-select {
+   width: 410px;
+   left: 10;
+   height: 45px;
+   overflow: hidden;
+   background: url(../img/urban-select-2x.png) no-repeat right #EFEFEF;
+   background-size: 45px 45px;
+   border: none;
+   z-index: 2;
+   position: fixed;
+   overflow: hidden;
+}
+*:focus{
+   outline: 0;
+}
+
+@media(max-width:420px){
+   .styled-select{
+      width: 300px;
+   }
+   .styled-select select{
+      width: 255px;
+   }
+}

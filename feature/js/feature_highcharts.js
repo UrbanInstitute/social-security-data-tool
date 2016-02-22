@@ -28,8 +28,9 @@ var MONTHABBREVS = ["Jan", "Feb", "Mar", "Apr", "May", "June",
     ]
 
 var IE = false;
-var FIG2, FIG9,FIG7;
+var FIG2, FIG9,FIG7,FIG10,FIG4;
 // var embed = false;
+var global_data;
 
 
 var exportParams = {}
@@ -45,15 +46,15 @@ FIG9 = (sheets[tableIndex] == "9-1")
 FIG7 = (sheets[tableIndex] == "7")
 FIG10 = (sheets[tableIndex] == "10")
 FIG4 = (sheets[tableIndex] == "4")
-
 setLayout();
-
 	setTimeout(function(){
-		$.getJSON( getJSONPath(sheets[tableIndex].replace(/\./g,"_")), function(resp){
+
+		$.getJSON( getJSONPath(sheets[tableIndex].replace(/\./g,"_")), function(resp, err){
 		  // var data = resp.results[0];
 		  var data = resp;
+		  global_data = data;
+		  console.log(resp, err)
 		  
-		
 		  // var category = data.category;
 		  switch(category){
 		  	case "lineChart":
@@ -637,7 +638,7 @@ function drawMap(input, col){
                 }
         },
         credits: {
-            enabled: true,
+            enabled: false,
             text: "<a href = \"https://www.ssa.gov/policy/docs/statcomps/supplement/\">These data are from the Social Security Administration's <em>Annual Statistical Supplement, 2014</em>. The parenthetical numbers with the titles are retained from the supplement for reference.</a>",
             href: "https://www.ssa.gov/policy/docs/statcomps/supplement/",
             style:{
@@ -648,7 +649,7 @@ function drawMap(input, col){
         },
         series : [{
             data : input["data"][col]["series"],
-            mapData: Highcharts.maps['countries/us/custom/us-all-territories'],
+            mapData: Highcharts.maps['countries/us/us-all'],
             joinBy: 'hc-key',
             name: initId,
             borderColor: "white",
@@ -669,7 +670,7 @@ function drawMap(input, col){
         }, {
             name: 'Separators',
             type: 'mapline',
-            data: Highcharts.geojson(Highcharts.maps['countries/us/custom/us-all-territories'], 'mapline'),
+            data: Highcharts.geojson(Highcharts.maps['countries/us/us-all'], 'mapline'),
             color: 'none',
             showInLegend: false,
             enableMouseTracking: false
@@ -693,6 +694,11 @@ function drawMap(input, col){
 function drawLineChart(input){
 	var initId = input["data"]["col1"]["label"]
 	var axisType = (FIG10 || FIG4) ? "linear" : "datetime"
+	var crosshairs = (FIG10) ? null : 
+				{
+			        color: 'rgb(159,159,159)',
+			        dashStyle: 'solid'
+			    }
 	var mTop = (FIG7) ? 120 : 90;
 	var xMin = (FIG10) ? 2 : 0;
 	var xMax = (FIG10) ? 10 : null;
@@ -717,21 +723,6 @@ function drawLineChart(input){
 	            }
             ]
             : []
-    var annotations = (FIG10) ?[
-    	{
-            title: {
-                text: '',
-
-            },
-            anchorX: "left",
-            anchorY: "top",
-            allowDragX: false,
-            allowDragY: false,
-            x: 325,
-            y: 85,
-        }
-        ]
-        :[]
     var plotLines = (FIG4) ? [{
                     value: 0,
                     width: 0
@@ -760,9 +751,6 @@ function drawLineChart(input){
         }]
         : []
     $('#lineChart').highcharts({
-	        annotationsOptions: {
-      	      enabledButtons: false   
-        	},
             chart: {
                 marginTop: mTop,
                 marginBottom: 100
@@ -831,10 +819,7 @@ function drawLineChart(input){
                 }
             },
             tooltip: {
-			    crosshairs: {
-			        color: 'rgb(159,159,159)',
-			        dashStyle: 'solid'
-			    },
+			    crosshairs: crosshairs,
                 shared: false,
                 valueDecimals: 0,
                 formatter: function () {
@@ -882,40 +867,35 @@ function drawLineChart(input){
         // ["#1696d2", "#062635", "#eb3f1c","#370b0a"]
         	.css({
         		    'fill': '#370b0a',
-        		    'font-weight':'bolder',
-        		    'font-size': '11px'
+        		    'font-weight':'bolder'
         	})
             .add();
       		chart.renderer.text('Great Recession<br>During the Great Recession in the<br>late-2000s, both the unemployment<br>rate and share of DI applications<br>surged.', 495, 205)
         // ["#1696d2", "#062635", "#eb3f1c","#370b0a"]
         	.css({
         		    'fill': '#eb3f1c',
-        		    'font-weight':'bolder',
-        		    'font-size': '11px'
+        		    'font-weight':'bolder'
         	})
             .add();
       		chart.renderer.text('2000s<br>Unemployment and applications<br>tracked each other during much<br>of the 2000s.', 145, 295)
         // ["#1696d2", "#062635", "#eb3f1c","#370b0a"]
         	.css({
         		    'fill': '#eb3f1c',
-        		    'font-weight':'bolder',
-        		    'font-size': '11px'
+        		    'font-weight':'bolder'
         	})
             .add();
-      		chart.renderer.text('1990s<br>Unemployment rose during the early-1990s<br>recession, taking applications with it, but<br>when unemployment fell, applications per<br>1,000 workers fell slightly.', 325, 430)
+      		chart.renderer.text('1990s<br>Unemployment rose during the early-1990s<br>recession, taking applications with it, but<br>when unemployment fell, applications per<br>1,000 workers fell slightly.', 255, 430)
         // ["#1696d2", "#062635", "#eb3f1c","#370b0a"]
         	.css({
         		    'fill': '#062635',
-        		    'font-weight':'bolder',
-        		    'font-size': '11px'
+        		    'font-weight':'bolder'
         	})
             .add();
-      		chart.renderer.text('1980s<br>As the unemployment rate fell<br>in mid- and late-1980s, the<br>share of applications remained<br>unchanged, then fell in 1988<br><span style = "margin-left:20px">and 1989.</span>', 550, 272)
+      		chart.renderer.text('1980s<br>As the unemployment rate fell<br>in mid- and late-1980s, the<br>share of applications remained<br>unchanged, then fell in 1988<br><span style = "margin-left:20px">and 1989.</span>', 520, 402)
         // ["#1696d2", "#062635", "#eb3f1c","#370b0a"]
         	.css({
         		    'fill': '#1696d2',
-        		    'font-weight':'bolder',
-        		    'font-size': '11px'
+        		    'font-weight':'bolder'
         	})
             .add();
       		chart.renderer.text('1980', 445, 309)
@@ -1786,8 +1766,6 @@ function formatLabel(x, y, input, col, type, ind){
 }
 
 // pymChild = new pym.Child({ renderCallback: init });
-
-
 
 
 

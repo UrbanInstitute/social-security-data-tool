@@ -1,0 +1,62 @@
+<html>
+<head>
+	<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+	<link rel = "stylesheet" href = "css/main.css">
+	<link rel="stylesheet" href="css/urban-selects.css">
+	<style>
+		#map{
+			top: 70px;
+		}
+	</style>
+</head>
+<body>
+	<h4>Select a disability type</h4>
+
+<div class="styled-select foo">
+ <select>
+	<option value = "col1">Total</option>
+	<option value = "col2">Congenital anomalies</option>
+	<option value = "col3">Endocrine, nutritional, and metabolic diseases</option>
+	<option value = "col4">Infectious and parasitic diseases</option>
+	<option value = "col5">Injuries</option>
+	<option value = "col6">Mental disorders a</option>
+	<option value = "col7">Neoplasms</option>
+	<option value = "col8">Blood and blood-forming organs</option>
+	<option value = "col9">Circulatory system</option>
+	<option value = "col10">Digestive system</option>
+	<option value = "col11">Genitourinary system</option>
+	<option value = "col12">Musculoskeletal system and connective tissue</option>
+	<option value = "col13">Nervous system and sense organs</option>
+	<option value = "col14">Respiratory system</option>
+	<option value = "col15">Skin and subcutaneous tissue</option>
+	<option value = "col16">Other and Unkown</option>
+ </select>
+</div>
+
+<div id = "chartContainer">
+
+	<div id = "valueScrubber" class = "initial_hide"></div>
+
+	<div id = "lineChart"></div>
+	<div id = "singleYearBarChart"></div>
+	<div id = "barChart"></div>
+	<div id = "map"></div>
+</div>
+
+<script src="js/vendor/d3.min.js"></script>
+<script src="js/vendor/jquery.1.11.3.min.js"></script>
+<script src = "js/vendor/pym.min.js"></script>
+
+
+<script src="http://code.highcharts.com/highcharts.js"></script>
+<script src="http://code.highcharts.com/maps/modules/map.js"></script>
+<script src="https://code.highcharts.com/mapdata/countries/us/us-all.js"></script>
+<script src="http://code.highcharts.com/modules/exporting.js"></script>
+
+<script src="js/vendor/export-csv.js"></script>
+<script src = "js/fig8.js"></script>
+<script src = "js/feature_highcharts.js"></script>
+<script type="text/javascript" src="js/urban-selects.js"></script>
+
+</body>
+</html>
