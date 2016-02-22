@@ -64,7 +64,7 @@ setLayout();
 		  		multiYear();
 		  		showScrubber();
 				var lineChart = $('#lineChart').highcharts();
-				var lineType = (FIG10) ? "spline" : "line"
+				var lineType = (FIG10) ? "spline" : "area"
 
 		  		for(var i = 0; i< columns.length; i++){
 		  			var series = columns[i]
