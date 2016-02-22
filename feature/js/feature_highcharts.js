@@ -44,6 +44,7 @@ FIG2 = (sheets[tableIndex] == "2")
 FIG9 = (sheets[tableIndex] == "9-1")
 FIG7 = (sheets[tableIndex] == "7")
 FIG10 = (sheets[tableIndex] == "10")
+FIG4 = (sheets[tableIndex] == "4")
 
 setLayout();
 
@@ -64,20 +65,28 @@ setLayout();
 		  		multiYear();
 		  		showScrubber();
 				var lineChart = $('#lineChart').highcharts();
-				var lineType = (FIG10) ? "spline" : "line"
+				var lineType;
+				if(FIG10){
+					lineType = "spline"
+				}
+				else if(FIG4){
+					lineType = "areaspline"
+				}else{
+					lineType = "line"
+				}
 
 		  		for(var i = 0; i< columns.length; i++){
 		  			var series = columns[i]
-					var lineData = (FIG10) ? generateSpline(data["data"][series]["xvals"], data["data"][series]["series"]) : generateTimeSeries(data.data.years.series, data["data"][series]["series"])
+					var lineData = (FIG10 || FIG4) ? generateSpline(data["data"][series]["xvals"], data["data"][series]["series"]) : generateTimeSeries(data.data.years.series, data["data"][series]["series"])
 					
 		  			var seriesID = data["data"][series]["label"]
 				
-		  			console.log(series)
 	  				lineChart.addSeries({
 						id: series,
 		            	name: seriesID,
 		            	type: lineType,
-		            	data: lineData
+		            	data: lineData,
+		            	fillOpacity:.3
 					});
 
 		  		}
@@ -90,7 +99,7 @@ setLayout();
 
 					});
 					}
-				if(!FIG10){
+				if(!FIG10 && !FIG4){
 		  			changeYears(inYears[0],inYears[1])
 		  		}
 		  		break;
@@ -683,10 +692,11 @@ function drawMap(input, col){
 
 function drawLineChart(input){
 	var initId = input["data"]["col1"]["label"]
-	var axisType = (FIG10) ? "linear" : "datetime"
+	var axisType = (FIG10 || FIG4) ? "linear" : "datetime"
 	var mTop = (FIG7) ? 120 : 90;
 	var xMin = (FIG10) ? 2 : 0;
 	var xMax = (FIG10) ? 10 : null;
+	var yMax = (FIG4) ? 100 :  null;
 	var yText = (FIG10) ? "Number of DI applications per 1,000 workers with taxable earnings" : "";
 	var xText = (FIG10) ? "Unemployment rate (percent)" : "";
 	var plotBands = (FIG2) ? [
@@ -722,6 +732,33 @@ function drawLineChart(input){
         }
         ]
         :[]
+    var plotLines = (FIG4) ? [{
+                    value: 0,
+                    width: 0
+                        },
+                    {
+                    	value: 750,
+                    	width: 1,
+                    	color: "#333333"
+                    },
+                    {
+                    	value: 1000,
+                    	width: 1,
+                    	color: "#333333"
+                    }
+
+                    ]
+                        : [{
+                    value: 0,
+                    width: 0
+                        }]
+        var yLines = (FIG4) ? [{
+        	value: 100,
+        	width: 2,
+        	color: "#333333",
+        	dashStyle: 'shortdash'
+        }]
+        : []
     $('#lineChart').highcharts({
 	        annotationsOptions: {
       	      enabledButtons: false   
@@ -733,7 +770,7 @@ function drawLineChart(input){
             plotOptions: {
                 series: {
                     marker: {
-                        enabled: true
+                        enabled: !FIG4
                     },
                 }
             },
@@ -761,16 +798,16 @@ function drawLineChart(input){
 
                 gridLineWidth: '0',
                 lineWidth: 2,
-                plotLines: [{
-                    value: 0,
-                    width: 0
-                        }],
+                plotLines: plotLines,
                 type: axisType,
                 minRange: 1,
                 labels: {
                 	formatter: function(){
                 		if(FIG10){
                 			return this.value + "%"
+                		}
+                		else if(FIG4){
+                			return "$" + this.value;
                 		}else{
                 			var d = new Date(this.value)
                 			return d.getUTCFullYear()
@@ -780,7 +817,9 @@ function drawLineChart(input){
             },
 
             yAxis: {
+            	plotLines: yLines,
             	min: 0,
+            	max: yMax,
                 title: {
                     text: yText
                 },
@@ -1495,7 +1534,7 @@ function setTheme(){
 	            lineColor: '#404048'
 	        },
 	        area: {
-	            fillOpacity: 0.5
+	            fillOpacity: 0.1
 	        },
 	        series: {
 	            marker: {
@@ -1655,6 +1694,17 @@ function formatLabel(x, y, input, col, type, ind){
 			var fudge = (colNum == 1) ? 0 : 1;
 			var decade = colNum*10 + 1970-fudge
 			return (decade + ind) + "<br>" + tmp(x) + "%" + " unemployed" + "<br>" + y + " applications per 1,000 workers"
+		}
+		else if(FIG4){
+			if(x == 300){
+				return "Less than $300.00 : " + y + "%";
+			}
+			else if(x == 2249.9){
+				return "$2,200 or more : 100%";
+			}else{
+				var money = d3.format('$.2f')
+				return money(x-49.9) + "-" + money(x) + " : " + y + "%"
+			}
 		}
 		else{
 			switch(label){
