@@ -57,7 +57,7 @@ setLayout();
 		  // var data = resp.results[0];
 		  var data = resp;
 		  global_data = data;
-		  console.log(resp, err)
+		  
 		  
 		  // var category = data.category;
 		  switch(category){
@@ -485,13 +485,26 @@ function getDate(y1, y2, parenthetical){
 function drawBar(input, col){
 	// var col = (typeof(input.default) != "undefined") ? input.default : "col1"
 	var labels = (input["data"]["categories"]["series"].length > 6) ? false : true;
-	var marginBottom = (labels) ? 80 : 110;
-	var marginLeft = (labels) ? 60 : 80;
+	var marginBottom, marginLeft;
+	if(FIG92 && MOBILE){
+		marginBottom = 220;
+	}
+	else if(labels){
+		marginBottom = 80;
+	}else{ marginBottom = 110}
+	if(FIG92 && MOBILE){
+		marginLeft = 120;
+	}
+	else if(labels){
+		marginLeft = 60;
+	}else{ marginLeft = 80}
+	// var marginLeft = (labels) ? 60 : 80;
+	var marginTop = (FIG92 && !MOBILE) ? 50 : 120;
 	var legend = (FIG92) ? MOBILE : true;
 	var initId = input["data"][col]["label"]
         $('#barChart').highcharts({
             chart: {
-                marginTop: 150,
+                marginTop: marginTop,
                 marginBottom: marginBottom,
                 marginLeft: marginLeft,
                 type: 'column'
@@ -585,7 +598,31 @@ function drawBar(input, col){
                     }
                   ]
 
-        });
+        }, function (chart) { // on complete
+	        	if(FIG92){
+		      		chart.renderer.text('{', 1090, 349)
+		            .attr({
+	    	            rotation: 90,
+	    	            scaleX: 1,
+	    	            scaleY: 3.2
+		            })
+		        	.css({
+		        		    'fill': '#ccc',
+		        		    'font-size': '100px',
+		        		    'font-weight': '100'
+		        	})
+		            .add();
+
+		      		chart.renderer.text('Beneficiary no longer meets medical criteria', 300, 339)
+		        	.css({
+	        		    'fill': '#333',
+	        		    'font-size': '14px',
+	        		    'font-weight': 'bold'
+		        	})
+		            .add();
+	        	}
+        	}
+        );
 	d3.select("#lineChart")
 		.transition()
 		.style("left",-3000)
@@ -1792,10 +1829,31 @@ function formatLabel(x, y, input, col, type, ind){
 
 // pymChild = new pym.Child({ renderCallback: init });
 
-$(window).on("resize", function(){
+
+(function() {
+
+  window.addEventListener("resize", resizeThrottler, false);
+
+  var resizeTimeout;
+  function resizeThrottler() {
+    // ignore resize events as long as an actualResizeHandler execution is in the queue
+    if ( !resizeTimeout ) {
+      resizeTimeout = setTimeout(function() {
+        resizeTimeout = null;
+        actualResizeHandler();
+     
+       // The actualResizeHandler will execute at a rate of 15fps
+       }, 300);
+    }
+  }
+
+  function actualResizeHandler() {
 	if(FIG92){
 		MOBILE = d3.select("#mobileTest").style("display") == "block"
 	}
-});
+	init()
+  }
+
+}());
 
 
