@@ -2,6 +2,7 @@
 <head>
 	<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
 	<link rel = "stylesheet" href = "css/main.css">
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
 	<style>
 	@media (max-width: 690px){
 		svg text[style*='font-weight:bolder']{
@@ -23,9 +24,16 @@
 	<div id = "barChart"></div>
 	<div id = "map"></div>
 </div>
-
+<div id="dialog-message" title="Embed This Chart">
+	<textarea rows="6" cols="10">
+	</textarea>
+  <p>
+    To embed the current chart, copy the code above and paste it onto your page.
+  </p>
+</div>
 <script src="js/vendor/d3.min.js"></script>
 <script src="js/vendor/jquery.1.11.3.min.js"></script>
+<script src="js/vendor/jquery-ui.js"></script>
 <script src = "js/vendor/pym.min.js"></script>
 
 

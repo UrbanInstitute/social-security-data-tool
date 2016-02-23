@@ -28,7 +28,7 @@ var MONTHABBREVS = ["Jan", "Feb", "Mar", "Apr", "May", "June",
     ]
 
 var IE = false;
-var FIG2, FIG9,FIG7,FIG10,FIG4, FIG92, MOBILE;
+var FIG2, FIG9,FIG7,FIG10,FIG4, FIG92, MOBILE, INDEX;
 // var embed = false;
 var global_data;
 
@@ -47,6 +47,7 @@ FIG92 = (sheets[tableIndex] == "9-2")
 FIG7 = (sheets[tableIndex] == "7")
 FIG10 = (sheets[tableIndex] == "10")
 FIG4 = (sheets[tableIndex] == "4")
+INDEX = sheets[tableIndex]
 if(FIG92){
 	MOBILE = d3.select("#mobileTest").style("display") == "block"
 }
@@ -156,6 +157,10 @@ setLayout();
 		  	  	exportParams.chartType = "map"
 		  		drawMap(data,columns[0])
 		  		hideScrubber();
+		  		break;
+		  	case "stackedBar":
+		  		exportParams.chartType = "stackedBar";
+		  		drawStackedBar(data)
 		  		break;
 		  	case "barChart":
 		  		exportParams.chartType = "barChart";
@@ -637,6 +642,260 @@ function drawBar(input, col){
 		.style("left","0px")
 }
 
+
+function drawStackedBar(input){
+
+    var ugly = ['', 'DI', '', 'non-DI',  ''];
+    var cats = ugly.concat(ugly);
+    var zeroes = [];
+    cats.forEach(function () {zeroes.push(0);}); 
+
+
+	// var col = (typeof(input.default) != "undefined") ? input.default : "col1"
+	var labels = true;
+	var marginBottom, marginLeft;
+	if(FIG92 && MOBILE){
+		marginBottom = 220;
+	}
+	else if(labels){
+		marginBottom = 60;
+	}else{ marginBottom = 110}
+	if(FIG92 && MOBILE){
+		marginLeft = 120;
+	}
+	else if(labels){
+		marginLeft = 60;
+	}else{ marginLeft = 80}
+	// var marginLeft = (labels) ? 60 : 80;
+	var marginTop = (FIG92 && !MOBILE) ? 50 : 120;
+	var legend = (FIG92) ? MOBILE : true;
+	var initId = "col1"
+    var options = {
+            chart: {
+                marginTop: marginTop,
+                marginBottom: marginBottom,
+                marginLeft: marginLeft,
+                type: 'column'
+
+            },
+            plotOptions: {
+            	column:{
+            		colorByPoint: FIG92,
+            		stacking: 'normal',
+	                groupPadding: 0.10
+
+            	},
+                series: {
+                    marker: {
+                        enabled: true
+                    },
+
+                    dataLabels: {
+                        enabled: false,
+                        align: 'center'
+                        // formatter: function (){
+                        // 	if(this.y == false || this.y==null){
+                        // 		return null
+                        // 	}else{
+                        // 		return formatLabel(this.x, this.y, input, col, "tooltipBar")
+                        //     }
+                        // }
+                    }
+                }
+            },
+            title: {
+                text: "<div class = \"chartSubtitle\">" + input.title.category + "</div>" + "<div class = \"chartTitle\">" + input.title.name + "</div>"
+            },
+            xAxis: [
+					{
+							categories: cats,
+							tickWidth: 0,
+					},
+            		{
+			                // gridLineWidth: '0',
+			                // lineWidth: 2,
+			                // tickInterval: 0,
+			                categories:  ['Ages 31–49', 'Ages 60–64'],
+       	        	          lineColor:'#ffffff',
+        		              tickWidth: 0,
+			                // plotLines: [{
+			                //     value: 0,
+			                //     width: 0
+			                //         }],
+			                // labels: {
+			                //     step: 0,
+			                //     x: 0,
+			                //     y: 20
+			                // }
+			            },
+            ],
+            yAxis: {
+            	max: 100,
+                title: {
+                    text: ''
+                },
+                labels: {
+                	formatter: function(){
+                		return this.value + "%"
+                	}
+                    // format: '${value:.0f}'
+                }
+            },
+            tooltip: {
+            	enabled: true,
+                formatter: function () {
+                	return '<b>' + this.x +  '<br/>' + this.series.options.stack +  '</b><br/>' +
+                    this.series.name + ' quintile: ' + this.y + '%<br/>'
+
+                // 	if(this.y == false || this.y==null){
+                //         return null
+                //     }else{
+                //     	return formatLabel(this.x, this.y, input, this.series.userOptions.id, "tooltipBar")
+                //     }
+                }
+            },
+            credits: {
+                enabled: false,
+                text: "<a href = \"https://www.ssa.gov/policy/docs/statcomps/supplement/\">These data are from the Social Security Administration's <em>Annual Statistical Supplement, DI</em>. The parenthetical numbers with the titles are retained from the supplement for reference.</a>",
+                href: "https://www.ssa.gov/policy/docs/statcomps/supplement/",
+                style:{
+                		color: '#1696d2',
+                		fill: '#1696d2'
+                },
+                title: false
+            },
+            legend: {
+                enabled: legend,
+                floating: 'true',
+                align: 'left',
+                verticalAlign: 'left',
+                layout: 'horizontal',
+                borderWidth: 0,
+                itemDistance: 9,
+                y: 40
+            },
+            series: 
+            [
+			            {
+				            name: 'Highest',
+				            color: '#333333',
+				            data: [4, 7],
+				            stack: 'DI',
+				            xAxis: 1            
+			    		}, 
+			            {
+				            name: 'Fourth',
+				            color: '#0a4c6a',
+				            data: [9, 14],
+				            stack: 'DI',
+				            xAxis: 1            
+			    		}, 
+			            {
+				            name: 'Middle',
+				            color: '#1696d2',
+				            data: [14, 18],
+				            stack: 'DI',
+				            xAxis: 1            
+			    		}, 
+			            {
+				            name: 'Second',
+				            color: '#73bfe2',
+				            data: [26, 27],
+				            stack: 'DI',
+				            xAxis: 1            
+			    		}, 
+			    		{
+				            name: 'Lowest',
+				            color: '#cfe8f3',
+				            data: [47, 33],
+				            stack: 'DI',
+		                    xAxis: 1            
+			            
+			        	},
+
+
+
+			            {
+				            name: 'Highest',
+				            color: '#333333',
+				            data: [20, 22],
+				            showInLegend: false,
+				            stack: 'non-DI',
+				            xAxis: 1            
+			    		}, 
+			            {
+				            name: 'Fourth',
+				            color: '#0a4c6a',
+				            data: [20, 21],
+				            showInLegend: false,
+				            stack: 'non-DI',
+				            xAxis: 1            
+			    		}, 
+			            {
+				            name: 'Middle',
+				            color: '#1696d2',
+				            data: [20, 20],
+				            showInLegend: false,
+				            stack: 'non-DI',
+				            xAxis: 1            
+			    		}, 
+			        	{
+				            name: 'Second',
+				            color: '#73bfe2',
+				            data: [20, 19],
+				            showInLegend: false,
+				            stack: 'non-DI',
+		                    xAxis: 1            
+			        	},
+			        	{
+				            name: 'Lowest',
+				            data: [19, 18],
+				            color: '#cfe8f3',
+				            showInLegend: false,
+				            stack: 'non-DI',
+				            xAxis: 1            
+			        	},
+			        	{
+				            name: '',
+				            data: zeroes,
+				            showInLegend: false,
+				            stack: 'non-DI',
+			        	}
+        ]
+
+        }
+    var onLegendClick= function (event) {
+	     	    		                	var myname = this.name;
+	     	    		                	var myvis  = !this.visible;
+	     	    		                	this.chart.series.forEach( function (elem) {
+	     	    		                		if (elem.name == myname) {
+	     	    		                			elem.setVisible(myvis);
+	     	    		                		}
+	     	    		                	});
+	     	    		                	return false;
+	     	    		                }
+	     	    		            
+    
+    options.series.forEach(function (serie) {
+        serie.events = { legendItemClick : onLegendClick} ;
+    });
+
+    $('#barChart').highcharts(options)
+	d3.select("#lineChart")
+		.transition()
+		.style("left",-3000)
+	d3.select("#singleYearBarChart")
+		.transition()
+		.style("left",3000)
+	d3.select("#map")
+		.transition()
+		.style("left",3000)
+	d3.select("#barChart")
+		.transition()
+		.style("left","0px")
+}
+
+
 function drawMap(input, col){
 	var initId = input["data"][col]["label"]
 	$('#map').highcharts('Map', {
@@ -779,11 +1038,7 @@ function drawLineChart(input){
                     value: 0,
                     width: 0
                         },
-                    {
-                    	value: 750,
-                    	width: 1,
-                    	color: "#333333"
-                    },
+
                     {
                     	value: 1000,
                     	width: 1,
@@ -963,6 +1218,17 @@ function drawLineChart(input){
         	})
             .add();
          }
+    else if(FIG4){
+      		chart.renderer.text('More than half of women beneficiaries<br>and about a third of men had benefits<br>below $1,000 per month.', 75, 165)
+        // ["#1696d2", "#062635", "#eb3f1c","#370b0a"]
+        	.css({
+        		    'fill': '#333',
+        		    'font-weight':'bolder',
+        		    'font-size': '14px'
+        	})
+            .add();
+
+    }
 
     });
 
@@ -1429,17 +1695,10 @@ function setTheme(){
                 onclick: function () {
                 	d3.select("#dialog-message textarea")
                 		.html(function(){
-                			var url = "http://localhost:8081/data-tool/embed.html?"
-                			url += "tableID=" + exportParams.tableID + "&"
-                			url += "chartType=" + exportParams.chartType + "&"
-                			url += "columns="
-                			for(var i=0; i< exportParams.columns.length; i++){
-                				url += exportParams.columns[i]
-                				if(i != exportParams.columns.length-1){
-                					url += ","
-                				}
-                			}
-                			return "&lt;iframe frameborder=\"0\" height=\"400px\" marginheight=\"0\" scrolling=\"no\" src=\"" + url + "\" width=\"100%\"&gt;&lt;/iframe&gt"
+                			var url = "http://apps.urban.org/features/social-security-data-tool/feature/fig"
+                			url += INDEX + ".html"
+                			var if_height = (FIG10) ? 700 : 500
+                			return "&lt;iframe frameborder=\"0\" height=\"" + if_height + "px\" marginheight=\"0\" scrolling=\"no\" src=\"" + url + "\" width=\"100%\" style = \"max-width:700px\"&gt;&lt;/iframe&gt"
                 		})
                 		// &lt;iframe frameborder="0" height="450px" marginheight="0" scrolling="no" src="http://webapp.urban.org/reducing-mass-incarceration/embed_child.html" width="100%"&gt;&lt;/iframe&gt;
                 	$( "#dialog-message" ).dialog({
