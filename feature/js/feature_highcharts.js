@@ -28,7 +28,7 @@ var MONTHABBREVS = ["Jan", "Feb", "Mar", "Apr", "May", "June",
     ]
 
 var IE = false;
-var FIG2, FIG9,FIG7,FIG10,FIG4;
+var FIG2, FIG9,FIG7,FIG10,FIG4, FIG92, MOBILE;
 // var embed = false;
 var global_data;
 
@@ -43,9 +43,13 @@ var TOTAL_TABLES = sheets.length
 var tableIndex = 0;
 FIG2 = (sheets[tableIndex] == "2")
 FIG9 = (sheets[tableIndex] == "9-1")
+FIG92 = (sheets[tableIndex] == "9-2")
 FIG7 = (sheets[tableIndex] == "7")
 FIG10 = (sheets[tableIndex] == "10")
 FIG4 = (sheets[tableIndex] == "4")
+if(FIG92){
+	MOBILE = d3.select("#mobileTest").style("display") == "block"
+}
 setLayout();
 	setTimeout(function(){
 
@@ -157,16 +161,16 @@ setLayout();
 		  		exportParams.chartType = "barChart";
 				drawBar(data,columns[0]);
 		  	  	for(var i = 1; i< columns.length; i++){
-		  	  						var barChart = $('#barChart').highcharts();
+		  	  		var barChart = $('#barChart').highcharts();
 
 		  			var series = columns[i]
 		  			var seriesID = data["data"][series]["label"]
-
 		  			barChart.addSeries({
 						id: series[0],
 		            	name: seriesID,
                 		data: data["data"][series]["series"]
 					})
+
 		  		}
 		  		hideScrubber();
 		  		break;
@@ -483,6 +487,7 @@ function drawBar(input, col){
 	var labels = (input["data"]["categories"]["series"].length > 6) ? false : true;
 	var marginBottom = (labels) ? 80 : 110;
 	var marginLeft = (labels) ? 60 : 80;
+	var legend = (FIG92) ? MOBILE : true;
 	var initId = input["data"][col]["label"]
         $('#barChart').highcharts({
             chart: {
@@ -493,6 +498,9 @@ function drawBar(input, col){
 
             },
             plotOptions: {
+            	column:{
+            		colorByPoint: FIG92
+            	},
                 series: {
                     marker: {
                         enabled: true
@@ -561,7 +569,7 @@ function drawBar(input, col){
                 title: false
             },
             legend: {
-                enabled: true,
+                enabled: legend,
                 floating: 'true',
                 align: 'left',
                 verticalAlign: 'left',
@@ -702,7 +710,14 @@ function drawLineChart(input){
 	var mTop = (FIG7) ? 120 : 90;
 	var xMin = (FIG10) ? 2 : 0;
 	var xMax = (FIG10) ? 10 : null;
-	var yMax = (FIG4) ? 100 :  null;
+	var yMax;
+	if(FIG4){
+		yMax = 100
+	}
+	else if(FIG10){
+		yMax = 20
+	}else{ yMax = null}
+
 	var yText = (FIG10) ? "Number of DI applications per 1,000 workers with taxable earnings" : "";
 	var xText = (FIG10) ? "Unemployment rate (percent)" : "";
 	var plotBands = (FIG2) ? [
@@ -1404,9 +1419,15 @@ function setTheme(){
 	var oldMenu = Highcharts.getOptions().exporting.buttons.contextButton.menuItems
 	oldMenu.unshift(embed)
 	var chartHeight = (FIG10) ? 700 : 500;
-	var colors = (FIG10) ? ["#1696d2", "#062635", "#eb3f1c",
-	       "#370b0a"] : ["#1696d2", "#fdbf11", "#062635", "#eb3f1c", "#55b748",
-	      "#ec008b", "#db2b27"]
+	var colors;
+	if(FIG10){
+		colors = ["#1696d2", "#062635", "#eb3f1c","#370b0a"]
+	}
+	else if(FIG92){
+		colors = ["#1696d2","#1696d2", "#fdbf11","#fdbf11","#fdbf11","#1696d2"]
+	}else{
+		colors = ["#1696d2", "#fdbf11", "#062635", "#eb3f1c", "#55b748","#ec008b", "#db2b27"]
+	}
 	Highcharts.theme = {
 	    colors: colors,
 	    chart: {
@@ -1714,6 +1735,10 @@ function formatLabel(x, y, input, col, type, ind){
 		}
 	}
 	else if(type == "tooltipBar"){
+		if(FIG92){
+			var tmp = d3.format(".0f")
+			return tmp(y) + " thousand"
+		}
 		switch(label){
 			case "dollar":
 				return dollar(y)
@@ -1767,5 +1792,10 @@ function formatLabel(x, y, input, col, type, ind){
 
 // pymChild = new pym.Child({ renderCallback: init });
 
+$(window).on("resize", function(){
+	if(FIG92){
+		MOBILE = d3.select("#mobileTest").style("display") == "block"
+	}
+});
 
 
