@@ -178,7 +178,6 @@ setLayout();
 
 		  		}
 		  		hideScrubber();
-		  		d3.select("")
 		  		break;
 		  }
 		});
@@ -1232,7 +1231,7 @@ function drawLineChart(input){
             .add();
          }
     else if(FIG4){
-      		var lbl = chart.renderer.label('More than half of women beneficiaries<br>and about a third of men had benefits<br>below $1,000 per month.', 85, 105, null, null, null, true)
+      		var lbl = chart.renderer.label('More than half of women beneficiaries<br>and about a third of men had benefits<br>below $1,000 per month.', 80, 105, null, null, null, true)
         // ["#1696d2", "#062635", "#eb3f1c","#370b0a"]
         	.css({
         		    'fill': '#333',
