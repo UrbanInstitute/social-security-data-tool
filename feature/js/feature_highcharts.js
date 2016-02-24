@@ -1122,7 +1122,8 @@ function drawLineChart(input){
                 			return this.value + "%"
                 		}
                 		else if(FIG4){
-                			return "$" + this.value;
+                			var tmp = d3.format('$,.0f')
+                			return tmp(this.value);
                 		}else{
                 			var d = new Date(this.value)
                 			return d.getUTCFullYear()
@@ -1140,7 +1141,12 @@ function drawLineChart(input){
                 },
                 labels: {
                 	formatter: function(){
-                		return formatLabel(this, null, input, this.chart.series[0].userOptions.id, "label")
+	                	if(FIG10){
+	    					var tmp = d3.format(".1f")
+	    					return tmp(this.value)    		
+    	            	}else{
+                			return formatLabel(this, null, input, this.chart.series[0].userOptions.id, "label")
+                		}
                 	}
                     // format: '${value:.0f}'
                 }
@@ -2024,9 +2030,17 @@ function formatLabel(x, y, input, col, type, ind){
 			else if(x == 2249.9){
 				return "$2,200 or more : 100%";
 			}else{
-				var money = d3.format('$.2f')
+				var money = d3.format('$,.2f')
 				return money(x-49.9) + "&ndash;" + money(x) + " : " + y + "%"
 			}
+		}
+		else if (FIG2){
+			var tmp = d3.format(".1f")
+			return full + ": " + tmp(y)
+		}
+		else if(FIG9){
+			var tmp = d3.format(".0f")
+			return full + ": " + tmp(y)
 		}
 		else{
 			switch(label){
