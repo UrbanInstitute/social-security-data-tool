@@ -178,6 +178,7 @@ setLayout();
 
 		  		}
 		  		hideScrubber();
+		  		d3.select("")
 		  		break;
 		  }
 		});
@@ -707,15 +708,19 @@ function drawStackedBar(input){
                 text: "<div class = \"chartSubtitle\">" + input.title.category + "</div>" + "<div class = \"chartTitle\">" + input.title.name + "</div>"
             },
             xAxis: [
+
 					{
 							categories: cats,
-							tickWidth: 0,
+							tickWidth: 0
 					},
             		{
+		                labels:{
+                    	useHTML:true
+        			},
 			                // gridLineWidth: '0',
 			                // lineWidth: 2,
 			                // tickInterval: 0,
-			                categories:  ['Ages 31–49', 'Ages 60–64'],
+			                categories:  ['Ages 31&ndash;49', 'Ages 60&ndash;64'],
        	        	          lineColor:'#ffffff',
         		              tickWidth: 0,
 			                // plotLines: [{
@@ -743,6 +748,7 @@ function drawStackedBar(input){
             },
             tooltip: {
             	enabled: true,
+            	useHTML: true,
                 formatter: function () {
                 	return '<b>' + this.x +  '<br/>' + this.series.options.stack +  '</b><br/>' +
                     this.series.name + ' quintile: ' + this.y + '%<br/>'
@@ -1067,6 +1073,13 @@ function drawLineChart(input){
                     marker: {
                         enabled: !FIG4
                     },
+                    events:{
+                    	 legendItemClick: function () {
+                    	 	if(FIG2 && this.name == "Recessions"){
+                    	 		return false;
+                    	 	}
+                    	 }
+                    }
                 }
             },
 
@@ -1219,14 +1232,18 @@ function drawLineChart(input){
             .add();
          }
     else if(FIG4){
-      		chart.renderer.text('More than half of women beneficiaries<br>and about a third of men had benefits<br>below $1,000 per month.', 75, 165)
+      		var lbl = chart.renderer.label('More than half of women beneficiaries<br>and about a third of men had benefits<br>below $1,000 per month.', 85, 105, null, null, null, true)
         // ["#1696d2", "#062635", "#eb3f1c","#370b0a"]
         	.css({
         		    'fill': '#333',
-        		    'font-weight':'bolder',
-        		    'font-size': '14px'
+        		    'fontWeight':'bolder',
+        		    'fontSize': '14px',
+        		    'textAlign': 'right'
         	})
             .add();
+
+            $("span:contains(More)").css("text-align","right")
+
 
     }
 
