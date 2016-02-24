@@ -1238,7 +1238,7 @@ function drawLineChart(input){
         		    'fill': '#333333'
         	})
             .add();
-      		chart.renderer.text('2013', 468, 181)
+      		chart.renderer.text('2013', 450, 181)
         // ["#1696d2", "#062635", "#eb3f1c","#370b0a"]
         	.css({
         		    'fill': '#333333'
