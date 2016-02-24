@@ -192,8 +192,8 @@
     ], 
     "title": {
         "catID": "2.A", 
-        "category": "Disabled Worker Incidence Rates", 
+        "category": "DI Application Rate and the Unemployment Rate", 
         "id": "2", 
-        "name": "(Awards per thousand, adjusted for distributions of age and sex)"
+        "name": ""
     }
 }
