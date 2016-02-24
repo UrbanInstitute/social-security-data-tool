@@ -377,5 +377,11 @@ var keywords = {
         "4_A1", 
         "3_C3", 
         "4_A5"
-    ]
+    ],
+    "earnings": [
+        "4_B1"
+    ],
+    "employment": [
+        "4_B1"
+    ],
 }

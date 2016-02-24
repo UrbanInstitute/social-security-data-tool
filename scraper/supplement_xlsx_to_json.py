@@ -536,7 +536,7 @@ book = xlrd.open_workbook("../data/statistical_supplement/supplement14_new.xls",
 sheets = book.sheet_names()
 
 #Years in 1st column (or year ranges), blank 2nd column, data
-simpleTimeSheets = ['2.A3','2.A4','4.A1','4.A2','4.A3','4.A4','4.A5','4.A6','4.C1','5.A17','5.D3','5.E2','5.F6','5.F8','6.C7','6.D8']
+simpleTimeSheets = ['2.A3','2.A4','4.A1','4.A2','4.A3','4.A4','4.A5','4.A6','4.B1','4.C1','5.A17','5.D3','5.E2','5.F6','5.F8','6.C7','6.D8']
 
 #time series without blank 2nd column
 col1_exceptions = ['5.A4','5.F4','6.D4','6.C7','5.F8','5.E2','5.D3','5.C2','5.A17','4.C1', '5.B4']
