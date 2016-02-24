@@ -102,7 +102,7 @@
             "type": "percent"
         },
         "col5": {
-            "label": "Other Diseases", 
+            "label": "Other diseases", 
             "series": [
                 6.6,
                 6.6,
@@ -152,7 +152,7 @@
             "type": "percent"
         },
         "col7": {
-            "label": "All Other and Unknown", 
+            "label": "All other and unknown", 
             "series": [
                 16.1,
                 15.5,
@@ -263,8 +263,8 @@
     ], 
     "title": {
         "catID": "2.A", 
-        "category": "DI Diagnosis Groups, 1996–2014", 
+        "category": "DI Diagnosis Groups, 1996&ndash;2014", 
         "id": "2", 
-        "name": "(Percent)"
+        "name": ""
     }
 }

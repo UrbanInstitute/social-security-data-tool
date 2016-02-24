@@ -3,12 +3,12 @@
     "data": {
         "categories": {
             "series": [
-               "30-39",
-               "40-44",
-                "45-49",
-                "50-54",
-                "55-59",
-                "60-FRA"
+               "30&ndash;39",
+               "40&ndash;44",
+                "45&ndash;49",
+                "50&ndash;54",
+                "55&ndash;59",
+                "60&ndash;FRA"
             ], 
             "type": "barLabel"
         }, 
@@ -52,8 +52,8 @@
     }, 
     "title": {
         "catID": "2.F", 
-        "category": "Age distribution of disabled workers, by sex, 2013", 
+        "category": "Age Distribution of Disabled Workers, by Sex, 2013", 
         "id": "2_F4", 
-        "name": "(Percent)"
+        "name": ""
     }
 }

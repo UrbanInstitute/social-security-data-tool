@@ -2,7 +2,7 @@
     "category": "timeSeries", 
     "data": {
         "col1": {
-            "label": "1980's", 
+            "label": "1980s", 
             "series": [
                 11.2,
                 10.3,
@@ -29,7 +29,7 @@
             "type": "number"
         },
         "col2": {
-            "label": "1990's", 
+            "label": "1990s", 
             "series": [
                 7.5,
                 8.0,
@@ -59,7 +59,7 @@
             "type": "number"
         },
         "col3": {
-            "label": "2000's", 
+            "label": "2000s", 
             "series": [
                 7.9,
                 8.6,
@@ -89,7 +89,7 @@
             "type": "number"
         },
         "col4": {
-            "label": "2010's", 
+            "label": "2010s", 
             "series": [
                 17.8,
                 18.7,

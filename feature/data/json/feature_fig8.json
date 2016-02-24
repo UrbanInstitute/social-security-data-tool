@@ -3151,7 +3151,7 @@
             "type": "percent"
         },
         "col16": {
-            "label": "Other and Unkown", 
+            "label": "Other and unkown", 
             "series": [
             {
                 "hc-key":"us-al",
@@ -3375,6 +3375,6 @@
         "catID": "5.J", 
         "category": "DI Diagnosis Groups, by State, 2014", 
         "id": "5_J14",
-        "name": "(Percent)"
+        "name": ""
     }
 }

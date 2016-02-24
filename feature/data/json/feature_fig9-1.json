@@ -162,8 +162,8 @@
     ], 
     "title": {
         "catID": "2.A", 
-        "category": "Number of Total DI Worker Terminations, 1970–2014", 
+        "category": "Number of Total DI Worker Terminations, 1970&ndash;2014", 
         "id": "2", 
-        "name": "(per 1,000 DI Worker Beneficiaries)"
+        "name": "Per 1,000 DI worker beneficiaries"
     }
 }

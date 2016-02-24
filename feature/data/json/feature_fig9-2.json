@@ -3,7 +3,7 @@
     "data": {
         "categories": {
             "series": [
-               "Reached the Full Retirement Age","Death","Works above substantial gainful activity limit","Medical Improvement","Miscellaneous medical reasons","Other"
+               "Reached the full retirement age","Death","Works above substantial gainful activity limit","Medical improvement","Miscellaneous medical reasons","Other"
             ], 
             "type": "barLabel"
         }, 
@@ -40,8 +40,8 @@
     }, 
     "title": {
         "catID": "2.F", 
-        "category": "Number of disabled workers terminated from DI, 2014", 
+        "category": "Number of Disabled Workers Terminated from DI, 2014", 
         "id": "2_F4", 
-        "name": "(Thousands)"
+        "name": ""
     }
 }

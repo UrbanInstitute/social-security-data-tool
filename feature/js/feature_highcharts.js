@@ -86,13 +86,14 @@ setLayout();
 					var lineData = (FIG10 || FIG4) ? generateSpline(data["data"][series]["xvals"], data["data"][series]["series"]) : generateTimeSeries(data.data.years.series, data["data"][series]["series"])
 					
 		  			var seriesID = data["data"][series]["label"]
-				
+
 	  				lineChart.addSeries({
 						id: series,
 		            	name: seriesID,
 		            	type: lineType,
 		            	data: lineData,
-		            	fillOpacity:.3
+		            	fillOpacity:.1,
+		            	index: parseInt(series.replace("col","")-1)
 					});
 
 		  		}
@@ -520,6 +521,8 @@ function drawBar(input, col){
             		colorByPoint: FIG92
             	},
                 series: {
+    	            pointPadding: 0,
+		            groupPadding: 0.2,
                     marker: {
                         enabled: true
                     },
@@ -543,6 +546,7 @@ function drawBar(input, col){
             xAxis: {
                 gridLineWidth: '0',
                 lineWidth: 2,
+                tickWidth: 0,
                 tickInterval: 0,
                 categories: input["data"]["categories"]["series"],
                 plotLines: [{
@@ -550,6 +554,7 @@ function drawBar(input, col){
                     width: 0
                         }],
                 labels: {
+                	useHTML: true,
                     step: 0,
                     x: 0,
                     y: 20
@@ -559,7 +564,9 @@ function drawBar(input, col){
                 title: {
                     text: ''
                 },
+                gridLineWidth: '0',
                 labels: {
+                	enabled: false,
                 	formatter: function(){
                 		return formatLabel(this, null, input, this.chart.series[0].userOptions.id, "label")
                 	}
@@ -622,7 +629,7 @@ function drawBar(input, col){
 		        	.css({
 	        		    'fill': '#333',
 	        		    'font-size': '14px',
-	        		    'font-weight': 'bold'
+	        		    'font-weight': 'bolder'
 		        	})
 		            .add();
 	        	}
@@ -749,7 +756,7 @@ function drawStackedBar(input){
             	enabled: true,
             	useHTML: true,
                 formatter: function () {
-                	return '<b>' + this.x +  '<br/>' + this.series.options.stack +  '</b><br/>' +
+                	return '<b>' + this.x + '</b><br/>' +
                     this.series.name + ' quintile: ' + this.y + '%<br/>'
 
                 // 	if(this.y == false || this.y==null){
@@ -938,6 +945,7 @@ function drawMap(input, col){
         	}        	// ,
         },
         tooltip: {
+        		useHTML: true,
                 formatter: function () {
                 	// if(this.y == false || this.y==null){
                         // return null
@@ -1020,7 +1028,7 @@ function drawLineChart(input){
 	}else{ yMax = null}
 
 	var yText = (FIG10) ? "Number of DI applications per 1,000 workers with taxable earnings" : "";
-	var xText = (FIG10) ? "Unemployment rate (percent)" : "";
+	var xText = (FIG10) ? "Unemployment rate" : "";
 	var plotBands = (FIG2) ? [
 				{ 
 	                color: '#cfe8f3',
@@ -1138,6 +1146,7 @@ function drawLineChart(input){
                 }
             },
             tooltip: {
+            	useHTML: true,
 			    crosshairs: crosshairs,
                 shared: false,
                 valueDecimals: 0,
@@ -1169,7 +1178,7 @@ function drawLineChart(input){
             // width: 140,
             // useHTML: true,
             x: 0,
-            y: 40,
+            y: 20,
                 borderWidth: 0,
                 itemDistance: 9,
             },
@@ -1189,7 +1198,7 @@ function drawLineChart(input){
         		    'font-weight':'bolder'
         	})
             .add();
-      		chart.renderer.text('Great Recession<br>During the Great Recession in the<br>late-2000s, both the unemployment<br>rate and share of DI applications<br>surged.', 495, 205)
+      		chart.renderer.text('Great Recession<br>During the Great Recession in the<br>late 2000s, both the unemployment<br>rate and share of DI applications<br>surged.', 495, 205)
         // ["#1696d2", "#062635", "#eb3f1c","#370b0a"]
         	.css({
         		    'fill': '#eb3f1c',
@@ -1203,7 +1212,7 @@ function drawLineChart(input){
         		    'font-weight':'bolder'
         	})
             .add();
-      		chart.renderer.text('1990s<br>Unemployment rose during the early-1990s<br>recession, taking applications with it, but<br>when unemployment fell, applications per<br>1,000 workers fell slightly.', 255, 430)
+      		chart.renderer.text('1990s<br>Unemployment rose during the early 1990s<br>recession, taking applications with it, but<br>when unemployment fell, applications per<br>1,000 workers fell slightly.', 255, 430)
         // ["#1696d2", "#062635", "#eb3f1c","#370b0a"]
         	.css({
         		    'fill': '#062635',
@@ -2016,7 +2025,7 @@ function formatLabel(x, y, input, col, type, ind){
 				return "$2,200 or more : 100%";
 			}else{
 				var money = d3.format('$.2f')
-				return money(x-49.9) + "-" + money(x) + " : " + y + "%"
+				return money(x-49.9) + "&ndash;" + money(x) + " : " + y + "%"
 			}
 		}
 		else{
