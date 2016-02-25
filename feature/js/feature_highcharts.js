@@ -1182,6 +1182,7 @@ function drawLineChart(input){
                     text: yText
                 },
                 labels: {
+	            	useHTML: false,
                 	formatter: function(){
 	                	if(FIG10){
 	    					var tmp = d3.format(".1f")
