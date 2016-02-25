@@ -28,7 +28,7 @@ var MONTHABBREVS = ["Jan", "Feb", "Mar", "Apr", "May", "June",
     ]
 
 var IE = false;
-var FIG2, FIG9,FIG7,FIG10,FIG4, FIG92, MOBILE, INDEX;
+var FIG2, FIG3, FIG9,FIG7,FIG10,FIG4, FIG92, MOBILE, INDEX;
 // var embed = false;
 var global_data;
 
@@ -47,6 +47,7 @@ FIG92 = (sheets[tableIndex] == "9-2")
 FIG7 = (sheets[tableIndex] == "7")
 FIG10 = (sheets[tableIndex] == "10")
 FIG4 = (sheets[tableIndex] == "4")
+FIG3 = (sheets[tableIndex] == "3")
 INDEX = sheets[tableIndex]
 if(FIG92){
 	MOBILE = d3.select("#mobileTest").style("display") == "block"
@@ -83,7 +84,7 @@ setLayout();
 
 		  		for(var i = 0; i< columns.length; i++){
 		  			var series = columns[i]
-					var lineData = (FIG10 || FIG4) ? generateSpline(data["data"][series]["xvals"], data["data"][series]["series"]) : generateTimeSeries(data.data.years.series, data["data"][series]["series"])
+					var lineData = (FIG10 || FIG4) ? generateSpline(data["data"][series]["xvals"], data["data"][series]["series"], series) : generateTimeSeries(data.data.years.series, data["data"][series]["series"])
 					
 		  			var seriesID = data["data"][series]["label"]
 
@@ -92,8 +93,8 @@ setLayout();
 		            	name: seriesID,
 		            	type: lineType,
 		            	data: lineData,
-		            	fillOpacity:.1,
-		            	index: parseInt(series.replace("col","")-1)
+		            	fillOpacity:.1
+		            	// index: parseInt(series.replace("col","")-1)
 					});
 
 		  		}
@@ -425,7 +426,7 @@ function generateTimeSeries(year, column){
 }
 
 
-function generateSpline(xval, column){
+function generateSpline(xval, column, ser){
 	var series = [];
 	for(var i = 0; i< xval.length; i++){
 		var y = (column[i] == false || isNaN(column[i])) ? null : column[i];
@@ -435,7 +436,37 @@ function generateSpline(xval, column){
 		}
 		else if(typeof(xval[i]) == "number"){
 //simple case, like "2014"
-			series.push([xval[i], y]);
+			var enabled = true;
+			if(xval[i] == 5.3 && y == 7.5 && ser == "col2" || xval[i] == 4.2 && y == 7.9 && ser == "col3" || xval[i] == 9.3 && y == 17.8 && ser == "col4"){
+				enabled = false;
+			}
+			var color;
+			if(xval[i] == 5.3 && y == 7.5 && ser == "col2"){
+				color = "#1696d2"
+			}
+			else if(xval[i] == 4.2 && y == 7.9 && ser == "col3"){
+				color = "#062635"
+			}
+			else if(xval[i] == 9.3 && y == 17.8 && ser == "col4"){
+				color = "#eb3f1c"
+			}
+			else{ color = null}
+
+			series.push(
+				{
+					"x": xval[i],
+					"y": y,
+	                marker: {
+	                    states: {
+	                        hover: {
+	                            enabled: enabled
+	                        }
+	                    }
+	                },
+	                "color" : color
+
+				}
+				);
 		}
 	}
 	return series;
@@ -492,14 +523,24 @@ function drawBar(input, col){
 	// var col = (typeof(input.default) != "undefined") ? input.default : "col1"
 	var labels = (input["data"]["categories"]["series"].length > 6) ? false : true;
 	var marginBottom, marginLeft;
-	if(FIG92 && MOBILE){
+	if(FIG3){
+		marginBottom = 40;
+	}
+	else if(FIG92 && MOBILE){
 		marginBottom = 220;
 	}
 	else if(labels){
 		marginBottom = 80;
-	}else{ marginBottom = 110}
-	if(FIG92 && MOBILE){
+	}else{ marginBottom = 70}
+
+	if(FIG3){
+		marginLeft = 10
+	}
+	else if(FIG92 && MOBILE){
 		marginLeft = 120;
+	}
+	else if(FIG10){
+		marginLeft = 100;
 	}
 	else if(labels){
 		marginLeft = 60;
@@ -554,7 +595,7 @@ function drawBar(input, col){
                     width: 0
                         }],
                 labels: {
-                	useHTML: true,
+                	useHTML: FIG3,
                     step: 0,
                     x: 0,
                     y: 20
@@ -1070,10 +1111,11 @@ function drawLineChart(input){
         	dashStyle: 'shortdash'
         }]
         : []
+        var marginBottom = (FIG10) ? 100 : 50;
     $('#lineChart').highcharts({
             chart: {
                 marginTop: mTop,
-                marginBottom: 100
+                marginBottom: marginBottom
             },
             plotOptions: {
                 series: {
@@ -2072,7 +2114,7 @@ function formatLabel(x, y, input, col, type, ind){
 	else if(type == "tooltipBar"){
 		if(FIG92){
 			var tmp = d3.format(".0f")
-			return tmp(y) + " thousand"
+			return tmp(y) + ",000"
 		}
 		switch(label){
 			case "dollar":
