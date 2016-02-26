@@ -179,7 +179,7 @@ body{
 }
 #interactionInstructions, #mobileDisclaimer{
     position: fixed;
-    top: 307px;
+    top: 327px;
     left: 10px;
     z-index: 200;
     font-size: 14px;
@@ -388,6 +388,7 @@ tbody{
 .col label{
     float: left;
 }
+
 .buttons4{
     position: fixed;
     left: 309px;
@@ -395,12 +396,12 @@ tbody{
 #menuSubhead{
     position: fixed;
     left: 10px;
-    top: 330px;
+    top: 350px;
 }
 #tableMenu{
     left: 10px;
     position: absolute;
-    top: 290px;
+    top: 310px;
     width: 296px;
 }
 /****************************************/

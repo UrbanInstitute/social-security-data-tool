@@ -1,0 +1,155 @@
+{
+    "category": "timeSeries", 
+    "data": {
+        "col1": {
+            "label": "Number", 
+            "series": [
+                17717.0, 
+                26021.0, 
+                27699.0, 
+                27848.0, 
+                26143.0, 
+                24631.0, 
+                21830.0, 
+                18456.0, 
+                15624.0, 
+                13219.0, 
+                10951.0, 
+                8644.0, 
+                6785.0, 
+                5134.0, 
+                3893.0, 
+                2653.0
+            ], 
+            "type": "number"
+        }, 
+        "col2": {
+            "label": "Percentage distribution", 
+            "series": [
+                6.9, 
+                10.1, 
+                10.8, 
+                10.8, 
+                10.2, 
+                9.6, 
+                8.5, 
+                7.2, 
+                6.1, 
+                5.1, 
+                4.3, 
+                3.4, 
+                2.6, 
+                2.0, 
+                1.5, 
+                1.0
+            ], 
+            "type": "percent"
+        }, 
+        "col3": {
+            "label": "Cumulative percentage\u00a0a", 
+            "series": [
+                6.9, 
+                17.0, 
+                27.8, 
+                38.6, 
+                48.8, 
+                58.3, 
+                66.8, 
+                74.0, 
+                80.1, 
+                85.2, 
+                89.5, 
+                92.8, 
+                95.5, 
+                97.5, 
+                99.0, 
+                100.0
+            ], 
+            "type": "percent"
+        }, 
+        "col4": {
+            "label": "Average monthly benefit (dollars)", 
+            "series": [
+                663.51, 
+                684.73, 
+                701.76, 
+                711.09, 
+                711.23, 
+                723.94, 
+                722.89, 
+                726.45, 
+                738.87, 
+                751.94, 
+                751.82, 
+                759.23, 
+                747.76, 
+                743.67, 
+                734.04, 
+                729.86
+            ], 
+            "type": "dollar"
+        }, 
+        "years": {
+            "series": [
+                2013, 
+                2012, 
+                2011, 
+                2010, 
+                2009, 
+                2008, 
+                2007, 
+                2006, 
+                2005, 
+                2004, 
+                2003, 
+                2002, 
+                2001, 
+                2000, 
+                1999, 
+                1998
+            ], 
+            "type": "year"
+        }
+    }, 
+    "footnotes": [
+        {
+            "content": "SOURCE: Social Security Administration, Master Beneficiary Record, 100\u00a0percent data.", 
+            "type": "note"
+        }, 
+        {
+            "content": "NOTES: Because entitlements can be awarded retroactively, data for current and prior years are subject to revision with each annual update of this\u00a0table.", 
+            "type": "note"
+        }, 
+        {
+            "content": "Totals do not necessarily equal the sum of rounded components.", 
+            "type": "note"
+        }, 
+        {
+            "content": ". . . = not applicable.", 
+            "type": "note"
+        }, 
+        {
+            "content": "Represents those entitled in specified year or later.", 
+            "symbol": "a.", 
+            "type": "footnote"
+        }, 
+        {
+            "content": "CONTACT: (410) 965-0090 or statistics@ssa.gov.", 
+            "type": "note"
+        }, 
+        {
+            "content": "File available from:\nU.S. Social Security Administration \u2022 Office of Retirement and Disability Policy \u2022 Office of Research, Evaluation, and Statistics\n<span class =\"suppTitle\">Annual Statistical Supplement, 2014</span>\nhttp://www.socialsecurity.gov/policy/docs/statcomps/supplement/2014/", 
+            "type": "note"
+        }
+    ], 
+    "html": {
+        "body": "<tbody><tr class=Total><td class=\"col0\">Total</td><td class=\"col2\">257248.0</td><td class=\"col3\">100.0</td><td class=\"col4\">. . .</td><td class=\"col5\">716.79</td><tr class=2013><td class=\"col0\">2013.0</td><td class=\"col2\">17717.0</td><td class=\"col3\">6.9</td><td class=\"col4\">6.9</td><td class=\"col5\">663.51</td><tr class=2012><td class=\"col0\">2012.0</td><td class=\"col2\">26021.0</td><td class=\"col3\">10.1</td><td class=\"col4\">17.0</td><td class=\"col5\">684.73</td><tr class=2011><td class=\"col0\">2011.0</td><td class=\"col2\">27699.0</td><td class=\"col3\">10.8</td><td class=\"col4\">27.8</td><td class=\"col5\">701.76</td><tr class=2010><td class=\"col0\">2010.0</td><td class=\"col2\">27848.0</td><td class=\"col3\">10.8</td><td class=\"col4\">38.6</td><td class=\"col5\">711.09</td><tr class=2009><td class=\"col0\">2009.0</td><td class=\"col2\">26143.0</td><td class=\"col3\">10.2</td><td class=\"col4\">48.8</td><td class=\"col5\">711.23</td><tr class=2008><td class=\"col0\">2008.0</td><td class=\"col2\">24631.0</td><td class=\"col3\">9.6</td><td class=\"col4\">58.3</td><td class=\"col5\">723.94</td><tr class=2007><td class=\"col0\">2007.0</td><td class=\"col2\">21830.0</td><td class=\"col3\">8.5</td><td class=\"col4\">66.8</td><td class=\"col5\">722.89</td><tr class=2006><td class=\"col0\">2006.0</td><td class=\"col2\">18456.0</td><td class=\"col3\">7.2</td><td class=\"col4\">74.0</td><td class=\"col5\">726.45</td><tr class=2005><td class=\"col0\">2005.0</td><td class=\"col2\">15624.0</td><td class=\"col3\">6.1</td><td class=\"col4\">80.1</td><td class=\"col5\">738.87</td><tr class=2004><td class=\"col0\">2004.0</td><td class=\"col2\">13219.0</td><td class=\"col3\">5.1</td><td class=\"col4\">85.2</td><td class=\"col5\">751.94</td><tr class=2003><td class=\"col0\">2003.0</td><td class=\"col2\">10951.0</td><td class=\"col3\">4.3</td><td class=\"col4\">89.5</td><td class=\"col5\">751.82</td><tr class=2002><td class=\"col0\">2002.0</td><td class=\"col2\">8644.0</td><td class=\"col3\">3.4</td><td class=\"col4\">92.8</td><td class=\"col5\">759.23</td><tr class=2001><td class=\"col0\">2001.0</td><td class=\"col2\">6785.0</td><td class=\"col3\">2.6</td><td class=\"col4\">95.5</td><td class=\"col5\">747.76</td><tr class=2000><td class=\"col0\">2000.0</td><td class=\"col2\">5134.0</td><td class=\"col3\">2.0</td><td class=\"col4\">97.5</td><td class=\"col5\">743.67</td><tr class=1999><td class=\"col0\">1999.0</td><td class=\"col2\">3893.0</td><td class=\"col3\">1.5</td><td class=\"col4\">99.0</td><td class=\"col5\">734.04</td><tr class=1998><td class=\"col0\">1998.0</td><td class=\"col2\">2653.0</td><td class=\"col3\">1.0</td><td class=\"col4\">100.0</td><td class=\"col5\">729.86</td></tbody>", 
+        "header": "<thead><tr><th class=\"series col0\" >Year of entitlement</th><th class=\"series col1\" >Number</th><th class=\"series col2\" >Percentage distribution</th><th class=\"series col3\" >Cumulative percentage <span class = \"top_footnote top_a\">a</span></th><th class=\"series col4\" >Average monthly benefit (dollars)</th></tr></thead>"
+    }, 
+    "title": {
+        "catID": "5.F", 
+        "category": "OASDI Current-Pay Benefits: Dependents and Survivors", 
+        "id": "5_F10", 
+        "name": "Number, percentage, and average monthly benefit, by year of entitlement as disabled widow(er), December\u00a02013"
+    }
+}

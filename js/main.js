@@ -58,7 +58,7 @@ function init(){
 		  switch(category){
 		  	case "timeSeries":
 		  		var years = data.data.years.series;
-		  		drawScrubber(getYear(years[0]), getYear(years[years.length-1]));
+		  		drawScrubber(getYear(years[0]), getYear(years[years.length-1]), sheets[tableIndex]);
 		  	  	exportParams.chartType = "lineChart"
 		  	  	exportParams.columns=["col1"]
 		  		drawLineChart(data);
@@ -123,7 +123,7 @@ function newTable(index){
 		  switch(category){
 		  	case "timeSeries":
 		  		var years = data.data.years.series
-		  		drawScrubber(getYear(years[0]), getYear(years[years.length-1]))
+		  		drawScrubber(getYear(years[0]), getYear(years[years.length-1]), sheets[index])
 		  	  	exportParams.chartType = "lineChart"
 		  	  	exportParams.columns=["col1"]
 		  		drawLineChart(data);
@@ -166,7 +166,7 @@ function setLayout(){
 	d3.select("#controls")
 		.transition().duration(0)
 		.style("width", 400)
-		.style("height", 360)
+		.style("height", 380)
 		.style("background-color","#e0e0e0")
 	d3.select("#innerControls")
 		.transition()
@@ -958,7 +958,6 @@ function drawLineChart(input){
     });
 }
 function generateBarFromYear(years, column, year){
-	console.log(years,column,year)
 	var series = [];
 	for(var i = 0; i< years.length; i++){
 //ignore "Total" row in tables such as 5.B4
@@ -1241,7 +1240,13 @@ function changeYears(start, end){
 		});
 
 }
-function drawScrubber(lower, upper){
+function drawScrubber(lower, upper, ind){
+	console.log(ind)
+	if(ind == "5_F9" || ind == "5_F10"){
+		var tmp = lower
+		lower = upper
+		upper = tmp
+	}
 	exportParams["years"] = lower + "," + upper
 	d3.select("#singleYearCheck svg").remove();
 	d3.selectAll("#valueScrubber div").remove();
@@ -1579,7 +1584,7 @@ function setTheme(){
 // var tempAllSheets = ['2.A3','2.A4','2.A30','2.F4','2.F5','2.F6','2.F8','2.F11','4.A2','4.A3','4.A4','4.A6','4.C1','5.A1.3','5.A7','5.A17','5.D1','5.D2','5.D3','5.D4','5.E1','5.E2','5.F1','5.F4','5.F6','5.F7','5.F8','5.H1','5.H3','5.H4','5.J1','5.J2','5.J4','5.J8','5.J10','5.J14','6.A1','6.A2','6.A3','6.A6','6.C1','6.C2','6.C7','6.D4','6.D8','6.F1']
 
 
-var tempAllSheets = ["2_A3","2_A30","2_A4","2_F11","2_F4","2_F5","2_F6","2_F8","4_A1","4_A2","4_A3","4_A4","4_A5","4_A6","4_B1","4_C1","5_A14-0","5_A14-1","5_A17","5_A1_8","5_A4-0","5_A4-1","5_B4","5_D1","5_D2","5_D3","5_D4-0","5_D4-1","5_E1","5_E2","5_F1-0","5_F1-1","5_F4-0","5_F4-1","5_F4-2","5_F4-3","5_F6","5_F7","5_F8","5_H1-0","5_H1-1","5_H3","5_H4","5_J1","5_J10","5_J14","5_J2","5_J4","5_J8","6_A1","6_A2","6_A6","6_B5-0","6_B5-1","6_B5_1-0","6_B5_1-1","6_C1","6_C2-0","6_C2-1","6_C7","6_D4-0","6_D4-1","6_D4-2","6_D4-3","6_D8","6_F1"]
+var tempAllSheets = ["2_A3","2_A30","2_A4","2_A8","2_A9","2_A13","2_A27","2_A28","2_C2","2_F11","2_F3","2_F4","2_F5","2_F6","2_F8","3_C4","3_C6_1","3_E1","3_E8","4_A1","4_A2","4_A3","4_A4","4_A5","4_A6","4_B1","4_B2","4_B3-0","4_B3-1","4_B4","4_B5-0","4_B5-1","4_B5-2","4_B6-0","4_B6-1","4_B6-2","4_B7-0","4_B7-1","4_B7-2","4_B8-0","4_B8-1","4_B8-2","4_B9-0","4_B9-1","4_B9-2","4_B11","4_C1","4_C2-0","4_C2-1","4_C2-2","4_C2-3","4_C2-4","4_C2-5","5_A14-0","5_A14-1","5_A17","5_A1_8","5_A4-0","5_A4-1","5_B4","5_B5-0","5_B5-1","5_B8-0","5_B8-1","5_C2","5_D1","5_D2","5_D3","5_D4-0","5_D4-1","5_E1","5_E2","5_F1-0","5_F1-1","5_F4-0","5_F4-1","5_F4-2","5_F4-3","5_F6","5_F7","5_F8","5_F9","5_F10","5_F12","5_G2","5_H1-0","5_H1-1","5_H3","5_H4","5_J1","5_J10","5_J14","5_J2","5_J4","5_J8","6_A1","6_A2","6_A6","6_B5-0","6_B5-1","6_B5_1-0","6_B5_1-1","6_C1","6_C2-0","6_C2-1","6_C7","6_D1-0","6_D1-1","6_D4-0","6_D4-1","6_D4-2","6_D4-3","6_D6","6_D8","6_D9","6_F1","7_A4-0","7_A4-1","7_A4-2","7_A4-3","7_A5-0","7_A5-1","7_A5-2","7_A5-3","7_A9","7_E6","8_A1","8_A2","8_B10","8_B11-0","8_B11-1","8_C1-0","8_C1-1","8_E1-0","8_E1-1","8_E1-2","8_E2-0","8_E2-1","8_E2-2","9_B1","9_D1"]
 
 
 var allSheets = tempAllSheets;
@@ -1830,6 +1835,9 @@ function formatLabel(x, y, input, col, type){
 			case "numberThousand":
 				return full + ": " + num(y * 1000)
 				break;
+			case "date":
+				return y;
+				break;
 			case "numberMillion":
 				return full + ": " + num(y * 1000000)
 				break;
@@ -1949,7 +1957,6 @@ $(function() {
 	var scrollHandle = 0,
 	    scrollStep = 5,
 	    fixTable = $("body");
-	  // console.log(fixTable)
 
 	//Start the scrolling process
 	$(".panner").mousedown(function () {

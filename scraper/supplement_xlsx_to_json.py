@@ -199,9 +199,9 @@ def getTH(sheet, rows, rowNum, colNum):
 	th = "<th"
 	rowspan = 1
 	colspan = 1
-	if sheet.name == "5.B4" or sheet.name == "5.D1":
-		print sheet.name, rows
-		print ""
+	# if sheet.name == "5.B4" or sheet.name == "5.D1":
+	# 	print sheet.name, rows
+	# 	print ""
 	for r in range(rowNum+1, len(rows)):
 		row = rows[r]
 
@@ -223,6 +223,14 @@ def getTH(sheet, rows, rowNum, colNum):
 	# if sheet.name == "5.B4" and rows[rowNum][colNum].value == "Year of entitlement":
 	# 	# print rows[rowNum][colNum].value, colspan
 	# 	colspan = 1
+
+#hacky nonsense for broken header scrapers
+	if sheet.name == "3.C4" and colNum == 6:
+		colspan = 1
+	if (sheet.name == "8.A1" or sheet.name == "8.A2") and colNum == 12:
+		colspan = 1
+	if sheet.name == "9.B1" and colNum == 7:
+		colspan = 1
 	if (rowspan != 1):
 		th += " rowspan=\"%i\" "%rowspan
 	if (colspan != 1):
@@ -443,6 +451,8 @@ def getMapSeries(rowN, colNum, lastRow, sheet, sheetType, startRow):
 			state = ["American Samoa","Guam","Northern Mariana Islands","US Virgin Islands"]
 		for s in state:
 			obj = {}
+#hacky workaround for 2.C2
+			s = s.replace(" f","").replace(" g","").replace(".","")
 			abbrev = STATES[s].lower()
 			if(abbrev == "gu"):
 				obj["hc-key"] = "gu-3605"
@@ -536,23 +546,23 @@ book = xlrd.open_workbook("../data/statistical_supplement/supplement14_new.xls",
 sheets = book.sheet_names()
 
 #Years in 1st column (or year ranges), blank 2nd column, data
-simpleTimeSheets = ['2.A3','2.A4','4.A1','4.A2','4.A3','4.A4','4.A5','4.A6','4.B1','4.C1','5.A17','5.D3','5.E2','5.F6','5.F8','6.C7','6.D8']
+simpleTimeSheets = ["7.A9","7.E6","6.D9","6.D6","5.F12","5.G2","5.C2","4.B11","4.B4","4.B2",'2.A8',"3.E1","3.C6.1",'2.A9','2.A13','2.A27',"2.A28",'2.A3','2.A4',"2.F3","3.C4",'4.A1','4.A2','4.A3','4.A4','4.A5','4.A6','4.B1','4.C1','5.A17','5.D3','5.E2','5.F6','5.F8','6.C7','6.D8',"8.A1","8.A2","8.B10","9.B1","9.D1"]
 
 #time series without blank 2nd column
-col1_exceptions = ['5.A4','5.F4','6.D4','6.C7','5.F8','5.E2','5.D3','5.C2','5.A17','4.C1', '5.B4']
+col1_exceptions = ['5.B8','5.A4','5.F4','6.D4','6.C7','5.F8','5.E2','5.D3','5.C2','5.A17','4.C1', '5.B4',"7.A4","7.A5","7.E6"]
 
 #multiple nested time series tables, with merged cells in mostly blank rows serving as table divider/header
-timeMulti = ['5.A4','5.A14','5.F1','5.F4','5.H1','6.B5','6.B5.1','6.C2','6.D4', '5.D4']
+timeMulti = ["7.A5","7.A4","6.D1","5.B8","5.B5","4.C2","4.B3","4.B5","4.B6","4.B7","4.B8","4.B9",'5.A4','5.A14','5.F1','5.F4','5.H1','6.B5','6.B5.1','6.C2','6.D4','5.D4',"8.B11","8.C1","8.E1","8.E2"]
 
 #time series with month names in 1st column
-monthsTime = ['2.A30', '6.A2']
+monthsTime = ['2.A30', '6.A2',"3.E8"]
 
 # 1st 2, 1st data row is "total" and last data row is "before 1975"
 # 2nd 2, 1st data row is "total" 
-weirdTime = ['5.B4','5.D1','6.A1','6.F1']
+weirdTime = ['5.B4','5.D1','6.A1','6.F1','5.F9','5.F10']
 
 #Map of US states and territories
-medMap = ['5.J1','5.J2','5.J4','5.J8','5.J10','5.J14','6.A6']
+medMap = ["2.C2",'5.J1','5.J2','5.J4','5.J8','5.J10','5.J14','6.A6']
 
 #Small bar graphs, no stacking
 simpleBar = ['2.F4','2.F5','2.F6','2.F8','2.F11']
@@ -702,7 +712,10 @@ for sheet_id in medMap:
 		row = xl_sheet.row(i)
 		testVal = xl_sheet.cell_value(rowx=i, colx=0)
 		if(testVal.find("Alabama") >= 0):
-			headRows = i-1
+			if(sheet_id == "2.C2"):
+				headRows = i
+			else:
+				headRows = i-1
 			break
 	for i in range(headRows+1, xl_sheet.nrows):
 		row = xl_sheet.row(i)
@@ -919,7 +932,8 @@ for sheet_id in monthsTime:
 		if(isinstance(testVal,float)):
 			headRows = i
 			break
-		elif(re.match(reg, testVal.encode('utf8'))):
+#2nd conditional is hacky hack to handle 3.E8
+		elif(re.match(reg, testVal.encode('utf8')) or testVal == "December 1965"):
 			headRows = i
 			break
 	for i in range(headRows+1, xl_sheet.nrows):
