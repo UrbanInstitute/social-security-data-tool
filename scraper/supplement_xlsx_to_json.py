@@ -200,8 +200,6 @@ def getTH(sheet, rows, rowNum, colNum):
 	rowspan = 1
 	colspan = 1
 	# if sheet.name == "5.B4" or sheet.name == "5.D1":
-	# 	print sheet.name, rows
-	# 	print ""
 	for r in range(rowNum+1, len(rows)):
 		row = rows[r]
 
@@ -963,7 +961,20 @@ for sheet_id in monthsTime:
 
 
 
+trusteesTitles = ["IV_B1-0","IV_B1-1","IV_B1-2","IV_B1-3","IV_B2-0","IV_B2-1","IV_B2-2","IV_B2-3","IV_B3-0","IV_B3-1","IV_B3-2","IV_B3-3","IV_B4-0","IV_B4-1","VI_G10-0","VI_G10-1","VI_G10-2","VI_G10-3","VI_G2-0","VI_G2-1","VI_G2-2","VI_G2-3","VI_G4-0","VI_G4-1","VI_G4-2","VI_G4-3","VI_G5-0","VI_G5-1","VI_G6-0","VI_G6-1","VI_G6-2","VI_G6-3","VI_G7-0","VI_G7-1","VI_G7-2","VI_G8-0","VI_G8-1","VI_G8-2","VI_G8-3","VI_G9-0","VI_G9-1","VI_G9-2","VI_G9-3","V_A1-0","V_A1-1","V_A1-2","V_A1-3","V_A2-0","V_A2-1","V_A2-2","V_A2-3","V_A3-0","V_A3-1","V_A4","V_B1-0","V_B1-1","V_B1-2","V_B1-3","V_B2-0","V_B2-1","V_B2-2","V_B2-3","V_C4-0","V_C4-1","V_C4-2","V_C4-3","V_C5-0","V_C5-1","V_C5-2","V_C5-3","V_C7-0","V_C7-1"]
+
+
+for title in trusteesTitles:
+	with open('../data/json/trustees/trustees_report-%s.json'%title) as df:
+		data = json.load(df)
+		titleList[title] = data["title"]["name"] + " (" + title + ")"
+		wordList[title] = data["title"]["name"].split(" ")
+		for key in data["data"]:
+			wordList[title] += data["data"][key]["label"].split(" ")
+
+
 idList = {}
+# print wordList
 for key in wordList:
 	wordList[key] = list(set(wordList[key]))
 	for word in wordList[key]:
@@ -972,6 +983,10 @@ for key in wordList:
 			idList[word] = [key]
 		else:
 			idList[word].append(key)
+
+
+
+
 
 
 with open('../data/words.json', 'w') as fp:

@@ -179,7 +179,7 @@ body{
 }
 #interactionInstructions, #mobileDisclaimer{
     position: fixed;
-    top: 327px;
+    top: 342px;
     left: 10px;
     z-index: 200;
     font-size: 14px;
@@ -385,6 +385,16 @@ tbody{
     float: left;
     width: 100px;
 }
+#trusteesLabel{
+    position: absolute;
+    top: 153px;
+    left: -4px;
+    background: #cfe8f3;
+    padding-right: 4px;
+    padding-left: 4px;
+
+}
+
 .col label{
     float: left;
 }
@@ -396,12 +406,12 @@ tbody{
 #menuSubhead{
     position: fixed;
     left: 10px;
-    top: 350px;
+    top: 365px;
 }
 #tableMenu{
     left: 10px;
     position: absolute;
-    top: 310px;
+    top: 325px;
     width: 296px;
 }
 /****************************************/

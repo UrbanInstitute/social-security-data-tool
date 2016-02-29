@@ -38,7 +38,7 @@ var exportParams = {tableID:"",columns:[],chartType:""}
 
 
 function init(){
-	console.log(tableIndex)
+	
 	var hashID = window.location.hash.substring(1)
 	if(hashID != ""){
 		hashID = hashID.replace(/\./g,"_")
@@ -54,7 +54,7 @@ function init(){
 		$.getJSON( getJSONPath(sheets[tableIndex].replace(/\./g,"_")), function(resp){
 		  // var data = resp.results[0];
 		  exportParams.tableID = sheets[tableIndex].replace(/\./g,"_")
-		  console.log(sheets, tableIndex, sheets[tableIndex])
+		  
 		  var data = resp;
 		  var category = data.category;
 		  switch(category){
@@ -168,7 +168,7 @@ function setLayout(){
 	d3.select("#controls")
 		.transition().duration(0)
 		.style("width", 400)
-		.style("height", 380)
+		.style("height", 395)
 		.style("background-color","#e0e0e0")
 	d3.select("#innerControls")
 		.transition()
@@ -178,8 +178,10 @@ function setLayout(){
 }
 function drawTable(input){
 	d3.select("#testTable table").remove()
+	var category = (input.title.id[0] == "I" || input.title.id[0] == "V") ? "OASDI Trustees Report" : input.title.category;
+	var catID = (input.title.id[0] == "I" || input.title.id[0] == "V") ? "" : " (" + input.title.catID + ")";
 	d3.select("#tableTitle")
-		.html("<div class =\"titleCategory\">" + input.title.category +  " (" + input.title.catID + ")</div>" + input.title.name + " (" + input.title.id.replace(/\_/g,".") + ")")
+		.html("<div class =\"titleCategory\">" + category + catID + "</div>" + input.title.name + " (" + input.title.id.replace(/\_/g,".") + ")")
 
 	d3.select("#testTable")
 		.append("table")
@@ -190,6 +192,17 @@ function drawTable(input){
 	.html(function(){
 		return "<div>" + input.html.header +  input.html.body + "</div>"
 	})
+
+	// if(getId(input)[0] == "I" || getId(input)[0] == "V"){
+	
+	// 	var empty = $('td').filter(function() { return $(this).text() == ""; });
+	// 	empty.css("min-width","0px")
+	// 	empty.css("width","0px")
+	// 	empty.css("padding-left","0px")
+	// 	empty.css("padding-right","0px")
+	// 	// empty.css("border-left","0px solid white")
+	// 	// empty.remove()
+	// }
 	d3.selectAll("#testTable th")
 		.on("click", function(){
 			var th = d3.select(this)
@@ -399,6 +412,13 @@ function drawTable(input){
 		d3.select(".rightFader").style("opacity",1)
 	}
 
+
+//buggy col1 not getting selected for trustees report tables
+	if((input.title.id[0] == "I" || input.title.id[0] == "V")){
+		d3.select("th.col1").classed("selected",true)
+	}
+
+
 }
 function resizeHeader(header, bodyCells){
 // 	var oldWidth = parseFloat(d3.select(header).style("width").replace("px",""));
@@ -423,6 +443,9 @@ function resizeHeader(header, bodyCells){
 	// return false
 }
 function formatTable(tableID){
+
+
+
 //draw sortArrows
 // 	d3.selectAll("#" + tableID + " thead th")
 // 		.append("i")
@@ -460,12 +483,38 @@ function formatTable(tableID){
 	d3.selectAll(".sortArrow").on("click", function(){
 			d3.event.stopPropagation()
 	})
+	// var id = d3.select("#" + tableID + " table").attr("id")
+	// if(id[0] == "I" || id[0] == "V"){
+	// 	d3.selectAll("thead td").remove()
+	// }
+	var id = d3.select("#" + tableID + " table").attr("id")
+	if(id[0] == "I" || id[0] == "V"){
+		d3.selectAll("th")
+			.attr("colspan", function(){
+				var cs = d3.select(this).attr("colspan")
+				console.log(cs)
+				var id = d3.select("#" + tableID + " table").attr("id")
+				if(id[0] == "I" || id[0] == "V"){
+					if(cs == null){
+						return 1
+					}
+					else{
+						// console.log(cs)
+						return (parseInt(cs) + 1)/2
+					}
+				}
 
+			})
+	}
 	d3.selectAll("th")
-		.style("width", function(){
+			.style("width", function(){
 			var cs = d3.select(this).attr("colspan")
 			var w;
-			if(d3.select(this).classed("col0") && cs > 1){
+			var id = d3.select("#" + tableID + " table").attr("id")
+			if((id[0] == "I" || id[0] == "V") && d3.select(this).text() == ""){
+				w = 0
+			}
+			else if(d3.select(this).classed("col0") && cs > 1){
 				w = (cs == null || cs == 1) ? 100 : 120*cs-20 + 2	
 			}else{
 				w = (cs == null || cs == 1) ? 100 : 120*cs-20
@@ -475,17 +524,27 @@ function formatTable(tableID){
 		.style("max-width", function(){
 			var cs = d3.select(this).attr("colspan")
 			var w;
-			if(d3.select(this).classed("col0") && cs > 1){
+			var id = d3.select("#" + tableID + " table").attr("id")
+			// if((id[0] == "I" || id[0] == "V") && d3.select(this).text() == ""){
+			// 	w = 0
+			// }
+			// else 
+				if(d3.select(this).classed("col0") && cs > 1){
 				w = (cs == null || cs == 1) ? 100 : 120*cs-20 + 2	
 			}else{
 				w = (cs == null || cs == 1) ? 100 : 120*cs-20
 			}
+			
 			return w;
 		})
 		.style("min-width", function(){
 			var cs = d3.select(this).attr("colspan")
 			var w;
-			if(d3.select(this).classed("col0") && cs > 1){
+			var id = d3.select("#" + tableID + " table").attr("id")
+			if((id[0] == "I" || id[0] == "V") && d3.select(this).text() == ""){
+				w = 0
+			}
+			else if(d3.select(this).classed("col0") && cs > 1){
 				w = (cs == null || cs == 1) ? 100 : 120*cs-20 + 2	
 			}else{
 				w = (cs == null || cs == 1) ? 100 : 120*cs-20
@@ -496,21 +555,67 @@ function formatTable(tableID){
 	d3.selectAll("td")
 		.style("width", function(){
 			var cs = d3.select(this).attr("colspan")
-			var w = (cs == null || cs == 1) ? 100 : 120*cs-20
-			return w
+			var w;
+			var id = d3.select("#" + tableID + " table").attr("id")
+			if((id[0] == "I" || id[0] == "V") && d3.select(this).text() == ""){
+				w = 0
+			}
+			else if(d3.select(this).classed("col0") && cs > 1){
+				w = (cs == null || cs == 1) ? 100 : 120*cs-20 + 2	
+			}else{
+				w = (cs == null || cs == 1) ? 100 : 120*cs-20
+			}
+			return w;
 		})
 		.style("max-width", function(){
 			var cs = d3.select(this).attr("colspan")
-			var w = (cs == null || cs == 1) ? 100 : 120*cs-20
+			var w;
+			var id = d3.select("#" + tableID + " table").attr("id")
+			if((id[0] == "I" || id[0] == "V") && d3.select(this).text() == ""){
+				w = 0
+			}
+			else if(d3.select(this).classed("col0") && cs > 1){
+				w = (cs == null || cs == 1) ? 100 : 120*cs-20 + 2	
+			}else{
+				w = (cs == null || cs == 1) ? 100 : 120*cs-20
+			}
+			
 			return w;
 		})
 		.style("min-width", function(){
 			var cs = d3.select(this).attr("colspan")
-			var w = (cs == null || cs == 1) ? 100 : 120*cs-20
+			var w;
+			var id = d3.select("#" + tableID + " table").attr("id")
+			if((id[0] == "I" || id[0] == "V") && d3.select(this).text() == ""){
+				w = 0
+			} else if(d3.select(this).classed("col0") && cs > 1){
+				w = (cs == null || cs == 1) ? 100 : 120*cs-20 + 2	
+			}else{
+				w = (cs == null || cs == 1) ? 100 : 120*cs-20
+			}
 			return w;
 		})
+		if(id[0] == "I" || id[0] == "V"){
+			var empty = $('td').filter(function() { return $(this).text() == ""; });
+			empty.css("min-width","0px")
+			empty.css("width","0px")
+			empty.css("padding-left","0px")
+			empty.css("padding-right","0px")
+			empty.css("border-left","0px solid white")
+			var emptyHead = $('th').filter(function() { return $(this).text() == ""; });
+			emptyHead.css("min-width","0px")
+			emptyHead.css("width","0px")
+			emptyHead.css("padding-left","0px")
+			emptyHead.css("padding-right","0px")
+			emptyHead.css("border-left","0px solid white")
+			empty.remove()
+			emptyHead.remove()
+			d3.select("thead").select("tr")
+				.insert("td","th")
+				.style("padding","0px")
+				.style("width","0px")
 
-
+		}
 //center table in window
 	var tWidth = $("thead").width()
 	var wWidth = $(window).width()
@@ -528,16 +633,21 @@ function formatTable(tableID){
 	d3.selectAll("td")
 		.html(function(){
 			var td = d3.select(this)
-			var val = td.html()
+			var val = td.html().replace(",","")
 			if(td.classed("col0")){
 				return val;
 			}
 			else if(!isNaN(parseFloat(val))){
-				return comma(d3.select(this).html())
+				return comma(d3.select(this).html().replace(",",""))
 			}
 			else{ return val}
 		})
 
+//trustees report scraper broken, so hackily remove empty cells
+
+
+
+//for trustees report table, remove all empty cols
 }
 function checkUnitCompatibility(unit, input, charts){
 	d3.selectAll("th.selected")
@@ -864,6 +974,8 @@ function drawMap(input, col){
 
 function drawLineChart(input){
 	var initId = input["data"]["col1"]["label"]
+	var category = (input.title.id[0] == "I" || input.title.id[0] == "V") ? "OASDI Trustees Report" : input.title.category;
+
     $('#lineChart').highcharts({
             chart: {
                 marginTop: 150,
@@ -878,7 +990,7 @@ function drawLineChart(input){
             },
 
             title: {
-                text: "<div class = \"chartSubtitle\">" + input.title.category + "</div>" + "<div class = \"chartTitle\">" + input.title.name + "</div>"
+                text: "<div class = \"chartSubtitle\">" + category + "</div>" + "<div class = \"chartTitle\">" + input.title.name + "</div>"
             },
             // subtitle: {
             //     text: "<div class = \"chartSubtitle\">" + input.title.name + "</div>"
@@ -990,6 +1102,8 @@ function generateBarFromYear(years, column, year){
 }
 function drawSingleYearBarChart(input){
 	var initId = input["data"]["col1"]["label"]
+	var category = (input.title.id[0] == "I" || input.title.id[0] == "V") ? "OASDI Trustees Report" : input.title.category;
+
         $('#singleYearBarChart').highcharts({
             chart: {
                 marginTop: 90,
@@ -1017,7 +1131,7 @@ function drawSingleYearBarChart(input){
                 }
             },
 			title: {
-                text: "<div class = \"chartSubtitle\">" + input.title.category + "</div>" + "<div class = \"chartTitle\">" + input.title.name + "</div>"
+                text: "<div class = \"chartSubtitle\">" + category + "</div>" + "<div class = \"chartTitle\">" + input.title.name + "</div>"
             },
             xAxis: {
                 gridLineWidth: '0',
@@ -1246,7 +1360,7 @@ function changeYears(start, end){
 
 }
 function drawScrubber(lower, upper, ind){
-	console.log(ind)
+	
 	if(ind == "5_F9" || ind == "5_F10"){
 		var tmp = lower
 		lower = upper
@@ -1589,7 +1703,7 @@ function setTheme(){
 // var tempAllSheets = ['2.A3','2.A4','2.A30','2.F4','2.F5','2.F6','2.F8','2.F11','4.A2','4.A3','4.A4','4.A6','4.C1','5.A1.3','5.A7','5.A17','5.D1','5.D2','5.D3','5.D4','5.E1','5.E2','5.F1','5.F4','5.F6','5.F7','5.F8','5.H1','5.H3','5.H4','5.J1','5.J2','5.J4','5.J8','5.J10','5.J14','6.A1','6.A2','6.A3','6.A6','6.C1','6.C2','6.C7','6.D4','6.D8','6.F1']
 
 
-var tempAllSheets = ["IV_B1-0","2_A3","2_A30","2_A4","2_A8","2_A9","2_A13","2_A27","2_A28","2_C2","2_F11","2_F3","2_F4","2_F5","2_F6","2_F8","3_C4","3_C6_1","3_E1","3_E8","4_A1","4_A2","4_A3","4_A4","4_A5","4_A6","4_B1","4_B2","4_B3-0","4_B3-1","4_B4","4_B5-0","4_B5-1","4_B5-2","4_B6-0","4_B6-1","4_B6-2","4_B7-0","4_B7-1","4_B7-2","4_B8-0","4_B8-1","4_B8-2","4_B9-0","4_B9-1","4_B9-2","4_B11","4_C1","4_C2-0","4_C2-1","4_C2-2","4_C2-3","4_C2-4","4_C2-5","5_A14-0","5_A14-1","5_A17","5_A1_8","5_A4-0","5_A4-1","5_B4","5_B5-0","5_B5-1","5_B8-0","5_B8-1","5_C2","5_D1","5_D2","5_D3","5_D4-0","5_D4-1","5_E1","5_E2","5_F1-0","5_F1-1","5_F4-0","5_F4-1","5_F4-2","5_F4-3","5_F6","5_F7","5_F8","5_F9","5_F10","5_F12","5_G2","5_H1-0","5_H1-1","5_H3","5_H4","5_J1","5_J10","5_J14","5_J2","5_J4","5_J8","6_A1","6_A2","6_A6","6_B5-0","6_B5-1","6_B5_1-0","6_B5_1-1","6_C1","6_C2-0","6_C2-1","6_C7","6_D1-0","6_D1-1","6_D4-0","6_D4-1","6_D4-2","6_D4-3","6_D6","6_D8","6_D9","6_F1","7_A4-0","7_A4-1","7_A4-2","7_A4-3","7_A5-0","7_A5-1","7_A5-2","7_A5-3","7_A9","7_E6","8_A1","8_A2","8_B10","8_B11-0","8_B11-1","8_C1-0","8_C1-1","8_E1-0","8_E1-1","8_E1-2","8_E2-0","8_E2-1","8_E2-2","9_B1","9_D1"]
+var tempAllSheets = ["IV_B1-0","IV_B1-1","IV_B1-2","IV_B1-3","IV_B2-0","IV_B2-1","IV_B2-2","IV_B2-3","IV_B3-0","IV_B3-1","IV_B3-2","IV_B3-3","IV_B4-0","IV_B4-1","VI_G10-0","VI_G10-1","VI_G10-2","VI_G10-3","VI_G2-0","VI_G2-1","VI_G2-2","VI_G2-3","VI_G4-0","VI_G4-1","VI_G4-2","VI_G4-3","VI_G5-0","VI_G5-1","VI_G6-0","VI_G6-1","VI_G6-2","VI_G6-3","VI_G7-0","VI_G7-1","VI_G7-2","VI_G8-0","VI_G8-1","VI_G8-2","VI_G8-3","VI_G9-0","VI_G9-1","VI_G9-2","VI_G9-3","V_A1-0","V_A1-1","V_A1-2","V_A1-3","V_A2-0","V_A2-1","V_A2-2","V_A2-3","V_A3-0","V_A3-1","V_A4","V_B1-0","V_B1-1","V_B1-2","V_B1-3","V_B2-0","V_B2-1","V_B2-2","V_B2-3","V_C4-0","V_C4-1","V_C4-2","V_C4-3","V_C5-0","V_C5-1","V_C5-2","V_C5-3","V_C7-0","V_C7-1","2_A3","2_A30","2_A4","2_A8","2_A9","2_A13","2_A27","2_A28","2_C2","2_F11","2_F3","2_F4","2_F5","2_F6","2_F8","3_C4","3_C6_1","3_E1","3_E8","4_A1","4_A2","4_A3","4_A4","4_A5","4_A6","4_B1","4_B2","4_B3-0","4_B3-1","4_B4","4_B5-0","4_B5-1","4_B5-2","4_B6-0","4_B6-1","4_B6-2","4_B7-0","4_B7-1","4_B7-2","4_B8-0","4_B8-1","4_B8-2","4_B9-0","4_B9-1","4_B9-2","4_B11","4_C1","4_C2-0","4_C2-1","4_C2-2","4_C2-3","4_C2-4","4_C2-5","5_A14-0","5_A14-1","5_A17","5_A1_8","5_A4-0","5_A4-1","5_B4","5_B5-0","5_B5-1","5_B8-0","5_B8-1","5_C2","5_D1","5_D2","5_D3","5_D4-0","5_D4-1","5_E1","5_E2","5_F1-0","5_F1-1","5_F4-0","5_F4-1","5_F4-2","5_F4-3","5_F6","5_F7","5_F8","5_F9","5_F10","5_F12","5_G2","5_H1-0","5_H1-1","5_H3","5_H4","5_J1","5_J10","5_J14","5_J2","5_J4","5_J8","6_A1","6_A2","6_A6","6_B5-0","6_B5-1","6_B5_1-0","6_B5_1-1","6_C1","6_C2-0","6_C2-1","6_C7","6_D1-0","6_D1-1","6_D4-0","6_D4-1","6_D4-2","6_D4-3","6_D6","6_D8","6_D9","6_F1","7_A4-0","7_A4-1","7_A4-2","7_A4-3","7_A5-0","7_A5-1","7_A5-2","7_A5-3","7_A9","7_E6","8_A1","8_A2","8_B10","8_B11-0","8_B11-1","8_C1-0","8_C1-1","8_E1-0","8_E1-1","8_E1-2","8_E2-0","8_E2-1","8_E2-2","9_B1","9_D1"]
 
 
 var allSheets = tempAllSheets;
@@ -1834,6 +1948,9 @@ function formatLabel(x, y, input, col, type){
 			case "dollarMillion":
 				return full + ": " + dollar(y * 1000000)
 				break;
+			case "dollarBillion":
+				return full + ": " + dollar(y * 1000000000)
+				break;
 			case "number":
 				return full + ": " + num(y)
 				break;				
@@ -1845,6 +1962,9 @@ function formatLabel(x, y, input, col, type){
 				break;
 			case "numberMillion":
 				return full + ": " + num(y * 1000000)
+				break;
+			case "numberBillion":
+				return full + ": " + num(y * 1000000000)
 				break;
 			case "percent":
 				return full + ": " + y + "%"
@@ -1863,6 +1983,9 @@ function formatLabel(x, y, input, col, type){
 			case "dollarMillion":
 				return dollar(y * 1000000)
 				break;
+			case "dollarBillion":
+				return dollar(y * 1000000000)
+				break;
 			case "number":
 				return num(y)
 				break;				
@@ -1871,6 +1994,9 @@ function formatLabel(x, y, input, col, type){
 				break;
 			case "numberMillion":
 				return num(y * 1000000)
+				break;
+			case "numberBillion":
+				return num(y * 1000000000)
 				break;
 			case "percent":
 				return y + "%"
@@ -1888,6 +2014,9 @@ function formatLabel(x, y, input, col, type){
 			case "dollarMillion":
 				return x + ": " + dollar(y * 1000000)
 				break;
+			case "dollarBillion":
+				return x + ": " + dollar(y * 1000000000)
+				break;
 			case "number":
 				return x + ": " + num(y)
 				break;				
@@ -1896,6 +2025,9 @@ function formatLabel(x, y, input, col, type){
 				break;
 			case "numberMillion":
 				return x + ": " + num(y * 1000000)
+				break;
+			case "numberBillion":
+				return x + ": " + num(y * 1000000000)
 				break;
 			case "percent":
 				return x + ": " + y + "%"
