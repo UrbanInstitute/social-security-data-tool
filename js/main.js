@@ -489,6 +489,11 @@ function formatTable(tableID){
 	// }
 	var id = d3.select("#" + tableID + " table").attr("id")
 	if(id[0] == "I" || id[0] == "V"){
+//hacky edge case...
+		if(id == "IV_B4-0"){
+			d3.select("thead tr:first-child td:first-child")
+				.attr("colspan",1)
+		}
 		d3.selectAll("th")
 			.attr("colspan", function(){
 				var cs = d3.select(this).attr("colspan")
@@ -529,7 +534,7 @@ function formatTable(tableID){
 			// 	w = 0
 			// }
 			// else 
-				if(d3.select(this).classed("col0") && cs > 1){
+			if(d3.select(this).classed("col0") && cs > 1){
 				w = (cs == null || cs == 1) ? 100 : 120*cs-20 + 2	
 			}else{
 				w = (cs == null || cs == 1) ? 100 : 120*cs-20
@@ -638,12 +643,12 @@ function formatTable(tableID){
 	d3.selectAll("td")
 		.html(function(){
 			var td = d3.select(this)
-			var val = td.html().replace(",","")
+			var val = td.html().replace(/\,/g,"")
 			if(td.classed("col0")){
 				return val;
 			}
 			else if(!isNaN(parseFloat(val))){
-				return comma(d3.select(this).html().replace(",",""))
+				return comma(d3.select(this).html().replace(/\,/g,""))
 			}
 			else{ return val}
 		})
