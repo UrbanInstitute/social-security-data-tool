@@ -299,8 +299,9 @@ tbody{
     color: white;
 }
 #nextButton, #prevButton{
+
     bottom: 10px;
-    z-index: 999;
+    z-index: 99999;
     padding-bottom: 0px;
     padding-top: 6px;
     background: rgba(255,255,255,.8);
@@ -567,6 +568,7 @@ th:not(.selected){
 }
 
 .pure-table th {
+    border-right: 1px solid #cbcbcb;
     border-bottom: 1px solid #cbcbcb;
     text-align: center;
 }

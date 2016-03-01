@@ -596,7 +596,10 @@ function formatTable(tableID){
 			return w;
 		})
 		if(id[0] == "I" || id[0] == "V"){
-			var empty = $('td').filter(function() { return $(this).text() == ""; });
+			var emptyTmp = $('td').filter(function() { return $(this).text() == ""; });
+			emptyTmp.addClass("emptyTmp")
+			$("thead tr td:first-child").removeClass("emptyTmp")
+			var empty = $('.emptyTmp')
 			empty.css("min-width","0px")
 			empty.css("width","0px")
 			empty.css("padding-left","0px")
@@ -610,11 +613,13 @@ function formatTable(tableID){
 			emptyHead.css("border-left","0px solid white")
 			empty.remove()
 			emptyHead.remove()
-			d3.select("thead").select("tr")
-				.insert("td","th")
-				.style("padding","0px")
-				.style("width","0px")
+			// d3.select("thead").select("tr")
+			// 	.insert("td","th")
+			// 	.style("padding","0px")
+			// 	.style("width","0px")
+// IV.B4-0
 
+// NaN V.A1-2
 		}
 //center table in window
 	var tWidth = $("thead").width()
@@ -764,7 +769,16 @@ function drawBar(input, col){
 	var labels = (input["data"]["categories"]["series"].length > 6) ? false : true;
 	var marginBottom = (labels) ? 80 : 110;
 	var marginLeft = (labels) ? 60 : 80;
-	var initId = input["data"][col]["label"]
+	var initId = input["data"]["col1"]["label"]
+	var category = (input.title.id[0] == "I" || input.title.id[0] == "V")
+		? "OASDI Trustees Report"
+		: input.title.category;
+	var footnoteText = (input.title.id[0] == "I" || input.title.id[0] == "V")
+		? "<a href = \"https://www.socialsecurity.gov/OACT/TR/2015/lrIndex.html\">These data are from the Social Security Administration's <em>OASDI Trustees Report, 2015</em>. The parenthetical numbers with the titles are retained from the report for reference.</a>"
+		: "<a href = \"https://www.ssa.gov/policy/docs/statcomps/supplement/\">These data are from the Social Security Administration's <em>Annual Statistical Supplement, 2014</em>. The parenthetical numbers with the titles are retained from the supplement for reference.</a>"
+	var footnoteHref = (input.title.id[0] == "I" || input.title.id[0] == "V")
+		? "https://www.socialsecurity.gov/OACT/TR/2015/lrIndex.html"
+		: "https://www.ssa.gov/policy/docs/statcomps/supplement/"
         $('#barChart').highcharts({
             chart: {
                 marginTop: 150,
@@ -833,8 +847,8 @@ function drawBar(input, col){
             },
             credits: {
                 enabled: true,
-                text: "<a href = \"https://www.ssa.gov/policy/docs/statcomps/supplement/\">These data are from the Social Security Administration's <em>Annual Statistical Supplement, 2014</em>. The parenthetical numbers with the titles are retained from the supplement for reference.</a>",
-                href: "https://www.ssa.gov/policy/docs/statcomps/supplement/",
+                text: footnoteText,
+                href: footnoteHref,
                 style:{
                 		color: '#1696d2',
                 		fill: '#1696d2'
@@ -874,7 +888,16 @@ function drawBar(input, col){
 }
 
 function drawMap(input, col){
-	var initId = input["data"][col]["label"]
+	var initId = input["data"]["col1"]["label"]
+	var category = (input.title.id[0] == "I" || input.title.id[0] == "V")
+		? "OASDI Trustees Report"
+		: input.title.category;
+	var footnoteText = (input.title.id[0] == "I" || input.title.id[0] == "V")
+		? "<a href = \"https://www.socialsecurity.gov/OACT/TR/2015/lrIndex.html\">These data are from the Social Security Administration's <em>OASDI Trustees Report, 2015</em>. The parenthetical numbers with the titles are retained from the report for reference.</a>"
+		: "<a href = \"https://www.ssa.gov/policy/docs/statcomps/supplement/\">These data are from the Social Security Administration's <em>Annual Statistical Supplement, 2014</em>. The parenthetical numbers with the titles are retained from the supplement for reference.</a>"
+	var footnoteHref = (input.title.id[0] == "I" || input.title.id[0] == "V")
+		? "https://www.socialsecurity.gov/OACT/TR/2015/lrIndex.html"
+		: "https://www.ssa.gov/policy/docs/statcomps/supplement/"
 	$('#map').highcharts('Map', {
         title: {
                 text: "<div class = \"chartSubtitle\">" + input.title.category + "</div>" + "<div class = \"chartTitle\">" + input.title.name + "</div>"
@@ -920,8 +943,8 @@ function drawMap(input, col){
         },
         credits: {
             enabled: true,
-            text: "<a href = \"https://www.ssa.gov/policy/docs/statcomps/supplement/\">These data are from the Social Security Administration's <em>Annual Statistical Supplement, 2014</em>. The parenthetical numbers with the titles are retained from the supplement for reference.</a>",
-            href: "https://www.ssa.gov/policy/docs/statcomps/supplement/",
+            text: footnoteText,
+            href: footnoteHref,
             style:{
             		color: '#1696d2',
             		fill: '#1696d2'
@@ -974,7 +997,15 @@ function drawMap(input, col){
 
 function drawLineChart(input){
 	var initId = input["data"]["col1"]["label"]
-	var category = (input.title.id[0] == "I" || input.title.id[0] == "V") ? "OASDI Trustees Report" : input.title.category;
+	var category = (input.title.id[0] == "I" || input.title.id[0] == "V")
+		? "OASDI Trustees Report"
+		: input.title.category;
+	var footnoteText = (input.title.id[0] == "I" || input.title.id[0] == "V")
+		? "<a href = \"https://www.socialsecurity.gov/OACT/TR/2015/lrIndex.html\">These data are from the Social Security Administration's <em>OASDI Trustees Report, 2015</em>. The parenthetical numbers with the titles are retained from the report for reference.</a>"
+		: "<a href = \"https://www.ssa.gov/policy/docs/statcomps/supplement/\">These data are from the Social Security Administration's <em>Annual Statistical Supplement, 2014</em>. The parenthetical numbers with the titles are retained from the supplement for reference.</a>"
+	var footnoteHref = (input.title.id[0] == "I" || input.title.id[0] == "V")
+		? "https://www.socialsecurity.gov/OACT/TR/2015/lrIndex.html"
+		: "https://www.ssa.gov/policy/docs/statcomps/supplement/"
 
     $('#lineChart').highcharts({
             chart: {
@@ -1043,8 +1074,8 @@ function drawLineChart(input){
             },
             credits: {
                 enabled: true,
-                text: "<a href = \"https://www.ssa.gov/policy/docs/statcomps/supplement/\">These data are from the Social Security Administration's <em>Annual Statistical Supplement, 2014</em>. The parenthetical numbers with the titles are retained from the supplement for reference.</a>",
-                href: "https://www.ssa.gov/policy/docs/statcomps/supplement/",
+                text: footnoteText,
+                href: footnoteHref,
                 style:{
                 		color: '#1696d2',
                 		fill: '#1696d2'
@@ -1102,7 +1133,15 @@ function generateBarFromYear(years, column, year){
 }
 function drawSingleYearBarChart(input){
 	var initId = input["data"]["col1"]["label"]
-	var category = (input.title.id[0] == "I" || input.title.id[0] == "V") ? "OASDI Trustees Report" : input.title.category;
+	var category = (input.title.id[0] == "I" || input.title.id[0] == "V")
+		? "OASDI Trustees Report"
+		: input.title.category;
+	var footnoteText = (input.title.id[0] == "I" || input.title.id[0] == "V")
+		? "<a href = \"https://www.socialsecurity.gov/OACT/TR/2015/lrIndex.html\">These data are from the Social Security Administration's <em>OASDI Trustees Report, 2015</em>. The parenthetical numbers with the titles are retained from the report for reference.</a>"
+		: "<a href = \"https://www.ssa.gov/policy/docs/statcomps/supplement/\">These data are from the Social Security Administration's <em>Annual Statistical Supplement, 2014</em>. The parenthetical numbers with the titles are retained from the supplement for reference.</a>"
+	var footnoteHref = (input.title.id[0] == "I" || input.title.id[0] == "V")
+		? "https://www.socialsecurity.gov/OACT/TR/2015/lrIndex.html"
+		: "https://www.ssa.gov/policy/docs/statcomps/supplement/"
 
         $('#singleYearBarChart').highcharts({
             chart: {
@@ -1172,8 +1211,8 @@ function drawSingleYearBarChart(input){
             },
             credits: {
                 enabled: true,
-                text: "<a href = \"https://www.ssa.gov/policy/docs/statcomps/supplement/\">These data are from the Social Security Administration's <em>Annual Statistical Supplement, 2014</em>. The parenthetical numbers with the titles are retained from the supplement for reference.</a>",
-                href: "https://www.ssa.gov/policy/docs/statcomps/supplement/",
+                text: footnoteText,
+                href: footnoteHref,
                 style:{
                 		color: '#1696d2',
                 		fill: '#1696d2'
