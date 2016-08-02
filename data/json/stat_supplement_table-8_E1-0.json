@@ -31,7 +31,8 @@
                 62458.0, 
                 65562.0, 
                 69179.0, 
-                69334.0
+                69334.0, 
+                73656.0
             ], 
             "type": "number"
         }, 
@@ -65,7 +66,8 @@
                 16476.0, 
                 15701.0, 
                 16307.0, 
-                15588.0
+                15588.0, 
+                29414.0
             ], 
             "type": "number"
         }, 
@@ -99,7 +101,8 @@
                 12738.0, 
                 13403.0, 
                 14488.0, 
-                14194.0
+                14194.0, 
+                17487.0
             ], 
             "type": "number"
         }, 
@@ -133,7 +136,8 @@
                 16203.0, 
                 16867.0, 
                 16936.0, 
-                16411.0
+                16411.0, 
+                31100.0
             ], 
             "type": "number"
         }, 
@@ -167,7 +171,8 @@
                 1087.0, 
                 1137.0, 
                 1097.0, 
-                1144.0
+                1144.0, 
+                1789.0
             ], 
             "type": "number"
         }, 
@@ -201,7 +206,8 @@
                 26786.0, 
                 29018.0, 
                 30517.0, 
-                26822.0
+                26822.0, 
+                42229.0
             ], 
             "type": "number"
         }, 
@@ -235,11 +241,47 @@
                 false, 
                 false, 
                 false, 
+                false, 
                 false
             ], 
             "type": "number"
         }, 
         "col16": {
+            "label": "Capi-tation pay-ments", 
+            "series": [
+                false, 
+                false, 
+                false, 
+                false, 
+                false, 
+                false, 
+                false, 
+                false, 
+                false, 
+                false, 
+                false, 
+                false, 
+                false, 
+                false, 
+                false, 
+                false, 
+                false, 
+                false, 
+                false, 
+                false, 
+                false, 
+                false, 
+                false, 
+                false, 
+                false, 
+                false, 
+                false, 
+                false, 
+                74547.0
+            ], 
+            "type": "number"
+        }, 
+        "col17": {
             "label": "Other c", 
             "series": [
                 5371.0, 
@@ -269,9 +311,10 @@
                 68256.0, 
                 74490.0, 
                 97036.0, 
-                91487.0
+                91487.0, 
+                37144.0
             ], 
-            "type": "number"
+            "type": ""
         }, 
         "col2": {
             "label": "Inpatient services\u00a0in\u2014 :: General hospital", 
@@ -303,7 +346,8 @@
                 5433.0, 
                 5259.0, 
                 5160.0, 
-                4718.0
+                4718.0, 
+                9117.0
             ], 
             "type": "number"
         }, 
@@ -337,12 +381,13 @@
                 115.0, 
                 123.0, 
                 123.0, 
-                120.0
+                120.0, 
+                165.0
             ], 
             "type": "number"
         }, 
         "col4": {
-            "label": "Intermediate care facility services for\u2014 :: Intellectually disabled", 
+            "label": "Intermediate care facility services for\u2014 :: Intellec-tually disabled", 
             "series": [
                 147.0, 
                 145.0, 
@@ -371,7 +416,8 @@
                 101.0, 
                 99.0, 
                 95.0, 
-                92.0
+                92.0, 
+                96.0
             ], 
             "type": "number"
         }, 
@@ -384,6 +430,7 @@
                 866.0, 
                 888.0, 
                 860.0, 
+                false, 
                 false, 
                 false, 
                 false, 
@@ -439,7 +486,8 @@
                 1644.0, 
                 1547.0, 
                 1626.0, 
-                1510.0
+                1510.0, 
+                1686.0
             ], 
             "type": "number"
         }, 
@@ -473,7 +521,8 @@
                 22755.0, 
                 23752.0, 
                 24226.0, 
-                23777.0
+                23777.0, 
+                48094.0
             ], 
             "type": "number"
         }, 
@@ -507,7 +556,8 @@
                 10971.0, 
                 12414.0, 
                 13507.0, 
-                13193.0
+                13193.0, 
+                20806.0
             ], 
             "type": "number"
         }, 
@@ -541,7 +591,8 @@
                 5409.0, 
                 5953.0, 
                 5800.0, 
-                5739.0
+                5739.0, 
+                10348.0
             ], 
             "type": "number"
         }, 
@@ -574,14 +625,15 @@
                 2009, 
                 2010, 
                 2011, 
-                2012
+                2012, 
+                2013
             ], 
             "type": "year"
         }
     }, 
     "footnotes": [
         {
-            "content": "SOURCE: Data through fiscal year 1998 are from HCFA Form 2082, and data from fiscal year 1999 onward are from Medicaid Statistical Information System (MSIS) State Summary Data, Centers for Medicare & Medicaid Services.", 
+            "content": "SOURCES: Data through fiscal year 1998 are from HCFA Form 2082; data for fiscal years 1999\u20132012 are from Medicaid Statistical Information System (MSIS) State Summary Data, Centers for Medicare & Medicaid Services (CMS); data for fiscal year 2013 are from claims files in the MSIS Granular file, CMS.", 
             "type": "note"
         }, 
         {
@@ -593,11 +645,19 @@
             "type": "note"
         }, 
         {
+            "content": "Beginning with data for fiscal year 2013, the methodology for producing recipient counts was revised to include those who received at least one service through Medicaid or Separate Children's Health Insurance Program (CHIP). Payment amounts are derived from records for all claim types.", 
+            "type": "note"
+        }, 
+        {
             "content": "Totals do not necessarily equal the sum of rounded components.", 
             "type": "note"
         }, 
         {
-            "content": ". . . = not applicable.", 
+            "content": "The MSIS Data Anomalies Report (https://www.cms.gov/Research-Statistics-Data-and-Systems/Computer-Data-and-Systems/MedicaidDataSourcesGenInfo/MSIS-Tables.html)  documents any postpublication data quality issues.", 
+            "type": "note"
+        }, 
+        {
+            "content": ". . . = not applicable; -- = not available.", 
             "type": "note"
         }, 
         {
@@ -611,7 +671,7 @@
             "type": "footnote"
         }, 
         {
-            "content": "Beginning with fiscal year 1998, several new medical services were combined with \"Other\" (excludes unknowns).", 
+            "content": "Data for fiscal years 1998\u20132012 included several new services combined with \"Other\" (excluding unknowns). Beginning with data for fiscal year 2013, \"Other\" includes unknown and invalid values.", 
             "symbol": "c.", 
             "type": "footnote"
         }, 
@@ -656,22 +716,27 @@
             "type": "footnote"
         }, 
         {
-            "content": "CONTACT: msis@cms.hhs.gov.", 
+            "content": "Fiscal year 2013 data are not available for Colorado, the District of Columbia, Idaho, and Rhode Island. Fiscal year 2011 data have been substituted for Colorado and Idaho, and fiscal year 2012 data have been substituted for the District of Columbia and Rhode Island. Fiscal year 2013 data for Kansas, Louisiana, North Dakota, New Hampshire, and Utah are from partial-year claims files and do not reflect fiscal year totals.", 
+            "symbol": "l.", 
+            "type": "footnote"
+        }, 
+        {
+            "content": "CONTACT: (410) 965-0090 or statistics@ssa.gov.", 
             "type": "note"
         }, 
         {
-            "content": "File available from:\nU.S. Social Security Administration \u2022 Office of Retirement and Disability Policy \u2022 Office of Research, Evaluation, and Statistics\n<span class =\"suppTitle\">Annual Statistical Supplement, 2014</span>\nhttp://www.socialsecurity.gov/policy/docs/statcomps/supplement/2014/", 
+            "content": "File available from:\nU.S. Social Security Administration \u2022 Office of Retirement and Disability Policy \u2022 Office of Research, Evaluation, and Statistics\nAnnual Statistical Supplement, 2015\nhttps://www.socialsecurity.gov/policy/docs/statcomps/supplement/2015/", 
             "type": "note"
         }
     ], 
     "html": {
-        "body": "<tbody><tr class=1985><td class=\"col0\">1985.0</td><td class=\"col2\">21814.0</td><td class=\"col3\">3434.0</td><td class=\"col4\">60.0</td><td class=\"col5\">147.0</td><td class=\"col6\">828.0</td><td class=\"col7\">547.0</td><td class=\"col8\">14387.0</td><td class=\"col9\">4672.0</td><td class=\"col10\">3357.0</td><td class=\"col11\">10072.0</td><td class=\"col12\">2121.0</td><td class=\"col13\">6354.0</td><td class=\"col14\">535.0</td><td class=\"col15\">13921.0</td><td class=\"col16\">1636.0</td><td class=\"col17\">5371.0</td><tr class=1986><td class=\"col0\">1986.0</td><td class=\"col2\">22515.0</td><td class=\"col3\">3544.0</td><td class=\"col4\">53.0</td><td class=\"col5\">145.0</td><td class=\"col6\">828.0</td><td class=\"col7\">571.0</td><td class=\"col8\">14894.0</td><td class=\"col9\">5161.0</td><td class=\"col10\">3451.0</td><td class=\"col11\">10702.0</td><td class=\"col12\">2027.0</td><td class=\"col13\">7123.0</td><td class=\"col14\">593.0</td><td class=\"col15\">14704.0</td><td class=\"col16\">1732.0</td><td class=\"col17\">5573.0</td><tr class=1987><td class=\"col0\">1987.0</td><td class=\"col2\">23109.0</td><td class=\"col3\">3767.0</td><td class=\"col4\">57.0</td><td class=\"col5\">149.0</td><td class=\"col6\">849.0</td><td class=\"col7\">572.0</td><td class=\"col8\">15373.0</td><td class=\"col9\">5131.0</td><td class=\"col10\">3542.0</td><td class=\"col11\">10979.0</td><td class=\"col12\">2183.0</td><td class=\"col13\">7596.0</td><td class=\"col14\">609.0</td><td class=\"col15\">15083.0</td><td class=\"col16\">1652.0</td><td class=\"col17\">5957.0</td><tr class=1988><td class=\"col0\">1988.0</td><td class=\"col2\">22907.0</td><td class=\"col3\">3832.0</td><td class=\"col4\">60.0</td><td class=\"col5\">145.0</td><td class=\"col6\">866.0</td><td class=\"col7\">579.0</td><td class=\"col8\">15265.0</td><td class=\"col9\">5072.0</td><td class=\"col10\">3480.0</td><td class=\"col11\">10533.0</td><td class=\"col12\">2256.0</td><td class=\"col13\">7579.0</td><td class=\"col14\">569.0</td><td class=\"col15\">15323.0</td><td class=\"col16\">1525.0</td><td class=\"col17\">6601.0</td><tr class=1989><td class=\"col0\">1989.0</td><td class=\"col2\">23511.0</td><td class=\"col3\">4170.0</td><td class=\"col4\">90.0</td><td class=\"col5\">148.0</td><td class=\"col6\">888.0</td><td class=\"col7\">564.0</td><td class=\"col8\">15686.0</td><td class=\"col9\">4214.0</td><td class=\"col10\">3555.0</td><td class=\"col11\">11344.0</td><td class=\"col12\">2391.0</td><td class=\"col13\">7759.0</td><td class=\"col14\">609.0</td><td class=\"col15\">15916.0</td><td class=\"col16\">1564.0</td><td class=\"col17\">7278.0</td><tr class=1990><td class=\"col0\">1990.0</td><td class=\"col2\">25255.0</td><td class=\"col3\">4593.0</td><td class=\"col4\">92.0</td><td class=\"col5\">147.0</td><td class=\"col6\">860.0</td><td class=\"col7\">601.0</td><td class=\"col8\">17078.0</td><td class=\"col9\">4552.0</td><td class=\"col10\">3873.0</td><td class=\"col11\">12370.0</td><td class=\"col12\">2804.0</td><td class=\"col13\">8959.0</td><td class=\"col14\">719.0</td><td class=\"col15\">17294.0</td><td class=\"col16\">1752.0</td><td class=\"col17\">8302.0</td><tr class=1991><td class=\"col0\">1991.0</td><td class=\"col2\">28280.0</td><td class=\"col3\">5072.0</td><td class=\"col4\">65.0</td><td class=\"col5\">146.0</td><td class=\"col6\"><span class = \"top_footnote top_b\">b</span></td><td class=\"col7\">1500.0</td><td class=\"col8\">19321.0</td><td class=\"col9\">5209.0</td><td class=\"col10\">4282.0</td><td class=\"col11\">14137.0</td><td class=\"col12\">3511.0</td><td class=\"col13\">10505.0</td><td class=\"col14\">813.0</td><td class=\"col15\">19602.0</td><td class=\"col16\">2185.0</td><td class=\"col17\">10319.0</td><tr class=1992><td class=\"col0\">1992.0</td><td class=\"col2\">30926.0</td><td class=\"col3\">5768.0</td><td class=\"col4\">77.0</td><td class=\"col5\">151.0</td><td class=\"col6\"><span class = \"top_footnote top_b\">b</span></td><td class=\"col7\">1573.0</td><td class=\"col8\">21627.0</td><td class=\"col9\">5700.0</td><td class=\"col10\">4711.0</td><td class=\"col11\">15120.0</td><td class=\"col12\">4115.0</td><td class=\"col13\">11804.0</td><td class=\"col14\">925.0</td><td class=\"col15\">22030.0</td><td class=\"col16\">2550.0</td><td class=\"col17\">12427.0</td><tr class=1993><td class=\"col0\">1993.0</td><td class=\"col2\">33432.0</td><td class=\"col3\">5894.0</td><td class=\"col4\">75.0</td><td class=\"col5\">149.0</td><td class=\"col6\"><span class = \"top_footnote top_b\">b</span></td><td class=\"col7\">1610.0</td><td class=\"col8\">23746.0</td><td class=\"col9\">6174.0</td><td class=\"col10\">5229.0</td><td class=\"col11\">16436.0</td><td class=\"col12\">4839.0</td><td class=\"col13\">12970.0</td><td class=\"col14\">1067.0</td><td class=\"col15\">23901.0</td><td class=\"col16\">2538.0</td><td class=\"col17\">15035.0</td><tr class=1994><td class=\"col0\">1994.0</td><td class=\"col2\">35053.0</td><td class=\"col3\">5866.0</td><td class=\"col4\">85.0</td><td class=\"col5\">159.0</td><td class=\"col6\"><span class = \"top_footnote top_b\">b</span></td><td class=\"col7\">1639.0</td><td class=\"col8\">24267.0</td><td class=\"col9\">6352.0</td><td class=\"col10\">5409.0</td><td class=\"col11\">16567.0</td><td class=\"col12\">5258.0</td><td class=\"col13\">13412.0</td><td class=\"col14\">1293.0</td><td class=\"col15\">24471.0</td><td class=\"col16\">2566.0</td><td class=\"col17\">17321.0</td><tr class=1995><td class=\"col0\">1995.0</td><td class=\"col2\">36282.0</td><td class=\"col3\">5561.0</td><td class=\"col4\">84.0</td><td class=\"col5\">151.0</td><td class=\"col6\"><span class = \"top_footnote top_b\">b</span></td><td class=\"col7\">1667.0</td><td class=\"col8\">23789.0</td><td class=\"col9\">6383.0</td><td class=\"col10\">5528.0</td><td class=\"col11\">16712.0</td><td class=\"col12\">5322.0</td><td class=\"col13\">13064.0</td><td class=\"col14\">1639.0</td><td class=\"col15\">23723.0</td><td class=\"col16\">2501.0</td><td class=\"col17\">19277.0</td><tr class=1996><td class=\"col0\">1996.0</td><td class=\"col2\">36118.0</td><td class=\"col3\">5362.0</td><td class=\"col4\">93.0</td><td class=\"col5\">140.0</td><td class=\"col6\"><span class = \"top_footnote top_b\">b</span></td><td class=\"col7\">1594.0</td><td class=\"col8\">22861.0</td><td class=\"col9\">6208.0</td><td class=\"col10\">5343.0</td><td class=\"col11\">15905.0</td><td class=\"col12\">5070.0</td><td class=\"col13\">12607.0</td><td class=\"col14\">1727.0</td><td class=\"col15\">22585.0</td><td class=\"col16\">2366.0</td><td class=\"col17\">21104.0</td><tr class=1997><td class=\"col0\">1997.0</td><td class=\"col2\">34873.0</td><td class=\"col3\">4746.0</td><td class=\"col4\">87.0</td><td class=\"col5\">136.0</td><td class=\"col6\"><span class = \"top_footnote top_b\">b</span></td><td class=\"col7\">1603.0</td><td class=\"col8\">21170.0</td><td class=\"col9\">5935.0</td><td class=\"col10\">5142.0</td><td class=\"col11\">13632.0</td><td class=\"col12\">4713.0</td><td class=\"col13\">11074.0</td><td class=\"col14\">1861.0</td><td class=\"col15\">20954.0</td><td class=\"col16\">2091.0</td><td class=\"col17\">20284.0</td><tr class=1998><td class=\"col0\">1998.0</td><td class=\"col2\">40649.0</td><td class=\"col3\">4273.0</td><td class=\"col4\">135.0</td><td class=\"col5\">126.0</td><td class=\"col6\"><span class = \"top_footnote top_b\">b</span></td><td class=\"col7\">1646.0</td><td class=\"col8\">18555.0</td><td class=\"col9\">4965.0</td><td class=\"col10\">4342.0</td><td class=\"col11\">12158.0</td><td class=\"col12\">5285.0</td><td class=\"col13\">9381.0</td><td class=\"col14\">1225.0</td><td class=\"col15\">19338.0</td><td class=\"col16\">2011.0</td><td class=\"col17\">34820.0</td><tr class=1999><td class=\"col0\">1999.0</td><td class=\"col2\">40300.0</td><td class=\"col3\">4479.0</td><td class=\"col4\">96.0</td><td class=\"col5\">121.0</td><td class=\"col6\"><span class = \"top_footnote top_b\">b</span></td><td class=\"col7\">1624.0</td><td class=\"col8\">18052.0</td><td class=\"col9\">5577.0</td><td class=\"col10\">3945.0</td><td class=\"col11\">12323.0</td><td class=\"col12\">6660.0</td><td class=\"col13\">10103.0</td><td class=\"col14\">808.0</td><td class=\"col15\">19428.0</td><td class=\"col16\">. . .</td><td class=\"col17\">37484.0</td><tr class=2000><td class=\"col0\">2000.0</td><td class=\"col2\">42886.0</td><td class=\"col3\">4912.0</td><td class=\"col4\">99.0</td><td class=\"col5\">118.0</td><td class=\"col6\"><span class = \"top_footnote top_b\">b</span></td><td class=\"col7\">1705.0</td><td class=\"col8\">18965.0</td><td class=\"col9\">5922.0</td><td class=\"col10\">4758.0</td><td class=\"col11\">13169.0</td><td class=\"col12\">7677.0</td><td class=\"col13\">11438.0</td><td class=\"col14\">1007.0</td><td class=\"col15\">20324.0</td><td class=\"col16\">. . .</td><td class=\"col17\">40732.0</td><tr class=2001><td class=\"col0\">2001.0</td><td class=\"col2\">46163.0</td><td class=\"col3\">4879.0</td><td class=\"col4\">91.0</td><td class=\"col5\">116.0</td><td class=\"col6\"><span class = \"top_footnote top_b\">b</span></td><td class=\"col7\">1702.0</td><td class=\"col8\">20021.0</td><td class=\"col9\">7018.0</td><td class=\"col10\">5102.0</td><td class=\"col11\">13731.0</td><td class=\"col12\">8463.0</td><td class=\"col13\">12339.0</td><td class=\"col14\">1013.0</td><td class=\"col15\">21910.0</td><td class=\"col16\">. . .</td><td class=\"col17\">44608.0</td><tr class=2002><td class=\"col0\">2002.0</td><td class=\"col2\">49329.0</td><td class=\"col3\">5046.0</td><td class=\"col4\">100.0</td><td class=\"col5\">117.0</td><td class=\"col6\"><span class = \"top_footnote top_b\">b</span></td><td class=\"col7\">1760.0</td><td class=\"col8\">22065.0</td><td class=\"col9\">7881.0</td><td class=\"col10\">5566.0</td><td class=\"col11\">14831.0</td><td class=\"col12\">9491.0</td><td class=\"col13\">14062.0</td><td class=\"col14\">1064.0</td><td class=\"col15\">24380.0</td><td class=\"col16\">. . .</td><td class=\"col17\">49556.0</td><tr class=2003><td class=\"col0\">2003.0</td><td class=\"col2\">51971.0</td><td class=\"col3\">5217.0</td><td class=\"col4\">105.0</td><td class=\"col5\">114.0</td><td class=\"col6\"><span class = \"top_footnote top_b\">b</span></td><td class=\"col7\">1691.0</td><td class=\"col8\">22857.0</td><td class=\"col9\">8510.0</td><td class=\"col10\">5746.0</td><td class=\"col11\">15511.0</td><td class=\"col12\">10162.0</td><td class=\"col13\">14687.0</td><td class=\"col14\">1184.0</td><td class=\"col15\">26075.0</td><td class=\"col16\">. . .</td><td class=\"col17\">53128.0</td><tr class=2004><td class=\"col0\">2004.0</td><td class=\"col2\">55002.0</td><td class=\"col3\">5425.0</td><td class=\"col4\">117.0</td><td class=\"col5\">114.0</td><td class=\"col6\"><span class = \"top_footnote top_b\">b</span></td><td class=\"col7\">1709.0</td><td class=\"col8\">23612.0</td><td class=\"col9\">9037.0</td><td class=\"col10\">5933.0</td><td class=\"col11\">15888.0</td><td class=\"col12\">11102.0</td><td class=\"col13\">15875.0</td><td class=\"col14\">1146.0</td><td class=\"col15\">27549.0</td><td class=\"col16\">. . .</td><td class=\"col17\">69340.0</td><tr class=2005><td class=\"col0\">2005<span class = \"top_footnote top_d\">d</span></td><td class=\"col2\">57643.0</td><td class=\"col3\">5488.0</td><td class=\"col4\">120.0</td><td class=\"col5\">109.0</td><td class=\"col6\"><span class = \"top_footnote top_b\">b</span></td><td class=\"col7\">1712.0</td><td class=\"col8\">24204.0</td><td class=\"col9\">9328.0</td><td class=\"col10\">5904.0</td><td class=\"col11\">16314.0</td><td class=\"col12\">11913.0</td><td class=\"col13\">16020.0</td><td class=\"col14\">1195.0</td><td class=\"col15\">28385.0</td><td class=\"col16\">. . .</td><td class=\"col17\">74296.0</td><tr class=2006><td class=\"col0\">2006<span class = \"top_footnote top_e\">e</span></td><td class=\"col2\">57732.0</td><td class=\"col3\">6268.0</td><td class=\"col4\">138.0</td><td class=\"col5\">107.0</td><td class=\"col6\"><span class = \"top_footnote top_b\">b</span></td><td class=\"col7\">1722.0</td><td class=\"col8\">23265.0</td><td class=\"col9\">9514.0</td><td class=\"col10\">5881.0</td><td class=\"col11\">16015.0</td><td class=\"col12\">11858.0</td><td class=\"col13\">16202.0</td><td class=\"col14\">1191.0</td><td class=\"col15\">27310.0</td><td class=\"col16\">. . .</td><td class=\"col17\">76864.0</td><tr class=2007><td class=\"col0\">2007<span class = \"top_footnote top_f\">f</span></td><td class=\"col2\">56825.0</td><td class=\"col3\">5126.0</td><td class=\"col4\">112.0</td><td class=\"col5\">104.0</td><td class=\"col6\"><span class = \"top_footnote top_b\">b</span></td><td class=\"col7\">1644.0</td><td class=\"col8\">22054.0</td><td class=\"col9\">9530.0</td><td class=\"col10\">5425.0</td><td class=\"col11\">14970.0</td><td class=\"col12\">11732.0</td><td class=\"col13\">15808.0</td><td class=\"col14\">1190.0</td><td class=\"col15\">23944.0</td><td class=\"col16\">. . .</td><td class=\"col17\">62604.0</td><tr class=2008><td class=\"col0\">2008<span class = \"top_footnote top_g\">g</span></td><td class=\"col2\">58705.0</td><td class=\"col3\">5256.0</td><td class=\"col4\">108.0</td><td class=\"col5\">102.0</td><td class=\"col6\"><span class = \"top_footnote top_b\">b</span></td><td class=\"col7\">1616.0</td><td class=\"col8\">21656.0</td><td class=\"col9\">9807.0</td><td class=\"col10\">5160.0</td><td class=\"col11\">14773.0</td><td class=\"col12\">11843.0</td><td class=\"col13\">15600.0</td><td class=\"col14\">1143.0</td><td class=\"col15\">24583.0</td><td class=\"col16\">. . .</td><td class=\"col17\">65412.0</td><tr class=2009><td class=\"col0\">2009<span class = \"top_footnote top_h\">h</span></td><td class=\"col2\">62458.0</td><td class=\"col3\">5433.0</td><td class=\"col4\">115.0</td><td class=\"col5\">101.0</td><td class=\"col6\"><span class = \"top_footnote top_b\">b</span></td><td class=\"col7\">1644.0</td><td class=\"col8\">22755.0</td><td class=\"col9\">10971.0</td><td class=\"col10\">5409.0</td><td class=\"col11\">16476.0</td><td class=\"col12\">12738.0</td><td class=\"col13\">16203.0</td><td class=\"col14\">1087.0</td><td class=\"col15\">26786.0</td><td class=\"col16\">. . .</td><td class=\"col17\">68256.0</td><tr class=2010><td class=\"col0\">2010<span class = \"top_footnote top_i\">i</span></td><td class=\"col2\">65562.0</td><td class=\"col3\">5259.0</td><td class=\"col4\">123.0</td><td class=\"col5\">99.0</td><td class=\"col6\"><span class = \"top_footnote top_b\">b</span></td><td class=\"col7\">1547.0</td><td class=\"col8\">23752.0</td><td class=\"col9\">12414.0</td><td class=\"col10\">5953.0</td><td class=\"col11\">15701.0</td><td class=\"col12\">13403.0</td><td class=\"col13\">16867.0</td><td class=\"col14\">1137.0</td><td class=\"col15\">29018.0</td><td class=\"col16\">. . .</td><td class=\"col17\">74490.0</td><tr class=2011><td class=\"col0\">2011<span class = \"top_footnote top_j\">j</span></td><td class=\"col2\">69179.0</td><td class=\"col3\">5160.0</td><td class=\"col4\">123.0</td><td class=\"col5\">95.0</td><td class=\"col6\"><span class = \"top_footnote top_b\">b</span></td><td class=\"col7\">1626.0</td><td class=\"col8\">24226.0</td><td class=\"col9\">13507.0</td><td class=\"col10\">5800.0</td><td class=\"col11\">16307.0</td><td class=\"col12\">14488.0</td><td class=\"col13\">16936.0</td><td class=\"col14\">1097.0</td><td class=\"col15\">30517.0</td><td class=\"col16\">. . .</td><td class=\"col17\">97036.0</td><tr class=2012><td class=\"col0\">2012<span class = \"top_footnote top_k\">k</span></td><td class=\"col2\">69334.0</td><td class=\"col3\">4718.0</td><td class=\"col4\">120.0</td><td class=\"col5\">92.0</td><td class=\"col6\"><span class = \"top_footnote top_b\">b</span></td><td class=\"col7\">1510.0</td><td class=\"col8\">23777.0</td><td class=\"col9\">13193.0</td><td class=\"col10\">5739.0</td><td class=\"col11\">15588.0</td><td class=\"col12\">14194.0</td><td class=\"col13\">16411.0</td><td class=\"col14\">1144.0</td><td class=\"col15\">26822.0</td><td class=\"col16\"> . . .</td><td class=\"col17\">91487.0</td></tbody>", 
-        "header": "<thead><tr><th rowspan=\"2\"  class=\"series col0\" >Year</th><th rowspan=\"2\"  class=\"series col1\" >Total <span class = \"top_footnote top_a\">a</span></th><th colspan=\"2\"  class=\"series col2\" >Inpatient services in\u2014</th><th colspan=\"2\"  class=\"series col4\" >Intermediate care facility services for\u2014</th><th rowspan=\"2\"  class=\"series col6\" >Nursing facility <span class = \"top_footnote top_b\">b</span></th><th rowspan=\"2\"  class=\"series col7\" >Physi-cians'</th><th rowspan=\"2\"  class=\"series col8\" >Dental</th><th rowspan=\"2\"  class=\"series col9\" >Other practi-tioner</th><th rowspan=\"2\"  class=\"series col10\" >Out-patient hospital</th><th rowspan=\"2\"  class=\"series col11\" >Clinic</th><th rowspan=\"2\"  class=\"series col12\" >Labor-atory and radio-logical</th><th rowspan=\"2\"  class=\"series col13\" >Home health</th><th rowspan=\"2\"  class=\"series col14\" >Pre-\nscribed drugs</th><th rowspan=\"2\"  class=\"series col15\" >Family planning</th><th rowspan=\"2\"  class=\"series col16\" >Other <span class = \"top_footnote top_c\">c</span></th></tr><tr><th class=\"series col2\" >General hospital</th><th class=\"series col3\" >Mental hospital</th><th class=\"series col4\" >Intellectually disabled</th><th class=\"series col5\" >All other</th></tr></thead>"
+        "body": "<tbody><tr class=1985><td class=\"col0\">1985.0</td><td class=\"col2\">21814.0</td><td class=\"col3\">3434.0</td><td class=\"col4\">60.0</td><td class=\"col5\">147.0</td><td class=\"col6\">828.0</td><td class=\"col7\">547.0</td><td class=\"col8\">14387.0</td><td class=\"col9\">4672.0</td><td class=\"col10\">3357.0</td><td class=\"col11\">10072.0</td><td class=\"col12\">2121.0</td><td class=\"col13\">6354.0</td><td class=\"col14\">535.0</td><td class=\"col15\">13921.0</td><td class=\"col16\">1636.0</td><td class=\"col17\">--</td><td class=\"col18\">5371.0</td><tr class=1986><td class=\"col0\">1986.0</td><td class=\"col2\">22515.0</td><td class=\"col3\">3544.0</td><td class=\"col4\">53.0</td><td class=\"col5\">145.0</td><td class=\"col6\">828.0</td><td class=\"col7\">571.0</td><td class=\"col8\">14894.0</td><td class=\"col9\">5161.0</td><td class=\"col10\">3451.0</td><td class=\"col11\">10702.0</td><td class=\"col12\">2027.0</td><td class=\"col13\">7123.0</td><td class=\"col14\">593.0</td><td class=\"col15\">14704.0</td><td class=\"col16\">1732.0</td><td class=\"col17\">--</td><td class=\"col18\">5573.0</td><tr class=1987><td class=\"col0\">1987.0</td><td class=\"col2\">23109.0</td><td class=\"col3\">3767.0</td><td class=\"col4\">57.0</td><td class=\"col5\">149.0</td><td class=\"col6\">849.0</td><td class=\"col7\">572.0</td><td class=\"col8\">15373.0</td><td class=\"col9\">5131.0</td><td class=\"col10\">3542.0</td><td class=\"col11\">10979.0</td><td class=\"col12\">2183.0</td><td class=\"col13\">7596.0</td><td class=\"col14\">609.0</td><td class=\"col15\">15083.0</td><td class=\"col16\">1652.0</td><td class=\"col17\">--</td><td class=\"col18\">5957.0</td><tr class=1988><td class=\"col0\">1988.0</td><td class=\"col2\">22907.0</td><td class=\"col3\">3832.0</td><td class=\"col4\">60.0</td><td class=\"col5\">145.0</td><td class=\"col6\">866.0</td><td class=\"col7\">579.0</td><td class=\"col8\">15265.0</td><td class=\"col9\">5072.0</td><td class=\"col10\">3480.0</td><td class=\"col11\">10533.0</td><td class=\"col12\">2256.0</td><td class=\"col13\">7579.0</td><td class=\"col14\">569.0</td><td class=\"col15\">15323.0</td><td class=\"col16\">1525.0</td><td class=\"col17\">--</td><td class=\"col18\">6601.0</td><tr class=1989><td class=\"col0\">1989.0</td><td class=\"col2\">23511.0</td><td class=\"col3\">4170.0</td><td class=\"col4\">90.0</td><td class=\"col5\">148.0</td><td class=\"col6\">888.0</td><td class=\"col7\">564.0</td><td class=\"col8\">15686.0</td><td class=\"col9\">4214.0</td><td class=\"col10\">3555.0</td><td class=\"col11\">11344.0</td><td class=\"col12\">2391.0</td><td class=\"col13\">7759.0</td><td class=\"col14\">609.0</td><td class=\"col15\">15916.0</td><td class=\"col16\">1564.0</td><td class=\"col17\">--</td><td class=\"col18\">7278.0</td><tr class=1990><td class=\"col0\">1990.0</td><td class=\"col2\">25255.0</td><td class=\"col3\">4593.0</td><td class=\"col4\">92.0</td><td class=\"col5\">147.0</td><td class=\"col6\">860.0</td><td class=\"col7\">601.0</td><td class=\"col8\">17078.0</td><td class=\"col9\">4552.0</td><td class=\"col10\">3873.0</td><td class=\"col11\">12370.0</td><td class=\"col12\">2804.0</td><td class=\"col13\">8959.0</td><td class=\"col14\">719.0</td><td class=\"col15\">17294.0</td><td class=\"col16\">1752.0</td><td class=\"col17\">--</td><td class=\"col18\">8302.0</td><tr class=1991><td class=\"col0\">1991.0</td><td class=\"col2\">28280.0</td><td class=\"col3\">5072.0</td><td class=\"col4\">65.0</td><td class=\"col5\">146.0</td><td class=\"col6\"><span class = \"top_footnote top_b\">b</span></td><td class=\"col7\">1500.0</td><td class=\"col8\">19321.0</td><td class=\"col9\">5209.0</td><td class=\"col10\">4282.0</td><td class=\"col11\">14137.0</td><td class=\"col12\">3511.0</td><td class=\"col13\">10505.0</td><td class=\"col14\">813.0</td><td class=\"col15\">19602.0</td><td class=\"col16\">2185.0</td><td class=\"col17\">--</td><td class=\"col18\">10319.0</td><tr class=1992><td class=\"col0\">1992.0</td><td class=\"col2\">30926.0</td><td class=\"col3\">5768.0</td><td class=\"col4\">77.0</td><td class=\"col5\">151.0</td><td class=\"col6\"><span class = \"top_footnote top_b\">b</span></td><td class=\"col7\">1573.0</td><td class=\"col8\">21627.0</td><td class=\"col9\">5700.0</td><td class=\"col10\">4711.0</td><td class=\"col11\">15120.0</td><td class=\"col12\">4115.0</td><td class=\"col13\">11804.0</td><td class=\"col14\">925.0</td><td class=\"col15\">22030.0</td><td class=\"col16\">2550.0</td><td class=\"col17\">--</td><td class=\"col18\">12427.0</td><tr class=1993><td class=\"col0\">1993.0</td><td class=\"col2\">33432.0</td><td class=\"col3\">5894.0</td><td class=\"col4\">75.0</td><td class=\"col5\">149.0</td><td class=\"col6\"><span class = \"top_footnote top_b\">b</span></td><td class=\"col7\">1610.0</td><td class=\"col8\">23746.0</td><td class=\"col9\">6174.0</td><td class=\"col10\">5229.0</td><td class=\"col11\">16436.0</td><td class=\"col12\">4839.0</td><td class=\"col13\">12970.0</td><td class=\"col14\">1067.0</td><td class=\"col15\">23901.0</td><td class=\"col16\">2538.0</td><td class=\"col17\">--</td><td class=\"col18\">15035.0</td><tr class=1994><td class=\"col0\">1994.0</td><td class=\"col2\">35053.0</td><td class=\"col3\">5866.0</td><td class=\"col4\">85.0</td><td class=\"col5\">159.0</td><td class=\"col6\"><span class = \"top_footnote top_b\">b</span></td><td class=\"col7\">1639.0</td><td class=\"col8\">24267.0</td><td class=\"col9\">6352.0</td><td class=\"col10\">5409.0</td><td class=\"col11\">16567.0</td><td class=\"col12\">5258.0</td><td class=\"col13\">13412.0</td><td class=\"col14\">1293.0</td><td class=\"col15\">24471.0</td><td class=\"col16\">2566.0</td><td class=\"col17\">--</td><td class=\"col18\">17321.0</td><tr class=1995><td class=\"col0\">1995.0</td><td class=\"col2\">36282.0</td><td class=\"col3\">5561.0</td><td class=\"col4\">84.0</td><td class=\"col5\">151.0</td><td class=\"col6\"><span class = \"top_footnote top_b\">b</span></td><td class=\"col7\">1667.0</td><td class=\"col8\">23789.0</td><td class=\"col9\">6383.0</td><td class=\"col10\">5528.0</td><td class=\"col11\">16712.0</td><td class=\"col12\">5322.0</td><td class=\"col13\">13064.0</td><td class=\"col14\">1639.0</td><td class=\"col15\">23723.0</td><td class=\"col16\">2501.0</td><td class=\"col17\">--</td><td class=\"col18\">19277.0</td><tr class=1996><td class=\"col0\">1996.0</td><td class=\"col2\">36118.0</td><td class=\"col3\">5362.0</td><td class=\"col4\">93.0</td><td class=\"col5\">140.0</td><td class=\"col6\"><span class = \"top_footnote top_b\">b</span></td><td class=\"col7\">1594.0</td><td class=\"col8\">22861.0</td><td class=\"col9\">6208.0</td><td class=\"col10\">5343.0</td><td class=\"col11\">15905.0</td><td class=\"col12\">5070.0</td><td class=\"col13\">12607.0</td><td class=\"col14\">1727.0</td><td class=\"col15\">22585.0</td><td class=\"col16\">2366.0</td><td class=\"col17\">--</td><td class=\"col18\">21104.0</td><tr class=1997><td class=\"col0\">1997.0</td><td class=\"col2\">34873.0</td><td class=\"col3\">4746.0</td><td class=\"col4\">87.0</td><td class=\"col5\">136.0</td><td class=\"col6\"><span class = \"top_footnote top_b\">b</span></td><td class=\"col7\">1603.0</td><td class=\"col8\">21170.0</td><td class=\"col9\">5935.0</td><td class=\"col10\">5142.0</td><td class=\"col11\">13632.0</td><td class=\"col12\">4713.0</td><td class=\"col13\">11074.0</td><td class=\"col14\">1861.0</td><td class=\"col15\">20954.0</td><td class=\"col16\">2091.0</td><td class=\"col17\">--</td><td class=\"col18\">20284.0</td><tr class=1998><td class=\"col0\">1998.0</td><td class=\"col2\">40649.0</td><td class=\"col3\">4273.0</td><td class=\"col4\">135.0</td><td class=\"col5\">126.0</td><td class=\"col6\"><span class = \"top_footnote top_b\">b</span></td><td class=\"col7\">1646.0</td><td class=\"col8\">18555.0</td><td class=\"col9\">4965.0</td><td class=\"col10\">4342.0</td><td class=\"col11\">12158.0</td><td class=\"col12\">5285.0</td><td class=\"col13\">9381.0</td><td class=\"col14\">1225.0</td><td class=\"col15\">19338.0</td><td class=\"col16\">2011.0</td><td class=\"col17\">--</td><td class=\"col18\">34820.0</td><tr class=1999><td class=\"col0\">1999.0</td><td class=\"col2\">40300.0</td><td class=\"col3\">4479.0</td><td class=\"col4\">96.0</td><td class=\"col5\">121.0</td><td class=\"col6\"><span class = \"top_footnote top_b\">b</span></td><td class=\"col7\">1624.0</td><td class=\"col8\">18052.0</td><td class=\"col9\">5577.0</td><td class=\"col10\">3945.0</td><td class=\"col11\">12323.0</td><td class=\"col12\">6660.0</td><td class=\"col13\">10103.0</td><td class=\"col14\">808.0</td><td class=\"col15\">19428.0</td><td class=\"col16\">. . .</td><td class=\"col17\">--</td><td class=\"col18\">37484.0</td><tr class=2000><td class=\"col0\">2000.0</td><td class=\"col2\">42886.0</td><td class=\"col3\">4912.0</td><td class=\"col4\">99.0</td><td class=\"col5\">118.0</td><td class=\"col6\"><span class = \"top_footnote top_b\">b</span></td><td class=\"col7\">1705.0</td><td class=\"col8\">18965.0</td><td class=\"col9\">5922.0</td><td class=\"col10\">4758.0</td><td class=\"col11\">13169.0</td><td class=\"col12\">7677.0</td><td class=\"col13\">11438.0</td><td class=\"col14\">1007.0</td><td class=\"col15\">20324.0</td><td class=\"col16\">. . .</td><td class=\"col17\">--</td><td class=\"col18\">40732.0</td><tr class=2001><td class=\"col0\">2001.0</td><td class=\"col2\">46163.0</td><td class=\"col3\">4879.0</td><td class=\"col4\">91.0</td><td class=\"col5\">116.0</td><td class=\"col6\"><span class = \"top_footnote top_b\">b</span></td><td class=\"col7\">1702.0</td><td class=\"col8\">20021.0</td><td class=\"col9\">7018.0</td><td class=\"col10\">5102.0</td><td class=\"col11\">13731.0</td><td class=\"col12\">8463.0</td><td class=\"col13\">12339.0</td><td class=\"col14\">1013.0</td><td class=\"col15\">21910.0</td><td class=\"col16\">. . .</td><td class=\"col17\">--</td><td class=\"col18\">44608.0</td><tr class=2002><td class=\"col0\">2002.0</td><td class=\"col2\">49329.0</td><td class=\"col3\">5046.0</td><td class=\"col4\">100.0</td><td class=\"col5\">117.0</td><td class=\"col6\"><span class = \"top_footnote top_b\">b</span></td><td class=\"col7\">1760.0</td><td class=\"col8\">22065.0</td><td class=\"col9\">7881.0</td><td class=\"col10\">5566.0</td><td class=\"col11\">14831.0</td><td class=\"col12\">9491.0</td><td class=\"col13\">14062.0</td><td class=\"col14\">1064.0</td><td class=\"col15\">24380.0</td><td class=\"col16\">. . .</td><td class=\"col17\">--</td><td class=\"col18\">49556.0</td><tr class=2003><td class=\"col0\">2003.0</td><td class=\"col2\">51971.0</td><td class=\"col3\">5217.0</td><td class=\"col4\">105.0</td><td class=\"col5\">114.0</td><td class=\"col6\"><span class = \"top_footnote top_b\">b</span></td><td class=\"col7\">1691.0</td><td class=\"col8\">22857.0</td><td class=\"col9\">8510.0</td><td class=\"col10\">5746.0</td><td class=\"col11\">15511.0</td><td class=\"col12\">10162.0</td><td class=\"col13\">14687.0</td><td class=\"col14\">1184.0</td><td class=\"col15\">26075.0</td><td class=\"col16\">. . .</td><td class=\"col17\">--</td><td class=\"col18\">53128.0</td><tr class=2004><td class=\"col0\">2004.0</td><td class=\"col2\">55002.0</td><td class=\"col3\">5425.0</td><td class=\"col4\">117.0</td><td class=\"col5\">114.0</td><td class=\"col6\"><span class = \"top_footnote top_b\">b</span></td><td class=\"col7\">1709.0</td><td class=\"col8\">23612.0</td><td class=\"col9\">9037.0</td><td class=\"col10\">5933.0</td><td class=\"col11\">15888.0</td><td class=\"col12\">11102.0</td><td class=\"col13\">15875.0</td><td class=\"col14\">1146.0</td><td class=\"col15\">27549.0</td><td class=\"col16\">. . .</td><td class=\"col17\">--</td><td class=\"col18\">69340.0</td><tr class=2005><td class=\"col0\">2005<span class = \"top_footnote top_d\">d</span></td><td class=\"col2\">57643.0</td><td class=\"col3\">5488.0</td><td class=\"col4\">120.0</td><td class=\"col5\">109.0</td><td class=\"col6\"><span class = \"top_footnote top_b\">b</span></td><td class=\"col7\">1712.0</td><td class=\"col8\">24204.0</td><td class=\"col9\">9328.0</td><td class=\"col10\">5904.0</td><td class=\"col11\">16314.0</td><td class=\"col12\">11913.0</td><td class=\"col13\">16020.0</td><td class=\"col14\">1195.0</td><td class=\"col15\">28385.0</td><td class=\"col16\">. . .</td><td class=\"col17\">--</td><td class=\"col18\">74296.0</td><tr class=2006><td class=\"col0\">2006<span class = \"top_footnote top_e\">e</span></td><td class=\"col2\">57732.0</td><td class=\"col3\">6268.0</td><td class=\"col4\">138.0</td><td class=\"col5\">107.0</td><td class=\"col6\"><span class = \"top_footnote top_b\">b</span></td><td class=\"col7\">1722.0</td><td class=\"col8\">23265.0</td><td class=\"col9\">9514.0</td><td class=\"col10\">5881.0</td><td class=\"col11\">16015.0</td><td class=\"col12\">11858.0</td><td class=\"col13\">16202.0</td><td class=\"col14\">1191.0</td><td class=\"col15\">27310.0</td><td class=\"col16\">. . .</td><td class=\"col17\">--</td><td class=\"col18\">76864.0</td><tr class=2007><td class=\"col0\">2007<span class = \"top_footnote top_f\">f</span></td><td class=\"col2\">56825.0</td><td class=\"col3\">5126.0</td><td class=\"col4\">112.0</td><td class=\"col5\">104.0</td><td class=\"col6\"><span class = \"top_footnote top_b\">b</span></td><td class=\"col7\">1644.0</td><td class=\"col8\">22054.0</td><td class=\"col9\">9530.0</td><td class=\"col10\">5425.0</td><td class=\"col11\">14970.0</td><td class=\"col12\">11732.0</td><td class=\"col13\">15808.0</td><td class=\"col14\">1190.0</td><td class=\"col15\">23944.0</td><td class=\"col16\">. . .</td><td class=\"col17\">--</td><td class=\"col18\">62604.0</td><tr class=2008><td class=\"col0\">2008<span class = \"top_footnote top_g\">g</span></td><td class=\"col2\">58705.0</td><td class=\"col3\">5256.0</td><td class=\"col4\">108.0</td><td class=\"col5\">102.0</td><td class=\"col6\"><span class = \"top_footnote top_b\">b</span></td><td class=\"col7\">1616.0</td><td class=\"col8\">21656.0</td><td class=\"col9\">9807.0</td><td class=\"col10\">5160.0</td><td class=\"col11\">14773.0</td><td class=\"col12\">11843.0</td><td class=\"col13\">15600.0</td><td class=\"col14\">1143.0</td><td class=\"col15\">24583.0</td><td class=\"col16\">. . .</td><td class=\"col17\">--</td><td class=\"col18\">65412.0</td><tr class=2009><td class=\"col0\">2009<span class = \"top_footnote top_h\">h</span></td><td class=\"col2\">62458.0</td><td class=\"col3\">5433.0</td><td class=\"col4\">115.0</td><td class=\"col5\">101.0</td><td class=\"col6\"><span class = \"top_footnote top_b\">b</span></td><td class=\"col7\">1644.0</td><td class=\"col8\">22755.0</td><td class=\"col9\">10971.0</td><td class=\"col10\">5409.0</td><td class=\"col11\">16476.0</td><td class=\"col12\">12738.0</td><td class=\"col13\">16203.0</td><td class=\"col14\">1087.0</td><td class=\"col15\">26786.0</td><td class=\"col16\">. . .</td><td class=\"col17\">--</td><td class=\"col18\">68256.0</td><tr class=2010><td class=\"col0\">2010<span class = \"top_footnote top_i\">i</span></td><td class=\"col2\">65562.0</td><td class=\"col3\">5259.0</td><td class=\"col4\">123.0</td><td class=\"col5\">99.0</td><td class=\"col6\"><span class = \"top_footnote top_b\">b</span></td><td class=\"col7\">1547.0</td><td class=\"col8\">23752.0</td><td class=\"col9\">12414.0</td><td class=\"col10\">5953.0</td><td class=\"col11\">15701.0</td><td class=\"col12\">13403.0</td><td class=\"col13\">16867.0</td><td class=\"col14\">1137.0</td><td class=\"col15\">29018.0</td><td class=\"col16\">. . .</td><td class=\"col17\">--</td><td class=\"col18\">74490.0</td><tr class=2011><td class=\"col0\">2011<span class = \"top_footnote top_j\">j</span></td><td class=\"col2\">69179.0</td><td class=\"col3\">5160.0</td><td class=\"col4\">123.0</td><td class=\"col5\">95.0</td><td class=\"col6\"><span class = \"top_footnote top_b\">b</span></td><td class=\"col7\">1626.0</td><td class=\"col8\">24226.0</td><td class=\"col9\">13507.0</td><td class=\"col10\">5800.0</td><td class=\"col11\">16307.0</td><td class=\"col12\">14488.0</td><td class=\"col13\">16936.0</td><td class=\"col14\">1097.0</td><td class=\"col15\">30517.0</td><td class=\"col16\">. . .</td><td class=\"col17\">--</td><td class=\"col18\">97036.0</td><tr class=2012><td class=\"col0\">2012<span class = \"top_footnote top_k\">k</span></td><td class=\"col2\">69334.0</td><td class=\"col3\">4718.0</td><td class=\"col4\">120.0</td><td class=\"col5\">92.0</td><td class=\"col6\"><span class = \"top_footnote top_b\">b</span></td><td class=\"col7\">1510.0</td><td class=\"col8\">23777.0</td><td class=\"col9\">13193.0</td><td class=\"col10\">5739.0</td><td class=\"col11\">15588.0</td><td class=\"col12\">14194.0</td><td class=\"col13\">16411.0</td><td class=\"col14\">1144.0</td><td class=\"col15\">26822.0</td><td class=\"col16\"> . . .</td><td class=\"col17\">--</td><td class=\"col18\">91487.0</td><tr class=2013><td class=\"col0\">2013<span class = \"top_footnote top_l\">l</span></td><td class=\"col2\">73656.0</td><td class=\"col3\">9117.0</td><td class=\"col4\">165.0</td><td class=\"col5\">96.0</td><td class=\"col6\"><span class = \"top_footnote top_b\">b</span></td><td class=\"col7\">1686.0</td><td class=\"col8\">48094.0</td><td class=\"col9\">20806.0</td><td class=\"col10\">10348.0</td><td class=\"col11\">29414.0</td><td class=\"col12\">17487.0</td><td class=\"col13\">31100.0</td><td class=\"col14\">1789.0</td><td class=\"col15\">42229.0</td><td class=\"col16\"> . . .</td><td class=\"col17\">74547.0</td><td class=\"col18\">37144.0</td></tbody>", 
+        "header": "<thead><tr><th rowspan=\"2\"  class=\"series col0\" >Year</th><th rowspan=\"2\"  class=\"series col1\" >Total <span class = \"top_footnote top_a\">a</span></th><th colspan=\"2\"  class=\"series col2\" >Inpatient services in\u2014</th><th colspan=\"2\"  class=\"series col4\" >Intermediate care facility services for\u2014</th><th rowspan=\"2\"  class=\"series col6\" >Nursing facility <span class = \"top_footnote top_b\">b</span></th><th rowspan=\"2\"  class=\"series col7\" >Physi-cians'</th><th rowspan=\"2\"  class=\"series col8\" >Dental</th><th rowspan=\"2\"  class=\"series col9\" >Other practi-tioner</th><th rowspan=\"2\"  class=\"series col10\" >Out-patient hospital</th><th rowspan=\"2\"  class=\"series col11\" >Clinic</th><th rowspan=\"2\"  class=\"series col12\" >Labor-atory and radio-logical</th><th rowspan=\"2\"  class=\"series col13\" >Home health</th><th rowspan=\"2\"  class=\"series col14\" >Pre-\nscribed drugs</th><th rowspan=\"2\"  class=\"series col15\" >Family planning</th><th rowspan=\"2\"  class=\"series col16\" >Capi-tation pay-ments</th><th rowspan=\"2\"  class=\"series col17\" >Other <span class = \"top_footnote top_c\">c</span></th></tr><tr><th class=\"series col2\" >General hospital</th><th class=\"series col3\" >Mental hospital</th><th class=\"series col4\" >Intellec-tually disabled</th><th class=\"series col5\" >All other</th></tr></thead>"
     }, 
     "title": {
         "catID": "8.E", 
         "category": "Medicaid: Recipients", 
         "id": "8_E1-0", 
-        "name": "Number of recipients, total vendor payments, and average payment, by type of medical service, fiscal years 1985\u20132012  :: Subtable : Number of recipients (thousands)"
+        "name": "Number of recipients, total vendor payments, and average payment, by type of medical service, fiscal years 1985\u20132013  :: Subtable : Number of recipients (thousands)"
     }
 }

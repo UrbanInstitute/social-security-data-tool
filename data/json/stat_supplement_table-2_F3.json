@@ -23,7 +23,8 @@
                 64744.0, 
                 62943.0, 
                 59823.0, 
-                62956.0
+                62956.0, 
+                63466.0
             ], 
             "type": "number"
         }, 
@@ -49,7 +50,8 @@
                 69936.0, 
                 67208.0, 
                 64601.0, 
-                64006.0
+                64006.0, 
+                67004.0
             ], 
             "type": "number"
         }, 
@@ -74,7 +76,8 @@
                 2011, 
                 2012, 
                 2013, 
-                2014
+                2014, 
+                2015
             ], 
             "type": "year"
         }
@@ -109,18 +112,18 @@
             "type": "note"
         }, 
         {
-            "content": "File available from:\nU.S. Social Security Administration \u2022 Office of Retirement and Disability Policy \u2022 Office of Research, Evaluation, and Statistics\n<span class =\"suppTitle\">Annual Statistical Supplement, 2014</span>\nhttp://www.socialsecurity.gov/policy/docs/statcomps/supplement/2014/", 
+            "content": "File available from:\nU.S. Social Security Administration \u2022 Office of Retirement and Disability Policy \u2022 Office of Research, Evaluation, and Statistics\nAnnual Statistical Supplement, 2015\nhttps://www.socialsecurity.gov/policy/docs/statcomps/supplement/2015/", 
             "type": "note"
         }
     ], 
     "html": {
-        "body": "<tbody><tr class=1995><td class=\"col0\">1995.0</td><td class=\"col2\">62504.0</td><td class=\"col3\">67063.0</td><tr class=1996><td class=\"col0\">1996.0</td><td class=\"col2\">62133.0</td><td class=\"col3\">66726.0</td><tr class=1997><td class=\"col0\">1997.0</td><td class=\"col2\">61224.0</td><td class=\"col3\">69378.0</td><tr class=1998><td class=\"col0\">1998.0</td><td class=\"col2\">59943.0</td><td class=\"col3\">67210.0</td><tr class=1999><td class=\"col0\">1999.0</td><td class=\"col2\">59752.0</td><td class=\"col3\">66459.0</td><tr class=2000><td class=\"col0\">2000.0</td><td class=\"col2\">60434.0</td><td class=\"col3\">65521.0</td><tr class=2001><td class=\"col0\">2001.0</td><td class=\"col2\">61490.0</td><td class=\"col3\">65562.0</td><tr class=2002><td class=\"col0\">2002.0</td><td class=\"col2\">61914.0</td><td class=\"col3\">65742.0</td><tr class=2003><td class=\"col0\">2003.0</td><td class=\"col2\">63569.0</td><td class=\"col3\">65343.0</td><tr class=2004><td class=\"col0\">2004.0</td><td class=\"col2\">63186.0</td><td class=\"col3\"><span class = \"top_footnote top_c\">c</span>66,154</td><tr class=2005><td class=\"col0\">2005.0</td><td class=\"col2\">63696.0</td><td class=\"col3\"><span class = \"top_footnote top_d\">d</span>68,026</td><tr class=2006><td class=\"col0\">2006.0</td><td class=\"col2\">61692.0</td><td class=\"col3\">66878.0</td><tr class=2007><td class=\"col0\">2007.0</td><td class=\"col2\">60206.0</td><td class=\"col3\">63939.0</td><tr class=2008><td class=\"col0\">2008.0</td><td class=\"col2\">61920.0</td><td class=\"col3\">64358.0</td><tr class=2009><td class=\"col0\">2009.0</td><td class=\"col2\">65203.0</td><td class=\"col3\">67170.0</td><tr class=2010><td class=\"col0\">2010.0</td><td class=\"col2\">67548.0</td><td class=\"col3\">70758.0</td><tr class=2011><td class=\"col0\">2011.0</td><td class=\"col2\">64744.0</td><td class=\"col3\">69936.0</td><tr class=2012><td class=\"col0\">2012.0</td><td class=\"col2\">62943.0</td><td class=\"col3\">67208.0</td><tr class=2013><td class=\"col0\">2013.0</td><td class=\"col2\">59823.0</td><td class=\"col3\">64601.0</td><tr class=2014><td class=\"col0\">2014.0</td><td class=\"col2\">62956.0</td><td class=\"col3\">64006.0</td></tbody>", 
-        "header": "<thead><tr><th class=\"series col0\" >Year</th><th class=\"series col1\" >Full-time permanent staff <span class = \"top_footnote top_a\">a</span></th><th class=\"series col2\" >Total work years <span class = \"top_footnote top_b\">b</span></th></tr></thead>"
+        "body": "<tbody><tr class=1995><td class=\"col0\">1995.0</td><td class=\"col2\">62504.0</td><td class=\"col3\">67063.0</td><td class=\"col4\"></td><tr class=1996><td class=\"col0\">1996.0</td><td class=\"col2\">62133.0</td><td class=\"col3\">66726.0</td><td class=\"col4\"></td><tr class=1997><td class=\"col0\">1997.0</td><td class=\"col2\">61224.0</td><td class=\"col3\">69378.0</td><td class=\"col4\"></td><tr class=1998><td class=\"col0\">1998.0</td><td class=\"col2\">59943.0</td><td class=\"col3\">67210.0</td><td class=\"col4\"></td><tr class=1999><td class=\"col0\">1999.0</td><td class=\"col2\">59752.0</td><td class=\"col3\">66459.0</td><td class=\"col4\"></td><tr class=2000><td class=\"col0\">2000.0</td><td class=\"col2\">60434.0</td><td class=\"col3\">65521.0</td><td class=\"col4\"></td><tr class=2001><td class=\"col0\">2001.0</td><td class=\"col2\">61490.0</td><td class=\"col3\">65562.0</td><td class=\"col4\"></td><tr class=2002><td class=\"col0\">2002.0</td><td class=\"col2\">61914.0</td><td class=\"col3\">65742.0</td><td class=\"col4\"></td><tr class=2003><td class=\"col0\">2003.0</td><td class=\"col2\">63569.0</td><td class=\"col3\">65343.0</td><td class=\"col4\"></td><tr class=2004><td class=\"col0\">2004.0</td><td class=\"col2\">63186.0</td><td class=\"col3\"><span class = \"top_footnote top_c\">c</span>66,154</td><td class=\"col4\"></td><tr class=2005><td class=\"col0\">2005.0</td><td class=\"col2\">63696.0</td><td class=\"col3\"><span class = \"top_footnote top_d\">d</span>68,026</td><td class=\"col4\"></td><tr class=2006><td class=\"col0\">2006.0</td><td class=\"col2\">61692.0</td><td class=\"col3\">66878.0</td><td class=\"col4\"></td><tr class=2007><td class=\"col0\">2007.0</td><td class=\"col2\">60206.0</td><td class=\"col3\">63939.0</td><td class=\"col4\"></td><tr class=2008><td class=\"col0\">2008.0</td><td class=\"col2\">61920.0</td><td class=\"col3\">64358.0</td><td class=\"col4\"></td><tr class=2009><td class=\"col0\">2009.0</td><td class=\"col2\">65203.0</td><td class=\"col3\">67170.0</td><td class=\"col4\"></td><tr class=2010><td class=\"col0\">2010.0</td><td class=\"col2\">67548.0</td><td class=\"col3\">70758.0</td><td class=\"col4\"></td><tr class=2011><td class=\"col0\">2011.0</td><td class=\"col2\">64744.0</td><td class=\"col3\">69936.0</td><td class=\"col4\"></td><tr class=2012><td class=\"col0\">2012.0</td><td class=\"col2\">62943.0</td><td class=\"col3\">67208.0</td><td class=\"col4\"></td><tr class=2013><td class=\"col0\">2013.0</td><td class=\"col2\">59823.0</td><td class=\"col3\">64601.0</td><td class=\"col4\"></td><tr class=2014><td class=\"col0\">2014.0</td><td class=\"col2\">62956.0</td><td class=\"col3\">64006.0</td><td class=\"col4\"></td><tr class=2015><td class=\"col0\">2015.0</td><td class=\"col2\">63466.0</td><td class=\"col3\">67004.0</td><td class=\"col4\"></td></tbody>", 
+        "header": "<thead><tr><th class=\"series col0\" >Year</th><th class=\"series col1\" >Full-time permanent staff <span class = \"top_footnote top_a\">a</span></th><th colspan=\"2\"  class=\"series col2\" >Total work years <span class = \"top_footnote top_b\">b</span></th></tr></thead>"
     }, 
     "title": {
         "catID": "2.F", 
         "category": "SSA Administrative Data: Offices and Staff", 
         "id": "2_F3", 
-        "name": "Number of work years, fiscal years 1995\u20132014"
+        "name": "Number of work years, fiscal years 1995\u20132015"
     }
 }

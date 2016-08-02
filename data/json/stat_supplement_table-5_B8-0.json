@@ -29,7 +29,8 @@
                 34593080.0, 
                 35599569.0, 
                 36720492.0, 
-                37892659.0
+                37892659.0, 
+                39008771.0
             ], 
             "type": "number"
         }, 
@@ -61,7 +62,8 @@
                 12999227.0, 
                 13405857.0, 
                 13806599.0, 
-                14178704.0
+                14178704.0, 
+                14520661.0
             ], 
             "type": "number"
         }, 
@@ -93,7 +95,8 @@
                 4011618.0, 
                 4150703.0, 
                 4354374.0, 
-                4614657.0
+                4614657.0, 
+                4886267.0
             ], 
             "type": "number"
         }, 
@@ -125,7 +128,8 @@
                 76.4, 
                 76.4, 
                 76.0, 
-                75.4
+                75.4, 
+                74.8
             ], 
             "type": "number"
         }, 
@@ -157,7 +161,8 @@
                 25555808.0, 
                 26275063.0, 
                 26968901.0, 
-                27599461.0
+                27599461.0, 
+                28164909.0
             ], 
             "type": "number"
         }, 
@@ -189,7 +194,8 @@
                 9037272.0, 
                 9324506.0, 
                 9751591.0, 
-                10293198.0
+                10293198.0, 
+                10843862.0
             ], 
             "type": "number"
         }, 
@@ -221,7 +227,8 @@
                 73.9, 
                 73.8, 
                 73.4, 
-                72.8
+                72.8, 
+                72.2
             ], 
             "type": "number"
         }, 
@@ -253,7 +260,8 @@
                 17582235.0, 
                 18043009.0, 
                 18559519.0, 
-                19099298.0
+                19099298.0, 
+                19601843.0
             ], 
             "type": "number"
         }, 
@@ -285,7 +293,8 @@
                 12556581.0, 
                 12869206.0, 
                 13162302.0, 
-                13420757.0
+                13420757.0, 
+                13644248.0
             ], 
             "type": "number"
         }, 
@@ -317,7 +326,8 @@
                 5025654.0, 
                 5173803.0, 
                 5397217.0, 
-                5678541.0
+                5678541.0, 
+                5957595.0
             ], 
             "type": "number"
         }, 
@@ -349,7 +359,8 @@
                 71.4, 
                 71.3, 
                 70.9, 
-                70.3
+                70.3, 
+                69.6
             ], 
             "type": "number"
         }, 
@@ -381,7 +392,8 @@
                 17010845.0, 
                 17556560.0, 
                 18160973.0, 
-                18793361.0
+                18793361.0, 
+                19406928.0
             ], 
             "type": "number"
         }, 
@@ -412,7 +424,8 @@
                 2010, 
                 2011, 
                 2012, 
-                2013
+                2013, 
+                2014
             ], 
             "type": "year"
         }
@@ -431,18 +444,18 @@
             "type": "note"
         }, 
         {
-            "content": "File available from:\nU.S. Social Security Administration \u2022 Office of Retirement and Disability Policy \u2022 Office of Research, Evaluation, and Statistics\n<span class =\"suppTitle\">Annual Statistical Supplement, 2014</span>\nhttp://www.socialsecurity.gov/policy/docs/statcomps/supplement/2014/", 
+            "content": "File available from:\nU.S. Social Security Administration \u2022 Office of Retirement and Disability Policy \u2022 Office of Research, Evaluation, and Statistics\nAnnual Statistical Supplement, 2015\nhttps://www.socialsecurity.gov/policy/docs/statcomps/supplement/2015/", 
             "type": "note"
         }
     ], 
     "html": {
-        "body": "<tbody><tr class=1956><td class=\"col0\">1956.0</td><td class=\"col1\">5112430.0</td><td class=\"col2\">115029.0</td><td class=\"col3\">4997401.0</td><td class=\"col4\">2.2</td><td class=\"col5\">3572271.0</td><td class=\"col6\">. . .</td><td class=\"col7\">3572271.0</td><td class=\"col8\">. . .</td><td class=\"col9\">1540159.0</td><td class=\"col10\">115029.0</td><td class=\"col11\">1425130.0</td><td class=\"col12\">7.5</td><tr class=1960><td class=\"col0\">1960.0</td><td class=\"col1\">8061469.0</td><td class=\"col2\">949204.0</td><td class=\"col3\">7112265.0</td><td class=\"col4\">11.8</td><td class=\"col5\">5216668.0</td><td class=\"col6\">. . .</td><td class=\"col7\">5216668.0</td><td class=\"col8\">. . .</td><td class=\"col9\">2844801.0</td><td class=\"col10\">949204.0</td><td class=\"col11\">1895597.0</td><td class=\"col12\">33.4</td><tr class=1965><td class=\"col0\">1965.0</td><td class=\"col1\">11100584.0</td><td class=\"col2\">3519198.0</td><td class=\"col3\">7581386.0</td><td class=\"col4\">31.7</td><td class=\"col5\">6825078.0</td><td class=\"col6\">1435912.0</td><td class=\"col7\">5389166.0</td><td class=\"col8\">21.0</td><td class=\"col9\">4275506.0</td><td class=\"col10\">2083286.0</td><td class=\"col11\">2192220.0</td><td class=\"col12\">48.7</td><tr class=1970><td class=\"col0\">1970.0</td><td class=\"col1\">13349175.0</td><td class=\"col2\">6066880.0</td><td class=\"col3\">7282295.0</td><td class=\"col4\">45.4</td><td class=\"col5\">7688460.0</td><td class=\"col6\">2758060.0</td><td class=\"col7\">4930400.0</td><td class=\"col8\">35.9</td><td class=\"col9\">5660715.0</td><td class=\"col10\">3308820.0</td><td class=\"col11\">2351895.0</td><td class=\"col12\">58.5</td><tr class=1980><td class=\"col0\">1980.0</td><td class=\"col1\">19562085.0</td><td class=\"col2\">12164887.0</td><td class=\"col3\">7397198.0</td><td class=\"col4\">62.2</td><td class=\"col5\">10460735.0</td><td class=\"col6\">5874196.0</td><td class=\"col7\">4586539.0</td><td class=\"col8\">54.8</td><td class=\"col9\">9101350.0</td><td class=\"col10\">6290691.0</td><td class=\"col11\">2810659.0</td><td class=\"col12\">69.1</td><tr class=1985><td class=\"col0\">1985.0</td><td class=\"col1\">22431930.0</td><td class=\"col2\">14710971.0</td><td class=\"col3\">7720959.0</td><td class=\"col4\">65.6</td><td class=\"col5\">11816956.0</td><td class=\"col6\">7161479.0</td><td class=\"col7\">4655477.0</td><td class=\"col8\">60.6</td><td class=\"col9\">10614974.0</td><td class=\"col10\">7549492.0</td><td class=\"col11\">3065482.0</td><td class=\"col12\">71.1</td><tr class=1990><td class=\"col0\">1990.0</td><td class=\"col1\">24838100.0</td><td class=\"col2\">16997861.0</td><td class=\"col3\">7840239.0</td><td class=\"col4\">68.4</td><td class=\"col5\">12983832.0</td><td class=\"col6\">8390921.0</td><td class=\"col7\">4592911.0</td><td class=\"col8\">64.6</td><td class=\"col9\">11854268.0</td><td class=\"col10\">8606940.0</td><td class=\"col11\">3247328.0</td><td class=\"col12\">72.6</td><tr class=1995><td class=\"col0\">1995.0</td><td class=\"col1\">26672806.0</td><td class=\"col2\">18731443.0</td><td class=\"col3\">7941363.0</td><td class=\"col4\">70.2</td><td class=\"col5\">13913531.0</td><td class=\"col6\">9353996.0</td><td class=\"col7\">4559535.0</td><td class=\"col8\">67.2</td><td class=\"col9\">12759275.0</td><td class=\"col10\">9377447.0</td><td class=\"col11\">3381828.0</td><td class=\"col12\">73.5</td><tr class=1996><td class=\"col0\">1996.0</td><td class=\"col1\">26898072.0</td><td class=\"col2\">19113994.0</td><td class=\"col3\">7784078.0</td><td class=\"col4\">71.1</td><td class=\"col5\">14010875.0</td><td class=\"col6\">9532310.0</td><td class=\"col7\">4478565.0</td><td class=\"col8\">68.0</td><td class=\"col9\">12887197.0</td><td class=\"col10\">9581684.0</td><td class=\"col11\">3305513.0</td><td class=\"col12\">74.4</td><tr class=1997><td class=\"col0\">1997.0</td><td class=\"col1\">27274572.0</td><td class=\"col2\">19601286.0</td><td class=\"col3\">7673286.0</td><td class=\"col4\">71.9</td><td class=\"col5\">14116818.0</td><td class=\"col6\">9745315.0</td><td class=\"col7\">4371503.0</td><td class=\"col8\">69.0</td><td class=\"col9\">13157754.0</td><td class=\"col10\">9855971.0</td><td class=\"col11\">3301783.0</td><td class=\"col12\">74.9</td><tr class=1998><td class=\"col0\">1998.0</td><td class=\"col1\">27510535.0</td><td class=\"col2\">19810871.0</td><td class=\"col3\">7699664.0</td><td class=\"col4\">72.0</td><td class=\"col5\">14200826.0</td><td class=\"col6\">9828931.0</td><td class=\"col7\">4371895.0</td><td class=\"col8\">69.2</td><td class=\"col9\">13309709.0</td><td class=\"col10\">9981940.0</td><td class=\"col11\">3327769.0</td><td class=\"col12\">75.0</td><tr class=1999><td class=\"col0\">1999.0</td><td class=\"col1\">27774677.0</td><td class=\"col2\">20035120.0</td><td class=\"col3\">7739557.0</td><td class=\"col4\">72.1</td><td class=\"col5\">14321468.0</td><td class=\"col6\">9935547.0</td><td class=\"col7\">4385921.0</td><td class=\"col8\">69.4</td><td class=\"col9\">13453209.0</td><td class=\"col10\">10099573.0</td><td class=\"col11\">3353636.0</td><td class=\"col12\">75.1</td><tr class=2000><td class=\"col0\">2000.0</td><td class=\"col1\">28498945.0</td><td class=\"col2\">20319520.0</td><td class=\"col3\">8179425.0</td><td class=\"col4\">71.3</td><td class=\"col5\">14767170.0</td><td class=\"col6\">10076518.0</td><td class=\"col7\">4690652.0</td><td class=\"col8\">68.2</td><td class=\"col9\">13731775.0</td><td class=\"col10\">10243002.0</td><td class=\"col11\">3488773.0</td><td class=\"col12\">74.6</td><tr class=2001><td class=\"col0\">2001.0</td><td class=\"col1\">28836774.0</td><td class=\"col2\">20573931.0</td><td class=\"col3\">8262843.0</td><td class=\"col4\">71.3</td><td class=\"col5\">14930081.0</td><td class=\"col6\">10210581.0</td><td class=\"col7\">4719500.0</td><td class=\"col8\">68.4</td><td class=\"col9\">13906693.0</td><td class=\"col10\">10363350.0</td><td class=\"col11\">3543340.0</td><td class=\"col12\">74.5</td><tr class=2002><td class=\"col0\">2002.0</td><td class=\"col1\">29190137.0</td><td class=\"col2\">20883715.0</td><td class=\"col3\">8306422.0</td><td class=\"col4\">71.5</td><td class=\"col5\">15100473.0</td><td class=\"col6\">10364188.0</td><td class=\"col7\">4736285.0</td><td class=\"col8\">68.8</td><td class=\"col9\">14089664.0</td><td class=\"col10\">10519527.0</td><td class=\"col11\">3570137.0</td><td class=\"col12\">74.7</td><tr class=2003><td class=\"col0\">2003.0</td><td class=\"col1\">29531611.0</td><td class=\"col2\">21239589.0</td><td class=\"col3\">8292022.0</td><td class=\"col4\">71.9</td><td class=\"col5\">15247841.0</td><td class=\"col6\">10542626.0</td><td class=\"col7\">4705215.0</td><td class=\"col8\">69.1</td><td class=\"col9\">14283770.0</td><td class=\"col10\">10696963.0</td><td class=\"col11\">3586807.0</td><td class=\"col12\">74.9</td><tr class=2004><td class=\"col0\">2004.0</td><td class=\"col1\">29952465.0</td><td class=\"col2\">21636057.0</td><td class=\"col3\">8316408.0</td><td class=\"col4\">72.2</td><td class=\"col5\">15430360.0</td><td class=\"col6\">10749558.0</td><td class=\"col7\">4680802.0</td><td class=\"col8\">69.7</td><td class=\"col9\">14522105.0</td><td class=\"col10\">10886499.0</td><td class=\"col11\">3635606.0</td><td class=\"col12\">75.0</td><tr class=2005><td class=\"col0\">2005.0</td><td class=\"col1\">30460836.0</td><td class=\"col2\">22129099.0</td><td class=\"col3\">8331737.0</td><td class=\"col4\">72.6</td><td class=\"col5\">15650611.0</td><td class=\"col6\">10981621.0</td><td class=\"col7\">4668990.0</td><td class=\"col8\">70.2</td><td class=\"col9\">14810225.0</td><td class=\"col10\">11147478.0</td><td class=\"col11\">3662747.0</td><td class=\"col12\">75.3</td><tr class=2006><td class=\"col0\">2006.0</td><td class=\"col1\">30976143.0</td><td class=\"col2\">22597344.0</td><td class=\"col3\">8378799.0</td><td class=\"col4\">73.0</td><td class=\"col5\">15869182.0</td><td class=\"col6\">11196443.0</td><td class=\"col7\">4672739.0</td><td class=\"col8\">70.6</td><td class=\"col9\">15106961.0</td><td class=\"col10\">11400901.0</td><td class=\"col11\">3706060.0</td><td class=\"col12\">75.5</td><tr class=2007><td class=\"col0\">2007.0</td><td class=\"col1\">31527728.0</td><td class=\"col2\">23078917.0</td><td class=\"col3\">8448811.0</td><td class=\"col4\">73.2</td><td class=\"col5\">16111553.0</td><td class=\"col6\">11413127.0</td><td class=\"col7\">4698426.0</td><td class=\"col8\">70.8</td><td class=\"col9\">15416175.0</td><td class=\"col10\">11665790.0</td><td class=\"col11\">3750385.0</td><td class=\"col12\">75.7</td><tr class=2008><td class=\"col0\">2008.0</td><td class=\"col1\">32273651.0</td><td class=\"col2\">23775246.0</td><td class=\"col3\">8498405.0</td><td class=\"col4\">73.7</td><td class=\"col5\">16455822.0</td><td class=\"col6\">11708571.0</td><td class=\"col7\">4747251.0</td><td class=\"col8\">71.2</td><td class=\"col9\">15817829.0</td><td class=\"col10\">12066675.0</td><td class=\"col11\">3751154.0</td><td class=\"col12\">76.3</td><tr class=2009><td class=\"col0\">2009.0</td><td class=\"col1\">33514013.0</td><td class=\"col2\">24748391.0</td><td class=\"col3\">8765622.0</td><td class=\"col4\">73.8</td><td class=\"col5\">17067434.0</td><td class=\"col6\">12182366.0</td><td class=\"col7\">4885068.0</td><td class=\"col8\">71.4</td><td class=\"col9\">16466579.0</td><td class=\"col10\">12566025.0</td><td class=\"col11\">3880554.0</td><td class=\"col12\">76.4</td><tr class=2010><td class=\"col0\">2010.0</td><td class=\"col1\">34593080.0</td><td class=\"col2\">25555808.0</td><td class=\"col3\">9037272.0</td><td class=\"col4\">73.9</td><td class=\"col5\">17582235.0</td><td class=\"col6\">12556581.0</td><td class=\"col7\">5025654.0</td><td class=\"col8\">71.4</td><td class=\"col9\">17010845.0</td><td class=\"col10\">12999227.0</td><td class=\"col11\">4011618.0</td><td class=\"col12\">76.4</td><tr class=2011><td class=\"col0\">2011.0</td><td class=\"col1\">35599569.0</td><td class=\"col2\">26275063.0</td><td class=\"col3\">9324506.0</td><td class=\"col4\">73.8</td><td class=\"col5\">18043009.0</td><td class=\"col6\">12869206.0</td><td class=\"col7\">5173803.0</td><td class=\"col8\">71.3</td><td class=\"col9\">17556560.0</td><td class=\"col10\">13405857.0</td><td class=\"col11\">4150703.0</td><td class=\"col12\">76.4</td><tr class=2012><td class=\"col0\">2012.0</td><td class=\"col1\">36720492.0</td><td class=\"col2\">26968901.0</td><td class=\"col3\">9751591.0</td><td class=\"col4\">73.4</td><td class=\"col5\">18559519.0</td><td class=\"col6\">13162302.0</td><td class=\"col7\">5397217.0</td><td class=\"col8\">70.9</td><td class=\"col9\">18160973.0</td><td class=\"col10\">13806599.0</td><td class=\"col11\">4354374.0</td><td class=\"col12\">76.0</td><tr class=2013><td class=\"col0\">2013.0</td><td class=\"col1\">37892659.0</td><td class=\"col2\">27599461.0</td><td class=\"col3\">10293198.0</td><td class=\"col4\">72.8</td><td class=\"col5\">19099298.0</td><td class=\"col6\">13420757.0</td><td class=\"col7\">5678541.0</td><td class=\"col8\">70.3</td><td class=\"col9\">18793361.0</td><td class=\"col10\">14178704.0</td><td class=\"col11\">4614657.0</td><td class=\"col12\">75.4</td></tbody>", 
+        "body": "<tbody><tr class=1956><td class=\"col0\">1956.0</td><td class=\"col1\">5112430.0</td><td class=\"col2\">115029.0</td><td class=\"col3\">4997401.0</td><td class=\"col4\">2.2</td><td class=\"col5\">3572271.0</td><td class=\"col6\">. . .</td><td class=\"col7\">3572271.0</td><td class=\"col8\">. . .</td><td class=\"col9\">1540159.0</td><td class=\"col10\">115029.0</td><td class=\"col11\">1425130.0</td><td class=\"col12\">7.5</td><tr class=1960><td class=\"col0\">1960.0</td><td class=\"col1\">8061469.0</td><td class=\"col2\">949204.0</td><td class=\"col3\">7112265.0</td><td class=\"col4\">11.8</td><td class=\"col5\">5216668.0</td><td class=\"col6\">. . .</td><td class=\"col7\">5216668.0</td><td class=\"col8\">. . .</td><td class=\"col9\">2844801.0</td><td class=\"col10\">949204.0</td><td class=\"col11\">1895597.0</td><td class=\"col12\">33.4</td><tr class=1965><td class=\"col0\">1965.0</td><td class=\"col1\">11100584.0</td><td class=\"col2\">3519198.0</td><td class=\"col3\">7581386.0</td><td class=\"col4\">31.7</td><td class=\"col5\">6825078.0</td><td class=\"col6\">1435912.0</td><td class=\"col7\">5389166.0</td><td class=\"col8\">21.0</td><td class=\"col9\">4275506.0</td><td class=\"col10\">2083286.0</td><td class=\"col11\">2192220.0</td><td class=\"col12\">48.7</td><tr class=1970><td class=\"col0\">1970.0</td><td class=\"col1\">13349175.0</td><td class=\"col2\">6066880.0</td><td class=\"col3\">7282295.0</td><td class=\"col4\">45.4</td><td class=\"col5\">7688460.0</td><td class=\"col6\">2758060.0</td><td class=\"col7\">4930400.0</td><td class=\"col8\">35.9</td><td class=\"col9\">5660715.0</td><td class=\"col10\">3308820.0</td><td class=\"col11\">2351895.0</td><td class=\"col12\">58.5</td><tr class=1980><td class=\"col0\">1980.0</td><td class=\"col1\">19562085.0</td><td class=\"col2\">12164887.0</td><td class=\"col3\">7397198.0</td><td class=\"col4\">62.2</td><td class=\"col5\">10460735.0</td><td class=\"col6\">5874196.0</td><td class=\"col7\">4586539.0</td><td class=\"col8\">54.8</td><td class=\"col9\">9101350.0</td><td class=\"col10\">6290691.0</td><td class=\"col11\">2810659.0</td><td class=\"col12\">69.1</td><tr class=1985><td class=\"col0\">1985.0</td><td class=\"col1\">22431930.0</td><td class=\"col2\">14710971.0</td><td class=\"col3\">7720959.0</td><td class=\"col4\">65.6</td><td class=\"col5\">11816956.0</td><td class=\"col6\">7161479.0</td><td class=\"col7\">4655477.0</td><td class=\"col8\">60.6</td><td class=\"col9\">10614974.0</td><td class=\"col10\">7549492.0</td><td class=\"col11\">3065482.0</td><td class=\"col12\">71.1</td><tr class=1990><td class=\"col0\">1990.0</td><td class=\"col1\">24838100.0</td><td class=\"col2\">16997861.0</td><td class=\"col3\">7840239.0</td><td class=\"col4\">68.4</td><td class=\"col5\">12983832.0</td><td class=\"col6\">8390921.0</td><td class=\"col7\">4592911.0</td><td class=\"col8\">64.6</td><td class=\"col9\">11854268.0</td><td class=\"col10\">8606940.0</td><td class=\"col11\">3247328.0</td><td class=\"col12\">72.6</td><tr class=1995><td class=\"col0\">1995.0</td><td class=\"col1\">26672806.0</td><td class=\"col2\">18731443.0</td><td class=\"col3\">7941363.0</td><td class=\"col4\">70.2</td><td class=\"col5\">13913531.0</td><td class=\"col6\">9353996.0</td><td class=\"col7\">4559535.0</td><td class=\"col8\">67.2</td><td class=\"col9\">12759275.0</td><td class=\"col10\">9377447.0</td><td class=\"col11\">3381828.0</td><td class=\"col12\">73.5</td><tr class=1996><td class=\"col0\">1996.0</td><td class=\"col1\">26898072.0</td><td class=\"col2\">19113994.0</td><td class=\"col3\">7784078.0</td><td class=\"col4\">71.1</td><td class=\"col5\">14010875.0</td><td class=\"col6\">9532310.0</td><td class=\"col7\">4478565.0</td><td class=\"col8\">68.0</td><td class=\"col9\">12887197.0</td><td class=\"col10\">9581684.0</td><td class=\"col11\">3305513.0</td><td class=\"col12\">74.4</td><tr class=1997><td class=\"col0\">1997.0</td><td class=\"col1\">27274572.0</td><td class=\"col2\">19601286.0</td><td class=\"col3\">7673286.0</td><td class=\"col4\">71.9</td><td class=\"col5\">14116818.0</td><td class=\"col6\">9745315.0</td><td class=\"col7\">4371503.0</td><td class=\"col8\">69.0</td><td class=\"col9\">13157754.0</td><td class=\"col10\">9855971.0</td><td class=\"col11\">3301783.0</td><td class=\"col12\">74.9</td><tr class=1998><td class=\"col0\">1998.0</td><td class=\"col1\">27510535.0</td><td class=\"col2\">19810871.0</td><td class=\"col3\">7699664.0</td><td class=\"col4\">72.0</td><td class=\"col5\">14200826.0</td><td class=\"col6\">9828931.0</td><td class=\"col7\">4371895.0</td><td class=\"col8\">69.2</td><td class=\"col9\">13309709.0</td><td class=\"col10\">9981940.0</td><td class=\"col11\">3327769.0</td><td class=\"col12\">75.0</td><tr class=1999><td class=\"col0\">1999.0</td><td class=\"col1\">27774677.0</td><td class=\"col2\">20035120.0</td><td class=\"col3\">7739557.0</td><td class=\"col4\">72.1</td><td class=\"col5\">14321468.0</td><td class=\"col6\">9935547.0</td><td class=\"col7\">4385921.0</td><td class=\"col8\">69.4</td><td class=\"col9\">13453209.0</td><td class=\"col10\">10099573.0</td><td class=\"col11\">3353636.0</td><td class=\"col12\">75.1</td><tr class=2000><td class=\"col0\">2000.0</td><td class=\"col1\">28498945.0</td><td class=\"col2\">20319520.0</td><td class=\"col3\">8179425.0</td><td class=\"col4\">71.3</td><td class=\"col5\">14767170.0</td><td class=\"col6\">10076518.0</td><td class=\"col7\">4690652.0</td><td class=\"col8\">68.2</td><td class=\"col9\">13731775.0</td><td class=\"col10\">10243002.0</td><td class=\"col11\">3488773.0</td><td class=\"col12\">74.6</td><tr class=2001><td class=\"col0\">2001.0</td><td class=\"col1\">28836774.0</td><td class=\"col2\">20573931.0</td><td class=\"col3\">8262843.0</td><td class=\"col4\">71.3</td><td class=\"col5\">14930081.0</td><td class=\"col6\">10210581.0</td><td class=\"col7\">4719500.0</td><td class=\"col8\">68.4</td><td class=\"col9\">13906693.0</td><td class=\"col10\">10363350.0</td><td class=\"col11\">3543340.0</td><td class=\"col12\">74.5</td><tr class=2002><td class=\"col0\">2002.0</td><td class=\"col1\">29190137.0</td><td class=\"col2\">20883715.0</td><td class=\"col3\">8306422.0</td><td class=\"col4\">71.5</td><td class=\"col5\">15100473.0</td><td class=\"col6\">10364188.0</td><td class=\"col7\">4736285.0</td><td class=\"col8\">68.8</td><td class=\"col9\">14089664.0</td><td class=\"col10\">10519527.0</td><td class=\"col11\">3570137.0</td><td class=\"col12\">74.7</td><tr class=2003><td class=\"col0\">2003.0</td><td class=\"col1\">29531611.0</td><td class=\"col2\">21239589.0</td><td class=\"col3\">8292022.0</td><td class=\"col4\">71.9</td><td class=\"col5\">15247841.0</td><td class=\"col6\">10542626.0</td><td class=\"col7\">4705215.0</td><td class=\"col8\">69.1</td><td class=\"col9\">14283770.0</td><td class=\"col10\">10696963.0</td><td class=\"col11\">3586807.0</td><td class=\"col12\">74.9</td><tr class=2004><td class=\"col0\">2004.0</td><td class=\"col1\">29952465.0</td><td class=\"col2\">21636057.0</td><td class=\"col3\">8316408.0</td><td class=\"col4\">72.2</td><td class=\"col5\">15430360.0</td><td class=\"col6\">10749558.0</td><td class=\"col7\">4680802.0</td><td class=\"col8\">69.7</td><td class=\"col9\">14522105.0</td><td class=\"col10\">10886499.0</td><td class=\"col11\">3635606.0</td><td class=\"col12\">75.0</td><tr class=2005><td class=\"col0\">2005.0</td><td class=\"col1\">30460836.0</td><td class=\"col2\">22129099.0</td><td class=\"col3\">8331737.0</td><td class=\"col4\">72.6</td><td class=\"col5\">15650611.0</td><td class=\"col6\">10981621.0</td><td class=\"col7\">4668990.0</td><td class=\"col8\">70.2</td><td class=\"col9\">14810225.0</td><td class=\"col10\">11147478.0</td><td class=\"col11\">3662747.0</td><td class=\"col12\">75.3</td><tr class=2006><td class=\"col0\">2006.0</td><td class=\"col1\">30976143.0</td><td class=\"col2\">22597344.0</td><td class=\"col3\">8378799.0</td><td class=\"col4\">73.0</td><td class=\"col5\">15869182.0</td><td class=\"col6\">11196443.0</td><td class=\"col7\">4672739.0</td><td class=\"col8\">70.6</td><td class=\"col9\">15106961.0</td><td class=\"col10\">11400901.0</td><td class=\"col11\">3706060.0</td><td class=\"col12\">75.5</td><tr class=2007><td class=\"col0\">2007.0</td><td class=\"col1\">31527728.0</td><td class=\"col2\">23078917.0</td><td class=\"col3\">8448811.0</td><td class=\"col4\">73.2</td><td class=\"col5\">16111553.0</td><td class=\"col6\">11413127.0</td><td class=\"col7\">4698426.0</td><td class=\"col8\">70.8</td><td class=\"col9\">15416175.0</td><td class=\"col10\">11665790.0</td><td class=\"col11\">3750385.0</td><td class=\"col12\">75.7</td><tr class=2008><td class=\"col0\">2008.0</td><td class=\"col1\">32273651.0</td><td class=\"col2\">23775246.0</td><td class=\"col3\">8498405.0</td><td class=\"col4\">73.7</td><td class=\"col5\">16455822.0</td><td class=\"col6\">11708571.0</td><td class=\"col7\">4747251.0</td><td class=\"col8\">71.2</td><td class=\"col9\">15817829.0</td><td class=\"col10\">12066675.0</td><td class=\"col11\">3751154.0</td><td class=\"col12\">76.3</td><tr class=2009><td class=\"col0\">2009.0</td><td class=\"col1\">33514013.0</td><td class=\"col2\">24748391.0</td><td class=\"col3\">8765622.0</td><td class=\"col4\">73.8</td><td class=\"col5\">17067434.0</td><td class=\"col6\">12182366.0</td><td class=\"col7\">4885068.0</td><td class=\"col8\">71.4</td><td class=\"col9\">16466579.0</td><td class=\"col10\">12566025.0</td><td class=\"col11\">3880554.0</td><td class=\"col12\">76.4</td><tr class=2010><td class=\"col0\">2010.0</td><td class=\"col1\">34593080.0</td><td class=\"col2\">25555808.0</td><td class=\"col3\">9037272.0</td><td class=\"col4\">73.9</td><td class=\"col5\">17582235.0</td><td class=\"col6\">12556581.0</td><td class=\"col7\">5025654.0</td><td class=\"col8\">71.4</td><td class=\"col9\">17010845.0</td><td class=\"col10\">12999227.0</td><td class=\"col11\">4011618.0</td><td class=\"col12\">76.4</td><tr class=2011><td class=\"col0\">2011.0</td><td class=\"col1\">35599569.0</td><td class=\"col2\">26275063.0</td><td class=\"col3\">9324506.0</td><td class=\"col4\">73.8</td><td class=\"col5\">18043009.0</td><td class=\"col6\">12869206.0</td><td class=\"col7\">5173803.0</td><td class=\"col8\">71.3</td><td class=\"col9\">17556560.0</td><td class=\"col10\">13405857.0</td><td class=\"col11\">4150703.0</td><td class=\"col12\">76.4</td><tr class=2012><td class=\"col0\">2012.0</td><td class=\"col1\">36720492.0</td><td class=\"col2\">26968901.0</td><td class=\"col3\">9751591.0</td><td class=\"col4\">73.4</td><td class=\"col5\">18559519.0</td><td class=\"col6\">13162302.0</td><td class=\"col7\">5397217.0</td><td class=\"col8\">70.9</td><td class=\"col9\">18160973.0</td><td class=\"col10\">13806599.0</td><td class=\"col11\">4354374.0</td><td class=\"col12\">76.0</td><tr class=2013><td class=\"col0\">2013.0</td><td class=\"col1\">37892659.0</td><td class=\"col2\">27599461.0</td><td class=\"col3\">10293198.0</td><td class=\"col4\">72.8</td><td class=\"col5\">19099298.0</td><td class=\"col6\">13420757.0</td><td class=\"col7\">5678541.0</td><td class=\"col8\">70.3</td><td class=\"col9\">18793361.0</td><td class=\"col10\">14178704.0</td><td class=\"col11\">4614657.0</td><td class=\"col12\">75.4</td><tr class=2014><td class=\"col0\">2014.0</td><td class=\"col1\">39008771.0</td><td class=\"col2\">28164909.0</td><td class=\"col3\">10843862.0</td><td class=\"col4\">72.2</td><td class=\"col5\">19601843.0</td><td class=\"col6\">13644248.0</td><td class=\"col7\">5957595.0</td><td class=\"col8\">69.6</td><td class=\"col9\">19406928.0</td><td class=\"col10\">14520661.0</td><td class=\"col11\">4886267.0</td><td class=\"col12\">74.8</td></tbody>", 
         "header": "<thead><tr><th rowspan=\"2\"  class=\"series col0\" >Year</th><th colspan=\"4\"  class=\"series col1\" >All retired workers</th><th colspan=\"4\"  class=\"series col5\" >Men</th><th colspan=\"4\"  class=\"series col9\" >Women</th></tr><tr><th class=\"series col1\" >Total</th><th class=\"series col2\" >With reduction for early retirement</th><th class=\"series col3\" >Without reduction for early retirement</th><th class=\"series col4\" >Early retirees\nas a percentage of total</th><th class=\"series col5\" >Subtotal</th><th class=\"series col6\" >With reduction for early retirement</th><th class=\"series col7\" >Without reduction for early retirement</th><th class=\"series col8\" >Early retirees\nas a percentage of subtotal</th><th class=\"series col9\" >Subtotal</th><th class=\"series col10\" >With reduction for early retirement</th><th class=\"series col11\" >Without reduction for early retirement</th><th class=\"series col12\" >Early retirees\nas a percentage of subtotal</th></tr></thead>"
     }, 
     "title": {
         "catID": "5.B", 
         "category": "OASDI Current-Pay Benefits: Retired Workers", 
         "id": "5_B8-0", 
-        "name": "Number and average monthly benefit with and without reduction for early retirement, by sex, December 1956\u20132013, selected years :: Subtable : Number"
+        "name": "Number and average monthly benefit with and without reduction for early retirement, by sex, December 1956\u20132014, selected years :: Subtable : Number"
     }
 }

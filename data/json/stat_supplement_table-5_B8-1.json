@@ -29,7 +29,8 @@
                 1175.5, 
                 1228.57, 
                 1261.61, 
-                1293.83
+                1293.83, 
+                1328.58
             ], 
             "type": "dollar"
         }, 
@@ -61,7 +62,8 @@
                 974.8, 
                 1019.81, 
                 1047.12, 
-                1073.35
+                1073.35, 
+                1101.75
             ], 
             "type": "dollar"
         }, 
@@ -93,13 +95,15 @@
                 1178.9, 
                 1238.59, 
                 1279.19, 
-                1319.66
+                1319.66, 
+                1362.83
             ], 
             "type": "dollar"
         }, 
         "col12": {
             "label": "Women :: Early retirees\nas\u00a0a percentage of subtotal", 
             "series": [
+                false, 
                 false, 
                 false, 
                 false, 
@@ -157,7 +161,8 @@
                 1100.7, 
                 1148.83, 
                 1176.36, 
-                1202.12
+                1202.12, 
+                1229.91
             ], 
             "type": "dollar"
         }, 
@@ -189,13 +194,15 @@
                 1386.8, 
                 1453.27, 
                 1497.4, 
-                1539.74
+                1539.74, 
+                1584.85
             ], 
             "type": "dollar"
         }, 
         "col4": {
             "label": "All retired workers :: Early retirees\nas\u00a0a percentage of\u00a0total", 
             "series": [
+                false, 
                 false, 
                 false, 
                 false, 
@@ -253,7 +260,8 @@
                 1323.1, 
                 1381.38, 
                 1417.05, 
-                1451.27
+                1451.27, 
+                1488.07
             ], 
             "type": "dollar"
         }, 
@@ -285,7 +293,8 @@
                 1231.1, 
                 1283.24, 
                 1311.91, 
-                1338.17
+                1338.17, 
+                1366.3
             ], 
             "type": "dollar"
         }, 
@@ -317,13 +326,15 @@
                 1552.7, 
                 1625.49, 
                 1673.46, 
-                1718.59
+                1718.59, 
+                1766.94
             ], 
             "type": "dollar"
         }, 
         "col8": {
             "label": "Men :: Early retirees\nas\u00a0a percentage of subtotal", 
             "series": [
+                false, 
                 false, 
                 false, 
                 false, 
@@ -381,7 +392,8 @@
                 1022.9, 
                 1071.53, 
                 1102.77, 
-                1133.83
+                1133.83, 
+                1167.49
             ], 
             "type": "dollar"
         }, 
@@ -412,7 +424,8 @@
                 2010, 
                 2011, 
                 2012, 
-                2013
+                2013, 
+                2014
             ], 
             "type": "year"
         }
@@ -431,18 +444,18 @@
             "type": "note"
         }, 
         {
-            "content": "File available from:\nU.S. Social Security Administration \u2022 Office of Retirement and Disability Policy \u2022 Office of Research, Evaluation, and Statistics\n<span class =\"suppTitle\">Annual Statistical Supplement, 2014</span>\nhttp://www.socialsecurity.gov/policy/docs/statcomps/supplement/2014/", 
+            "content": "File available from:\nU.S. Social Security Administration \u2022 Office of Retirement and Disability Policy \u2022 Office of Research, Evaluation, and Statistics\nAnnual Statistical Supplement, 2015\nhttps://www.socialsecurity.gov/policy/docs/statcomps/supplement/2015/", 
             "type": "note"
         }
     ], 
     "html": {
-        "body": "<tbody><tr class=1956><td class=\"col0\">1956.0</td><td class=\"col1\">63.1</td><td class=\"col2\">48.2</td><td class=\"col3\">63.4</td><td class=\"col4\">. . .</td><td class=\"col5\">68.2</td><td class=\"col6\">. . .</td><td class=\"col7\">68.2</td><td class=\"col8\">. . .</td><td class=\"col9\">51.2</td><td class=\"col10\">48.2</td><td class=\"col11\">51.4</td><td class=\"col12\">. . .</td><tr class=1960><td class=\"col0\">1960.0</td><td class=\"col1\">74.0</td><td class=\"col2\">55.8</td><td class=\"col3\">76.5</td><td class=\"col4\">. . .</td><td class=\"col5\">81.9</td><td class=\"col6\">. . .</td><td class=\"col7\">81.9</td><td class=\"col8\">. . .</td><td class=\"col9\">59.7</td><td class=\"col10\">55.8</td><td class=\"col11\">61.6</td><td class=\"col12\">. . .</td><tr class=1965><td class=\"col0\">1965.0</td><td class=\"col1\">83.9</td><td class=\"col2\">70.6</td><td class=\"col3\">90.1</td><td class=\"col4\">. . .</td><td class=\"col5\">92.6</td><td class=\"col6\">79.4</td><td class=\"col7\">96.1</td><td class=\"col8\">. . .</td><td class=\"col9\">70.1</td><td class=\"col10\">64.5</td><td class=\"col11\">75.4</td><td class=\"col12\">. . .</td><tr class=1970><td class=\"col0\">1970.0</td><td class=\"col1\">118.1</td><td class=\"col2\">103.6</td><td class=\"col3\">130.2</td><td class=\"col4\">. . .</td><td class=\"col5\">130.5</td><td class=\"col6\">115.3</td><td class=\"col7\">139.1</td><td class=\"col8\">. . .</td><td class=\"col9\">101.2</td><td class=\"col10\">93.8</td><td class=\"col11\">111.7</td><td class=\"col12\">. . .</td><tr class=1980><td class=\"col0\">1980.0</td><td class=\"col1\">341.4</td><td class=\"col2\">310.7</td><td class=\"col3\">391.8</td><td class=\"col4\">. . .</td><td class=\"col5\">380.2</td><td class=\"col6\">349.5</td><td class=\"col7\">419.6</td><td class=\"col8\">. . .</td><td class=\"col9\">296.8</td><td class=\"col10\">274.6</td><td class=\"col11\">346.5</td><td class=\"col12\">. . .</td><tr class=1985><td class=\"col0\">1985.0</td><td class=\"col1\">478.6</td><td class=\"col2\">424.8</td><td class=\"col3\">581.2</td><td class=\"col4\">. . .</td><td class=\"col5\">538.4</td><td class=\"col6\">480.5</td><td class=\"col7\">627.5</td><td class=\"col8\">. . .</td><td class=\"col9\">412.1</td><td class=\"col10\">372.0</td><td class=\"col11\">511.0</td><td class=\"col12\">. . .</td><tr class=1990><td class=\"col0\">1990.0</td><td class=\"col1\">602.6</td><td class=\"col2\">537.9</td><td class=\"col3\">742.8</td><td class=\"col4\">. . .</td><td class=\"col5\">679.3</td><td class=\"col6\">611.2</td><td class=\"col7\">803.6</td><td class=\"col8\">. . .</td><td class=\"col9\">518.6</td><td class=\"col10\">466.4</td><td class=\"col11\">656.8</td><td class=\"col12\">. . .</td><tr class=1995><td class=\"col0\">1995.0</td><td class=\"col1\">719.8</td><td class=\"col2\">649.5</td><td class=\"col3\">885.6</td><td class=\"col4\">. . .</td><td class=\"col5\">810.2</td><td class=\"col6\">735.4</td><td class=\"col7\">963.7</td><td class=\"col8\">. . .</td><td class=\"col9\">621.2</td><td class=\"col10\">563.8</td><td class=\"col11\">780.4</td><td class=\"col12\">. . .</td><tr class=1996><td class=\"col0\">1996.0</td><td class=\"col1\">745.0</td><td class=\"col2\">678.3</td><td class=\"col3\">908.7</td><td class=\"col4\">. . .</td><td class=\"col5\">838.1</td><td class=\"col6\">763.1</td><td class=\"col7\">997.8</td><td class=\"col8\">. . .</td><td class=\"col9\">643.7</td><td class=\"col10\">593.9</td><td class=\"col11\">788.0</td><td class=\"col12\">. . .</td><tr class=1997><td class=\"col0\">1997.0</td><td class=\"col1\">765.0</td><td class=\"col2\">705.9</td><td class=\"col3\">915.9</td><td class=\"col4\">. . .</td><td class=\"col5\">860.5</td><td class=\"col6\">786.6</td><td class=\"col7\">1025.1</td><td class=\"col8\">. . .</td><td class=\"col9\">662.5</td><td class=\"col10\">626.1</td><td class=\"col11\">771.3</td><td class=\"col12\">. . .</td><tr class=1998><td class=\"col0\">1998.0</td><td class=\"col1\">779.7</td><td class=\"col2\">720.3</td><td class=\"col3\">932.5</td><td class=\"col4\">. . .</td><td class=\"col5\">876.9</td><td class=\"col6\">802.4</td><td class=\"col7\">1044.5</td><td class=\"col8\">. . .</td><td class=\"col9\">675.9</td><td class=\"col10\">639.5</td><td class=\"col11\">785.4</td><td class=\"col12\">. . .</td><tr class=1999><td class=\"col0\">1999.0</td><td class=\"col1\">804.3</td><td class=\"col2\">744.4</td><td class=\"col3\">959.2</td><td class=\"col4\">. . .</td><td class=\"col5\">904.6</td><td class=\"col6\">829.3</td><td class=\"col7\">1075.3</td><td class=\"col8\">. . .</td><td class=\"col9\">697.5</td><td class=\"col10\">661.0</td><td class=\"col11\">807.5</td><td class=\"col12\">. . .</td><tr class=2000><td class=\"col0\">2000.0</td><td class=\"col1\">844.5</td><td class=\"col2\">778.5</td><td class=\"col3\">1008.4</td><td class=\"col4\">. . .</td><td class=\"col5\">951.1</td><td class=\"col6\">867.2</td><td class=\"col7\">1131.1</td><td class=\"col8\">. . .</td><td class=\"col9\">729.9</td><td class=\"col10\">691.2</td><td class=\"col11\">843.4</td><td class=\"col12\">. . .</td><tr class=2001><td class=\"col0\">2001.0</td><td class=\"col1\">874.4</td><td class=\"col2\">808.5</td><td class=\"col3\">1038.7</td><td class=\"col4\">. . .</td><td class=\"col5\">984.6</td><td class=\"col6\">900.7</td><td class=\"col7\">1166.0</td><td class=\"col8\">. . .</td><td class=\"col9\">756.2</td><td class=\"col10\">717.6</td><td class=\"col11\">869.2</td><td class=\"col12\">. . .</td><tr class=2002><td class=\"col0\">2002.0</td><td class=\"col1\">895.0</td><td class=\"col2\">829.8</td><td class=\"col3\">1058.9</td><td class=\"col4\">. . .</td><td class=\"col5\">1007.8</td><td class=\"col6\">925.2</td><td class=\"col7\">1188.5</td><td class=\"col8\">. . .</td><td class=\"col9\">774.1</td><td class=\"col10\">735.8</td><td class=\"col11\">886.9</td><td class=\"col12\">. . .</td><tr class=2003><td class=\"col0\">2003.0</td><td class=\"col1\">922.1</td><td class=\"col2\">857.8</td><td class=\"col3\">1086.8</td><td class=\"col4\">. . .</td><td class=\"col5\">1038.7</td><td class=\"col6\">957.5</td><td class=\"col7\">1220.6</td><td class=\"col8\">. . .</td><td class=\"col9\">797.6</td><td class=\"col10\">759.5</td><td class=\"col11\">911.3</td><td class=\"col12\">. . .</td><tr class=2004><td class=\"col0\">2004.0</td><td class=\"col1\">954.9</td><td class=\"col2\">891.1</td><td class=\"col3\">1121.0</td><td class=\"col4\">. . .</td><td class=\"col5\">1076.1</td><td class=\"col6\">995.4</td><td class=\"col7\">1261.5</td><td class=\"col8\">. . .</td><td class=\"col9\">826.1</td><td class=\"col10\">788.0</td><td class=\"col11\">940.1</td><td class=\"col12\">. . .</td><tr class=2005><td class=\"col0\">2005.0</td><td class=\"col1\">1002.0</td><td class=\"col2\">936.9</td><td class=\"col3\">1174.8</td><td class=\"col4\">. . .</td><td class=\"col5\">1129.5</td><td class=\"col6\">1047.4</td><td class=\"col7\">1322.7</td><td class=\"col8\">. . .</td><td class=\"col9\">867.3</td><td class=\"col10\">828.2</td><td class=\"col11\">986.4</td><td class=\"col12\">. . .</td><tr class=2006><td class=\"col0\">2006.0</td><td class=\"col1\">1044.4</td><td class=\"col2\">978.2</td><td class=\"col3\">1222.9</td><td class=\"col4\">. . .</td><td class=\"col5\">1177.5</td><td class=\"col6\">1094.1</td><td class=\"col7\">1377.2</td><td class=\"col8\">. . .</td><td class=\"col9\">904.6</td><td class=\"col10\">864.4</td><td class=\"col11\">1028.5</td><td class=\"col12\">. . .</td><tr class=2007><td class=\"col0\">2007.0</td><td class=\"col1\">1078.6</td><td class=\"col2\">1011.3</td><td class=\"col3\">1262.3</td><td class=\"col4\">. . .</td><td class=\"col5\">1215.7</td><td class=\"col6\">1131.2</td><td class=\"col7\">1421.1</td><td class=\"col8\">. . .</td><td class=\"col9\">935.2</td><td class=\"col10\">894.0</td><td class=\"col11\">1063.3</td><td class=\"col12\">. . .</td><tr class=2008><td class=\"col0\">2008.0</td><td class=\"col1\">1152.9</td><td class=\"col2\">1080.8</td><td class=\"col3\">1354.6</td><td class=\"col4\">. . .</td><td class=\"col5\">1299.1</td><td class=\"col6\">1209.8</td><td class=\"col7\">1519.5</td><td class=\"col8\">. . .</td><td class=\"col9\">1000.7</td><td class=\"col10\">955.6</td><td class=\"col11\">1145.8</td><td class=\"col12\">. . .</td><tr class=2009><td class=\"col0\">2009.0</td><td class=\"col1\">1164.3</td><td class=\"col2\">1091.1</td><td class=\"col3\">1371.1</td><td class=\"col4\">. . .</td><td class=\"col5\">1311.7</td><td class=\"col6\">1221.4</td><td class=\"col7\">1536.8</td><td class=\"col8\">. . .</td><td class=\"col9\">1011.4</td><td class=\"col10\">964.7</td><td class=\"col11\">1162.5</td><td class=\"col12\">. . .</td><tr class=2010><td class=\"col0\">2010.0</td><td class=\"col1\">1175.5</td><td class=\"col2\">1100.7</td><td class=\"col3\">1386.8</td><td class=\"col4\">. . .</td><td class=\"col5\">1323.1</td><td class=\"col6\">1231.1</td><td class=\"col7\">1552.7</td><td class=\"col8\">. . .</td><td class=\"col9\">1022.9</td><td class=\"col10\">974.8</td><td class=\"col11\">1178.9</td><td class=\"col12\">. . .</td><tr class=2011><td class=\"col0\">2011.0</td><td class=\"col1\">1228.57</td><td class=\"col2\">1148.83</td><td class=\"col3\">1453.27</td><td class=\"col4\">. . .</td><td class=\"col5\">1381.38</td><td class=\"col6\">1283.24</td><td class=\"col7\">1625.49</td><td class=\"col8\">. . .</td><td class=\"col9\">1071.53</td><td class=\"col10\">1019.81</td><td class=\"col11\">1238.59</td><td class=\"col12\">. . .</td><tr class=2012><td class=\"col0\">2012.0</td><td class=\"col1\">1261.61</td><td class=\"col2\">1176.36</td><td class=\"col3\">1497.4</td><td class=\"col4\">. . .</td><td class=\"col5\">1417.05</td><td class=\"col6\">1311.91</td><td class=\"col7\">1673.46</td><td class=\"col8\">. . .</td><td class=\"col9\">1102.77</td><td class=\"col10\">1047.12</td><td class=\"col11\">1279.19</td><td class=\"col12\">. . .</td><tr class=2013><td class=\"col0\">2013.0</td><td class=\"col1\">1293.83</td><td class=\"col2\">1202.12</td><td class=\"col3\">1539.74</td><td class=\"col4\">. . .</td><td class=\"col5\">1451.27</td><td class=\"col6\">1338.17</td><td class=\"col7\">1718.59</td><td class=\"col8\">. . .</td><td class=\"col9\">1133.83</td><td class=\"col10\">1073.35</td><td class=\"col11\">1319.66</td><td class=\"col12\">. . .</td></tbody>", 
+        "body": "<tbody><tr class=1956><td class=\"col0\">1956.0</td><td class=\"col1\">63.1</td><td class=\"col2\">48.2</td><td class=\"col3\">63.4</td><td class=\"col4\">. . .</td><td class=\"col5\">68.2</td><td class=\"col6\">. . .</td><td class=\"col7\">68.2</td><td class=\"col8\">. . .</td><td class=\"col9\">51.2</td><td class=\"col10\">48.2</td><td class=\"col11\">51.4</td><td class=\"col12\">. . .</td><tr class=1960><td class=\"col0\">1960.0</td><td class=\"col1\">74.0</td><td class=\"col2\">55.8</td><td class=\"col3\">76.5</td><td class=\"col4\">. . .</td><td class=\"col5\">81.9</td><td class=\"col6\">. . .</td><td class=\"col7\">81.9</td><td class=\"col8\">. . .</td><td class=\"col9\">59.7</td><td class=\"col10\">55.8</td><td class=\"col11\">61.6</td><td class=\"col12\">. . .</td><tr class=1965><td class=\"col0\">1965.0</td><td class=\"col1\">83.9</td><td class=\"col2\">70.6</td><td class=\"col3\">90.1</td><td class=\"col4\">. . .</td><td class=\"col5\">92.6</td><td class=\"col6\">79.4</td><td class=\"col7\">96.1</td><td class=\"col8\">. . .</td><td class=\"col9\">70.1</td><td class=\"col10\">64.5</td><td class=\"col11\">75.4</td><td class=\"col12\">. . .</td><tr class=1970><td class=\"col0\">1970.0</td><td class=\"col1\">118.1</td><td class=\"col2\">103.6</td><td class=\"col3\">130.2</td><td class=\"col4\">. . .</td><td class=\"col5\">130.5</td><td class=\"col6\">115.3</td><td class=\"col7\">139.1</td><td class=\"col8\">. . .</td><td class=\"col9\">101.2</td><td class=\"col10\">93.8</td><td class=\"col11\">111.7</td><td class=\"col12\">. . .</td><tr class=1980><td class=\"col0\">1980.0</td><td class=\"col1\">341.4</td><td class=\"col2\">310.7</td><td class=\"col3\">391.8</td><td class=\"col4\">. . .</td><td class=\"col5\">380.2</td><td class=\"col6\">349.5</td><td class=\"col7\">419.6</td><td class=\"col8\">. . .</td><td class=\"col9\">296.8</td><td class=\"col10\">274.6</td><td class=\"col11\">346.5</td><td class=\"col12\">. . .</td><tr class=1985><td class=\"col0\">1985.0</td><td class=\"col1\">478.6</td><td class=\"col2\">424.8</td><td class=\"col3\">581.2</td><td class=\"col4\">. . .</td><td class=\"col5\">538.4</td><td class=\"col6\">480.5</td><td class=\"col7\">627.5</td><td class=\"col8\">. . .</td><td class=\"col9\">412.1</td><td class=\"col10\">372.0</td><td class=\"col11\">511.0</td><td class=\"col12\">. . .</td><tr class=1990><td class=\"col0\">1990.0</td><td class=\"col1\">602.6</td><td class=\"col2\">537.9</td><td class=\"col3\">742.8</td><td class=\"col4\">. . .</td><td class=\"col5\">679.3</td><td class=\"col6\">611.2</td><td class=\"col7\">803.6</td><td class=\"col8\">. . .</td><td class=\"col9\">518.6</td><td class=\"col10\">466.4</td><td class=\"col11\">656.8</td><td class=\"col12\">. . .</td><tr class=1995><td class=\"col0\">1995.0</td><td class=\"col1\">719.8</td><td class=\"col2\">649.5</td><td class=\"col3\">885.6</td><td class=\"col4\">. . .</td><td class=\"col5\">810.2</td><td class=\"col6\">735.4</td><td class=\"col7\">963.7</td><td class=\"col8\">. . .</td><td class=\"col9\">621.2</td><td class=\"col10\">563.8</td><td class=\"col11\">780.4</td><td class=\"col12\">. . .</td><tr class=1996><td class=\"col0\">1996.0</td><td class=\"col1\">745.0</td><td class=\"col2\">678.3</td><td class=\"col3\">908.7</td><td class=\"col4\">. . .</td><td class=\"col5\">838.1</td><td class=\"col6\">763.1</td><td class=\"col7\">997.8</td><td class=\"col8\">. . .</td><td class=\"col9\">643.7</td><td class=\"col10\">593.9</td><td class=\"col11\">788.0</td><td class=\"col12\">. . .</td><tr class=1997><td class=\"col0\">1997.0</td><td class=\"col1\">765.0</td><td class=\"col2\">705.9</td><td class=\"col3\">915.9</td><td class=\"col4\">. . .</td><td class=\"col5\">860.5</td><td class=\"col6\">786.6</td><td class=\"col7\">1025.1</td><td class=\"col8\">. . .</td><td class=\"col9\">662.5</td><td class=\"col10\">626.1</td><td class=\"col11\">771.3</td><td class=\"col12\">. . .</td><tr class=1998><td class=\"col0\">1998.0</td><td class=\"col1\">779.7</td><td class=\"col2\">720.3</td><td class=\"col3\">932.5</td><td class=\"col4\">. . .</td><td class=\"col5\">876.9</td><td class=\"col6\">802.4</td><td class=\"col7\">1044.5</td><td class=\"col8\">. . .</td><td class=\"col9\">675.9</td><td class=\"col10\">639.5</td><td class=\"col11\">785.4</td><td class=\"col12\">. . .</td><tr class=1999><td class=\"col0\">1999.0</td><td class=\"col1\">804.3</td><td class=\"col2\">744.4</td><td class=\"col3\">959.2</td><td class=\"col4\">. . .</td><td class=\"col5\">904.6</td><td class=\"col6\">829.3</td><td class=\"col7\">1075.3</td><td class=\"col8\">. . .</td><td class=\"col9\">697.5</td><td class=\"col10\">661.0</td><td class=\"col11\">807.5</td><td class=\"col12\">. . .</td><tr class=2000><td class=\"col0\">2000.0</td><td class=\"col1\">844.5</td><td class=\"col2\">778.5</td><td class=\"col3\">1008.4</td><td class=\"col4\">. . .</td><td class=\"col5\">951.1</td><td class=\"col6\">867.2</td><td class=\"col7\">1131.1</td><td class=\"col8\">. . .</td><td class=\"col9\">729.9</td><td class=\"col10\">691.2</td><td class=\"col11\">843.4</td><td class=\"col12\">. . .</td><tr class=2001><td class=\"col0\">2001.0</td><td class=\"col1\">874.4</td><td class=\"col2\">808.5</td><td class=\"col3\">1038.7</td><td class=\"col4\">. . .</td><td class=\"col5\">984.6</td><td class=\"col6\">900.7</td><td class=\"col7\">1166.0</td><td class=\"col8\">. . .</td><td class=\"col9\">756.2</td><td class=\"col10\">717.6</td><td class=\"col11\">869.2</td><td class=\"col12\">. . .</td><tr class=2002><td class=\"col0\">2002.0</td><td class=\"col1\">895.0</td><td class=\"col2\">829.8</td><td class=\"col3\">1058.9</td><td class=\"col4\">. . .</td><td class=\"col5\">1007.8</td><td class=\"col6\">925.2</td><td class=\"col7\">1188.5</td><td class=\"col8\">. . .</td><td class=\"col9\">774.1</td><td class=\"col10\">735.8</td><td class=\"col11\">886.9</td><td class=\"col12\">. . .</td><tr class=2003><td class=\"col0\">2003.0</td><td class=\"col1\">922.1</td><td class=\"col2\">857.8</td><td class=\"col3\">1086.8</td><td class=\"col4\">. . .</td><td class=\"col5\">1038.7</td><td class=\"col6\">957.5</td><td class=\"col7\">1220.6</td><td class=\"col8\">. . .</td><td class=\"col9\">797.6</td><td class=\"col10\">759.5</td><td class=\"col11\">911.3</td><td class=\"col12\">. . .</td><tr class=2004><td class=\"col0\">2004.0</td><td class=\"col1\">954.9</td><td class=\"col2\">891.1</td><td class=\"col3\">1121.0</td><td class=\"col4\">. . .</td><td class=\"col5\">1076.1</td><td class=\"col6\">995.4</td><td class=\"col7\">1261.5</td><td class=\"col8\">. . .</td><td class=\"col9\">826.1</td><td class=\"col10\">788.0</td><td class=\"col11\">940.1</td><td class=\"col12\">. . .</td><tr class=2005><td class=\"col0\">2005.0</td><td class=\"col1\">1002.0</td><td class=\"col2\">936.9</td><td class=\"col3\">1174.8</td><td class=\"col4\">. . .</td><td class=\"col5\">1129.5</td><td class=\"col6\">1047.4</td><td class=\"col7\">1322.7</td><td class=\"col8\">. . .</td><td class=\"col9\">867.3</td><td class=\"col10\">828.2</td><td class=\"col11\">986.4</td><td class=\"col12\">. . .</td><tr class=2006><td class=\"col0\">2006.0</td><td class=\"col1\">1044.4</td><td class=\"col2\">978.2</td><td class=\"col3\">1222.9</td><td class=\"col4\">. . .</td><td class=\"col5\">1177.5</td><td class=\"col6\">1094.1</td><td class=\"col7\">1377.2</td><td class=\"col8\">. . .</td><td class=\"col9\">904.6</td><td class=\"col10\">864.4</td><td class=\"col11\">1028.5</td><td class=\"col12\">. . .</td><tr class=2007><td class=\"col0\">2007.0</td><td class=\"col1\">1078.6</td><td class=\"col2\">1011.3</td><td class=\"col3\">1262.3</td><td class=\"col4\">. . .</td><td class=\"col5\">1215.7</td><td class=\"col6\">1131.2</td><td class=\"col7\">1421.1</td><td class=\"col8\">. . .</td><td class=\"col9\">935.2</td><td class=\"col10\">894.0</td><td class=\"col11\">1063.3</td><td class=\"col12\">. . .</td><tr class=2008><td class=\"col0\">2008.0</td><td class=\"col1\">1152.9</td><td class=\"col2\">1080.8</td><td class=\"col3\">1354.6</td><td class=\"col4\">. . .</td><td class=\"col5\">1299.1</td><td class=\"col6\">1209.8</td><td class=\"col7\">1519.5</td><td class=\"col8\">. . .</td><td class=\"col9\">1000.7</td><td class=\"col10\">955.6</td><td class=\"col11\">1145.8</td><td class=\"col12\">. . .</td><tr class=2009><td class=\"col0\">2009.0</td><td class=\"col1\">1164.3</td><td class=\"col2\">1091.1</td><td class=\"col3\">1371.1</td><td class=\"col4\">. . .</td><td class=\"col5\">1311.7</td><td class=\"col6\">1221.4</td><td class=\"col7\">1536.8</td><td class=\"col8\">. . .</td><td class=\"col9\">1011.4</td><td class=\"col10\">964.7</td><td class=\"col11\">1162.5</td><td class=\"col12\">. . .</td><tr class=2010><td class=\"col0\">2010.0</td><td class=\"col1\">1175.5</td><td class=\"col2\">1100.7</td><td class=\"col3\">1386.8</td><td class=\"col4\">. . .</td><td class=\"col5\">1323.1</td><td class=\"col6\">1231.1</td><td class=\"col7\">1552.7</td><td class=\"col8\">. . .</td><td class=\"col9\">1022.9</td><td class=\"col10\">974.8</td><td class=\"col11\">1178.9</td><td class=\"col12\">. . .</td><tr class=2011><td class=\"col0\">2011.0</td><td class=\"col1\">1228.57</td><td class=\"col2\">1148.83</td><td class=\"col3\">1453.27</td><td class=\"col4\">. . .</td><td class=\"col5\">1381.38</td><td class=\"col6\">1283.24</td><td class=\"col7\">1625.49</td><td class=\"col8\">. . .</td><td class=\"col9\">1071.53</td><td class=\"col10\">1019.81</td><td class=\"col11\">1238.59</td><td class=\"col12\">. . .</td><tr class=2012><td class=\"col0\">2012.0</td><td class=\"col1\">1261.61</td><td class=\"col2\">1176.36</td><td class=\"col3\">1497.4</td><td class=\"col4\">. . .</td><td class=\"col5\">1417.05</td><td class=\"col6\">1311.91</td><td class=\"col7\">1673.46</td><td class=\"col8\">. . .</td><td class=\"col9\">1102.77</td><td class=\"col10\">1047.12</td><td class=\"col11\">1279.19</td><td class=\"col12\">. . .</td><tr class=2013><td class=\"col0\">2013.0</td><td class=\"col1\">1293.83</td><td class=\"col2\">1202.12</td><td class=\"col3\">1539.74</td><td class=\"col4\">. . .</td><td class=\"col5\">1451.27</td><td class=\"col6\">1338.17</td><td class=\"col7\">1718.59</td><td class=\"col8\">. . .</td><td class=\"col9\">1133.83</td><td class=\"col10\">1073.35</td><td class=\"col11\">1319.66</td><td class=\"col12\">. . .</td><tr class=2014><td class=\"col0\">2014.0</td><td class=\"col1\">1328.58</td><td class=\"col2\">1229.91</td><td class=\"col3\">1584.85</td><td class=\"col4\">. . .</td><td class=\"col5\">1488.07</td><td class=\"col6\">1366.3</td><td class=\"col7\">1766.94</td><td class=\"col8\">. . .</td><td class=\"col9\">1167.49</td><td class=\"col10\">1101.75</td><td class=\"col11\">1362.83</td><td class=\"col12\">. . .</td></tbody>", 
         "header": "<thead><tr><th rowspan=\"2\"  class=\"series col0\" >Year</th><th colspan=\"4\"  class=\"series col1\" >All retired workers</th><th colspan=\"4\"  class=\"series col5\" >Men</th><th colspan=\"4\"  class=\"series col9\" >Women</th></tr><tr><th class=\"series col1\" >Total</th><th class=\"series col2\" >With reduction for early retirement</th><th class=\"series col3\" >Without reduction for early retirement</th><th class=\"series col4\" >Early retirees\nas a percentage of total</th><th class=\"series col5\" >Subtotal</th><th class=\"series col6\" >With reduction for early retirement</th><th class=\"series col7\" >Without reduction for early retirement</th><th class=\"series col8\" >Early retirees\nas a percentage of subtotal</th><th class=\"series col9\" >Subtotal</th><th class=\"series col10\" >With reduction for early retirement</th><th class=\"series col11\" >Without reduction for early retirement</th><th class=\"series col12\" >Early retirees\nas a percentage of subtotal</th></tr></thead>"
     }, 
     "title": {
         "catID": "5.B", 
         "category": "OASDI Current-Pay Benefits: Retired Workers", 
         "id": "5_B8-1", 
-        "name": "Number and average monthly benefit with and without reduction for early retirement, by sex, December 1956\u20132013, selected years :: Subtable : Average monthly benefit (dollars)"
+        "name": "Number and average monthly benefit with and without reduction for early retirement, by sex, December 1956\u20132014, selected years :: Subtable : Average monthly benefit (dollars)"
     }
 }

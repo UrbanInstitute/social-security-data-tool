@@ -11,16 +11,6 @@
             "type": "barLabel"
         }, 
         "col1": {
-            "label": "2010", 
-            "series": [
-                80040.0, 
-                128703.0, 
-                102062.0, 
-                106664.0
-            ], 
-            "type": "number"
-        }, 
-        "col2": {
             "label": "2011", 
             "series": [
                 106664.0, 
@@ -30,7 +20,7 @@
             ], 
             "type": "number"
         }, 
-        "col3": {
+        "col2": {
             "label": "2012", 
             "series": [
                 153242.0, 
@@ -40,7 +30,7 @@
             ], 
             "type": "number"
         }, 
-        "col4": {
+        "col3": {
             "label": "2013", 
             "series": [
                 161070.0, 
@@ -49,11 +39,21 @@
                 157311.0
             ], 
             "type": "number"
+        }, 
+        "col4": {
+            "label": "2014", 
+            "series": [
+                157311.0, 
+                155352.0, 
+                162280.0, 
+                150383.0
+            ], 
+            "type": "number"
         }
     }, 
     "footnotes": [
         {
-            "content": "Sources: Social Security Administration, Office of Disability Adjudication and Review. Actual data from the Appeals Review Processing System and Key Workload Indicator Report.", 
+            "content": "SOURCES: Social Security Administration, Office of Disability Adjudication and Review. Actual data from the Appeals Review Processing System and Key Workload Indicator Report.", 
             "type": "note"
         }, 
         {
@@ -62,23 +62,22 @@
             "type": "footnote"
         }, 
         {
-            "content": "The Appeals Review Processing System recategorized 17 cases after they had been counted as receipts or dispositions.", 
-            "symbol": "b.", 
-            "type": "footnote"
+            "content": "CONTACT: Chuck Gramens (703) 605-8413 or statistics@ssa.gov.", 
+            "type": "note"
         }, 
         {
-            "content": "File available from\nUS Social Security Administration \u2022 Office of Retirement and Disability Policy \u2022 Office of Research, Evaluation, and Statistics,\n<span class =\"suppTitle\">Annual Statistical Supplement, 2014</span>,\nhttp://www.socialsecurity.gov/policy/docs/statcomps/supplement/2014/.", 
+            "content": "File available from:\nU.S. Social Security Administration \u2022 Office of Retirement and Disability Policy \u2022 Office of Research, Evaluation, and Statistics\nAnnual Statistical Supplement, 2015\nhttps://www.socialsecurity.gov/policy/docs/statcomps/supplement/2015/", 
             "type": "note"
         }
     ], 
     "html": {
-        "body": "<tbody><tr class=Beginning-of-year pending><td class=\"col0\">Beginning-of-year pending</td><td class=\"col2\">80040.0</td><td class=\"col3\">106664.0</td><td class=\"col4\"><span class = \"top_footnote top_a\">a</span>153,242</td><td class=\"col5\">161070.0</td><tr class=Receipts><td class=\"col0\">Receipts</td><td class=\"col2\">128703.0</td><td class=\"col3\">173332.0</td><td class=\"col4\">173848.0</td><td class=\"col5\">172492.0</td><tr class=Dispositions><td class=\"col0\">Dispositions</td><td class=\"col2\">102062.0</td><td class=\"col3\">126992.0</td><td class=\"col4\">166020.0</td><td class=\"col5\">176251.0</td><tr class=End-of-year pending><td class=\"col0\">End-of-year pending</td><td class=\"col2\"><span class = \"top_footnote top_b\">b</span>106,664</td><td class=\"col3\">153004.0</td><td class=\"col4\">161070.0</td><td class=\"col5\">157311.0</td></tbody>", 
-        "header": "<thead><tr><th class=\"series col0\" >Cases</th><th class=\"series col1\" >2010</th><th class=\"series col2\" >2011</th><th class=\"series col3\" >2012</th><th class=\"series col4\" >2013</th></tr></thead>"
+        "body": "<tbody><tr class=Beginning-of-year pending><td class=\"col0\">Beginning-of-year pending</td><td class=\"col2\">106664.0</td><td class=\"col3\"><span class = \"top_footnote top_a\">a</span>153,242</td><td class=\"col4\">161070.0</td><td class=\"col5\">157311.0</td><tr class=Receipts><td class=\"col0\">Receipts</td><td class=\"col2\">173332.0</td><td class=\"col3\">173848.0</td><td class=\"col4\">172492.0</td><td class=\"col5\">155352.0</td><tr class=Dispositions><td class=\"col0\">Dispositions</td><td class=\"col2\">126992.0</td><td class=\"col3\">166020.0</td><td class=\"col4\">176251.0</td><td class=\"col5\">162280.0</td><tr class=End-of-year pending><td class=\"col0\">End-of-year pending</td><td class=\"col2\">153004.0</td><td class=\"col3\">161070.0</td><td class=\"col4\">157311.0</td><td class=\"col5\">150383.0</td></tbody>", 
+        "header": "<thead><tr><th class=\"series col0\" >Cases</th><th class=\"series col1\" >2011</th><th class=\"series col2\" >2012</th><th class=\"series col3\" >2013</th><th class=\"series col4\" >2014</th></tr></thead>"
     }, 
     "title": {
         "catID": "2.F", 
         "category": "SSA Administrative Data: Hearings and Appeals", 
         "id": "2_F11", 
-        "name": "Number of SSA Appeals Council cases, fiscal years 2010\u20132013"
+        "name": "Number of SSA Appeals Council cases, fiscal years 2011\u20132014"
     }
 }

@@ -22,7 +22,8 @@
                 518.44, 
                 519.38, 
                 537.41, 
-                547.15
+                547.15, 
+                550.11
             ], 
             "type": "dollar"
         }, 
@@ -47,7 +48,8 @@
                 499.2, 
                 501.58, 
                 520.73, 
-                530.65
+                530.65, 
+                537.04
             ], 
             "type": "dollar"
         }, 
@@ -72,7 +74,8 @@
                 119.71, 
                 114.55, 
                 118.12, 
-                117.75
+                117.75, 
+                138.43
             ], 
             "type": "dollar"
         }, 
@@ -96,7 +99,8 @@
                 2010, 
                 2011, 
                 2012, 
-                2013
+                2013, 
+                2014
             ], 
             "type": "year"
         }
@@ -115,18 +119,18 @@
             "type": "note"
         }, 
         {
-            "content": "File available from:\nU.S. Social Security Administration \u2022 Office of Retirement and Disability Policy \u2022 Office of Research, Evaluation, and Statistics\n<span class =\"suppTitle\">Annual Statistical Supplement, 2014</span>\nhttp://www.socialsecurity.gov/policy/docs/statcomps/supplement/2014/", 
+            "content": "File available from:\nU.S. Social Security Administration \u2022 Office of Retirement and Disability Policy \u2022 Office of Research, Evaluation, and Statistics\nAnnual Statistical Supplement, 2015\nhttps://www.socialsecurity.gov/policy/docs/statcomps/supplement/2015/", 
             "type": "note"
         }
     ], 
     "html": {
-        "body": "<tbody><tr class=1975><td class=\"col0\">1975.0</td><td class=\"col1\">128.49</td><td class=\"col2\">108.55</td><td class=\"col3\">65.68</td><tr class=1980><td class=\"col0\">1980.0</td><td class=\"col1\">188.7</td><td class=\"col2\">160.78</td><td class=\"col3\">94.38</td><tr class=1985><td class=\"col0\">1985.0</td><td class=\"col1\">246.5</td><td class=\"col2\">219.61</td><td class=\"col3\">96.63</td><tr class=1990><td class=\"col0\">1990.0</td><td class=\"col1\">302.78</td><td class=\"col2\">266.84</td><td class=\"col3\">123.36</td><tr class=1995><td class=\"col0\">1995.0</td><td class=\"col1\">358.18</td><td class=\"col2\">336.39</td><td class=\"col3\">94.26</td><tr class=2000><td class=\"col0\">2000.0</td><td class=\"col1\">397.92</td><td class=\"col2\">373.41</td><td class=\"col3\">105.86</td><tr class=2001><td class=\"col0\">2001.0</td><td class=\"col1\">412.46</td><td class=\"col2\">387.8</td><td class=\"col3\">106.72</td><tr class=2002><td class=\"col0\">2002.0</td><td class=\"col1\">424.75</td><td class=\"col2\">397.71</td><td class=\"col3\">119.94</td><tr class=2003><td class=\"col0\">2003.0</td><td class=\"col1\">433.16</td><td class=\"col2\">403.76</td><td class=\"col3\">129.89</td><tr class=2004><td class=\"col0\">2004.0</td><td class=\"col1\">444.4</td><td class=\"col2\">415.59</td><td class=\"col3\">129.51</td><tr class=2005><td class=\"col0\">2005.0</td><td class=\"col1\">455.13</td><td class=\"col2\">426.95</td><td class=\"col3\">149.8</td><tr class=2006><td class=\"col0\">2006.0</td><td class=\"col1\">471.0</td><td class=\"col2\">443.61</td><td class=\"col3\">149.71</td><tr class=2007><td class=\"col0\">2007.0</td><td class=\"col1\">484.67</td><td class=\"col2\">457.67</td><td class=\"col3\">149.87</td><tr class=2008><td class=\"col0\">2008.0</td><td class=\"col1\">493.7</td><td class=\"col2\">467.24</td><td class=\"col3\">149.33</td><tr class=2009><td class=\"col0\">2009.0</td><td class=\"col1\">516.93</td><td class=\"col2\">497.26</td><td class=\"col3\">120.48</td><tr class=2010><td class=\"col0\">2010.0</td><td class=\"col1\">518.44</td><td class=\"col2\">499.2</td><td class=\"col3\">119.71</td><tr class=2011><td class=\"col0\">2011.0</td><td class=\"col1\">519.38</td><td class=\"col2\">501.58</td><td class=\"col3\">114.55</td><tr class=2012><td class=\"col0\">2012.0</td><td class=\"col1\">537.41</td><td class=\"col2\">520.73</td><td class=\"col3\">118.12</td><tr class=2013><td class=\"col0\">2013.0</td><td class=\"col1\">547.15</td><td class=\"col2\">530.65</td><td class=\"col3\">117.75</td></tbody>", 
+        "body": "<tbody><tr class=1975><td class=\"col0\">1975.0</td><td class=\"col1\">128.49</td><td class=\"col2\">108.55</td><td class=\"col3\">65.68</td><tr class=1980><td class=\"col0\">1980.0</td><td class=\"col1\">188.7</td><td class=\"col2\">160.78</td><td class=\"col3\">94.38</td><tr class=1985><td class=\"col0\">1985.0</td><td class=\"col1\">246.5</td><td class=\"col2\">219.61</td><td class=\"col3\">96.63</td><tr class=1990><td class=\"col0\">1990.0</td><td class=\"col1\">302.78</td><td class=\"col2\">266.84</td><td class=\"col3\">123.36</td><tr class=1995><td class=\"col0\">1995.0</td><td class=\"col1\">358.18</td><td class=\"col2\">336.39</td><td class=\"col3\">94.26</td><tr class=2000><td class=\"col0\">2000.0</td><td class=\"col1\">397.92</td><td class=\"col2\">373.41</td><td class=\"col3\">105.86</td><tr class=2001><td class=\"col0\">2001.0</td><td class=\"col1\">412.46</td><td class=\"col2\">387.8</td><td class=\"col3\">106.72</td><tr class=2002><td class=\"col0\">2002.0</td><td class=\"col1\">424.75</td><td class=\"col2\">397.71</td><td class=\"col3\">119.94</td><tr class=2003><td class=\"col0\">2003.0</td><td class=\"col1\">433.16</td><td class=\"col2\">403.76</td><td class=\"col3\">129.89</td><tr class=2004><td class=\"col0\">2004.0</td><td class=\"col1\">444.4</td><td class=\"col2\">415.59</td><td class=\"col3\">129.51</td><tr class=2005><td class=\"col0\">2005.0</td><td class=\"col1\">455.13</td><td class=\"col2\">426.95</td><td class=\"col3\">149.8</td><tr class=2006><td class=\"col0\">2006.0</td><td class=\"col1\">471.0</td><td class=\"col2\">443.61</td><td class=\"col3\">149.71</td><tr class=2007><td class=\"col0\">2007.0</td><td class=\"col1\">484.67</td><td class=\"col2\">457.67</td><td class=\"col3\">149.87</td><tr class=2008><td class=\"col0\">2008.0</td><td class=\"col1\">493.7</td><td class=\"col2\">467.24</td><td class=\"col3\">149.33</td><tr class=2009><td class=\"col0\">2009.0</td><td class=\"col1\">516.93</td><td class=\"col2\">497.26</td><td class=\"col3\">120.48</td><tr class=2010><td class=\"col0\">2010.0</td><td class=\"col1\">518.44</td><td class=\"col2\">499.2</td><td class=\"col3\">119.71</td><tr class=2011><td class=\"col0\">2011.0</td><td class=\"col1\">519.38</td><td class=\"col2\">501.58</td><td class=\"col3\">114.55</td><tr class=2012><td class=\"col0\">2012.0</td><td class=\"col1\">537.41</td><td class=\"col2\">520.73</td><td class=\"col3\">118.12</td><tr class=2013><td class=\"col0\">2013.0</td><td class=\"col1\">547.15</td><td class=\"col2\">530.65</td><td class=\"col3\">117.75</td><tr class=2014><td class=\"col0\">2014.0</td><td class=\"col1\">550.11</td><td class=\"col2\">537.04</td><td class=\"col3\">138.43</td></tbody>", 
         "header": "<thead><tr><th class=\"series col0\" >Year</th><th class=\"series col1\" >Total</th><th class=\"series col2\" >Federal SSI</th><th class=\"series col3\" >Federally administered state supplementation</th></tr></thead>"
     }, 
     "title": {
         "catID": "7.A", 
         "category": "SSI: Summary", 
         "id": "7_A5-3", 
-        "name": "Average monthly federally administered payment, by eligibility category, December 1975\u20132013, selected years (in\u00a0dollars) :: Subtable : Disabled"
+        "name": "Average monthly federally administered payment, by eligibility category, December 1975\u20132014, selected years (in\u00a0dollars) :: Subtable : Disabled"
     }
 }

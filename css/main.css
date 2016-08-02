@@ -144,6 +144,7 @@ body{
     left: 400px;
     position: fixed;
     z-index: 2;    
+    border-right: 30px solid white;
 }
 #singleYearBarChart{
     left: 2000px;

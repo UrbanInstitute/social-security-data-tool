@@ -7,7 +7,7 @@ url_frags = [ 'lr4b1', 'lr4b2', 'lr4b3', 'lr4b4', 'lr5a1', 'lr5a2', 'lr5a3', 'lr
 # url = sys.argv[1]
 for frag in url_frags:
 
-    url = "https://www.socialsecurity.gov/OACT/TR/2015/%s.html"%frag
+    url = "https://www.socialsecurity.gov/OACT/TR/2016/%s.html"%frag
     soup = BeautifulSoup( urllib2.urlopen( url ), 'html5lib' )
 
     # Data is in every table but the first

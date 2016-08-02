@@ -210,299 +210,49 @@
                 }, 
                 {
                     "hc-key": "as-6514", 
-                    "value": "American Samoa g"
+                    "value": "American Samoa d"
                 }, 
                 {
                     "hc-key": "as-6514", 
-                    "value": "American Samoa g"
+                    "value": "American Samoa d"
                 }, 
                 {
                     "hc-key": "gu-3605", 
-                    "value": "Guam g"
+                    "value": "Guam d"
                 }, 
                 {
                     "hc-key": "mp-ro", 
-                    "value": "Northern Mariana Islands g"
+                    "value": "Northern Mariana Islands d"
                 }, 
                 {
                     "hc-key": "mp-ro", 
-                    "value": "Northern Mariana Islands g"
+                    "value": "Northern Mariana Islands d"
                 }, 
                 {
                     "hc-key": "mp-ro", 
-                    "value": "Northern Mariana Islands g"
+                    "value": "Northern Mariana Islands d"
                 }, 
                 {
                     "hc-key": "pr-3614", 
-                    "value": "Puerto Rico g"
+                    "value": "Puerto Rico d"
                 }, 
                 {
                     "hc-key": "vi-6399", 
-                    "value": "U.S. Virgin Islands g"
+                    "value": "U.S. Virgin Islands d"
                 }, 
                 {
                     "hc-key": "vi-6399", 
-                    "value": "U.S. Virgin Islands g"
+                    "value": "U.S. Virgin Islands d"
                 }, 
                 {
                     "hc-key": "vi-6399", 
-                    "value": "U.S. Virgin Islands g"
+                    "value": "U.S. Virgin Islands d"
                 }
             ], 
             "type": "percent"
         }, 
         "col2": {
-            "label": "Federal medical assistance percentage a :: 2013 b", 
-            "series": [
-                {
-                    "hc-key": "us-al", 
-                    "value": 68.53
-                }, 
-                {
-                    "hc-key": "us-ak", 
-                    "value": 50.0
-                }, 
-                {
-                    "hc-key": "us-az", 
-                    "value": 65.68
-                }, 
-                {
-                    "hc-key": "us-ar", 
-                    "value": 70.17
-                }, 
-                {
-                    "hc-key": "us-ca", 
-                    "value": 50.0
-                }, 
-                {
-                    "hc-key": "us-co", 
-                    "value": 50.0
-                }, 
-                {
-                    "hc-key": "us-ct", 
-                    "value": 50.0
-                }, 
-                {
-                    "hc-key": "us-de", 
-                    "value": 55.67
-                }, 
-                {
-                    "hc-key": "us-dc", 
-                    "value": 70.0
-                }, 
-                {
-                    "hc-key": "us-fl", 
-                    "value": 58.08
-                }, 
-                {
-                    "hc-key": "us-ga", 
-                    "value": 65.56
-                }, 
-                {
-                    "hc-key": "us-hi", 
-                    "value": 51.86
-                }, 
-                {
-                    "hc-key": "us-id", 
-                    "value": 71.0
-                }, 
-                {
-                    "hc-key": "us-il", 
-                    "value": 50.0
-                }, 
-                {
-                    "hc-key": "us-in", 
-                    "value": 67.16
-                }, 
-                {
-                    "hc-key": "us-ia", 
-                    "value": 59.59
-                }, 
-                {
-                    "hc-key": "us-ks", 
-                    "value": 56.51
-                }, 
-                {
-                    "hc-key": "us-ky", 
-                    "value": 70.55
-                }, 
-                {
-                    "hc-key": "us-la", 
-                    "value": 61.24
-                }, 
-                {
-                    "hc-key": "us-me", 
-                    "value": 62.57
-                }, 
-                {
-                    "hc-key": "us-md", 
-                    "value": 50.0
-                }, 
-                {
-                    "hc-key": "us-ma", 
-                    "value": 50.0
-                }, 
-                {
-                    "hc-key": "us-mi", 
-                    "value": 66.39
-                }, 
-                {
-                    "hc-key": "us-mn", 
-                    "value": 50.0
-                }, 
-                {
-                    "hc-key": "us-ms", 
-                    "value": 73.43
-                }, 
-                {
-                    "hc-key": "us-mo", 
-                    "value": 61.37
-                }, 
-                {
-                    "hc-key": "us-mt", 
-                    "value": 66.0
-                }, 
-                {
-                    "hc-key": "us-ne", 
-                    "value": 55.76
-                }, 
-                {
-                    "hc-key": "us-nv", 
-                    "value": 59.74
-                }, 
-                {
-                    "hc-key": "us-nh", 
-                    "value": 50.0
-                }, 
-                {
-                    "hc-key": "us-nj", 
-                    "value": 50.0
-                }, 
-                {
-                    "hc-key": "us-nm", 
-                    "value": 69.07
-                }, 
-                {
-                    "hc-key": "us-ny", 
-                    "value": 50.0
-                }, 
-                {
-                    "hc-key": "us-nc", 
-                    "value": 65.51
-                }, 
-                {
-                    "hc-key": "us-nd", 
-                    "value": 52.27
-                }, 
-                {
-                    "hc-key": "us-oh", 
-                    "value": 63.58
-                }, 
-                {
-                    "hc-key": "us-ok", 
-                    "value": 64.0
-                }, 
-                {
-                    "hc-key": "us-or", 
-                    "value": 62.44
-                }, 
-                {
-                    "hc-key": "us-pa", 
-                    "value": 54.28
-                }, 
-                {
-                    "hc-key": "us-ri", 
-                    "value": 51.26
-                }, 
-                {
-                    "hc-key": "us-sc", 
-                    "value": 70.43
-                }, 
-                {
-                    "hc-key": "us-sd", 
-                    "value": 56.19
-                }, 
-                {
-                    "hc-key": "us-tn", 
-                    "value": 66.13
-                }, 
-                {
-                    "hc-key": "us-tx", 
-                    "value": 59.3
-                }, 
-                {
-                    "hc-key": "us-ut", 
-                    "value": 69.61
-                }, 
-                {
-                    "hc-key": "us-vt", 
-                    "value": 56.04
-                }, 
-                {
-                    "hc-key": "us-va", 
-                    "value": 50.0
-                }, 
-                {
-                    "hc-key": "us-wa", 
-                    "value": 50.0
-                }, 
-                {
-                    "hc-key": "us-wv", 
-                    "value": 72.04
-                }, 
-                {
-                    "hc-key": "us-wi", 
-                    "value": 59.74
-                }, 
-                {
-                    "hc-key": "us-wy", 
-                    "value": 50.0
-                }, 
-                {
-                    "hc-key": "as-6514", 
-                    "value": 55.0
-                }, 
-                {
-                    "hc-key": "as-6514", 
-                    "value": 55.0
-                }, 
-                {
-                    "hc-key": "gu-3605", 
-                    "value": 55.0
-                }, 
-                {
-                    "hc-key": "mp-ro", 
-                    "value": 55.0
-                }, 
-                {
-                    "hc-key": "mp-ro", 
-                    "value": 55.0
-                }, 
-                {
-                    "hc-key": "mp-ro", 
-                    "value": 55.0
-                }, 
-                {
-                    "hc-key": "pr-3614", 
-                    "value": 55.0
-                }, 
-                {
-                    "hc-key": "vi-6399", 
-                    "value": 55.0
-                }, 
-                {
-                    "hc-key": "vi-6399", 
-                    "value": 55.0
-                }, 
-                {
-                    "hc-key": "vi-6399", 
-                    "value": 55.0
-                }
-            ], 
-            "type": "percent"
-        }, 
-        "col3": {
-            "label": "Federal medical assistance percentage a :: 2014 c", 
+            "label": "Federal medical assistance percentage a :: 2014", 
             "series": [
                 {
                     "hc-key": "us-al", 
@@ -751,8 +501,8 @@
             ], 
             "type": "percent"
         }, 
-        "col4": {
-            "label": "Federal medical assistance percentage a :: 2015 d", 
+        "col3": {
+            "label": "Federal medical assistance percentage a :: 2015", 
             "series": [
                 {
                     "hc-key": "us-al", 
@@ -1001,258 +751,258 @@
             ], 
             "type": "percent"
         }, 
-        "col5": {
-            "label": "Enhanced federal medical assistance percentage e :: 2013 b", 
+        "col4": {
+            "label": "Federal medical assistance percentage a :: 2016", 
             "series": [
                 {
                     "hc-key": "us-al", 
-                    "value": 77.97
+                    "value": 69.87
                 }, 
                 {
                     "hc-key": "us-ak", 
-                    "value": 65.0
+                    "value": 50.0
                 }, 
                 {
                     "hc-key": "us-az", 
-                    "value": 75.98
+                    "value": 68.92
                 }, 
                 {
                     "hc-key": "us-ar", 
-                    "value": 79.12
+                    "value": 70.0
                 }, 
                 {
                     "hc-key": "us-ca", 
-                    "value": 65.0
+                    "value": 50.0
                 }, 
                 {
                     "hc-key": "us-co", 
-                    "value": 65.0
+                    "value": 50.72
                 }, 
                 {
                     "hc-key": "us-ct", 
-                    "value": 65.0
+                    "value": 50.0
                 }, 
                 {
                     "hc-key": "us-de", 
-                    "value": 68.97
+                    "value": 54.83
                 }, 
                 {
                     "hc-key": "us-dc", 
-                    "value": 79.0
+                    "value": 70.0
                 }, 
                 {
                     "hc-key": "us-fl", 
-                    "value": 70.66
+                    "value": 60.67
                 }, 
                 {
                     "hc-key": "us-ga", 
-                    "value": 75.89
+                    "value": 67.55
                 }, 
                 {
                     "hc-key": "us-hi", 
-                    "value": 66.3
+                    "value": 53.98
                 }, 
                 {
                     "hc-key": "us-id", 
-                    "value": 79.7
+                    "value": 71.24
                 }, 
                 {
                     "hc-key": "us-il", 
-                    "value": 65.0
+                    "value": 50.89
                 }, 
                 {
                     "hc-key": "us-in", 
-                    "value": 77.01
+                    "value": 66.6
                 }, 
                 {
                     "hc-key": "us-ia", 
-                    "value": 71.71
+                    "value": 54.91
                 }, 
                 {
                     "hc-key": "us-ks", 
-                    "value": 69.56
+                    "value": 55.96
                 }, 
                 {
                     "hc-key": "us-ky", 
-                    "value": 79.39
+                    "value": 70.32
                 }, 
                 {
                     "hc-key": "us-la", 
-                    "value": 72.87
+                    "value": 62.21
                 }, 
                 {
                     "hc-key": "us-me", 
-                    "value": 73.8
+                    "value": 62.67
                 }, 
                 {
                     "hc-key": "us-md", 
-                    "value": 65.0
+                    "value": 50.0
                 }, 
                 {
                     "hc-key": "us-ma", 
-                    "value": 65.0
+                    "value": 50.0
                 }, 
                 {
                     "hc-key": "us-mi", 
-                    "value": 76.47
+                    "value": 65.6
                 }, 
                 {
                     "hc-key": "us-mn", 
-                    "value": 65.0
+                    "value": 50.0
                 }, 
                 {
                     "hc-key": "us-ms", 
-                    "value": 81.4
+                    "value": 74.17
                 }, 
                 {
                     "hc-key": "us-mo", 
-                    "value": 72.96
+                    "value": 63.28
                 }, 
                 {
                     "hc-key": "us-mt", 
-                    "value": 76.2
+                    "value": 65.24
                 }, 
                 {
                     "hc-key": "us-ne", 
-                    "value": 69.03
+                    "value": 51.16
                 }, 
                 {
                     "hc-key": "us-nv", 
-                    "value": 71.82
+                    "value": 64.93
                 }, 
                 {
                     "hc-key": "us-nh", 
-                    "value": 65.0
+                    "value": 50.0
                 }, 
                 {
                     "hc-key": "us-nj", 
-                    "value": 65.0
+                    "value": 50.0
                 }, 
                 {
                     "hc-key": "us-nm", 
-                    "value": 78.35
+                    "value": 70.37
                 }, 
                 {
                     "hc-key": "us-ny", 
-                    "value": 65.0
+                    "value": 50.0
                 }, 
                 {
                     "hc-key": "us-nc", 
-                    "value": 75.86
+                    "value": 66.24
                 }, 
                 {
                     "hc-key": "us-nd", 
-                    "value": 66.59
+                    "value": 50.0
                 }, 
                 {
                     "hc-key": "us-oh", 
-                    "value": 74.51
+                    "value": 62.47
                 }, 
                 {
                     "hc-key": "us-ok", 
-                    "value": 74.8
+                    "value": 60.99
                 }, 
                 {
                     "hc-key": "us-or", 
-                    "value": 73.71
+                    "value": 64.38
                 }, 
                 {
                     "hc-key": "us-pa", 
-                    "value": 68.0
+                    "value": 52.01
                 }, 
                 {
                     "hc-key": "us-ri", 
-                    "value": 65.88
+                    "value": 50.42
                 }, 
                 {
                     "hc-key": "us-sc", 
-                    "value": 79.3
+                    "value": 71.08
                 }, 
                 {
                     "hc-key": "us-sd", 
-                    "value": 69.33
+                    "value": 51.61
                 }, 
                 {
                     "hc-key": "us-tn", 
-                    "value": 76.29
+                    "value": 65.05
                 }, 
                 {
                     "hc-key": "us-tx", 
-                    "value": 71.51
+                    "value": 57.13
                 }, 
                 {
                     "hc-key": "us-ut", 
-                    "value": 78.73
+                    "value": 70.24
                 }, 
                 {
                     "hc-key": "us-vt", 
-                    "value": 69.23
+                    "value": 53.9
                 }, 
                 {
                     "hc-key": "us-va", 
-                    "value": 65.0
+                    "value": 50.0
                 }, 
                 {
                     "hc-key": "us-wa", 
-                    "value": 65.0
+                    "value": 50.0
                 }, 
                 {
                     "hc-key": "us-wv", 
-                    "value": 80.43
+                    "value": 71.42
                 }, 
                 {
                     "hc-key": "us-wi", 
-                    "value": 71.82
+                    "value": 58.23
                 }, 
                 {
                     "hc-key": "us-wy", 
-                    "value": 65.0
+                    "value": 50.0
                 }, 
                 {
                     "hc-key": "as-6514", 
-                    "value": 68.5
+                    "value": 55.0
                 }, 
                 {
                     "hc-key": "as-6514", 
-                    "value": 68.5
+                    "value": 55.0
                 }, 
                 {
                     "hc-key": "gu-3605", 
-                    "value": 68.5
+                    "value": 55.0
                 }, 
                 {
                     "hc-key": "mp-ro", 
-                    "value": 68.5
+                    "value": 55.0
                 }, 
                 {
                     "hc-key": "mp-ro", 
-                    "value": 68.5
+                    "value": 55.0
                 }, 
                 {
                     "hc-key": "mp-ro", 
-                    "value": 68.5
+                    "value": 55.0
                 }, 
                 {
                     "hc-key": "pr-3614", 
-                    "value": 68.5
+                    "value": 55.0
                 }, 
                 {
                     "hc-key": "vi-6399", 
-                    "value": 68.5
+                    "value": 55.0
                 }, 
                 {
                     "hc-key": "vi-6399", 
-                    "value": 68.5
+                    "value": 55.0
                 }, 
                 {
                     "hc-key": "vi-6399", 
-                    "value": 68.5
+                    "value": 55.0
                 }
             ], 
             "type": "percent"
         }, 
-        "col6": {
-            "label": "Enhanced federal medical assistance percentage e :: 2014 c", 
+        "col5": {
+            "label": "Enhanced federal medical assistance percentage b :: 2014", 
             "series": [
                 {
                     "hc-key": "us-al", 
@@ -1501,8 +1251,8 @@
             ], 
             "type": "percent"
         }, 
-        "col7": {
-            "label": "Enhanced federal medical assistance percentage e :: 2015 d", 
+        "col6": {
+            "label": "Enhanced federal medical assistance percentage b :: 2015", 
             "series": [
                 {
                     "hc-key": "us-al", 
@@ -1749,6 +1499,256 @@
                     "value": 68.5
                 }
             ], 
+            "type": "percent"
+        }, 
+        "col7": {
+            "label": "Enhanced federal medical assistance percentage b :: 2016", 
+            "series": [
+                {
+                    "hc-key": "us-al", 
+                    "value": 78.91
+                }, 
+                {
+                    "hc-key": "us-ak", 
+                    "value": 65.0
+                }, 
+                {
+                    "hc-key": "us-az", 
+                    "value": 78.24
+                }, 
+                {
+                    "hc-key": "us-ar", 
+                    "value": 79.0
+                }, 
+                {
+                    "hc-key": "us-ca", 
+                    "value": 65.0
+                }, 
+                {
+                    "hc-key": "us-co", 
+                    "value": 65.5
+                }, 
+                {
+                    "hc-key": "us-ct", 
+                    "value": 65.0
+                }, 
+                {
+                    "hc-key": "us-de", 
+                    "value": 68.38
+                }, 
+                {
+                    "hc-key": "us-dc", 
+                    "value": 79.0
+                }, 
+                {
+                    "hc-key": "us-fl", 
+                    "value": 72.47
+                }, 
+                {
+                    "hc-key": "us-ga", 
+                    "value": 77.29
+                }, 
+                {
+                    "hc-key": "us-hi", 
+                    "value": 67.79
+                }, 
+                {
+                    "hc-key": "us-id", 
+                    "value": 79.87
+                }, 
+                {
+                    "hc-key": "us-il", 
+                    "value": 65.62
+                }, 
+                {
+                    "hc-key": "us-in", 
+                    "value": 76.62
+                }, 
+                {
+                    "hc-key": "us-ia", 
+                    "value": 68.44
+                }, 
+                {
+                    "hc-key": "us-ks", 
+                    "value": 69.17
+                }, 
+                {
+                    "hc-key": "us-ky", 
+                    "value": 79.22
+                }, 
+                {
+                    "hc-key": "us-la", 
+                    "value": 73.55
+                }, 
+                {
+                    "hc-key": "us-me", 
+                    "value": 73.87
+                }, 
+                {
+                    "hc-key": "us-md", 
+                    "value": 65.0
+                }, 
+                {
+                    "hc-key": "us-ma", 
+                    "value": 65.0
+                }, 
+                {
+                    "hc-key": "us-mi", 
+                    "value": 75.92
+                }, 
+                {
+                    "hc-key": "us-mn", 
+                    "value": 65.0
+                }, 
+                {
+                    "hc-key": "us-ms", 
+                    "value": 81.92
+                }, 
+                {
+                    "hc-key": "us-mo", 
+                    "value": 74.3
+                }, 
+                {
+                    "hc-key": "us-mt", 
+                    "value": 75.67
+                }, 
+                {
+                    "hc-key": "us-ne", 
+                    "value": 65.81
+                }, 
+                {
+                    "hc-key": "us-nv", 
+                    "value": 75.45
+                }, 
+                {
+                    "hc-key": "us-nh", 
+                    "value": 65.0
+                }, 
+                {
+                    "hc-key": "us-nj", 
+                    "value": 65.0
+                }, 
+                {
+                    "hc-key": "us-nm", 
+                    "value": 79.26
+                }, 
+                {
+                    "hc-key": "us-ny", 
+                    "value": 65.0
+                }, 
+                {
+                    "hc-key": "us-nc", 
+                    "value": 76.37
+                }, 
+                {
+                    "hc-key": "us-nd", 
+                    "value": 65.0
+                }, 
+                {
+                    "hc-key": "us-oh", 
+                    "value": 73.73
+                }, 
+                {
+                    "hc-key": "us-ok", 
+                    "value": 72.69
+                }, 
+                {
+                    "hc-key": "us-or", 
+                    "value": 75.07
+                }, 
+                {
+                    "hc-key": "us-pa", 
+                    "value": 66.41
+                }, 
+                {
+                    "hc-key": "us-ri", 
+                    "value": 65.29
+                }, 
+                {
+                    "hc-key": "us-sc", 
+                    "value": 79.76
+                }, 
+                {
+                    "hc-key": "us-sd", 
+                    "value": 66.13
+                }, 
+                {
+                    "hc-key": "us-tn", 
+                    "value": 75.54
+                }, 
+                {
+                    "hc-key": "us-tx", 
+                    "value": 69.99
+                }, 
+                {
+                    "hc-key": "us-ut", 
+                    "value": 79.17
+                }, 
+                {
+                    "hc-key": "us-vt", 
+                    "value": 67.73
+                }, 
+                {
+                    "hc-key": "us-va", 
+                    "value": 65.0
+                }, 
+                {
+                    "hc-key": "us-wa", 
+                    "value": 65.0
+                }, 
+                {
+                    "hc-key": "us-wv", 
+                    "value": 79.99
+                }, 
+                {
+                    "hc-key": "us-wi", 
+                    "value": 70.76
+                }, 
+                {
+                    "hc-key": "us-wy", 
+                    "value": 65.0
+                }, 
+                {
+                    "hc-key": "as-6514", 
+                    "value": 68.5
+                }, 
+                {
+                    "hc-key": "as-6514", 
+                    "value": 68.5
+                }, 
+                {
+                    "hc-key": "gu-3605", 
+                    "value": 68.5
+                }, 
+                {
+                    "hc-key": "mp-ro", 
+                    "value": 68.5
+                }, 
+                {
+                    "hc-key": "mp-ro", 
+                    "value": 68.5
+                }, 
+                {
+                    "hc-key": "mp-ro", 
+                    "value": 68.5
+                }, 
+                {
+                    "hc-key": "pr-3614", 
+                    "value": 68.5
+                }, 
+                {
+                    "hc-key": "vi-6399", 
+                    "value": 68.5
+                }, 
+                {
+                    "hc-key": "vi-6399", 
+                    "value": 68.5
+                }, 
+                {
+                    "hc-key": "vi-6399", 
+                    "value": 68.5
+                }
+            ], 
             "type": ""
         }
     }, 
@@ -1763,33 +1763,18 @@
             "type": "footnote"
         }, 
         {
-            "content": "Effective October 1, 2012, through September 30, 2013.", 
+            "content": "This is the Title XXI enhanced federal medical assistance percentage rate specified in section 2105(b) of the Act. The enhanced federal medical assistance percentage cannot exceed 85 percent.", 
             "symbol": "b.", 
             "type": "footnote"
         }, 
         {
-            "content": "Effective October 1, 2013, through September 30, 2014.", 
+            "content": "The values for the District of Columbia (DC) in the table were set for the state plan under titles XIX and XXI and for capitation payments and Disproportionate Share Hospital (DSH) allotments under those titles. For other purposes, including programs remaining in Title IV of the Act, the percentage for DC is 50.00, unless otherwise specified by law.", 
             "symbol": "c.", 
             "type": "footnote"
         }, 
         {
-            "content": "Effective October 1, 2014, through September 30, 2015.", 
-            "symbol": "d.", 
-            "type": "footnote"
-        }, 
-        {
-            "content": "This is the Title XXI enhanced federal medical assistance percentage rate specified in section 2105(b) of the Act. The enhanced federal medical assistance percentage cannot exceed 85 percent.", 
-            "symbol": "e.", 
-            "type": "footnote"
-        }, 
-        {
-            "content": "The values for the District of Columbia (DC) in the table were set for the state plan under titles XIX and XXI and for capitation payments and Disproportionate Share Hospital (DSH) allotments under those titles. For other purposes, including programs remaining in Title IV of the Act, the percentage for DC is 50.00, unless otherwise specified by law.", 
-            "symbol": "f.", 
-            "type": "footnote"
-        }, 
-        {
             "content": "For purposes of section 1118 of the Social Security Act, the federal medical assistance percentage used under titles I, X, XIV, and XVI, and part A of title IV will be 75\u00a0percent.", 
-            "symbol": "g.", 
+            "symbol": "d.", 
             "type": "footnote"
         }, 
         {
@@ -1797,18 +1782,18 @@
             "type": "note"
         }, 
         {
-            "content": "File available from:\nU.S. Social Security Administration \u2022 Office of Retirement and Disability Policy \u2022 Office of Research, Evaluation, and Statistics\n<span class =\"suppTitle\">Annual Statistical Supplement, 2014</span>\nhttp://www.socialsecurity.gov/policy/docs/statcomps/supplement/2014/", 
+            "content": "File available from:\nU.S. Social Security Administration \u2022 Office of Retirement and Disability Policy \u2022 Office of Research, Evaluation, and Statistics\nAnnual Statistical Supplement, 2015\nhttps://www.socialsecurity.gov/policy/docs/statcomps/supplement/2015/", 
             "type": "note"
         }
     ], 
     "html": {
-        "body": "<tbody><tr class=Alabama><td class=\"col0\">Alabama</td><td class=\"col1\"></td><td class=\"col2\">68.53</td><td class=\"col3\">68.12</td><td class=\"col4\">68.99</td><td class=\"col5\">77.97</td><td class=\"col6\">77.68</td><td class=\"col7\">78.29</td><tr class=Alaska><td class=\"col0\">Alaska</td><td class=\"col1\"></td><td class=\"col2\">50.0</td><td class=\"col3\">50.0</td><td class=\"col4\">50.0</td><td class=\"col5\">65.0</td><td class=\"col6\">65.0</td><td class=\"col7\">65.0</td><tr class=Arizona><td class=\"col0\">Arizona</td><td class=\"col1\"></td><td class=\"col2\">65.68</td><td class=\"col3\">67.23</td><td class=\"col4\">68.46</td><td class=\"col5\">75.98</td><td class=\"col6\">77.06</td><td class=\"col7\">77.92</td><tr class=Arkansas><td class=\"col0\">Arkansas</td><td class=\"col1\"></td><td class=\"col2\">70.17</td><td class=\"col3\">70.1</td><td class=\"col4\">70.88</td><td class=\"col5\">79.12</td><td class=\"col6\">79.07</td><td class=\"col7\">79.62</td><tr class=California><td class=\"col0\">California</td><td class=\"col1\"></td><td class=\"col2\">50.0</td><td class=\"col3\">50.0</td><td class=\"col4\">50.0</td><td class=\"col5\">65.0</td><td class=\"col6\">65.0</td><td class=\"col7\">65.0</td><tr class=Colorado><td class=\"col0\">Colorado</td><td class=\"col1\"></td><td class=\"col2\">50.0</td><td class=\"col3\">50.0</td><td class=\"col4\">51.01</td><td class=\"col5\">65.0</td><td class=\"col6\">65.0</td><td class=\"col7\">65.71</td><tr class=Connecticut><td class=\"col0\">Connecticut</td><td class=\"col1\"></td><td class=\"col2\">50.0</td><td class=\"col3\">50.0</td><td class=\"col4\">50.0</td><td class=\"col5\">65.0</td><td class=\"col6\">65.0</td><td class=\"col7\">65.0</td><tr class=Delaware><td class=\"col0\">Delaware</td><td class=\"col1\"></td><td class=\"col2\">55.67</td><td class=\"col3\">55.31</td><td class=\"col4\">53.63</td><td class=\"col5\">68.97</td><td class=\"col6\">68.72</td><td class=\"col7\">67.54</td><tr class=District of Columbia f><td class=\"col0\">District of Columbia f</td><td class=\"col1\"></td><td class=\"col2\">70.0</td><td class=\"col3\">70.0</td><td class=\"col4\">70.0</td><td class=\"col5\">79.0</td><td class=\"col6\">79.0</td><td class=\"col7\">79.0</td><tr class=Florida><td class=\"col0\">Florida</td><td class=\"col1\"></td><td class=\"col2\">58.08</td><td class=\"col3\">58.79</td><td class=\"col4\">59.72</td><td class=\"col5\">70.66</td><td class=\"col6\">71.15</td><td class=\"col7\">71.8</td><tr class=Georgia><td class=\"col0\">Georgia</td><td class=\"col1\"></td><td class=\"col2\">65.56</td><td class=\"col3\">65.93</td><td class=\"col4\">66.94</td><td class=\"col5\">75.89</td><td class=\"col6\">76.15</td><td class=\"col7\">76.86</td><tr class=Hawaii><td class=\"col0\">Hawaii</td><td class=\"col1\"></td><td class=\"col2\">51.86</td><td class=\"col3\">51.85</td><td class=\"col4\">52.23</td><td class=\"col5\">66.3</td><td class=\"col6\">66.3</td><td class=\"col7\">66.56</td><tr class=Idaho><td class=\"col0\">Idaho</td><td class=\"col1\"></td><td class=\"col2\">71.0</td><td class=\"col3\">71.64</td><td class=\"col4\">71.75</td><td class=\"col5\">79.7</td><td class=\"col6\">80.15</td><td class=\"col7\">80.23</td><tr class=Illinois><td class=\"col0\">Illinois</td><td class=\"col1\"></td><td class=\"col2\">50.0</td><td class=\"col3\">50.0</td><td class=\"col4\">50.76</td><td class=\"col5\">65.0</td><td class=\"col6\">65.0</td><td class=\"col7\">65.53</td><tr class=Indiana><td class=\"col0\">Indiana</td><td class=\"col1\"></td><td class=\"col2\">67.16</td><td class=\"col3\">66.92</td><td class=\"col4\">66.52</td><td class=\"col5\">77.01</td><td class=\"col6\">76.84</td><td class=\"col7\">76.56</td><tr class=Iowa><td class=\"col0\">Iowa</td><td class=\"col1\"></td><td class=\"col2\">59.59</td><td class=\"col3\">57.93</td><td class=\"col4\">55.54</td><td class=\"col5\">71.71</td><td class=\"col6\">70.55</td><td class=\"col7\">68.88</td><tr class=Kansas><td class=\"col0\">Kansas</td><td class=\"col1\"></td><td class=\"col2\">56.51</td><td class=\"col3\">56.91</td><td class=\"col4\">56.63</td><td class=\"col5\">69.56</td><td class=\"col6\">69.84</td><td class=\"col7\">69.64</td><tr class=Kentucky><td class=\"col0\">Kentucky</td><td class=\"col1\"></td><td class=\"col2\">70.55</td><td class=\"col3\">69.83</td><td class=\"col4\">69.94</td><td class=\"col5\">79.39</td><td class=\"col6\">78.88</td><td class=\"col7\">78.96</td><tr class=Louisiana><td class=\"col0\">Louisiana</td><td class=\"col1\"></td><td class=\"col2\">61.24</td><td class=\"col3\">60.98</td><td class=\"col4\">62.05</td><td class=\"col5\">72.87</td><td class=\"col6\">72.69</td><td class=\"col7\">73.44</td><tr class=Maine><td class=\"col0\">Maine</td><td class=\"col1\"></td><td class=\"col2\">62.57</td><td class=\"col3\">61.55</td><td class=\"col4\">61.88</td><td class=\"col5\">73.8</td><td class=\"col6\">73.09</td><td class=\"col7\">73.32</td><tr class=Maryland><td class=\"col0\">Maryland</td><td class=\"col1\"></td><td class=\"col2\">50.0</td><td class=\"col3\">50.0</td><td class=\"col4\">50.0</td><td class=\"col5\">65.0</td><td class=\"col6\">65.0</td><td class=\"col7\">65.0</td><tr class=Massachusetts><td class=\"col0\">Massachusetts</td><td class=\"col1\"></td><td class=\"col2\">50.0</td><td class=\"col3\">50.0</td><td class=\"col4\">50.0</td><td class=\"col5\">65.0</td><td class=\"col6\">65.0</td><td class=\"col7\">65.0</td><tr class=Michigan><td class=\"col0\">Michigan</td><td class=\"col1\"></td><td class=\"col2\">66.39</td><td class=\"col3\">66.32</td><td class=\"col4\">65.54</td><td class=\"col5\">76.47</td><td class=\"col6\">76.42</td><td class=\"col7\">75.88</td><tr class=Minnesota><td class=\"col0\">Minnesota</td><td class=\"col1\"></td><td class=\"col2\">50.0</td><td class=\"col3\">50.0</td><td class=\"col4\">50.0</td><td class=\"col5\">65.0</td><td class=\"col6\">65.0</td><td class=\"col7\">65.0</td><tr class=Mississippi><td class=\"col0\">Mississippi</td><td class=\"col1\"></td><td class=\"col2\">73.43</td><td class=\"col3\">73.05</td><td class=\"col4\">73.58</td><td class=\"col5\">81.4</td><td class=\"col6\">81.14</td><td class=\"col7\">81.51</td><tr class=Missouri><td class=\"col0\">Missouri</td><td class=\"col1\"></td><td class=\"col2\">61.37</td><td class=\"col3\">62.03</td><td class=\"col4\">63.45</td><td class=\"col5\">72.96</td><td class=\"col6\">73.42</td><td class=\"col7\">74.42</td><tr class=Montana><td class=\"col0\">Montana</td><td class=\"col1\"></td><td class=\"col2\">66.0</td><td class=\"col3\">66.33</td><td class=\"col4\">65.9</td><td class=\"col5\">76.2</td><td class=\"col6\">76.43</td><td class=\"col7\">76.13</td><tr class=Nebraska><td class=\"col0\">Nebraska</td><td class=\"col1\"></td><td class=\"col2\">55.76</td><td class=\"col3\">54.74</td><td class=\"col4\">53.27</td><td class=\"col5\">69.03</td><td class=\"col6\">68.32</td><td class=\"col7\">67.29</td><tr class=Nevada><td class=\"col0\">Nevada</td><td class=\"col1\"></td><td class=\"col2\">59.74</td><td class=\"col3\">63.1</td><td class=\"col4\">64.36</td><td class=\"col5\">71.82</td><td class=\"col6\">74.17</td><td class=\"col7\">75.05</td><tr class=New Hampshire><td class=\"col0\">New Hampshire</td><td class=\"col1\"></td><td class=\"col2\">50.0</td><td class=\"col3\">50.0</td><td class=\"col4\">50.0</td><td class=\"col5\">65.0</td><td class=\"col6\">65.0</td><td class=\"col7\">65.0</td><tr class=New Jersey><td class=\"col0\">New Jersey</td><td class=\"col1\"></td><td class=\"col2\">50.0</td><td class=\"col3\">50.0</td><td class=\"col4\">50.0</td><td class=\"col5\">65.0</td><td class=\"col6\">65.0</td><td class=\"col7\">65.0</td><tr class=New Mexico><td class=\"col0\">New Mexico</td><td class=\"col1\"></td><td class=\"col2\">69.07</td><td class=\"col3\">69.2</td><td class=\"col4\">69.65</td><td class=\"col5\">78.35</td><td class=\"col6\">78.44</td><td class=\"col7\">78.76</td><tr class=New York><td class=\"col0\">New York</td><td class=\"col1\"></td><td class=\"col2\">50.0</td><td class=\"col3\">50.0</td><td class=\"col4\">50.0</td><td class=\"col5\">65.0</td><td class=\"col6\">65.0</td><td class=\"col7\">65.0</td><tr class=North Carolina><td class=\"col0\">North Carolina</td><td class=\"col1\"></td><td class=\"col2\">65.51</td><td class=\"col3\">65.78</td><td class=\"col4\">65.88</td><td class=\"col5\">75.86</td><td class=\"col6\">76.05</td><td class=\"col7\">76.12</td><tr class=North Dakota><td class=\"col0\">North Dakota</td><td class=\"col1\"></td><td class=\"col2\">52.27</td><td class=\"col3\">50.0</td><td class=\"col4\">50.0</td><td class=\"col5\">66.59</td><td class=\"col6\">65.0</td><td class=\"col7\">65.0</td><tr class=Ohio><td class=\"col0\">Ohio</td><td class=\"col1\"></td><td class=\"col2\">63.58</td><td class=\"col3\">63.02</td><td class=\"col4\">62.64</td><td class=\"col5\">74.51</td><td class=\"col6\">74.11</td><td class=\"col7\">73.85</td><tr class=Oklahoma><td class=\"col0\">Oklahoma</td><td class=\"col1\"></td><td class=\"col2\">64.0</td><td class=\"col3\">64.02</td><td class=\"col4\">62.3</td><td class=\"col5\">74.8</td><td class=\"col6\">74.81</td><td class=\"col7\">73.61</td><tr class=Oregon><td class=\"col0\">Oregon</td><td class=\"col1\"></td><td class=\"col2\">62.44</td><td class=\"col3\">63.14</td><td class=\"col4\">64.06</td><td class=\"col5\">73.71</td><td class=\"col6\">74.2</td><td class=\"col7\">74.84</td><tr class=Pennsylvania><td class=\"col0\">Pennsylvania</td><td class=\"col1\"></td><td class=\"col2\">54.28</td><td class=\"col3\">53.52</td><td class=\"col4\">51.82</td><td class=\"col5\">68.0</td><td class=\"col6\">67.46</td><td class=\"col7\">66.27</td><tr class=Rhode Island><td class=\"col0\">Rhode Island</td><td class=\"col1\"></td><td class=\"col2\">51.26</td><td class=\"col3\">50.11</td><td class=\"col4\">50.0</td><td class=\"col5\">65.88</td><td class=\"col6\">65.08</td><td class=\"col7\">65.0</td><tr class=South Carolina><td class=\"col0\">South Carolina</td><td class=\"col1\"></td><td class=\"col2\">70.43</td><td class=\"col3\">70.57</td><td class=\"col4\">70.64</td><td class=\"col5\">79.3</td><td class=\"col6\">79.4</td><td class=\"col7\">79.45</td><tr class=South Dakota><td class=\"col0\">South Dakota</td><td class=\"col1\"></td><td class=\"col2\">56.19</td><td class=\"col3\">53.54</td><td class=\"col4\">51.64</td><td class=\"col5\">69.33</td><td class=\"col6\">67.48</td><td class=\"col7\">66.15</td><tr class=Tennessee><td class=\"col0\">Tennessee</td><td class=\"col1\"></td><td class=\"col2\">66.13</td><td class=\"col3\">65.29</td><td class=\"col4\">64.99</td><td class=\"col5\">76.29</td><td class=\"col6\">75.7</td><td class=\"col7\">75.49</td><tr class=Texas><td class=\"col0\">Texas</td><td class=\"col1\"></td><td class=\"col2\">59.3</td><td class=\"col3\">58.69</td><td class=\"col4\">58.05</td><td class=\"col5\">71.51</td><td class=\"col6\">71.08</td><td class=\"col7\">70.64</td><tr class=Utah><td class=\"col0\">Utah</td><td class=\"col1\"></td><td class=\"col2\">69.61</td><td class=\"col3\">70.34</td><td class=\"col4\">70.56</td><td class=\"col5\">78.73</td><td class=\"col6\">79.24</td><td class=\"col7\">79.39</td><tr class=Vermont><td class=\"col0\">Vermont</td><td class=\"col1\"></td><td class=\"col2\">56.04</td><td class=\"col3\">55.11</td><td class=\"col4\">54.01</td><td class=\"col5\">69.23</td><td class=\"col6\">68.58</td><td class=\"col7\">67.81</td><tr class=Virginia><td class=\"col0\">Virginia</td><td class=\"col1\"></td><td class=\"col2\">50.0</td><td class=\"col3\">50.0</td><td class=\"col4\">50.0</td><td class=\"col5\">65.0</td><td class=\"col6\">65.0</td><td class=\"col7\">65.0</td><tr class=Washington><td class=\"col0\">Washington</td><td class=\"col1\"></td><td class=\"col2\">50.0</td><td class=\"col3\">50.0</td><td class=\"col4\">50.03</td><td class=\"col5\">65.0</td><td class=\"col6\">65.0</td><td class=\"col7\">65.02</td><tr class=West Virginia><td class=\"col0\">West Virginia</td><td class=\"col1\"></td><td class=\"col2\">72.04</td><td class=\"col3\">71.09</td><td class=\"col4\">71.35</td><td class=\"col5\">80.43</td><td class=\"col6\">79.76</td><td class=\"col7\">79.95</td><tr class=Wisconsin><td class=\"col0\">Wisconsin</td><td class=\"col1\"></td><td class=\"col2\">59.74</td><td class=\"col3\">59.06</td><td class=\"col4\">58.27</td><td class=\"col5\">71.82</td><td class=\"col6\">71.34</td><td class=\"col7\">70.79</td><tr class=Wyoming><td class=\"col0\">Wyoming</td><td class=\"col1\"></td><td class=\"col2\">50.0</td><td class=\"col3\">50.0</td><td class=\"col4\">50.0</td><td class=\"col5\">65.0</td><td class=\"col6\">65.0</td><td class=\"col7\">65.0</td><tr class=Outlying areas><td class=\"col0\">Outlying areas</td><td class=\"col1\"></td><td class=\"col2\"></td><td class=\"col3\"></td><td class=\"col4\"></td><td class=\"col5\"></td><td class=\"col6\"></td><td class=\"col7\"></td><tr class=><td class=\"col0\"></td><td class=\"col1\">American Samoa g</td><td class=\"col2\">55.0</td><td class=\"col3\">55.0</td><td class=\"col4\">55.0</td><td class=\"col5\">68.5</td><td class=\"col6\">68.5</td><td class=\"col7\">68.5</td><tr class=><td class=\"col0\"></td><td class=\"col1\">Guam<span class = \"top_footnote top_g\">g</span></td><td class=\"col2\">55.0</td><td class=\"col3\">55.0</td><td class=\"col4\">55.0</td><td class=\"col5\">68.5</td><td class=\"col6\">68.5</td><td class=\"col7\">68.5</td><tr class=><td class=\"col0\"></td><td class=\"col1\">Northern Mariana Islands g</td><td class=\"col2\">55.0</td><td class=\"col3\">55.0</td><td class=\"col4\">55.0</td><td class=\"col5\">68.5</td><td class=\"col6\">68.5</td><td class=\"col7\">68.5</td><tr class=><td class=\"col0\"></td><td class=\"col1\">Puerto Rico g</td><td class=\"col2\">55.0</td><td class=\"col3\">55.0</td><td class=\"col4\">55.0</td><td class=\"col5\">68.5</td><td class=\"col6\">68.5</td><td class=\"col7\">68.5</td><tr class=><td class=\"col0\"></td><td class=\"col1\">U.S. Virgin Islands g</td><td class=\"col2\">55.0</td><td class=\"col3\">55.0</td><td class=\"col4\">55.0</td><td class=\"col5\">68.5</td><td class=\"col6\">68.5</td><td class=\"col7\">68.5</td></tbody>", 
-        "header": "<thead><tr><th rowspan=\"2\"  colspan=\"2\"  class=\"series col0\" >State or area</th><th colspan=\"3\"  class=\"series col2\" >Federal medical assistance percentage <span class = \"top_footnote top_a\">a</span></th><th colspan=\"3\"  class=\"series col5\" >Enhanced federal medical assistance percentage <span class = \"top_footnote top_e\">e</span></th></tr><tr><th class=\"series col2\" >2013 <span class = \"top_footnote top_b\">b</span></th><th class=\"series col3\" >2014 <span class = \"top_footnote top_c\">c</span></th><th class=\"series col4\" >2015 <span class = \"top_footnote top_d\">d</span></th><th class=\"series col5\" >2013 <span class = \"top_footnote top_b\">b</span></th><th class=\"series col6\" >2014 <span class = \"top_footnote top_c\">c</span></th><th class=\"series col7\" >2015 <span class = \"top_footnote top_d\">d</span></th></tr></thead>"
+        "body": "<tbody><tr class=Alabama><td class=\"col0\">Alabama</td><td class=\"col1\"></td><td class=\"col2\">68.12</td><td class=\"col3\">68.99</td><td class=\"col4\">69.87</td><td class=\"col5\">77.68</td><td class=\"col6\">78.29</td><td class=\"col7\">78.91</td><tr class=Alaska><td class=\"col0\">Alaska</td><td class=\"col1\"></td><td class=\"col2\">50.0</td><td class=\"col3\">50.0</td><td class=\"col4\">50.0</td><td class=\"col5\">65.0</td><td class=\"col6\">65.0</td><td class=\"col7\">65.0</td><tr class=Arizona><td class=\"col0\">Arizona</td><td class=\"col1\"></td><td class=\"col2\">67.23</td><td class=\"col3\">68.46</td><td class=\"col4\">68.92</td><td class=\"col5\">77.06</td><td class=\"col6\">77.92</td><td class=\"col7\">78.24</td><tr class=Arkansas><td class=\"col0\">Arkansas</td><td class=\"col1\"></td><td class=\"col2\">70.1</td><td class=\"col3\">70.88</td><td class=\"col4\">70.0</td><td class=\"col5\">79.07</td><td class=\"col6\">79.62</td><td class=\"col7\">79.0</td><tr class=California><td class=\"col0\">California</td><td class=\"col1\"></td><td class=\"col2\">50.0</td><td class=\"col3\">50.0</td><td class=\"col4\">50.0</td><td class=\"col5\">65.0</td><td class=\"col6\">65.0</td><td class=\"col7\">65.0</td><tr class=Colorado><td class=\"col0\">Colorado</td><td class=\"col1\"></td><td class=\"col2\">50.0</td><td class=\"col3\">51.01</td><td class=\"col4\">50.72</td><td class=\"col5\">65.0</td><td class=\"col6\">65.71</td><td class=\"col7\">65.5</td><tr class=Connecticut><td class=\"col0\">Connecticut</td><td class=\"col1\"></td><td class=\"col2\">50.0</td><td class=\"col3\">50.0</td><td class=\"col4\">50.0</td><td class=\"col5\">65.0</td><td class=\"col6\">65.0</td><td class=\"col7\">65.0</td><tr class=Delaware><td class=\"col0\">Delaware</td><td class=\"col1\"></td><td class=\"col2\">55.31</td><td class=\"col3\">53.63</td><td class=\"col4\">54.83</td><td class=\"col5\">68.72</td><td class=\"col6\">67.54</td><td class=\"col7\">68.38</td><tr class=District of Columbia c><td class=\"col0\">District of Columbia c</td><td class=\"col1\"></td><td class=\"col2\">70.0</td><td class=\"col3\">70.0</td><td class=\"col4\">70.0</td><td class=\"col5\">79.0</td><td class=\"col6\">79.0</td><td class=\"col7\">79.0</td><tr class=Florida><td class=\"col0\">Florida</td><td class=\"col1\"></td><td class=\"col2\">58.79</td><td class=\"col3\">59.72</td><td class=\"col4\">60.67</td><td class=\"col5\">71.15</td><td class=\"col6\">71.8</td><td class=\"col7\">72.47</td><tr class=Georgia><td class=\"col0\">Georgia</td><td class=\"col1\"></td><td class=\"col2\">65.93</td><td class=\"col3\">66.94</td><td class=\"col4\">67.55</td><td class=\"col5\">76.15</td><td class=\"col6\">76.86</td><td class=\"col7\">77.29</td><tr class=Hawaii><td class=\"col0\">Hawaii</td><td class=\"col1\"></td><td class=\"col2\">51.85</td><td class=\"col3\">52.23</td><td class=\"col4\">53.98</td><td class=\"col5\">66.3</td><td class=\"col6\">66.56</td><td class=\"col7\">67.79</td><tr class=Idaho><td class=\"col0\">Idaho</td><td class=\"col1\"></td><td class=\"col2\">71.64</td><td class=\"col3\">71.75</td><td class=\"col4\">71.24</td><td class=\"col5\">80.15</td><td class=\"col6\">80.23</td><td class=\"col7\">79.87</td><tr class=Illinois><td class=\"col0\">Illinois</td><td class=\"col1\"></td><td class=\"col2\">50.0</td><td class=\"col3\">50.76</td><td class=\"col4\">50.89</td><td class=\"col5\">65.0</td><td class=\"col6\">65.53</td><td class=\"col7\">65.62</td><tr class=Indiana><td class=\"col0\">Indiana</td><td class=\"col1\"></td><td class=\"col2\">66.92</td><td class=\"col3\">66.52</td><td class=\"col4\">66.6</td><td class=\"col5\">76.84</td><td class=\"col6\">76.56</td><td class=\"col7\">76.62</td><tr class=Iowa><td class=\"col0\">Iowa</td><td class=\"col1\"></td><td class=\"col2\">57.93</td><td class=\"col3\">55.54</td><td class=\"col4\">54.91</td><td class=\"col5\">70.55</td><td class=\"col6\">68.88</td><td class=\"col7\">68.44</td><tr class=Kansas><td class=\"col0\">Kansas</td><td class=\"col1\"></td><td class=\"col2\">56.91</td><td class=\"col3\">56.63</td><td class=\"col4\">55.96</td><td class=\"col5\">69.84</td><td class=\"col6\">69.64</td><td class=\"col7\">69.17</td><tr class=Kentucky><td class=\"col0\">Kentucky</td><td class=\"col1\"></td><td class=\"col2\">69.83</td><td class=\"col3\">69.94</td><td class=\"col4\">70.32</td><td class=\"col5\">78.88</td><td class=\"col6\">78.96</td><td class=\"col7\">79.22</td><tr class=Louisiana><td class=\"col0\">Louisiana</td><td class=\"col1\"></td><td class=\"col2\">60.98</td><td class=\"col3\">62.05</td><td class=\"col4\">62.21</td><td class=\"col5\">72.69</td><td class=\"col6\">73.44</td><td class=\"col7\">73.55</td><tr class=Maine><td class=\"col0\">Maine</td><td class=\"col1\"></td><td class=\"col2\">61.55</td><td class=\"col3\">61.88</td><td class=\"col4\">62.67</td><td class=\"col5\">73.09</td><td class=\"col6\">73.32</td><td class=\"col7\">73.87</td><tr class=Maryland><td class=\"col0\">Maryland</td><td class=\"col1\"></td><td class=\"col2\">50.0</td><td class=\"col3\">50.0</td><td class=\"col4\">50.0</td><td class=\"col5\">65.0</td><td class=\"col6\">65.0</td><td class=\"col7\">65.0</td><tr class=Massachusetts><td class=\"col0\">Massachusetts</td><td class=\"col1\"></td><td class=\"col2\">50.0</td><td class=\"col3\">50.0</td><td class=\"col4\">50.0</td><td class=\"col5\">65.0</td><td class=\"col6\">65.0</td><td class=\"col7\">65.0</td><tr class=Michigan><td class=\"col0\">Michigan</td><td class=\"col1\"></td><td class=\"col2\">66.32</td><td class=\"col3\">65.54</td><td class=\"col4\">65.6</td><td class=\"col5\">76.42</td><td class=\"col6\">75.88</td><td class=\"col7\">75.92</td><tr class=Minnesota><td class=\"col0\">Minnesota</td><td class=\"col1\"></td><td class=\"col2\">50.0</td><td class=\"col3\">50.0</td><td class=\"col4\">50.0</td><td class=\"col5\">65.0</td><td class=\"col6\">65.0</td><td class=\"col7\">65.0</td><tr class=Mississippi><td class=\"col0\">Mississippi</td><td class=\"col1\"></td><td class=\"col2\">73.05</td><td class=\"col3\">73.58</td><td class=\"col4\">74.17</td><td class=\"col5\">81.14</td><td class=\"col6\">81.51</td><td class=\"col7\">81.92</td><tr class=Missouri><td class=\"col0\">Missouri</td><td class=\"col1\"></td><td class=\"col2\">62.03</td><td class=\"col3\">63.45</td><td class=\"col4\">63.28</td><td class=\"col5\">73.42</td><td class=\"col6\">74.42</td><td class=\"col7\">74.3</td><tr class=Montana><td class=\"col0\">Montana</td><td class=\"col1\"></td><td class=\"col2\">66.33</td><td class=\"col3\">65.9</td><td class=\"col4\">65.24</td><td class=\"col5\">76.43</td><td class=\"col6\">76.13</td><td class=\"col7\">75.67</td><tr class=Nebraska><td class=\"col0\">Nebraska</td><td class=\"col1\"></td><td class=\"col2\">54.74</td><td class=\"col3\">53.27</td><td class=\"col4\">51.16</td><td class=\"col5\">68.32</td><td class=\"col6\">67.29</td><td class=\"col7\">65.81</td><tr class=Nevada><td class=\"col0\">Nevada</td><td class=\"col1\"></td><td class=\"col2\">63.1</td><td class=\"col3\">64.36</td><td class=\"col4\">64.93</td><td class=\"col5\">74.17</td><td class=\"col6\">75.05</td><td class=\"col7\">75.45</td><tr class=New Hampshire><td class=\"col0\">New Hampshire</td><td class=\"col1\"></td><td class=\"col2\">50.0</td><td class=\"col3\">50.0</td><td class=\"col4\">50.0</td><td class=\"col5\">65.0</td><td class=\"col6\">65.0</td><td class=\"col7\">65.0</td><tr class=New Jersey><td class=\"col0\">New Jersey</td><td class=\"col1\"></td><td class=\"col2\">50.0</td><td class=\"col3\">50.0</td><td class=\"col4\">50.0</td><td class=\"col5\">65.0</td><td class=\"col6\">65.0</td><td class=\"col7\">65.0</td><tr class=New Mexico><td class=\"col0\">New Mexico</td><td class=\"col1\"></td><td class=\"col2\">69.2</td><td class=\"col3\">69.65</td><td class=\"col4\">70.37</td><td class=\"col5\">78.44</td><td class=\"col6\">78.76</td><td class=\"col7\">79.26</td><tr class=New York><td class=\"col0\">New York</td><td class=\"col1\"></td><td class=\"col2\">50.0</td><td class=\"col3\">50.0</td><td class=\"col4\">50.0</td><td class=\"col5\">65.0</td><td class=\"col6\">65.0</td><td class=\"col7\">65.0</td><tr class=North Carolina><td class=\"col0\">North Carolina</td><td class=\"col1\"></td><td class=\"col2\">65.78</td><td class=\"col3\">65.88</td><td class=\"col4\">66.24</td><td class=\"col5\">76.05</td><td class=\"col6\">76.12</td><td class=\"col7\">76.37</td><tr class=North Dakota><td class=\"col0\">North Dakota</td><td class=\"col1\"></td><td class=\"col2\">50.0</td><td class=\"col3\">50.0</td><td class=\"col4\">50.0</td><td class=\"col5\">65.0</td><td class=\"col6\">65.0</td><td class=\"col7\">65.0</td><tr class=Ohio><td class=\"col0\">Ohio</td><td class=\"col1\"></td><td class=\"col2\">63.02</td><td class=\"col3\">62.64</td><td class=\"col4\">62.47</td><td class=\"col5\">74.11</td><td class=\"col6\">73.85</td><td class=\"col7\">73.73</td><tr class=Oklahoma><td class=\"col0\">Oklahoma</td><td class=\"col1\"></td><td class=\"col2\">64.02</td><td class=\"col3\">62.3</td><td class=\"col4\">60.99</td><td class=\"col5\">74.81</td><td class=\"col6\">73.61</td><td class=\"col7\">72.69</td><tr class=Oregon><td class=\"col0\">Oregon</td><td class=\"col1\"></td><td class=\"col2\">63.14</td><td class=\"col3\">64.06</td><td class=\"col4\">64.38</td><td class=\"col5\">74.2</td><td class=\"col6\">74.84</td><td class=\"col7\">75.07</td><tr class=Pennsylvania><td class=\"col0\">Pennsylvania</td><td class=\"col1\"></td><td class=\"col2\">53.52</td><td class=\"col3\">51.82</td><td class=\"col4\">52.01</td><td class=\"col5\">67.46</td><td class=\"col6\">66.27</td><td class=\"col7\">66.41</td><tr class=Rhode Island><td class=\"col0\">Rhode Island</td><td class=\"col1\"></td><td class=\"col2\">50.11</td><td class=\"col3\">50.0</td><td class=\"col4\">50.42</td><td class=\"col5\">65.08</td><td class=\"col6\">65.0</td><td class=\"col7\">65.29</td><tr class=South Carolina><td class=\"col0\">South Carolina</td><td class=\"col1\"></td><td class=\"col2\">70.57</td><td class=\"col3\">70.64</td><td class=\"col4\">71.08</td><td class=\"col5\">79.4</td><td class=\"col6\">79.45</td><td class=\"col7\">79.76</td><tr class=South Dakota><td class=\"col0\">South Dakota</td><td class=\"col1\"></td><td class=\"col2\">53.54</td><td class=\"col3\">51.64</td><td class=\"col4\">51.61</td><td class=\"col5\">67.48</td><td class=\"col6\">66.15</td><td class=\"col7\">66.13</td><tr class=Tennessee><td class=\"col0\">Tennessee</td><td class=\"col1\"></td><td class=\"col2\">65.29</td><td class=\"col3\">64.99</td><td class=\"col4\">65.05</td><td class=\"col5\">75.7</td><td class=\"col6\">75.49</td><td class=\"col7\">75.54</td><tr class=Texas><td class=\"col0\">Texas</td><td class=\"col1\"></td><td class=\"col2\">58.69</td><td class=\"col3\">58.05</td><td class=\"col4\">57.13</td><td class=\"col5\">71.08</td><td class=\"col6\">70.64</td><td class=\"col7\">69.99</td><tr class=Utah><td class=\"col0\">Utah</td><td class=\"col1\"></td><td class=\"col2\">70.34</td><td class=\"col3\">70.56</td><td class=\"col4\">70.24</td><td class=\"col5\">79.24</td><td class=\"col6\">79.39</td><td class=\"col7\">79.17</td><tr class=Vermont><td class=\"col0\">Vermont</td><td class=\"col1\"></td><td class=\"col2\">55.11</td><td class=\"col3\">54.01</td><td class=\"col4\">53.9</td><td class=\"col5\">68.58</td><td class=\"col6\">67.81</td><td class=\"col7\">67.73</td><tr class=Virginia><td class=\"col0\">Virginia</td><td class=\"col1\"></td><td class=\"col2\">50.0</td><td class=\"col3\">50.0</td><td class=\"col4\">50.0</td><td class=\"col5\">65.0</td><td class=\"col6\">65.0</td><td class=\"col7\">65.0</td><tr class=Washington><td class=\"col0\">Washington</td><td class=\"col1\"></td><td class=\"col2\">50.0</td><td class=\"col3\">50.03</td><td class=\"col4\">50.0</td><td class=\"col5\">65.0</td><td class=\"col6\">65.02</td><td class=\"col7\">65.0</td><tr class=West Virginia><td class=\"col0\">West Virginia</td><td class=\"col1\"></td><td class=\"col2\">71.09</td><td class=\"col3\">71.35</td><td class=\"col4\">71.42</td><td class=\"col5\">79.76</td><td class=\"col6\">79.95</td><td class=\"col7\">79.99</td><tr class=Wisconsin><td class=\"col0\">Wisconsin</td><td class=\"col1\"></td><td class=\"col2\">59.06</td><td class=\"col3\">58.27</td><td class=\"col4\">58.23</td><td class=\"col5\">71.34</td><td class=\"col6\">70.79</td><td class=\"col7\">70.76</td><tr class=Wyoming><td class=\"col0\">Wyoming</td><td class=\"col1\"></td><td class=\"col2\">50.0</td><td class=\"col3\">50.0</td><td class=\"col4\">50.0</td><td class=\"col5\">65.0</td><td class=\"col6\">65.0</td><td class=\"col7\">65.0</td><tr class=Outlying areas><td class=\"col0\">Outlying areas</td><td class=\"col1\"></td><td class=\"col2\"></td><td class=\"col3\"></td><td class=\"col4\"></td><td class=\"col5\"></td><td class=\"col6\"></td><td class=\"col7\"></td><tr class=><td class=\"col0\"></td><td class=\"col1\">American Samoa d</td><td class=\"col2\">55.0</td><td class=\"col3\">55.0</td><td class=\"col4\">55.0</td><td class=\"col5\">68.5</td><td class=\"col6\">68.5</td><td class=\"col7\">68.5</td><tr class=><td class=\"col0\"></td><td class=\"col1\">Guam<span class = \"top_footnote top_d\">d</span></td><td class=\"col2\">55.0</td><td class=\"col3\">55.0</td><td class=\"col4\">55.0</td><td class=\"col5\">68.5</td><td class=\"col6\">68.5</td><td class=\"col7\">68.5</td><tr class=><td class=\"col0\"></td><td class=\"col1\">Northern Mariana Islands d</td><td class=\"col2\">55.0</td><td class=\"col3\">55.0</td><td class=\"col4\">55.0</td><td class=\"col5\">68.5</td><td class=\"col6\">68.5</td><td class=\"col7\">68.5</td><tr class=><td class=\"col0\"></td><td class=\"col1\">Puerto Rico d</td><td class=\"col2\">55.0</td><td class=\"col3\">55.0</td><td class=\"col4\">55.0</td><td class=\"col5\">68.5</td><td class=\"col6\">68.5</td><td class=\"col7\">68.5</td><tr class=><td class=\"col0\"></td><td class=\"col1\">U.S. Virgin Islands d</td><td class=\"col2\">55.0</td><td class=\"col3\">55.0</td><td class=\"col4\">55.0</td><td class=\"col5\">68.5</td><td class=\"col6\">68.5</td><td class=\"col7\">68.5</td></tbody>", 
+        "header": "<thead><tr><th rowspan=\"2\"  colspan=\"2\"  class=\"series col0\" >State or area</th><th colspan=\"3\"  class=\"series col2\" >Federal medical assistance percentage <span class = \"top_footnote top_a\">a</span></th><th colspan=\"3\"  class=\"series col5\" >Enhanced federal medical assistance percentage <span class = \"top_footnote top_b\">b</span></th></tr><tr><th class=\"series col2\" >2014</th><th class=\"series col3\" >2015</th><th class=\"series col4\" >2016</th><th class=\"series col5\" >2014</th><th class=\"series col6\" >2015</th><th class=\"series col7\" >2016</th></tr></thead>"
     }, 
     "title": {
         "catID": "2.C", 
         "category": "Other Programs: Medicaid", 
         "id": "2_C2", 
-        "name": "Federal medical assistance percentage and enhanced federal medical assistance percentage, by state or other area, 2013\u20132015"
+        "name": "Federal medical assistance percentage and enhanced federal medical assistance percentage, by state or other area, fiscal years 2014\u20132016"
     }
 }

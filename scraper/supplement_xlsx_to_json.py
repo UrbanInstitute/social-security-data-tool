@@ -442,7 +442,7 @@ def getMapSeries(rowN, colNum, lastRow, sheet, sheetType, startRow):
 			state = [sheet.cell_value(rowx=i, colx=1).replace("\n","").replace("  "," ")]
 		else:
 			state = [sheet.cell_value(rowx=i, colx=0).replace("\n","").replace("  "," ")]
-		if(state[0] == "Outlying areas" or state[0] == "Foreign countries" or state[0] == "All areas"):
+		if(state[0] == "Outlying areas" or state[0] == "Foreign countries" or state[0] == "All areas" or state[0] == "Unknown"):
 			continue
 #"Other" Includes American Samoa, Guam, Northern Mariana Islands, U.S. Virgin Islands, and foreign countries.
 		elif(state[0].find("Other") >= 0):
@@ -450,7 +450,8 @@ def getMapSeries(rowN, colNum, lastRow, sheet, sheetType, startRow):
 		for s in state:
 			obj = {}
 #hacky workaround for 2.C2
-			s = s.replace(" f","").replace(" g","").replace(".","")
+			print sheet.name
+			s = s.replace(" f","").replace(" g","").replace(" c","").replace(" d","").replace(".","")
 			abbrev = STATES[s].lower()
 			if(abbrev == "gu"):
 				obj["hc-key"] = "gu-3605"
@@ -540,7 +541,7 @@ def addWords(words, string):
 
 parseUnits()
 
-book = xlrd.open_workbook("../data/statistical_supplement/supplement14_new.xls", formatting_info=True)
+book = xlrd.open_workbook("../data/statistical_supplement/supplement15.xls", formatting_info=True)
 sheets = book.sheet_names()
 
 #Years in 1st column (or year ranges), blank 2nd column, data
