@@ -1,0 +1,152 @@
+{
+    "category": "timeSeries", 
+    "data": {
+        "col1": {
+            "label": "Total", 
+            "series": [
+                125791.0, 
+                127240.0, 
+                185827.0, 
+                259840.0, 
+                328949.0, 
+                367441.0, 
+                364791.0, 
+                367845.0, 
+                358187.0, 
+                382323.0, 
+                385926.0, 
+                398624.0, 
+                416454.0, 
+                409293.0, 
+                412810.0, 
+                414147.0, 
+                409287.0, 
+                418835.0, 
+                416017.0, 
+                426533.0, 
+                423215.0, 
+                421994.0, 
+                426507.0, 
+                432397.0
+            ], 
+            "type": "dollarThousand"
+        }, 
+        "col2": {
+            "label": "Federal SSI", 
+            "series": [
+                91308.0, 
+                92427.0, 
+                131506.0, 
+                195183.0, 
+                238415.0, 
+                298238.0, 
+                298897.0, 
+                302656.0, 
+                291050.0, 
+                309295.0, 
+                312238.0, 
+                323895.0, 
+                335405.0, 
+                325878.0, 
+                327446.0, 
+                330591.0, 
+                326230.0, 
+                336789.0, 
+                335179.0, 
+                354817.0, 
+                359096.0, 
+                360789.0, 
+                373912.0, 
+                381863.0
+            ], 
+            "type": "dollarThousand"
+        }, 
+        "col3": {
+            "label": "Federally administered state supplementation", 
+            "series": [
+                34483.0, 
+                34813.0, 
+                54321.0, 
+                64657.0, 
+                90534.0, 
+                69203.0, 
+                65894.0, 
+                65189.0, 
+                67137.0, 
+                73028.0, 
+                73688.0, 
+                74729.0, 
+                81049.0, 
+                83415.0, 
+                85364.0, 
+                83556.0, 
+                83057.0, 
+                82046.0, 
+                80838.0, 
+                71716.0, 
+                64119.0, 
+                61205.0, 
+                52595.0, 
+                50534.0
+            ], 
+            "type": "dollarThousand"
+        }, 
+        "years": {
+            "series": [
+                1974, 
+                1975, 
+                1980, 
+                1985, 
+                1990, 
+                1995, 
+                1996, 
+                1997, 
+                1998, 
+                1999, 
+                2000, 
+                2001, 
+                2002, 
+                2003, 
+                2004, 
+                2005, 
+                2006, 
+                2007, 
+                2008, 
+                2009, 
+                2010, 
+                2011, 
+                2012, 
+                2013
+            ], 
+            "type": "year"
+        }
+    }, 
+    "footnotes": [
+        {
+            "content": "SOURCE: Social Security Administration, Office of Financial Policy and Operations.", 
+            "type": "note"
+        }, 
+        {
+            "content": "NOTE: Totals for \"Aged,\" \"Blind,\" and \"Disabled\" are derived. The derivation creates slight discrepancies between the sum of the group totals and the \"All recipients\" total.", 
+            "type": "note"
+        }, 
+        {
+            "content": "CONTACT: (410) 965-0090 or statistics@ssa.gov.", 
+            "type": "note"
+        }, 
+        {
+            "content": "File available from:\nU.S. Social Security Administration \u2022 Office of Retirement and Disability Policy \u2022 Office of Research, Evaluation, and Statistics\n<span class =\"suppTitle\">Annual Statistical Supplement, 2014</span>\nhttp://www.socialsecurity.gov/policy/docs/statcomps/supplement/2014/", 
+            "type": "note"
+        }
+    ], 
+    "html": {
+        "body": "<tbody><tr class=1974><td class=\"col0\">1974.0</td><td class=\"col1\">125791.0</td><td class=\"col2\">91308.0</td><td class=\"col3\">34483.0</td><tr class=1975><td class=\"col0\">1975.0</td><td class=\"col1\">127240.0</td><td class=\"col2\">92427.0</td><td class=\"col3\">34813.0</td><tr class=1980><td class=\"col0\">1980.0</td><td class=\"col1\">185827.0</td><td class=\"col2\">131506.0</td><td class=\"col3\">54321.0</td><tr class=1985><td class=\"col0\">1985.0</td><td class=\"col1\">259840.0</td><td class=\"col2\">195183.0</td><td class=\"col3\">64657.0</td><tr class=1990><td class=\"col0\">1990.0</td><td class=\"col1\">328949.0</td><td class=\"col2\">238415.0</td><td class=\"col3\">90534.0</td><tr class=1995><td class=\"col0\">1995.0</td><td class=\"col1\">367441.0</td><td class=\"col2\">298238.0</td><td class=\"col3\">69203.0</td><tr class=1996><td class=\"col0\">1996.0</td><td class=\"col1\">364791.0</td><td class=\"col2\">298897.0</td><td class=\"col3\">65894.0</td><tr class=1997><td class=\"col0\">1997.0</td><td class=\"col1\">367845.0</td><td class=\"col2\">302656.0</td><td class=\"col3\">65189.0</td><tr class=1998><td class=\"col0\">1998.0</td><td class=\"col1\">358187.0</td><td class=\"col2\">291050.0</td><td class=\"col3\">67137.0</td><tr class=1999><td class=\"col0\">1999.0</td><td class=\"col1\">382323.0</td><td class=\"col2\">309295.0</td><td class=\"col3\">73028.0</td><tr class=2000><td class=\"col0\">2000.0</td><td class=\"col1\">385926.0</td><td class=\"col2\">312238.0</td><td class=\"col3\">73688.0</td><tr class=2001><td class=\"col0\">2001.0</td><td class=\"col1\">398624.0</td><td class=\"col2\">323895.0</td><td class=\"col3\">74729.0</td><tr class=2002><td class=\"col0\">2002.0</td><td class=\"col1\">416454.0</td><td class=\"col2\">335405.0</td><td class=\"col3\">81049.0</td><tr class=2003><td class=\"col0\">2003.0</td><td class=\"col1\">409293.0</td><td class=\"col2\">325878.0</td><td class=\"col3\">83415.0</td><tr class=2004><td class=\"col0\">2004.0</td><td class=\"col1\">412810.0</td><td class=\"col2\">327446.0</td><td class=\"col3\">85364.0</td><tr class=2005><td class=\"col0\">2005.0</td><td class=\"col1\">414147.0</td><td class=\"col2\">330591.0</td><td class=\"col3\">83556.0</td><tr class=2006><td class=\"col0\">2006.0</td><td class=\"col1\">409287.0</td><td class=\"col2\">326230.0</td><td class=\"col3\">83057.0</td><tr class=2007><td class=\"col0\">2007.0</td><td class=\"col1\">418835.0</td><td class=\"col2\">336789.0</td><td class=\"col3\">82046.0</td><tr class=2008><td class=\"col0\">2008.0</td><td class=\"col1\">416017.0</td><td class=\"col2\">335179.0</td><td class=\"col3\">80838.0</td><tr class=2009><td class=\"col0\">2009.0</td><td class=\"col1\">426533.0</td><td class=\"col2\">354817.0</td><td class=\"col3\">71716.0</td><tr class=2010><td class=\"col0\">2010.0</td><td class=\"col1\">423215.0</td><td class=\"col2\">359096.0</td><td class=\"col3\">64119.0</td><tr class=2011><td class=\"col0\">2011.0</td><td class=\"col1\">421994.0</td><td class=\"col2\">360789.0</td><td class=\"col3\">61205.0</td><tr class=2012><td class=\"col0\">2012.0</td><td class=\"col1\">426507.0</td><td class=\"col2\">373912.0</td><td class=\"col3\">52595.0</td><tr class=2013><td class=\"col0\">2013.0</td><td class=\"col1\">432397.0</td><td class=\"col2\">381863.0</td><td class=\"col3\">50534.0</td></tbody>", 
+        "header": "<thead><tr><th class=\"series col0\" >Year</th><th class=\"series col1\" >Total</th><th class=\"series col2\" >Federal SSI</th><th class=\"series col3\" >Federally administered state supplementation</th></tr></thead>"
+    }, 
+    "title": {
+        "catID": "7.A", 
+        "category": "SSI: Summary", 
+        "id": "7_A4-2", 
+        "name": "Total federally administered payments, by eligibility category, selected years 1974\u20132013 (in\u00a0thousands of\u00a0dollars) :: Subtable : Blind"
+    }
+}

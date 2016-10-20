@@ -8,7 +8,7 @@ function getQueryVariable(variable) {
         }
     }
 }
-function getYear(){
+function getToolYear(){
 	if( d3.select("#toggleYear").classed("y2014")){
 		return "2015"
 	}else{
@@ -1295,17 +1295,17 @@ function getId(doc){
 function getDocURL(id){
 	return "http://localhost:27080/test/tables/_find?criteria=" + encodeURIComponent('{"title.id":"' + id + '"}')
 }
-function getJSONPath(id, year){
+function getJSONPath(id){
 	if(id[0] == "I" || id[0] == "V"){
-		return "data/json/trustees/trustees_report-" + id + ".json" 
+		return "data/" + getToolYear() + "/json/trustees/trustees_report-" + id + ".json" 
 	}
 	if (id == "words"){
-		return "data/words.json"
+		return "data/" + getToolYear() + "/words.json"
 	}
 	else if (id == "titles"){
-		return "data/titles.json"
+		return "data/" + getToolYear() + "/titles.json"
 	}else{
-		return "data/json/stat_supplement_table-" + id + ".json"
+		return "data/" + getToolYear() + "/json/stat_supplement_table-" + id + ".json"
 	}
 }
 function singleYear(){

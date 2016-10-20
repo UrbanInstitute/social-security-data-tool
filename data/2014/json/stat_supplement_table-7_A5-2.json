@@ -1,0 +1,132 @@
+{
+    "category": "timeSeries", 
+    "data": {
+        "col1": {
+            "label": "Total", 
+            "series": [
+                137.58, 
+                192.51, 
+                260.25, 
+                319.03, 
+                355.24, 
+                413.22, 
+                428.04, 
+                444.54, 
+                454.85, 
+                463.44, 
+                474.62, 
+                488.42, 
+                500.22, 
+                507.66, 
+                520.3, 
+                521.62, 
+                520.29, 
+                532.41, 
+                542.13
+            ], 
+            "type": "dollar"
+        }, 
+        "col2": {
+            "label": "Federal SSI", 
+            "series": [
+                112.69, 
+                163.36, 
+                224.31, 
+                267.34, 
+                317.06, 
+                360.51, 
+                374.72, 
+                384.79, 
+                389.2, 
+                398.15, 
+                407.87, 
+                423.15, 
+                435.15, 
+                442.42, 
+                470.63, 
+                472.95, 
+                475.87, 
+                494.06, 
+                504.26
+            ], 
+            "type": "dollar"
+        }, 
+        "col3": {
+            "label": "Federally administered state supplementation", 
+            "series": [
+                78.57, 
+                111.41, 
+                122.15, 
+                167.29, 
+                138.31, 
+                171.01, 
+                173.98, 
+                194.31, 
+                210.51, 
+                210.69, 
+                229.41, 
+                228.97, 
+                229.27, 
+                229.6, 
+                189.2, 
+                188.84, 
+                175.87, 
+                175.72, 
+                175.44
+            ], 
+            "type": "dollar"
+        }, 
+        "years": {
+            "series": [
+                1975, 
+                1980, 
+                1985, 
+                1990, 
+                1995, 
+                2000, 
+                2001, 
+                2002, 
+                2003, 
+                2004, 
+                2005, 
+                2006, 
+                2007, 
+                2008, 
+                2009, 
+                2010, 
+                2011, 
+                2012, 
+                2013
+            ], 
+            "type": "year"
+        }
+    }, 
+    "footnotes": [
+        {
+            "content": "SOURCE: Social Security Administration, Supplemental Security Record, 100\u00a0percent data.", 
+            "type": "note"
+        }, 
+        {
+            "content": "NOTE: Excludes retroactive payments.", 
+            "type": "note"
+        }, 
+        {
+            "content": "CONTACT: (410) 965-0090 or statistics@ssa.gov.", 
+            "type": "note"
+        }, 
+        {
+            "content": "File available from:\nU.S. Social Security Administration \u2022 Office of Retirement and Disability Policy \u2022 Office of Research, Evaluation, and Statistics\n<span class =\"suppTitle\">Annual Statistical Supplement, 2014</span>\nhttp://www.socialsecurity.gov/policy/docs/statcomps/supplement/2014/", 
+            "type": "note"
+        }
+    ], 
+    "html": {
+        "body": "<tbody><tr class=1975><td class=\"col0\">1975.0</td><td class=\"col1\">137.58</td><td class=\"col2\">112.69</td><td class=\"col3\">78.57</td><tr class=1980><td class=\"col0\">1980.0</td><td class=\"col1\">192.51</td><td class=\"col2\">163.36</td><td class=\"col3\">111.41</td><tr class=1985><td class=\"col0\">1985.0</td><td class=\"col1\">260.25</td><td class=\"col2\">224.31</td><td class=\"col3\">122.15</td><tr class=1990><td class=\"col0\">1990.0</td><td class=\"col1\">319.03</td><td class=\"col2\">267.34</td><td class=\"col3\">167.29</td><tr class=1995><td class=\"col0\">1995.0</td><td class=\"col1\">355.24</td><td class=\"col2\">317.06</td><td class=\"col3\">138.31</td><tr class=2000><td class=\"col0\">2000.0</td><td class=\"col1\">413.22</td><td class=\"col2\">360.51</td><td class=\"col3\">171.01</td><tr class=2001><td class=\"col0\">2001.0</td><td class=\"col1\">428.04</td><td class=\"col2\">374.72</td><td class=\"col3\">173.98</td><tr class=2002><td class=\"col0\">2002.0</td><td class=\"col1\">444.54</td><td class=\"col2\">384.79</td><td class=\"col3\">194.31</td><tr class=2003><td class=\"col0\">2003.0</td><td class=\"col1\">454.85</td><td class=\"col2\">389.2</td><td class=\"col3\">210.51</td><tr class=2004><td class=\"col0\">2004.0</td><td class=\"col1\">463.44</td><td class=\"col2\">398.15</td><td class=\"col3\">210.69</td><tr class=2005><td class=\"col0\">2005.0</td><td class=\"col1\">474.62</td><td class=\"col2\">407.87</td><td class=\"col3\">229.41</td><tr class=2006><td class=\"col0\">2006.0</td><td class=\"col1\">488.42</td><td class=\"col2\">423.15</td><td class=\"col3\">228.97</td><tr class=2007><td class=\"col0\">2007.0</td><td class=\"col1\">500.22</td><td class=\"col2\">435.15</td><td class=\"col3\">229.27</td><tr class=2008><td class=\"col0\">2008.0</td><td class=\"col1\">507.66</td><td class=\"col2\">442.42</td><td class=\"col3\">229.6</td><tr class=2009><td class=\"col0\">2009.0</td><td class=\"col1\">520.3</td><td class=\"col2\">470.63</td><td class=\"col3\">189.2</td><tr class=2010><td class=\"col0\">2010.0</td><td class=\"col1\">521.62</td><td class=\"col2\">472.95</td><td class=\"col3\">188.84</td><tr class=2011><td class=\"col0\">2011.0</td><td class=\"col1\">520.29</td><td class=\"col2\">475.87</td><td class=\"col3\">175.87</td><tr class=2012><td class=\"col0\">2012.0</td><td class=\"col1\">532.41</td><td class=\"col2\">494.06</td><td class=\"col3\">175.72</td><tr class=2013><td class=\"col0\">2013.0</td><td class=\"col1\">542.13</td><td class=\"col2\">504.26</td><td class=\"col3\">175.44</td></tbody>", 
+        "header": "<thead><tr><th class=\"series col0\" >Year</th><th class=\"series col1\" >Total</th><th class=\"series col2\" >Federal SSI</th><th class=\"series col3\" >Federally administered state supplementation</th></tr></thead>"
+    }, 
+    "title": {
+        "catID": "7.A", 
+        "category": "SSI: Summary", 
+        "id": "7_A5-2", 
+        "name": "Average monthly federally administered payment, by eligibility category, December 1975\u20132013, selected years (in\u00a0dollars) :: Subtable : Blind"
+    }
+}
