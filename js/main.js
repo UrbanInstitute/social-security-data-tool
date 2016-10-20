@@ -8,6 +8,23 @@ function getQueryVariable(variable) {
         }
     }
 }
+function getYear(){
+	if( d3.select("#toggleYear").classed("y2014")){
+		return "2015"
+	}else{
+		return "2014"
+	}
+}
+d3.select("#toggleYear")
+	.on("click", function(){
+		if(d3.select(this).classed("y2014")){
+			d3.select(this).text("View 2015 Data").classed("y2014",false).classed("y2015",true)
+			init("2014")
+		}else{
+			d3.select(this).text("View 2014 Data").classed("y2014",true).classed("y2015",false)
+			init("2015")
+		}
+	})
 
 function getHashParams() {
 
@@ -37,7 +54,7 @@ var IE = false;
 var exportParams = {tableID:"",columns:[],chartType:""}
 
 
-function init(){
+function init(year){
 	
 	var hashID = window.location.hash.substring(1)
 	if(hashID != ""){
@@ -1278,7 +1295,7 @@ function getId(doc){
 function getDocURL(id){
 	return "http://localhost:27080/test/tables/_find?criteria=" + encodeURIComponent('{"title.id":"' + id + '"}')
 }
-function getJSONPath(id){
+function getJSONPath(id, year){
 	if(id[0] == "I" || id[0] == "V"){
 		return "data/json/trustees/trustees_report-" + id + ".json" 
 	}
@@ -1756,7 +1773,7 @@ var TOTAL_TABLES = sheets.length
 var tableIndex = 0;
 // init("2A9");
 // init("4C1");
-init();
+init("2015");
 window.onresize = function(){
 	if(d3.select("#testTable thead").node().getBoundingClientRect().width - $(window).width() + 74 <= 0){
 		d3.select(".rightFader").style("opacity", 0)

@@ -671,6 +671,22 @@ a{
 /****************************************/
 /************ NAVBAR ********************/
 /****************************************/
+
+#toggleYear{
+    position: fixed;
+    top: 49px;
+    left: 79px;
+    background-color: #fdbf11;
+    color: black;
+    z-index: 1000;
+    height: 22px;
+    border-top: 5px solid #fdbf11;
+    font-size: 12px;
+    vertical-align: middle;
+    border-left: 10px solid #fdbf11;
+    border-right: 10px solid #fdbf11;
+    cursor: pointer;
+}
     #header-pinned {
         background: #333;
         position: fixed;
