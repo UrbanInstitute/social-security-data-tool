@@ -1,0 +1,78 @@
+{
+    "category": "barChart", 
+    "data": {
+        "categories": {
+            "series": [
+                "Number of ALJs", 
+                "Average monthly hearing dispositions per ALJ a", 
+                "Average hearings pending per ALJ"
+            ], 
+            "type": "barLabel"
+        }, 
+        "col1": {
+            "label": "2011", 
+            "series": [
+                1230.0, 
+                50.0, 
+                523.0
+            ], 
+            "type": "number"
+        }, 
+        "col2": {
+            "label": "2012", 
+            "series": [
+                1301.0, 
+                50.0, 
+                533.0
+            ], 
+            "type": "number"
+        }, 
+        "col3": {
+            "label": "2013", 
+            "series": [
+                1356.0, 
+                48.0, 
+                577.0
+            ], 
+            "type": "number"
+        }, 
+        "col4": {
+            "label": "2014", 
+            "series": [
+                1311.0, 
+                43.0, 
+                688.0
+            ], 
+            "type": "number"
+        }
+    }, 
+    "footnotes": [
+        {
+            "content": "Sources: Social Security Administration, Office of Disability Adjudication and Review. Actual data from the Key Workload Indicator Report.", 
+            "type": "note"
+        }, 
+        {
+            "content": "Note: Number of ALJs and average monthly hearing dispositions per ALJ based on fiscal year average ALJ availability; average hearings pending per ALJ based on ALJs on duty. Data exclude Regional Chief ALJs.", 
+            "type": "note"
+        }, 
+        {
+            "content": "Calculation excludes Attorney Adjudicator decisions.", 
+            "symbol": "a.", 
+            "type": "footnote"
+        }, 
+        {
+            "content": "File available from US Social Security Administration \u2022 Office of Retirement and Disability Policy \u2022 Office of Research, Evaluation, and Statistics, Annual Statistical Supplement, 2015, http://www.socialsecurity.gov/policy/docs/statcomps/supplement/2015/.", 
+            "type": "note"
+        }
+    ], 
+    "html": {
+        "body": "<tbody><tr class=Number of ALJs><td class=\"col0\">Number of ALJs</td><td class=\"col2\">1230.0</td><td class=\"col3\">1301.0</td><td class=\"col4\">1356.0</td><td class=\"col5\">1311.0</td><tr class=Average monthly hearing dispositions per ALJ a><td class=\"col0\">Average monthly hearing dispositions per ALJ a</td><td class=\"col2\">50.0</td><td class=\"col3\">50.0</td><td class=\"col4\">48.0</td><td class=\"col5\">43.0</td><tr class=Average hearings pending per ALJ><td class=\"col0\">Average hearings pending per ALJ</td><td class=\"col2\">523.0</td><td class=\"col3\">533.0</td><td class=\"col4\">577.0</td><td class=\"col5\">688.0</td></tbody>", 
+        "header": "<thead><tr><th class=\"series col0\" >Item</th><th class=\"series col1\" >2011</th><th class=\"series col2\" >2012</th><th class=\"series col3\" >2013</th><th class=\"series col4\" >2014</th></tr></thead>"
+    }, 
+    "title": {
+        "catID": "2.F", 
+        "category": "SSA Administrative Data: Hearings and Appeals", 
+        "id": "2_F8", 
+        "name": "Workload of SSA's Administrative Law Judges (ALJs), fiscal years 2011\u20132014"
+    }
+}

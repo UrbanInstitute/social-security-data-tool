@@ -1,0 +1,413 @@
+{
+    "category": "timeSeries", 
+    "data": {
+        "col1": {
+            "label": "Total a", 
+            "series": [
+                37508.0, 
+                41005.0, 
+                45050.0, 
+                48710.0, 
+                54500.0, 
+                64859.0, 
+                77048.0, 
+                90814.0, 
+                101709.0, 
+                108270.0, 
+                120141.0, 
+                121685.0, 
+                124430.0, 
+                142318.0, 
+                147372.0, 
+                168442.0, 
+                186913.0, 
+                213497.0, 
+                233206.0, 
+                257748.0, 
+                275569.0, 
+                268505.0, 
+                276539.0, 
+                296560.0, 
+                320752.0, 
+                338803.0, 
+                366628.0, 
+                366993.0, 
+                373185.0
+            ], 
+            "type": "dollarMillion"
+        }, 
+        "col2": {
+            "label": "Medicaid :: Aged 65 or older", 
+            "series": [
+                14096.0, 
+                15097.0, 
+                16037.0, 
+                17135.0, 
+                18558.0, 
+                21508.0, 
+                25453.0, 
+                29078.0, 
+                31554.0, 
+                33618.0, 
+                36527.0, 
+                36947.0, 
+                37721.0, 
+                40602.0, 
+                40470.0, 
+                44560.0, 
+                48431.0, 
+                52012.0, 
+                55271.0, 
+                59541.0, 
+                63358.0, 
+                58109.0, 
+                57362.0, 
+                61116.0, 
+                63531.0, 
+                65173.0, 
+                66981.0, 
+                66309.0, 
+                62127.0
+            ], 
+            "type": "dollarMillion"
+        }, 
+        "col3": {
+            "label": "Medicaid :: Blind", 
+            "series": [
+                249.0, 
+                277.0, 
+                309.0, 
+                344.0, 
+                409.0, 
+                434.0, 
+                475.0, 
+                530.0, 
+                589.0, 
+                644.0, 
+                848.0, 
+                869.0, 
+                false, 
+                false, 
+                false, 
+                false, 
+                false, 
+                false, 
+                false, 
+                false, 
+                false, 
+                false, 
+                false, 
+                false, 
+                false, 
+                false, 
+                false, 
+                false, 
+                false
+            ], 
+            "type": "dollarMillion"
+        }, 
+        "col4": {
+            "label": "Medicaid :: Permanent and total disability", 
+            "series": [
+                13203.0, 
+                14635.0, 
+                16507.0, 
+                18250.0, 
+                20476.0, 
+                23969.0, 
+                27798.0, 
+                33326.0, 
+                38065.0, 
+                41654.0, 
+                48570.0, 
+                51196.0, 
+                54130.0, 
+                60375.0, 
+                63028.0, 
+                72772.0, 
+                80493.0, 
+                92414.0, 
+                102014.0, 
+                111614.0, 
+                119647.0, 
+                116209.0, 
+                119621.0, 
+                128945.0, 
+                139051.0, 
+                146900.0, 
+                155630.0, 
+                156129.0, 
+                153068.0
+            ], 
+            "type": "dollarMillion"
+        }, 
+        "col5": {
+            "label": "Medicaid :: Dependent children under age 21", 
+            "series": [
+                4414.0, 
+                5135.0, 
+                5508.0, 
+                5848.0, 
+                6892.0, 
+                9100.0, 
+                11690.0, 
+                14491.0, 
+                16504.0, 
+                17302.0, 
+                17976.0, 
+                17544.0, 
+                17544.0, 
+                22806.0, 
+                20765.0, 
+                23490.0, 
+                26770.0, 
+                31595.0, 
+                35079.0, 
+                39194.0, 
+                42012.0, 
+                44645.0, 
+                47763.0, 
+                57073.0, 
+                57382.0, 
+                61291.0, 
+                65582.0, 
+                65732.0, 
+                68575.0
+            ], 
+            "type": "dollarMillion"
+        }, 
+        "col6": {
+            "label": "Medicaid :: Adults in families with\u00a0dependent children", 
+            "series": [
+                4746.0, 
+                4880.0, 
+                5592.0, 
+                5883.0, 
+                6897.0, 
+                8590.0, 
+                10439.0, 
+                12185.0, 
+                13605.0, 
+                13585.0, 
+                13511.0, 
+                12275.0, 
+                12307.0, 
+                14833.0, 
+                15141.0, 
+                17671.0, 
+                20096.0, 
+                23525.0, 
+                26689.0, 
+                30522.0, 
+                32385.0, 
+                32871.0, 
+                33764.0, 
+                37133.0, 
+                43266.0, 
+                47613.0, 
+                52712.0, 
+                54649.0, 
+                49005.0
+            ], 
+            "type": "dollarMillion"
+        }, 
+        "col7": {
+            "label": "Medicaid :: Other", 
+            "series": [
+                798.0, 
+                980.0, 
+                1078.0, 
+                1198.0, 
+                1268.0, 
+                1257.0, 
+                1193.0, 
+                1204.0, 
+                1391.0, 
+                1467.0, 
+                2708.0, 
+                2853.0, 
+                2727.0, 
+                3702.0, 
+                7966.0, 
+                9948.0, 
+                11121.0, 
+                13950.0, 
+                14153.0, 
+                16877.0, 
+                18167.0, 
+                16670.0, 
+                18029.0, 
+                12294.0, 
+                17523.0, 
+                17827.0, 
+                24289.0, 
+                22099.0, 
+                12912.0
+            ], 
+            "type": "dollarMillion"
+        }, 
+        "col8": {
+            "label": "Separate Children's Health Insurance Program (CHIP)", 
+            "series": [
+                false, 
+                false, 
+                false, 
+                false, 
+                false, 
+                false, 
+                false, 
+                false, 
+                false, 
+                false, 
+                false, 
+                false, 
+                false, 
+                false, 
+                false, 
+                false, 
+                false, 
+                false, 
+                false, 
+                false, 
+                false, 
+                false, 
+                false, 
+                false, 
+                false, 
+                false, 
+                false, 
+                false, 
+                27498.0
+            ], 
+            "type": ""
+        }, 
+        "years": {
+            "series": [
+                1985, 
+                1986, 
+                1987, 
+                1988, 
+                1989, 
+                1990, 
+                1991, 
+                1992, 
+                1993, 
+                1994, 
+                1995, 
+                1996, 
+                1997, 
+                1998, 
+                1999, 
+                2000, 
+                2001, 
+                2002, 
+                2003, 
+                2004, 
+                2005, 
+                2006, 
+                2007, 
+                2008, 
+                2009, 
+                2010, 
+                2011, 
+                2012, 
+                2013
+            ], 
+            "type": "year"
+        }
+    }, 
+    "footnotes": [
+        {
+            "content": "Sources: Data through fiscal year 1998 are from HCFA Form 2082; data for fiscal years 1999\u20132012 are from Medicaid Statistical Information System (MSIS) State Summary Data, Centers for Medicare & Medicaid Services (CMS); data for fiscal year 2013 are from claims files in the MSIS Granular file, CMS.", 
+            "type": "note"
+        }, 
+        {
+            "content": "Notes: Totals do not necessarily equal the sum of rounded components.", 
+            "type": "note"
+        }, 
+        {
+            "content": "Beginning with fiscal year 1997, \"Disability\" includes blindness. \"Children\" includes foster care children, and \"Other\" are \"Unknowns.\" In fiscal years 1999 and 2000, \"Other\" includes foster care children and \"Unknowns.\" In fiscal years 2001 and 2002, \"Other\" includes foster care children, \"Unknowns,\" and individuals covered under the Breast and Cervical Cancer Prevention and Treatment Act of 2000.", 
+            "type": "note"
+        }, 
+        {
+            "content": "Beginning with fiscal year 1999, excludes recipients in Puerto Rico and the US Virgin Islands. Data are not available.", 
+            "type": "note"
+        }, 
+        {
+            "content": "Beginning with data for fiscal year 2013, the methodology for producing recipient counts was revised to include those who received at least one service through Medicaid or Separate CHIP. Payment amounts are derived from records for all claim types.", 
+            "type": "note"
+        }, 
+        {
+            "content": "The MSIS Data Anomalies Report (https://www.cms.gov/Research-Statistics-Data-and-Systems/Computer-Data-and-Systems/MedicaidDataSourcesGenInfo/MSIS-Tables.html)  documents any postpublication data quality issues.", 
+            "type": "note"
+        }, 
+        {
+            "content": ". . . = not applicable; -- = not available.", 
+            "type": "note"
+        }, 
+        {
+            "content": "Total represents the unduplicated number of recipients receiving any type of medical service during the year.", 
+            "symbol": "a.", 
+            "type": "footnote"
+        }, 
+        {
+            "content": "Fiscal year 2005 data are not available for Maine. Fiscal year 2004 data have been substituted.", 
+            "symbol": "b.", 
+            "type": "footnote"
+        }, 
+        {
+            "content": "Fiscal year 2006 data are not available for Maine and Nevada. Fiscal year 2004 data have been substituted for Maine, and fiscal year 2005 data have been \nsubstituted for Nevada.", 
+            "symbol": "c.", 
+            "type": "footnote"
+        }, 
+        {
+            "content": "Fiscal year 2007 data are not available for Hawaii and Maine. Fiscal year 2006 data have been substituted for Hawaii, and fiscal year 2005 data have been substituted for Maine.", 
+            "symbol": "d.", 
+            "type": "footnote"
+        }, 
+        {
+            "content": "Fiscal year 2008 data are not available for Hawaii and Utah. Fiscal year 2007 data have been substituted.", 
+            "symbol": "e.", 
+            "type": "footnote"
+        }, 
+        {
+            "content": "Fiscal year 2009 data are not available for Hawaii, Massachusetts, Missouri, Pennsylvania, Utah, and Wisconsin. Fiscal year 2007 data have been substituted for Hawaii and Utah, and fiscal year 2008 data have been substituted for Massachusetts, Missouri, Pennsylvania, and Wisconsin.", 
+            "symbol": "f.", 
+            "type": "footnote"
+        }, 
+        {
+            "content": "Fiscal year 2010 data are not available for Colorado, Hawaii, Idaho, Missouri, New Hampshire, Utah, and Wisconsin. Fiscal year 2007 data have been substituted for Hawaii and Utah. Fiscal year 2008 data have been substituted Missouri and Wisconsin. Fiscal year 2009 data have been substituted for Colorado, Idaho, and New Hampshire.", 
+            "symbol": "g.", 
+            "type": "footnote"
+        }, 
+        {
+            "content": "Fiscal year 2011 data are not available for Maine. Fiscal year 2010 data have been substituted.", 
+            "symbol": "h.", 
+            "type": "footnote"
+        }, 
+        {
+            "content": "Fiscal year 2012 data are not available for Arizona, Colorado, the District of Columbia, Florida, Hawaii, Idaho, Kansas, Louisiana, Maine, Massachusetts, Texas, and Utah. Fiscal year 2011 data have been substituted.", 
+            "symbol": "i.", 
+            "type": "footnote"
+        }, 
+        {
+            "content": "Fiscal year 2013 data are not available for Colorado, the District of Columbia, Idaho, and Rhode Island. Fiscal year 2011 data have been substituted for Colorado and Idaho, and fiscal year 2012 data have been substituted for the District of Columbia and Rhode Island. Fiscal year 2013 data for Kansas, Louisiana, North Dakota, New Hampshire, and Utah are from partial-year claims files and do not reflect fiscal year totals.", 
+            "symbol": "j.", 
+            "type": "footnote"
+        }, 
+        {
+            "content": "File available from US Social Security Administration \u2022 Office of Retirement and Disability Policy \u2022 Office of Research, Evaluation, and Statistics, Annual Statistical Supplement, 2015, http://www.socialsecurity.gov/policy/docs/statcomps/supplement/2015/.", 
+            "type": "note"
+        }
+    ], 
+    "html": {
+        "body": "<tbody><tr class=1985><td class=\"col0\">1985.0</td><td class=\"col2\">37508.0</td><td class=\"col3\">14096.0</td><td class=\"col4\">249.0</td><td class=\"col5\">13203.0</td><td class=\"col6\">4414.0</td><td class=\"col7\">4746.0</td><td class=\"col8\">798.0</td><td class=\"col9\">--</td><tr class=1986><td class=\"col0\">1986.0</td><td class=\"col2\">41005.0</td><td class=\"col3\">15097.0</td><td class=\"col4\">277.0</td><td class=\"col5\">14635.0</td><td class=\"col6\">5135.0</td><td class=\"col7\">4880.0</td><td class=\"col8\">980.0</td><td class=\"col9\">--</td><tr class=1987><td class=\"col0\">1987.0</td><td class=\"col2\">45050.0</td><td class=\"col3\">16037.0</td><td class=\"col4\">309.0</td><td class=\"col5\">16507.0</td><td class=\"col6\">5508.0</td><td class=\"col7\">5592.0</td><td class=\"col8\">1078.0</td><td class=\"col9\">--</td><tr class=1988><td class=\"col0\">1988.0</td><td class=\"col2\">48710.0</td><td class=\"col3\">17135.0</td><td class=\"col4\">344.0</td><td class=\"col5\">18250.0</td><td class=\"col6\">5848.0</td><td class=\"col7\">5883.0</td><td class=\"col8\">1198.0</td><td class=\"col9\">--</td><tr class=1989><td class=\"col0\">1989.0</td><td class=\"col2\">54500.0</td><td class=\"col3\">18558.0</td><td class=\"col4\">409.0</td><td class=\"col5\">20476.0</td><td class=\"col6\">6892.0</td><td class=\"col7\">6897.0</td><td class=\"col8\">1268.0</td><td class=\"col9\">--</td><tr class=1990><td class=\"col0\">1990.0</td><td class=\"col2\">64859.0</td><td class=\"col3\">21508.0</td><td class=\"col4\">434.0</td><td class=\"col5\">23969.0</td><td class=\"col6\">9100.0</td><td class=\"col7\">8590.0</td><td class=\"col8\">1257.0</td><td class=\"col9\">--</td><tr class=1991><td class=\"col0\">1991.0</td><td class=\"col2\">77048.0</td><td class=\"col3\">25453.0</td><td class=\"col4\">475.0</td><td class=\"col5\">27798.0</td><td class=\"col6\">11690.0</td><td class=\"col7\">10439.0</td><td class=\"col8\">1193.0</td><td class=\"col9\">--</td><tr class=1992><td class=\"col0\">1992.0</td><td class=\"col2\">90814.0</td><td class=\"col3\">29078.0</td><td class=\"col4\">530.0</td><td class=\"col5\">33326.0</td><td class=\"col6\">14491.0</td><td class=\"col7\">12185.0</td><td class=\"col8\">1204.0</td><td class=\"col9\">--</td><tr class=1993><td class=\"col0\">1993.0</td><td class=\"col2\">101709.0</td><td class=\"col3\">31554.0</td><td class=\"col4\">589.0</td><td class=\"col5\">38065.0</td><td class=\"col6\">16504.0</td><td class=\"col7\">13605.0</td><td class=\"col8\">1391.0</td><td class=\"col9\">--</td><tr class=1994><td class=\"col0\">1994.0</td><td class=\"col2\">108270.0</td><td class=\"col3\">33618.0</td><td class=\"col4\">644.0</td><td class=\"col5\">41654.0</td><td class=\"col6\">17302.0</td><td class=\"col7\">13585.0</td><td class=\"col8\">1467.0</td><td class=\"col9\">--</td><tr class=1995><td class=\"col0\">1995.0</td><td class=\"col2\">120141.0</td><td class=\"col3\">36527.0</td><td class=\"col4\">848.0</td><td class=\"col5\">48570.0</td><td class=\"col6\">17976.0</td><td class=\"col7\">13511.0</td><td class=\"col8\">2708.0</td><td class=\"col9\">--</td><tr class=1996><td class=\"col0\">1996.0</td><td class=\"col2\">121685.0</td><td class=\"col3\">36947.0</td><td class=\"col4\">869.0</td><td class=\"col5\">51196.0</td><td class=\"col6\">17544.0</td><td class=\"col7\">12275.0</td><td class=\"col8\">2853.0</td><td class=\"col9\">--</td><tr class=1997><td class=\"col0\">1997.0</td><td class=\"col2\">124430.0</td><td class=\"col3\">37721.0</td><td class=\"col4\">. . .</td><td class=\"col5\">54130.0</td><td class=\"col6\">17544.0</td><td class=\"col7\">12307.0</td><td class=\"col8\">2727.0</td><td class=\"col9\">--</td><tr class=1998><td class=\"col0\">1998.0</td><td class=\"col2\">142318.0</td><td class=\"col3\">40602.0</td><td class=\"col4\">. . .</td><td class=\"col5\">60375.0</td><td class=\"col6\">22806.0</td><td class=\"col7\">14833.0</td><td class=\"col8\">3702.0</td><td class=\"col9\">--</td><tr class=1999><td class=\"col0\">1999.0</td><td class=\"col2\">147372.0</td><td class=\"col3\">40470.0</td><td class=\"col4\">. . .</td><td class=\"col5\">63028.0</td><td class=\"col6\">20765.0</td><td class=\"col7\">15141.0</td><td class=\"col8\">7966.0</td><td class=\"col9\">--</td><tr class=2000><td class=\"col0\">2000.0</td><td class=\"col2\">168442.0</td><td class=\"col3\">44560.0</td><td class=\"col4\">. . .</td><td class=\"col5\">72772.0</td><td class=\"col6\">23490.0</td><td class=\"col7\">17671.0</td><td class=\"col8\">9948.0</td><td class=\"col9\">--</td><tr class=2001><td class=\"col0\">2001.0</td><td class=\"col2\">186913.0</td><td class=\"col3\">48431.0</td><td class=\"col4\">. . .</td><td class=\"col5\">80493.0</td><td class=\"col6\">26770.0</td><td class=\"col7\">20096.0</td><td class=\"col8\">11121.0</td><td class=\"col9\">--</td><tr class=2002><td class=\"col0\">2002.0</td><td class=\"col2\">213497.0</td><td class=\"col3\">52012.0</td><td class=\"col4\">. . .</td><td class=\"col5\">92414.0</td><td class=\"col6\">31595.0</td><td class=\"col7\">23525.0</td><td class=\"col8\">13950.0</td><td class=\"col9\">--</td><tr class=2003><td class=\"col0\">2003.0</td><td class=\"col2\">233206.0</td><td class=\"col3\">55271.0</td><td class=\"col4\">. . .</td><td class=\"col5\">102014.0</td><td class=\"col6\">35079.0</td><td class=\"col7\">26689.0</td><td class=\"col8\">14153.0</td><td class=\"col9\">--</td><tr class=2004><td class=\"col0\">2004.0</td><td class=\"col2\">257748.0</td><td class=\"col3\">59541.0</td><td class=\"col4\">. . .</td><td class=\"col5\">111614.0</td><td class=\"col6\">39194.0</td><td class=\"col7\">30522.0</td><td class=\"col8\">16877.0</td><td class=\"col9\">--</td><tr class=2005><td class=\"col0\">2005<span class = \"top_footnote top_b\">b</span></td><td class=\"col2\">275569.0</td><td class=\"col3\">63358.0</td><td class=\"col4\">. . .</td><td class=\"col5\">119647.0</td><td class=\"col6\">42012.0</td><td class=\"col7\">32385.0</td><td class=\"col8\">18167.0</td><td class=\"col9\">--</td><tr class=2006><td class=\"col0\">2006<span class = \"top_footnote top_c\">c</span></td><td class=\"col2\">268505.0</td><td class=\"col3\">58109.0</td><td class=\"col4\">. . .</td><td class=\"col5\">116209.0</td><td class=\"col6\">44645.0</td><td class=\"col7\">32871.0</td><td class=\"col8\">16670.0</td><td class=\"col9\">--</td><tr class=2007><td class=\"col0\">2007<span class = \"top_footnote top_d\">d</span></td><td class=\"col2\">276539.0</td><td class=\"col3\">57362.0</td><td class=\"col4\">. . .</td><td class=\"col5\">119621.0</td><td class=\"col6\">47763.0</td><td class=\"col7\">33764.0</td><td class=\"col8\">18029.0</td><td class=\"col9\">--</td><tr class=2008><td class=\"col0\">2008<span class = \"top_footnote top_e\">e</span></td><td class=\"col2\">296560.0</td><td class=\"col3\">61116.0</td><td class=\"col4\">. . .</td><td class=\"col5\">128945.0</td><td class=\"col6\">57073.0</td><td class=\"col7\">37133.0</td><td class=\"col8\">12294.0</td><td class=\"col9\">--</td><tr class=2009><td class=\"col0\">2009<span class = \"top_footnote top_f\">f</span></td><td class=\"col2\">320752.0</td><td class=\"col3\">63531.0</td><td class=\"col4\">. . .</td><td class=\"col5\">139051.0</td><td class=\"col6\">57382.0</td><td class=\"col7\">43266.0</td><td class=\"col8\">17523.0</td><td class=\"col9\">--</td><tr class=2010><td class=\"col0\">2010<span class = \"top_footnote top_g\">g</span></td><td class=\"col2\">338803.0</td><td class=\"col3\">65173.0</td><td class=\"col4\">. . .</td><td class=\"col5\">146900.0</td><td class=\"col6\">61291.0</td><td class=\"col7\">47613.0</td><td class=\"col8\">17827.0</td><td class=\"col9\">--</td><tr class=2011><td class=\"col0\">2011<span class = \"top_footnote top_h\">h</span></td><td class=\"col2\">366628.0</td><td class=\"col3\">66981.0</td><td class=\"col4\"> . . .</td><td class=\"col5\">155630.0</td><td class=\"col6\">65582.0</td><td class=\"col7\">52712.0</td><td class=\"col8\">24289.0</td><td class=\"col9\">--</td><tr class=2012><td class=\"col0\">2012<span class = \"top_footnote top_i\">i</span></td><td class=\"col2\">366993.0</td><td class=\"col3\">66309.0</td><td class=\"col4\"> . . .</td><td class=\"col5\">156129.0</td><td class=\"col6\">65732.0</td><td class=\"col7\">54649.0</td><td class=\"col8\">22099.0</td><td class=\"col9\">--</td><tr class=2013><td class=\"col0\">2013<span class = \"top_footnote top_j\">j</span></td><td class=\"col2\">373185.0</td><td class=\"col3\">62127.0</td><td class=\"col4\"> . . .</td><td class=\"col5\">153068.0</td><td class=\"col6\">68575.0</td><td class=\"col7\">49005.0</td><td class=\"col8\">12912.0</td><td class=\"col9\">27498.0</td></tbody>", 
+        "header": "<thead><tr><th rowspan=\"2\"  class=\"series col0\" >Year</th><th rowspan=\"2\"  class=\"series col1\" >Total <span class = \"top_footnote top_a\">a</span></th><th colspan=\"6\"  class=\"series col2\" >Medicaid</th><th rowspan=\"2\"  class=\"series col8\" >Separate Children's Health Insurance Program (CHIP)</th></tr><tr><th class=\"series col2\" >Aged 65 or older</th><th class=\"series col3\" >Blind</th><th class=\"series col4\" >Permanent and total disability</th><th class=\"series col5\" >Dependent children under age 21</th><th class=\"series col6\" >Adults in families with dependent children</th><th class=\"series col7\" >Other</th></tr></thead>"
+    }, 
+    "title": {
+        "catID": "8.E", 
+        "category": "Medicaid: Recipients", 
+        "id": "8_E2-1", 
+        "name": "Number of recipients, total vendor payments, and average payment, by type of eligibility category, fiscal years 1985\u20132013 :: Subtable : Total vendor payments (millions of dollars)"
+    }
+}

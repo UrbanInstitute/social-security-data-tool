@@ -1,0 +1,79 @@
+{
+    "category": "barChart", 
+    "data": {
+        "categories": {
+            "series": [
+                "Beginning-of-year pending", 
+                "Receipts", 
+                "Dispositions", 
+                "End-of-year pending"
+            ], 
+            "type": "barLabel"
+        }, 
+        "col1": {
+            "label": "2011", 
+            "series": [
+                106664.0, 
+                173332.0, 
+                126992.0, 
+                153004.0
+            ], 
+            "type": "number"
+        }, 
+        "col2": {
+            "label": "2012", 
+            "series": [
+                153242.0, 
+                173848.0, 
+                166020.0, 
+                161070.0
+            ], 
+            "type": "number"
+        }, 
+        "col3": {
+            "label": "2013", 
+            "series": [
+                161070.0, 
+                172492.0, 
+                176251.0, 
+                157311.0
+            ], 
+            "type": "number"
+        }, 
+        "col4": {
+            "label": "2014", 
+            "series": [
+                157311.0, 
+                155352.0, 
+                162280.0, 
+                150383.0
+            ], 
+            "type": "number"
+        }
+    }, 
+    "footnotes": [
+        {
+            "content": "Sources: Social Security Administration, Office of Disability Adjudication and Review. Actual data from the Appeals Review Processing System and Key Workload Indicator Report.", 
+            "type": "note"
+        }, 
+        {
+            "content": "Because of calendar variations and agency budgeting and accounting rules, one week occasionally falls between the end of one fiscal year and the beginning of the next. In September 2011, that week saw 2,159 receipts and 1,921 dispositions, thus adding 238 cases to the total pending at the end of fiscal year 2011.", 
+            "symbol": "a.", 
+            "type": "footnote"
+        }, 
+        {
+            "content": "File available from US Social Security Administration \u2022 Office of Retirement and Disability Policy \u2022 Office of Research, Evaluation, and Statistics, Annual Statistical Supplement, 2015, http://www.socialsecurity.gov/policy/docs/statcomps/supplement/2015/.", 
+            "type": "note"
+        }
+    ], 
+    "html": {
+        "body": "<tbody><tr class=Beginning-of-year pending><td class=\"col0\">Beginning-of-year pending</td><td class=\"col2\">106664.0</td><td class=\"col3\"><span class = \"top_footnote top_a\">a</span>153,242</td><td class=\"col4\">161070.0</td><td class=\"col5\">157311.0</td><tr class=Receipts><td class=\"col0\">Receipts</td><td class=\"col2\">173332.0</td><td class=\"col3\">173848.0</td><td class=\"col4\">172492.0</td><td class=\"col5\">155352.0</td><tr class=Dispositions><td class=\"col0\">Dispositions</td><td class=\"col2\">126992.0</td><td class=\"col3\">166020.0</td><td class=\"col4\">176251.0</td><td class=\"col5\">162280.0</td><tr class=End-of-year pending><td class=\"col0\">End-of-year pending</td><td class=\"col2\">153004.0</td><td class=\"col3\">161070.0</td><td class=\"col4\">157311.0</td><td class=\"col5\">150383.0</td></tbody>", 
+        "header": "<thead><tr><th class=\"series col0\" >Cases</th><th class=\"series col1\" >2011</th><th class=\"series col2\" >2012</th><th class=\"series col3\" >2013</th><th class=\"series col4\" >2014</th></tr></thead>"
+    }, 
+    "title": {
+        "catID": "2.F", 
+        "category": "SSA Administrative Data: Hearings and Appeals", 
+        "id": "2_F11", 
+        "name": "Number of SSA Appeals Council cases, fiscal years 2011\u20132014"
+    }
+}

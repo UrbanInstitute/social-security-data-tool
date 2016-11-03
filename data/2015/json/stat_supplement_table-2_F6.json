@@ -1,0 +1,61 @@
+{
+    "category": "barChart", 
+    "data": {
+        "categories": {
+            "series": [
+                "Received", 
+                "Processed a"
+            ], 
+            "type": "barLabel"
+        }, 
+        "col1": {
+            "label": "Total", 
+            "series": [
+                2352.8, 
+                2395.5
+            ], 
+            "type": "numberThousand"
+        }, 
+        "col2": {
+            "label": "Aged", 
+            "series": [
+                215.3, 
+                213.8
+            ], 
+            "type": "numberThousand"
+        }, 
+        "col3": {
+            "label": "Blind or disabled", 
+            "series": [
+                2137.5, 
+                2181.7
+            ], 
+            "type": "numberThousand"
+        }
+    }, 
+    "footnotes": [
+        {
+            "content": "Source: Social Security Administration, Office of Systems, Integrated Work Measurement System.", 
+            "type": "note"
+        }, 
+        {
+            "content": "See Table 7.A8 for data on number of awards.", 
+            "symbol": "a.", 
+            "type": "footnote"
+        }, 
+        {
+            "content": "File available from US Social Security Administration \u2022 Office of Retirement and Disability Policy \u2022 Office of Research, Evaluation, and Statistics, Annual Statistical Supplement, 2015, http://www.socialsecurity.gov/policy/docs/statcomps/supplement/2015/.", 
+            "type": "note"
+        }
+    ], 
+    "html": {
+        "body": "<tbody><tr class=Received><td class=\"col0\">Received</td><td class=\"col2\">2352.8</td><td class=\"col3\">215.3</td><td class=\"col4\">2137.5</td><tr class=Processed a><td class=\"col0\">Processed<span class = \"top_footnote top_a\">a</span></td><td class=\"col2\">2395.5</td><td class=\"col3\">213.8</td><td class=\"col4\">2181.7</td></tbody>", 
+        "header": "<thead><tr><th class=\"series col0\" >Workload</th><th class=\"series col1\" >Total</th><th class=\"series col2\" >Aged</th><th class=\"series col3\" >Blind or disabled</th></tr></thead>"
+    }, 
+    "title": {
+        "catID": "2.F", 
+        "category": "SSA Administrative Data: Claims Workloads", 
+        "id": "2_F6", 
+        "name": "Number of Supplemental Security Income claims, fiscal year 2014 (in thousands)"
+    }
+}

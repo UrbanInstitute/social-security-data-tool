@@ -1,0 +1,152 @@
+{
+    "category": "timeSeries", 
+    "data": {
+        "col1": {
+            "label": "Total", 
+            "series": [
+                2556988.0, 
+                3072317.0, 
+                4911792.0, 
+                7593427.0, 
+                12244622.0, 
+                22430612.0, 
+                23605189.0, 
+                23709831.0, 
+                24883782.0, 
+                25278121.0, 
+                25745710.0, 
+                27125707.0, 
+                28531939.0, 
+                29453803.0, 
+                30745406.0, 
+                31857069.0, 
+                33363762.0, 
+                35484533.0, 
+                37245543.0, 
+                40596703.0, 
+                42317393.0, 
+                43667372.0, 
+                46162243.0, 
+                47875022.0, 
+                48565089.0
+            ], 
+            "type": "dollarThousand"
+        }, 
+        "col2": {
+            "label": "Federal SSI", 
+            "series": [
+                1959112.0, 
+                2378131.0, 
+                3874655.0, 
+                6379601.0, 
+                10134007.0, 
+                20246415.0, 
+                21516579.0, 
+                21685421.0, 
+                22785879.0, 
+                22971506.0, 
+                23380477.0, 
+                24695630.0, 
+                25844055.0, 
+                26630775.0, 
+                27785246.0, 
+                28890840.0, 
+                30456751.0, 
+                32433853.0, 
+                34139814.0, 
+                37774847.0, 
+                39716541.0, 
+                41102985.0, 
+                43736995.0, 
+                45471788.0, 
+                46293115.0
+            ], 
+            "type": "dollarThousand"
+        }, 
+        "col3": {
+            "label": "Federally administered state supplementation", 
+            "series": [
+                597876.0, 
+                694186.0, 
+                1037137.0, 
+                1213826.0, 
+                2110615.0, 
+                2184197.0, 
+                2088610.0, 
+                2024410.0, 
+                2097903.0, 
+                2306615.0, 
+                2365233.0, 
+                2430077.0, 
+                2687884.0, 
+                2823028.0, 
+                2960160.0, 
+                2966229.0, 
+                2907011.0, 
+                3050680.0, 
+                3105728.0, 
+                2821857.0, 
+                2600852.0, 
+                2564388.0, 
+                2425248.0, 
+                2403234.0, 
+                2271974.0
+            ], 
+            "type": "dollarThousand"
+        }, 
+        "years": {
+            "series": [
+                1974, 
+                1975, 
+                1980, 
+                1985, 
+                1990, 
+                1995, 
+                1996, 
+                1997, 
+                1998, 
+                1999, 
+                2000, 
+                2001, 
+                2002, 
+                2003, 
+                2004, 
+                2005, 
+                2006, 
+                2007, 
+                2008, 
+                2009, 
+                2010, 
+                2011, 
+                2012, 
+                2013, 
+                2014
+            ], 
+            "type": "year"
+        }
+    }, 
+    "footnotes": [
+        {
+            "content": "Source: Social Security Administration, Office of Financial Policy and Operations.", 
+            "type": "note"
+        }, 
+        {
+            "content": "Note: Totals for \"Aged,\" \"Blind,\" and \"Disabled\" are derived. The derivation creates slight discrepancies between the sum of the group totals and the \"All recipients\" total.", 
+            "type": "note"
+        }, 
+        {
+            "content": "File available from US Social Security Administration \u2022 Office of Retirement and Disability Policy \u2022 Office of Research, Evaluation, and Statistics, Annual Statistical Supplement, 2015, http://www.socialsecurity.gov/policy/docs/statcomps/supplement/2015/.", 
+            "type": "note"
+        }
+    ], 
+    "html": {
+        "body": "<tbody><tr class=1974><td class=\"col0\">1974.0</td><td class=\"col1\">2556988.0</td><td class=\"col2\">1959112.0</td><td class=\"col3\">597876.0</td><tr class=1975><td class=\"col0\">1975.0</td><td class=\"col1\">3072317.0</td><td class=\"col2\">2378131.0</td><td class=\"col3\">694186.0</td><tr class=1980><td class=\"col0\">1980.0</td><td class=\"col1\">4911792.0</td><td class=\"col2\">3874655.0</td><td class=\"col3\">1037137.0</td><tr class=1985><td class=\"col0\">1985.0</td><td class=\"col1\">7593427.0</td><td class=\"col2\">6379601.0</td><td class=\"col3\">1213826.0</td><tr class=1990><td class=\"col0\">1990.0</td><td class=\"col1\">12244622.0</td><td class=\"col2\">10134007.0</td><td class=\"col3\">2110615.0</td><tr class=1995><td class=\"col0\">1995.0</td><td class=\"col1\">22430612.0</td><td class=\"col2\">20246415.0</td><td class=\"col3\">2184197.0</td><tr class=1996><td class=\"col0\">1996.0</td><td class=\"col1\">23605189.0</td><td class=\"col2\">21516579.0</td><td class=\"col3\">2088610.0</td><tr class=1997><td class=\"col0\">1997.0</td><td class=\"col1\">23709831.0</td><td class=\"col2\">21685421.0</td><td class=\"col3\">2024410.0</td><tr class=1998><td class=\"col0\">1998.0</td><td class=\"col1\">24883782.0</td><td class=\"col2\">22785879.0</td><td class=\"col3\">2097903.0</td><tr class=1999><td class=\"col0\">1999.0</td><td class=\"col1\">25278121.0</td><td class=\"col2\">22971506.0</td><td class=\"col3\">2306615.0</td><tr class=2000><td class=\"col0\">2000.0</td><td class=\"col1\">25745710.0</td><td class=\"col2\">23380477.0</td><td class=\"col3\">2365233.0</td><tr class=2001><td class=\"col0\">2001.0</td><td class=\"col1\">27125707.0</td><td class=\"col2\">24695630.0</td><td class=\"col3\">2430077.0</td><tr class=2002><td class=\"col0\">2002.0</td><td class=\"col1\">28531939.0</td><td class=\"col2\">25844055.0</td><td class=\"col3\">2687884.0</td><tr class=2003><td class=\"col0\">2003.0</td><td class=\"col1\">29453803.0</td><td class=\"col2\">26630775.0</td><td class=\"col3\">2823028.0</td><tr class=2004><td class=\"col0\">2004.0</td><td class=\"col1\">30745406.0</td><td class=\"col2\">27785246.0</td><td class=\"col3\">2960160.0</td><tr class=2005><td class=\"col0\">2005.0</td><td class=\"col1\">31857069.0</td><td class=\"col2\">28890840.0</td><td class=\"col3\">2966229.0</td><tr class=2006><td class=\"col0\">2006.0</td><td class=\"col1\">33363762.0</td><td class=\"col2\">30456751.0</td><td class=\"col3\">2907011.0</td><tr class=2007><td class=\"col0\">2007.0</td><td class=\"col1\">35484533.0</td><td class=\"col2\">32433853.0</td><td class=\"col3\">3050680.0</td><tr class=2008><td class=\"col0\">2008.0</td><td class=\"col1\">37245543.0</td><td class=\"col2\">34139814.0</td><td class=\"col3\">3105728.0</td><tr class=2009><td class=\"col0\">2009.0</td><td class=\"col1\">40596703.0</td><td class=\"col2\">37774847.0</td><td class=\"col3\">2821857.0</td><tr class=2010><td class=\"col0\">2010.0</td><td class=\"col1\">42317393.0</td><td class=\"col2\">39716541.0</td><td class=\"col3\">2600852.0</td><tr class=2011><td class=\"col0\">2011.0</td><td class=\"col1\">43667372.0</td><td class=\"col2\">41102985.0</td><td class=\"col3\">2564388.0</td><tr class=2012><td class=\"col0\">2012.0</td><td class=\"col1\">46162243.0</td><td class=\"col2\">43736995.0</td><td class=\"col3\">2425248.0</td><tr class=2013><td class=\"col0\">2013.0</td><td class=\"col1\">47875022.0</td><td class=\"col2\">45471788.0</td><td class=\"col3\">2403234.0</td><tr class=2014><td class=\"col0\">2014.0</td><td class=\"col1\">48565089.0</td><td class=\"col2\">46293115.0</td><td class=\"col3\">2271974.0</td></tbody>", 
+        "header": "<thead><tr><th class=\"series col0\" >Year</th><th class=\"series col1\" >Total</th><th class=\"series col2\" >Federal SSI</th><th class=\"series col3\" >Federally administered state supplementation</th></tr></thead>"
+    }, 
+    "title": {
+        "catID": "7.A", 
+        "category": "SSI: Summary", 
+        "id": "7_A4-3", 
+        "name": "Total federally administered payments, by eligibility category, selected years 1974\u20132014 (in\u00a0thousands of\u00a0dollars) :: Subtable : Disabled"
+    }
+}

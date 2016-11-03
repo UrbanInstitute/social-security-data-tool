@@ -1,0 +1,3779 @@
+{
+    "category": "map", 
+    "data": {
+        "col1": {
+            "label": "", 
+            "series": [
+                {
+                    "hc-key": "us-al", 
+                    "value": ""
+                }, 
+                {
+                    "hc-key": "us-ak", 
+                    "value": ""
+                }, 
+                {
+                    "hc-key": "us-az", 
+                    "value": ""
+                }, 
+                {
+                    "hc-key": "us-ar", 
+                    "value": ""
+                }, 
+                {
+                    "hc-key": "us-ca", 
+                    "value": ""
+                }, 
+                {
+                    "hc-key": "us-co", 
+                    "value": ""
+                }, 
+                {
+                    "hc-key": "us-ct", 
+                    "value": ""
+                }, 
+                {
+                    "hc-key": "us-de", 
+                    "value": ""
+                }, 
+                {
+                    "hc-key": "us-dc", 
+                    "value": ""
+                }, 
+                {
+                    "hc-key": "us-fl", 
+                    "value": ""
+                }, 
+                {
+                    "hc-key": "us-ga", 
+                    "value": ""
+                }, 
+                {
+                    "hc-key": "us-hi", 
+                    "value": ""
+                }, 
+                {
+                    "hc-key": "us-id", 
+                    "value": ""
+                }, 
+                {
+                    "hc-key": "us-il", 
+                    "value": ""
+                }, 
+                {
+                    "hc-key": "us-in", 
+                    "value": ""
+                }, 
+                {
+                    "hc-key": "us-ia", 
+                    "value": ""
+                }, 
+                {
+                    "hc-key": "us-ks", 
+                    "value": ""
+                }, 
+                {
+                    "hc-key": "us-ky", 
+                    "value": ""
+                }, 
+                {
+                    "hc-key": "us-la", 
+                    "value": ""
+                }, 
+                {
+                    "hc-key": "us-me", 
+                    "value": ""
+                }, 
+                {
+                    "hc-key": "us-md", 
+                    "value": ""
+                }, 
+                {
+                    "hc-key": "us-ma", 
+                    "value": ""
+                }, 
+                {
+                    "hc-key": "us-mi", 
+                    "value": ""
+                }, 
+                {
+                    "hc-key": "us-mn", 
+                    "value": ""
+                }, 
+                {
+                    "hc-key": "us-ms", 
+                    "value": ""
+                }, 
+                {
+                    "hc-key": "us-mo", 
+                    "value": ""
+                }, 
+                {
+                    "hc-key": "us-mt", 
+                    "value": ""
+                }, 
+                {
+                    "hc-key": "us-ne", 
+                    "value": ""
+                }, 
+                {
+                    "hc-key": "us-nv", 
+                    "value": ""
+                }, 
+                {
+                    "hc-key": "us-nh", 
+                    "value": ""
+                }, 
+                {
+                    "hc-key": "us-nj", 
+                    "value": ""
+                }, 
+                {
+                    "hc-key": "us-nm", 
+                    "value": ""
+                }, 
+                {
+                    "hc-key": "us-ny", 
+                    "value": ""
+                }, 
+                {
+                    "hc-key": "us-nc", 
+                    "value": ""
+                }, 
+                {
+                    "hc-key": "us-nd", 
+                    "value": ""
+                }, 
+                {
+                    "hc-key": "us-oh", 
+                    "value": ""
+                }, 
+                {
+                    "hc-key": "us-ok", 
+                    "value": ""
+                }, 
+                {
+                    "hc-key": "us-or", 
+                    "value": ""
+                }, 
+                {
+                    "hc-key": "us-pa", 
+                    "value": ""
+                }, 
+                {
+                    "hc-key": "us-ri", 
+                    "value": ""
+                }, 
+                {
+                    "hc-key": "us-sc", 
+                    "value": ""
+                }, 
+                {
+                    "hc-key": "us-sd", 
+                    "value": ""
+                }, 
+                {
+                    "hc-key": "us-tn", 
+                    "value": ""
+                }, 
+                {
+                    "hc-key": "us-tx", 
+                    "value": ""
+                }, 
+                {
+                    "hc-key": "us-ut", 
+                    "value": ""
+                }, 
+                {
+                    "hc-key": "us-vt", 
+                    "value": ""
+                }, 
+                {
+                    "hc-key": "us-va", 
+                    "value": ""
+                }, 
+                {
+                    "hc-key": "us-wa", 
+                    "value": ""
+                }, 
+                {
+                    "hc-key": "us-wv", 
+                    "value": ""
+                }, 
+                {
+                    "hc-key": "us-wi", 
+                    "value": ""
+                }, 
+                {
+                    "hc-key": "us-wy", 
+                    "value": ""
+                }, 
+                {
+                    "hc-key": "as-6514", 
+                    "value": "American Samoa"
+                }, 
+                {
+                    "hc-key": "as-6514", 
+                    "value": "American Samoa"
+                }, 
+                {
+                    "hc-key": "gu-3605", 
+                    "value": "Guam"
+                }, 
+                {
+                    "hc-key": "mp-ro", 
+                    "value": "Northern Mariana Islands"
+                }, 
+                {
+                    "hc-key": "mp-ro", 
+                    "value": "Northern Mariana Islands"
+                }, 
+                {
+                    "hc-key": "mp-ro", 
+                    "value": "Northern Mariana Islands"
+                }, 
+                {
+                    "hc-key": "pr-3614", 
+                    "value": "Puerto Rico"
+                }, 
+                {
+                    "hc-key": "vi-6399", 
+                    "value": "US Virgin Islands"
+                }, 
+                {
+                    "hc-key": "vi-6399", 
+                    "value": "US Virgin Islands"
+                }, 
+                {
+                    "hc-key": "vi-6399", 
+                    "value": "US Virgin Islands"
+                }
+            ], 
+            "type": ""
+        }, 
+        "col10": {
+            "label": "Disabled adult children of\u2014 :: Deceased workers", 
+            "series": [
+                {
+                    "hc-key": "us-al", 
+                    "value": 14341.0
+                }, 
+                {
+                    "hc-key": "us-ak", 
+                    "value": 832.0
+                }, 
+                {
+                    "hc-key": "us-az", 
+                    "value": 8395.0
+                }, 
+                {
+                    "hc-key": "us-ar", 
+                    "value": 7948.0
+                }, 
+                {
+                    "hc-key": "us-ca", 
+                    "value": 51826.0
+                }, 
+                {
+                    "hc-key": "us-co", 
+                    "value": 5534.0
+                }, 
+                {
+                    "hc-key": "us-ct", 
+                    "value": 7799.0
+                }, 
+                {
+                    "hc-key": "us-de", 
+                    "value": 1784.0
+                }, 
+                {
+                    "hc-key": "us-dc", 
+                    "value": 1228.0
+                }, 
+                {
+                    "hc-key": "us-fl", 
+                    "value": 30117.0
+                }, 
+                {
+                    "hc-key": "us-ga", 
+                    "value": 18178.0
+                }, 
+                {
+                    "hc-key": "us-hi", 
+                    "value": 1774.0
+                }, 
+                {
+                    "hc-key": "us-id", 
+                    "value": 2492.0
+                }, 
+                {
+                    "hc-key": "us-il", 
+                    "value": 27255.0
+                }, 
+                {
+                    "hc-key": "us-in", 
+                    "value": 15097.0
+                }, 
+                {
+                    "hc-key": "us-ia", 
+                    "value": 7247.0
+                }, 
+                {
+                    "hc-key": "us-ks", 
+                    "value": 5456.0
+                }, 
+                {
+                    "hc-key": "us-ky", 
+                    "value": 13209.0
+                }, 
+                {
+                    "hc-key": "us-la", 
+                    "value": 14747.0
+                }, 
+                {
+                    "hc-key": "us-me", 
+                    "value": 3901.0
+                }, 
+                {
+                    "hc-key": "us-md", 
+                    "value": 9653.0
+                }, 
+                {
+                    "hc-key": "us-ma", 
+                    "value": 15484.0
+                }, 
+                {
+                    "hc-key": "us-mi", 
+                    "value": 28132.0
+                }, 
+                {
+                    "hc-key": "us-mn", 
+                    "value": 9877.0
+                }, 
+                {
+                    "hc-key": "us-ms", 
+                    "value": 9985.0
+                }, 
+                {
+                    "hc-key": "us-mo", 
+                    "value": 14655.0
+                }, 
+                {
+                    "hc-key": "us-mt", 
+                    "value": 1854.0
+                }, 
+                {
+                    "hc-key": "us-ne", 
+                    "value": 3331.0
+                }, 
+                {
+                    "hc-key": "us-nv", 
+                    "value": 2741.0
+                }, 
+                {
+                    "hc-key": "us-nh", 
+                    "value": 2576.0
+                }, 
+                {
+                    "hc-key": "us-nj", 
+                    "value": 16534.0
+                }, 
+                {
+                    "hc-key": "us-nm", 
+                    "value": 3625.0
+                }, 
+                {
+                    "hc-key": "us-ny", 
+                    "value": 45315.0
+                }, 
+                {
+                    "hc-key": "us-nc", 
+                    "value": 20931.0
+                }, 
+                {
+                    "hc-key": "us-nd", 
+                    "value": 1574.0
+                }, 
+                {
+                    "hc-key": "us-oh", 
+                    "value": 29649.0
+                }, 
+                {
+                    "hc-key": "us-ok", 
+                    "value": 8068.0
+                }, 
+                {
+                    "hc-key": "us-or", 
+                    "value": 6834.0
+                }, 
+                {
+                    "hc-key": "us-pa", 
+                    "value": 32044.0
+                }, 
+                {
+                    "hc-key": "us-ri", 
+                    "value": 2659.0
+                }, 
+                {
+                    "hc-key": "us-sc", 
+                    "value": 11504.0
+                }, 
+                {
+                    "hc-key": "us-sd", 
+                    "value": 1724.0
+                }, 
+                {
+                    "hc-key": "us-tn", 
+                    "value": 15970.0
+                }, 
+                {
+                    "hc-key": "us-tx", 
+                    "value": 36938.0
+                }, 
+                {
+                    "hc-key": "us-ut", 
+                    "value": 3040.0
+                }, 
+                {
+                    "hc-key": "us-vt", 
+                    "value": 1659.0
+                }, 
+                {
+                    "hc-key": "us-va", 
+                    "value": 14733.0
+                }, 
+                {
+                    "hc-key": "us-wa", 
+                    "value": 10813.0
+                }, 
+                {
+                    "hc-key": "us-wv", 
+                    "value": 7311.0
+                }, 
+                {
+                    "hc-key": "us-wi", 
+                    "value": 13530.0
+                }, 
+                {
+                    "hc-key": "us-wy", 
+                    "value": 793.0
+                }, 
+                {
+                    "hc-key": "as-6514", 
+                    "value": 70.0
+                }, 
+                {
+                    "hc-key": "as-6514", 
+                    "value": 70.0
+                }, 
+                {
+                    "hc-key": "gu-3605", 
+                    "value": 129.0
+                }, 
+                {
+                    "hc-key": "mp-ro", 
+                    "value": 38.0
+                }, 
+                {
+                    "hc-key": "mp-ro", 
+                    "value": 38.0
+                }, 
+                {
+                    "hc-key": "mp-ro", 
+                    "value": 38.0
+                }, 
+                {
+                    "hc-key": "pr-3614", 
+                    "value": 14771.0
+                }, 
+                {
+                    "hc-key": "vi-6399", 
+                    "value": 196.0
+                }, 
+                {
+                    "hc-key": "vi-6399", 
+                    "value": 196.0
+                }, 
+                {
+                    "hc-key": "vi-6399", 
+                    "value": 196.0
+                }
+            ], 
+            "type": "number"
+        }, 
+        "col11": {
+            "label": "Disabled adult children of\u2014 :: Disabled workers", 
+            "series": [
+                {
+                    "hc-key": "us-al", 
+                    "value": 3428.0
+                }, 
+                {
+                    "hc-key": "us-ak", 
+                    "value": 127.0
+                }, 
+                {
+                    "hc-key": "us-az", 
+                    "value": 1759.0
+                }, 
+                {
+                    "hc-key": "us-ar", 
+                    "value": 2283.0
+                }, 
+                {
+                    "hc-key": "us-ca", 
+                    "value": 8571.0
+                }, 
+                {
+                    "hc-key": "us-co", 
+                    "value": 990.0
+                }, 
+                {
+                    "hc-key": "us-ct", 
+                    "value": 1097.0
+                }, 
+                {
+                    "hc-key": "us-de", 
+                    "value": 300.0
+                }, 
+                {
+                    "hc-key": "us-dc", 
+                    "value": 154.0
+                }, 
+                {
+                    "hc-key": "us-fl", 
+                    "value": 5946.0
+                }, 
+                {
+                    "hc-key": "us-ga", 
+                    "value": 3278.0
+                }, 
+                {
+                    "hc-key": "us-hi", 
+                    "value": 208.0
+                }, 
+                {
+                    "hc-key": "us-id", 
+                    "value": 621.0
+                }, 
+                {
+                    "hc-key": "us-il", 
+                    "value": 4042.0
+                }, 
+                {
+                    "hc-key": "us-in", 
+                    "value": 2988.0
+                }, 
+                {
+                    "hc-key": "us-ia", 
+                    "value": 1264.0
+                }, 
+                {
+                    "hc-key": "us-ks", 
+                    "value": 1043.0
+                }, 
+                {
+                    "hc-key": "us-ky", 
+                    "value": 3198.0
+                }, 
+                {
+                    "hc-key": "us-la", 
+                    "value": 2517.0
+                }, 
+                {
+                    "hc-key": "us-me", 
+                    "value": 1224.0
+                }, 
+                {
+                    "hc-key": "us-md", 
+                    "value": 1376.0
+                }, 
+                {
+                    "hc-key": "us-ma", 
+                    "value": 3905.0
+                }, 
+                {
+                    "hc-key": "us-mi", 
+                    "value": 5729.0
+                }, 
+                {
+                    "hc-key": "us-mn", 
+                    "value": 1819.0
+                }, 
+                {
+                    "hc-key": "us-ms", 
+                    "value": 2128.0
+                }, 
+                {
+                    "hc-key": "us-mo", 
+                    "value": 3057.0
+                }, 
+                {
+                    "hc-key": "us-mt", 
+                    "value": 277.0
+                }, 
+                {
+                    "hc-key": "us-ne", 
+                    "value": 631.0
+                }, 
+                {
+                    "hc-key": "us-nv", 
+                    "value": 503.0
+                }, 
+                {
+                    "hc-key": "us-nh", 
+                    "value": 954.0
+                }, 
+                {
+                    "hc-key": "us-nj", 
+                    "value": 2368.0
+                }, 
+                {
+                    "hc-key": "us-nm", 
+                    "value": 657.0
+                }, 
+                {
+                    "hc-key": "us-ny", 
+                    "value": 7212.0
+                }, 
+                {
+                    "hc-key": "us-nc", 
+                    "value": 4490.0
+                }, 
+                {
+                    "hc-key": "us-nd", 
+                    "value": 161.0
+                }, 
+                {
+                    "hc-key": "us-oh", 
+                    "value": 4806.0
+                }, 
+                {
+                    "hc-key": "us-ok", 
+                    "value": 1559.0
+                }, 
+                {
+                    "hc-key": "us-or", 
+                    "value": 1357.0
+                }, 
+                {
+                    "hc-key": "us-pa", 
+                    "value": 5699.0
+                }, 
+                {
+                    "hc-key": "us-ri", 
+                    "value": 611.0
+                }, 
+                {
+                    "hc-key": "us-sc", 
+                    "value": 2183.0
+                }, 
+                {
+                    "hc-key": "us-sd", 
+                    "value": 251.0
+                }, 
+                {
+                    "hc-key": "us-tn", 
+                    "value": 3086.0
+                }, 
+                {
+                    "hc-key": "us-tx", 
+                    "value": 6904.0
+                }, 
+                {
+                    "hc-key": "us-ut", 
+                    "value": 617.0
+                }, 
+                {
+                    "hc-key": "us-vt", 
+                    "value": 422.0
+                }, 
+                {
+                    "hc-key": "us-va", 
+                    "value": 2888.0
+                }, 
+                {
+                    "hc-key": "us-wa", 
+                    "value": 2278.0
+                }, 
+                {
+                    "hc-key": "us-wv", 
+                    "value": 1495.0
+                }, 
+                {
+                    "hc-key": "us-wi", 
+                    "value": 2608.0
+                }, 
+                {
+                    "hc-key": "us-wy", 
+                    "value": 151.0
+                }, 
+                {
+                    "hc-key": "as-6514", 
+                    "value": "(X)"
+                }, 
+                {
+                    "hc-key": "as-6514", 
+                    "value": "(X)"
+                }, 
+                {
+                    "hc-key": "gu-3605", 
+                    "value": 13.0
+                }, 
+                {
+                    "hc-key": "mp-ro", 
+                    "value": "(X)"
+                }, 
+                {
+                    "hc-key": "mp-ro", 
+                    "value": "(X)"
+                }, 
+                {
+                    "hc-key": "mp-ro", 
+                    "value": "(X)"
+                }, 
+                {
+                    "hc-key": "pr-3614", 
+                    "value": 2299.0
+                }, 
+                {
+                    "hc-key": "vi-6399", 
+                    "value": 17.0
+                }, 
+                {
+                    "hc-key": "vi-6399", 
+                    "value": 17.0
+                }, 
+                {
+                    "hc-key": "vi-6399", 
+                    "value": 17.0
+                }
+            ], 
+            "type": "number"
+        }, 
+        "col12": {
+            "label": "Students aged 18\u201319 of\u2014 :: Subtotal", 
+            "series": [
+                {
+                    "hc-key": "us-al", 
+                    "value": 4144.0
+                }, 
+                {
+                    "hc-key": "us-ak", 
+                    "value": 284.0
+                }, 
+                {
+                    "hc-key": "us-az", 
+                    "value": 2698.0
+                }, 
+                {
+                    "hc-key": "us-ar", 
+                    "value": 2296.0
+                }, 
+                {
+                    "hc-key": "us-ca", 
+                    "value": 8710.0
+                }, 
+                {
+                    "hc-key": "us-co", 
+                    "value": 1779.0
+                }, 
+                {
+                    "hc-key": "us-ct", 
+                    "value": 986.0
+                }, 
+                {
+                    "hc-key": "us-de", 
+                    "value": 490.0
+                }, 
+                {
+                    "hc-key": "us-dc", 
+                    "value": 140.0
+                }, 
+                {
+                    "hc-key": "us-fl", 
+                    "value": 10319.0
+                }, 
+                {
+                    "hc-key": "us-ga", 
+                    "value": 5802.0
+                }, 
+                {
+                    "hc-key": "us-hi", 
+                    "value": 198.0
+                }, 
+                {
+                    "hc-key": "us-id", 
+                    "value": 661.0
+                }, 
+                {
+                    "hc-key": "us-il", 
+                    "value": 5289.0
+                }, 
+                {
+                    "hc-key": "us-in", 
+                    "value": 4392.0
+                }, 
+                {
+                    "hc-key": "us-ia", 
+                    "value": 1258.0
+                }, 
+                {
+                    "hc-key": "us-ks", 
+                    "value": 1259.0
+                }, 
+                {
+                    "hc-key": "us-ky", 
+                    "value": 2938.0
+                }, 
+                {
+                    "hc-key": "us-la", 
+                    "value": 3110.0
+                }, 
+                {
+                    "hc-key": "us-me", 
+                    "value": 676.0
+                }, 
+                {
+                    "hc-key": "us-md", 
+                    "value": 1265.0
+                }, 
+                {
+                    "hc-key": "us-ma", 
+                    "value": 2800.0
+                }, 
+                {
+                    "hc-key": "us-mi", 
+                    "value": 4642.0
+                }, 
+                {
+                    "hc-key": "us-mn", 
+                    "value": 2042.0
+                }, 
+                {
+                    "hc-key": "us-ms", 
+                    "value": 2700.0
+                }, 
+                {
+                    "hc-key": "us-mo", 
+                    "value": 3691.0
+                }, 
+                {
+                    "hc-key": "us-mt", 
+                    "value": 440.0
+                }, 
+                {
+                    "hc-key": "us-ne", 
+                    "value": 691.0
+                }, 
+                {
+                    "hc-key": "us-nv", 
+                    "value": 884.0
+                }, 
+                {
+                    "hc-key": "us-nh", 
+                    "value": 714.0
+                }, 
+                {
+                    "hc-key": "us-nj", 
+                    "value": 3146.0
+                }, 
+                {
+                    "hc-key": "us-nm", 
+                    "value": 1031.0
+                }, 
+                {
+                    "hc-key": "us-ny", 
+                    "value": 4985.0
+                }, 
+                {
+                    "hc-key": "us-nc", 
+                    "value": 5191.0
+                }, 
+                {
+                    "hc-key": "us-nd", 
+                    "value": 234.0
+                }, 
+                {
+                    "hc-key": "us-oh", 
+                    "value": 6308.0
+                }, 
+                {
+                    "hc-key": "us-ok", 
+                    "value": 2521.0
+                }, 
+                {
+                    "hc-key": "us-or", 
+                    "value": 1425.0
+                }, 
+                {
+                    "hc-key": "us-pa", 
+                    "value": 6500.0
+                }, 
+                {
+                    "hc-key": "us-ri", 
+                    "value": 345.0
+                }, 
+                {
+                    "hc-key": "us-sc", 
+                    "value": 3012.0
+                }, 
+                {
+                    "hc-key": "us-sd", 
+                    "value": 377.0
+                }, 
+                {
+                    "hc-key": "us-tn", 
+                    "value": 3870.0
+                }, 
+                {
+                    "hc-key": "us-tx", 
+                    "value": 11157.0
+                }, 
+                {
+                    "hc-key": "us-ut", 
+                    "value": 839.0
+                }, 
+                {
+                    "hc-key": "us-vt", 
+                    "value": 265.0
+                }, 
+                {
+                    "hc-key": "us-va", 
+                    "value": 3187.0
+                }, 
+                {
+                    "hc-key": "us-wa", 
+                    "value": 2688.0
+                }, 
+                {
+                    "hc-key": "us-wv", 
+                    "value": 1282.0
+                }, 
+                {
+                    "hc-key": "us-wi", 
+                    "value": 2525.0
+                }, 
+                {
+                    "hc-key": "us-wy", 
+                    "value": 226.0
+                }, 
+                {
+                    "hc-key": "as-6514", 
+                    "value": "(X)"
+                }, 
+                {
+                    "hc-key": "as-6514", 
+                    "value": "(X)"
+                }, 
+                {
+                    "hc-key": "gu-3605", 
+                    "value": 88.0
+                }, 
+                {
+                    "hc-key": "mp-ro", 
+                    "value": 16.0
+                }, 
+                {
+                    "hc-key": "mp-ro", 
+                    "value": 16.0
+                }, 
+                {
+                    "hc-key": "mp-ro", 
+                    "value": 16.0
+                }, 
+                {
+                    "hc-key": "pr-3614", 
+                    "value": 979.0
+                }, 
+                {
+                    "hc-key": "vi-6399", 
+                    "value": 45.0
+                }, 
+                {
+                    "hc-key": "vi-6399", 
+                    "value": 45.0
+                }, 
+                {
+                    "hc-key": "vi-6399", 
+                    "value": 45.0
+                }
+            ], 
+            "type": "number"
+        }, 
+        "col13": {
+            "label": "Students aged 18\u201319 of\u2014 :: Retired workers", 
+            "series": [
+                {
+                    "hc-key": "us-al", 
+                    "value": 444.0
+                }, 
+                {
+                    "hc-key": "us-ak", 
+                    "value": 59.0
+                }, 
+                {
+                    "hc-key": "us-az", 
+                    "value": 438.0
+                }, 
+                {
+                    "hc-key": "us-ar", 
+                    "value": 194.0
+                }, 
+                {
+                    "hc-key": "us-ca", 
+                    "value": 1806.0
+                }, 
+                {
+                    "hc-key": "us-co", 
+                    "value": 308.0
+                }, 
+                {
+                    "hc-key": "us-ct", 
+                    "value": 162.0
+                }, 
+                {
+                    "hc-key": "us-de", 
+                    "value": 58.0
+                }, 
+                {
+                    "hc-key": "us-dc", 
+                    "value": 31.0
+                }, 
+                {
+                    "hc-key": "us-fl", 
+                    "value": 1809.0
+                }, 
+                {
+                    "hc-key": "us-ga", 
+                    "value": 761.0
+                }, 
+                {
+                    "hc-key": "us-hi", 
+                    "value": 61.0
+                }, 
+                {
+                    "hc-key": "us-id", 
+                    "value": 93.0
+                }, 
+                {
+                    "hc-key": "us-il", 
+                    "value": 841.0
+                }, 
+                {
+                    "hc-key": "us-in", 
+                    "value": 500.0
+                }, 
+                {
+                    "hc-key": "us-ia", 
+                    "value": 168.0
+                }, 
+                {
+                    "hc-key": "us-ks", 
+                    "value": 185.0
+                }, 
+                {
+                    "hc-key": "us-ky", 
+                    "value": 299.0
+                }, 
+                {
+                    "hc-key": "us-la", 
+                    "value": 352.0
+                }, 
+                {
+                    "hc-key": "us-me", 
+                    "value": 86.0
+                }, 
+                {
+                    "hc-key": "us-md", 
+                    "value": 167.0
+                }, 
+                {
+                    "hc-key": "us-ma", 
+                    "value": 392.0
+                }, 
+                {
+                    "hc-key": "us-mi", 
+                    "value": 627.0
+                }, 
+                {
+                    "hc-key": "us-mn", 
+                    "value": 290.0
+                }, 
+                {
+                    "hc-key": "us-ms", 
+                    "value": 318.0
+                }, 
+                {
+                    "hc-key": "us-mo", 
+                    "value": 384.0
+                }, 
+                {
+                    "hc-key": "us-mt", 
+                    "value": 79.0
+                }, 
+                {
+                    "hc-key": "us-ne", 
+                    "value": 102.0
+                }, 
+                {
+                    "hc-key": "us-nv", 
+                    "value": 129.0
+                }, 
+                {
+                    "hc-key": "us-nh", 
+                    "value": 95.0
+                }, 
+                {
+                    "hc-key": "us-nj", 
+                    "value": 529.0
+                }, 
+                {
+                    "hc-key": "us-nm", 
+                    "value": 152.0
+                }, 
+                {
+                    "hc-key": "us-ny", 
+                    "value": 903.0
+                }, 
+                {
+                    "hc-key": "us-nc", 
+                    "value": 602.0
+                }, 
+                {
+                    "hc-key": "us-nd", 
+                    "value": 26.0
+                }, 
+                {
+                    "hc-key": "us-oh", 
+                    "value": 733.0
+                }, 
+                {
+                    "hc-key": "us-ok", 
+                    "value": 286.0
+                }, 
+                {
+                    "hc-key": "us-or", 
+                    "value": 284.0
+                }, 
+                {
+                    "hc-key": "us-pa", 
+                    "value": 819.0
+                }, 
+                {
+                    "hc-key": "us-ri", 
+                    "value": 51.0
+                }, 
+                {
+                    "hc-key": "us-sc", 
+                    "value": 388.0
+                }, 
+                {
+                    "hc-key": "us-sd", 
+                    "value": 52.0
+                }, 
+                {
+                    "hc-key": "us-tn", 
+                    "value": 470.0
+                }, 
+                {
+                    "hc-key": "us-tx", 
+                    "value": 1585.0
+                }, 
+                {
+                    "hc-key": "us-ut", 
+                    "value": 108.0
+                }, 
+                {
+                    "hc-key": "us-vt", 
+                    "value": 48.0
+                }, 
+                {
+                    "hc-key": "us-va", 
+                    "value": 467.0
+                }, 
+                {
+                    "hc-key": "us-wa", 
+                    "value": 465.0
+                }, 
+                {
+                    "hc-key": "us-wv", 
+                    "value": 146.0
+                }, 
+                {
+                    "hc-key": "us-wi", 
+                    "value": 353.0
+                }, 
+                {
+                    "hc-key": "us-wy", 
+                    "value": 32.0
+                }, 
+                {
+                    "hc-key": "as-6514", 
+                    "value": "(X)"
+                }, 
+                {
+                    "hc-key": "as-6514", 
+                    "value": "(X)"
+                }, 
+                {
+                    "hc-key": "gu-3605", 
+                    "value": 17.0
+                }, 
+                {
+                    "hc-key": "mp-ro", 
+                    "value": 7.0
+                }, 
+                {
+                    "hc-key": "mp-ro", 
+                    "value": 7.0
+                }, 
+                {
+                    "hc-key": "mp-ro", 
+                    "value": 7.0
+                }, 
+                {
+                    "hc-key": "pr-3614", 
+                    "value": 145.0
+                }, 
+                {
+                    "hc-key": "vi-6399", 
+                    "value": 11.0
+                }, 
+                {
+                    "hc-key": "vi-6399", 
+                    "value": 11.0
+                }, 
+                {
+                    "hc-key": "vi-6399", 
+                    "value": 11.0
+                }
+            ], 
+            "type": "number"
+        }, 
+        "col14": {
+            "label": "Students aged 18\u201319 of\u2014 :: Deceased workers", 
+            "series": [
+                {
+                    "hc-key": "us-al", 
+                    "value": 1699.0
+                }, 
+                {
+                    "hc-key": "us-ak", 
+                    "value": 154.0
+                }, 
+                {
+                    "hc-key": "us-az", 
+                    "value": 1311.0
+                }, 
+                {
+                    "hc-key": "us-ar", 
+                    "value": 1002.0
+                }, 
+                {
+                    "hc-key": "us-ca", 
+                    "value": 3992.0
+                }, 
+                {
+                    "hc-key": "us-co", 
+                    "value": 873.0
+                }, 
+                {
+                    "hc-key": "us-ct", 
+                    "value": 412.0
+                }, 
+                {
+                    "hc-key": "us-de", 
+                    "value": 240.0
+                }, 
+                {
+                    "hc-key": "us-dc", 
+                    "value": 72.0
+                }, 
+                {
+                    "hc-key": "us-fl", 
+                    "value": 4538.0
+                }, 
+                {
+                    "hc-key": "us-ga", 
+                    "value": 2672.0
+                }, 
+                {
+                    "hc-key": "us-hi", 
+                    "value": 89.0
+                }, 
+                {
+                    "hc-key": "us-id", 
+                    "value": 307.0
+                }, 
+                {
+                    "hc-key": "us-il", 
+                    "value": 2455.0
+                }, 
+                {
+                    "hc-key": "us-in", 
+                    "value": 1977.0
+                }, 
+                {
+                    "hc-key": "us-ia", 
+                    "value": 568.0
+                }, 
+                {
+                    "hc-key": "us-ks", 
+                    "value": 586.0
+                }, 
+                {
+                    "hc-key": "us-ky", 
+                    "value": 1129.0
+                }, 
+                {
+                    "hc-key": "us-la", 
+                    "value": 1519.0
+                }, 
+                {
+                    "hc-key": "us-me", 
+                    "value": 244.0
+                }, 
+                {
+                    "hc-key": "us-md", 
+                    "value": 661.0
+                }, 
+                {
+                    "hc-key": "us-ma", 
+                    "value": 978.0
+                }, 
+                {
+                    "hc-key": "us-mi", 
+                    "value": 1923.0
+                }, 
+                {
+                    "hc-key": "us-mn", 
+                    "value": 926.0
+                }, 
+                {
+                    "hc-key": "us-ms", 
+                    "value": 1183.0
+                }, 
+                {
+                    "hc-key": "us-mo", 
+                    "value": 1634.0
+                }, 
+                {
+                    "hc-key": "us-mt", 
+                    "value": 217.0
+                }, 
+                {
+                    "hc-key": "us-ne", 
+                    "value": 326.0
+                }, 
+                {
+                    "hc-key": "us-nv", 
+                    "value": 440.0
+                }, 
+                {
+                    "hc-key": "us-nh", 
+                    "value": 262.0
+                }, 
+                {
+                    "hc-key": "us-nj", 
+                    "value": 1295.0
+                }, 
+                {
+                    "hc-key": "us-nm", 
+                    "value": 488.0
+                }, 
+                {
+                    "hc-key": "us-ny", 
+                    "value": 1929.0
+                }, 
+                {
+                    "hc-key": "us-nc", 
+                    "value": 2270.0
+                }, 
+                {
+                    "hc-key": "us-nd", 
+                    "value": 122.0
+                }, 
+                {
+                    "hc-key": "us-oh", 
+                    "value": 2855.0
+                }, 
+                {
+                    "hc-key": "us-ok", 
+                    "value": 1274.0
+                }, 
+                {
+                    "hc-key": "us-or", 
+                    "value": 618.0
+                }, 
+                {
+                    "hc-key": "us-pa", 
+                    "value": 2717.0
+                }, 
+                {
+                    "hc-key": "us-ri", 
+                    "value": 124.0
+                }, 
+                {
+                    "hc-key": "us-sc", 
+                    "value": 1311.0
+                }, 
+                {
+                    "hc-key": "us-sd", 
+                    "value": 203.0
+                }, 
+                {
+                    "hc-key": "us-tn", 
+                    "value": 1708.0
+                }, 
+                {
+                    "hc-key": "us-tx", 
+                    "value": 5545.0
+                }, 
+                {
+                    "hc-key": "us-ut", 
+                    "value": 458.0
+                }, 
+                {
+                    "hc-key": "us-vt", 
+                    "value": 89.0
+                }, 
+                {
+                    "hc-key": "us-va", 
+                    "value": 1403.0
+                }, 
+                {
+                    "hc-key": "us-wa", 
+                    "value": 1141.0
+                }, 
+                {
+                    "hc-key": "us-wv", 
+                    "value": 506.0
+                }, 
+                {
+                    "hc-key": "us-wi", 
+                    "value": 1045.0
+                }, 
+                {
+                    "hc-key": "us-wy", 
+                    "value": 114.0
+                }, 
+                {
+                    "hc-key": "as-6514", 
+                    "value": "(X)"
+                }, 
+                {
+                    "hc-key": "as-6514", 
+                    "value": "(X)"
+                }, 
+                {
+                    "hc-key": "gu-3605", 
+                    "value": 55.0
+                }, 
+                {
+                    "hc-key": "mp-ro", 
+                    "value": 9.0
+                }, 
+                {
+                    "hc-key": "mp-ro", 
+                    "value": 9.0
+                }, 
+                {
+                    "hc-key": "mp-ro", 
+                    "value": 9.0
+                }, 
+                {
+                    "hc-key": "pr-3614", 
+                    "value": 347.0
+                }, 
+                {
+                    "hc-key": "vi-6399", 
+                    "value": 21.0
+                }, 
+                {
+                    "hc-key": "vi-6399", 
+                    "value": 21.0
+                }, 
+                {
+                    "hc-key": "vi-6399", 
+                    "value": 21.0
+                }
+            ], 
+            "type": "number"
+        }, 
+        "col15": {
+            "label": "Students aged 18\u201319 of\u2014 :: Disabled workers", 
+            "series": [
+                {
+                    "hc-key": "us-al", 
+                    "value": 2001.0
+                }, 
+                {
+                    "hc-key": "us-ak", 
+                    "value": 71.0
+                }, 
+                {
+                    "hc-key": "us-az", 
+                    "value": 949.0
+                }, 
+                {
+                    "hc-key": "us-ar", 
+                    "value": 1100.0
+                }, 
+                {
+                    "hc-key": "us-ca", 
+                    "value": 2912.0
+                }, 
+                {
+                    "hc-key": "us-co", 
+                    "value": 598.0
+                }, 
+                {
+                    "hc-key": "us-ct", 
+                    "value": 412.0
+                }, 
+                {
+                    "hc-key": "us-de", 
+                    "value": 192.0
+                }, 
+                {
+                    "hc-key": "us-dc", 
+                    "value": 37.0
+                }, 
+                {
+                    "hc-key": "us-fl", 
+                    "value": 3972.0
+                }, 
+                {
+                    "hc-key": "us-ga", 
+                    "value": 2369.0
+                }, 
+                {
+                    "hc-key": "us-hi", 
+                    "value": 48.0
+                }, 
+                {
+                    "hc-key": "us-id", 
+                    "value": 261.0
+                }, 
+                {
+                    "hc-key": "us-il", 
+                    "value": 1993.0
+                }, 
+                {
+                    "hc-key": "us-in", 
+                    "value": 1915.0
+                }, 
+                {
+                    "hc-key": "us-ia", 
+                    "value": 522.0
+                }, 
+                {
+                    "hc-key": "us-ks", 
+                    "value": 488.0
+                }, 
+                {
+                    "hc-key": "us-ky", 
+                    "value": 1510.0
+                }, 
+                {
+                    "hc-key": "us-la", 
+                    "value": 1239.0
+                }, 
+                {
+                    "hc-key": "us-me", 
+                    "value": 346.0
+                }, 
+                {
+                    "hc-key": "us-md", 
+                    "value": 437.0
+                }, 
+                {
+                    "hc-key": "us-ma", 
+                    "value": 1430.0
+                }, 
+                {
+                    "hc-key": "us-mi", 
+                    "value": 2092.0
+                }, 
+                {
+                    "hc-key": "us-mn", 
+                    "value": 826.0
+                }, 
+                {
+                    "hc-key": "us-ms", 
+                    "value": 1199.0
+                }, 
+                {
+                    "hc-key": "us-mo", 
+                    "value": 1673.0
+                }, 
+                {
+                    "hc-key": "us-mt", 
+                    "value": 144.0
+                }, 
+                {
+                    "hc-key": "us-ne", 
+                    "value": 263.0
+                }, 
+                {
+                    "hc-key": "us-nv", 
+                    "value": 315.0
+                }, 
+                {
+                    "hc-key": "us-nh", 
+                    "value": 357.0
+                }, 
+                {
+                    "hc-key": "us-nj", 
+                    "value": 1322.0
+                }, 
+                {
+                    "hc-key": "us-nm", 
+                    "value": 391.0
+                }, 
+                {
+                    "hc-key": "us-ny", 
+                    "value": 2153.0
+                }, 
+                {
+                    "hc-key": "us-nc", 
+                    "value": 2319.0
+                }, 
+                {
+                    "hc-key": "us-nd", 
+                    "value": 86.0
+                }, 
+                {
+                    "hc-key": "us-oh", 
+                    "value": 2720.0
+                }, 
+                {
+                    "hc-key": "us-ok", 
+                    "value": 961.0
+                }, 
+                {
+                    "hc-key": "us-or", 
+                    "value": 523.0
+                }, 
+                {
+                    "hc-key": "us-pa", 
+                    "value": 2964.0
+                }, 
+                {
+                    "hc-key": "us-ri", 
+                    "value": 170.0
+                }, 
+                {
+                    "hc-key": "us-sc", 
+                    "value": 1313.0
+                }, 
+                {
+                    "hc-key": "us-sd", 
+                    "value": 122.0
+                }, 
+                {
+                    "hc-key": "us-tn", 
+                    "value": 1692.0
+                }, 
+                {
+                    "hc-key": "us-tx", 
+                    "value": 4027.0
+                }, 
+                {
+                    "hc-key": "us-ut", 
+                    "value": 273.0
+                }, 
+                {
+                    "hc-key": "us-vt", 
+                    "value": 128.0
+                }, 
+                {
+                    "hc-key": "us-va", 
+                    "value": 1317.0
+                }, 
+                {
+                    "hc-key": "us-wa", 
+                    "value": 1082.0
+                }, 
+                {
+                    "hc-key": "us-wv", 
+                    "value": 630.0
+                }, 
+                {
+                    "hc-key": "us-wi", 
+                    "value": 1127.0
+                }, 
+                {
+                    "hc-key": "us-wy", 
+                    "value": 80.0
+                }, 
+                {
+                    "hc-key": "as-6514", 
+                    "value": "(X)"
+                }, 
+                {
+                    "hc-key": "as-6514", 
+                    "value": "(X)"
+                }, 
+                {
+                    "hc-key": "gu-3605", 
+                    "value": 16.0
+                }, 
+                {
+                    "hc-key": "mp-ro", 
+                    "value": 0.0
+                }, 
+                {
+                    "hc-key": "mp-ro", 
+                    "value": 0.0
+                }, 
+                {
+                    "hc-key": "mp-ro", 
+                    "value": 0.0
+                }, 
+                {
+                    "hc-key": "pr-3614", 
+                    "value": 487.0
+                }, 
+                {
+                    "hc-key": "vi-6399", 
+                    "value": 13.0
+                }, 
+                {
+                    "hc-key": "vi-6399", 
+                    "value": 13.0
+                }, 
+                {
+                    "hc-key": "vi-6399", 
+                    "value": 13.0
+                }
+            ], 
+            "type": "number"
+        }, 
+        "col2": {
+            "label": "", 
+            "series": [
+                {
+                    "hc-key": "us-al", 
+                    "value": ""
+                }, 
+                {
+                    "hc-key": "us-ak", 
+                    "value": ""
+                }, 
+                {
+                    "hc-key": "us-az", 
+                    "value": ""
+                }, 
+                {
+                    "hc-key": "us-ar", 
+                    "value": ""
+                }, 
+                {
+                    "hc-key": "us-ca", 
+                    "value": ""
+                }, 
+                {
+                    "hc-key": "us-co", 
+                    "value": ""
+                }, 
+                {
+                    "hc-key": "us-ct", 
+                    "value": ""
+                }, 
+                {
+                    "hc-key": "us-de", 
+                    "value": ""
+                }, 
+                {
+                    "hc-key": "us-dc", 
+                    "value": ""
+                }, 
+                {
+                    "hc-key": "us-fl", 
+                    "value": ""
+                }, 
+                {
+                    "hc-key": "us-ga", 
+                    "value": ""
+                }, 
+                {
+                    "hc-key": "us-hi", 
+                    "value": ""
+                }, 
+                {
+                    "hc-key": "us-id", 
+                    "value": ""
+                }, 
+                {
+                    "hc-key": "us-il", 
+                    "value": ""
+                }, 
+                {
+                    "hc-key": "us-in", 
+                    "value": ""
+                }, 
+                {
+                    "hc-key": "us-ia", 
+                    "value": ""
+                }, 
+                {
+                    "hc-key": "us-ks", 
+                    "value": ""
+                }, 
+                {
+                    "hc-key": "us-ky", 
+                    "value": ""
+                }, 
+                {
+                    "hc-key": "us-la", 
+                    "value": ""
+                }, 
+                {
+                    "hc-key": "us-me", 
+                    "value": ""
+                }, 
+                {
+                    "hc-key": "us-md", 
+                    "value": ""
+                }, 
+                {
+                    "hc-key": "us-ma", 
+                    "value": ""
+                }, 
+                {
+                    "hc-key": "us-mi", 
+                    "value": ""
+                }, 
+                {
+                    "hc-key": "us-mn", 
+                    "value": ""
+                }, 
+                {
+                    "hc-key": "us-ms", 
+                    "value": ""
+                }, 
+                {
+                    "hc-key": "us-mo", 
+                    "value": ""
+                }, 
+                {
+                    "hc-key": "us-mt", 
+                    "value": ""
+                }, 
+                {
+                    "hc-key": "us-ne", 
+                    "value": ""
+                }, 
+                {
+                    "hc-key": "us-nv", 
+                    "value": ""
+                }, 
+                {
+                    "hc-key": "us-nh", 
+                    "value": ""
+                }, 
+                {
+                    "hc-key": "us-nj", 
+                    "value": ""
+                }, 
+                {
+                    "hc-key": "us-nm", 
+                    "value": ""
+                }, 
+                {
+                    "hc-key": "us-ny", 
+                    "value": ""
+                }, 
+                {
+                    "hc-key": "us-nc", 
+                    "value": ""
+                }, 
+                {
+                    "hc-key": "us-nd", 
+                    "value": ""
+                }, 
+                {
+                    "hc-key": "us-oh", 
+                    "value": ""
+                }, 
+                {
+                    "hc-key": "us-ok", 
+                    "value": ""
+                }, 
+                {
+                    "hc-key": "us-or", 
+                    "value": ""
+                }, 
+                {
+                    "hc-key": "us-pa", 
+                    "value": ""
+                }, 
+                {
+                    "hc-key": "us-ri", 
+                    "value": ""
+                }, 
+                {
+                    "hc-key": "us-sc", 
+                    "value": ""
+                }, 
+                {
+                    "hc-key": "us-sd", 
+                    "value": ""
+                }, 
+                {
+                    "hc-key": "us-tn", 
+                    "value": ""
+                }, 
+                {
+                    "hc-key": "us-tx", 
+                    "value": ""
+                }, 
+                {
+                    "hc-key": "us-ut", 
+                    "value": ""
+                }, 
+                {
+                    "hc-key": "us-vt", 
+                    "value": ""
+                }, 
+                {
+                    "hc-key": "us-va", 
+                    "value": ""
+                }, 
+                {
+                    "hc-key": "us-wa", 
+                    "value": ""
+                }, 
+                {
+                    "hc-key": "us-wv", 
+                    "value": ""
+                }, 
+                {
+                    "hc-key": "us-wi", 
+                    "value": ""
+                }, 
+                {
+                    "hc-key": "us-wy", 
+                    "value": ""
+                }, 
+                {
+                    "hc-key": "as-6514", 
+                    "value": ""
+                }, 
+                {
+                    "hc-key": "as-6514", 
+                    "value": ""
+                }, 
+                {
+                    "hc-key": "gu-3605", 
+                    "value": ""
+                }, 
+                {
+                    "hc-key": "mp-ro", 
+                    "value": ""
+                }, 
+                {
+                    "hc-key": "mp-ro", 
+                    "value": ""
+                }, 
+                {
+                    "hc-key": "mp-ro", 
+                    "value": ""
+                }, 
+                {
+                    "hc-key": "pr-3614", 
+                    "value": ""
+                }, 
+                {
+                    "hc-key": "vi-6399", 
+                    "value": ""
+                }, 
+                {
+                    "hc-key": "vi-6399", 
+                    "value": ""
+                }, 
+                {
+                    "hc-key": "vi-6399", 
+                    "value": ""
+                }
+            ], 
+            "type": ""
+        }, 
+        "col3": {
+            "label": "Total", 
+            "series": [
+                {
+                    "hc-key": "us-al", 
+                    "value": 105492.0
+                }, 
+                {
+                    "hc-key": "us-ak", 
+                    "value": 9059.0
+                }, 
+                {
+                    "hc-key": "us-az", 
+                    "value": 78141.0
+                }, 
+                {
+                    "hc-key": "us-ar", 
+                    "value": 64222.0
+                }, 
+                {
+                    "hc-key": "us-ca", 
+                    "value": 362686.0
+                }, 
+                {
+                    "hc-key": "us-co", 
+                    "value": 50361.0
+                }, 
+                {
+                    "hc-key": "us-ct", 
+                    "value": 42036.0
+                }, 
+                {
+                    "hc-key": "us-de", 
+                    "value": 12235.0
+                }, 
+                {
+                    "hc-key": "us-dc", 
+                    "value": 5934.0
+                }, 
+                {
+                    "hc-key": "us-fl", 
+                    "value": 255649.0
+                }, 
+                {
+                    "hc-key": "us-ga", 
+                    "value": 144204.0
+                }, 
+                {
+                    "hc-key": "us-hi", 
+                    "value": 14535.0
+                }, 
+                {
+                    "hc-key": "us-id", 
+                    "value": 21933.0
+                }, 
+                {
+                    "hc-key": "us-il", 
+                    "value": 154436.0
+                }, 
+                {
+                    "hc-key": "us-in", 
+                    "value": 102033.0
+                }, 
+                {
+                    "hc-key": "us-ia", 
+                    "value": 38596.0
+                }, 
+                {
+                    "hc-key": "us-ks", 
+                    "value": 38159.0
+                }, 
+                {
+                    "hc-key": "us-ky", 
+                    "value": 89486.0
+                }, 
+                {
+                    "hc-key": "us-la", 
+                    "value": 89186.0
+                }, 
+                {
+                    "hc-key": "us-me", 
+                    "value": 24392.0
+                }, 
+                {
+                    "hc-key": "us-md", 
+                    "value": 64743.0
+                }, 
+                {
+                    "hc-key": "us-ma", 
+                    "value": 94396.0
+                }, 
+                {
+                    "hc-key": "us-mi", 
+                    "value": 168905.0
+                }, 
+                {
+                    "hc-key": "us-mn", 
+                    "value": 61389.0
+                }, 
+                {
+                    "hc-key": "us-ms", 
+                    "value": 68785.0
+                }, 
+                {
+                    "hc-key": "us-mo", 
+                    "value": 99465.0
+                }, 
+                {
+                    "hc-key": "us-mt", 
+                    "value": 13490.0
+                }, 
+                {
+                    "hc-key": "us-ne", 
+                    "value": 21326.0
+                }, 
+                {
+                    "hc-key": "us-nv", 
+                    "value": 29802.0
+                }, 
+                {
+                    "hc-key": "us-nh", 
+                    "value": 22058.0
+                }, 
+                {
+                    "hc-key": "us-nj", 
+                    "value": 104858.0
+                }, 
+                {
+                    "hc-key": "us-nm", 
+                    "value": 32098.0
+                }, 
+                {
+                    "hc-key": "us-ny", 
+                    "value": 251932.0
+                }, 
+                {
+                    "hc-key": "us-nc", 
+                    "value": 144661.0
+                }, 
+                {
+                    "hc-key": "us-nd", 
+                    "value": 7789.0
+                }, 
+                {
+                    "hc-key": "us-oh", 
+                    "value": 166740.0
+                }, 
+                {
+                    "hc-key": "us-ok", 
+                    "value": 63303.0
+                }, 
+                {
+                    "hc-key": "us-or", 
+                    "value": 45339.0
+                }, 
+                {
+                    "hc-key": "us-pa", 
+                    "value": 187027.0
+                }, 
+                {
+                    "hc-key": "us-ri", 
+                    "value": 15921.0
+                }, 
+                {
+                    "hc-key": "us-sc", 
+                    "value": 80657.0
+                }, 
+                {
+                    "hc-key": "us-sd", 
+                    "value": 10458.0
+                }, 
+                {
+                    "hc-key": "us-tn", 
+                    "value": 113059.0
+                }, 
+                {
+                    "hc-key": "us-tx", 
+                    "value": 320419.0
+                }, 
+                {
+                    "hc-key": "us-ut", 
+                    "value": 31627.0
+                }, 
+                {
+                    "hc-key": "us-vt", 
+                    "value": 9928.0
+                }, 
+                {
+                    "hc-key": "us-va", 
+                    "value": 100887.0
+                }, 
+                {
+                    "hc-key": "us-wa", 
+                    "value": 76697.0
+                }, 
+                {
+                    "hc-key": "us-wv", 
+                    "value": 40014.0
+                }, 
+                {
+                    "hc-key": "us-wi", 
+                    "value": 78138.0
+                }, 
+                {
+                    "hc-key": "us-wy", 
+                    "value": 6699.0
+                }, 
+                {
+                    "hc-key": "as-6514", 
+                    "value": 1768.0
+                }, 
+                {
+                    "hc-key": "as-6514", 
+                    "value": 1768.0
+                }, 
+                {
+                    "hc-key": "gu-3605", 
+                    "value": 2535.0
+                }, 
+                {
+                    "hc-key": "mp-ro", 
+                    "value": 570.0
+                }, 
+                {
+                    "hc-key": "mp-ro", 
+                    "value": 570.0
+                }, 
+                {
+                    "hc-key": "mp-ro", 
+                    "value": 570.0
+                }, 
+                {
+                    "hc-key": "pr-3614", 
+                    "value": 84322.0
+                }, 
+                {
+                    "hc-key": "vi-6399", 
+                    "value": 1719.0
+                }, 
+                {
+                    "hc-key": "vi-6399", 
+                    "value": 1719.0
+                }, 
+                {
+                    "hc-key": "vi-6399", 
+                    "value": 1719.0
+                }
+            ], 
+            "type": "number"
+        }, 
+        "col4": {
+            "label": "Children under age 18 of\u2014 :: Subtotal", 
+            "series": [
+                {
+                    "hc-key": "us-al", 
+                    "value": 78939.0
+                }, 
+                {
+                    "hc-key": "us-ak", 
+                    "value": 7396.0
+                }, 
+                {
+                    "hc-key": "us-az", 
+                    "value": 60708.0
+                }, 
+                {
+                    "hc-key": "us-ar", 
+                    "value": 48706.0
+                }, 
+                {
+                    "hc-key": "us-ca", 
+                    "value": 262663.0
+                }, 
+                {
+                    "hc-key": "us-co", 
+                    "value": 39012.0
+                }, 
+                {
+                    "hc-key": "us-ct", 
+                    "value": 28579.0
+                }, 
+                {
+                    "hc-key": "us-de", 
+                    "value": 8905.0
+                }, 
+                {
+                    "hc-key": "us-dc", 
+                    "value": 4159.0
+                }, 
+                {
+                    "hc-key": "us-fl", 
+                    "value": 194157.0
+                }, 
+                {
+                    "hc-key": "us-ga", 
+                    "value": 110101.0
+                }, 
+                {
+                    "hc-key": "us-hi", 
+                    "value": 11291.0
+                }, 
+                {
+                    "hc-key": "us-id", 
+                    "value": 16562.0
+                }, 
+                {
+                    "hc-key": "us-il", 
+                    "value": 105915.0
+                }, 
+                {
+                    "hc-key": "us-in", 
+                    "value": 73404.0
+                }, 
+                {
+                    "hc-key": "us-ia", 
+                    "value": 25370.0
+                }, 
+                {
+                    "hc-key": "us-ks", 
+                    "value": 27805.0
+                }, 
+                {
+                    "hc-key": "us-ky", 
+                    "value": 65484.0
+                }, 
+                {
+                    "hc-key": "us-la", 
+                    "value": 63888.0
+                }, 
+                {
+                    "hc-key": "us-me", 
+                    "value": 16884.0
+                }, 
+                {
+                    "hc-key": "us-md", 
+                    "value": 48619.0
+                }, 
+                {
+                    "hc-key": "us-ma", 
+                    "value": 65261.0
+                }, 
+                {
+                    "hc-key": "us-mi", 
+                    "value": 118168.0
+                }, 
+                {
+                    "hc-key": "us-mn", 
+                    "value": 42018.0
+                }, 
+                {
+                    "hc-key": "us-ms", 
+                    "value": 50699.0
+                }, 
+                {
+                    "hc-key": "us-mo", 
+                    "value": 72053.0
+                }, 
+                {
+                    "hc-key": "us-mt", 
+                    "value": 9950.0
+                }, 
+                {
+                    "hc-key": "us-ne", 
+                    "value": 15005.0
+                }, 
+                {
+                    "hc-key": "us-nv", 
+                    "value": 24351.0
+                }, 
+                {
+                    "hc-key": "us-nh", 
+                    "value": 16503.0
+                }, 
+                {
+                    "hc-key": "us-nj", 
+                    "value": 74926.0
+                }, 
+                {
+                    "hc-key": "us-nm", 
+                    "value": 24995.0
+                }, 
+                {
+                    "hc-key": "us-ny", 
+                    "value": 173367.0
+                }, 
+                {
+                    "hc-key": "us-nc", 
+                    "value": 105928.0
+                }, 
+                {
+                    "hc-key": "us-nd", 
+                    "value": 5146.0
+                }, 
+                {
+                    "hc-key": "us-oh", 
+                    "value": 114741.0
+                }, 
+                {
+                    "hc-key": "us-ok", 
+                    "value": 47992.0
+                }, 
+                {
+                    "hc-key": "us-or", 
+                    "value": 31736.0
+                }, 
+                {
+                    "hc-key": "us-pa", 
+                    "value": 129744.0
+                }, 
+                {
+                    "hc-key": "us-ri", 
+                    "value": 11151.0
+                }, 
+                {
+                    "hc-key": "us-sc", 
+                    "value": 59715.0
+                }, 
+                {
+                    "hc-key": "us-sd", 
+                    "value": 7291.0
+                }, 
+                {
+                    "hc-key": "us-tn", 
+                    "value": 84217.0
+                }, 
+                {
+                    "hc-key": "us-tx", 
+                    "value": 248169.0
+                }, 
+                {
+                    "hc-key": "us-ut", 
+                    "value": 24838.0
+                }, 
+                {
+                    "hc-key": "us-vt", 
+                    "value": 6850.0
+                }, 
+                {
+                    "hc-key": "us-va", 
+                    "value": 73904.0
+                }, 
+                {
+                    "hc-key": "us-wa", 
+                    "value": 54823.0
+                }, 
+                {
+                    "hc-key": "us-wv", 
+                    "value": 27528.0
+                }, 
+                {
+                    "hc-key": "us-wi", 
+                    "value": 52479.0
+                }, 
+                {
+                    "hc-key": "us-wy", 
+                    "value": 5116.0
+                }, 
+                {
+                    "hc-key": "as-6514", 
+                    "value": 1641.0
+                }, 
+                {
+                    "hc-key": "as-6514", 
+                    "value": 1641.0
+                }, 
+                {
+                    "hc-key": "gu-3605", 
+                    "value": 2234.0
+                }, 
+                {
+                    "hc-key": "mp-ro", 
+                    "value": 502.0
+                }, 
+                {
+                    "hc-key": "mp-ro", 
+                    "value": 502.0
+                }, 
+                {
+                    "hc-key": "mp-ro", 
+                    "value": 502.0
+                }, 
+                {
+                    "hc-key": "pr-3614", 
+                    "value": 59955.0
+                }, 
+                {
+                    "hc-key": "vi-6399", 
+                    "value": 1338.0
+                }, 
+                {
+                    "hc-key": "vi-6399", 
+                    "value": 1338.0
+                }, 
+                {
+                    "hc-key": "vi-6399", 
+                    "value": 1338.0
+                }
+            ], 
+            "type": "number"
+        }, 
+        "col5": {
+            "label": "Children under age 18 of\u2014 :: Retired workers", 
+            "series": [
+                {
+                    "hc-key": "us-al", 
+                    "value": 6469.0
+                }, 
+                {
+                    "hc-key": "us-ak", 
+                    "value": 1324.0
+                }, 
+                {
+                    "hc-key": "us-az", 
+                    "value": 7471.0
+                }, 
+                {
+                    "hc-key": "us-ar", 
+                    "value": 3635.0
+                }, 
+                {
+                    "hc-key": "us-ca", 
+                    "value": 41135.0
+                }, 
+                {
+                    "hc-key": "us-co", 
+                    "value": 4081.0
+                }, 
+                {
+                    "hc-key": "us-ct", 
+                    "value": 3358.0
+                }, 
+                {
+                    "hc-key": "us-de", 
+                    "value": 712.0
+                }, 
+                {
+                    "hc-key": "us-dc", 
+                    "value": 486.0
+                }, 
+                {
+                    "hc-key": "us-fl", 
+                    "value": 25945.0
+                }, 
+                {
+                    "hc-key": "us-ga", 
+                    "value": 10759.0
+                }, 
+                {
+                    "hc-key": "us-hi", 
+                    "value": 2672.0
+                }, 
+                {
+                    "hc-key": "us-id", 
+                    "value": 1591.0
+                }, 
+                {
+                    "hc-key": "us-il", 
+                    "value": 11142.0
+                }, 
+                {
+                    "hc-key": "us-in", 
+                    "value": 5634.0
+                }, 
+                {
+                    "hc-key": "us-ia", 
+                    "value": 2174.0
+                }, 
+                {
+                    "hc-key": "us-ks", 
+                    "value": 2375.0
+                }, 
+                {
+                    "hc-key": "us-ky", 
+                    "value": 3911.0
+                }, 
+                {
+                    "hc-key": "us-la", 
+                    "value": 4907.0
+                }, 
+                {
+                    "hc-key": "us-me", 
+                    "value": 1220.0
+                }, 
+                {
+                    "hc-key": "us-md", 
+                    "value": 4933.0
+                }, 
+                {
+                    "hc-key": "us-ma", 
+                    "value": 5398.0
+                }, 
+                {
+                    "hc-key": "us-mi", 
+                    "value": 9887.0
+                }, 
+                {
+                    "hc-key": "us-mn", 
+                    "value": 3277.0
+                }, 
+                {
+                    "hc-key": "us-ms", 
+                    "value": 4591.0
+                }, 
+                {
+                    "hc-key": "us-mo", 
+                    "value": 5220.0
+                }, 
+                {
+                    "hc-key": "us-mt", 
+                    "value": 1293.0
+                }, 
+                {
+                    "hc-key": "us-ne", 
+                    "value": 1177.0
+                }, 
+                {
+                    "hc-key": "us-nv", 
+                    "value": 3460.0
+                }, 
+                {
+                    "hc-key": "us-nh", 
+                    "value": 995.0
+                }, 
+                {
+                    "hc-key": "us-nj", 
+                    "value": 9101.0
+                }, 
+                {
+                    "hc-key": "us-nm", 
+                    "value": 2343.0
+                }, 
+                {
+                    "hc-key": "us-ny", 
+                    "value": 21112.0
+                }, 
+                {
+                    "hc-key": "us-nc", 
+                    "value": 9164.0
+                }, 
+                {
+                    "hc-key": "us-nd", 
+                    "value": 340.0
+                }, 
+                {
+                    "hc-key": "us-oh", 
+                    "value": 8321.0
+                }, 
+                {
+                    "hc-key": "us-ok", 
+                    "value": 4204.0
+                }, 
+                {
+                    "hc-key": "us-or", 
+                    "value": 4298.0
+                }, 
+                {
+                    "hc-key": "us-pa", 
+                    "value": 10008.0
+                }, 
+                {
+                    "hc-key": "us-ri", 
+                    "value": 1090.0
+                }, 
+                {
+                    "hc-key": "us-sc", 
+                    "value": 5357.0
+                }, 
+                {
+                    "hc-key": "us-sd", 
+                    "value": 534.0
+                }, 
+                {
+                    "hc-key": "us-tn", 
+                    "value": 6835.0
+                }, 
+                {
+                    "hc-key": "us-tx", 
+                    "value": 24886.0
+                }, 
+                {
+                    "hc-key": "us-ut", 
+                    "value": 2258.0
+                }, 
+                {
+                    "hc-key": "us-vt", 
+                    "value": 661.0
+                }, 
+                {
+                    "hc-key": "us-va", 
+                    "value": 7065.0
+                }, 
+                {
+                    "hc-key": "us-wa", 
+                    "value": 6492.0
+                }, 
+                {
+                    "hc-key": "us-wv", 
+                    "value": 2165.0
+                }, 
+                {
+                    "hc-key": "us-wi", 
+                    "value": 3827.0
+                }, 
+                {
+                    "hc-key": "us-wy", 
+                    "value": 432.0
+                }, 
+                {
+                    "hc-key": "as-6514", 
+                    "value": 266.0
+                }, 
+                {
+                    "hc-key": "as-6514", 
+                    "value": 266.0
+                }, 
+                {
+                    "hc-key": "gu-3605", 
+                    "value": 527.0
+                }, 
+                {
+                    "hc-key": "mp-ro", 
+                    "value": 169.0
+                }, 
+                {
+                    "hc-key": "mp-ro", 
+                    "value": 169.0
+                }, 
+                {
+                    "hc-key": "mp-ro", 
+                    "value": 169.0
+                }, 
+                {
+                    "hc-key": "pr-3614", 
+                    "value": 5512.0
+                }, 
+                {
+                    "hc-key": "vi-6399", 
+                    "value": 308.0
+                }, 
+                {
+                    "hc-key": "vi-6399", 
+                    "value": 308.0
+                }, 
+                {
+                    "hc-key": "vi-6399", 
+                    "value": 308.0
+                }
+            ], 
+            "type": "number"
+        }, 
+        "col6": {
+            "label": "Children under age 18 of\u2014 :: Deceased workers", 
+            "series": [
+                {
+                    "hc-key": "us-al", 
+                    "value": 26928.0
+                }, 
+                {
+                    "hc-key": "us-ak", 
+                    "value": 3598.0
+                }, 
+                {
+                    "hc-key": "us-az", 
+                    "value": 25310.0
+                }, 
+                {
+                    "hc-key": "us-ar", 
+                    "value": 16376.0
+                }, 
+                {
+                    "hc-key": "us-ca", 
+                    "value": 104564.0
+                }, 
+                {
+                    "hc-key": "us-co", 
+                    "value": 16714.0
+                }, 
+                {
+                    "hc-key": "us-ct", 
+                    "value": 10430.0
+                }, 
+                {
+                    "hc-key": "us-de", 
+                    "value": 3749.0
+                }, 
+                {
+                    "hc-key": "us-dc", 
+                    "value": 2045.0
+                }, 
+                {
+                    "hc-key": "us-fl", 
+                    "value": 73514.0
+                }, 
+                {
+                    "hc-key": "us-ga", 
+                    "value": 44800.0
+                }, 
+                {
+                    "hc-key": "us-hi", 
+                    "value": 4356.0
+                }, 
+                {
+                    "hc-key": "us-id", 
+                    "value": 6216.0
+                }, 
+                {
+                    "hc-key": "us-il", 
+                    "value": 42724.0
+                }, 
+                {
+                    "hc-key": "us-in", 
+                    "value": 28439.0
+                }, 
+                {
+                    "hc-key": "us-ia", 
+                    "value": 10249.0
+                }, 
+                {
+                    "hc-key": "us-ks", 
+                    "value": 11288.0
+                }, 
+                {
+                    "hc-key": "us-ky", 
+                    "value": 21989.0
+                }, 
+                {
+                    "hc-key": "us-la", 
+                    "value": 26697.0
+                }, 
+                {
+                    "hc-key": "us-me", 
+                    "value": 4205.0
+                }, 
+                {
+                    "hc-key": "us-md", 
+                    "value": 21657.0
+                }, 
+                {
+                    "hc-key": "us-ma", 
+                    "value": 17739.0
+                }, 
+                {
+                    "hc-key": "us-mi", 
+                    "value": 39213.0
+                }, 
+                {
+                    "hc-key": "us-mn", 
+                    "value": 14962.0
+                }, 
+                {
+                    "hc-key": "us-ms", 
+                    "value": 19292.0
+                }, 
+                {
+                    "hc-key": "us-mo", 
+                    "value": 27139.0
+                }, 
+                {
+                    "hc-key": "us-mt", 
+                    "value": 4399.0
+                }, 
+                {
+                    "hc-key": "us-ne", 
+                    "value": 6164.0
+                }, 
+                {
+                    "hc-key": "us-nv", 
+                    "value": 10309.0
+                }, 
+                {
+                    "hc-key": "us-nh", 
+                    "value": 3977.0
+                }, 
+                {
+                    "hc-key": "us-nj", 
+                    "value": 26993.0
+                }, 
+                {
+                    "hc-key": "us-nm", 
+                    "value": 10829.0
+                }, 
+                {
+                    "hc-key": "us-ny", 
+                    "value": 51520.0
+                }, 
+                {
+                    "hc-key": "us-nc", 
+                    "value": 39752.0
+                }, 
+                {
+                    "hc-key": "us-nd", 
+                    "value": 2531.0
+                }, 
+                {
+                    "hc-key": "us-oh", 
+                    "value": 45225.0
+                }, 
+                {
+                    "hc-key": "us-ok", 
+                    "value": 20110.0
+                }, 
+                {
+                    "hc-key": "us-or", 
+                    "value": 11652.0
+                }, 
+                {
+                    "hc-key": "us-pa", 
+                    "value": 44971.0
+                }, 
+                {
+                    "hc-key": "us-ri", 
+                    "value": 2989.0
+                }, 
+                {
+                    "hc-key": "us-sc", 
+                    "value": 22784.0
+                }, 
+                {
+                    "hc-key": "us-sd", 
+                    "value": 3353.0
+                }, 
+                {
+                    "hc-key": "us-tn", 
+                    "value": 32022.0
+                }, 
+                {
+                    "hc-key": "us-tx", 
+                    "value": 104503.0
+                }, 
+                {
+                    "hc-key": "us-ut", 
+                    "value": 11843.0
+                }, 
+                {
+                    "hc-key": "us-vt", 
+                    "value": 1821.0
+                }, 
+                {
+                    "hc-key": "us-va", 
+                    "value": 28050.0
+                }, 
+                {
+                    "hc-key": "us-wa", 
+                    "value": 19743.0
+                }, 
+                {
+                    "hc-key": "us-wv", 
+                    "value": 9311.0
+                }, 
+                {
+                    "hc-key": "us-wi", 
+                    "value": 18215.0
+                }, 
+                {
+                    "hc-key": "us-wy", 
+                    "value": 2562.0
+                }, 
+                {
+                    "hc-key": "as-6514", 
+                    "value": 738.0
+                }, 
+                {
+                    "hc-key": "as-6514", 
+                    "value": 738.0
+                }, 
+                {
+                    "hc-key": "gu-3605", 
+                    "value": 1164.0
+                }, 
+                {
+                    "hc-key": "mp-ro", 
+                    "value": 260.0
+                }, 
+                {
+                    "hc-key": "mp-ro", 
+                    "value": 260.0
+                }, 
+                {
+                    "hc-key": "mp-ro", 
+                    "value": 260.0
+                }, 
+                {
+                    "hc-key": "pr-3614", 
+                    "value": 14647.0
+                }, 
+                {
+                    "hc-key": "vi-6399", 
+                    "value": 583.0
+                }, 
+                {
+                    "hc-key": "vi-6399", 
+                    "value": 583.0
+                }, 
+                {
+                    "hc-key": "vi-6399", 
+                    "value": 583.0
+                }
+            ], 
+            "type": "number"
+        }, 
+        "col7": {
+            "label": "Children under age 18 of\u2014 :: Disabled workers", 
+            "series": [
+                {
+                    "hc-key": "us-al", 
+                    "value": 45542.0
+                }, 
+                {
+                    "hc-key": "us-ak", 
+                    "value": 2474.0
+                }, 
+                {
+                    "hc-key": "us-az", 
+                    "value": 27927.0
+                }, 
+                {
+                    "hc-key": "us-ar", 
+                    "value": 28695.0
+                }, 
+                {
+                    "hc-key": "us-ca", 
+                    "value": 116964.0
+                }, 
+                {
+                    "hc-key": "us-co", 
+                    "value": 18217.0
+                }, 
+                {
+                    "hc-key": "us-ct", 
+                    "value": 14791.0
+                }, 
+                {
+                    "hc-key": "us-de", 
+                    "value": 4444.0
+                }, 
+                {
+                    "hc-key": "us-dc", 
+                    "value": 1628.0
+                }, 
+                {
+                    "hc-key": "us-fl", 
+                    "value": 94698.0
+                }, 
+                {
+                    "hc-key": "us-ga", 
+                    "value": 54542.0
+                }, 
+                {
+                    "hc-key": "us-hi", 
+                    "value": 4263.0
+                }, 
+                {
+                    "hc-key": "us-id", 
+                    "value": 8755.0
+                }, 
+                {
+                    "hc-key": "us-il", 
+                    "value": 52049.0
+                }, 
+                {
+                    "hc-key": "us-in", 
+                    "value": 39331.0
+                }, 
+                {
+                    "hc-key": "us-ia", 
+                    "value": 12947.0
+                }, 
+                {
+                    "hc-key": "us-ks", 
+                    "value": 14142.0
+                }, 
+                {
+                    "hc-key": "us-ky", 
+                    "value": 39584.0
+                }, 
+                {
+                    "hc-key": "us-la", 
+                    "value": 32284.0
+                }, 
+                {
+                    "hc-key": "us-me", 
+                    "value": 11459.0
+                }, 
+                {
+                    "hc-key": "us-md", 
+                    "value": 22029.0
+                }, 
+                {
+                    "hc-key": "us-ma", 
+                    "value": 42124.0
+                }, 
+                {
+                    "hc-key": "us-mi", 
+                    "value": 69068.0
+                }, 
+                {
+                    "hc-key": "us-mn", 
+                    "value": 23779.0
+                }, 
+                {
+                    "hc-key": "us-ms", 
+                    "value": 26816.0
+                }, 
+                {
+                    "hc-key": "us-mo", 
+                    "value": 39694.0
+                }, 
+                {
+                    "hc-key": "us-mt", 
+                    "value": 4258.0
+                }, 
+                {
+                    "hc-key": "us-ne", 
+                    "value": 7664.0
+                }, 
+                {
+                    "hc-key": "us-nv", 
+                    "value": 10582.0
+                }, 
+                {
+                    "hc-key": "us-nh", 
+                    "value": 11531.0
+                }, 
+                {
+                    "hc-key": "us-nj", 
+                    "value": 38832.0
+                }, 
+                {
+                    "hc-key": "us-nm", 
+                    "value": 11823.0
+                }, 
+                {
+                    "hc-key": "us-ny", 
+                    "value": 100735.0
+                }, 
+                {
+                    "hc-key": "us-nc", 
+                    "value": 57012.0
+                }, 
+                {
+                    "hc-key": "us-nd", 
+                    "value": 2275.0
+                }, 
+                {
+                    "hc-key": "us-oh", 
+                    "value": 61195.0
+                }, 
+                {
+                    "hc-key": "us-ok", 
+                    "value": 23678.0
+                }, 
+                {
+                    "hc-key": "us-or", 
+                    "value": 15786.0
+                }, 
+                {
+                    "hc-key": "us-pa", 
+                    "value": 74765.0
+                }, 
+                {
+                    "hc-key": "us-ri", 
+                    "value": 7072.0
+                }, 
+                {
+                    "hc-key": "us-sc", 
+                    "value": 31574.0
+                }, 
+                {
+                    "hc-key": "us-sd", 
+                    "value": 3404.0
+                }, 
+                {
+                    "hc-key": "us-tn", 
+                    "value": 45360.0
+                }, 
+                {
+                    "hc-key": "us-tx", 
+                    "value": 118780.0
+                }, 
+                {
+                    "hc-key": "us-ut", 
+                    "value": 10737.0
+                }, 
+                {
+                    "hc-key": "us-vt", 
+                    "value": 4368.0
+                }, 
+                {
+                    "hc-key": "us-va", 
+                    "value": 38789.0
+                }, 
+                {
+                    "hc-key": "us-wa", 
+                    "value": 28588.0
+                }, 
+                {
+                    "hc-key": "us-wv", 
+                    "value": 16052.0
+                }, 
+                {
+                    "hc-key": "us-wi", 
+                    "value": 30437.0
+                }, 
+                {
+                    "hc-key": "us-wy", 
+                    "value": 2122.0
+                }, 
+                {
+                    "hc-key": "as-6514", 
+                    "value": 637.0
+                }, 
+                {
+                    "hc-key": "as-6514", 
+                    "value": 637.0
+                }, 
+                {
+                    "hc-key": "gu-3605", 
+                    "value": 543.0
+                }, 
+                {
+                    "hc-key": "mp-ro", 
+                    "value": 73.0
+                }, 
+                {
+                    "hc-key": "mp-ro", 
+                    "value": 73.0
+                }, 
+                {
+                    "hc-key": "mp-ro", 
+                    "value": 73.0
+                }, 
+                {
+                    "hc-key": "pr-3614", 
+                    "value": 39796.0
+                }, 
+                {
+                    "hc-key": "vi-6399", 
+                    "value": 447.0
+                }, 
+                {
+                    "hc-key": "vi-6399", 
+                    "value": 447.0
+                }, 
+                {
+                    "hc-key": "vi-6399", 
+                    "value": 447.0
+                }
+            ], 
+            "type": "number"
+        }, 
+        "col8": {
+            "label": "Disabled adult children of\u2014 :: Subtotal", 
+            "series": [
+                {
+                    "hc-key": "us-al", 
+                    "value": 22409.0
+                }, 
+                {
+                    "hc-key": "us-ak", 
+                    "value": 1379.0
+                }, 
+                {
+                    "hc-key": "us-az", 
+                    "value": 14735.0
+                }, 
+                {
+                    "hc-key": "us-ar", 
+                    "value": 13220.0
+                }, 
+                {
+                    "hc-key": "us-ca", 
+                    "value": 91313.0
+                }, 
+                {
+                    "hc-key": "us-co", 
+                    "value": 9570.0
+                }, 
+                {
+                    "hc-key": "us-ct", 
+                    "value": 12471.0
+                }, 
+                {
+                    "hc-key": "us-de", 
+                    "value": 2840.0
+                }, 
+                {
+                    "hc-key": "us-dc", 
+                    "value": 1635.0
+                }, 
+                {
+                    "hc-key": "us-fl", 
+                    "value": 51173.0
+                }, 
+                {
+                    "hc-key": "us-ga", 
+                    "value": 28301.0
+                }, 
+                {
+                    "hc-key": "us-hi", 
+                    "value": 3046.0
+                }, 
+                {
+                    "hc-key": "us-id", 
+                    "value": 4710.0
+                }, 
+                {
+                    "hc-key": "us-il", 
+                    "value": 43232.0
+                }, 
+                {
+                    "hc-key": "us-in", 
+                    "value": 24237.0
+                }, 
+                {
+                    "hc-key": "us-ia", 
+                    "value": 11968.0
+                }, 
+                {
+                    "hc-key": "us-ks", 
+                    "value": 9095.0
+                }, 
+                {
+                    "hc-key": "us-ky", 
+                    "value": 21064.0
+                }, 
+                {
+                    "hc-key": "us-la", 
+                    "value": 22188.0
+                }, 
+                {
+                    "hc-key": "us-me", 
+                    "value": 6832.0
+                }, 
+                {
+                    "hc-key": "us-md", 
+                    "value": 14859.0
+                }, 
+                {
+                    "hc-key": "us-ma", 
+                    "value": 26335.0
+                }, 
+                {
+                    "hc-key": "us-mi", 
+                    "value": 46095.0
+                }, 
+                {
+                    "hc-key": "us-mn", 
+                    "value": 17329.0
+                }, 
+                {
+                    "hc-key": "us-ms", 
+                    "value": 15386.0
+                }, 
+                {
+                    "hc-key": "us-mo", 
+                    "value": 23721.0
+                }, 
+                {
+                    "hc-key": "us-mt", 
+                    "value": 3100.0
+                }, 
+                {
+                    "hc-key": "us-ne", 
+                    "value": 5630.0
+                }, 
+                {
+                    "hc-key": "us-nv", 
+                    "value": 4567.0
+                }, 
+                {
+                    "hc-key": "us-nh", 
+                    "value": 4841.0
+                }, 
+                {
+                    "hc-key": "us-nj", 
+                    "value": 26786.0
+                }, 
+                {
+                    "hc-key": "us-nm", 
+                    "value": 6072.0
+                }, 
+                {
+                    "hc-key": "us-ny", 
+                    "value": 73580.0
+                }, 
+                {
+                    "hc-key": "us-nc", 
+                    "value": 33542.0
+                }, 
+                {
+                    "hc-key": "us-nd", 
+                    "value": 2409.0
+                }, 
+                {
+                    "hc-key": "us-oh", 
+                    "value": 45691.0
+                }, 
+                {
+                    "hc-key": "us-ok", 
+                    "value": 12790.0
+                }, 
+                {
+                    "hc-key": "us-or", 
+                    "value": 12178.0
+                }, 
+                {
+                    "hc-key": "us-pa", 
+                    "value": 50783.0
+                }, 
+                {
+                    "hc-key": "us-ri", 
+                    "value": 4425.0
+                }, 
+                {
+                    "hc-key": "us-sc", 
+                    "value": 17930.0
+                }, 
+                {
+                    "hc-key": "us-sd", 
+                    "value": 2790.0
+                }, 
+                {
+                    "hc-key": "us-tn", 
+                    "value": 24972.0
+                }, 
+                {
+                    "hc-key": "us-tx", 
+                    "value": 61093.0
+                }, 
+                {
+                    "hc-key": "us-ut", 
+                    "value": 5950.0
+                }, 
+                {
+                    "hc-key": "us-vt", 
+                    "value": 2813.0
+                }, 
+                {
+                    "hc-key": "us-va", 
+                    "value": 23796.0
+                }, 
+                {
+                    "hc-key": "us-wa", 
+                    "value": 19186.0
+                }, 
+                {
+                    "hc-key": "us-wv", 
+                    "value": 11204.0
+                }, 
+                {
+                    "hc-key": "us-wi", 
+                    "value": 23134.0
+                }, 
+                {
+                    "hc-key": "us-wy", 
+                    "value": 1357.0
+                }, 
+                {
+                    "hc-key": "as-6514", 
+                    "value": "(X)"
+                }, 
+                {
+                    "hc-key": "as-6514", 
+                    "value": "(X)"
+                }, 
+                {
+                    "hc-key": "gu-3605", 
+                    "value": 213.0
+                }, 
+                {
+                    "hc-key": "mp-ro", 
+                    "value": 52.0
+                }, 
+                {
+                    "hc-key": "mp-ro", 
+                    "value": 52.0
+                }, 
+                {
+                    "hc-key": "mp-ro", 
+                    "value": 52.0
+                }, 
+                {
+                    "hc-key": "pr-3614", 
+                    "value": 23388.0
+                }, 
+                {
+                    "hc-key": "vi-6399", 
+                    "value": 336.0
+                }, 
+                {
+                    "hc-key": "vi-6399", 
+                    "value": 336.0
+                }, 
+                {
+                    "hc-key": "vi-6399", 
+                    "value": 336.0
+                }
+            ], 
+            "type": "number"
+        }, 
+        "col9": {
+            "label": "Disabled adult children of\u2014 :: Retired workers", 
+            "series": [
+                {
+                    "hc-key": "us-al", 
+                    "value": 4640.0
+                }, 
+                {
+                    "hc-key": "us-ak", 
+                    "value": 420.0
+                }, 
+                {
+                    "hc-key": "us-az", 
+                    "value": 4581.0
+                }, 
+                {
+                    "hc-key": "us-ar", 
+                    "value": 2989.0
+                }, 
+                {
+                    "hc-key": "us-ca", 
+                    "value": 30916.0
+                }, 
+                {
+                    "hc-key": "us-co", 
+                    "value": 3046.0
+                }, 
+                {
+                    "hc-key": "us-ct", 
+                    "value": 3575.0
+                }, 
+                {
+                    "hc-key": "us-de", 
+                    "value": 756.0
+                }, 
+                {
+                    "hc-key": "us-dc", 
+                    "value": 253.0
+                }, 
+                {
+                    "hc-key": "us-fl", 
+                    "value": 15110.0
+                }, 
+                {
+                    "hc-key": "us-ga", 
+                    "value": 6845.0
+                }, 
+                {
+                    "hc-key": "us-hi", 
+                    "value": 1064.0
+                }, 
+                {
+                    "hc-key": "us-id", 
+                    "value": 1597.0
+                }, 
+                {
+                    "hc-key": "us-il", 
+                    "value": 11935.0
+                }, 
+                {
+                    "hc-key": "us-in", 
+                    "value": 6152.0
+                }, 
+                {
+                    "hc-key": "us-ia", 
+                    "value": 3457.0
+                }, 
+                {
+                    "hc-key": "us-ks", 
+                    "value": 2596.0
+                }, 
+                {
+                    "hc-key": "us-ky", 
+                    "value": 4657.0
+                }, 
+                {
+                    "hc-key": "us-la", 
+                    "value": 4924.0
+                }, 
+                {
+                    "hc-key": "us-me", 
+                    "value": 1707.0
+                }, 
+                {
+                    "hc-key": "us-md", 
+                    "value": 3830.0
+                }, 
+                {
+                    "hc-key": "us-ma", 
+                    "value": 6946.0
+                }, 
+                {
+                    "hc-key": "us-mi", 
+                    "value": 12234.0
+                }, 
+                {
+                    "hc-key": "us-mn", 
+                    "value": 5633.0
+                }, 
+                {
+                    "hc-key": "us-ms", 
+                    "value": 3273.0
+                }, 
+                {
+                    "hc-key": "us-mo", 
+                    "value": 6009.0
+                }, 
+                {
+                    "hc-key": "us-mt", 
+                    "value": 969.0
+                }, 
+                {
+                    "hc-key": "us-ne", 
+                    "value": 1668.0
+                }, 
+                {
+                    "hc-key": "us-nv", 
+                    "value": 1323.0
+                }, 
+                {
+                    "hc-key": "us-nh", 
+                    "value": 1311.0
+                }, 
+                {
+                    "hc-key": "us-nj", 
+                    "value": 7884.0
+                }, 
+                {
+                    "hc-key": "us-nm", 
+                    "value": 1790.0
+                }, 
+                {
+                    "hc-key": "us-ny", 
+                    "value": 21053.0
+                }, 
+                {
+                    "hc-key": "us-nc", 
+                    "value": 8121.0
+                }, 
+                {
+                    "hc-key": "us-nd", 
+                    "value": 674.0
+                }, 
+                {
+                    "hc-key": "us-oh", 
+                    "value": 11236.0
+                }, 
+                {
+                    "hc-key": "us-ok", 
+                    "value": 3163.0
+                }, 
+                {
+                    "hc-key": "us-or", 
+                    "value": 3987.0
+                }, 
+                {
+                    "hc-key": "us-pa", 
+                    "value": 13040.0
+                }, 
+                {
+                    "hc-key": "us-ri", 
+                    "value": 1155.0
+                }, 
+                {
+                    "hc-key": "us-sc", 
+                    "value": 4243.0
+                }, 
+                {
+                    "hc-key": "us-sd", 
+                    "value": 815.0
+                }, 
+                {
+                    "hc-key": "us-tn", 
+                    "value": 5916.0
+                }, 
+                {
+                    "hc-key": "us-tx", 
+                    "value": 17251.0
+                }, 
+                {
+                    "hc-key": "us-ut", 
+                    "value": 2293.0
+                }, 
+                {
+                    "hc-key": "us-vt", 
+                    "value": 732.0
+                }, 
+                {
+                    "hc-key": "us-va", 
+                    "value": 6175.0
+                }, 
+                {
+                    "hc-key": "us-wa", 
+                    "value": 6095.0
+                }, 
+                {
+                    "hc-key": "us-wv", 
+                    "value": 2398.0
+                }, 
+                {
+                    "hc-key": "us-wi", 
+                    "value": 6996.0
+                }, 
+                {
+                    "hc-key": "us-wy", 
+                    "value": 413.0
+                }, 
+                {
+                    "hc-key": "as-6514", 
+                    "value": 33.0
+                }, 
+                {
+                    "hc-key": "as-6514", 
+                    "value": 33.0
+                }, 
+                {
+                    "hc-key": "gu-3605", 
+                    "value": 71.0
+                }, 
+                {
+                    "hc-key": "mp-ro", 
+                    "value": "(X)"
+                }, 
+                {
+                    "hc-key": "mp-ro", 
+                    "value": "(X)"
+                }, 
+                {
+                    "hc-key": "mp-ro", 
+                    "value": "(X)"
+                }, 
+                {
+                    "hc-key": "pr-3614", 
+                    "value": 6318.0
+                }, 
+                {
+                    "hc-key": "vi-6399", 
+                    "value": 123.0
+                }, 
+                {
+                    "hc-key": "vi-6399", 
+                    "value": 123.0
+                }, 
+                {
+                    "hc-key": "vi-6399", 
+                    "value": 123.0
+                }
+            ], 
+            "type": "number"
+        }
+    }, 
+    "footnotes": [
+        {
+            "content": "Sources: Social Security Administration, Master Beneficiary Record, 100\u00a0percent data; and US Postal Service geographic data.", 
+            "type": "note"
+        }, 
+        {
+            "content": "(X) = Suppressed to avoid disclosing information about particular individuals.", 
+            "type": "note"
+        }, 
+        {
+            "content": "File available from US Social Security Administration \u2022 Office of Retirement and Disability Policy \u2022 Office of Research, Evaluation, and Statistics, Annual Statistical Supplement, 2015, http://www.socialsecurity.gov/policy/docs/statcomps/supplement/2015/.", 
+            "type": "note"
+        }
+    ], 
+    "html": {
+        "body": "<tbody><tr class=><td class=\"col0\"></td><td class=\"col1\"></td><td class=\"col2\">All areas</td><td class=\"col3\">4355214.0</td><td class=\"col4\">3166362.0</td><td class=\"col5\">327665.0</td><td class=\"col6\">1188333.0</td><td class=\"col7\">1650364.0</td><td class=\"col8\">1048879.0</td><td class=\"col9\">287762.0</td><td class=\"col10\">641497.0</td><td class=\"col11\">119620.0</td><td class=\"col12\">139973.0</td><td class=\"col13\">20069.0</td><td class=\"col14\">62269.0</td><td class=\"col15\">57635.0</td><tr class=Alabama><td class=\"col0\">Alabama</td><td class=\"col1\"></td><td class=\"col2\"></td><td class=\"col3\">105492.0</td><td class=\"col4\">78939.0</td><td class=\"col5\">6469.0</td><td class=\"col6\">26928.0</td><td class=\"col7\">45542.0</td><td class=\"col8\">22409.0</td><td class=\"col9\">4640.0</td><td class=\"col10\">14341.0</td><td class=\"col11\">3428.0</td><td class=\"col12\">4144.0</td><td class=\"col13\">444.0</td><td class=\"col14\">1699.0</td><td class=\"col15\">2001.0</td><tr class=Alaska><td class=\"col0\">Alaska</td><td class=\"col1\"></td><td class=\"col2\"></td><td class=\"col3\">9059.0</td><td class=\"col4\">7396.0</td><td class=\"col5\">1324.0</td><td class=\"col6\">3598.0</td><td class=\"col7\">2474.0</td><td class=\"col8\">1379.0</td><td class=\"col9\">420.0</td><td class=\"col10\">832.0</td><td class=\"col11\">127.0</td><td class=\"col12\">284.0</td><td class=\"col13\">59.0</td><td class=\"col14\">154.0</td><td class=\"col15\">71.0</td><tr class=Arizona><td class=\"col0\">Arizona</td><td class=\"col1\"></td><td class=\"col2\"></td><td class=\"col3\">78141.0</td><td class=\"col4\">60708.0</td><td class=\"col5\">7471.0</td><td class=\"col6\">25310.0</td><td class=\"col7\">27927.0</td><td class=\"col8\">14735.0</td><td class=\"col9\">4581.0</td><td class=\"col10\">8395.0</td><td class=\"col11\">1759.0</td><td class=\"col12\">2698.0</td><td class=\"col13\">438.0</td><td class=\"col14\">1311.0</td><td class=\"col15\">949.0</td><tr class=Arkansas><td class=\"col0\">Arkansas</td><td class=\"col1\"></td><td class=\"col2\"></td><td class=\"col3\">64222.0</td><td class=\"col4\">48706.0</td><td class=\"col5\">3635.0</td><td class=\"col6\">16376.0</td><td class=\"col7\">28695.0</td><td class=\"col8\">13220.0</td><td class=\"col9\">2989.0</td><td class=\"col10\">7948.0</td><td class=\"col11\">2283.0</td><td class=\"col12\">2296.0</td><td class=\"col13\">194.0</td><td class=\"col14\">1002.0</td><td class=\"col15\">1100.0</td><tr class=California><td class=\"col0\">California</td><td class=\"col1\"></td><td class=\"col2\"></td><td class=\"col3\">362686.0</td><td class=\"col4\">262663.0</td><td class=\"col5\">41135.0</td><td class=\"col6\">104564.0</td><td class=\"col7\">116964.0</td><td class=\"col8\">91313.0</td><td class=\"col9\">30916.0</td><td class=\"col10\">51826.0</td><td class=\"col11\">8571.0</td><td class=\"col12\">8710.0</td><td class=\"col13\">1806.0</td><td class=\"col14\">3992.0</td><td class=\"col15\">2912.0</td><tr class=Colorado><td class=\"col0\">Colorado</td><td class=\"col1\"></td><td class=\"col2\"></td><td class=\"col3\">50361.0</td><td class=\"col4\">39012.0</td><td class=\"col5\">4081.0</td><td class=\"col6\">16714.0</td><td class=\"col7\">18217.0</td><td class=\"col8\">9570.0</td><td class=\"col9\">3046.0</td><td class=\"col10\">5534.0</td><td class=\"col11\">990.0</td><td class=\"col12\">1779.0</td><td class=\"col13\">308.0</td><td class=\"col14\">873.0</td><td class=\"col15\">598.0</td><tr class=Connecticut><td class=\"col0\">Connecticut</td><td class=\"col1\"></td><td class=\"col2\"></td><td class=\"col3\">42036.0</td><td class=\"col4\">28579.0</td><td class=\"col5\">3358.0</td><td class=\"col6\">10430.0</td><td class=\"col7\">14791.0</td><td class=\"col8\">12471.0</td><td class=\"col9\">3575.0</td><td class=\"col10\">7799.0</td><td class=\"col11\">1097.0</td><td class=\"col12\">986.0</td><td class=\"col13\">162.0</td><td class=\"col14\">412.0</td><td class=\"col15\">412.0</td><tr class=Delaware><td class=\"col0\">Delaware</td><td class=\"col1\"></td><td class=\"col2\"></td><td class=\"col3\">12235.0</td><td class=\"col4\">8905.0</td><td class=\"col5\">712.0</td><td class=\"col6\">3749.0</td><td class=\"col7\">4444.0</td><td class=\"col8\">2840.0</td><td class=\"col9\">756.0</td><td class=\"col10\">1784.0</td><td class=\"col11\">300.0</td><td class=\"col12\">490.0</td><td class=\"col13\">58.0</td><td class=\"col14\">240.0</td><td class=\"col15\">192.0</td><tr class=District of Columbia><td class=\"col0\">District of Columbia</td><td class=\"col1\"></td><td class=\"col2\"></td><td class=\"col3\">5934.0</td><td class=\"col4\">4159.0</td><td class=\"col5\">486.0</td><td class=\"col6\">2045.0</td><td class=\"col7\">1628.0</td><td class=\"col8\">1635.0</td><td class=\"col9\">253.0</td><td class=\"col10\">1228.0</td><td class=\"col11\">154.0</td><td class=\"col12\">140.0</td><td class=\"col13\">31.0</td><td class=\"col14\">72.0</td><td class=\"col15\">37.0</td><tr class=Florida><td class=\"col0\">Florida</td><td class=\"col1\"></td><td class=\"col2\"></td><td class=\"col3\">255649.0</td><td class=\"col4\">194157.0</td><td class=\"col5\">25945.0</td><td class=\"col6\">73514.0</td><td class=\"col7\">94698.0</td><td class=\"col8\">51173.0</td><td class=\"col9\">15110.0</td><td class=\"col10\">30117.0</td><td class=\"col11\">5946.0</td><td class=\"col12\">10319.0</td><td class=\"col13\">1809.0</td><td class=\"col14\">4538.0</td><td class=\"col15\">3972.0</td><tr class=Georgia><td class=\"col0\">Georgia</td><td class=\"col1\"></td><td class=\"col2\"></td><td class=\"col3\">144204.0</td><td class=\"col4\">110101.0</td><td class=\"col5\">10759.0</td><td class=\"col6\">44800.0</td><td class=\"col7\">54542.0</td><td class=\"col8\">28301.0</td><td class=\"col9\">6845.0</td><td class=\"col10\">18178.0</td><td class=\"col11\">3278.0</td><td class=\"col12\">5802.0</td><td class=\"col13\">761.0</td><td class=\"col14\">2672.0</td><td class=\"col15\">2369.0</td><tr class=Hawaii><td class=\"col0\">Hawaii</td><td class=\"col1\"></td><td class=\"col2\"></td><td class=\"col3\">14535.0</td><td class=\"col4\">11291.0</td><td class=\"col5\">2672.0</td><td class=\"col6\">4356.0</td><td class=\"col7\">4263.0</td><td class=\"col8\">3046.0</td><td class=\"col9\">1064.0</td><td class=\"col10\">1774.0</td><td class=\"col11\">208.0</td><td class=\"col12\">198.0</td><td class=\"col13\">61.0</td><td class=\"col14\">89.0</td><td class=\"col15\">48.0</td><tr class=Idaho><td class=\"col0\">Idaho</td><td class=\"col1\"></td><td class=\"col2\"></td><td class=\"col3\">21933.0</td><td class=\"col4\">16562.0</td><td class=\"col5\">1591.0</td><td class=\"col6\">6216.0</td><td class=\"col7\">8755.0</td><td class=\"col8\">4710.0</td><td class=\"col9\">1597.0</td><td class=\"col10\">2492.0</td><td class=\"col11\">621.0</td><td class=\"col12\">661.0</td><td class=\"col13\">93.0</td><td class=\"col14\">307.0</td><td class=\"col15\">261.0</td><tr class=Illinois><td class=\"col0\">Illinois</td><td class=\"col1\"></td><td class=\"col2\"></td><td class=\"col3\">154436.0</td><td class=\"col4\">105915.0</td><td class=\"col5\">11142.0</td><td class=\"col6\">42724.0</td><td class=\"col7\">52049.0</td><td class=\"col8\">43232.0</td><td class=\"col9\">11935.0</td><td class=\"col10\">27255.0</td><td class=\"col11\">4042.0</td><td class=\"col12\">5289.0</td><td class=\"col13\">841.0</td><td class=\"col14\">2455.0</td><td class=\"col15\">1993.0</td><tr class=Indiana><td class=\"col0\">Indiana</td><td class=\"col1\"></td><td class=\"col2\"></td><td class=\"col3\">102033.0</td><td class=\"col4\">73404.0</td><td class=\"col5\">5634.0</td><td class=\"col6\">28439.0</td><td class=\"col7\">39331.0</td><td class=\"col8\">24237.0</td><td class=\"col9\">6152.0</td><td class=\"col10\">15097.0</td><td class=\"col11\">2988.0</td><td class=\"col12\">4392.0</td><td class=\"col13\">500.0</td><td class=\"col14\">1977.0</td><td class=\"col15\">1915.0</td><tr class=Iowa><td class=\"col0\">Iowa</td><td class=\"col1\"></td><td class=\"col2\"></td><td class=\"col3\">38596.0</td><td class=\"col4\">25370.0</td><td class=\"col5\">2174.0</td><td class=\"col6\">10249.0</td><td class=\"col7\">12947.0</td><td class=\"col8\">11968.0</td><td class=\"col9\">3457.0</td><td class=\"col10\">7247.0</td><td class=\"col11\">1264.0</td><td class=\"col12\">1258.0</td><td class=\"col13\">168.0</td><td class=\"col14\">568.0</td><td class=\"col15\">522.0</td><tr class=Kansas><td class=\"col0\">Kansas</td><td class=\"col1\"></td><td class=\"col2\"></td><td class=\"col3\">38159.0</td><td class=\"col4\">27805.0</td><td class=\"col5\">2375.0</td><td class=\"col6\">11288.0</td><td class=\"col7\">14142.0</td><td class=\"col8\">9095.0</td><td class=\"col9\">2596.0</td><td class=\"col10\">5456.0</td><td class=\"col11\">1043.0</td><td class=\"col12\">1259.0</td><td class=\"col13\">185.0</td><td class=\"col14\">586.0</td><td class=\"col15\">488.0</td><tr class=Kentucky><td class=\"col0\">Kentucky</td><td class=\"col1\"></td><td class=\"col2\"></td><td class=\"col3\">89486.0</td><td class=\"col4\">65484.0</td><td class=\"col5\">3911.0</td><td class=\"col6\">21989.0</td><td class=\"col7\">39584.0</td><td class=\"col8\">21064.0</td><td class=\"col9\">4657.0</td><td class=\"col10\">13209.0</td><td class=\"col11\">3198.0</td><td class=\"col12\">2938.0</td><td class=\"col13\">299.0</td><td class=\"col14\">1129.0</td><td class=\"col15\">1510.0</td><tr class=Louisiana><td class=\"col0\">Louisiana</td><td class=\"col1\"></td><td class=\"col2\"></td><td class=\"col3\">89186.0</td><td class=\"col4\">63888.0</td><td class=\"col5\">4907.0</td><td class=\"col6\">26697.0</td><td class=\"col7\">32284.0</td><td class=\"col8\">22188.0</td><td class=\"col9\">4924.0</td><td class=\"col10\">14747.0</td><td class=\"col11\">2517.0</td><td class=\"col12\">3110.0</td><td class=\"col13\">352.0</td><td class=\"col14\">1519.0</td><td class=\"col15\">1239.0</td><tr class=Maine><td class=\"col0\">Maine</td><td class=\"col1\"></td><td class=\"col2\"></td><td class=\"col3\">24392.0</td><td class=\"col4\">16884.0</td><td class=\"col5\">1220.0</td><td class=\"col6\">4205.0</td><td class=\"col7\">11459.0</td><td class=\"col8\">6832.0</td><td class=\"col9\">1707.0</td><td class=\"col10\">3901.0</td><td class=\"col11\">1224.0</td><td class=\"col12\">676.0</td><td class=\"col13\">86.0</td><td class=\"col14\">244.0</td><td class=\"col15\">346.0</td><tr class=Maryland><td class=\"col0\">Maryland</td><td class=\"col1\"></td><td class=\"col2\"></td><td class=\"col3\">64743.0</td><td class=\"col4\">48619.0</td><td class=\"col5\">4933.0</td><td class=\"col6\">21657.0</td><td class=\"col7\">22029.0</td><td class=\"col8\">14859.0</td><td class=\"col9\">3830.0</td><td class=\"col10\">9653.0</td><td class=\"col11\">1376.0</td><td class=\"col12\">1265.0</td><td class=\"col13\">167.0</td><td class=\"col14\">661.0</td><td class=\"col15\">437.0</td><tr class=Massachusetts><td class=\"col0\">Massachusetts</td><td class=\"col1\"></td><td class=\"col2\"></td><td class=\"col3\">94396.0</td><td class=\"col4\">65261.0</td><td class=\"col5\">5398.0</td><td class=\"col6\">17739.0</td><td class=\"col7\">42124.0</td><td class=\"col8\">26335.0</td><td class=\"col9\">6946.0</td><td class=\"col10\">15484.0</td><td class=\"col11\">3905.0</td><td class=\"col12\">2800.0</td><td class=\"col13\">392.0</td><td class=\"col14\">978.0</td><td class=\"col15\">1430.0</td><tr class=Michigan><td class=\"col0\">Michigan</td><td class=\"col1\"></td><td class=\"col2\"></td><td class=\"col3\">168905.0</td><td class=\"col4\">118168.0</td><td class=\"col5\">9887.0</td><td class=\"col6\">39213.0</td><td class=\"col7\">69068.0</td><td class=\"col8\">46095.0</td><td class=\"col9\">12234.0</td><td class=\"col10\">28132.0</td><td class=\"col11\">5729.0</td><td class=\"col12\">4642.0</td><td class=\"col13\">627.0</td><td class=\"col14\">1923.0</td><td class=\"col15\">2092.0</td><tr class=Minnesota><td class=\"col0\">Minnesota</td><td class=\"col1\"></td><td class=\"col2\"></td><td class=\"col3\">61389.0</td><td class=\"col4\">42018.0</td><td class=\"col5\">3277.0</td><td class=\"col6\">14962.0</td><td class=\"col7\">23779.0</td><td class=\"col8\">17329.0</td><td class=\"col9\">5633.0</td><td class=\"col10\">9877.0</td><td class=\"col11\">1819.0</td><td class=\"col12\">2042.0</td><td class=\"col13\">290.0</td><td class=\"col14\">926.0</td><td class=\"col15\">826.0</td><tr class=Mississippi><td class=\"col0\">Mississippi</td><td class=\"col1\"></td><td class=\"col2\"></td><td class=\"col3\">68785.0</td><td class=\"col4\">50699.0</td><td class=\"col5\">4591.0</td><td class=\"col6\">19292.0</td><td class=\"col7\">26816.0</td><td class=\"col8\">15386.0</td><td class=\"col9\">3273.0</td><td class=\"col10\">9985.0</td><td class=\"col11\">2128.0</td><td class=\"col12\">2700.0</td><td class=\"col13\">318.0</td><td class=\"col14\">1183.0</td><td class=\"col15\">1199.0</td><tr class=Missouri><td class=\"col0\">Missouri</td><td class=\"col1\"></td><td class=\"col2\"></td><td class=\"col3\">99465.0</td><td class=\"col4\">72053.0</td><td class=\"col5\">5220.0</td><td class=\"col6\">27139.0</td><td class=\"col7\">39694.0</td><td class=\"col8\">23721.0</td><td class=\"col9\">6009.0</td><td class=\"col10\">14655.0</td><td class=\"col11\">3057.0</td><td class=\"col12\">3691.0</td><td class=\"col13\">384.0</td><td class=\"col14\">1634.0</td><td class=\"col15\">1673.0</td><tr class=Montana><td class=\"col0\">Montana</td><td class=\"col1\"></td><td class=\"col2\"></td><td class=\"col3\">13490.0</td><td class=\"col4\">9950.0</td><td class=\"col5\">1293.0</td><td class=\"col6\">4399.0</td><td class=\"col7\">4258.0</td><td class=\"col8\">3100.0</td><td class=\"col9\">969.0</td><td class=\"col10\">1854.0</td><td class=\"col11\">277.0</td><td class=\"col12\">440.0</td><td class=\"col13\">79.0</td><td class=\"col14\">217.0</td><td class=\"col15\">144.0</td><tr class=Nebraska><td class=\"col0\">Nebraska</td><td class=\"col1\"></td><td class=\"col2\"></td><td class=\"col3\">21326.0</td><td class=\"col4\">15005.0</td><td class=\"col5\">1177.0</td><td class=\"col6\">6164.0</td><td class=\"col7\">7664.0</td><td class=\"col8\">5630.0</td><td class=\"col9\">1668.0</td><td class=\"col10\">3331.0</td><td class=\"col11\">631.0</td><td class=\"col12\">691.0</td><td class=\"col13\">102.0</td><td class=\"col14\">326.0</td><td class=\"col15\">263.0</td><tr class=Nevada><td class=\"col0\">Nevada</td><td class=\"col1\"></td><td class=\"col2\"></td><td class=\"col3\">29802.0</td><td class=\"col4\">24351.0</td><td class=\"col5\">3460.0</td><td class=\"col6\">10309.0</td><td class=\"col7\">10582.0</td><td class=\"col8\">4567.0</td><td class=\"col9\">1323.0</td><td class=\"col10\">2741.0</td><td class=\"col11\">503.0</td><td class=\"col12\">884.0</td><td class=\"col13\">129.0</td><td class=\"col14\">440.0</td><td class=\"col15\">315.0</td><tr class=New Hampshire><td class=\"col0\">New Hampshire</td><td class=\"col1\"></td><td class=\"col2\"></td><td class=\"col3\">22058.0</td><td class=\"col4\">16503.0</td><td class=\"col5\">995.0</td><td class=\"col6\">3977.0</td><td class=\"col7\">11531.0</td><td class=\"col8\">4841.0</td><td class=\"col9\">1311.0</td><td class=\"col10\">2576.0</td><td class=\"col11\">954.0</td><td class=\"col12\">714.0</td><td class=\"col13\">95.0</td><td class=\"col14\">262.0</td><td class=\"col15\">357.0</td><tr class=New Jersey><td class=\"col0\">New Jersey</td><td class=\"col1\"></td><td class=\"col2\"></td><td class=\"col3\">104858.0</td><td class=\"col4\">74926.0</td><td class=\"col5\">9101.0</td><td class=\"col6\">26993.0</td><td class=\"col7\">38832.0</td><td class=\"col8\">26786.0</td><td class=\"col9\">7884.0</td><td class=\"col10\">16534.0</td><td class=\"col11\">2368.0</td><td class=\"col12\">3146.0</td><td class=\"col13\">529.0</td><td class=\"col14\">1295.0</td><td class=\"col15\">1322.0</td><tr class=New Mexico><td class=\"col0\">New Mexico</td><td class=\"col1\"></td><td class=\"col2\"></td><td class=\"col3\">32098.0</td><td class=\"col4\">24995.0</td><td class=\"col5\">2343.0</td><td class=\"col6\">10829.0</td><td class=\"col7\">11823.0</td><td class=\"col8\">6072.0</td><td class=\"col9\">1790.0</td><td class=\"col10\">3625.0</td><td class=\"col11\">657.0</td><td class=\"col12\">1031.0</td><td class=\"col13\">152.0</td><td class=\"col14\">488.0</td><td class=\"col15\">391.0</td><tr class=New York><td class=\"col0\">New York</td><td class=\"col1\"></td><td class=\"col2\"></td><td class=\"col3\">251932.0</td><td class=\"col4\">173367.0</td><td class=\"col5\">21112.0</td><td class=\"col6\">51520.0</td><td class=\"col7\">100735.0</td><td class=\"col8\">73580.0</td><td class=\"col9\">21053.0</td><td class=\"col10\">45315.0</td><td class=\"col11\">7212.0</td><td class=\"col12\">4985.0</td><td class=\"col13\">903.0</td><td class=\"col14\">1929.0</td><td class=\"col15\">2153.0</td><tr class=North Carolina><td class=\"col0\">North Carolina</td><td class=\"col1\"></td><td class=\"col2\"></td><td class=\"col3\">144661.0</td><td class=\"col4\">105928.0</td><td class=\"col5\">9164.0</td><td class=\"col6\">39752.0</td><td class=\"col7\">57012.0</td><td class=\"col8\">33542.0</td><td class=\"col9\">8121.0</td><td class=\"col10\">20931.0</td><td class=\"col11\">4490.0</td><td class=\"col12\">5191.0</td><td class=\"col13\">602.0</td><td class=\"col14\">2270.0</td><td class=\"col15\">2319.0</td><tr class=North Dakota><td class=\"col0\">North Dakota</td><td class=\"col1\"></td><td class=\"col2\"></td><td class=\"col3\">7789.0</td><td class=\"col4\">5146.0</td><td class=\"col5\">340.0</td><td class=\"col6\">2531.0</td><td class=\"col7\">2275.0</td><td class=\"col8\">2409.0</td><td class=\"col9\">674.0</td><td class=\"col10\">1574.0</td><td class=\"col11\">161.0</td><td class=\"col12\">234.0</td><td class=\"col13\">26.0</td><td class=\"col14\">122.0</td><td class=\"col15\">86.0</td><tr class=Ohio><td class=\"col0\">Ohio</td><td class=\"col1\"></td><td class=\"col2\"></td><td class=\"col3\">166740.0</td><td class=\"col4\">114741.0</td><td class=\"col5\">8321.0</td><td class=\"col6\">45225.0</td><td class=\"col7\">61195.0</td><td class=\"col8\">45691.0</td><td class=\"col9\">11236.0</td><td class=\"col10\">29649.0</td><td class=\"col11\">4806.0</td><td class=\"col12\">6308.0</td><td class=\"col13\">733.0</td><td class=\"col14\">2855.0</td><td class=\"col15\">2720.0</td><tr class=Oklahoma><td class=\"col0\">Oklahoma</td><td class=\"col1\"></td><td class=\"col2\"></td><td class=\"col3\">63303.0</td><td class=\"col4\">47992.0</td><td class=\"col5\">4204.0</td><td class=\"col6\">20110.0</td><td class=\"col7\">23678.0</td><td class=\"col8\">12790.0</td><td class=\"col9\">3163.0</td><td class=\"col10\">8068.0</td><td class=\"col11\">1559.0</td><td class=\"col12\">2521.0</td><td class=\"col13\">286.0</td><td class=\"col14\">1274.0</td><td class=\"col15\">961.0</td><tr class=Oregon><td class=\"col0\">Oregon</td><td class=\"col1\"></td><td class=\"col2\"></td><td class=\"col3\">45339.0</td><td class=\"col4\">31736.0</td><td class=\"col5\">4298.0</td><td class=\"col6\">11652.0</td><td class=\"col7\">15786.0</td><td class=\"col8\">12178.0</td><td class=\"col9\">3987.0</td><td class=\"col10\">6834.0</td><td class=\"col11\">1357.0</td><td class=\"col12\">1425.0</td><td class=\"col13\">284.0</td><td class=\"col14\">618.0</td><td class=\"col15\">523.0</td><tr class=Pennsylvania><td class=\"col0\">Pennsylvania</td><td class=\"col1\"></td><td class=\"col2\"></td><td class=\"col3\">187027.0</td><td class=\"col4\">129744.0</td><td class=\"col5\">10008.0</td><td class=\"col6\">44971.0</td><td class=\"col7\">74765.0</td><td class=\"col8\">50783.0</td><td class=\"col9\">13040.0</td><td class=\"col10\">32044.0</td><td class=\"col11\">5699.0</td><td class=\"col12\">6500.0</td><td class=\"col13\">819.0</td><td class=\"col14\">2717.0</td><td class=\"col15\">2964.0</td><tr class=Rhode Island><td class=\"col0\">Rhode Island</td><td class=\"col1\"></td><td class=\"col2\"></td><td class=\"col3\">15921.0</td><td class=\"col4\">11151.0</td><td class=\"col5\">1090.0</td><td class=\"col6\">2989.0</td><td class=\"col7\">7072.0</td><td class=\"col8\">4425.0</td><td class=\"col9\">1155.0</td><td class=\"col10\">2659.0</td><td class=\"col11\">611.0</td><td class=\"col12\">345.0</td><td class=\"col13\">51.0</td><td class=\"col14\">124.0</td><td class=\"col15\">170.0</td><tr class=South Carolina><td class=\"col0\">South Carolina</td><td class=\"col1\"></td><td class=\"col2\"></td><td class=\"col3\">80657.0</td><td class=\"col4\">59715.0</td><td class=\"col5\">5357.0</td><td class=\"col6\">22784.0</td><td class=\"col7\">31574.0</td><td class=\"col8\">17930.0</td><td class=\"col9\">4243.0</td><td class=\"col10\">11504.0</td><td class=\"col11\">2183.0</td><td class=\"col12\">3012.0</td><td class=\"col13\">388.0</td><td class=\"col14\">1311.0</td><td class=\"col15\">1313.0</td><tr class=South Dakota><td class=\"col0\">South Dakota</td><td class=\"col1\"></td><td class=\"col2\"></td><td class=\"col3\">10458.0</td><td class=\"col4\">7291.0</td><td class=\"col5\">534.0</td><td class=\"col6\">3353.0</td><td class=\"col7\">3404.0</td><td class=\"col8\">2790.0</td><td class=\"col9\">815.0</td><td class=\"col10\">1724.0</td><td class=\"col11\">251.0</td><td class=\"col12\">377.0</td><td class=\"col13\">52.0</td><td class=\"col14\">203.0</td><td class=\"col15\">122.0</td><tr class=Tennessee><td class=\"col0\">Tennessee</td><td class=\"col1\"></td><td class=\"col2\"></td><td class=\"col3\">113059.0</td><td class=\"col4\">84217.0</td><td class=\"col5\">6835.0</td><td class=\"col6\">32022.0</td><td class=\"col7\">45360.0</td><td class=\"col8\">24972.0</td><td class=\"col9\">5916.0</td><td class=\"col10\">15970.0</td><td class=\"col11\">3086.0</td><td class=\"col12\">3870.0</td><td class=\"col13\">470.0</td><td class=\"col14\">1708.0</td><td class=\"col15\">1692.0</td><tr class=Texas><td class=\"col0\">Texas</td><td class=\"col1\"></td><td class=\"col2\"></td><td class=\"col3\">320419.0</td><td class=\"col4\">248169.0</td><td class=\"col5\">24886.0</td><td class=\"col6\">104503.0</td><td class=\"col7\">118780.0</td><td class=\"col8\">61093.0</td><td class=\"col9\">17251.0</td><td class=\"col10\">36938.0</td><td class=\"col11\">6904.0</td><td class=\"col12\">11157.0</td><td class=\"col13\">1585.0</td><td class=\"col14\">5545.0</td><td class=\"col15\">4027.0</td><tr class=Utah><td class=\"col0\">Utah</td><td class=\"col1\"></td><td class=\"col2\"></td><td class=\"col3\">31627.0</td><td class=\"col4\">24838.0</td><td class=\"col5\">2258.0</td><td class=\"col6\">11843.0</td><td class=\"col7\">10737.0</td><td class=\"col8\">5950.0</td><td class=\"col9\">2293.0</td><td class=\"col10\">3040.0</td><td class=\"col11\">617.0</td><td class=\"col12\">839.0</td><td class=\"col13\">108.0</td><td class=\"col14\">458.0</td><td class=\"col15\">273.0</td><tr class=Vermont><td class=\"col0\">Vermont</td><td class=\"col1\"></td><td class=\"col2\"></td><td class=\"col3\">9928.0</td><td class=\"col4\">6850.0</td><td class=\"col5\">661.0</td><td class=\"col6\">1821.0</td><td class=\"col7\">4368.0</td><td class=\"col8\">2813.0</td><td class=\"col9\">732.0</td><td class=\"col10\">1659.0</td><td class=\"col11\">422.0</td><td class=\"col12\">265.0</td><td class=\"col13\">48.0</td><td class=\"col14\">89.0</td><td class=\"col15\">128.0</td><tr class=Virginia><td class=\"col0\">Virginia</td><td class=\"col1\"></td><td class=\"col2\"></td><td class=\"col3\">100887.0</td><td class=\"col4\">73904.0</td><td class=\"col5\">7065.0</td><td class=\"col6\">28050.0</td><td class=\"col7\">38789.0</td><td class=\"col8\">23796.0</td><td class=\"col9\">6175.0</td><td class=\"col10\">14733.0</td><td class=\"col11\">2888.0</td><td class=\"col12\">3187.0</td><td class=\"col13\">467.0</td><td class=\"col14\">1403.0</td><td class=\"col15\">1317.0</td><tr class=Washington><td class=\"col0\">Washington</td><td class=\"col1\"></td><td class=\"col2\"></td><td class=\"col3\">76697.0</td><td class=\"col4\">54823.0</td><td class=\"col5\">6492.0</td><td class=\"col6\">19743.0</td><td class=\"col7\">28588.0</td><td class=\"col8\">19186.0</td><td class=\"col9\">6095.0</td><td class=\"col10\">10813.0</td><td class=\"col11\">2278.0</td><td class=\"col12\">2688.0</td><td class=\"col13\">465.0</td><td class=\"col14\">1141.0</td><td class=\"col15\">1082.0</td><tr class=West Virginia><td class=\"col0\">West Virginia</td><td class=\"col1\"></td><td class=\"col2\"></td><td class=\"col3\">40014.0</td><td class=\"col4\">27528.0</td><td class=\"col5\">2165.0</td><td class=\"col6\">9311.0</td><td class=\"col7\">16052.0</td><td class=\"col8\">11204.0</td><td class=\"col9\">2398.0</td><td class=\"col10\">7311.0</td><td class=\"col11\">1495.0</td><td class=\"col12\">1282.0</td><td class=\"col13\">146.0</td><td class=\"col14\">506.0</td><td class=\"col15\">630.0</td><tr class=Wisconsin><td class=\"col0\">Wisconsin</td><td class=\"col1\"></td><td class=\"col2\"></td><td class=\"col3\">78138.0</td><td class=\"col4\">52479.0</td><td class=\"col5\">3827.0</td><td class=\"col6\">18215.0</td><td class=\"col7\">30437.0</td><td class=\"col8\">23134.0</td><td class=\"col9\">6996.0</td><td class=\"col10\">13530.0</td><td class=\"col11\">2608.0</td><td class=\"col12\">2525.0</td><td class=\"col13\">353.0</td><td class=\"col14\">1045.0</td><td class=\"col15\">1127.0</td><tr class=Wyoming><td class=\"col0\">Wyoming</td><td class=\"col1\"></td><td class=\"col2\"></td><td class=\"col3\">6699.0</td><td class=\"col4\">5116.0</td><td class=\"col5\">432.0</td><td class=\"col6\">2562.0</td><td class=\"col7\">2122.0</td><td class=\"col8\">1357.0</td><td class=\"col9\">413.0</td><td class=\"col10\">793.0</td><td class=\"col11\">151.0</td><td class=\"col12\">226.0</td><td class=\"col13\">32.0</td><td class=\"col14\">114.0</td><td class=\"col15\">80.0</td><tr class=Outlying areas><td class=\"col0\">Outlying areas</td><td class=\"col1\"></td><td class=\"col2\"></td><td class=\"col3\"></td><td class=\"col4\"></td><td class=\"col5\"></td><td class=\"col6\"></td><td class=\"col7\"></td><td class=\"col8\"></td><td class=\"col9\"></td><td class=\"col10\"></td><td class=\"col11\"></td><td class=\"col12\"></td><td class=\"col13\"></td><td class=\"col14\"></td><td class=\"col15\"></td><tr class=><td class=\"col0\"></td><td class=\"col1\">American Samoa</td><td class=\"col2\"></td><td class=\"col3\">1768.0</td><td class=\"col4\">1641.0</td><td class=\"col5\">266.0</td><td class=\"col6\">738.0</td><td class=\"col7\">637.0</td><td class=\"col8\">(X)</td><td class=\"col9\">33.0</td><td class=\"col10\">70.0</td><td class=\"col11\">(X)</td><td class=\"col12\">(X)</td><td class=\"col13\">(X)</td><td class=\"col14\">(X)</td><td class=\"col15\">(X)</td><tr class=><td class=\"col0\"></td><td class=\"col1\">Guam</td><td class=\"col2\"></td><td class=\"col3\">2535.0</td><td class=\"col4\">2234.0</td><td class=\"col5\">527.0</td><td class=\"col6\">1164.0</td><td class=\"col7\">543.0</td><td class=\"col8\">213.0</td><td class=\"col9\">71.0</td><td class=\"col10\">129.0</td><td class=\"col11\">13.0</td><td class=\"col12\">88.0</td><td class=\"col13\">17.0</td><td class=\"col14\">55.0</td><td class=\"col15\">16.0</td><tr class=><td class=\"col0\"></td><td class=\"col1\">Northern Mariana Islands</td><td class=\"col2\"></td><td class=\"col3\">570.0</td><td class=\"col4\">502.0</td><td class=\"col5\">169.0</td><td class=\"col6\">260.0</td><td class=\"col7\">73.0</td><td class=\"col8\">52.0</td><td class=\"col9\">(X)</td><td class=\"col10\">38.0</td><td class=\"col11\">(X)</td><td class=\"col12\">16.0</td><td class=\"col13\">7.0</td><td class=\"col14\">9.0</td><td class=\"col15\">0.0</td><tr class=><td class=\"col0\"></td><td class=\"col1\">Puerto Rico</td><td class=\"col2\"></td><td class=\"col3\">84322.0</td><td class=\"col4\">59955.0</td><td class=\"col5\">5512.0</td><td class=\"col6\">14647.0</td><td class=\"col7\">39796.0</td><td class=\"col8\">23388.0</td><td class=\"col9\">6318.0</td><td class=\"col10\">14771.0</td><td class=\"col11\">2299.0</td><td class=\"col12\">979.0</td><td class=\"col13\">145.0</td><td class=\"col14\">347.0</td><td class=\"col15\">487.0</td><tr class=><td class=\"col0\"></td><td class=\"col1\">US Virgin Islands</td><td class=\"col2\"></td><td class=\"col3\">1719.0</td><td class=\"col4\">1338.0</td><td class=\"col5\">308.0</td><td class=\"col6\">583.0</td><td class=\"col7\">447.0</td><td class=\"col8\">336.0</td><td class=\"col9\">123.0</td><td class=\"col10\">196.0</td><td class=\"col11\">17.0</td><td class=\"col12\">45.0</td><td class=\"col13\">11.0</td><td class=\"col14\">21.0</td><td class=\"col15\">13.0</td><tr class=Foreign countries><td class=\"col0\">Foreign countries</td><td class=\"col1\"></td><td class=\"col2\"></td><td class=\"col3\">28829.0</td><td class=\"col4\">23428.0</td><td class=\"col5\">9151.0</td><td class=\"col6\">11103.0</td><td class=\"col7\">3174.0</td><td class=\"col8\">4982.0</td><td class=\"col9\">1349.0</td><td class=\"col10\">3577.0</td><td class=\"col11\">56.0</td><td class=\"col12\">419.0</td><td class=\"col13\">150.0</td><td class=\"col14\">225.0</td><td class=\"col15\">44.0</td><tr class=Unknown><td class=\"col0\">Unknown</td><td class=\"col1\"></td><td class=\"col2\"></td><td class=\"col3\">86.0</td><td class=\"col4\">53.0</td><td class=\"col5\">7.0</td><td class=\"col6\">17.0</td><td class=\"col7\">29.0</td><td class=\"col8\">(X)</td><td class=\"col9\">(X)</td><td class=\"col10\">20.0</td><td class=\"col11\">(X)</td><td class=\"col12\">(X)</td><td class=\"col13\">(X)</td><td class=\"col14\">(X)</td><td class=\"col15\">(X)</td></tbody>", 
+        "header": "<thead><tr><th rowspan=\"2\"  colspan=\"3\"  class=\"series col0\" >State or area</th><th rowspan=\"2\"  class=\"series col3\" >Total</th><th colspan=\"4\"  class=\"series col4\" >Children under age 18 of\u2014</th><th colspan=\"4\"  class=\"series col8\" >Disabled adult children of\u2014</th><th colspan=\"4\"  class=\"series col12\" >Students aged 18\u201319 of\u2014</th></tr><tr><th class=\"series col4\" >Subtotal</th><th class=\"series col5\" >Retired workers</th><th class=\"series col6\" >Deceased workers</th><th class=\"series col7\" >Disabled workers</th><th class=\"series col8\" >Subtotal</th><th class=\"series col9\" >Retired workers</th><th class=\"series col10\" >Deceased workers</th><th class=\"series col11\" >Disabled workers</th><th class=\"series col12\" >Subtotal</th><th class=\"series col13\" >Retired workers</th><th class=\"series col14\" >Deceased workers</th><th class=\"series col15\" >Disabled workers</th></tr></thead>"
+    }, 
+    "title": {
+        "catID": "5.J", 
+        "category": "OASDI Current-Pay Benefits: Geographic Data", 
+        "id": "5_J10", 
+        "name": "Number of children, by state or other area and type of benefit, December\u00a02014"
+    }
+}
