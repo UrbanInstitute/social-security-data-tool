@@ -729,11 +729,11 @@
     }, 
     "footnotes": [
         {
-            "content": "SOURCES: Social Security Act of 1935 (the Act), as amended through December 31, 2014; regulations issued under the Act; and precedential case decisions (rulings). Social Security Administration, \"Cost-of-Living Increase and Other Determinations for 2015,\"  Federal Register, vol. 79, no. 209 (October 29, 2014). See the Social Security Program Rules page (https://www.socialsecurity.gov/regulations/index.htm) for specific laws, regulations, rulings, legislation, and a link to the  Federal Register.", 
+            "content": "Sources: Social Security Act of 1935 (the Act), as amended through December 31, 2014; regulations issued under the Act; and precedential case decisions (rulings). Social Security Administration, \"Cost-of-Living Increase and Other Determinations for 2015,\"  Federal Register, vol. 79, no. 209 (October 29, 2014). See the Social Security Program Rules page (https://www.socialsecurity.gov/regulations/index.htm) for specific laws, regulations, rulings, legislation, and a link to the  Federal Register.", 
             "type": "note"
         }, 
         {
-            "content": "NOTES: DI = Disability Insurance; HI = Hospital Insurance; OASI = Old-Age and Survivors Insurance; OASDI = Old-Age, Survivors, and Disability Insurance; . . . = not applicable.", 
+            "content": "Notes: DI = Disability Insurance; HI = Hospital Insurance; OASI = Old-Age and Survivors Insurance; OASDI = Old-Age, Survivors, and Disability Insurance; . . . = not applicable.", 
             "type": "note"
         }, 
         {
@@ -761,11 +761,7 @@
             "type": "footnote"
         }, 
         {
-            "content": "CONTACT: (410) 965-0090 or statistics@ssa.gov.", 
-            "type": "note"
-        }, 
-        {
-            "content": "File available from:\nU.S. Social Security Administration \u2022 Office of Retirement and Disability Policy \u2022 Office of Research, Evaluation, and Statistics\nAnnual Statistical Supplement, 2015\nhttps://www.socialsecurity.gov/policy/docs/statcomps/supplement/2015/", 
+            "content": "File available from US Social Security Administration \u2022 Office of Retirement and Disability Policy \u2022 Office of Research, Evaluation, and Statistics, Annual Statistical Supplement, 2015, http://www.socialsecurity.gov/policy/docs/statcomps/supplement/2015/.", 
             "type": "note"
         }
     ], 

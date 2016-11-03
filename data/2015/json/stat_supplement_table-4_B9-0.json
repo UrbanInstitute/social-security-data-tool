@@ -30,7 +30,7 @@
             "type": "numberThousand"
         }, 
         "col10": {
-            "label": "Workers with earnings below the taxable maximum\n(by dollar amount of earnings) :: 80,000\u2013\n89,999", 
+            "label": "Workers with earnings below the taxable maximum (by dollar amount of earnings) :: 80,000\u201389,999", 
             "series": [
                 false, 
                 false, 
@@ -58,7 +58,7 @@
             "type": "numberThousand"
         }, 
         "col11": {
-            "label": "Workers with earnings below the taxable maximum\n(by dollar amount of earnings) :: 90,000\u2013\n99,999", 
+            "label": "Workers with earnings below the taxable maximum (by dollar amount of earnings) :: 90,000\u201399,999", 
             "series": [
                 false, 
                 false, 
@@ -86,7 +86,7 @@
             "type": "numberThousand"
         }, 
         "col12": {
-            "label": "Workers with earnings below the taxable maximum\n(by dollar amount of earnings) :: 100,000\u2013\n113,699\u00a0a", 
+            "label": "Workers with earnings below the taxable maximum (by dollar amount of earnings) :: 100,000\u2013113,699\u00a0a", 
             "series": [
                 false, 
                 false, 
@@ -142,7 +142,7 @@
             "type": "numberThousand"
         }, 
         "col2": {
-            "label": "Workers with earnings below the taxable maximum\n(by dollar amount of earnings) :: 1\u2013\n9,999", 
+            "label": "Workers with earnings below the taxable maximum (by dollar amount of earnings) :: 1\u20139,999", 
             "series": [
                 6039.0, 
                 6015.0, 
@@ -170,7 +170,7 @@
             "type": "numberThousand"
         }, 
         "col3": {
-            "label": "Workers with earnings below the taxable maximum\n(by dollar amount of earnings) :: 10,000\u2013\n19,999", 
+            "label": "Workers with earnings below the taxable maximum (by dollar amount of earnings) :: 10,000\u201319,999", 
             "series": [
                 2755.0, 
                 2776.0, 
@@ -198,7 +198,7 @@
             "type": "numberThousand"
         }, 
         "col4": {
-            "label": "Workers with earnings below the taxable maximum\n(by dollar amount of earnings) :: 20,000\u2013\n29,999", 
+            "label": "Workers with earnings below the taxable maximum (by dollar amount of earnings) :: 20,000\u201329,999", 
             "series": [
                 1576.0, 
                 1570.0, 
@@ -226,7 +226,7 @@
             "type": "numberThousand"
         }, 
         "col5": {
-            "label": "Workers with earnings below the taxable maximum\n(by dollar amount of earnings) :: 30,000\u2013\n39,999", 
+            "label": "Workers with earnings below the taxable maximum (by dollar amount of earnings) :: 30,000\u201339,999", 
             "series": [
                 971.0, 
                 990.0, 
@@ -254,7 +254,7 @@
             "type": "numberThousand"
         }, 
         "col6": {
-            "label": "Workers with earnings below the taxable maximum\n(by dollar amount of earnings) :: 40,000\u2013\n49,999", 
+            "label": "Workers with earnings below the taxable maximum (by dollar amount of earnings) :: 40,000\u201349,999", 
             "series": [
                 612.0, 
                 633.0, 
@@ -282,7 +282,7 @@
             "type": "numberThousand"
         }, 
         "col7": {
-            "label": "Workers with earnings below the taxable maximum\n(by dollar amount of earnings) :: 50,000\u2013\n59,999", 
+            "label": "Workers with earnings below the taxable maximum (by dollar amount of earnings) :: 50,000\u201359,999", 
             "series": [
                 308.0, 
                 388.0, 
@@ -310,7 +310,7 @@
             "type": "numberThousand"
         }, 
         "col8": {
-            "label": "Workers with earnings below the taxable maximum\n(by dollar amount of earnings) :: 60,000\u2013\n69,999", 
+            "label": "Workers with earnings below the taxable maximum (by dollar amount of earnings) :: 60,000\u201369,999", 
             "series": [
                 false, 
                 false, 
@@ -338,7 +338,7 @@
             "type": "numberThousand"
         }, 
         "col9": {
-            "label": "Workers with earnings below the taxable maximum\n(by dollar amount of earnings) :: 70,000\u2013\n79,999", 
+            "label": "Workers with earnings below the taxable maximum (by dollar amount of earnings) :: 70,000\u201379,999", 
             "series": [
                 false, 
                 false, 
@@ -395,11 +395,11 @@
     }, 
     "footnotes": [
         {
-            "content": "SOURCE: Social Security Administration, Master Earnings File, 1 percent sample.", 
+            "content": "Source: Social Security Administration, Master Earnings File, 1 percent sample.", 
             "type": "note"
         }, 
         {
-            "content": "NOTES: Taxable earnings consist of self-employment income and taxable wages.", 
+            "content": "Notes: Taxable earnings consist of self-employment income and taxable wages.", 
             "type": "note"
         }, 
         {
@@ -421,17 +421,13 @@
             "type": "footnote"
         }, 
         {
-            "content": "CONTACT: (410) 965-0090 or statistics@ssa.gov.", 
-            "type": "note"
-        }, 
-        {
-            "content": "File available from:\nU.S. Social Security Administration \u2022 Office of Retirement and Disability Policy \u2022 Office of Research, Evaluation, and Statistics\nAnnual Statistical Supplement, 2015\nhttps://www.socialsecurity.gov/policy/docs/statcomps/supplement/2015/", 
+            "content": "File available from US Social Security Administration \u2022 Office of Retirement and Disability Policy \u2022 Office of Research, Evaluation, and Statistics, Annual Statistical Supplement, 2015, http://www.socialsecurity.gov/policy/docs/statcomps/supplement/2015/.", 
             "type": "note"
         }
     ], 
     "html": {
         "body": "<tbody><tr class=1992><td class=\"col0\">1992.0</td><td class=\"col2\">13098.0</td><td class=\"col3\">6039.0</td><td class=\"col4\">2755.0</td><td class=\"col5\">1576.0</td><td class=\"col6\">971.0</td><td class=\"col7\">612.0</td><td class=\"col8\"><span class = \"top_footnote top_a\">a</span>308</td><td class=\"col9\">. . .</td><td class=\"col10\">. . .</td><td class=\"col11\">. . .</td><td class=\"col12\">. . .</td><td class=\"col13\">. . .</td><td class=\"col14\">839.0</td><tr class=1993><td class=\"col0\">1993.0</td><td class=\"col2\">13202.0</td><td class=\"col3\">6015.0</td><td class=\"col4\">2776.0</td><td class=\"col5\">1570.0</td><td class=\"col6\">990.0</td><td class=\"col7\">633.0</td><td class=\"col8\"><span class = \"top_footnote top_a\">a</span>388</td><td class=\"col9\">. . .</td><td class=\"col10\">. . .</td><td class=\"col11\">. . .</td><td class=\"col12\">. . .</td><td class=\"col13\">. . .</td><td class=\"col14\">828.0</td><tr class=1994><td class=\"col0\">1994.0</td><td class=\"col2\">13297.0</td><td class=\"col3\">5886.0</td><td class=\"col4\">2832.0</td><td class=\"col5\">1586.0</td><td class=\"col6\">1019.0</td><td class=\"col7\">645.0</td><td class=\"col8\">426.0</td><td class=\"col9\"><span class = \"top_footnote top_a\">a</span>92</td><td class=\"col10\">. . .</td><td class=\"col11\">. . .</td><td class=\"col12\">. . .</td><td class=\"col13\">. . .</td><td class=\"col14\">814.0</td><tr class=1995><td class=\"col0\">1995.0</td><td class=\"col2\">13499.0</td><td class=\"col3\">5909.0</td><td class=\"col4\">2882.0</td><td class=\"col5\">1604.0</td><td class=\"col6\">1044.0</td><td class=\"col7\">678.0</td><td class=\"col8\">444.0</td><td class=\"col9\"><span class = \"top_footnote top_a\">a</span>116</td><td class=\"col10\">. . .</td><td class=\"col11\">. . .</td><td class=\"col12\">. . .</td><td class=\"col13\">. . .</td><td class=\"col14\">822.0</td><tr class=1996><td class=\"col0\">1996.0</td><td class=\"col2\">13900.0</td><td class=\"col3\">5979.0</td><td class=\"col4\">2964.0</td><td class=\"col5\">1650.0</td><td class=\"col6\">1092.0</td><td class=\"col7\">713.0</td><td class=\"col8\">471.0</td><td class=\"col9\"><span class = \"top_footnote top_a\">a</span>176</td><td class=\"col10\">. . .</td><td class=\"col11\">. . .</td><td class=\"col12\">. . .</td><td class=\"col13\">. . .</td><td class=\"col14\">854.0</td><tr class=1997><td class=\"col0\">1997.0</td><td class=\"col2\">14019.0</td><td class=\"col3\">5911.0</td><td class=\"col4\">2966.0</td><td class=\"col5\">1670.0</td><td class=\"col6\">1100.0</td><td class=\"col7\">737.0</td><td class=\"col8\">489.0</td><td class=\"col9\"><span class = \"top_footnote top_a\">a</span>278</td><td class=\"col10\">. . .</td><td class=\"col11\">. . .</td><td class=\"col12\">. . .</td><td class=\"col13\">. . .</td><td class=\"col14\">869.0</td><tr class=1998><td class=\"col0\">1998.0</td><td class=\"col2\">14237.0</td><td class=\"col3\">5835.0</td><td class=\"col4\">3010.0</td><td class=\"col5\">1717.0</td><td class=\"col6\">1157.0</td><td class=\"col7\">777.0</td><td class=\"col8\">505.0</td><td class=\"col9\"><span class = \"top_footnote top_a\">a</span>387</td><td class=\"col10\">. . .</td><td class=\"col11\">. . .</td><td class=\"col12\">. . .</td><td class=\"col13\">. . .</td><td class=\"col14\">848.0</td><tr class=1999><td class=\"col0\">1999.0</td><td class=\"col2\">14499.0</td><td class=\"col3\">5745.0</td><td class=\"col4\">3075.0</td><td class=\"col5\">1756.0</td><td class=\"col6\">1191.0</td><td class=\"col7\">804.0</td><td class=\"col8\">535.0</td><td class=\"col9\">384.0</td><td class=\"col10\"><span class = \"top_footnote top_a\">a</span>162</td><td class=\"col11\">. . .</td><td class=\"col12\">. . .</td><td class=\"col13\">. . .</td><td class=\"col14\">848.0</td><tr class=2000><td class=\"col0\">2000.0</td><td class=\"col2\">14672.0</td><td class=\"col3\">5592.0</td><td class=\"col4\">3019.0</td><td class=\"col5\">1730.0</td><td class=\"col6\">1189.0</td><td class=\"col7\">811.0</td><td class=\"col8\">560.0</td><td class=\"col9\">399.0</td><td class=\"col10\"><span class = \"top_footnote top_a\">a</span>269</td><td class=\"col11\">. . .</td><td class=\"col12\">. . .</td><td class=\"col13\">. . .</td><td class=\"col14\">1104.0</td><tr class=2001><td class=\"col0\">2001.0</td><td class=\"col2\">14930.0</td><td class=\"col3\">5625.0</td><td class=\"col4\">3123.0</td><td class=\"col5\">1741.0</td><td class=\"col6\">1186.0</td><td class=\"col7\">834.0</td><td class=\"col8\">584.0</td><td class=\"col9\">400.0</td><td class=\"col10\">314.0</td><td class=\"col11\"><span class = \"top_footnote top_a\">a</span>82</td><td class=\"col12\">. . .</td><td class=\"col13\">. . .</td><td class=\"col14\">1042.0</td><tr class=2002><td class=\"col0\">2002.0</td><td class=\"col2\">15249.0</td><td class=\"col3\">5810.0</td><td class=\"col4\">3305.0</td><td class=\"col5\">1777.0</td><td class=\"col6\">1202.0</td><td class=\"col7\">850.0</td><td class=\"col8\">601.0</td><td class=\"col9\">426.0</td><td class=\"col10\">305.0</td><td class=\"col11\"><span class = \"top_footnote top_a\">a</span>197</td><td class=\"col12\">. . .</td><td class=\"col13\">. . .</td><td class=\"col14\">776.0</td><tr class=2003><td class=\"col0\">2003.0</td><td class=\"col2\">15969.0</td><td class=\"col3\">6018.0</td><td class=\"col4\">3489.0</td><td class=\"col5\">1852.0</td><td class=\"col6\">1254.0</td><td class=\"col7\">899.0</td><td class=\"col8\">641.0</td><td class=\"col9\">441.0</td><td class=\"col10\">327.0</td><td class=\"col11\"><span class = \"top_footnote top_a\">a</span>250</td><td class=\"col12\">. . .</td><td class=\"col13\">. . .</td><td class=\"col14\">798.0</td><tr class=2004><td class=\"col0\">2004.0</td><td class=\"col2\">16496.0</td><td class=\"col3\">6065.0</td><td class=\"col4\">3639.0</td><td class=\"col5\">1919.0</td><td class=\"col6\">1277.0</td><td class=\"col7\">950.0</td><td class=\"col8\">672.0</td><td class=\"col9\">472.0</td><td class=\"col10\">350.0</td><td class=\"col11\"><span class = \"top_footnote top_a\">a</span>300</td><td class=\"col12\">. . .</td><td class=\"col13\">. . .</td><td class=\"col14\">852.0</td><tr class=2005><td class=\"col0\">2005.0</td><td class=\"col2\">17098.0</td><td class=\"col3\">6087.0</td><td class=\"col4\">3745.0</td><td class=\"col5\">2006.0</td><td class=\"col6\">1372.0</td><td class=\"col7\">990.0</td><td class=\"col8\">724.0</td><td class=\"col9\">508.0</td><td class=\"col10\">375.0</td><td class=\"col11\"><span class = \"top_footnote top_a\">a</span>388</td><td class=\"col12\">. . .</td><td class=\"col13\">. . .</td><td class=\"col14\">902.0</td><tr class=2006><td class=\"col0\">2006.0</td><td class=\"col2\">17724.0</td><td class=\"col3\">6172.0</td><td class=\"col4\">3914.0</td><td class=\"col5\">2078.0</td><td class=\"col6\">1414.0</td><td class=\"col7\">1033.0</td><td class=\"col8\">752.0</td><td class=\"col9\">555.0</td><td class=\"col10\">410.0</td><td class=\"col11\">312.0</td><td class=\"col12\"><span class = \"top_footnote top_a\">a</span>202</td><td class=\"col13\">. . .</td><td class=\"col14\">884.0</td><tr class=2007><td class=\"col0\">2007.0</td><td class=\"col2\">18214.0</td><td class=\"col3\">6389.0</td><td class=\"col4\">4016.0</td><td class=\"col5\">2088.0</td><td class=\"col6\">1409.0</td><td class=\"col7\">1044.0</td><td class=\"col8\">780.0</td><td class=\"col9\">577.0</td><td class=\"col10\">423.0</td><td class=\"col11\">329.0</td><td class=\"col12\"><span class = \"top_footnote top_a\">a</span>294</td><td class=\"col13\">. . .</td><td class=\"col14\">863.0</td><tr class=2008><td class=\"col0\">2008.0</td><td class=\"col2\">17973.0</td><td class=\"col3\">6264.0</td><td class=\"col4\">4094.0</td><td class=\"col5\">2015.0</td><td class=\"col6\">1342.0</td><td class=\"col7\">993.0</td><td class=\"col8\">757.0</td><td class=\"col9\">562.0</td><td class=\"col10\">425.0</td><td class=\"col11\">327.0</td><td class=\"col12\">251.0</td><td class=\"col13\">137.0</td><td class=\"col14\">806.0</td><tr class=2009><td class=\"col0\">2009.0</td><td class=\"col2\">17901.0</td><td class=\"col3\">6580.0</td><td class=\"col4\">4137.0</td><td class=\"col5\">1905.0</td><td class=\"col6\">1268.0</td><td class=\"col7\">935.0</td><td class=\"col8\">690.0</td><td class=\"col9\">529.0</td><td class=\"col10\">383.0</td><td class=\"col11\">308.0</td><td class=\"col12\">237.0</td><td class=\"col13\">214.0</td><td class=\"col14\">713.0</td><tr class=2010><td class=\"col0\">2010.0</td><td class=\"col2\">17944.0</td><td class=\"col3\">6590.0</td><td class=\"col4\">4278.0</td><td class=\"col5\">1862.0</td><td class=\"col6\">1256.0</td><td class=\"col7\">913.0</td><td class=\"col8\">679.0</td><td class=\"col9\">507.0</td><td class=\"col10\">395.0</td><td class=\"col11\">295.0</td><td class=\"col12\">235.0</td><td class=\"col13\">212.0</td><td class=\"col14\">720.0</td><tr class=2011><td class=\"col0\">2011<span class = \"top_footnote top_b\">b</span></td><td class=\"col2\">18801.0</td><td class=\"col3\">6633.0</td><td class=\"col4\">4532.0</td><td class=\"col5\">2007.0</td><td class=\"col6\">1340.0</td><td class=\"col7\">979.0</td><td class=\"col8\">740.0</td><td class=\"col9\">550.0</td><td class=\"col10\">420.0</td><td class=\"col11\">325.0</td><td class=\"col12\">252.0</td><td class=\"col13\">233.0</td><td class=\"col14\">790.0</td><tr class=2012><td class=\"col0\">2012<span class = \"top_footnote top_b\">b</span></td><td class=\"col2\">19044.0</td><td class=\"col3\">6543.0</td><td class=\"col4\">4597.0</td><td class=\"col5\">2029.0</td><td class=\"col6\">1354.0</td><td class=\"col7\">1003.0</td><td class=\"col8\">762.0</td><td class=\"col9\">575.0</td><td class=\"col10\">436.0</td><td class=\"col11\">336.0</td><td class=\"col12\">272.0</td><td class=\"col13\">314.0</td><td class=\"col14\">824.0</td><tr class=2013><td class=\"col0\">2013<span class = \"top_footnote top_b\">b</span></td><td class=\"col2\">18609.0</td><td class=\"col3\">6371.0</td><td class=\"col4\">4535.0</td><td class=\"col5\">1960.0</td><td class=\"col6\">1289.0</td><td class=\"col7\">950.0</td><td class=\"col8\">737.0</td><td class=\"col9\">573.0</td><td class=\"col10\">441.0</td><td class=\"col11\">329.0</td><td class=\"col12\">263.0</td><td class=\"col13\">373.0</td><td class=\"col14\">790.0</td></tbody>", 
-        "header": "<thead><tr><th rowspan=\"2\"  class=\"series col0\" >Year</th><th rowspan=\"2\"  class=\"series col1\" >Total</th><th colspan=\"11\"  class=\"series col2\" >Workers with earnings below the taxable maximum\n(by dollar amount of earnings)</th><th rowspan=\"2\"  class=\"series col13\" >Workers with maximum earnings <span class = \"top_footnote top_a\">a</span></th></tr><tr><th class=\"series col2\" >1\u2013\n9,999</th><th class=\"series col3\" >10,000\u2013\n19,999</th><th class=\"series col4\" >20,000\u2013\n29,999</th><th class=\"series col5\" >30,000\u2013\n39,999</th><th class=\"series col6\" >40,000\u2013\n49,999</th><th class=\"series col7\" >50,000\u2013\n59,999</th><th class=\"series col8\" >60,000\u2013\n69,999</th><th class=\"series col9\" >70,000\u2013\n79,999</th><th class=\"series col10\" >80,000\u2013\n89,999</th><th class=\"series col11\" >90,000\u2013\n99,999</th><th class=\"series col12\" >100,000\u2013\n113,699 <span class = \"top_footnote top_a\">a</span></th></tr></thead>"
+        "header": "<thead><tr><th rowspan=\"2\"  class=\"series col0\" >Year</th><th rowspan=\"2\"  class=\"series col1\" >Total</th><th colspan=\"11\"  class=\"series col2\" >Workers with earnings below the taxable maximum (by dollar amount of earnings)</th><th rowspan=\"2\"  class=\"series col13\" >Workers with maximum earnings <span class = \"top_footnote top_a\">a</span></th></tr><tr><th class=\"series col2\" >1\u20139,999</th><th class=\"series col3\" >10,000\u201319,999</th><th class=\"series col4\" >20,000\u201329,999</th><th class=\"series col5\" >30,000\u201339,999</th><th class=\"series col6\" >40,000\u201349,999</th><th class=\"series col7\" >50,000\u201359,999</th><th class=\"series col8\" >60,000\u201369,999</th><th class=\"series col9\" >70,000\u201379,999</th><th class=\"series col10\" >80,000\u201389,999</th><th class=\"series col11\" >90,000\u201399,999</th><th class=\"series col12\" >100,000\u2013113,699 <span class = \"top_footnote top_a\">a</span></th></tr></thead>"
     }, 
     "title": {
         "catID": "4.B", 

@@ -587,11 +587,11 @@
     }, 
     "footnotes": [
         {
-            "content": "SOURCE: Social Security Administration, Master Earnings File, 1 percent sample.", 
+            "content": "Sources: Social Security Administration, Master Earnings File, 1 percent sample.", 
             "type": "note"
         }, 
         {
-            "content": "NOTES: Because the process for generating the estimates is under review, all percentages are subject to revision.", 
+            "content": "Notes: Because the process for generating the estimates is under review, all percentages are subject to revision.", 
             "type": "note"
         }, 
         {
@@ -609,11 +609,7 @@
             "type": "footnote"
         }, 
         {
-            "content": "CONTACT: (410) 965-0090 or statistics@ssa.gov.", 
-            "type": "note"
-        }, 
-        {
-            "content": "File available from:\nU.S. Social Security Administration \u2022 Office of Retirement and Disability Policy \u2022 Office of Research, Evaluation, and Statistics\nAnnual Statistical Supplement, 2015\nhttps://www.socialsecurity.gov/policy/docs/statcomps/supplement/2015/", 
+            "content": "File available from US Social Security Administration \u2022 Office of Retirement and Disability Policy \u2022 Office of Research, Evaluation, and Statistics, Annual Statistical Supplement, 2015, http://www.socialsecurity.gov/policy/docs/statcomps/supplement/2015/.", 
             "type": "note"
         }
     ], 

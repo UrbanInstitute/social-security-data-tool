@@ -348,11 +348,11 @@
     }, 
     "footnotes": [
         {
-            "content": "SOURCE: Social Security Administration, Master Beneficiary Record, 100\u00a0percent data.", 
+            "content": "Source: Social Security Administration, Master Beneficiary Record, 100\u00a0percent data.", 
             "type": "note"
         }, 
         {
-            "content": "NOTES: The data in this table differ from those in table 6.B5 because awards are summarized here by the year in which entitlement began rather than by the year the award action was posted on the Master Beneficiary Record. The year of entitlement often precedes the year of action because of retroactive entitlements, delayed award actions, and other reasons. Because entitlements can be awarded retroactively, data for current and prior years are subject to revision with each annual update of this\u00a0table.", 
+            "content": "Notes: The data in this table differ from those in table 6.B5 because awards are summarized here by the year in which entitlement began rather than by the year the award action was posted on the Master Beneficiary Record. The year of entitlement often precedes the year of action because of retroactive entitlements, delayed award actions, and other reasons. Because entitlements can be awarded retroactively, data for current and prior years are subject to revision with each annual update of this\u00a0table.", 
             "type": "note"
         }, 
         {
@@ -378,11 +378,7 @@
             "type": "footnote"
         }, 
         {
-            "content": "CONTACT: (410) 965-0090 or statistics@ssa.gov.", 
-            "type": "note"
-        }, 
-        {
-            "content": "File available from:\nU.S. Social Security Administration \u2022 Office of Retirement and Disability Policy \u2022 Office of Research, Evaluation, and Statistics\nAnnual Statistical Supplement, 2015\nhttps://www.socialsecurity.gov/policy/docs/statcomps/supplement/2015/", 
+            "content": "File available from US Social Security Administration \u2022 Office of Retirement and Disability Policy \u2022 Office of Research, Evaluation, and Statistics, Annual Statistical Supplement, 2015, http://www.socialsecurity.gov/policy/docs/statcomps/supplement/2015/.", 
             "type": "note"
         }
     ], 
@@ -394,6 +390,6 @@
         "catID": "6.B", 
         "category": "OASDI Benefits Awarded: Retired Workers", 
         "id": "6_B5_1-1", 
-        "name": "Number, average age, and percentage distribution, by sex and age at entitlement,\n1998\u20132014 :: Subtable : Women"
+        "name": "Number, average age, and percentage distribution, by sex and age at entitlement, 1998\u20132014 :: Subtable : Women"
     }
 }

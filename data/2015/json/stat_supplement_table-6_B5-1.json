@@ -633,11 +633,11 @@
     }, 
     "footnotes": [
         {
-            "content": "SOURCE: Social Security Administration, Master Beneficiary Record. Data for 1985\u20132001 are based on a 1 percent sample. All other years are 100\u00a0percent data.", 
+            "content": "Source: Social Security Administration, Master Beneficiary Record. Data for 1985\u20132001 are based on a 1 percent sample. All other years are 100\u00a0percent data.", 
             "type": "note"
         }, 
         {
-            "content": "NOTES: Percentage distributions for 2003\u20132009 differ slightly from those in prior editions of this\u00a0table because of changes in the methodology of calculating age (see footnote b) and in the presentation of legislated FRA (see footnotes c\u2013g).", 
+            "content": "Notes: Percentage distributions for 2003\u20132009 differ slightly from those in prior editions of this\u00a0table because of changes in the methodology of calculating age (see footnote b) and in the presentation of legislated FRA (see footnotes c\u2013g).", 
             "type": "note"
         }, 
         {
@@ -683,7 +683,7 @@
             "type": "footnote"
         }, 
         {
-            "content": "For 1940\u20132002, includes workers entitled in the period between attainment of age 66 and the month prior to attaining age 70. Beginning with 2003, includes workers entitled in the period between the month after attaining FRA and the month prior to attaining age 70.", 
+            "content": "For 1940\u20132002, includes workers entitled in the period between attainment of age 66 and the month before attaining age 70. Beginning with 2003, includes workers entitled in the period between the month after attaining FRA and the month before attaining age 70.", 
             "symbol": "g.", 
             "type": "footnote"
         }, 
@@ -693,11 +693,7 @@
             "type": "footnote"
         }, 
         {
-            "content": "CONTACT: (410) 965-0090 or statistics@ssa.gov.", 
-            "type": "note"
-        }, 
-        {
-            "content": "File available from:\nU.S. Social Security Administration \u2022 Office of Retirement and Disability Policy \u2022 Office of Research, Evaluation, and Statistics\nAnnual Statistical Supplement, 2015\nhttps://www.socialsecurity.gov/policy/docs/statcomps/supplement/2015/", 
+            "content": "File available from US Social Security Administration \u2022 Office of Retirement and Disability Policy \u2022 Office of Research, Evaluation, and Statistics, Annual Statistical Supplement, 2015, http://www.socialsecurity.gov/policy/docs/statcomps/supplement/2015/.", 
             "type": "note"
         }
     ], 
@@ -709,6 +705,6 @@
         "catID": "6.B", 
         "category": "OASDI Benefits Awarded: Retired Workers", 
         "id": "6_B5-1", 
-        "name": "Number, average age, and percentage distribution, by sex and age, selected years\n1940\u20132014 :: Subtable : Women"
+        "name": "Number, average age, and percentage distribution, by sex and age, selected years 1940\u20132014 :: Subtable : Women"
     }
 }

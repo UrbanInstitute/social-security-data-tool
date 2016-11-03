@@ -413,11 +413,11 @@
     }, 
     "footnotes": [
         {
-            "content": "SOURCE: Social Security Administration, Continuous Work History Sample, 1 percent sample.", 
+            "content": "Source: Social Security Administration, Continuous Work History Sample, 1 percent sample.", 
             "type": "note"
         }, 
         {
-            "content": "NOTES: Insured workers are those who have accumulated sufficient quarters of coverage over their working lifetimes to be eligible for benefits.", 
+            "content": "Notes: Insured workers are those who have accumulated sufficient quarters of coverage over their working lifetimes to be eligible for benefits.", 
             "type": "note"
         }, 
         {
@@ -433,11 +433,7 @@
             "type": "note"
         }, 
         {
-            "content": "CONTACT: Michael Stephens (410) 965-3028 or statistics@ssa.gov.", 
-            "type": "note"
-        }, 
-        {
-            "content": "File available from:\nU.S. Social Security Administration \u2022 Office of Retirement and Disability Policy \u2022 Office of Research, Evaluation, and Statistics\nAnnual Statistical Supplement, 2015\nhttps://www.socialsecurity.gov/policy/docs/statcomps/supplement/2015/", 
+            "content": "File available from US Social Security Administration \u2022 Office of Retirement and Disability Policy \u2022 Office of Research, Evaluation, and Statistics, Annual Statistical Supplement, 2015, http://www.socialsecurity.gov/policy/docs/statcomps/supplement/2015/.", 
             "type": "note"
         }
     ], 
@@ -449,6 +445,6 @@
         "catID": "4.C", 
         "category": "OASDI: Insured Workers", 
         "id": "4_C1", 
-        "name": "Estimated number of insured workers, by insured status, December 31, 1940\u20132015\n(in\u00a0millions)"
+        "name": "Estimated number of insured workers, by insured status, December 31, 1940\u20132015 (in\u00a0millions)"
     }
 }

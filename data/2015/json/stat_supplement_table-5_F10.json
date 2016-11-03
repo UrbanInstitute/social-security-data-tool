@@ -113,11 +113,11 @@
     }, 
     "footnotes": [
         {
-            "content": "SOURCE: Social Security Administration, Master Beneficiary Record, 100\u00a0percent data.", 
+            "content": "Source: Social Security Administration, Master Beneficiary Record, 100\u00a0percent data.", 
             "type": "note"
         }, 
         {
-            "content": "NOTES: Because entitlements can be awarded retroactively, data for current and prior years are subject to revision with each annual update of this\u00a0table.", 
+            "content": "Notes: Because entitlements can be awarded retroactively, data for current and prior years are subject to revision with each annual update of this\u00a0table.", 
             "type": "note"
         }, 
         {
@@ -134,11 +134,7 @@
             "type": "footnote"
         }, 
         {
-            "content": "CONTACT: (410) 965-0090 or statistics@ssa.gov.", 
-            "type": "note"
-        }, 
-        {
-            "content": "File available from:\nU.S. Social Security Administration \u2022 Office of Retirement and Disability Policy \u2022 Office of Research, Evaluation, and Statistics\nAnnual Statistical Supplement, 2015\nhttps://www.socialsecurity.gov/policy/docs/statcomps/supplement/2015/", 
+            "content": "File available from US Social Security Administration \u2022 Office of Retirement and Disability Policy \u2022 Office of Research, Evaluation, and Statistics, Annual Statistical Supplement, 2015, http://www.socialsecurity.gov/policy/docs/statcomps/supplement/2015/.", 
             "type": "note"
         }
     ], 

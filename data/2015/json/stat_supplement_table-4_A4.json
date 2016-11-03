@@ -843,11 +843,11 @@
     }, 
     "footnotes": [
         {
-            "content": "SOURCES: Department of the Treasury; Centers for Medicare & Medicaid Services; and Bureau of Economic Analysis.", 
+            "content": "Sources: Department of the Treasury; Centers for Medicare & Medicaid Services; and Bureau of Economic Analysis.", 
             "type": "note"
         }, 
         {
-            "content": "NOTES: Totals do not necessarily equal the sum of rounded components.", 
+            "content": "Notes: Totals do not necessarily equal the sum of rounded components.", 
             "type": "note"
         }, 
         {
@@ -890,11 +890,7 @@
             "type": "footnote"
         }, 
         {
-            "content": "CONTACT: Michael Stephens (410) 965-3028 or statistics@ssa.gov.", 
-            "type": "note"
-        }, 
-        {
-            "content": "File available from:\nU.S. Social Security Administration \u2022 Office of Retirement and Disability Policy \u2022 Office of Research, Evaluation, and Statistics\nAnnual Statistical Supplement, 2015\nhttps://www.socialsecurity.gov/policy/docs/statcomps/supplement/2015/", 
+            "content": "File available from US Social Security Administration \u2022 Office of Retirement and Disability Policy \u2022 Office of Research, Evaluation, and Statistics, Annual Statistical Supplement, 2015, http://www.socialsecurity.gov/policy/docs/statcomps/supplement/2015/.", 
             "type": "note"
         }
     ], 

@@ -541,7 +541,7 @@ def addWords(words, string):
 
 parseUnits()
 
-book = xlrd.open_workbook("../data/statistical_supplement/supplement15.xls", formatting_info=True)
+book = xlrd.open_workbook("../data/2015/statistical_supplement/supplement15.xls", formatting_info=True)
 sheets = book.sheet_names()
 
 #Years in 1st column (or year ranges), blank 2nd column, data
@@ -641,7 +641,7 @@ for sheet_id in simpleBar:
 	titleList[titles["id"].replace(".","_")] = titles["name"] + " (" + titles["id"].replace("_",".") + ")" 
 	output["category"] = values["chartType"]
 
-	with open('../data/json/stat_supplement_table-%s.json'%titles["id"], 'w') as fp:
+	with open('../data/2015/json/stat_supplement_table-%s.json'%titles["id"], 'w') as fp:
 		json.dump(output, fp, indent=4, sort_keys=True)
 
 
@@ -696,7 +696,7 @@ for sheet_id in medBar:
 	else:
 		output["default"] = "col2"
 
-	with open('../data/json/stat_supplement_table-%s.json'%titles["id"], 'w') as fp:
+	with open('../data/2015/json/stat_supplement_table-%s.json'%titles["id"], 'w') as fp:
 		json.dump(output, fp, indent=4, sort_keys=True)
 
 
@@ -746,7 +746,7 @@ for sheet_id in medMap:
 	output["category"] = values["chartType"]
 
 
-	with open('../data/json/stat_supplement_table-%s.json'%titles["id"], 'w') as fp:
+	with open('../data/2015/json/stat_supplement_table-%s.json'%titles["id"], 'w') as fp:
 		json.dump(output, fp, indent=4, sort_keys=True)
 
 
@@ -816,7 +816,7 @@ for sheet_id in timeMulti:
 			titleList[titles["id"].replace(".","_")] = titles["name"] + " (" + titles["id"].replace("_",".") + ")" 
 			output["category"] = values["chartType"]
 
-			with open('../data/json/stat_supplement_table-%s.json'%titles["id"], 'w') as fp:
+			with open('../data/2015/json/stat_supplement_table-%s.json'%titles["id"], 'w') as fp:
 				json.dump(output, fp, indent=4, sort_keys=True)
 
 
@@ -874,7 +874,7 @@ for sheet_id in weirdTime:
 	titleList[titles["id"].replace(".","_")] = titles["name"] + " (" + titles["id"].replace("_",".") + ")" 
 	output["category"] = values["chartType"]
 
-	with open('../data/json/stat_supplement_table-%s.json'%titles["id"], 'w') as fp:
+	with open('../data/2015/json/stat_supplement_table-%s.json'%titles["id"], 'w') as fp:
 		json.dump(output, fp, indent=4, sort_keys=True)
 
 
@@ -915,7 +915,7 @@ for sheet_id in simpleTimeSheets:
 	output["category"] = values["chartType"]
 
 
-	with open('../data/json/stat_supplement_table-%s.json'%titles["id"], 'w') as fp:
+	with open('../data/2015/json/stat_supplement_table-%s.json'%titles["id"], 'w') as fp:
 		json.dump(output, fp, indent=4, sort_keys=True)
 
 for sheet_id in monthsTime:
@@ -957,7 +957,7 @@ for sheet_id in monthsTime:
 	output["category"] = values["chartType"]
 
 
-	with open('../data/json/stat_supplement_table-%s.json'%titles["id"], 'w') as fp:
+	with open('../data/2015/json/stat_supplement_table-%s.json'%titles["id"], 'w') as fp:
 		json.dump(output, fp, indent=4, sort_keys=True)
 
 
@@ -966,7 +966,7 @@ trusteesTitles = ["IV_B1-0","IV_B1-1","IV_B1-2","IV_B1-3","IV_B2-0","IV_B2-1","I
 
 
 for title in trusteesTitles:
-	with open('../data/json/trustees/trustees_report-%s.json'%title) as df:
+	with open('../data/2015/json/trustees/trustees_report-%s.json'%title) as df:
 		data = json.load(df)
 		titleList[title] = data["title"]["name"] + " (" + title + ")"
 		wordList[title] = data["title"]["name"].split(" ")
@@ -990,10 +990,10 @@ for key in wordList:
 
 
 
-with open('../data/words.json', 'w') as fp:
+with open('../data/2015/words.json', 'w') as fp:
 	json.dump(idList, fp, indent=4, sort_keys=True)
 
-with open('../data/titles.json', 'w') as fp:
+with open('../data/2015/titles.json', 'w') as fp:
 	json.dump(titleList, fp, indent=4, sort_keys=True)
 
 

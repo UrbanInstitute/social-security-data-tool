@@ -390,11 +390,11 @@
     }, 
     "footnotes": [
         {
-            "content": "SOURCES: Social Security Administration, Master Beneficiary Record and Supplemental Security Record, 100\u00a0percent data.", 
+            "content": "Sources: Social Security Administration, Master Beneficiary Record and Supplemental Security Record, 100\u00a0percent data.", 
             "type": "note"
         }, 
         {
-            "content": "NOTE: Beginning with data for 2011, OASDI beneficiaries who are entitled to both a primary benefit (based on one's own earnings record) and a secondary benefit (based on a spouse's earnings record) are counted only once in this table.", 
+            "content": "Note: Beginning with data for 2011, OASDI beneficiaries who are entitled to both a primary benefit (based on one's own earnings record) and a secondary benefit (based on a spouse's earnings record) are counted only once in this table.", 
             "type": "note"
         }, 
         {
@@ -413,11 +413,7 @@
             "type": "footnote"
         }, 
         {
-            "content": "CONTACT: (410) 965-0090 or statistics@ssa.gov.", 
-            "type": "note"
-        }, 
-        {
-            "content": "File available from:\nU.S. Social Security Administration \u2022 Office of Retirement and Disability Policy \u2022 Office of Research, Evaluation, and Statistics\nAnnual Statistical Supplement, 2015\nhttps://www.socialsecurity.gov/policy/docs/statcomps/supplement/2015/", 
+            "content": "File available from US Social Security Administration \u2022 Office of Retirement and Disability Policy \u2022 Office of Research, Evaluation, and Statistics, Annual Statistical Supplement, 2015, http://www.socialsecurity.gov/policy/docs/statcomps/supplement/2015/.", 
             "type": "note"
         }
     ], 
