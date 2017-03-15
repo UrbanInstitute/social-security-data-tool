@@ -140,7 +140,7 @@
             "type": "percent"
         }, 
         "col12": {
-            "label": "Women :: Cumulative percentage\u00a0a", 
+            "label": "Women :: Cumulative percentage", 
             "series": [
                 100.0, 
                 99.9, 
@@ -324,7 +324,7 @@
             "type": "percent"
         }, 
         "col4": {
-            "label": "All retired workers :: Cumulative percentage\u00a0a", 
+            "label": "All retired workers :: Cumulative percentage", 
             "series": [
                 100.0, 
                 100.0, 
@@ -508,7 +508,7 @@
             "type": "percent"
         }, 
         "col8": {
-            "label": "Men :: Cumulative percentage\u00a0a", 
+            "label": "Men :: Cumulative percentage", 
             "series": [
                 100.0, 
                 100.0, 

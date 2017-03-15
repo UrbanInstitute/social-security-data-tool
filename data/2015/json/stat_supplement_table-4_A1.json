@@ -2,7 +2,7 @@
     "category": "timeSeries", 
     "data": {
         "col1": {
-            "label": "Receipts a :: Total", 
+            "label": "Receipts :: Total", 
             "series": [
                 767.0, 
                 375.0, 
@@ -254,7 +254,7 @@
             "type": "dollarMillion"
         }, 
         "col2": {
-            "label": "Receipts a :: Net payroll tax contributions\u00a0b", 
+            "label": "Receipts :: Net payroll tax contributions", 
             "series": [
                 765.0, 
                 360.0, 
@@ -338,7 +338,7 @@
             "type": "dollarMillion"
         }, 
         "col3": {
-            "label": "Receipts a :: Income from taxation of\u00a0benefits", 
+            "label": "Receipts :: Income from taxation of\u00a0benefits", 
             "series": [
                 false, 
                 false, 
@@ -422,7 +422,7 @@
             "type": "dollarMillion"
         }, 
         "col4": {
-            "label": "Receipts a :: Reimburse-ments from the general fund of the Treasury\u00a0c", 
+            "label": "Receipts :: Reimburse-ments from the general fund of the Treasury", 
             "series": [
                 false, 
                 false, 
@@ -506,7 +506,7 @@
             "type": "dollarMillion"
         }, 
         "col5": {
-            "label": "Receipts a :: Net interest\u00a0d", 
+            "label": "Receipts :: Net interest", 
             "series": [
                 2.0, 
                 15.0, 
@@ -674,7 +674,7 @@
             "type": "dollarMillion"
         }, 
         "col7": {
-            "label": "Expenditures :: Benefit payments\u00a0e", 
+            "label": "Expenditures :: Benefit payments", 
             "series": [
                 1.0, 
                 10.0, 
@@ -1048,7 +1048,7 @@
             "type": "footnote"
         }, 
         {
-            "content": "The fund borrowed from the Disability Insurance and Hospital Insurance Trust Funds in 1982, and repaid the borrowed amounts in 1985 and 1986. Amounts for these years are equal to total receipts less total expenditures, plus amounts borrowed or less amounts repaid.", 
+            "content": "The fund borrowed from the Disability Insurance and Hospital Insurance Trust Funds in 1982 and repaid the borrowed amounts in 1985 and 1986. Amounts for these years are equal to total receipts less total expenditures, plus amounts borrowed or less amounts repaid.", 
             "symbol": "f.", 
             "type": "footnote"
         }, 

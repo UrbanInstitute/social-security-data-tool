@@ -659,10 +659,22 @@ function formatTable(tableID){
 	var dec = d3.format(".2,")
 	d3.selectAll("td")
 		.html(function(){
+
 			var td = d3.select(this)
 			var val = td.html().replace(/\,/g,"")
-			if(td.classed("col0")){
+			if(/\d*?-\d*?/g.test(val)){
+				var dashRegex = /(.*)-(.*)/g
+				var match = dashRegex.exec(val)
+				return match[1] + "&ndash;" + match[2]
+				// return val
+			}
+			else if(td.classed("col0") || td.classed("nestedCol")){
 				return val;
+			}
+			else if(/\<span class=\"top_footnote.*\<\/span\>/g.test(val)){
+				var footnoteRegex = /(\<span class=\"top_footnote.*?\>.*\<\/span\>)(.*)/g
+				var match = footnoteRegex.exec(val)
+				return match[1] + comma(match[2])
 			}
 			else if(!isNaN(parseFloat(val))){
 				return comma(d3.select(this).html().replace(/\,/g,""))
@@ -796,8 +808,8 @@ function drawBar(input, col){
 		? "OASDI Trustees Report"
 		: input.title.category;
 	var footnoteText = (input.title.id[0] == "I" || input.title.id[0] == "V")
-		? "<a href = \"https://www.socialsecurity.gov/OACT/TR/2015/lrIndex.html\">These data are from the Social Security Administration's <em>OASDI Trustees Report, 2015</em>. The parenthetical numbers with the titles are retained from the report for reference.</a>"
-		: "<a href = \"https://www.ssa.gov/policy/docs/statcomps/supplement/\">These data are from the Social Security Administration's <em>Annual Statistical Supplement, 2014</em>. The parenthetical numbers with the titles are retained from the supplement for reference.</a>"
+		? "<a href = \"https://www.socialsecurity.gov/OACT/TR/2016/lrIndex.html\">These data are from the Social Security Administration's <em>OASDI Trustees Report, 2016</em>. The parenthetical numbers with the titles are retained from the report for reference.</a>"
+		: "<a href = \"https://www.ssa.gov/policy/docs/statcomps/supplement/\">These data are from the Social Security Administration's <em>Annual Statistical Supplement, 2015</em>. The parenthetical numbers with the titles are retained from the supplement for reference.</a>"
 	var footnoteHref = (input.title.id[0] == "I" || input.title.id[0] == "V")
 		? "https://www.socialsecurity.gov/OACT/TR/2015/lrIndex.html"
 		: "https://www.ssa.gov/policy/docs/statcomps/supplement/"

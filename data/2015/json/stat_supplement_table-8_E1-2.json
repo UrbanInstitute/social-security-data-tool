@@ -2,7 +2,7 @@
     "category": "timeSeries", 
     "data": {
         "col1": {
-            "label": "Total a", 
+            "label": "Total", 
             "series": [
                 1719.0, 
                 1821.0, 
@@ -282,7 +282,7 @@
             "type": "dollar"
         }, 
         "col17": {
-            "label": "Other c", 
+            "label": "Other", 
             "series": [
                 190.0, 
                 217.0, 
@@ -457,7 +457,7 @@
             "type": "dollar"
         }, 
         "col6": {
-            "label": "Nursing facility b", 
+            "label": "Nursing facility", 
             "series": [
                 9278.0, 
                 9910.0, 
@@ -645,7 +645,7 @@
             "type": "note"
         }, 
         {
-            "content": "Beginning with data for fiscal year 2013, the methodology for producing recipient counts was revised to include those who received at least one service through Medicaid or Separate Children's Health Insurance Program (CHIP). Payment amounts are derived from records for all claim types.", 
+            "content": "Beginning with data for fiscal year 2013, the methodology for producing recipient counts was revised to include those who received at least one service through Medicaid or separate Children's Health Insurance Program (CHIP). Payment amounts are derived from records for all claim types.", 
             "type": "note"
         }, 
         {
@@ -701,7 +701,7 @@
             "type": "footnote"
         }, 
         {
-            "content": "Fiscal year 2010 data are not available for Colorado, Hawaii, Idaho, Missouri, New Hampshire, Utah, and Wisconsin. Fiscal year 2007 data have been substituted for Hawaii and Utah. Fiscal year 2008 data have been substituted Missouri and Wisconsin. Fiscal year 2009 data have been substituted for Colorado, Idaho, and New Hampshire.", 
+            "content": "Fiscal year 2010 data are not available for Colorado, Hawaii, Idaho, Missouri, New Hampshire, Utah, and Wisconsin. Fiscal year 2007 data have been substituted for Hawaii and Utah. Fiscal year 2008 data have been for substituted Missouri and Wisconsin. Fiscal year 2009 data have been substituted for Colorado, Idaho, and New Hampshire.", 
             "symbol": "i.", 
             "type": "footnote"
         }, 

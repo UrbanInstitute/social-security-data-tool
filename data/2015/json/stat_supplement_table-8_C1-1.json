@@ -50,7 +50,7 @@
             "type": "number"
         }, 
         "col2": {
-            "label": "Hospitals :: General a", 
+            "label": "Hospitals :: General", 
             "series": [
                 837211.0, 
                 878509.0, 
@@ -242,7 +242,7 @@
             "type": "number"
         }, 
         "col6": {
-            "label": "Clinical Laboratory Improvement Act/independent laboratories b", 
+            "label": "Clinical Laboratory Improvement Act/independent laboratories", 
             "series": [
                 false, 
                 false, 

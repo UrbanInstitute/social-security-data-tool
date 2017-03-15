@@ -4,7 +4,7 @@
         "categories": {
             "series": [
                 "Number of ALJs", 
-                "Average monthly hearing dispositions per ALJ a", 
+                "Average monthly hearing dispositions per ALJ", 
                 "Average hearings pending per ALJ"
             ], 
             "type": "barLabel"
@@ -66,7 +66,7 @@
         }
     ], 
     "html": {
-        "body": "<tbody><tr class=Number of ALJs><td class=\"col0\">Number of ALJs</td><td class=\"col2\">1230.0</td><td class=\"col3\">1301.0</td><td class=\"col4\">1356.0</td><td class=\"col5\">1311.0</td><tr class=Average monthly hearing dispositions per ALJ a><td class=\"col0\">Average monthly hearing dispositions per ALJ a</td><td class=\"col2\">50.0</td><td class=\"col3\">50.0</td><td class=\"col4\">48.0</td><td class=\"col5\">43.0</td><tr class=Average hearings pending per ALJ><td class=\"col0\">Average hearings pending per ALJ</td><td class=\"col2\">523.0</td><td class=\"col3\">533.0</td><td class=\"col4\">577.0</td><td class=\"col5\">688.0</td></tbody>", 
+        "body": "<tbody><tr class=Number of ALJs><td class=\"col0\">Number of ALJs</td><td class=\"col2\">1230.0</td><td class=\"col3\">1301.0</td><td class=\"col4\">1356.0</td><td class=\"col5\">1311.0</td><tr class=Average monthly hearing dispositions per ALJ a><td class=\"col0\">Average monthly hearing dispositions per ALJ <span class = \"top_footnote top_a\">a</span></td><td class=\"col2\">50.0</td><td class=\"col3\">50.0</td><td class=\"col4\">48.0</td><td class=\"col5\">43.0</td><tr class=Average hearings pending per ALJ><td class=\"col0\">Average hearings pending per ALJ</td><td class=\"col2\">523.0</td><td class=\"col3\">533.0</td><td class=\"col4\">577.0</td><td class=\"col5\">688.0</td></tbody>", 
         "header": "<thead><tr><th class=\"series col0\" >Item</th><th class=\"series col1\" >2011</th><th class=\"series col2\" >2012</th><th class=\"series col3\" >2013</th><th class=\"series col4\" >2014</th></tr></thead>"
     }, 
     "title": {

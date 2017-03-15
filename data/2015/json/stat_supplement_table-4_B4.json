@@ -2,7 +2,7 @@
     "category": "timeSeries", 
     "data": {
         "col1": {
-            "label": "All workers\u00a0a :: Total", 
+            "label": "All workers :: Total", 
             "series": [
                 96.9, 
                 96.6, 
@@ -75,7 +75,7 @@
             "type": "percent"
         }, 
         "col2": {
-            "label": "All workers\u00a0a :: Men", 
+            "label": "All workers :: Men", 
             "series": [
                 95.8, 
                 95.4, 
@@ -148,7 +148,7 @@
             "type": "percent"
         }, 
         "col3": {
-            "label": "All workers\u00a0a :: Women", 
+            "label": "All workers :: Women", 
             "series": [
                 99.7, 
                 99.7, 

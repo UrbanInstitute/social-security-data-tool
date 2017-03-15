@@ -1,6 +1,7 @@
 from bs4 import BeautifulSoup
 import urllib2
 import csv
+import re
 import os
 from validator import *
 from scraper import *
@@ -78,7 +79,8 @@ def scrapeYear(year):
 				 os.makedirs("%s/tables/table%i"%(basePath,tableNum))
 			table = obj["table"]
 			footnotes = obj["footnotes"]
-			title = table.find_next("div", class_="TableTitle").text
+			rawTitle = table.find_next("div", class_="TableTitle").text
+			title = re.sub(r"(\d\d\d\d)-(\d\d\d\d)",r"\1–\2",rawTitle)
 			#write html table to file
 			with open("%s/tables/table%i/%s.html"%(basePath,tableNum,title), "w") as tableFile:
 				tableFile.write(table.prettify().encode('utf8'))

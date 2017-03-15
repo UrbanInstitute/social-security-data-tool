@@ -86,7 +86,7 @@
             "type": "dollarMillion"
         }, 
         "col2": {
-            "label": "Cash benefits\u00a0a :: Old-Age and Survivors Insurance\u00a0b", 
+            "label": "Cash benefits :: Old-Age and Survivors Insurance", 
             "series": [
                 1.0, 
                 10.0, 
@@ -170,7 +170,7 @@
             "type": "dollarMillion"
         }, 
         "col3": {
-            "label": "Cash benefits\u00a0a :: Disability Insurance", 
+            "label": "Cash benefits :: Disability Insurance", 
             "series": [
                 false, 
                 false, 
@@ -338,7 +338,7 @@
             "type": "dollarMillion"
         }, 
         "col5": {
-            "label": "Service benefits :: Supplementary Medical Insurance\u00a0c", 
+            "label": "Service benefits :: Supplementary Medical Insurance", 
             "series": [
                 false, 
                 false, 
@@ -422,7 +422,7 @@
             "type": "dollarMillion"
         }, 
         "col6": {
-            "label": "Rehabilitation services\u00a0d :: Old-Age and Survivors Insurance", 
+            "label": "Rehabilitation services :: Old-Age and Survivors Insurance", 
             "series": [
                 false, 
                 false, 
@@ -506,7 +506,7 @@
             "type": "dollarMillion"
         }, 
         "col7": {
-            "label": "Rehabilitation services\u00a0d :: Disability Insurance", 
+            "label": "Rehabilitation services :: Disability Insurance", 
             "series": [
                 false, 
                 false, 
@@ -590,7 +590,7 @@
             "type": "dollarMillion"
         }, 
         "col8": {
-            "label": "Personal income\u00a0e", 
+            "label": "Personal income", 
             "series": [
                 74700.0, 
                 69100.0, 
@@ -902,6 +902,6 @@
         "catID": "4.A", 
         "category": "OASDI: Trust Funds", 
         "id": "4_A4", 
-        "name": "Total annual benefits paid, by type of benefit and trust fund, and as a percentage of personal income, 1937\u20132014 (in millions of dollars)"
+        "name": "Total annual benefits paid, by type of benefit and trust fund and as a percentage of personal income, 1937\u20132014 (in millions of dollars)"
     }
 }

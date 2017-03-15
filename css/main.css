@@ -979,3 +979,12 @@ footer #disclaimer2{
         display: block;
     }
 }
+
+
+
+
+.footnotetable{
+    display: inline-block;
+    height: 920px;
+    margin-top: 30px;
+}

@@ -2,7 +2,7 @@
     "category": "timeSeries", 
     "data": {
         "col1": {
-            "label": "Total\u00a0a", 
+            "label": "Total", 
             "series": [
                 100.0, 
                 100.0, 
@@ -22,7 +22,7 @@
             "type": "percent"
         }, 
         "col2": {
-            "label": "Entitled as worker\u00a0b :: Subtotal", 
+            "label": "Entitled as worker :: Subtotal", 
             "series": [
                 43.3, 
                 50.6, 
@@ -42,7 +42,7 @@
             "type": "percent"
         }, 
         "col3": {
-            "label": "Entitled as worker\u00a0b :: Worker only", 
+            "label": "Entitled as worker :: Worker only", 
             "series": [
                 38.7, 
                 42.1, 
@@ -62,7 +62,7 @@
             "type": "percent"
         }, 
         "col4": {
-            "label": "Entitled as worker\u00a0b :: Dually entitled :: Subtotal", 
+            "label": "Entitled as worker :: Dually entitled :: Subtotal", 
             "series": [
                 4.6, 
                 8.5, 
@@ -82,7 +82,7 @@
             "type": "percent"
         }, 
         "col5": {
-            "label": "Entitled as worker\u00a0b :: Dually entitled :: Wife's benefit", 
+            "label": "Entitled as worker :: Dually entitled :: Wife's benefit", 
             "series": [
                 2.4, 
                 3.4, 
@@ -102,7 +102,7 @@
             "type": "percent"
         }, 
         "col6": {
-            "label": "Entitled as worker\u00a0b :: Dually entitled :: Widow's or parent's benefit\u00a0c", 
+            "label": "Entitled as worker :: Dually entitled :: Widow's or parent's benefit", 
             "series": [
                 2.1, 
                 5.0, 
@@ -162,7 +162,7 @@
             "type": "percent"
         }, 
         "col9": {
-            "label": "Entitled as wife, widow, or parent only :: Widow's or parent's benefit\u00a0c", 
+            "label": "Entitled as wife, widow, or parent only :: Widow's or parent's benefit", 
             "series": [
                 23.4, 
                 26.8, 
@@ -238,6 +238,6 @@
         "catID": "5.A", 
         "category": "OASDI Current-Pay Benefits: Summary", 
         "id": "5_A14-1", 
-        "name": "Number and percentage distribution of women aged 62 or\u00a0older, by basis of entitlement, type of benefit, and dual entitlement status, December 1960\u20132014, selected years :: Subtable : Percentage distribution"
+        "name": "Number and percentage distribution of women ages 62 and\u00a0older, by basis of entitlement, type of benefit, and dual entitlement status, December 1960\u20132014, selected years :: Subtable : Percentage distribution"
     }
 }

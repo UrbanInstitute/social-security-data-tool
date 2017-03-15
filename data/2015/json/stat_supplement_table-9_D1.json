@@ -155,7 +155,7 @@
             "type": "number"
         }, 
         "col4": {
-            "label": "Number :: Dependents a", 
+            "label": "Number :: Dependents", 
             "series": [
                 43166.0, 
                 87158.0, 

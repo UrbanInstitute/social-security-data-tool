@@ -286,7 +286,7 @@
             "type": "dollar"
         }, 
         "col5": {
-            "label": "Average monthly Supplemental Security Income amount for\u2014 :: Aged recipients\u00a0a :: Current dollars", 
+            "label": "Average monthly Supplemental Security Income amount for\u2014 :: Aged recipients :: Current dollars", 
             "series": [
                 43.05, 
                 44.55, 
@@ -357,7 +357,7 @@
             "type": "dollar"
         }, 
         "col6": {
-            "label": "Average monthly Supplemental Security Income amount for\u2014 :: Aged recipients\u00a0a :: 2014 dollars", 
+            "label": "Average monthly Supplemental Security Income amount for\u2014 :: Aged recipients :: 2014 dollars", 
             "series": [
                 404.33, 
                 394.73, 
@@ -428,7 +428,7 @@
             "type": "dollar"
         }, 
         "col7": {
-            "label": "Consumer Price\u00a0Index\u00a0b", 
+            "label": "Consumer Price\u00a0Index", 
             "series": [
                 25.0, 
                 26.5, 

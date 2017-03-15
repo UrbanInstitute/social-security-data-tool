@@ -403,7 +403,7 @@
             "type": "footnote"
         }, 
         {
-            "content": "The number of OASDI disabled adult child beneficiaries aged 18\u201364 also receiving SSI was estimated on the basis of the number of such beneficiaries aged 18 or\u00a0older for the same year and on the comparative size of the two groups at the end of 1988.", 
+            "content": "The number of OASDI disabled adult child beneficiaries ages 18 to 64 also receiving SSI was estimated on the basis of the number of such beneficiaries ages 18 or\u00a0older for the same year and on the comparative size of the two groups at the end of 1988.", 
             "symbol": "b.", 
             "type": "footnote"
         }, 
@@ -425,6 +425,6 @@
         "catID": "3.C", 
         "category": "Interprogram Data", 
         "id": "3_C6_1", 
-        "name": "Number of persons aged 18\u201364 receiving Social Security (OASDI) benefits or federally administered Supplemental Security Income (SSI) payments based on disability, by type of benefit, December 1978\u20132014"
+        "name": "Number of persons ages 18 to 64 receiving Social Security (OASDI) benefits or federally administered Supplemental Security Income (SSI) payments based on disability, by type of benefit, December 1978\u20132014"
     }
 }

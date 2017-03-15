@@ -2,7 +2,7 @@
     "category": "timeSeries", 
     "data": {
         "col1": {
-            "label": "All workers\u00a0a :: Total", 
+            "label": "All workers :: Total", 
             "series": [
                 761.0, 
                 746.0, 
@@ -47,7 +47,7 @@
             "type": "number"
         }, 
         "col2": {
-            "label": "All workers\u00a0a :: Men", 
+            "label": "All workers :: Men", 
             "series": [
                 945.0, 
                 935.0, 
@@ -92,7 +92,7 @@
             "type": "number"
         }, 
         "col3": {
-            "label": "All workers\u00a0a :: Women", 
+            "label": "All workers :: Women", 
             "series": [
                 484.0, 
                 472.0, 
@@ -272,7 +272,7 @@
             "type": "number"
         }, 
         "col7": {
-            "label": "Self-employed\u00a0b :: Subtotal", 
+            "label": "Self-employed :: Subtotal", 
             "series": [
                 false, 
                 false, 
@@ -317,7 +317,7 @@
             "type": "number"
         }, 
         "col8": {
-            "label": "Self-employed\u00a0b :: Men", 
+            "label": "Self-employed :: Men", 
             "series": [
                 false, 
                 false, 
@@ -362,7 +362,7 @@
             "type": "number"
         }, 
         "col9": {
-            "label": "Self-employed\u00a0b :: Women", 
+            "label": "Self-employed :: Women", 
             "series": [
                 false, 
                 false, 
@@ -498,6 +498,6 @@
         "catID": "4.B", 
         "category": "OASDI: Covered Workers", 
         "id": "4_B3-1", 
-        "name": "Number of workers and median annual earnings, by type of earnings and sex, selected years 1937\u20132013 :: Subtable : Median earnings\u00a0e (dollars)"
+        "name": "Number of workers and median annual earnings, by type of earnings and sex, selected years 1937\u20132013 :: Subtable : Median earnings<span class = \"top_footnote top_e\">e</span> (dollars)"
     }
 }

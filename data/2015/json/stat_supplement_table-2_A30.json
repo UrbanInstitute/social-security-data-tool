@@ -2,7 +2,7 @@
     "category": "timeSeries", 
     "data": {
         "col1": {
-            "label": "Nonblind beneficiaries a :: Minimum", 
+            "label": "Nonblind beneficiaries :: Minimum", 
             "series": [
                 50.0, 
                 75.0, 
@@ -47,7 +47,7 @@
             "type": "dollar"
         }, 
         "col2": {
-            "label": "Nonblind beneficiaries a :: Maximum", 
+            "label": "Nonblind beneficiaries :: Maximum", 
             "series": [
                 100.0, 
                 125.0, 
@@ -183,7 +183,7 @@
     }, 
     "footnotes": [
         {
-            "content": "Sources: Social Security Act of 1935 (the Act), as amended through December 31, 2014; regulations issued under the Act; and precedential case decisions (rulings). Social Security Administration, \"Cost-of-Living Increase and Other Determinations for 2015,\"  Federal Register, vol. 79, no. 209 (October 29, 2014). See the Social Security Program Rules page (https://www.socialsecurity.gov/regulations/index.htm) for specific laws, regulations, rulings, legislation, and a link to the \u2009 Federal\u00a0Register.", 
+            "content": "Sources: Social Security Act of 1935 (the Act), as amended through December 31, 2014; regulations issued under the Act; and precedential case decisions (rulings). Social Security Administration, \"Cost-of-Living Increase and Other Determinations for 2015,\"  Federal Register, vol. 79, no. 209 (October 29, 2014). See the Social Security Program Rules page (https://www.socialsecurity.gov/regulations/index.htm) for specific laws, regulations, rulings, legislation, and a link to the Federal Register.", 
             "type": "note"
         }, 
         {

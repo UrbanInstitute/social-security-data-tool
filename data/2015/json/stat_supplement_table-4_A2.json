@@ -2,7 +2,7 @@
     "category": "timeSeries", 
     "data": {
         "col1": {
-            "label": "Receipts a :: Total", 
+            "label": "Receipts :: Total", 
             "series": [
                 709.0, 
                 991.0, 
@@ -194,7 +194,7 @@
             "type": "dollarMillion"
         }, 
         "col2": {
-            "label": "Receipts a :: Net payroll tax contributions\u00a0b", 
+            "label": "Receipts :: Net payroll tax contributions", 
             "series": [
                 702.0, 
                 966.0, 
@@ -258,7 +258,7 @@
             "type": "dollarMillion"
         }, 
         "col3": {
-            "label": "Receipts a :: Income from taxation of\u00a0benefits", 
+            "label": "Receipts :: Income from taxation of\u00a0benefits", 
             "series": [
                 false, 
                 false, 
@@ -322,7 +322,7 @@
             "type": "dollarMillion"
         }, 
         "col4": {
-            "label": "Receipts a :: Reimbursements from the general fund of the Treasury\u00a0c", 
+            "label": "Receipts :: Reimbursements from the general fund of the Treasury", 
             "series": [
                 false, 
                 false, 
@@ -386,7 +386,7 @@
             "type": "dollarMillion"
         }, 
         "col5": {
-            "label": "Receipts a :: Net interest\u00a0d", 
+            "label": "Receipts :: Net interest", 
             "series": [
                 7.0, 
                 25.0, 
@@ -514,7 +514,7 @@
             "type": "dollarMillion"
         }, 
         "col7": {
-            "label": "Expenditures :: Benefit payments\u00a0e", 
+            "label": "Expenditures :: Benefit payments", 
             "series": [
                 57.0, 
                 249.0, 
@@ -808,7 +808,7 @@
             "type": "footnote"
         }, 
         {
-            "content": "The Old-Age and Survivors Insurance Trust Fund borrowed from the Disability Insurance and Hospital Insurance Trust Funds in 1982, and repaid the borrowed amounts in 1985 and 1986. Amounts for these years are equal to total receipts less total expenditures, plus amounts borrowed or less amounts repaid.", 
+            "content": "The Old-Age and Survivors Insurance Trust Fund borrowed from the Disability Insurance and Hospital Insurance Trust Funds in 1982 and repaid the borrowed amounts in 1985 and 1986. Amounts for these years are equal to total receipts less total expenditures, plus amounts borrowed or less amounts repaid.", 
             "symbol": "f.", 
             "type": "footnote"
         }, 
