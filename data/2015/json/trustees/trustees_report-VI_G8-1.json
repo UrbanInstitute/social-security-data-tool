@@ -1,1 +1,169 @@
-{"category": "timeSeries", "footnotes": [{"content": "Benefit payments which were scheduled to be paid on January 3 for some past and future years were actually paid on December 31 as required by the statutory provision for early delivery of benefit payments when the normal payment delivery date is a Saturday, Sunday, or legal public holiday. For comparability with the values for historical years and the projections in this report, all trust fund operations and asset reserves reflect the 12 months of", "symbol": "a", "type": "footnote"}, {"content": "enefits scheduled for payment each year. b The combined OASI and DI Trust Funds become depleted in 2034 under the intermediate assumptions and in 2029 under the high-cost assumptions, so estimates for later years are not shown.", "symbol": "b", "type": "footnote"}, {"content": "Totals do not necessarily equal the sums of rounded components.", "type": "note"}], "html": {"body": "<tbody><tr><td class=\"col0\">2016</td><td></td><td class=\"col1\">855.8</td><td></td><td class=\"col2\">88.8</td><td></td><td class=\"col3\">944.6</td><td></td><td class=\"col4\">928.9</td><td></td><td class=\"col5\">2,828.2</td></tr><tr><td class=\"col0\">2017</td><td></td><td class=\"col1\">909.1</td><td></td><td class=\"col2\">87.6</td><td></td><td class=\"col3\">996.6</td><td></td><td class=\"col4\">965.5</td><td></td><td class=\"col5\">2,859.3</td></tr><tr><td class=\"col0\">2018</td><td></td><td class=\"col1\">965.4</td><td></td><td class=\"col2\">89.2</td><td></td><td class=\"col3\">1,054.7</td><td></td><td class=\"col4\">1,032.5</td><td></td><td class=\"col5\">2,881.5</td></tr><tr><td class=\"col0\">2019</td><td></td><td class=\"col1\">1,021.3</td><td></td><td class=\"col2\">91.1</td><td></td><td class=\"col3\">1,112.4</td><td></td><td class=\"col4\">1,101.6</td><td></td><td class=\"col5\">2,892.2</td></tr><tr><td class=\"col0\">2020</td><td></td><td class=\"col1\">1,078.7</td><td></td><td class=\"col2\">92.6</td><td></td><td class=\"col3\">1,171.3</td><td></td><td class=\"col4\">1,174.5</td><td></td><td class=\"col5\">2,889.0</td></tr><tr><td class=\"col0\">2021</td><td></td><td class=\"col1\">1,137.5</td><td></td><td class=\"col2\">93.1</td><td></td><td class=\"col3\">1,230.6</td><td></td><td class=\"col4\">1,248.4</td><td></td><td class=\"col5\">2,871.2</td></tr><tr><td class=\"col0\">2022</td><td></td><td class=\"col1\">1,196.8</td><td></td><td class=\"col2\">93.6</td><td></td><td class=\"col3\">1,290.4</td><td></td><td class=\"col4\">1,330.5</td><td></td><td class=\"col5\">2,831.1</td></tr><tr><td class=\"col0\">2023</td><td></td><td class=\"col1\">1,255.4</td><td></td><td class=\"col2\">94.4</td><td></td><td class=\"col3\">1,349.8</td><td></td><td class=\"col4\">1,418.8</td><td></td><td class=\"col5\">2,762.1</td></tr><tr><td class=\"col0\">2024</td><td></td><td class=\"col1\">1,317.8</td><td></td><td class=\"col2\">94.6</td><td></td><td class=\"col3\">1,412.4</td><td></td><td class=\"col4\">1,512.2</td><td></td><td class=\"col5\">2,662.2</td></tr><tr><td class=\"col0\">2025</td><td></td><td class=\"col1\">1,380.2</td><td></td><td class=\"col2\">93.5</td><td></td><td class=\"col3\">1,473.7</td><td></td><td class=\"col4\">1,609.2</td><td></td><td class=\"col5\">2,526.7</td></tr><tr><td class=\"col0\">2026</td><td></td><td class=\"col1\">1,442.8</td><td></td><td class=\"col2\">96.2</td><td></td><td class=\"col3\">1,539.0</td><td></td><td class=\"col4\">1,700.3</td><td></td><td class=\"col5\">2,365.4</td></tr><tr><td class=\"col0\">2027</td><td></td><td class=\"col1\">1,507.6</td><td></td><td class=\"col2\">97.0</td><td></td><td class=\"col3\">1,604.6</td><td></td><td class=\"col4\">1,795.1</td><td></td><td class=\"col5\">2,174.9</td></tr><tr><td class=\"col0\">2028</td><td></td><td class=\"col1\">1,574.2</td><td></td><td class=\"col2\">95.3</td><td></td><td class=\"col3\">1,669.5</td><td></td><td class=\"col4\">1,892.2</td><td></td><td class=\"col5\">1,952.3</td></tr><tr><td class=\"col0\">2029</td><td></td><td class=\"col1\">1,643.1</td><td></td><td class=\"col2\">90.8</td><td></td><td class=\"col3\">1,733.9</td><td></td><td class=\"col4\">1,992.1</td><td></td><td class=\"col5\">1,694.1</td></tr><tr><td class=\"col0\">2030</td><td></td><td class=\"col1\">1,714.7</td><td></td><td class=\"col2\">83.0</td><td></td><td class=\"col3\">1,797.7</td><td></td><td class=\"col4\">2,094.8</td><td></td><td class=\"col5\">1,397.0</td></tr><tr><td class=\"col0\">2031</td><td></td><td class=\"col1\">1,788.8</td><td></td><td class=\"col2\">66.3</td><td></td><td class=\"col3\">1,855.2</td><td></td><td class=\"col4\">2,199.9</td><td></td><td class=\"col5\">1,052.2</td></tr><tr><td class=\"col0\">2032</td><td></td><td class=\"col1\">1,865.8</td><td></td><td class=\"col2\">47.1</td><td></td><td class=\"col3\">1,912.9</td><td></td><td class=\"col4\">2,307.8</td><td></td><td class=\"col5\">657.3</td></tr><tr><td class=\"col0\">2033<span class=\"top_footnote top_b\">b</span></td><td></td><td class=\"col1\">1,946.2</td><td></td><td class=\"col2\">25.2</td><td></td><td class=\"col3\">1,971.4</td><td></td><td class=\"col4\">2,418.0</td><td></td><td class=\"col5\">210.7</td></tr></tbody>", "header": "<thead><tr><th class=\"series col0\">Calendar year</th><td></td><th class=\"series col1\">Non-interest<br/>income</th><td></td><th class=\"series col2\">Interest<br/>income</th><td></td><th class=\"series col3\">Total<br/>income</th><td></td><th class=\"series col4\">Cost<span class=\"top_footnote top_a\">a</span></th><td></td><th class=\"series col5\">Asset<br/>reserves at<br/>end of year<span class=\"top_footnote top_a\">a</span></th></tr></thead>"}, "data": {"col4": {"series": [928.9, 965.5, 1032.5, 1101.6, 1174.5, 1248.4, 1330.5, 1418.8, 1512.2, 1609.2, 1700.3, 1795.1, 1892.2, 1992.1, 2094.8, 2199.9, 2307.8, 2418.0], "type": "dollarBillion", "label": "Cost"}, "col5": {"series": [2828.2, 2859.3, 2881.5, 2892.2, 2889.0, 2871.2, 2831.1, 2762.1, 2662.2, 2526.7, 2365.4, 2174.9, 1952.3, 1694.1, 1397.0, 1052.2, 657.3, 210.7], "type": "dollarBillion", "label": "Asset reserves at end of year"}, "col2": {"series": [88.8, 87.6, 89.2, 91.1, 92.6, 93.1, 93.6, 94.4, 94.6, 93.5, 96.2, 97.0, 95.3, 90.8, 83.0, 66.3, 47.1, 25.2], "type": "dollarBillion", "label": "Interest income"}, "col3": {"series": [944.6, 996.6, 1054.7, 1112.4, 1171.3, 1230.6, 1290.4, 1349.8, 1412.4, 1473.7, 1539.0, 1604.6, 1669.5, 1733.9, 1797.7, 1855.2, 1912.9, 1971.4], "type": "dollarBillion", "label": "Total income"}, "col1": {"series": [855.8, 909.1, 965.4, 1021.3, 1078.7, 1137.5, 1196.8, 1255.4, 1317.8, 1380.2, 1442.8, 1507.6, 1574.2, 1643.1, 1714.7, 1788.8, 1865.8, 1946.2], "type": "dollarBillion", "label": "Non-interest income"}, "years": {"series": [2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026, 2027, 2028, 2029, 2030, 2031, 2032, 2033], "type": "year", "label": "Calendar year"}}, "title": {"name": "Operations of the Combined OASI and DI Trust Funds, in Current Dollars, Calendar Years 1970-2090 (In billions) :: Subtable : Intermediate", "id": "VI_G8-1"}}
+{
+    "category": "timeSeries", 
+    "data": {
+        "col1": {
+            "label": "Non-interest income", 
+            "series": [
+                855.8, 
+                909.1, 
+                965.4, 
+                1021.3, 
+                1078.7, 
+                1137.5, 
+                1196.8, 
+                1255.4, 
+                1317.8, 
+                1380.2, 
+                1442.8, 
+                1507.6, 
+                1574.2, 
+                1643.1, 
+                1714.7, 
+                1788.8, 
+                1865.8, 
+                1946.2
+            ], 
+            "type": "dollarBillion"
+        }, 
+        "col2": {
+            "label": "Interest income", 
+            "series": [
+                88.8, 
+                87.6, 
+                89.2, 
+                91.1, 
+                92.6, 
+                93.1, 
+                93.6, 
+                94.4, 
+                94.6, 
+                93.5, 
+                96.2, 
+                97.0, 
+                95.3, 
+                90.8, 
+                83.0, 
+                66.3, 
+                47.1, 
+                25.2
+            ], 
+            "type": "dollarBillion"
+        }, 
+        "col3": {
+            "label": "Total income", 
+            "series": [
+                944.6, 
+                996.6, 
+                1054.7, 
+                1112.4, 
+                1171.3, 
+                1230.6, 
+                1290.4, 
+                1349.8, 
+                1412.4, 
+                1473.7, 
+                1539.0, 
+                1604.6, 
+                1669.5, 
+                1733.9, 
+                1797.7, 
+                1855.2, 
+                1912.9, 
+                1971.4
+            ], 
+            "type": "dollarBillion"
+        }, 
+        "col4": {
+            "label": "Cost", 
+            "series": [
+                928.9, 
+                965.5, 
+                1032.5, 
+                1101.6, 
+                1174.5, 
+                1248.4, 
+                1330.5, 
+                1418.8, 
+                1512.2, 
+                1609.2, 
+                1700.3, 
+                1795.1, 
+                1892.2, 
+                1992.1, 
+                2094.8, 
+                2199.9, 
+                2307.8, 
+                2418.0
+            ], 
+            "type": "dollarBillion"
+        }, 
+        "col5": {
+            "label": "Asset reserves at end of year", 
+            "series": [
+                2828.2, 
+                2859.3, 
+                2881.5, 
+                2892.2, 
+                2889.0, 
+                2871.2, 
+                2831.1, 
+                2762.1, 
+                2662.2, 
+                2526.7, 
+                2365.4, 
+                2174.9, 
+                1952.3, 
+                1694.1, 
+                1397.0, 
+                1052.2, 
+                657.3, 
+                210.7
+            ], 
+            "type": "dollarBillion"
+        }, 
+        "years": {
+            "label": "Calendar year", 
+            "series": [
+                2016, 
+                2017, 
+                2018, 
+                2019, 
+                2020, 
+                2021, 
+                2022, 
+                2023, 
+                2024, 
+                2025, 
+                2026, 
+                2027, 
+                2028, 
+                2029, 
+                2030, 
+                2031, 
+                2032, 
+                2033
+            ], 
+            "type": "year"
+        }
+    }, 
+    "footnotes": [
+        {
+            "content": "Benefit payments which were scheduled to be paid on January 3 for some past and future years were actually paid on December 31 as required by the statutory provision for early delivery of benefit payments when the normal payment delivery date is a Saturday, Sunday, or legal public holiday. For comparability with the values for historical years and the projections in this report, all trust fund operations and asset reserves reflect the 12 months of benefits scheduled for payment each year.", 
+            "symbol": "a", 
+            "type": "footnote"
+        }, 
+        {
+            "content": "The combined OASI and DI Trust Funds become depleted in 2034 under the intermediate assumptions and in 2029 under the high-cost assumptions, so estimates for later years are not shown. Note: Totals do not necessarily equal the sums of rounded components.", 
+            "symbol": "b", 
+            "type": "footnote"
+        }
+    ], 
+    "html": {
+        "body": "<tbody><tr><td class=\"col0\">2016</td><td></td><td class=\"col1\">855.8</td><td></td><td class=\"col2\">88.8</td><td></td><td class=\"col3\">944.6</td><td></td><td class=\"col4\">928.9</td><td></td><td class=\"col5\">2,828.2</td></tr><tr><td class=\"col0\">2017</td><td></td><td class=\"col1\">909.1</td><td></td><td class=\"col2\">87.6</td><td></td><td class=\"col3\">996.6</td><td></td><td class=\"col4\">965.5</td><td></td><td class=\"col5\">2,859.3</td></tr><tr><td class=\"col0\">2018</td><td></td><td class=\"col1\">965.4</td><td></td><td class=\"col2\">89.2</td><td></td><td class=\"col3\">1,054.7</td><td></td><td class=\"col4\">1,032.5</td><td></td><td class=\"col5\">2,881.5</td></tr><tr><td class=\"col0\">2019</td><td></td><td class=\"col1\">1,021.3</td><td></td><td class=\"col2\">91.1</td><td></td><td class=\"col3\">1,112.4</td><td></td><td class=\"col4\">1,101.6</td><td></td><td class=\"col5\">2,892.2</td></tr><tr><td class=\"col0\">2020</td><td></td><td class=\"col1\">1,078.7</td><td></td><td class=\"col2\">92.6</td><td></td><td class=\"col3\">1,171.3</td><td></td><td class=\"col4\">1,174.5</td><td></td><td class=\"col5\">2,889.0</td></tr><tr><td class=\"col0\">2021</td><td></td><td class=\"col1\">1,137.5</td><td></td><td class=\"col2\">93.1</td><td></td><td class=\"col3\">1,230.6</td><td></td><td class=\"col4\">1,248.4</td><td></td><td class=\"col5\">2,871.2</td></tr><tr><td class=\"col0\">2022</td><td></td><td class=\"col1\">1,196.8</td><td></td><td class=\"col2\">93.6</td><td></td><td class=\"col3\">1,290.4</td><td></td><td class=\"col4\">1,330.5</td><td></td><td class=\"col5\">2,831.1</td></tr><tr><td class=\"col0\">2023</td><td></td><td class=\"col1\">1,255.4</td><td></td><td class=\"col2\">94.4</td><td></td><td class=\"col3\">1,349.8</td><td></td><td class=\"col4\">1,418.8</td><td></td><td class=\"col5\">2,762.1</td></tr><tr><td class=\"col0\">2024</td><td></td><td class=\"col1\">1,317.8</td><td></td><td class=\"col2\">94.6</td><td></td><td class=\"col3\">1,412.4</td><td></td><td class=\"col4\">1,512.2</td><td></td><td class=\"col5\">2,662.2</td></tr><tr><td class=\"col0\">2025</td><td></td><td class=\"col1\">1,380.2</td><td></td><td class=\"col2\">93.5</td><td></td><td class=\"col3\">1,473.7</td><td></td><td class=\"col4\">1,609.2</td><td></td><td class=\"col5\">2,526.7</td></tr><tr><td class=\"col0\">2026</td><td></td><td class=\"col1\">1,442.8</td><td></td><td class=\"col2\">96.2</td><td></td><td class=\"col3\">1,539.0</td><td></td><td class=\"col4\">1,700.3</td><td></td><td class=\"col5\">2,365.4</td></tr><tr><td class=\"col0\">2027</td><td></td><td class=\"col1\">1,507.6</td><td></td><td class=\"col2\">97.0</td><td></td><td class=\"col3\">1,604.6</td><td></td><td class=\"col4\">1,795.1</td><td></td><td class=\"col5\">2,174.9</td></tr><tr><td class=\"col0\">2028</td><td></td><td class=\"col1\">1,574.2</td><td></td><td class=\"col2\">95.3</td><td></td><td class=\"col3\">1,669.5</td><td></td><td class=\"col4\">1,892.2</td><td></td><td class=\"col5\">1,952.3</td></tr><tr><td class=\"col0\">2029</td><td></td><td class=\"col1\">1,643.1</td><td></td><td class=\"col2\">90.8</td><td></td><td class=\"col3\">1,733.9</td><td></td><td class=\"col4\">1,992.1</td><td></td><td class=\"col5\">1,694.1</td></tr><tr><td class=\"col0\">2030</td><td></td><td class=\"col1\">1,714.7</td><td></td><td class=\"col2\">83.0</td><td></td><td class=\"col3\">1,797.7</td><td></td><td class=\"col4\">2,094.8</td><td></td><td class=\"col5\">1,397.0</td></tr><tr><td class=\"col0\">2031</td><td></td><td class=\"col1\">1,788.8</td><td></td><td class=\"col2\">66.3</td><td></td><td class=\"col3\">1,855.2</td><td></td><td class=\"col4\">2,199.9</td><td></td><td class=\"col5\">1,052.2</td></tr><tr><td class=\"col0\">2032</td><td></td><td class=\"col1\">1,865.8</td><td></td><td class=\"col2\">47.1</td><td></td><td class=\"col3\">1,912.9</td><td></td><td class=\"col4\">2,307.8</td><td></td><td class=\"col5\">657.3</td></tr><tr><td class=\"col0\">2033<span class=\"top_footnote top_b\">b</span></td><td></td><td class=\"col1\">1,946.2</td><td></td><td class=\"col2\">25.2</td><td></td><td class=\"col3\">1,971.4</td><td></td><td class=\"col4\">2,418.0</td><td></td><td class=\"col5\">210.7</td></tr></tbody>", 
+        "header": "<thead><tr><th class=\"series col0\">Calendar year</th><td></td><th class=\"series col1\">Non-interest<br/>income</th><td></td><th class=\"series col2\">Interest<br/>income</th><td></td><th class=\"series col3\">Total<br/>income</th><td></td><th class=\"series col4\">Cost<span class=\"top_footnote top_a\">a</span></th><td></td><th class=\"series col5\">Asset<br/>reserves at<br/>end of year<span class=\"top_footnote top_a\">a</span></th></tr></thead>"
+    }, 
+    "title": {
+        "id": "VI_G8-1", 
+        "name": "Operations of the Combined OASI and DI Trust Funds, in Current Dollars, Calendar Years 1970\u20132090 (In billions) :: Subtable : Intermediate"
+    }
+}

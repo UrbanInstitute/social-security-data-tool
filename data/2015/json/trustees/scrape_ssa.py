@@ -1,5 +1,5 @@
 from __future__ import division
-from bs4 import BeautifulSoup
+from bs4 import BeautifulSoup, NavigableString
 import urllib2, json, math, copy, bs4, sys, re
 
 url_frags = [ 'lr4b1', 'lr4b2', 'lr4b3', 'lr4b4', 'lr5a1', 'lr5a2', 'lr5a3', 'lr5a4', 'lr5b1', 'lr5b2', 'lr5c4', 'lr5c5', 'lr5c7', 'lr6g2', 'lr6g4', 'lr6g5', 'lr6g6', 'lr6g7', 'lr6g8', 'lr6g9', 'lr6g10' ]
@@ -66,7 +66,7 @@ for frag in url_frags:
 
         # Special case
         if 'lr6g9' in url or 'lr6g10' in url:
-            json_dict[ 'footnotes' ].append( {'content': u'Between -$500 million and $500 million.', 'symbol': u'a', 'type': 'footnote'})
+            json_dict[ 'footnotes' ].append( {'content': u'Between -$500 million and $500 million.', 'symbol': u'b', 'type': 'footnote'})
 
             json_dict[ 'footnotes' ].append( {'content': u'Totals do not necessarily equal the sums of rounded components.', 'type': 'note'} )
 
@@ -79,8 +79,20 @@ for frag in url_frags:
             # Get sups
             sups = footnotes( 'sup' )
 
+            
             # Get footnotes text
-            footnotes = footnotes.text
+            footnotesArray = footnotes.contents
+
+            footnotesString = ""
+
+            for elem in footnotesArray:
+                if isinstance(elem, NavigableString):
+                    footnotesString += "\n" + elem.replace("\n"," ").replace('\r', '')
+                else:
+                    if elem.text != "":
+                        footnotesString += "\n" + elem.text.replace("\n"," ").replace('\r', '')
+
+            footnotes = footnotesString
 
             footnote_indexes = []
 
@@ -470,8 +482,12 @@ for frag in url_frags:
                 titleElement = table.b
             else:
                 titleElement = soup( style='font-weight:bold' )[0]
-
-            return getHeaderText( titleElement ).replace( u'\u2014', '-' ) + tagline
+            # print titleElement.text
+            # if titleElement:
+            #     dateRangeTitleElement = re.sub(ur"(\d\d\d\d)-(\d\d\d\d)",ur"\1\u2013\2",titleElement)
+            rawTitleElement = getHeaderText( titleElement )
+            cleanTitleElement = re.sub(ur"(\d\d\d\d)-(\d\d\d\d)",ur"\1\u2013\2",rawTitleElement)
+            return cleanTitleElement.replace( u'\u2014', '-' ) + tagline
 
 
         def getTableName():
@@ -501,7 +517,7 @@ for frag in url_frags:
 
             f = open( file_name, 'wb' )
 
-            json.dump( json_dict, f )
+            json.dump( json_dict, f ,indent=4, sort_keys=True)
 
             f.close()
             

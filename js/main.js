@@ -661,12 +661,15 @@ function formatTable(tableID){
 		.html(function(){
 
 			var td = d3.select(this)
-			var val = td.html().replace(/\,/g,"")
+			var val = td.html().replace(/\,/g,"").replace(/\$/g,"")
 			if(/\d*?-\d*?/g.test(val)){
 				var dashRegex = /(.*)-(.*)/g
 				var match = dashRegex.exec(val)
 				return match[1] + "&ndash;" + match[2]
 				// return val
+			}
+			else if(val.search(":") != -1){
+				return val
 			}
 			else if(td.classed("col0") || td.classed("nestedCol")){
 				return val;
@@ -677,7 +680,7 @@ function formatTable(tableID){
 				return match[1] + comma(match[2])
 			}
 			else if(!isNaN(parseFloat(val))){
-				return comma(d3.select(this).html().replace(/\,/g,""))
+				return comma(d3.select(this).html().replace(/\,/g,"").replace(/\$/g,""))
 			}
 			else{ return val}
 		})

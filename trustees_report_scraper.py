@@ -80,7 +80,7 @@ def scrapeYear(year):
 			table = obj["table"]
 			footnotes = obj["footnotes"]
 			rawTitle = table.find_next("div", class_="TableTitle").text
-			title = re.sub(r"(\d\d\d\d)-(\d\d\d\d)",r"\1–\2",rawTitle)
+			title = re.sub(ur"(\d\d\d\d)-(\d\d\d\d)",ur"\1\u2013\2",rawTitle)
 			#write html table to file
 			with open("%s/tables/table%i/%s.html"%(basePath,tableNum,title), "w") as tableFile:
 				tableFile.write(table.prettify().encode('utf8'))
