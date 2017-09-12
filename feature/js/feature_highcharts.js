@@ -1759,7 +1759,7 @@ function showScrubber(){
 }
 function setTheme(){
 	Highcharts.createElement('link', {
-	    href: 'http://fonts.googleapis.com/css?family=Lato:400,600',
+	    href: 'https://fonts.googleapis.com/css?family=Lato:400,600',
 	    rel: 'stylesheet',
 	    type: 'text/css'
 	}, null, document.getElementsByTagName('head')[0]);
